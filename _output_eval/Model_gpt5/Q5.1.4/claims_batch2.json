@@ -1,0 +1,2270 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt5\\Q5.1.4\\Q5.1.4_result_batch2.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Here’s a quick, data‑backed tour of zinc(II) coverage in NIST SRD‑46.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 69,
+            "text": "Here’s a quick, data‑backed tour of zinc(II) coverage in NIST SRD‑46.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "Coverage at a glance (Zn2+, metal_208)\n| Item | Value | Notes |\n|---|---|---|\n| Measurements (VLM) | 4095 | All in water (H2O) |\n| Constant types | K: 3351; H: 395; S: 349 | Equilibrium constants dominate; H and S are reported thermodynamic quantities |\n| Most common T | 25.0 °C: 3363; 37.0 °C: 307; 20.0 °C: 274 | Room temperature strongly represented |\n| Most common I (M) | 0.1: 2457; 0.5: 498; 1.0: 338; 0.15: 294; 0.0: 244 | Majority near I ≈ 0.1 M |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 20,
+            "text": "Coverage at a glance",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 21,
+            "end": 38,
+            "text": "(Zn2+, metal_208)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 78,
+            "end": 128,
+            "text": "| Measurements (VLM) | 4095 | All in water (H2O) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 129,
+            "end": 253,
+            "text": "| Constant types | K: 3351; H: 395; S: 349 | Equilibrium constants dominate; H and S are reported thermodynamic quantities |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 254,
+            "end": 355,
+            "text": "| Most common T | 25.0 °C: 3363; 37.0 °C: 307; 20.0 °C: 274 | Room temperature strongly represented |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 356,
+            "end": 456,
+            "text": "| Most common I (M) | 0.1: 2457; 0.5: 498; 1.0: 338; 0.15: 294; 0.0: 244 | Majority near I ≈ 0.1 M |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_208"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_208 | Zn^[2+] | Zn | 2",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_208 | Zn^[2+] | Zn | 2 | ✓ | [Zn+2] | InChI=1S/Zn/q+2 | beta_totN_122 | ligand_totN_1169 | vlm_totN_4095 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_208"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "H_[2]O | 4095",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "| solvent_name | n |\n| H_[2]O | 4095 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_208 | Zn^[2+] ... | vlm_totN_4095 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_208"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "K | 3351 ; H | 395 ; S | 349",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "| constant_type | n |\n| K | 3351 |\n| H | 395 |\n| S | 349 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_208"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "25.0 | 3363 ; 37.0 | 307 ; 20.0 | 274",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "| temperature_c | n |\n| 25.0 | 3363 |\n| 37.0 | 307 |\n| 20.0 | 274 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_208"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "0.1 | 2457 ; 0.5 | 498 ; 1.0 | 338 ; 0.15 | 294 ; 0.0 | 244",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| ionic_strength_mol_l | n |\n| 0.1 | 2457 |\n| 0.5 | 498 |\n| 1.0 | 338 |\n| 0.15 | 294 |\n| 0.0 | 244 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "Most‑reported Zn(II) ligands (top 15 by measurement count)\n| ligand_id | Ligand name | n (records) |\n|---|---|---|\n| ligand_5760 | Aminoacetic acid (Glycine) | 37 |\n| ligand_7029 | Ethylenediamine | 36 |\n| ligand_10076 | Hydroxide ion | 33 |\n| ligand_7795 | 1,3‑Diazole (Imidazole) | 30 |\n| ligand_10090 | Hydrogen cyanide (Hydrocyanic acid) | 30 |\n| ligand_5898 | L‑Histidine | 29 |\n| ligand_10092 | Hydrogen thiocyanate (Thiocyanic acid) | 24 |\n| ligand_5856 | L‑Cysteine | 23 |\n| ligand_8412 | Nitrilotris(methylenephosphonic acid) (NTP) | 21 |\n| ligand_10103 | Ammonia | 21 |\n| ligand_6127 | Iminodiacetic acid (IDA) | 20 |\n| ligand_5761 | L‑Alanine | 19 |\n| ligand_8191 | 1,10‑Phenanthroline | 19 |\n| ligand_9058 | Citric acid | 19 |\n| ligand_5857 | Penicillamine | 18 |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 58,
+            "text": "Most‑reported Zn(II) ligands (top 15 by measurement count)",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 115,
+            "end": 164,
+            "text": "| ligand_5760 | Aminoacetic acid (Glycine) | 37 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 165,
+            "end": 203,
+            "text": "| ligand_7029 | Ethylenediamine | 36 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 204,
+            "end": 241,
+            "text": "| ligand_10076 | Hydroxide ion | 33 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 242,
+            "end": 288,
+            "text": "| ligand_7795 | 1,3‑Diazole (Imidazole) | 30 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 289,
+            "end": 348,
+            "text": "| ligand_10090 | Hydrogen cyanide (Hydrocyanic acid) | 30 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 349,
+            "end": 383,
+            "text": "| ligand_5898 | L‑Histidine | 29 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 384,
+            "end": 446,
+            "text": "| ligand_10092 | Hydrogen thiocyanate (Thiocyanic acid) | 24 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 447,
+            "end": 480,
+            "text": "| ligand_5856 | L‑Cysteine | 23 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 481,
+            "end": 547,
+            "text": "| ligand_8412 | Nitrilotris(methylenephosphonic acid) (NTP) | 21 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 548,
+            "end": 579,
+            "text": "| ligand_10103 | Ammonia | 21 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 580,
+            "end": 627,
+            "text": "| ligand_6127 | Iminodiacetic acid (IDA) | 20 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 628,
+            "end": 660,
+            "text": "| ligand_5761 | L‑Alanine | 19 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 661,
+            "end": 703,
+            "text": "| ligand_8191 | 1,10‑Phenanthroline | 19 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 704,
+            "end": 738,
+            "text": "| ligand_9058 | Citric acid | 19 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 739,
+            "end": 775,
+            "text": "| ligand_5857 | Penicillamine | 18 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5760"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_5760 | Aminoacetic acid (Glycine) | 37",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_5760 | Aminoacetic acid (Glycine) | 37"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_7029"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7029 | Ethylenediamine | 36",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7029 | Ethylenediamine | 36"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10076"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_10076 | Hydroxide ion | 33",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_10076 | Hydroxide ion | 33"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_7795"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7795 | 1,3-Diazole (Imidazole) | 30",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7795 | 1,3-Diazole (Imidazole) | 30"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10090"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_10090 | Hydrogen cyanide (Hydrocyanic acid) | 30",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_10090 | Hydrogen cyanide (Hydrocyanic acid) | 30"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5898"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_5898 | L-2-Amino-3-(4-imidazolyl)propanoic acid (Histidine) | 29",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_5898 | L-2-Amino-3-(4-imidazolyl)propanoic acid (Histidine) | 29"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10092"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_10092 | Hydrogen thiocyanate (Thiocyanic acid) | 24",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_10092 | Hydrogen thiocyanate (Thiocyanic acid) | 24"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5856"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_5856 | L-2-Amino-3-mercaptopropanoic acid (Cysteine) | 23",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_5856 | L-2-Amino-3-mercaptopropanoic acid (Cysteine) | 23"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_8412"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_8412 | Nitrilotris(methylenephosphonic acid) (NTP) | 21",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_8412 | Nitrilotris(methylenephosphonic acid) (NTP) | 21"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_10103 | Ammonia | 21",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_10103 | Ammonia | 21"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_6127"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6127 | Iminodiacetic acid (IDA) | 20",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_6127 | Iminodiacetic acid (IDA) | 20"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5761"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_5761 | L-2-Aminopropanoic acid (Alanine) | 19",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_5761 | L-2-Aminopropanoic acid (Alanine) | 19"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_8191"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_8191 | 1,10-Phenanthroline (Dipyridino[a,c]benzene) | 19",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_8191 | 1,10-Phenanthroline (Dipyridino[a,c]benzene) | 19"
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_9058"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid) | 19",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid) | 19"
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5857"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_5857 | D-2-Amino-3-mercapto-3-methylbutanoic acid (Penicillamine) | 18",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_5857 | D-2-Amino-3-mercapto-3-methylbutanoic acid (Penicillamine) | 18"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "Representative Zn(II) equilibrium data (aqueous)\n| System | Species/Reaction | Constant (type) | T (°C) | I (M) | Notes/IDs |\n|---|---|---|---|---|---|\n| Zn–Cl− | Zn2+ + Cl− ⇌ ZnCl+ | −0.4 (logK) | 25 | 0.7 | metal_208; ligand_10163 |\n|  |  | −0.3 (logK) | 25 | 1.0 |  |\n|  |  | −0.3 (logK) | 25 | 2.0 |  |\n|  |  | −0.2 (logK) | 25 | 3.0 |  |\n|  |  | 0.1 (logK) | 25 | 4.0 | K increases with I; no ZnCl2° in this set |\n| Zn–HSO4− | Zn2+ + HSO4− ⇌ ZnHSO4+ | 2.34 (logK) | 25 | 0.0 |  |\n|  |  | 0.93 (logK) | 25 | 0.5 |  |\n|  |  | 0.89 (logK) | 25 | 1.0 |  |\n|  |  | 0.76 (logK) | 25 | 2.0 |  |\n|  |  | 0.70 (logK) | 25 | 3.0 | K decreases with I |\n| Zn–HCO3− | ZnHCO3+ (ML) | 4.76 (logβ1) | 25 | 0.0 |  |\n|  |  | 3.9 (logβ1) | 25 | 0.1 |  |\n|  |  | 3.3 (logβ1) | 25 | 0.7 |  |\n|  | Zn(HCO3)2° (ML2) | 5.3 (logβ2) | 25 | 0.7 |  |\n|  |  | 6.9 (logβ2) | 25 | 3.0 | ML2 strengthened at high I |\n| Zn–Histidine | ML formation | 6.51 (logK) | 25 | 0.1 | ligand_5898 |\n|  |  | 6.48 (logK) | 25 | 0.5 |  |\n|  |  | 6.35 (logK) | 37 | 0.15 | Slightly lower at 37 °C |\n| Zn–Thiohistidine | ML formation | 9.16 (logK) | 25 | 0.1 | Stronger than histidine |\n|  | ML2 step | −17.2 (logK) | 25 | 0.1 | Unfavorable ML2 under these conditions |\n| Zn–Glycine | [M] + [L] ⇌ [ML] | 4.87 (logK) | 31–41 | 0–0.3 | Network ref_eq_net_113; also ML2/ML3 reported |\n|  | [M] + 2[L] ⇌ [ML2] | 8.97 (logK) | 31–41 | 0–0.3 |  |\n|  | [M] + 3[L] ⇌ [ML3] | 11.3 (logK) | 31–41 | 0–0.3 |  |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 48,
+            "text": "Representative Zn(II) equilibrium data (aqueous)",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 152,
+            "end": 234,
+            "text": "| Zn–Cl− | Zn2+ + Cl− ⇌ ZnCl+ | −0.4 (logK) | 25 | 0.7 | metal_208; ligand_10163 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 235,
+            "end": 270,
+            "text": "|  |  | −0.3 (logK) | 25 | 1.0 |  |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 271,
+            "end": 306,
+            "text": "|  |  | −0.3 (logK) | 25 | 2.0 |  |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 307,
+            "end": 342,
+            "text": "|  |  | −0.2 (logK) | 25 | 3.0 |  |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 343,
+            "end": 418,
+            "text": "|  |  | 0.1 (logK) | 25 | 4.0 | K increases with I; no ZnCl2° in this set |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 419,
+            "end": 484,
+            "text": "| Zn–HSO4− | Zn2+ + HSO4− ⇌ ZnHSO4+ | 2.34 (logK) | 25 | 0.0 |  |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 485,
+            "end": 520,
+            "text": "|  |  | 0.93 (logK) | 25 | 0.5 |  |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 521,
+            "end": 556,
+            "text": "|  |  | 0.89 (logK) | 25 | 1.0 |  |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 557,
+            "end": 592,
+            "text": "|  |  | 0.76 (logK) | 25 | 2.0 |  |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 593,
+            "end": 646,
+            "text": "|  |  | 0.70 (logK) | 25 | 3.0 | K decreases with I |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 647,
+            "end": 703,
+            "text": "| Zn–HCO3− | ZnHCO3+ (ML) | 4.76 (logβ1) | 25 | 0.0 |  |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 704,
+            "end": 739,
+            "text": "|  |  | 3.9 (logβ1) | 25 | 0.1 |  |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 740,
+            "end": 775,
+            "text": "|  |  | 3.3 (logβ1) | 25 | 0.7 |  |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 776,
+            "end": 827,
+            "text": "|  | Zn(HCO3)2° (ML2) | 5.3 (logβ2) | 25 | 0.7 |  |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 828,
+            "end": 889,
+            "text": "|  |  | 6.9 (logβ2) | 25 | 3.0 | ML2 strengthened at high I |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 890,
+            "end": 960,
+            "text": "| Zn–Histidine | ML formation | 6.51 (logK) | 25 | 0.1 | ligand_5898 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 961,
+            "end": 996,
+            "text": "|  |  | 6.48 (logK) | 25 | 0.5 |  |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 997,
+            "end": 1056,
+            "text": "|  |  | 6.35 (logK) | 37 | 0.15 | Slightly lower at 37 °C |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1057,
+            "end": 1143,
+            "text": "| Zn–Thiohistidine | ML formation | 9.16 (logK) | 25 | 0.1 | Stronger than histidine |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1144,
+            "end": 1226,
+            "text": "|  | ML2 step | −17.2 (logK) | 25 | 0.1 | Unfavorable ML2 under these conditions |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1227,
+            "end": 1338,
+            "text": "| Zn–Glycine | [M] + [L] ⇌ [ML] | 4.87 (logK) | 31–41 | 0–0.3 | Network ref_eq_net_113; also ML2/ML3 reported |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1339,
+            "end": 1397,
+            "text": "|  | [M] + 2[L] ⇌ [ML2] | 8.97 (logK) | 31–41 | 0–0.3 |  |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1398,
+            "end": 1456,
+            "text": "|  | [M] + 3[L] ⇌ [ML3] | 11.3 (logK) | 31–41 | 0–0.3 |  |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10163",
+              "vlm_177526",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_177526 | logK | -0.4 | 25 | 0.7 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_id: metal_208 | ligand_id: ligand_10163"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "vlm_177526 | ref_eq_map_29790 | beta_def_812 | logK | -0.4 | 25 | 0.7 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10163",
+              "vlm_177527",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_177527 | logK | -0.3 | 25 | 1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_id: metal_208 | ligand_id: ligand_10163"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "vlm_177527 | ref_eq_map_29786 | beta_def_812 | logK | -0.3 | 25 | 1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10163",
+              "vlm_177528",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_177528 | logK | -0.3 | 25 | 2 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "vlm_177528 | ref_eq_map_29787 | beta_def_812 | logK | -0.3 | 25 | 2 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10163",
+              "vlm_177529",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_177529 | logK | -0.2 | 25 | 3 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "vlm_177529 | ref_eq_map_29788 | beta_def_812 | logK | -0.2 | 25 | 3 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10163",
+              "vlm_177530",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_177530 | logK | 0.1 | 25 | 4 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "vlm_177530 | ref_eq_map_29789 | beta_def_812 | logK | 0.1 | 25 | 4 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10148",
+              "vlm_176130",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_176130 | logK | 2.34 | 25 | 0 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "metal_id: metal_208 | ligand_id: ligand_10148"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_176130 | ref_eq_map_29221 | beta_def_812 | logK | 2.34 | 25 | 0 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10148",
+              "vlm_176126",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_176126 | logK | 0.93 | 25 | 0.5 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_176126 | ref_eq_map_29222 | beta_def_812 | logK | 0.93 | 25 | 0.5 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10148",
+              "vlm_176127",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_176127 | logK | 0.89 | 25 | 1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_176127 | ref_eq_map_29223 | beta_def_812 | logK | 0.89 | 25 | 1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10148",
+              "vlm_176128",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_176128 | logK | 0.76 | 25 | 2 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_176128 | ref_eq_map_29224 | beta_def_812 | logK | 0.76 | 25 | 2 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10148",
+              "vlm_176129",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_176129 | logK | 0.7 | 25 | 3 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_176129 | ref_eq_map_29225 | beta_def_812 | logK | 0.7 | 25 | 3 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10096",
+              "vlm_172902",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_172902 | logK | 4.76 | 25 | 0 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "metal_id: metal_208 | ligand_id: ligand_10096"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "vlm_172902 | ref_eq_map_28029 | beta_def_812 | logK | 4.76 | 25 | 0 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10096",
+              "vlm_172900",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_172900 | logK | 3.9 | 25 | 0.1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "vlm_172900 | ref_eq_map_28026 | beta_def_812 | logK | 3.9 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10096",
+              "vlm_172901",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_172901 | logK | 3.3 | 25 | 0.7 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "vlm_172901 | ref_eq_map_28027 | beta_def_812 | logK | 3.3 | 25 | 0.7 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10096",
+              "vlm_172903",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_172903 | logK | 5.3 | 25 | 0.7 | `[M] + [L]^2 <=> [ML2]`",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "vlm_172903 | ref_eq_map_28027 | beta_def_840 | logK | 5.3 | 25 | 0.7 | `[M] + [L]^2 <=> [ML2]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_10096",
+              "vlm_172904",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_172904 | logK | 6.9 | 25 | 3 | `[M] + [L]^2 <=> [ML2]`",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "vlm_172904 | ref_eq_map_28028 | beta_def_840 | logK | 6.9 | 25 | 3 | `[M] + [L]^2 <=> [ML2]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5898",
+              "vlm_98899",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_98899 | logK | 6.51 | 25 | 0.1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "metal_id: metal_208 | ligand_id: ligand_5898"
+              },
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "vlm_98899 | ref_eq_map_1353 | beta_def_812 | logK | 6.51 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 17,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5898",
+              "vlm_98901",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_98901 | logK | 6.48 | 25 | 0.5 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "vlm_98901 | ref_eq_map_1355 | beta_def_812 | logK | 6.48 | 25 | 0.5 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 18,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5898",
+              "vlm_98900",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_98900 | logK | 6.35 | 37 | 0.15 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "vlm_98900 | ref_eq_map_1354 | beta_def_812 | logK | 6.35 | 37 | 0.15 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 19,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5860",
+              "vlm_97690",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_97690 | logK | 9.16 | 25 | 0.1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "metal_id: metal_208 | ligand_id: ligand_5860"
+              },
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "vlm_97690 | ref_eq_map_1067 | beta_def_812 | logK | 9.16 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 20,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5860",
+              "vlm_97691",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_97691 | logK | -17.2 | 25 | 0.1 | `[M] + [L]^2 <=> [ML2]`",
+            "tool_snippets": [
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "vlm_97691 | ref_eq_map_1067 | beta_def_840 | logK | -17.2 | 25 | 0.1 | `[M] + [L]^2 <=> [ML2]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 21,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5760",
+              "ref_eq_net_113",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ref_eq_net_113 | T 31~41 | I 0~0.3 | beta_def_812 | logK | 4.87",
+            "tool_snippets": [
+              {
+                "step": "Step 20",
+                "tool": "search_networks",
+                "snippet": "ref_eq_net_113 | T_range | 31~41 | I_range | 0~0.3 | vlm_counts 4 | values | logK | 4.87~11.3"
+              },
+              {
+                "step": "Step 20",
+                "tool": "search_networks",
+                "snippet": "beta_def_812 | ``[M] + [L] <=> [ML]`` | logK | 4.87"
+              }
+            ]
+          },
+          {
+            "claim_index": 22,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5760",
+              "ref_eq_net_113",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ref_eq_net_113 | T 31~41 | I 0~0.3 | beta_def_840 | logK | 8.97",
+            "tool_snippets": [
+              {
+                "step": "Step 20",
+                "tool": "search_networks",
+                "snippet": "ref_eq_net_113 | T_range 31~41 | I_range 0~0.3 | values | logK | 4.87~11.3"
+              },
+              {
+                "step": "Step 20",
+                "tool": "search_networks",
+                "snippet": "beta_def_840 | ``[M] + [L]^2 <=> [ML2]`` | logK | 8.97"
+              }
+            ]
+          },
+          {
+            "claim_index": 23,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5760",
+              "ref_eq_net_113",
+              "beta_def_872"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ref_eq_net_113 | T 31~41 | I 0~0.3 | beta_def_872 | logK | 11.3",
+            "tool_snippets": [
+              {
+                "step": "Step 20",
+                "tool": "search_networks",
+                "snippet": "ref_eq_net_113 | T_range 31~41 | I_range 0~0.3 | values | logK | 4.87~11.3"
+              },
+              {
+                "step": "Step 20",
+                "tool": "search_networks",
+                "snippet": "beta_def_872 | ``[M] + [L]^3 <=> [ML3]`` | logK | 11.3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "Notes and context\n- Media/conditions: Nearly all Zn(II) stability data here are in water and cluster at 25 °C and I ≈ 0.1 M, with substantial coverage up to I = 1–3 M for anion complexes.\n- Ligand families: Alongside simple inorganic anions, SRD‑46 contains many amino acids (glycine, histidine, cysteine), N‑donors (ethylenediamine, imidazole, ammonia), aromatic chelators (1,10‑phenanthroline), and phosphonates (e.g., NTP). EDTA and related aminopolycarboxylates are present; representative entries include hydrolysis‑coupled reactions, and protonation ladders for EDTA derivatives are available at I = 0.1 M.\n- Trends: Chloride complexation is weak and increases with ionic strength, while bisulfate is substantially stronger at low I and weakens with I. Bicarbonate shows appreciable cumulative stability, especially for ML2 at higher ionic strength. Among bioligands, thio‑donor substitution (thiohistidine) enhances Zn(II) binding relative to histidine.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 17,
+            "text": "Notes and context",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 20,
+            "end": 37,
+            "text": "Media/conditions:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 38,
+            "end": 88,
+            "text": "Nearly all Zn(II) stability data here are in water",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 93,
+            "end": 109,
+            "text": "cluster at 25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 114,
+            "end": 123,
+            "text": "I ≈ 0.1 M",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 157,
+            "end": 186,
+            "text": "I = 1–3 M for anion complexes",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 190,
+            "end": 206,
+            "text": "Ligand families:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 207,
+            "end": 241,
+            "text": "Alongside simple inorganic anions,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 242,
+            "end": 274,
+            "text": "SRD‑46 contains many amino acids",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 275,
+            "end": 305,
+            "text": "(glycine, histidine, cysteine)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 307,
+            "end": 353,
+            "text": "N‑donors (ethylenediamine, imidazole, ammonia)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 355,
+            "end": 395,
+            "text": "aromatic chelators (1,10‑phenanthroline)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 401,
+            "end": 425,
+            "text": "phosphonates (e.g., NTP)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 427,
+            "end": 477,
+            "text": "EDTA and related aminopolycarboxylates are present",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 479,
+            "end": 538,
+            "text": "representative entries include hydrolysis‑coupled reactions",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 544,
+            "end": 598,
+            "text": "protonation ladders for EDTA derivatives are available",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 602,
+            "end": 611,
+            "text": "I = 0.1 M",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 615,
+            "end": 622,
+            "text": "Trends:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 623,
+            "end": 652,
+            "text": "Chloride complexation is weak",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 657,
+            "end": 686,
+            "text": "increases with ionic strength",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 694,
+            "end": 738,
+            "text": "bisulfate is substantially stronger at low I",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 743,
+            "end": 757,
+            "text": "weakens with I",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 759,
+            "end": 809,
+            "text": "Bicarbonate shows appreciable cumulative stability",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 811,
+            "end": 854,
+            "text": "especially for ML2 at higher ionic strength",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 856,
+            "end": 873,
+            "text": "Among bioligands,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 874,
+            "end": 959,
+            "text": "thio‑donor substitution (thiohistidine) enhances Zn(II) binding relative to histidine",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_208"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "solvent_name | n\nH_[2]O | 4095  (WHERE c.metal_id = 208)",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT s.solvent_name, COUNT(*) AS n ... WHERE c.metal_id = 208 ...\n| solvent_name | n |\n| H_[2]O | 4095 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_208"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "temperature_c | n\n25.0 | 3363  (Zn data; values cluster at 25 °C)",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT s.temperature_c, COUNT(*) AS n ... WHERE c.metal_id = 208 ...\n| 25.0 | 3363 | 37.0 | 307 | 20.0 | 274 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_208"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ionic_strength_mol_l | n\n0.1 | 2457  (largest bin at I≈0.1 M for Zn)",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT s.ionic_strength_mol_l, COUNT(*) AS n ... WHERE c.metal_id = 208 ...\n| 0.1 | 2457 | 0.5 | 498 | 1.0 | 338 | 0.15 | 294 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_10163",
+              "vlm_177527",
+              "vlm_177528",
+              "vlm_177529"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Zn^[2+] + Chloride ion: I(M)=1 (vlm_177527), 2 (vlm_177528), 3 (vlm_177529)",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "vlm_177527 | ... | logK | -0.3 | 25 | 1 | `[M] + [L] <=> [ML]`\nvlm_177528 | ... | logK | -0.3 | 25 | 2 | ...\nvlm_177529 | ... | logK | -0.2 | 25 | 3 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "ligand_5760",
+              "ligand_5898",
+              "ligand_5856",
+              "ligand_5761"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Aminoacetic acid (Glycine) | 37; Histidine | 29; Cysteine | 23; Alanine | 19",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_5760 | Aminoacetic acid (Glycine) | 37\nligand_5898 | ... (Histidine) | 29\nligand_5856 | ... (Cysteine) | 23\nligand_5761 | ... (Alanine) | 19"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "ligand_5760",
+              "ligand_5898",
+              "ligand_5856"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Glycine | 37; Histidine | 29; Cysteine | 23 (Zn complexes present)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_5760 | Aminoacetic acid (Glycine) | 37\nligand_5898 | ... (Histidine) | 29\nligand_5856 | ... (Cysteine) | 23"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "ligand_7029",
+              "ligand_7795",
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Ethylenediamine | 36; 1,3-Diazole (Imidazole) | 30; Ammonia | 21",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7029 | Ethylenediamine | 36\nligand_7795 | 1,3-Diazole (Imidazole) | 30\nligand_10103 | Ammonia | 21"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "ligand_8191"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "1,10-Phenanthroline (Dipyridino[a,c]benzene) | 19",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_8191 | 1,10-Phenanthroline (Dipyridino[a,c]benzene) | 19"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "ligand_8412"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Nitrilotris(methylenephosphonic acid) (NTP) | 21",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_8412 | Nitrilotris(methylenephosphonic acid) (NTP) | 21"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "ligand_6277",
+              "ligand_6335",
+              "ligand_6348"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Zn^[2+] + EDTA — 1 measurement; + EEDTA — 3; + TEDTA — 1",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "Zn^[2+] + Ethylenedinitrilotetraacetic acid (EDTA) — 1 measurement(s)\nZn^[2+] + Oxybis(ethylenenitrilo)tetraacetic acid (EEDTA) — 3\nZn^[2+] + Thiobis(ethylenenitrilo)tetraacetic acid (TEDTA) — 1"
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [
+              "vlm_108721",
+              "beta_def_966",
+              "ligand_6277"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_108721: `[M(OH)L] + [H] <=> [ML] + [H2O]`  (I=0.1, T=20 °C)",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "EDTA: vlm_108721 | beta_def_966 | ΔH | 0 | 20 | 0.1 | `[M(OH)L] + [H] <=> [ML] + [H2O]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [
+              "ligand_6335",
+              "ligand_6277",
+              "ligand_6348"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "EDTA/EEDTA/TEDTA show pH ladders: “−∞; H5L/H4L/H3L … +∞”",
+            "tool_snippets": [
+              {
+                "step": "Step 18",
+                "tool": "search_pka_ligands",
+                "snippet": "EEDTA: −∞; H4L (M_tot_1); (-1.8, vlm_111731); H3L (M_tot_1); +∞ | I(M)_range 0.1"
+              },
+              {
+                "step": "Step 18",
+                "tool": "search_pka_ligands",
+                "snippet": "EDTA: −∞; H5L (M_tot_1); (-1.5, vlm_108289); H4L (M_tot_2); (2, vlm_108282); H3L (M_tot_2); +∞ | I(M)_range 0.1"
+              },
+              {
+                "step": "Step 18",
+                "tool": "search_pka_ligands",
+                "snippet": "TEDTA: −∞; H4L (M_tot_1); (2, vlm_112242); H3L (M_tot_1); +∞ | I(M)_range 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [
+              "ligand_6277",
+              "ligand_6335",
+              "ligand_6348"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "I(M)_range | 0.1 (for EDTA/EEDTA/TEDTA pH ladders)",
+            "tool_snippets": [
+              {
+                "step": "Step 18",
+                "tool": "search_pka_ligands",
+                "snippet": "EEDTA ... | I(M)_range | 0.1 |"
+              },
+              {
+                "step": "Step 18",
+                "tool": "search_pka_ligands",
+                "snippet": "EDTA ... | I(M)_range | 0.1 |"
+              },
+              {
+                "step": "Step 18",
+                "tool": "search_pka_ligands",
+                "snippet": "TEDTA ... | I(M)_range | 0.1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 17,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 18,
+            "canonical_ids": [
+              "ligand_10163",
+              "vlm_177526",
+              "vlm_177527",
+              "vlm_177528",
+              "vlm_177529",
+              "vlm_177530"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Zn–Cl−: logK −0.4 (I=0.7) to 0.1 (I=4) → weak complexation",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "vlm_177526 | logK | -0.4 | 25 | 0.7\nvlm_177527 | -0.3 | 25 | 1\nvlm_177528 | -0.3 | 25 | 2\nvlm_177529 | -0.2 | 25 | 3\nvlm_177530 | 0.1 | 25 | 4"
+              }
+            ]
+          },
+          {
+            "claim_index": 19,
+            "canonical_ids": [
+              "ligand_10163",
+              "vlm_177526",
+              "vlm_177527",
+              "vlm_177528",
+              "vlm_177529",
+              "vlm_177530"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Zn–Cl− logK increases with I: −0.4 (0.7M) → −0.3 (1–2M) → −0.2 (3M) → 0.1 (4M)",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "I=0.7: -0.4; I=1: -0.3; I=2: -0.3; I=3: -0.2; I=4: 0.1 (25 °C, ML)"
+              }
+            ]
+          },
+          {
+            "claim_index": 20,
+            "canonical_ids": [
+              "ligand_10148",
+              "vlm_176130",
+              "vlm_176126"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Zn–HSO4−: logK 2.34 at I=0 vs 0.93 at I=0.5 (25 °C) → stronger at low I",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_176130 | logK | 2.34 | 25 | 0\nvlm_176126 | logK | 0.93 | 25 | 0.5"
+              }
+            ]
+          },
+          {
+            "claim_index": 21,
+            "canonical_ids": [
+              "ligand_10148",
+              "vlm_176126",
+              "vlm_176127",
+              "vlm_176128",
+              "vlm_176129",
+              "vlm_176130"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Zn–HSO4− logK decreases with I: 2.34 (0) → 0.93 (0.5) → 0.89 (1) → 0.76 (2) → 0.7 (3)",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "I=0: 2.34; I=0.5: 0.93; I=1: 0.89; I=2: 0.76; I=3: 0.7 (25 °C, ML)"
+              }
+            ]
+          },
+          {
+            "claim_index": 22,
+            "canonical_ids": [
+              "ligand_10096",
+              "vlm_172900",
+              "vlm_172903",
+              "vlm_172904"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Zn–HCO3−: ML logK 3.9 (I=0.1); ML2 logβ2 5.3 (0.7) and 6.9 (3.0) → appreciable cumulative stability",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "vlm_172900 | ML | logK | 3.9 | 25 | 0.1\nvlm_172903 | ML2 | logK | 5.3 | 25 | 0.7\nvlm_172904 | ML2 | logK | 6.9 | 25 | 3"
+              }
+            ]
+          },
+          {
+            "claim_index": 23,
+            "canonical_ids": [
+              "ligand_10096",
+              "vlm_172903",
+              "vlm_172904"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Zn–HCO3− ML2 (β2): 5.3 at I=0.7 → 6.9 at I=3.0 (25 °C) ⇒ stronger at higher I",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "vlm_172903 | ... | [M] + [L]^2 <=> [ML2] | logK | 5.3 | 25 | 0.7\nvlm_172904 | ... | logK | 6.9 | 25 | 3"
+              }
+            ]
+          },
+          {
+            "claim_index": 24,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 25,
+            "canonical_ids": [
+              "ligand_5860",
+              "ligand_5898",
+              "vlm_97690",
+              "vlm_98899"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Thiohistidine: logK 9.16 (I=0.1); Histidine: logK 6.51 (I=0.1) → thio enhances binding",
+            "tool_snippets": [
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "Thiohistidine: vlm_97690 | logK | 9.16 | 25 | 0.1 | `[M]+[L]<=>[ML]`"
+              },
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "Histidine: vlm_98899 | logK | 6.51 | 25 | 0.1 | `[M]+[L]<=>[ML]`"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "If you’d like, I can drill into a specific system (e.g., Zn–EDTA at 25 °C, I = 0.1 M; Zn–imidazole; hydrolysis/hydroxo species) and pull full stoichiometries, logβ/stepwise logK, and citations.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 193,
+            "text": "If you’d like, I can drill into a specific system (e.g., Zn–EDTA at 25 °C, I = 0.1 M; Zn–imidazole; hydrolysis/hydroxo species) and pull full stoichiometries, logβ/stepwise logK, and citations.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "Source: NIST Standard Reference Database 46 (SRD‑46), complex equilibria and ligand data for Zn(II).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 7,
+            "text": "Source:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 8,
+            "end": 43,
+            "text": "NIST Standard Reference Database 46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 44,
+            "end": 52,
+            "text": "(SRD‑46)",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 54,
+            "end": 88,
+            "text": "complex equilibria and ligand data",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 89,
+            "end": 100,
+            "text": "for Zn(II).",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "execute_srd46_sql",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "## execute_srd46_sql - 15 row(s)\nSELECT c.ligand_id, c.ligand_name_SRD, COUNT(s.stability_id) AS n_measurements\nFROM ligandmetal_card c\nJOIN ligandmetal_stability_measured s ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool calls use the SRD‑46 driver ('execute_srd46_sql'); the raw outputs do not print 'SRD‑46' verbatim, so provenance is inferred from the tool name.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "## execute_srd46_sql - 15 row(s)\nSELECT c.ligand_id, c.ligand_name_SRD, COUNT(s.stability_id) AS n_measurements\nFROM ligandmetal_card c\nJOIN ligandmetal_stability_measured s ON s.card_id = c.card_id"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "## execute_srd46_sql - 1 row(s)\nSELECT s.solvent_name, COUNT(*) AS n\nFROM ligandmetal_stability_measured s\nJOIN ligandmetal_card c ON c.card_id = s.card_id\nWHERE c.metal_id = 208"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5760",
+              "vlm_177526"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "equation | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "vlm_177526 | ... | beta_def_812 | logK | -0.4 | 25 | 0.7 | `[M] + [L] <=> [ML]` | *** | [L] |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_5760 | Aminoacetic acid (Glycine) | 37"
+              },
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "constant_type | n\nK | 3351\nH | 395\nS | 349"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_208"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_208 | Zn^[2+] | Zn | 2 | ✓",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "metal_208 | Zn^[2+] | Zn | 2 | ✓ | [Zn+2] | InChI=1S/Zn/q+2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 7,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

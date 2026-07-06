@@ -1,0 +1,20 @@
+Short answer
+In water and non‑complexing background electrolytes, the Ni2+–ethylenediamine formation constants (β1, β2, β3) show little to no systematic dependence on ionic strength over roughly 0–3 M near room temperature; a clear monotonic trend is not evident. Apparent decreases can occur in chloride/sulfate media because competing anion complexation depresses the measured β values, so media must be compared like‑for‑like.
+
+What SRD‑46 covers for this system
+- Species with overall β in SRD‑46: ML (β1), ML2 (β2), ML3 (β3)
+- Catalog summary (Ni2+ + Ethylenediamine, T ≈ 20–30 °C):
+  - β1: beta_def_812 — 15 entries
+  - β2: beta_def_840 — 15 entries
+  - β3: beta_def_872 — 15 entries
+- Ionic‑strength coverage in curated equilibrium maps spans ≈ 0–3 M around room temperature (e.g., clusters near ~0–0.25 M, ~0.35–0.65 M, ~0.85–1.15 M, ~1.85–2.15 M, ~2.85–3.15 M).
+
+Interpretation
+- For Ni2+ + n en ⇌ [Ni(en)n]2+, the net reaction charge is zero (Δz = 0) at each step, so the primary Debye–Hückel salt effect largely cancels. Consistent with this, SRD‑46’s room‑temperature data in non‑complexing media do not exhibit a strong or consistent change of log β with ionic strength; variations across the reported I range are comparable to interstudy scatter.
+- In chloride (or sulfate) media, the “conditional” β values can decrease with increasing ionic strength because Ni–Cl (or Ni–SO4) complexation grows more important; those datasets should not be used to infer the true salt‑effect for the Ni–en equilibrium.
+
+If you’d like, I can assemble a compact table of β1, β2, and β3 vs ionic strength at ~25 °C within a single background (e.g., KNO3 or NaClO4) to illustrate the flat trend.
+
+Source: NIST Standard Reference Database 46 (SRD‑46), Ni2+ (metal_112) with Ethylenediamine (ligand_7029); overall β definitions beta_def_812 (ML), beta_def_840 (ML2), beta_def_872 (ML3); equilibrium maps spanning ~0–3 M at ~20–30 °C.
+
+---

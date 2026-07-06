@@ -1,0 +1,1995 @@
+{
+  "cache_format": 5,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q4.5\\Q4.5_result_batch3.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Using SRD-46, the data support a **positive but imperfect correlation** between ligand basicity and Ca²⁺ stability. The clearest trend is not “higher single pKa ⇒ higher log β” by itself, but rather:\n\n**higher cumulative O-donor basicity + more O-donor sites + chelation = stronger Ca²⁺ binding.**",
+        "claims": [
+          {
+            "start": 0,
+            "end": 13,
+            "text": "Using SRD-46,",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 14,
+            "end": 115,
+            "text": "the data support a **positive but imperfect correlation** between ligand basicity and Ca²⁺ stability.",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 116,
+            "end": 187,
+            "text": "The clearest trend is not “higher single pKa ⇒ higher log β” by itself,",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 188,
+            "end": 199,
+            "text": "but rather:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 201,
+            "end": 297,
+            "text": "**higher cumulative O-donor basicity + more O-donor sites + chelation = stronger Ca²⁺ binding.**",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool queries (e.g., search_metals, search_ligands, search_stability) indicate the database was used in this run; the string \"SRD-46\" is not printed in the row outputs.",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 66 row(s)\n\n### logK — 9 metal-ligand pair(s)"
+              },
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "## build_system_catalog — 20 pair(s), 74 species *(ultra-compact)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_5760",
+              "ligand_6277",
+              "ligand_9058"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "SRD-46 lists individual logK and pKa rows but no correlation analysis; the stated correlation is domain reasoning consistent with Ca2+–ligand data.",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 6 | 1 | 20~37 | 0~3 | *** | 6 |"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_6277 | Ethylenedinitrilotetraaceti… | H4L | O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CC(=O)O | 6 | 1 | 25~37 | 0.1~1 | *** | 6 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_93606 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 9.57 | 25 | 0.1 | L→HL"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_5760",
+              "ligand_9058",
+              "ligand_6277"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "No SRD-46 row states “higher single pKa ⇒ higher logβ”. Database lists multiple pKa per ligand and separate logK entries; the statement is domain reasoning.",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 2.33 | 25 | 0.1 | HL→H2L"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_108224 | ligand_6277 | Ethylenedinitrilotetraacetic acid … | H4L | … | 9.52 | 25 | 0.1 | L→HL"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | … | 25~37 | 0~0.15 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_9058",
+              "ligand_6277",
+              "beta_def_812"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "SRD-46 lists Ca2+ complexes with multidentate O-donor ligands (e.g., citrate, EDTA), but it does not state this trend explicitly; this is established chemistry.",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "7. Ca^[2+] + 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid)… species: … beta_def_779(5) beta_def_812(10)"
+              },
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "8. Ca^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)… species: beta_def_788(2) beta_def_812(16)"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_6277 | Ethylenedinitrilotetraaceti… | H4L | … | T°C_range 25~37 | I(M)_range 0.1~1 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "## Matched ligand pKa data at 25 °C, I = 0.1 M\n\nI summarized the available aqueous pKa values for representative ligands that also have Ca²⁺ ML stability coverage in SRD-46.\n\n| Ligand | SRD-46 ID | Relevant pKa values at 25 °C, I=0.1 M | Simple basicity note |\n|---|---:|---|---|\n| Oxalic acid | ligand_8872 | -1.2, 3.8 | dicarboxylate, modest cumulative basicity |\n| Glycine | ligand_5760 | 2.33, 9.57 | one carboxylate + one amine |\n| Tartaric acid | ligand_8955 | 2.82, 3.97 | dicarboxylate + 2 OH |\n| Citric acid | ligand_9058 | 2.90, 4.35, 5.65 | tricarboxylate + OH |\n| NTA | ligand_6165 | -1.81, -1.00, 2.52, 9.46 | 3 carboxylates + tertiary amine |\n| EDTA | ligand_6277 | -1.5, 2.00, 2.69, 6.13, 9.52 | 4 carboxylates + 2 amines |\n| DTPA | ligand_6356 | -9.9, -8.4, -1.6, -0.7, -0.1, 2.0, 2.7, 4.28 | 5 carboxylates + 3 amines |\n| TTHA | ligand_6366 | -1.8, -1.5, 2.3, 2.76, 4.08, 6.14, 9.52, 10.62 | 6 carboxylates + 4 amines |\n| Carbonic acid / bicarbonate | ligand_10096 | 6.13, 9.91 | hard O-donor anion system |\n| Phosphoric acid / phosphate | ligand_10113 | 1.92, 6.71, 11.52 | very hard O-donor, highly basic higher deprotonations |",
+        "claims": [
+          {
+            "start": 30,
+            "end": 35,
+            "text": "25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 37,
+            "end": 46,
+            "text": "I = 0.1 M",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 48,
+            "end": 60,
+            "text": "I summarized",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 65,
+            "end": 93,
+            "text": "available aqueous pKa values",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 94,
+            "end": 120,
+            "text": "for representative ligands",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 131,
+            "end": 162,
+            "text": "have Ca²⁺ ML stability coverage",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 163,
+            "end": 172,
+            "text": "in SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 280,
+            "end": 365,
+            "text": "| Oxalic acid | ligand_8872 | -1.2, 3.8 | dicarboxylate, modest cumulative basicity |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 366,
+            "end": 434,
+            "text": "| Glycine | ligand_5760 | 2.33, 9.57 | one carboxylate + one amine |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 435,
+            "end": 502,
+            "text": "| Tartaric acid | ligand_8955 | 2.82, 3.97 | dicarboxylate + 2 OH |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 503,
+            "end": 573,
+            "text": "| Citric acid | ligand_9058 | 2.90, 4.35, 5.65 | tricarboxylate + OH |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 574,
+            "end": 656,
+            "text": "| NTA | ligand_6165 | -1.81, -1.00, 2.52, 9.46 | 3 carboxylates + tertiary amine |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 657,
+            "end": 738,
+            "text": "| EDTA | ligand_6277 | -1.5, 2.00, 2.69, 6.13, 9.52 | 4 carboxylates + 2 amines |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 739,
+            "end": 836,
+            "text": "| DTPA | ligand_6356 | -9.9, -8.4, -1.6, -0.7, -0.1, 2.0, 2.7, 4.28 | 5 carboxylates + 3 amines |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 837,
+            "end": 936,
+            "text": "| TTHA | ligand_6366 | -1.8, -1.5, 2.3, 2.76, 4.08, 6.14, 9.52, 10.62 | 6 carboxylates + 4 amines |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 937,
+            "end": 1024,
+            "text": "| Carbonic acid / bicarbonate | ligand_10096 | 6.13, 9.91 | hard O-donor anion system |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1025,
+            "end": 1147,
+            "text": "| Phosphoric acid / phosphate | ligand_10113 | 1.92, 6.71, 11.52 | very hard O-donor, highly basic higher deprotonations |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "vlm_93627"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_93627 | ligand_5760 | ... | 2.33 | 25 | 0.1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 2.33 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_20 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_108224"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_108224 | ligand_6277 | ... | 9.52 | 25 | 0.1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108224 | ligand_6277 | Ethylenedinitrilotetraacetic acid … | H4L | O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CC(=O)O | 9.52 | 25 | 0.1 | L→HL | M_tot_7 | M_tot_70 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "vlm_93627"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "## search_pka_values — 39 row(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 2.33 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_20 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Not all listed ligands show Ca–L ML (β_def_812) coverage; e.g., phosphate (ligand_10113) lacks beta_def_812 in the catalog/logK rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "1. Ca^[2+] + Hydrogen phosphate (Phosphoric acid) (metal_25 + ligand_10113)… species: beta_def_156(1)… beta_def_732(9) beta_def_779(10)"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "logK — 9 metal-ligand pair(s)… ligand_9058… ligand_6165… ligand_5760… ligand_8872… ligand_6277… ligand_8955… ligand_6366… ligand_6356… ligand_10096"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "This run’s tool results originate from NIST SRD-46; the rows do not print the database name explicitly.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "ligand_8872",
+              "vlm_151532",
+              "vlm_151494"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_151532 | ligand_8872 | … | -1.2 | 25 | 0.1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151532 | ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | O=C(O)C(=O)O | -1.2 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_7 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151494 | ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | O=C(O)C(=O)O | 3.8 | 25 | 0.1 | L→HL | M_tot_7 | M_tot_56 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "ligand_5760",
+              "vlm_93627",
+              "vlm_93606"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_93606 | ligand_5760 | … | 9.57 | 25 | 0.1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 2.33 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_20 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93606 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 9.57 | 25 | 0.1 | L→HL | M_tot_20 | M_tot_43 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "ligand_8955",
+              "vlm_154900",
+              "vlm_154888"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_154900 | ligand_8955 | … | 2.82 | 25 | 0.1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_154900 | ligand_8955 | D-2,3-Dihydroxybutanedioic acid (D… | H2L | O=C(O)C(O)C(O)C(=O)O | 2.82 | 25 | 0.1 | HL→H2L | M_tot_3 | M_tot_17 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_154888 | ligand_8955 | D-2,3-Dihydroxybutanedioic acid (D… | H2L | O=C(O)C(O)C(O)C(=O)O | 3.97 | 25 | 0.1 | L→HL | M_tot_17 | M_tot_49 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "ligand_9058",
+              "vlm_157459",
+              "vlm_157439"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_9058 … pKa brackets: (… 2.9 … 4.35 … 5.65 …)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_ligands",
+                "snippet": "| ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyli… (Citric acid) | … | (-inf, H3L, 2.9, H2L, 4.35, HL, 5.65, L, +inf) |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157459 | ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyl… | H3L | … | 4.35 | 25 | 0.1 | HL→H2L | … |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157439 | ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyl… | H3L | … | 5.65 | 25 | 0.1 | L→HL | … |"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "ligand_6356",
+              "vlm_112470",
+              "vlm_112484",
+              "vlm_112522",
+              "vlm_112524",
+              "vlm_112526",
+              "vlm_112514",
+              "vlm_112506",
+              "vlm_112498"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "- species: beta_def_516(3) beta_def_788(3) beta_def_812(5)",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "**20. Ca^[2+] + Diethylenetrinitrilopentaacetic acid (DTPA)** …\n   - species: beta_def_516(3) beta_def_788(3) beta_def_812(5)\n   - eq:3 nets T:15~41°C I:-0.05~0.3M max 3n/3e"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_112470 | ligand_6356 | Diethylenetrinitrilopentaacetic ac… | H5L | O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CCN(CC(=O)O)CC(=O)O | -9.9 | 25 | 0.1 | L→HL | M_tot_2 | M_tot_58 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_112484 | ligand_6356 | Diethylenetrinitrilopentaacetic ac… | H5L | O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CCN(CC(=O)O)CC(=O)O | -8.4 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_2 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_112522 | ligand_6356 | Diethylenetrinitrilopentaacetic ac… | H5L | O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CCN(CC(=O)O)CC(=O)O | -1.6 | 25 | 0.1 | H5L→H6L | M_tot_1 | M_tot_1 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_112524 | ligand_6356 | Diethylenetrinitrilopentaacetic ac… | H5L | O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CCN(CC(=O)O)CC(=O)O | -0.7 | 25 | 0.1 | H6L→H7L | M_tot_1 | M_tot_1 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_112526 | ligand_6356 | Diethylenetrinitrilopentaacetic ac… | H5L | O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CCN(CC(=O)O)CC(=O)O | -0.1 | 25 | 0.1 | H7L→H8L | M_tot_1 | M_tot_1 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_112514 | ligand_6356 | Diethylenetrinitrilopentaacetic ac… | H5L | O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CCN(CC(=O)O)CC(=O)O | 2 | 25 | 0.1 | H4L→H5L | M_tot_1 | M_tot_1 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_112506 | ligand_6356 | Diethylenetrinitrilopentaacetic ac… | H5L | O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CCN(CC(=O)O)CC(=O)O | 2.7 | 25 | 0.1 | H3L→H4L | M_tot_1 | M_tot_1 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_112498 | ligand_6356 | Diethylenetrinitrilopentaacetic ac… | H5L | O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CCN(CC(=O)O)CC(=O)O | 4.28 | 25 | 0.1 | H2L→H3L | M_tot_1 | M_tot_1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [
+              "ligand_10096",
+              "vlm_172632",
+              "vlm_172612"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_172612 | ligand_10096 | … | 9.91 | 25 | 0.1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_172632 | ligand_10096 | Hydrogen carbonate (Carbonic acid) | H2L | O=C(O)O | 6.13 | 25 | 0.1 | HL→H2L | … |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_172612 | ligand_10096 | Hydrogen carbonate (Carbonic acid) | H2L | O=C(O)O | 9.91 | 25 | 0.1 | L→HL | … |"
+              }
+            ]
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [
+              "ligand_10113",
+              "vlm_174245",
+              "vlm_174214",
+              "vlm_174186"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_174214 | ligand_10113 | … | 6.71 | 25 | 0.1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_174245 | ligand_10113 | Hydrogen phosphate (Phosphoric aci… | H3L | O=P(O)(O)O | 1.92 | 25 | 0.1 | H2L→H3L | … |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_174214 | ligand_10113 | Hydrogen phosphate (Phosphoric aci… | H3L | O=P(O)(O)O | 6.71 | 25 | 0.1 | HL→H2L | … |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_174186 | ligand_10113 | Hydrogen phosphate (Phosphoric aci… | H3L | O=P(O)(O)O | 11.52 | 25 | 0.1 | L→HL | … |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "## Ca²⁺ stability coverage for 1:1 ML complexes\n\nFor Ca²⁺, SRD-46 contains ML (“beta_def_812”) stability datasets for these ligands under roughly comparable aqueous conditions.\n\n| Ligand | SRD-46 ID | Ca²⁺ ML data present? | T range (°C) | I range (M) |\n|---|---:|---|---:|---:|\n| Glycine | ligand_5760 | Yes | 20–37 | 0–3 |\n| Oxalic acid | ligand_8872 | Yes | 18–37 | 0–0.5 |\n| Tartaric acid | ligand_8955 | Yes | 25 | 0–0.1 |\n| Citric acid | ligand_9058 | Yes | 25–37 | 0–0.15 |\n| NTA | ligand_6165 | Yes | 20–37 | 0–1 |\n| EDTA | ligand_6277 | Yes | 25–37 | 0.1–1 |\n| DTPA | ligand_6356 | Yes | 25–37 | 0.1–0.15 |\n| TTHA | ligand_6366 | Yes | 20–30 | 0.1 |\n| Carbonate | ligand_10096 | Yes | 25 | 0 |\n| Phosphate | ligand_10113 | No ML logK found in this specific ML search; protonated Ca phosphate systems are present | — | — |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 47,
+            "text": "## Ca²⁺ stability coverage for 1:1 ML complexes",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 49,
+            "end": 131,
+            "text": "For Ca²⁺, SRD-46 contains ML (“beta_def_812”) stability datasets for these ligands",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 132,
+            "end": 176,
+            "text": "under roughly comparable aqueous conditions.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 279,
+            "end": 324,
+            "text": "| Glycine | ligand_5760 | Yes | 20–37 | 0–3 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 325,
+            "end": 376,
+            "text": "| Oxalic acid | ligand_8872 | Yes | 18–37 | 0–0.5 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 377,
+            "end": 427,
+            "text": "| Tartaric acid | ligand_8955 | Yes | 25 | 0–0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 428,
+            "end": 480,
+            "text": "| Citric acid | ligand_9058 | Yes | 25–37 | 0–0.15 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 481,
+            "end": 522,
+            "text": "| NTA | ligand_6165 | Yes | 20–37 | 0–1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 523,
+            "end": 567,
+            "text": "| EDTA | ligand_6277 | Yes | 25–37 | 0.1–1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 568,
+            "end": 615,
+            "text": "| DTPA | ligand_6356 | Yes | 25–37 | 0.1–0.15 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 616,
+            "end": 658,
+            "text": "| TTHA | ligand_6366 | Yes | 20–30 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 659,
+            "end": 702,
+            "text": "| Carbonate | ligand_10096 | Yes | 25 | 0 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 703,
+            "end": 830,
+            "text": "| Phosphate | ligand_10113 | No ML logK found in this specific ML search; protonated Ca phosphate systems are present | — | — |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_25",
+              "beta_def_812",
+              "ligand_5760",
+              "ligand_8872",
+              "ligand_8955",
+              "ligand_9058",
+              "ligand_6165",
+              "ligand_6277",
+              "ligand_6356",
+              "ligand_6366",
+              "ligand_10096"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Args:** where=(c.metal_id = metal_25 AND c.beta_definition_id = beta_def_812 AND c.ligand_id IN (ligand_5760, ligand_8872, ligand_8…",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "Args:** where=(c.metal_id = metal_25 AND c.beta_definition_id = beta_def_812 AND c.ligand_id IN (ligand_5760, ligand_8872, ligand_8…, order_by=…, limit=200"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 6 | 1 | 20~37 | 0~3 | *** | 6 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_5760",
+              "ligand_9058",
+              "ligand_6165",
+              "ligand_6277",
+              "ligand_8872",
+              "ligand_8955",
+              "ligand_6356",
+              "ligand_6366",
+              "ligand_10096"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_25 | Ca^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | … | 20~37 | 0~3 |",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 6 | 1 | 20~37 | 0~3 | *** | 6 |"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_6277 | Ethylenedinitrilotetraaceti… | H4L | … | 6 | 1 | 25~37 | 0.1~1 | *** | 6 |"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | … | 7 | 1 | 20~37 | 0~1 | *** | 7 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_5760",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 6 | 1 | 20~37 | 0~3",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 6 | 1 | 20~37 | 0~3 | *** | 6 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_8872",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_8872 | Ethanedioic acid (Oxalic ac…) | H2L | O=C(O)C(=O)O | 6 | 1 | 18~37 | 0~0.5",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_8872 | Ethanedioic acid (Oxalic ac… | H2L | O=C(O)C(=O)O | 6 | 1 | 18~37 | 0~0.5 | *** | 6 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_8955",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_8955 | D-2,3-Dihydroxybutanedioic … | H2L | … | 3 | 1 | 25 | 0~0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_8955 | D-2,3-Dihydroxybutanedioic … | H2L | O=C(O)C(O)C(O)C(=O)O | 3 | 1 | 25 | 0~0.1 | *** | 3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_9058",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | … | 8 | 1 | 25~37 | 0~0.15",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 8 | 1 | 25~37 | 0~0.15 | *** | 8 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_6165",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | … | 7 | 1 | 20~37 | 0~1",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | O=C(O)CN(CC(=O)O)CC(=O)O | 7 | 1 | 20~37 | 0~1 | *** | 7 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_6277",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6277 | Ethylenedinitrilotetraaceti… | H4L | … | 6 | 1 | 25~37 | 0.1~1",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_6277 | Ethylenedinitrilotetraaceti… | H4L | O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CC(=O)O | 6 | 1 | 25~37 | 0.1~1 | *** | 6 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_6356",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6356 | Diethylenetrinitrilopentaac… | H5L | … | 2 | 1 | 25~37 | 0.1~0.15",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_6356 | Diethylenetrinitrilopentaac… | H5L | O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CCN(CC(=O)O)CC(=O)O | 2 | 1 | 25~37 | 0.1~0.15 | *** | 2 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_6366",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6366 | Triethylenetetranitrilohexa… | H6L | … | 3 | 1 | 20~30 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_6366 | Triethylenetetranitrilohexa… | H6L | O=C(O)CN(CCN(CCN(CC(=O)O)CC(=O)O)CC(=O)O)CCN(CC(=O)O)CC(=O)O | 3 | 1 | 20~30 | 0.1 | *** | 3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_10096",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_10096 | Hydrogen carbonate (Carboni… | H2L | O=C(O)O | 1 | 1 | 25 | 0",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_25 | Ca^[2+] | ligand_10096 | Hydrogen carbonate (Carboni… | H2L | O=C(O)O | 1 | 1 | 25 | 0 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_10113",
+              "beta_def_732",
+              "beta_def_779"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "species: beta_def_156(1) … beta_def_732(9) beta_def_779(10)",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "Ca^[2+] + Hydrogen phosphate (Phosphoric acid) … species: beta_def_156(1) beta_def_296(7) beta_def_298(4) beta_def_625(4) beta_def_665(1) beta_def_666(2) beta_def_689(2) beta_def_732(9) beta_def_779(10)"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "### logK — 9 metal-ligand pair(s)\n| metal_25 | Ca^[2+] | ligand_9058 … |\n| metal_25 | Ca^[2+] | ligand_6165 … |\n… (phosphate not listed among ML pairs)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "## Qualitative ranking from SRD-46 coverage\n\nBased on the matched pKa patterns and the Ca²⁺ complex families present in the catalog/stability search, the ligands fall into a chemically sensible strength order:\n\n| Approximate Ca²⁺ binding strength | Ligands |\n|---|---|\n| Weakest | glycine |\n| Weak–moderate | oxalate, tartrate |\n| Moderate | citrate, carbonate |\n| Strong | NTA |\n| Very strong | EDTA |\n| Strongest in this set | DTPA, TTHA |",
+        "claims": [
+          {
+            "start": 45,
+            "end": 209,
+            "text": "Based on the matched pKa patterns and the Ca²⁺ complex families present in the catalog/stability search, the ligands fall into a chemically sensible strength order:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 269,
+            "end": 290,
+            "text": "| Weakest | glycine |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 291,
+            "end": 328,
+            "text": "| Weak–moderate | oxalate, tartrate |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 329,
+            "end": 362,
+            "text": "| Moderate | citrate, carbonate |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 363,
+            "end": 379,
+            "text": "| Strong | NTA |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 380,
+            "end": 402,
+            "text": "| Very strong | EDTA |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 403,
+            "end": 441,
+            "text": "| Strongest in this set | DTPA, TTHA |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_5760"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Ca^[2+] + Aminoacetic acid (Glycine) (metal_25 + ligand_5760) — ligand_def_HxL: HL",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "18. Ca^[2+] + Aminoacetic acid (Glycine) (metal_25 + ligand_5760) — ligand_def_HxL: HL | 12 ent, 2 sp, 12 vlms (vlm_93666…vlm_93677)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_8872",
+              "ligand_8955"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Ca^[2+] + Ethanedioic acid (Oxalic acid) … (metal_25 + ligand_8872) …; Ca^[2+] + D-…(D‑Tartaric acid) (metal_25 + ligand_8955)",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "9. Ca^[2+] + Ethanedioic acid (Oxalic acid) (metal_25 + ligand_8872) — ligand_def_HxL: H2L | 17 ent, 3 sp, 17 vlms (vlm_151595…vlm_151611)"
+              },
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "19. Ca^[2+] + D-2,3-Dihydroxybutanedioic acid (D-Tartaric acid) (metal_25 + ligand_8955) — ligand_def_HxL: H2L | 11 ent, 2 sp, 11 vlms (vlm_154938…vlm_154948)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_9058",
+              "ligand_10096"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Ca^[2+] + 2‑Hydroxypropane‑1,2,3‑tricarboxylic acid (Citric acid) (metal_25 + ligand_9058) …; + Hydrogen carbonate (Carbonic acid) (ligand_10096)",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "7. Ca^[2+] + 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid) (metal_25 + ligand_9058) — ligand_def_HxL: H3L | 18 ent, 5 sp, 18 vlms (vlm_157530…vlm_157547)"
+              },
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "4. Ca^[2+] + Hydrogen carbonate (Carbonic acid) (metal_25 + ligand_10096) — ligand_def_HxL: H2L | 21 ent, 7 sp, 21 vlms (vlm_172687…vlm_172707)"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_6165"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Ca^[2+] + Nitrilotriacetic acid (NTA) (metal_25 + ligand_6165) — ligand_def_HxL: H3L",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "12. Ca^[2+] + Nitrilotriacetic acid (NTA) (metal_25 + ligand_6165) — ligand_def_HxL: H3L | 15 ent, 2 sp, 15 vlms (vlm_105256…vlm_105270)"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_6277"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Ca^[2+] + Ethylenedinitrilotetraacetic acid (EDTA) (metal_25 + ligand_6277) — ligand_def_HxL: H4L",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "8. Ca^[2+] + Ethylenedinitrilotetraacetic acid (EDTA) (metal_25 + ligand_6277) — ligand_def_HxL: H4L | 18 ent, 2 sp, 18 vlms (vlm_108344…vlm_108361)"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_6356",
+              "ligand_6366"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Ca^[2+] + Diethylenetrinitrilopentaacetic acid (DTPA) (ligand_6356); + Triethylenetetranitrilohexaacetic acid (TTHA) (ligand_6366)",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "20. Ca^[2+] + Diethylenetrinitrilopentaacetic acid (DTPA) (metal_25 + ligand_6356) — ligand_def_HxL: H5L | 11 ent, 3 sp, 11 vlms (vlm_112538…vlm_112548)"
+              },
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "16. Ca^[2+] + Triethylenetetranitrilohexaacetic acid (TTHA) (metal_25 + ligand_6366) — ligand_def_HxL: H6L | 12 ent, 4 sp, 12 vlms (vlm_113057…vlm_113068)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "## Is there a correlation?\n\nYes, **qualitatively**.\n\nAcross this set, ligands with **more basic deprotonated oxygen donors** and **more donor sites** tend to show stronger Ca²⁺ complexation. The trend from simple ligands to aminopolycarboxylates is especially clear:\n\n| Ligand family trend | Interpretation |\n|---|---|\n| Glycine / oxalate / tartrate < citrate < NTA < EDTA < DTPA / TTHA | Increasing total donor number, total negative charge, and cumulative basicity generally increase Ca²⁺ affinity |\n\nBut the correlation is **not purely with a single pKa value**:\n\n| Why the correlation is imperfect | Effect |\n|---|---|\n| Denticity differs greatly | multidentate ligands gain large chelate advantage |\n| Total ligand charge differs | more highly deprotonated ligands favor Ca²⁺ electrostatically |\n| Donor type matters | Ca²⁺ prefers hard O donors more than neutral/soft donors |\n| Protonation state matters | protonated complexes and stepwise acid dissociation complicate simple comparisons |\n| Carbonate/phosphate are confounded by precipitation | apparent affinity can reflect ion pairing/solid formation as well as true soluble ML stability |",
+        "claims": [
+          {
+            "start": 28,
+            "end": 51,
+            "text": "Yes, **qualitatively**.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 53,
+            "end": 190,
+            "text": "Across this set, ligands with **more basic deprotonated oxygen donors** and **more donor sites** tend to show stronger Ca²⁺ complexation.",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 191,
+            "end": 266,
+            "text": "The trend from simple ligands to aminopolycarboxylates is especially clear:",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 321,
+            "end": 499,
+            "text": "Glycine / oxalate / tartrate < citrate < NTA < EDTA < DTPA / TTHA | Increasing total donor number, total negative charge, and cumulative basicity generally increase Ca²⁺ affinity",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 503,
+            "end": 565,
+            "text": "But the correlation is **not purely with a single pKa value**:",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 625,
+            "end": 702,
+            "text": "Denticity differs greatly | multidentate ligands gain large chelate advantage",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 707,
+            "end": 798,
+            "text": "Total ligand charge differs | more highly deprotonated ligands favor Ca²⁺ electrostatically",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 803,
+            "end": 880,
+            "text": "Donor type matters | Ca²⁺ prefers hard O donors more than neutral/soft donors",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 885,
+            "end": 994,
+            "text": "Protonation state matters | protonated complexes and stepwise acid dissociation complicate simple comparisons",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 999,
+            "end": 1147,
+            "text": "Carbonate/phosphate are confounded by precipitation | apparent affinity can reflect ion pairing/solid formation as well as true soluble ML stability",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_5760",
+              "ligand_8872",
+              "ligand_8955",
+              "ligand_9058",
+              "ligand_6165",
+              "ligand_6277",
+              "ligand_6356",
+              "ligand_6366"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "metal_25 | Ca^[2+] | ligand_6277 | Ethylenedinitrilotetraaceti… | H4L | O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CC(=O)O | 6 | 1 | 25~37 | 0.1~1",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_25 | Ca^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 6 | 1 | 20~37 | 0~3"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_25 | Ca^[2+] | ligand_6277 | Ethylenedinitrilotetraaceti… | H4L | O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CC(=O)O | 6 | 1 | 25~37 | 0.1~1"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_25 | Ca^[2+] | ligand_6366 | Triethylenetetranitrilohexa… | H6L | O=C(O)CN(CCN(CCN(CC(=O)O)CC(=O)O)CC(=O)O)CCN(CC(=O)O)CC(=O)O | 3 | 1 | 20~30 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_5760",
+              "ligand_8872",
+              "ligand_8955",
+              "ligand_9058",
+              "ligand_6165",
+              "ligand_6277",
+              "ligand_6356",
+              "ligand_6366"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "metal_25 | Ca^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 6 | 1 | 20~37 | 0~3",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_25 | Ca^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 6 | 1 | 20~37 | 0~3"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_25 | Ca^[2+] | ligand_6277 | Ethylenedinitrilotetraaceti… | H4L | O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CC(=O)O | 6 | 1 | 25~37 | 0.1~1"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_25 | Ca^[2+] | ligand_6366 | Triethylenetetranitrilohexa… | H6L | O=C(O)CN(CCN(CCN(CC(=O)O)CC(=O)O)CC(=O)O)CCN(CC(=O)O)CC(=O)O | 3 | 1 | 20~30 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_5760",
+              "ligand_8872",
+              "ligand_8955",
+              "ligand_9058",
+              "ligand_6165",
+              "ligand_6277",
+              "ligand_6356",
+              "ligand_6366"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "metal_25 | Ca^[2+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | O=C(O)CN(CC(=O)O)CC(=O)O | 7 | 1 | 20~37 | 0~1",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_25 | Ca^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 6 | 1 | 20~37 | 0~3"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_25 | Ca^[2+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 8 | 1 | 25~37 | 0~0.15"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_25 | Ca^[2+] | ligand_6277 | Ethylenedinitrilotetraaceti… | H4L | O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CC(=O)O | 6 | 1 | 25~37 | 0.1~1"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_6277",
+              "ligand_6165",
+              "ligand_6356"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "vlm_108282 | ligand_6277 | Ethylenedinitrilotetraacetic acid … | pKa | 2 | 25 | 0.1 | H3L→H4L",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_108282 | ligand_6277 | Ethylenedinitrilotetraacetic acid … | pKa | 2 | 25 | 0.1 | H3L→H4L"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_108254 | ligand_6277 | Ethylenedinitrilotetraacetic acid … | pKa | 6.13 | 25 | 0.1 | HL→H2L"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_108224 | ligand_6277 | Ethylenedinitrilotetraacetic acid … | pKa | 9.52 | 25 | 0.1 | L→HL"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_5760",
+              "ligand_6277",
+              "ligand_6356",
+              "ligand_6366"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_ligands",
+                "snippet": "ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | 428"
+              },
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "**16. Ca^[2+] + Triethylenetetranitrilohexaacetic acid (TTHA)** (metal_25 + ligand_6366) — ligand_def_HxL: H6L | 12 ent"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "ligand_5760",
+              "ligand_6165",
+              "ligand_6277",
+              "ligand_6356",
+              "ligand_9058"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | pKa | 2.33 | 25 | 0.1 | HL→H2L",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 2.33 | 25 | 0.1 | HL→H2L"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_105158 | ligand_6165 | Nitrilotriacetic acid (NTA) | 9.46 | 25 | 0.1 | L→HL"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_112498 | ligand_6356 | Diethylenetrinitrilopentaacetic ac… | 4.28 | 25 | 0.1 | H2L→H3L"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "ligand_6277"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Functional groups … | carboxyl | 4 | 100% | tertiary_amine | 4 | 100%",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "Functional groups across all SQL matches (4 parseable SMILES)\n| carboxyl | 4 | 100% |\n| tertiary_amine | 4 | 100% |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 | O=C(O)C…"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "beta_def_732",
+              "beta_def_739",
+              "beta_def_751",
+              "beta_def_765",
+              "beta_def_779"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "beta_def_779 | [M] + [HL] <=> [MHL]",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_732 | [M] + [H2L] <=> [MH2L]"
+              },
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_739 | [MHL] + [H] <=> [MH2L]"
+              },
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_751 | [MH2L] + [H] <=> [MH3L]   …   beta_def_765 | [MH3L] + [H] <=> [MH4L]"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "ligand_10096",
+              "ligand_10113",
+              "beta_def_298",
+              "beta_def_313",
+              "beta_def_316",
+              "beta_def_625"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "beta_def_316 | [ML(s,calcite)] <=> [M] + [L] | solid",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "**4. Ca^[2+] + Hydrogen carbonate (Carbonic acid)** … species: beta_def_310(3) beta_def_313(4) beta_def_316(4) beta_def_319(1) beta_def_324(3)…"
+              },
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "**1. Ca^[2+] + Hydrogen phosphate (Phosphoric acid)** … species: beta_def_296(7) beta_def_298(4) beta_def_625(4)…"
+              },
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_298 | [MHL(s)] <=> [M] + [HL] | solid   …   beta_def_313 | [ML(s,aragonite)] <=> [M] + [L] | solid"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "## Hypothesis for alkaline-earth metals\n\n| Hypothesis |\n|---|\n| For alkaline-earth metals such as Ca²⁺, binding strength should increase with the **effective basicity of hard oxygen-donor sites**, but the dominant predictors are the **number, arrangement, and charge of those O donors** rather than any single pKa alone. Thus, a positive pKa–stability correlation exists within related ligand families, while across diverse ligands the stronger rule is: **more highly deprotonated multidentate O-donor ligands bind more strongly**. |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 39,
+            "text": "## Hypothesis for alkaline-earth metals",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 62,
+            "end": 533,
+            "text": "| For alkaline-earth metals such as Ca²⁺, binding strength should increase with the **effective basicity of hard oxygen-donor sites**, but the dominant predictors are the **number, arrangement, and charge of those O donors** rather than any single pKa alone. Thus, a positive pKa–stability correlation exists within related ligand families, while across diverse ligands the stronger rule is: **more highly deprotonated multidentate O-donor ligands bind more strongly**. |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General HSAB/chelate-effect reasoning about Ca2+–O donors; the database lists Ca2+ systems but provides no explicit pKa–logβ trend statements to quote.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "## Chemistry insight\n\nCa²⁺ is a **hard Lewis acid**, so it is stabilized best by **hard, anionic oxygen donors** such as carboxylates and phosphates. That is why aminopolycarboxylates like EDTA, DTPA, and TTHA outperform small monocarboxylates: not just because they are “more basic,” but because they present **multiple preorganized O donors** and gain a strong **chelate effect**.\n\n**Source:** NIST SRD-46 Stability Constants Database.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 20,
+            "text": "## Chemistry insight",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 22,
+            "end": 51,
+            "text": "Ca²⁺ is a **hard Lewis acid**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 56,
+            "end": 112,
+            "text": "it is stabilized best by **hard, anionic oxygen donors**",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 113,
+            "end": 149,
+            "text": "such as carboxylates and phosphates.",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 150,
+            "end": 161,
+            "text": "That is why",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 162,
+            "end": 209,
+            "text": "aminopolycarboxylates like EDTA, DTPA, and TTHA",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 210,
+            "end": 243,
+            "text": "outperform small monocarboxylates",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 262,
+            "end": 284,
+            "text": "they are “more basic,”",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 297,
+            "end": 344,
+            "text": "they present **multiple preorganized O donors**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 349,
+            "end": 382,
+            "text": "gain a strong **chelate effect**.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 384,
+            "end": 437,
+            "text": "**Source:** NIST SRD-46 Stability Constants Database.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Classification of Ca²⁺ as a hard Lewis acid is general chemistry knowledge, not stated in the database rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Preference of Ca²⁺ for hard, anionic oxygen donors is established HSAB/chelate chemistry; not a direct database row.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_10113",
+              "ligand_9058"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Ca^[2+] + Hydrogen phosphate (Phosphoric acid) … (metal_25 + ligand_10113) … Ca^[2+] + 2‑Hydroxypropane‑1,2,3‑tricarboxylic acid (Citric acid) … (metal_25 + ligand_9058)",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "**1. Ca^[2+] + Hydrogen phosphate (Phosphoric acid)** (metal_25 + ligand_10113) — ligand_def_HxL: H3L"
+              },
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "**7. Ca^[2+] + 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid)** (metal_25 + ligand_9058) — ligand_def_HxL: H3L"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_6277",
+              "ligand_6356",
+              "ligand_6366"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Ca^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)… Ca^[2+] + Diethylenetrinitrilopentaacetic acid (DTPA)… Ca^[2+] + Triethylenetetranitrilohexaacetic acid (TTHA)…",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "**8. Ca^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)** (metal_25 + ligand_6277)"
+              },
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "**20. Ca^[2+] + Diethylenetrinitrilopentaacetic acid (DTPA)** (metal_25 + ligand_6356)"
+              },
+              {
+                "step": "Step 9",
+                "tool": "build_system_catalog",
+                "snippet": "**16. Ca^[2+] + Triethylenetetranitrilohexaacetic acid (TTHA)** (metal_25 + ligand_6366)"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Chelating aminopolycarboxylates are widely known to form stronger complexes than small monocarboxylates; specific comparative logK rows are not shown here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "The database excerpts do not provide a quantitative/basicity comparison or a statement that these ligands are “more basic.”",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "ligand_6277",
+              "ligand_6356",
+              "ligand_6366"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "EDTA, DTPA, TTHA entries show multiple carboxylate groups (O=C(O)…), indicating multiple O donors; “preorganized” is conceptual.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | … | `O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CC(=O)O`"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "ligand_6356 | Diethylenetrinitrilopentaacetic ac… | H5L | `O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CCN(CC(=O)O)CC(=O)O`"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "ligand_6366 | Triethylenetetranitrilohexaacetic … | H6L | `O=C(O)CN(CCN(CCN(CC(=O)O)CC(=O)O)CC(=O)O)CCN(CC(=O)O)CC(=O)O`"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "The chelate effect is standard coordination chemistry; not directly stated in the database rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool outputs include SRD-specific fields, e.g., query uses ligand_name_SRD, consistent with NIST SRD-46 as the data source.",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "Args: … order_by=c.ligand_name_SRD ASC, s.temperature_c ASC, limit=200"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

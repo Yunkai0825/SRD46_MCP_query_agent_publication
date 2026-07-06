@@ -1,0 +1,24 @@
+Short answer: None found in SRD‑46.
+
+What I checked (NIST SRD‑46, Stability Constants of Metal Complexes):
+- Queried the stability dataset for uranyl/U(VI) with crown ethers by class and common names (“crown ether”, “crown”, 12C4, 15C5, 18C6, benzo‑/dibenzo‑variants) and uranyl synonyms (“UO2”, “uranyl”, “uranium(VI)”, “U(VI)”).
+- Also inspected the crown‑ether ligand cards to see which metals they pair with; these showed many alkali/alkaline‑earth and other cations, but no U(VI)/uranyl entries.
+
+Summary of crown ethers checked
+
+| Crown ether ligand (SRD‑46 ID) | Aqueous U(VI)/uranyl stability constants found? |
+| --- | --- |
+| 12‑crown‑4 (ligand_9672) | None |
+| 15‑crown‑5 (ligand_9674) | None |
+| 18‑crown‑6 (ligand_9676) | None |
+| Benzo‑15‑crown‑5 (ligand_9675) | None |
+| Benzo‑18‑crown‑6 (ligand_9679) | None |
+| Dibenzo‑18‑crown‑6 (ligand_9680) | None |
+
+Interpretation:
+- SRD‑46 currently contains no aqueous formation constants for uranyl (UO2^2+) complexes with crown ethers (1:1 UO2^2+ + L ⇌ UO2L^2+ or otherwise). Many crown‑ether entries exist for alkali/alkaline‑earth and some heavy divalent cations, but none for U(VI)/uranyl.
+- Chemically, this is plausible: crown ethers are sized and preorganized for s‑block cations; uranyl typically prefers hard, multidentate O‑donors (e.g., carboxylate, phosphate/phosphonate), and crown‑ether literature often concerns extraction or ion‑pairing with alkali counterions rather than direct UO2^2+ binding.
+
+Source: NIST Standard Reference Database 46 (SRD‑46), Stability Constants of Metal Complexes (accessed today). If you’d like, I can broaden the search to non‑aqueous/extraction media, aza‑crowns, or specific crown derivatives you have in mind.
+
+---

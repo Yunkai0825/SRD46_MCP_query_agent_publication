@@ -1,0 +1,45 @@
+## Stability Constants at 200 °C and 50 bar — SRD-46 Findings
+
+### Key Finding: No Data at 200 °C
+
+The SRD-46 database contains **79,063 stability constant measurements**, but the temperature distribution reveals a stark picture:
+
+| Temperature (°C) | Record Count | % of Total |
+|-----------------|-------------|------------|
+| 25.0 | 67,237 | 85.04% |
+| 20.0 | 6,845 | 8.66% |
+| 37.0 | 1,699 | 2.15% |
+| 30.0 | 919 | 1.16% |
+| 35.0 | 488 | 0.62% |
+| 75.0 | 21 | 0.03% |
+| **200.0** | **0** | **0%** |
+
+**The highest temperature with any data is 75 °C.** There are zero records at 200 °C in SRD-46.
+
+---
+
+### Why This Gap Exists
+
+1. **Experimental difficulty:** At 200 °C, water is still liquid only under elevated pressure (≥ 15.5 bar autogenous saturation pressure; your specified 50 bar is well above this). Hydrothermal equilibrium measurements require specialized autoclaves and are extremely challenging.
+
+2. **No pressure field in SRD-46:** The database does not store pressure as a searchable parameter. Even if hydrothermal data existed, 50 bar could not be filtered directly — it would require inspecting individual literature citations.
+
+3. **Thermodynamic extrapolation is the norm:** High-temperature stability constants are typically *estimated* from van't Hoff parameters (ΔH°, ΔS°) measured at 25 °C, not measured directly at 200 °C.
+
+---
+
+### What You Can Do Instead
+
+| Option | Description |
+|--------|-------------|
+| **Use van't Hoff extrapolation** | If you specify a metal + ligand, SRD-46 may have ΔH° data at 25 °C that can be extrapolated (with caveats) |
+| **Consult specialized databases** | SUPCRT92, GEMS, or the NIST-JANAF tables cover hydrothermal conditions |
+| **Specify your system** | Tell me the metal and ligand of interest — I can find the closest available temperature data and relevant citations |
+
+> **Source:** NIST SRD-46 (Critically Selected Stability Constants of Metal Complexes). All counts are from the `ligandmetal_stability_measured` table (79,063 total records).
+
+---
+
+*Would you like me to search for a specific metal–ligand system and retrieve the highest-temperature data available, or look for van't Hoff parameters that could support extrapolation to 200 °C?*
+
+---

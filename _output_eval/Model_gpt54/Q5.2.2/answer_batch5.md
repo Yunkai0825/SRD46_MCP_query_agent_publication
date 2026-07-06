@@ -1,0 +1,36 @@
+SRD-46 appears to have **very limited coverage of metal–protein binding**, and I **did not find entries for transferrin, lactoferrin, albumin, or metallothionein** by ligand search, stability search, or pKa search.
+
+What I *did* find is a **specific oligopeptide ligand** with metal-binding data:
+
+| Ligand | Metal | Species / constant | logK | Conditions |
+|---|---|---|---:|---|
+| L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… (`ligand_6692`) | Cu²⁺ | M + L ⇌ ML | 7.21 | 25 °C, I = 0.1 M |
+| L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… (`ligand_6692`) | Zn²⁺ | M + L ⇌ ML | 3.2 | 25 °C, I = 0.1 M |
+
+It also has protonation constants:
+
+| Ligand | Protonation sequence | logK values | Conditions |
+|---|---|---|---|
+| `ligand_6692` | L → HL → H₂L → H₃L → H₄L → H₅L → H₆L | 8.4, 5.03, 4.31, 3.62, 3.5, 2.6 | 25 °C, I = 0.1 M |
+
+I also found a few **protein/peptide-related literature citations**, but not clear named transferrin complex entries:
+
+| Shortcut | Citation hint | Linked VLM |
+|---|---|---|
+| 43Eaa | Edsall, *Proteins, Amino Acids and Peptides* | `vlm_94058` |
+| 72ESM | Eisenman et al., symposium source | `vlm_182810` |
+| 88CCI | Cali et al., *Int. ...* | `vlm_115076` |
+
+So the short answer is:
+
+| Question | SRD-46 status |
+|---|---|
+| Transferrin metal-binding constants | No direct hits found |
+| Albumin / lactoferrin / metallothionein | No direct hits found |
+| Peptide-type metal binding | Yes, limited examples found |
+
+Chemistry-wise, this is plausible: SRD-46 is much stronger for **small-molecule ligands and defined peptides** than for **large proteins**, where binding can be site-specific, cooperative, and condition-dependent. For transferrin in particular, constants often depend on **synergistic carbonate binding** and specific loading state, which may place it outside the core SRD-46 coverage.
+
+Source: **NIST SRD-46**. If you want, I can next check whether those protein-related citations correspond to any useful metal-binding measurements or help you find transferrin constants from literature-style citation traces within SRD-46.
+
+---

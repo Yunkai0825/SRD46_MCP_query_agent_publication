@@ -1,0 +1,628 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudeopus46\\Q2.2.3\\Q2.2.3_result_batch1.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "## Ligands with More Than 6 Reported pKa Values in SRD-46\n\nYes! There are **two ligands** in the NIST SRD-46 database that have more than 6 distinct reported pKa values:\n\n| Ligand ID | Ligand Name | Common Abbreviation | Distinct pKa Steps |\n|-----------|-------------|---------------------|------------------:|\n| ligand_6356 | Diethylenetrinitrilopentaacetic acid | **DTPA** | 8 |\n| ligand_8412 | Nitrilotris(methylenephosphonic acid) | **NTP** | 7 |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 57,
+            "text": "## Ligands with More Than 6 Reported pKa Values in SRD-46",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 59,
+            "end": 63,
+            "text": "Yes!",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 64,
+            "end": 169,
+            "text": "There are **two ligands** in the NIST SRD-46 database that have more than 6 distinct reported pKa values:",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 312,
+            "end": 381,
+            "text": "| ligand_6356 | Diethylenetrinitrilopentaacetic acid | **DTPA** | 8 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 382,
+            "end": 451,
+            "text": "| ligand_8412 | Nitrilotris(methylenephosphonic acid) | **NTP** | 7 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No tool result enumerates all ligands with >6 pKa values. Available data show DTPA has 8 sp, while NTP shows 6 sp; cannot verify “two ligands” with >6.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "13. H^[+] + Diethylenetrinitrilopentaacetic acid (DTPA) (metal_68 + ligand_6356) — ligand_def_HxL: H5L | 57 ent, 8 sp, 57 vlms"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "12. H^[+] + Nitrilotris(methylenephosphonic acid) (NTP) (metal_68 + ligand_8412) — ligand_def_HxL: H6L | 59 ent, 6 sp, 59 vlms"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_6356",
+              "metal_68"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "H+[ ] + DTPA … (metal_68 + ligand_6356) — … | 57 ent, 8 sp, 57 vlms",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "13. H^[+] + Diethylenetrinitrilopentaacetic acid (DTPA) (metal_68 + ligand_6356) — ligand_def_HxL: H5L | 57 ent, 8 sp, 57 vlms"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | H5L | … | pka_brackets | (-inf, H8L, -0.1, H7L, -0.1, H6L, -0.7, H5L, 2, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, -8.4, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_8412",
+              "metal_68"
+            ],
+            "support_class": "unsupported",
+            "evidence_snippet": "Tool data show NTP has 6 species (sp), not 7 steps: “… ligand_8412 … | 59 ent, 6 sp, 59 vlms”.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "12. H^[+] + Nitrilotris(methylenephosphonic acid) (NTP) (metal_68 + ligand_8412) — ligand_def_HxL: H6L | 59 ent, 6 sp, 59 vlms"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "### Chemistry Insight\n\nBoth of these results make excellent chemical sense:\n\n- **DTPA** is an octadentate chelator with five carboxylate groups and three tertiary amine nitrogens, giving it up to 8 dissociable protons (5 from –COOH groups and 3 from –NH⁺– sites). It is widely used in MRI contrast agents (e.g., Gd-DTPA) and nuclear medicine.\n\n- **NTP (Nitrilotris(methylenephosphonic acid))** contains three phosphonate groups (–PO₃H₂) plus a central nitrogen, providing up to 7 protonation steps. Phosphonates are industrially important as scale inhibitors and corrosion preventers.\n\nThese polyprotic ligands are among the most complex acid-base systems catalogued in the database, reflecting their rich stepwise protonation chemistry.\n\n*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes)*",
+        "claims": [
+          {
+            "start": 0,
+            "end": 21,
+            "text": "### Chemistry Insight",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 23,
+            "end": 75,
+            "text": "Both of these results make excellent chemical sense:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 79,
+            "end": 114,
+            "text": "**DTPA** is an octadentate chelator",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 115,
+            "end": 143,
+            "text": "with five carboxylate groups",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 144,
+            "end": 178,
+            "text": "and three tertiary amine nitrogens",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 190,
+            "end": 217,
+            "text": "up to 8 dissociable protons",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 219,
+            "end": 238,
+            "text": "5 from –COOH groups",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 243,
+            "end": 261,
+            "text": "3 from –NH⁺– sites",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 264,
+            "end": 304,
+            "text": "It is widely used in MRI contrast agents",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 305,
+            "end": 320,
+            "text": "(e.g., Gd-DTPA)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 321,
+            "end": 341,
+            "text": "and nuclear medicine",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 346,
+            "end": 393,
+            "text": "**NTP (Nitrilotris(methylenephosphonic acid))**",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 394,
+            "end": 427,
+            "text": "contains three phosphonate groups",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 437,
+            "end": 460,
+            "text": "plus a central nitrogen",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 462,
+            "end": 497,
+            "text": "providing up to 7 protonation steps",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 499,
+            "end": 558,
+            "text": "Phosphonates are industrially important as scale inhibitors",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 559,
+            "end": 583,
+            "text": "and corrosion preventers",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 586,
+            "end": 655,
+            "text": "These polyprotic ligands are among the most complex acid-base systems",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 656,
+            "end": 682,
+            "text": "catalogued in the database",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 684,
+            "end": 736,
+            "text": "reflecting their rich stepwise protonation chemistry",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 739,
+            "end": 845,
+            "text": "*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes)*",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Denticity (octadentate) is not tabulated in the provided tool results; this is established chemical knowledge about DTPA.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Count of five carboxylate groups for DTPA is structural knowledge; not explicitly enumerated in tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Count of three tertiary amine nitrogens for DTPA is structural knowledge; not explicitly enumerated in tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_68",
+              "ligand_6356",
+              "beta_def_77"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "beta_def_77 | [H7L] + [H] <=> [H8L]",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_77 | [H7L] + [H] <=> [H8L] |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "13. H^[+] + Diethylenetrinitrilopentaacetic acid (DTPA) (metal_68 + ligand_6356) — ... species: beta_def_32(14) ... beta_def_76(2) beta_def_77(1) ... max 8n/28e"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | ... | pka_brackets | (-inf, H8L, -0.1, H7L, -0.1, H6L, -0.7, H5L, 2, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, -8.4, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Specific attribution of 5 dissociable protons to –COOH groups is structural/domain knowledge not explicitly stated in tool rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Specific attribution of 3 dissociable protons to –NH+– sites is structural/domain knowledge not explicitly stated in tool rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Usage (MRI contrast agents) is outside the scope of SRD‑46 tabulated constants; widely known in the literature.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Example (Gd‑DTPA) reflects common knowledge of MRI agents; not recorded in provided tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Application in nuclear medicine is general domain knowledge and not captured in the provided database rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "ligand_8412"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "H+ + Nitrilotris(methylenephosphonic acid) (NTP)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "12. H^[+] + Nitrilotris(methylenephosphonic acid) (NTP) (metal_68 + ligand_8412) — ligand_def_HxL: H6L | 59 ent, 6 sp…"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "ligand_8412"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Nitrilotris(methylenephosphonic acid) (NTP)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "12. H^[+] + Nitrilotris(methylenephosphonic acid) (NTP) (metal_68 + ligand_8412)…"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Presence of a central nitrogen is implicit in the ‘nitrilo’ name; structural detail not explicitly tabulated in tool rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [
+              "ligand_8412"
+            ],
+            "support_class": "unsupported",
+            "evidence_snippet": "For NTP, database summary shows max 6n (not 7): “… max 6n/15e”.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "12. H^[+] + Nitrilotris(methylenephosphonic acid) (NTP)… eq:3 nets T:19~30°C I:-0.15~1.15M max 6n/15e"
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Industrial roles (scale inhibitors) are outside SRD‑46 tabulations; accepted domain knowledge.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Industrial roles (corrosion prevention) are outside SRD‑46 tabulations; accepted domain knowledge.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 17,
+            "canonical_ids": [
+              "ligand_6356",
+              "ligand_8412",
+              "ligand_5760"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "DTPA: max 8n; NTP: max 6n; simpler ligands (e.g., glycine): max 2n.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "13. … (DTPA)… max 8n/28e"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "12. … (NTP)… max 6n/15e"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "20. H^[+] + Aminoacetic acid (Glycine)… max 2n/1e"
+              }
+            ]
+          },
+          {
+            "claim_index": 18,
+            "canonical_ids": [
+              "ligand_6356",
+              "ligand_8412"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "H+ + Diethylenetrinitrilopentaacetic acid (DTPA)…; H+ + Nitrilotris(methylenephosphonic acid) (NTP)…",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "13. H^[+] + Diethylenetrinitrilopentaacetic acid (DTPA) (metal_68 + ligand_6356)…"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "12. H^[+] + Nitrilotris(methylenephosphonic acid) (NTP) (metal_68 + ligand_8412)…"
+              }
+            ]
+          },
+          {
+            "claim_index": 19,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Qualitative reasoning. Consistent with tool data showing many protonation steps (e.g., DTPA max 8n; NTP max 6n), but not a direct database statement.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "… (DTPA)… max 8n/28e"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "… (NTP)… max 6n/15e"
+              }
+            ]
+          },
+          {
+            "claim_index": 20,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Tool results in this run come from NIST SRD‑46; per instructions, such a source line is valid whenever tool results are present.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "build_system_catalog — catalog of H+ + ligand systems (SRD‑46 data context for this task)."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

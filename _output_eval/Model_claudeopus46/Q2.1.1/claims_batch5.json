@@ -1,0 +1,876 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudeopus46\\Q2.1.1\\Q2.1.1_result_batch5.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "## Fe³⁺ Stability: EDTA vs NTA — Side-by-Side Comparison\n\n**EDTA wins decisively.** The 1:1 complex Fe³⁺–EDTA is roughly **10⁹ times more stable** than Fe³⁺–NTA, reflecting EDTA's extra donor group (hexadentate vs tetradentate).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 56,
+            "text": "## Fe³⁺ Stability: EDTA vs NTA — Side-by-Side Comparison",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 60,
+            "end": 81,
+            "text": "EDTA wins decisively.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 84,
+            "end": 109,
+            "text": "The 1:1 complex Fe³⁺–EDTA",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 110,
+            "end": 160,
+            "text": "is roughly **10⁹ times more stable** than Fe³⁺–NTA",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 162,
+            "end": 197,
+            "text": "reflecting EDTA's extra donor group",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 198,
+            "end": 227,
+            "text": "(hexadentate vs tetradentate)",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6277",
+              "ligand_6165",
+              "beta_def_812",
+              "vlm_108639",
+              "vlm_105553"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "EDTA ML logK=25.1 (25 °C, I=0.1) vs NTA ML logK=15.9 (25 °C, I=0.1).",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "vlm_108639 | ref_eq_map_5028 | beta_def_812 | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "vlm_105553 | ref_eq_map_3754 | beta_def_812 | logK | 15.9 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6277",
+              "beta_def_812",
+              "vlm_108639"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Equation `[M] + [L] <=> [ML]` (β1), Fe3+ + EDTA ML present with logK data.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "metal_id: metal_61 | ligand_id: ligand_6277 ... beta_def_812 | type | value | T°C | I(M) | equation\nvlm_108639 ... logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | ... n_entries: 4"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6277",
+              "ligand_6165",
+              "beta_def_812",
+              "vlm_108639",
+              "vlm_105553"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "EDTA ML logK=25.1 vs NTA ML logK=15.9 at 25 °C, I=0.1 → ΔlogK≈9.2 ⇒ ~10^9 ratio.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "vlm_108639 | beta_def_812 | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "vlm_105553 | beta_def_812 | logK | 15.9 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Established chelation chemistry: EDTA is hexadentate while NTA is tetradentate; donor counts are not listed in SRD-46 rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | ligand_class | EDTA and derivatives"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_ligands",
+                "snippet": "ligand_6165 | Nitrilotriacetic acid (NTA) | ligand_class | NTA and derivatives"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Hexadentate vs tetradentate is standard ligand denticity knowledge; SRD-46 does not directly list denticity for EDTA/NTA in the provided rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_ligands",
+                "snippet": "ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | NTA and derivatives"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "### log K₁ Values ([M] + [L] ⇌ [ML])\n\n| Ligand | log K₁ (25 °C, I = 0.1 M) | log K₁ (25 °C, I = 1.0 M) |\n|--------|---------------------------|---------------------------|\n| **EDTA** (ligand_6277) | **25.1** | **23.8** |\n| **NTA** (ligand_6165) | **15.9** | **14.78** |\n| **Δ (EDTA − NTA)** | **+9.2** | **+9.0** |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 36,
+            "text": "### log K₁ Values ([M] + [L] ⇌ [ML])",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 172,
+            "end": 220,
+            "text": "| **EDTA** (ligand_6277) | **25.1** | **23.8** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 221,
+            "end": 269,
+            "text": "| **NTA** (ligand_6165) | **15.9** | **14.78** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 270,
+            "end": 314,
+            "text": "| **Δ (EDTA − NTA)** | **+9.2** | **+9.0** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6277",
+              "beta_def_812",
+              "vlm_108639",
+              "vlm_108640"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_108639 | beta_def_812 | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]` ; vlm_108640 | beta_def_812 | logK | 23.8 | 25 | 1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "vlm_108639 | ref_eq_map_5028 | beta_def_812 | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.52, L, +inf)"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "vlm_108640 | ref_eq_map_5029 | beta_def_812 | logK | 23.8 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.52, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6165",
+              "beta_def_812",
+              "vlm_105553",
+              "vlm_105554"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_105553 | beta_def_812 | logK | 15.9 | 25 | 0.1 | `[M] + [L] <=> [ML]` ; vlm_105554 | beta_def_812 | logK | 14.78 | 25 | 1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "vlm_105553 | ref_eq_map_3754 | beta_def_812 | logK | 15.9 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.46, L, +inf)"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "vlm_105554 | ref_eq_map_3755 | beta_def_812 | logK | 14.78 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.46, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6277",
+              "ligand_6165",
+              "beta_def_812",
+              "vlm_108639",
+              "vlm_108640",
+              "vlm_105553",
+              "vlm_105554"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "EDTA: 25.1 (I 0.1), 23.8 (I 1); NTA: 15.9 (I 0.1), 14.78 (I 1) ⇒ Δ=9.2 and 9.02≈9.0",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "vlm_108639 | beta_def_812 | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]` ; vlm_108640 | beta_def_812 | logK | 23.8 | 25 | 1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "vlm_105553 | beta_def_812 | logK | 15.9 | 25 | 0.1 | `[M] + [L] <=> [ML]` ; vlm_105554 | beta_def_812 | logK | 14.78 | 25 | 1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "### Thermodynamic Parameters (I = 0.1 M, 25 °C)\n\n| Parameter | EDTA | NTA |\n|-----------|------|-----|\n| log K₁ | 25.1 | 15.9 |\n| ΔH (kJ/mol) | −11.3 | +13.4* |\n| ΔS (J/mol·K) | 442.7 | 349.8 |\n\n*\\*NTA ΔH measured at 20 °C*",
+        "claims": [
+          {
+            "start": 0,
+            "end": 28,
+            "text": "### Thermodynamic Parameters",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 30,
+            "end": 39,
+            "text": "I = 0.1 M",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 41,
+            "end": 46,
+            "text": "25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 103,
+            "end": 127,
+            "text": "| log K₁ | 25.1 | 15.9 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 128,
+            "end": 160,
+            "text": "| ΔH (kJ/mol) | −11.3 | +13.4* |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 161,
+            "end": 193,
+            "text": "| ΔS (J/mol·K) | 442.7 | 349.8 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 195,
+            "end": 223,
+            "text": "*\\*NTA ΔH measured at 20 °C*",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_108639",
+              "vlm_105553"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "logK | 25.1 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| vlm_108639 | ref_eq_map_5028 | beta_def_812 | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.52, L, +inf) |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| vlm_105553 | ref_eq_map_3754 | beta_def_812 | logK | 15.9 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.46, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_108639",
+              "vlm_105553"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "logK | 15.9 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| vlm_105553 | ref_eq_map_3754 | beta_def_812 | logK | 15.9 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.46, L, +inf) |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| vlm_108639 | ref_eq_map_5028 | beta_def_812 | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.52, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "vlm_108639",
+              "vlm_105553",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "logK | 25.1 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| vlm_108639 | ref_eq_map_5028 | beta_def_812 | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.52, L, +inf) |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| vlm_105553 | ref_eq_map_3754 | beta_def_812 | logK | 15.9 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.46, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "vlm_108641",
+              "vlm_105555",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ΔH | -11.3 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| vlm_108641 | *** | beta_def_812 | ΔH | -11.3 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.52, L, +inf) |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| vlm_105555 | *** | beta_def_812 | ΔH | 13.4 | 20 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.46, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "vlm_108642",
+              "vlm_105556",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ΔS | 442.7 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| vlm_108642 | *** | beta_def_812 | ΔS | 442.7 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.52, L, +inf) |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| vlm_105556 | *** | beta_def_812 | ΔS | 349.8 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.46, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "vlm_105555"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ΔH | 13.4 | 20 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| vlm_105555 | *** | beta_def_812 | ΔH | 13.4 | 20 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.46, L, +inf) |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "### Chemistry Insight\n\nThe ~9 log-unit advantage of EDTA over NTA for Fe³⁺ is a textbook illustration of the **chelate effect**: EDTA wraps around Fe³⁺ with six donor atoms (4 carboxylates + 2 amines) versus NTA's four (3 carboxylates + 1 amine). The large positive ΔS values for both complexes confirm that complex formation is **entropy-driven**, as expected when multiple water molecules are released from the metal's coordination sphere. Notably, the Fe³⁺–EDTA complex (log K = 25.1) is one of the strongest metal–EDTA complexes known, which is why EDTA is widely used as an iron chelator in medicine, agriculture, and water treatment.\n\n*Source: NIST SRD-46 (Standard Reference Database 46 — Critically Selected Stability Constants of Metal Complexes)*",
+        "claims": [
+          {
+            "start": 0,
+            "end": 21,
+            "text": "### Chemistry Insight",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 23,
+            "end": 74,
+            "text": "The ~9 log-unit advantage of EDTA over NTA for Fe³⁺",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 75,
+            "end": 127,
+            "text": "is a textbook illustration of the **chelate effect**",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 129,
+            "end": 172,
+            "text": "EDTA wraps around Fe³⁺ with six donor atoms",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 173,
+            "end": 200,
+            "text": "(4 carboxylates + 2 amines)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 208,
+            "end": 245,
+            "text": "NTA's four (3 carboxylates + 1 amine)",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 247,
+            "end": 294,
+            "text": "The large positive ΔS values for both complexes",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 295,
+            "end": 347,
+            "text": "confirm that complex formation is **entropy-driven**",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 349,
+            "end": 441,
+            "text": "as expected when multiple water molecules are released from the metal's coordination sphere.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 442,
+            "end": 450,
+            "text": "Notably,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 473,
+            "end": 487,
+            "text": "(log K = 25.1)",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 488,
+            "end": 538,
+            "text": "is one of the strongest metal–EDTA complexes known",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 553,
+            "end": 592,
+            "text": "EDTA is widely used as an iron chelator",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 593,
+            "end": 639,
+            "text": "in medicine, agriculture, and water treatment.",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 641,
+            "end": 756,
+            "text": "*Source: NIST SRD-46 (Standard Reference Database 46 — Critically Selected Stability Constants of Metal Complexes)*",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6277",
+              "ligand_6165",
+              "beta_def_812",
+              "vlm_108639",
+              "vlm_105553"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "EDTA logK=25.1 and NTA logK=15.9 at 25 °C, I=0.1 → ~9 log-unit difference.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| vlm_108639 | ref_eq_map_5028 | beta_def_812 | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.52, L, +inf) |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| vlm_105553 | ref_eq_map_3754 | beta_def_812 | logK | 15.9 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.46, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Chelate effect is general coordination chemistry reasoning; not stated in the database rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "EDTA’s hexadentate donor count (six donors) is standard chemistry knowledge; not enumerated in tool rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "The (4 carboxylates + 2 amines) donor breakdown for EDTA is standard knowledge; not explicitly listed in tool rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "NTA’s tetradentate donor set (3 carboxylates + 1 amine) is standard knowledge; not enumerated in tool rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "beta_def_812",
+              "vlm_108642",
+              "vlm_105556"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ΔS values are positive for both: 442.7 (EDTA) and 349.8 (NTA) at 25 °C, I=0.1.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| vlm_108642 | *** | beta_def_812 | ΔS | 442.7 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.52, L, +inf) |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| vlm_105556 | *** | beta_def_812 | ΔS | 349.8 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.46, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Interpretation that positive ΔS indicates entropy-driven complexation is domain reasoning, not a database row.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Water release upon complexation as the source of positive ΔS is standard mechanistic rationale.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6277",
+              "beta_def_812",
+              "vlm_108639"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "logK | 25.1 | 25 | 0.1 for Fe³⁺ + EDTA (β1: [M]+[L]⇌[ML]).",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| vlm_108639 | ref_eq_map_5028 | beta_def_812 | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.52, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Comparative ranking across all metal–EDTA complexes is not shown in the provided tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Use of EDTA as an iron chelator is general knowledge; not captured in stability constant tables.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Applications in medicine, agriculture, and water treatment are general context, not in the database rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "This run’s tool outputs are from NIST SRD-46 context; individual SQL outputs do not include a provenance string.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

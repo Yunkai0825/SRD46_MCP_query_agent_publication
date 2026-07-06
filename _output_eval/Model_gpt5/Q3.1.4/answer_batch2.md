@@ -1,0 +1,16 @@
+I identified the SRD-46 metals as Fe3+ (metal_61) and Fe2+ (metal_62) and confirmed their ligand coverage.
+
+| Metal | SRD‑46 ligands with any stability data |
+|---|---|
+| Fe3+ (metal_61) | 406 |
+| Fe2+ (metal_62) | 217 |
+
+I attempted to compute the exact intersection (ligands studied with both Fe2+ and Fe3+) and then perform a matched-pair comparison (same ligand, same beta-definition, same constant type, same solvent, closely matched T and ionic strength) to answer whether Fe3+ complexes are consistently more stable. However, the SQL executor returned a tool error before I could retrieve the intersection and matched comparisons.
+
+What I can say qualitatively: for most classical donor sets under comparable conditions, Fe3+ tends to exhibit larger stability constants than Fe2+ because of its higher charge and smaller hydrated radius; exceptions can occur with specific soft donors or redox-coupled systems. To give you a precise SRD‑46-backed answer, I’ll run two domain queries next:
+1) Enumerate the ligands that have measured stability data with both Fe3+ and Fe2+ (global intersection, no condition filters).
+2) For those ligands, compare matched pairs of constants (aligned by beta-definition and constant type, same solvent, with tight T and ionic-strength windows) and tally Fe3+ > Fe2+, ties, and Fe2+ ≥ Fe3+.
+
+If you’d like, I can proceed with that workflow and return the exact intersection count and the consistency statistics. Source: NIST SRD‑46.
+
+---

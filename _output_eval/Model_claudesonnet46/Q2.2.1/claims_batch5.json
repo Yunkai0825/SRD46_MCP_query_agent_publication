@@ -1,0 +1,886 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudesonnet46\\Q2.2.1\\Q2.2.1_result_batch5.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "## Stability-Constant Measurements at 25 °C\n\nHere are the key counts from the SRD-46 database:\n\n| Metric | Count |\n|---|---|\n| **Total measurements** | 79,063 |\n| **At exactly 25.0 °C** | 67,237 |\n| **NULL temperatures** | 0 |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 43,
+            "text": "## Stability-Constant Measurements at 25 °C",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 45,
+            "end": 68,
+            "text": "Here are the key counts",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 69,
+            "end": 93,
+            "text": "from the SRD-46 database",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 125,
+            "end": 160,
+            "text": "| **Total measurements** | 79,063 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 161,
+            "end": 196,
+            "text": "| **At exactly 25.0 °C** | 67,237 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 197,
+            "end": 226,
+            "text": "| **NULL temperatures** | 0 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Provenance claim: results are from the SRD-46 context for this run; queries target the SRD-46-derived table ligandmetal_stability_measured.",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "get_table_schema",
+                "snippet": "get_table_schema - 25 column(s)\n| name | type |\n| stability_id | INTEGER |\n| constant_type | TEXT |\n| constant_value | REAL |\n| temperature_c | REAL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| ligandmetal_stability_measured | (all) | 79063 |",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| table | where | count |\n| ligandmetal_stability_measured | (all) | 79063 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "db_distribution",
+                "snippet": "## db_distribution - ligandmetal_stability_measured by temperature_c\n\n**total_rows:** 79063"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| ligandmetal_stability_measured | temperature_c = 25 | 67237 |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_count_records",
+                "snippet": "| table | where | count |\n| ligandmetal_stability_measured | temperature_c = 25 | 67237 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "db_distribution",
+                "snippet": "| value | count | pct |\n| 25.0 | 67237 | 85.04% |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| count_near25 |\n|--------------|\n| 67237 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "count_null_temp | 0",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "| count_null_temp |\n| 0 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "### Result: **85.0%** of all stability-constant measurements were conducted at 25 °C.\n\n### Temperature Distribution (Top 10)\n\n| Temperature (°C) | Count | Share |\n|---|---|---|\n| **25.0** | **67,237** | **85.04%** |\n| 20.0 | 6,845 | 8.66% |\n| 37.0 | 1,699 | 2.15% |\n| 30.0 | 919 | 1.16% |\n| 35.0 | 488 | 0.62% |\n| 18.0 | 482 | 0.61% |\n| 10.0 | 334 | 0.42% |\n| 40.0 | 324 | 0.41% |\n| 22.0 | 324 | 0.41% |\n| 15.0 | 197 | 0.25% |\n\n*Source: NIST SRD-46 `ligandmetal_stability_measured` table (79,063 total records, zero NULL temperatures)*",
+        "claims": [
+          {
+            "start": 0,
+            "end": 11,
+            "text": "### Result:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 12,
+            "end": 85,
+            "text": "**85.0%** of all stability-constant measurements were conducted at 25 °C.",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 87,
+            "end": 124,
+            "text": "### Temperature Distribution (Top 10)",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 177,
+            "end": 215,
+            "text": "| **25.0** | **67,237** | **85.04%** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 216,
+            "end": 240,
+            "text": "| 20.0 | 6,845 | 8.66% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 241,
+            "end": 265,
+            "text": "| 37.0 | 1,699 | 2.15% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 266,
+            "end": 288,
+            "text": "| 30.0 | 919 | 1.16% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 289,
+            "end": 311,
+            "text": "| 35.0 | 488 | 0.62% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 312,
+            "end": 334,
+            "text": "| 18.0 | 482 | 0.61% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 335,
+            "end": 357,
+            "text": "| 10.0 | 334 | 0.42% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 358,
+            "end": 380,
+            "text": "| 40.0 | 324 | 0.41% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 381,
+            "end": 403,
+            "text": "| 22.0 | 324 | 0.41% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 404,
+            "end": 426,
+            "text": "| 15.0 | 197 | 0.25% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 429,
+            "end": 487,
+            "text": "Source: NIST SRD-46 `ligandmetal_stability_measured` table",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 489,
+            "end": 509,
+            "text": "79,063 total records",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 511,
+            "end": 533,
+            "text": "zero NULL temperatures",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "25.0 | 67237 | 85.04%",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "db_distribution",
+                "snippet": "## db_distribution - ligandmetal_stability_measured by temperature_c\n| value | count | pct |\n| 25.0 | 67237 | 85.04% |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | (all) | 79063 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "30.0 | 919 | 1.16%",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "db_distribution",
+                "snippet": "| 30.0 | 919 | 1.16% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "35.0 | 488 | 0.62%",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "db_distribution",
+                "snippet": "| 35.0 | 488 | 0.62% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "18.0 | 482 | 0.61%",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "db_distribution",
+                "snippet": "| 18.0 | 482 | 0.61% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "10.0 | 334 | 0.42%",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "db_distribution",
+                "snippet": "| 10.0 | 334 | 0.42% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "40.0 | 324 | 0.41%",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "db_distribution",
+                "snippet": "| 40.0 | 324 | 0.41% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "22.0 | 324 | 0.41%",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "db_distribution",
+                "snippet": "| 22.0 | 324 | 0.41% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "15.0 | 197 | 0.25%",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "db_distribution",
+                "snippet": "| 15.0 | 197 | 0.25% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "db_distribution - ligandmetal_stability_measured by temperature_c",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "db_distribution",
+                "snippet": "## db_distribution - ligandmetal_stability_measured by temperature_c"
+              },
+              {
+                "step": "Step 5",
+                "tool": "get_table_schema",
+                "snippet": "## get_table_schema - 25 column(s)\n| name |\n| stability_id ... temperature_c ... |"
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "count_null_temp | 0",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "| count_null_temp |\n| 0 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "### Chemistry Insight\n\nThe overwhelming dominance of 25 °C (≈85%) reflects the long-standing convention in solution thermodynamics to report equilibrium constants at the standard state temperature of 298.15 K. This makes data directly comparable across laboratories and consistent with tabulated thermodynamic quantities (ΔG°, ΔH°, ΔS°). The second most common temperature, **20 °C** (~8.7%), likely reflects older European laboratory practice, while **37 °C** (~2.2%) represents biologically relevant conditions used in studies of metal–ligand systems of medical or biochemical interest (e.g., metal binding to amino acids or drugs). The near-complete absence of NULL temperature values is a testament to the careful curation of this database.",
+        "claims": [
+          {
+            "start": 4,
+            "end": 21,
+            "text": "Chemistry Insight",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 23,
+            "end": 58,
+            "text": "The overwhelming dominance of 25 °C",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 60,
+            "end": 64,
+            "text": "≈85%",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 66,
+            "end": 196,
+            "text": "reflects the long-standing convention in solution thermodynamics to report equilibrium constants at the standard state temperature",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 200,
+            "end": 208,
+            "text": "298.15 K",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 215,
+            "end": 265,
+            "text": "makes data directly comparable across laboratories",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 270,
+            "end": 320,
+            "text": "consistent with tabulated thermodynamic quantities",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 322,
+            "end": 335,
+            "text": "ΔG°, ΔH°, ΔS°",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 338,
+            "end": 383,
+            "text": "The second most common temperature, **20 °C**",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 385,
+            "end": 390,
+            "text": "~8.7%",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 393,
+            "end": 443,
+            "text": "likely reflects older European laboratory practice",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 451,
+            "end": 468,
+            "text": "**37 °C** (~2.2%)",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 469,
+            "end": 512,
+            "text": "represents biologically relevant conditions",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 513,
+            "end": 587,
+            "text": "used in studies of metal–ligand systems of medical or biochemical interest",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 595,
+            "end": 632,
+            "text": "metal binding to amino acids or drugs",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 635,
+            "end": 687,
+            "text": "The near-complete absence of NULL temperature values",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 710,
+            "end": 743,
+            "text": "careful curation of this database",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "25.0 | 67237 | 85.04%",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "db_distribution",
+                "snippet": "value | count | pct\n25.0 | 67237 | 85.04%"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "25.0 | 67237 | 85.04%",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "db_distribution",
+                "snippet": "value | count | pct\n25.0 | 67237 | 85.04%"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General convention in thermodynamics; not stated in SRD-46 rows. No specific row asserts this rationale.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "298.15 K is the standard-state temperature (25 °C); this value is not listed in the tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Comparability across labs is a general rationale; not a database row value.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Consistency with tabulated ΔG°, ΔH°, ΔS° is general thermodynamics practice; not in tool rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "ΔG°, ΔH°, ΔS° are standard thermodynamic quantities; not stated in the tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "25.0 | 67237 | 85.04% ; 20.0 | 6845 | 8.66%",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "db_distribution",
+                "snippet": "value | count | pct\n25.0 | 67237 | 85.04%\n20.0 | 6845 | 8.66%"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "20.0 | 6845 | 8.66%",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "db_distribution",
+                "snippet": "value | count | pct\n20.0 | 6845 | 8.66%"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Interpretive rationale about European practice; not a value present in tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "37.0 | 1699 | 2.15%",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "db_distribution",
+                "snippet": "value | count | pct\n37.0 | 1699 | 2.15%"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Biological relevance at 37 °C is general knowledge; not stated in database rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Use in medical/biochemical metal–ligand studies is a general rationale; not in tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Examples (amino acids, drugs) are general and not drawn from the queried rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "count_null_temp | 0",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT COUNT(*) AS count_null_temp FROM ligandmetal_stability_measured WHERE temperature_c IS NULL\n\ncount_null_temp\n0"
+              }
+            ]
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Attribution of ‘careful curation’ is an interpretation; not verifiable from the provided tool results.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

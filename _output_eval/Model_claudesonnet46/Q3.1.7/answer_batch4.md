@@ -1,0 +1,60 @@
+Here is a comprehensive summary of what SRD-46 contains for **cobalt(II) + 2,2′-bipyridyl**:
+
+---
+
+## Co²⁺ + 2,2′-Bipyridyl (bpy): SRD-46 Data Summary
+
+### ✅ Data Confirmed
+Yes — there is solid data for this system. SRD-46 contains **18 measurement entries** across three cumulative species (ML, ML₂, ML₃), all at 25 °C (with a few at 20–30 °C), in aqueous solution at ionic strengths of 0.1 M and 1.0 M.
+
+---
+
+### Log β Values (Cumulative Stability Constants)
+
+| Species | Equation | log β | T (°C) | I (M) |
+|---------|----------|--------|--------|-------|
+| ML (CoL²⁺) | Co²⁺ + L ⇌ CoL²⁺ | **5.80** | 25 | 0.1 |
+| ML (CoL²⁺) | Co²⁺ + L ⇌ CoL²⁺ | **5.81** | 25 | 1.0 |
+| ML₂ (CoL₂²⁺) | Co²⁺ + 2L ⇌ CoL₂²⁺ | **11.3** | 25 | 0.1 |
+| ML₂ (CoL₂²⁺) | Co²⁺ + 2L ⇌ CoL₂²⁺ | **11.3** | 25 | 1.0 |
+| ML₃ (CoL₃²⁺) | Co²⁺ + 3L ⇌ CoL₃²⁺ | **16.0** | 25 | 0.1 |
+| ML₃ (CoL₃²⁺) | Co²⁺ + 3L ⇌ CoL₃²⁺ | **16.2** | 25 | 1.0 |
+
+**Log β range: 5.80 – 16.2** (across all species)
+
+---
+
+### Thermodynamic Data Also Available
+
+| Species | ΔH (kJ/mol) | ΔS (J/mol·K) | T (°C) | I (M) |
+|---------|-------------|--------------|--------|-------|
+| ML | −34.3 | −4.2 | 20 | 0.1 |
+| ML | −30.1 | +10.0 | 30 | 1.0 |
+| ML₂ | −63.6 | +2.9 | 20 | 0.1 |
+| ML₂ | −60.2 | +14.2 | 30 | 1.0 |
+| ML₃ | −89.1 | +7.1 | 20 | 0.1 |
+| ML₃ | −82.4 | +33.5 | 30 | 1.0 |
+
+---
+
+### Independent Measurements
+
+| Metric | Count |
+|--------|-------|
+| Total entries (all types) | 18 |
+| log β measurements only | **6** (2 per species × 3 species) |
+| Distinct reference networks | **2** (ref_eq_map_14954 at I=0.1 M; ref_eq_map_14955 at I=1.0 M) |
+| ΔH measurements | 6 |
+| ΔS measurements | 6 |
+
+The **6 log β values** come from **2 independent literature sources** (two reference networks), each reporting all three species. The stepwise log K values (per bpy added) are approximately **5.8, 5.5, and 4.9**, showing a modest but clear statistical decrease — consistent with increasing steric and electrostatic crowding as the octahedral coordination sphere fills.
+
+---
+
+### Chemistry Insight
+
+The near-additive log β values (~5.8 per bpy ligand) reflect the strong chelate effect of the bidentate 2,2′-bipyridyl. The slightly negative ΔS for ML at low ionic strength, turning positive for ML₂ and ML₃, hints at a balance between desolvation entropy gains and conformational constraints. This system is also chemically notable because Co(II)/bpy complexes are redox-active and serve as precursors to the much more stable Co(III) tris-bipyridyl complex — a classic in coordination chemistry.
+
+*Source: NIST SRD-46 (Standard Reference Database 46)*
+
+---

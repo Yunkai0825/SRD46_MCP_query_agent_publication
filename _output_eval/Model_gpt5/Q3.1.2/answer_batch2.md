@@ -1,0 +1,23 @@
+Short answer
+Based on SRD‑46 coverage and general Cu/Ni coordination preferences, L‑histidine is the best bet among the proteinogenic amino‑acid ligands to selectively complex Cu2+ over Ni2+ near pH 7. If L‑cysteine is considered and maintained in its reduced thiolate form (no oxidation to cystine), it typically confers even greater Cu selectivity; however, matched aqueous Cu/Ni constants under identical conditions are scarcer and can be complicated by redox/aggregation control.
+
+What I verified in SRD‑46 (data availability for matched comparisons)
+- The SRD‑46 catalogs show that Cu2+ (metal_41) and Ni2+ (metal_112) both have aqueous stability entries with:
+  • Histidine (ligand_5898)
+  • Glycine (ligand_5760)
+  • Phenylalanine (ligand_5777)
+- These are suitable candidates for a like‑for‑like Cu/Ni comparison at 20–30 °C in water.
+- Additional amino acids (e.g., alanine ligand_5761 for Ni, threonine ligand_5829 for Cu, lysine ligand_5887 for Ni, tyrosine ligand_5819 for Ni) appear in one metal’s catalog but were not confirmed for both metals in the quick pass above.
+- A sulfur donor entry present in the scan (DL‑2‑amino‑4‑mercaptobutanoic acid, ligand_5859; homocysteine) had only acid/base rows surfaced in this slice; cysteine itself (2‑amino‑3‑mercaptopropanoic acid) wasn’t retrieved in this pass, so I avoided claiming a numeric advantage without extracting its Cu/Ni logs under matched conditions.
+
+Why histidine tends to win
+- Cu2+ sits at the top of the Irving–Williams series and is borderline‑soft; imidazole nitrogen of histidine stabilizes Cu2+ much more than Ni2+ at neutral pH, giving a larger logβ gap and thus a higher conditional selectivity at pH 7.
+- Carboxylate/amine donors (e.g., glycine) give smaller Cu–Ni gaps; aromatic side chains without a strong donor (e.g., phenylalanine) generally add little extra selectivity.
+- Thiolates (cysteine/homocysteine) can strongly favor Cu2+ over Ni2+, but practical use at pH 7 requires controlling oxidation and mixed‑species chemistry.
+
+Next step to give you a number
+To report an actual selectivity ratio S = K′Cu/K′Ni at pH 7, I’ll pull matched 25 °C, I ≤ 0.2 M aqueous logβ for ML/ML2/MLH±1 for Cu2+ and Ni2+ for histidine, glycine, and phenylalanine; combine them with the ligand’s pKa set to compute the conditional K′ at pH 7; and then rank by S with citations (vlm_N, beta_def_N). If you prefer a specific medium (e.g., 0.10 M NaClO4), tell me and I’ll target that.
+
+Source: NIST Standard Reference Database 46 (SRD‑46), metal catalogs for Cu2+ (metal_41) and Ni2+ (metal_112) and ligand coverage noted above.
+
+---

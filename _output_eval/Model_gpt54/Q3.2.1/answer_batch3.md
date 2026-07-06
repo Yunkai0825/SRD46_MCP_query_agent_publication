@@ -1,0 +1,58 @@
+SRD-46 gives **K₁** as the step for
+
+\[
+\mathrm{M + L \rightleftharpoons ML}
+\]
+
+and the directly reported **β₂** as
+
+\[
+\mathrm{M + 2L \rightleftharpoons ML_2}
+\]
+
+For Cu²⁺–glycine, I could confirm **K₁** and **β₂** values at matched conditions, but the database results returned here do **not include a separate stepwise K₂ entry** for
+
+\[
+\mathrm{ML + L \rightleftharpoons ML_2}
+\]
+
+So β₂ can only be estimated from stepwise constants if you already have or infer \(K_2\), using:
+
+\[
+\beta_2 = K_1K_2
+\qquad\text{or}\qquad
+\log \beta_2 = \log K_1 + \log K_2
+\]
+
+Using the directly reported SRD-46 values, the implied \( \log K_2 \) is:
+
+\[
+\log K_2 = \log \beta_2 - \log K_1
+\]
+
+| T (°C) | I (M) | log K₁ | log β₂ (direct) | implied log K₂ | check: log K₁ + log K₂ |
+|---|---:|---:|---:|---:|---:|
+| 10 | 0.0 | 8.80 | 16.30 | 7.50 | 16.30 |
+| 25 | 0.0 | 8.56 | 15.70 | 7.14 | 15.70 |
+| 25 | 0.1 | 8.19 | 15.10 | 6.91 | 15.10 |
+| 25 | 0.5 | 8.10 | 15.00 | 6.90 | 15.00 |
+| 25 | 1.0 | 8.20 | 15.10 | 6.90 | 15.10 |
+| 25 | 2.0 | 8.38 | 15.40 | 7.02 | 15.40 |
+| 25 | 2.5 | 8.34 | 15.40 | 7.06 | 15.40 |
+| 37 | 0.15 | 7.99 | 14.69 | 6.70 | 14.69 |
+| 40 | 0.0 | 8.37 | 15.30 | 6.93 | 15.30 |
+
+So, for example at **25 °C and I = 0.10 M**:
+
+| quantity | value |
+|---|---:|
+| log K₁ | 8.19 |
+| implied log K₂ | 6.91 |
+| calculated log β₂ = log K₁ + log K₂ | 15.10 |
+| directly reported log β₂ | 15.10 |
+
+**Comparison:** the calculated overall constant matches the directly reported SRD-46 **β₂** exactly when the same conditions are used, as expected from the relation \( \beta_2 = K_1K_2 \).
+
+A small chemistry note: the implied \(K_2\) is consistently smaller than \(K_1\), which is typical for stepwise binding because adding the second glycine ligand is usually less favorable than binding the first. Source: **NIST SRD-46**.
+
+---

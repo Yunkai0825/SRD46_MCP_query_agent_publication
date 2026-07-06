@@ -1,0 +1,11 @@
+Short answer: there isn’t a single “binding constant for DTPA.” It depends on which metal ion and on conditions (temperature, ionic strength, medium). In NIST SRD‑46, the standard 1:1 formation constant for DTPA is reported as the cumulative β1 for the reaction M + L ⇌ ML (beta_def_812).
+
+What SRD‑46 has for DTPA (ligand_6356):
+- ML (β1) stability constants in water (typically 15–30 °C; ionic strength ~0–0.65 M) for many metals, including:
+  Ca2+ (metal_25), Mg2+ (metal_92), Cu2+ (metal_41), Zn2+ (metal_208), Fe2+ (metal_62), Fe3+ (metal_61), Ni2+ (metal_112), Co2+ (metal_33), Mn2+ (metal_94), Cd2+ (metal_26), Pb2+ (metal_125), Al3+ (metal_5), Ga3+ (metal_64), and lanthanides such as Nd3+ (metal_110), Sm3+ (metal_173), Eu3+ (metal_58), Gd3+ (metal_65), Yb3+ (metal_206); also Th4+ (metal_185).
+
+If you tell me the metal (and oxidation state) you care about—e.g., Ca2+, Fe3+, Cu2+, or Gd3+—I’ll return the representative ML log β at ~25 °C in water, along with the ionic strength/medium and the literature citation from SRD‑46. 
+
+Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).
+
+---

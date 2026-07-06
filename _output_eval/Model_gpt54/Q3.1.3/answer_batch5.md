@@ -1,0 +1,50 @@
+I couldn’t verify a **2005** zinc–histidine equilibrium paper in SRD-46 for the **Zn(II) + histidine** system. The latest citation linked to the Zn–histidine measurements in this database is:
+
+| Candidate citation | Year | Notes |
+|---|---:|---|
+| Z. M. Anwar and H. A. Azab, *J. Chem. Eng. Data*, **44** (1999) 1151 | 1999 | Latest Zn–histidine citation present in the SRD-46-linked literature set |
+
+For the Zn–histidine system, SRD-46 contains the following reported constants under the linked measurement records:
+
+| Species / reaction | Beta definition | logK / value | T (°C) | I (M) |
+|---|---|---:|---:|---:|
+| \( \mathrm{Zn + L \rightleftharpoons ZnL} \) | beta_def_812 | 6.51 | 25 | 0.1 |
+| \( \mathrm{Zn + 2L \rightleftharpoons ZnL_2} \) | beta_def_840 | 12.04 | 25 | 0.1 |
+| \( \mathrm{ZnL + H \rightleftharpoons ZnHL} \) | beta_def_788 | 4.86 | 25 | 0.1 |
+| \( \mathrm{ZnL_2 + H \rightleftharpoons ZnHL_2} \) | beta_def_792 | 5.80 | 25 | 0.1 |
+| \( \mathrm{ZnHL_2 + H \rightleftharpoons Zn(HL)_2} \) | beta_def_204 | 5.67 | 25 | 0.1 |
+| \( \mathrm{Zn + L \rightleftharpoons ZnL} \) | beta_def_812 | 6.35 | 37 | 0.15 |
+| \( \mathrm{Zn + 2L \rightleftharpoons ZnL_2} \) | beta_def_840 | 11.67 | 37 | 0.15 |
+| \( \mathrm{ZnL + H \rightleftharpoons ZnHL} \) | beta_def_788 | 4.61 | 37 | 0.15 |
+| \( \mathrm{ZnL_2 + H \rightleftharpoons ZnHL_2} \) | beta_def_792 | 5.50 | 37 | 0.15 |
+| \( \mathrm{Zn + L \rightleftharpoons ZnL} \) | beta_def_812 | 6.48 | 25 | 0.5 |
+| \( \mathrm{Zn + 2L \rightleftharpoons ZnL_2} \) | beta_def_840 | 11.91 | 25 | 0.5 |
+| \( \mathrm{Zn(OH)L_2 + H \rightleftharpoons ZnL_2 + H_2O} \) | beta_def_984 | 9.95 | 25 | 0.5 |
+| \( \mathrm{Zn + L \rightleftharpoons ZnL} \) | beta_def_812 | 6.58 | 25 | 1.0 |
+| \( \mathrm{Zn + 2L \rightleftharpoons ZnL_2} \) | beta_def_840 | 12.29 | 25 | 1.0 |
+| \( \mathrm{Zn + L \rightleftharpoons ZnL} \) | beta_def_812 | 7.07 | 25 | 3.0 |
+| \( \mathrm{Zn + 2L \rightleftharpoons ZnL_2} \) | beta_def_840 | 12.74 | 25 | 3.0 |
+
+SRD-46 also includes some thermodynamic entries for this system:
+
+| Reaction | Quantity | Value | T (°C) | I (M) |
+|---|---|---:|---:|---:|
+| \( \mathrm{Zn + L \rightleftharpoons ZnL} \) | ΔH | -20.1 | 25 | 0.1 |
+| \( \mathrm{Zn + L \rightleftharpoons ZnL} \) | ΔS | 57.3 | 25 | 0.1 |
+| \( \mathrm{ZnL + H \rightleftharpoons ZnHL} \) | ΔH | -27.6 | 25 | 0.1 |
+| \( \mathrm{ZnL + H \rightleftharpoons ZnHL} \) | ΔS | 0.4 | 25 | 0.1 |
+| \( \mathrm{Zn + 2L \rightleftharpoons ZnL_2} \) | ΔH | 0.0 | 25 | 0.1 |
+| \( \mathrm{Zn + 2L \rightleftharpoons ZnL_2} \) | ΔH | -47.3 | 25 | 0.1 |
+| \( \mathrm{Zn + 2L \rightleftharpoons ZnL_2} \) | ΔS | 72.0 | 25 | 0.1 |
+| \( \mathrm{Zn + 2L \rightleftharpoons ZnL_2} \) | ΔS | -67.4 | 25 | 0.1 |
+| \( \mathrm{Zn + L \rightleftharpoons ZnL} \) | ΔH | -23.0 | 25 | 3.0 |
+| \( \mathrm{Zn + 2L \rightleftharpoons ZnL_2} \) | ΔH | -49.4 | 25 | 3.0 |
+| \( \mathrm{Zn + 2L \rightleftharpoons ZnL_2} \) | ΔS | 58.2 | 25 | 3.0 |
+
+So the best database-supported answer is: **no ~2005 citation was found in SRD-46 for Zn–histidine; the newest linked paper is the 1999 Anwar & Azab paper**, and the table above summarizes the constants present for the Zn–histidine system in SRD-46.
+
+A quick chemistry note: the data show **strong Zn–histidine binding**, with \( \log K_1 \) around **6.3–7.1** and \( \log \beta_2 \) around **11.7–12.7**, consistent with histidine being an excellent Zn(II) ligand through amino/carboxylate/imidazole donor sets. The protonated complexes \( \mathrm{ZnHL} \) and \( \mathrm{ZnHL_2} \) indicate that speciation will be quite pH-sensitive near physiological conditions.
+
+*Source: NIST SRD-46.*
+
+---

@@ -1,0 +1,35 @@
+Below is what the NIST SRD‑46 (Ligand‑Metal Stability Constants) database shows for Pb2+ complexation in water, focusing on ligands that appeared in our queries and catalog joins. Within this slice, sulfur‑donor amino acids and thiol ligands have the strongest Pb2+ complexation evidence; the common clinical aminopolycarboxylates (EDTA, DTPA) did not return Pb2+ rows under the name filters used here.
+
+Pb2+ ligand systems with SRD‑46 stability data (water; temperature ~20–37 °C)
+| Ligand (SRD name) | SRD ligand_id | Pb–L stoichiometries observed | Constant types seen | T range (°C) | Ionic strength (M) | Solvent |
+|---|---|---|---|---|---|---|
+| D‑Penicillamine (D‑2‑amino‑3‑mercapto‑3‑methylbutanoic acid) | ligand_5857 | ML, ML2, plus protonated forms (MHL, MHL2) | logK entries present | 25–37 | 0.1–3 | water |
+| L‑Cysteine (L‑2‑amino‑3‑mercaptopropanoic acid) | ligand_5856 | ML, ML2, plus hydroxo/protonated forms | logK entries present | ~25 | 0.1–3 | water |
+| 2‑Mercaptoethanol | ligand_9747 | ML, ML2 | logK entries present | ~25 | 0.1–0.5 | water |
+| 3‑Mercaptopropane‑1,2‑diol | ligand_9748 | ML, ML2, ML3, ML4 | logK entries present | ~25 | ~0.5 | water |
+| DL‑threo‑1,4‑Dimercaptobutanediol | ligand_9760 | ML and related | logK entries present | ~37 | ~0.15 | water |
+| Glutathione (γ‑Glu‑Cys‑Gly) | ligand_6592 | ML, MHL, protonated variants | entries present (mixed ionic strength) | 16.5–31.5 | 2.78–3.23 | water |
+
+Clinical chelators: Pb2+ entries found in SRD‑46 under our search
+| Chelator (common name) | SRD Pb2+ stability rows found? | SRD ligand_id(s) (if found) | Notes from SRD‑46 search |
+|---|---|---|---|
+| CaNa2‑EDTA / EDTA | Not found (by “EDTA/edetate/ethylenediaminetetraacetic” filters) | — | No Pb2+ rows matched under those aliases in our slice; may require alternate SRD naming to resolve. |
+| DTPA (pentetic acid) | Not found | — | No Pb2+ rows matched by “DTPA/pentetic/diethylenetriaminepentaacetic.” |
+| DMSA (succimer) | Not found | — | No Pb2+ rows matched by “DMSA/dimercaptosuccinic.” |
+| DMPS | Not found | — | No Pb2+ rows matched by “dimercapto‑1‑propanesulfonic/DMPS.” |
+| Dimercaprol (BAL) | Not found for Pb2+ in returned set | — | BAL rows appeared for Hg/Ni/etc., but no Pb2+ rows in our results slice. |
+| Penicillamine | Found | ligand_5857 | Pb–penicillamine logK entries present; ML/ML2 observed (water; 25–37 °C; I ~0.1–3 M). |
+| Citrate | Found (catalog) | ligand_9058 | Pb–citrate entries exist, but maps are mainly at higher ionic strength (≈0.78–2.23 M). |
+
+What this means
+- In the SRD‑46 slice we could retrieve quickly, sulfur‑donor ligands (penicillamine, cysteine, small thiols) show robust Pb2+ complexation in water. These systems often form ML/ML2 species; exact cumulative log β values were not returned in the summary we obtained under tight aqueous/temperature filters.
+- EDTA/DTPA/DMSA/DMPS did not match under the name filters we used, so we cannot rank their Pb2+ affinity here from SRD‑46. This likely reflects naming/alias coverage in SRD‑46 rather than absence of Pb–EDTA chemistry.
+
+Clinically used chelators (context, not from SRD‑46): CaNa2‑EDTA and DMSA (succimer) are standard for lead poisoning; DMPS is used in some regions; BAL is historical/conditional; penicillamine is not first‑line for lead. Therapy choices depend on patient status, route, and toxicology guidance; consult clinical protocols.
+
+If you want a numeric “highest‑affinity” ranking from SRD‑46:
+- I can re‑run with expanded aliases (e.g., “ethylenediamine‑N,N,N’,N’‑tetraacetate,” specific SRD IDs), include stepwise constants and convert to cumulative β, and relax ionic‑strength filters to capture common literature conditions. Then I’ll report a table of ML–ML4 maxima (log β) with temperature, ionic strength, and citations.
+
+Source: NIST Standard Reference Database 46 (SRD‑46), Ligand–Metal Stability Constants.
+
+---

@@ -1,0 +1,15 @@
+# Q3.1.6 - Validation (batch 1)
+
+**9 of 38 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 0 | exact_value | \| 1 \| Ethylenedinitrilo-N,N,N′,N′-tetraacetic acid \| **EDTA** \| Aminopolycarboxylic acid \| **15.5** \| 25 \| 0.1 \| | ...----\|-------\|--------\|--------\|-------\| \| 1 \| Ethylenedinitrilo-N,N,N′,N′-tetraacetic acid \| **EDTA** \| Aminopolycarboxylic acid \| **15.5** \| 25 \| 0.1 \| \| 2 \| Nitrilotriacetic acid \| **NTA** \|... |
+| 2 | 0 | exact_value | \| 2 \| Nitrilotriacetic acid \| **NTA** \| Aminopolycarboxylic acid \| **11.0–11.34** \| 20–25 \| 0.1 \| | ...carboxylic acid \| **15.5** \| 25 \| 0.1 \| \| 2 \| Nitrilotriacetic acid \| **NTA** \| Aminopolycarboxylic acid \| **11.0–11.34** \| 20–25 \| 0.1 \| \| 3 \| Ethylenedinitrilo-N,N′-di(3-propa... |
+| 3 | 0 | exact_value | \| 3 \| Ethylenedinitrilo-N,N′-di(3-propanoic)-N,N′-diacetic acid \| **EDTAP** \| Aminopolycarboxylic acid \| **10.78** \| 25 \| 0.1 \| | ...c acid \| **11.0–11.34** \| 20–25 \| 0.1 \| \| 3 \| Ethylenedinitrilo-N,N′-di(3-propanoic)-N,N′-diacetic acid \| **EDTAP** \| Aminopolycarboxylic acid \| **10.78** \| 25 \| 0.1 \| \| 4 \| Ethylenediiminodiacetic acid \| **... |
+| 4 | 0 | exact_value | \| 4 \| Ethylenediiminodiacetic acid \| **EDDA** \| Aminopolycarboxylic acid \| **8.6** \| 25 \| 0.1 \| | ...arboxylic acid \| **10.78** \| 25 \| 0.1 \| \| 4 \| Ethylenediiminodiacetic acid \| **EDDA** \| Aminopolycarboxylic acid \| **8.6** \| 25 \| 0.1 \| \| 5 \| Pyridine-2,6-dicarboxylic acid \| ... |
+| 5 | 0 | exact_value | \| 5 \| Pyridine-2,6-dicarboxylic acid \| **Dipicolinic acid** \| Pyridinecarboxylic acid \| **7.9** \| 25 \| 0.5 \| | ...ycarboxylic acid \| **8.6** \| 25 \| 0.1 \| \| 5 \| Pyridine-2,6-dicarboxylic acid \| **Dipicolinic acid** \| Pyridinecarboxylic acid \| **7.9** \| 25 \| 0.5 \|  > **Source:** NIST SRD-46, metal_79 (L... |
+| 6 | 1 | comparison | EDTA (hexadentate: 4 carboxylates + 2 amines, log β = 15.5) > NTA (tetradentate, log β ≈ 11) > EDTAP (tetradentate variant, log β = 10.78) > EDDA (tetradentate, log β = 8.6) > dipicolinic acid (tridentate, log β = 7.9). | ...ws the chelate effect almost perfectly: EDTA (hexadentate: 4 carboxylates + 2 amines, log β = 15.5) > NTA (tetradentate, log β ≈ 11) > EDTAP (tetradentate variant, log β = 10.78) > EDDA (tetradentate, log β = 8.6) > dipicolinic acid (tridentate, log β = 7.9). Each additional donor arm contributes r... |
+| 7 | 1 | exact_value | log K of La³⁺–EDTA (15.5) | ...  **3. Real-world relevance.** The high log K of La³⁺–EDTA (15.5) underpins lanthanide separation chemist... |
+| 8 | 1 | exact_value | log K ≈ 11 | ...stems used as MRI contrast agents. NTA (log K ≈ 11) is studied as a biodegradable alternat... |
+| 9 | 1 | exact_value | log K = 7.9 | ...istence is a concern. Dipicolinic acid (log K = 7.9) is notable as a purely aromatic dicarb... |

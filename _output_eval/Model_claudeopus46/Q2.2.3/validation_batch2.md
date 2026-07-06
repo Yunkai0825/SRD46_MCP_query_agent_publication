@@ -1,0 +1,30 @@
+# Q2.2.3 - Validation (batch 2)
+
+**24 of 61 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 0 | exact_value | \| 1 \| ligand_8412 \| Nitrilotris(methylenephosphonic acid) (NTP) \| 42 \| | ...-----------------------\|:------------:\| \| 1 \| ligand_8412 \| Nitrilotris(methylenephosphonic acid) (NTP) \| 42 \| \| 2 \| ligand_6356 \| Diethylenetrinitril... |
+| 2 | 0 | exact_value | \| 2 \| ligand_6356 \| Diethylenetrinitrilopentaacetic acid (DTPA) \| 38 \| | ...(methylenephosphonic acid) (NTP) \| 42 \| \| 2 \| ligand_6356 \| Diethylenetrinitrilopentaacetic acid (DTPA) \| 38 \| \| 3 \| ligand_6277 \| Ethylenedinitrilote... |
+| 3 | 0 | exact_value | \| 3 \| ligand_6277 \| Ethylenedinitrilotetraacetic acid (EDTA) \| 36 \| | ...rinitrilopentaacetic acid (DTPA) \| 38 \| \| 3 \| ligand_6277 \| Ethylenedinitrilotetraacetic acid (EDTA) \| 36 \| \| 4 \| ligand_8380 \| Iminobis(methylenep... |
+| 4 | 0 | exact_value | \| 4 \| ligand_8380 \| Iminobis(methylenephosphonic acid) (IDP) \| 28 \| | ...dinitrilotetraacetic acid (EDTA) \| 36 \| \| 4 \| ligand_8380 \| Iminobis(methylenephosphonic acid) (IDP) \| 28 \| \| 5 \| ligand_7246 \| 1,4,7,10,13,16-Hexa... |
+| 5 | 0 | exact_value | \| 5 \| ligand_7246 \| 1,4,7,10,13,16-Hexaazahexadecane (Pentaethylenehexamine) \| 24 \| | ...(methylenephosphonic acid) (IDP) \| 28 \| \| 5 \| ligand_7246 \| 1,4,7,10,13,16-Hexaazahexadecane (Pentaethylenehexamine) \| 24 \| \| 6 \| ligand_6165 \| Nitrilotriacetic ac... |
+| 6 | 0 | exact_value | \| 6 \| ligand_6165 \| Nitrilotriacetic acid (NTA) \| 22 \| | ...xadecane (Pentaethylenehexamine) \| 24 \| \| 6 \| ligand_6165 \| Nitrilotriacetic acid (NTA) \| 22 \| \| 7 \| ligand_10117 \| Hydrogen triphosph... |
+| 7 | 0 | exact_value | \| 7 \| ligand_10117 \| Hydrogen triphosphate (Triphosphoric acid) \| 22 \| | ...65 \| Nitrilotriacetic acid (NTA) \| 22 \| \| 7 \| ligand_10117 \| Hydrogen triphosphate (Triphosphoric acid) \| 22 \| \| 8 \| ligand_10113 \| Hydrogen phosphate... |
+| 8 | 0 | exact_value | \| 8 \| ligand_10113 \| Hydrogen phosphate (Phosphoric acid) \| 21 \| | ...riphosphate (Triphosphoric acid) \| 22 \| \| 8 \| ligand_10113 \| Hydrogen phosphate (Phosphoric acid) \| 21 \| \| 9 \| ligand_9142 \| 1-Hydroxyethane-1,1... |
+| 9 | 0 | exact_value | \| 9 \| ligand_9142 \| 1-Hydroxyethane-1,1-diphosphonic acid (Etidronic acid) \| 21 \| | ...ogen phosphate (Phosphoric acid) \| 21 \| \| 9 \| ligand_9142 \| 1-Hydroxyethane-1,1-diphosphonic acid (Etidronic acid) \| 21 \| \| 10 \| ligand_10114 \| Hydrogen diphosph... |
+| 10 | 0 | exact_value | \| 10 \| ligand_10114 \| Hydrogen diphosphate (Pyrophosphoric acid) \| 20 \| | ...phosphonic acid (Etidronic acid) \| 21 \| \| 10 \| ligand_10114 \| Hydrogen diphosphate (Pyrophosphoric acid) \| 20 \| \| 11 \| ligand_5937 \| N-(Phosphonomethyl... |
+| 11 | 0 | exact_value | \| 11 \| ligand_5937 \| N-(Phosphonomethyl)glycine (Glyphosate) \| 20 \| | ...iphosphate (Pyrophosphoric acid) \| 20 \| \| 11 \| ligand_5937 \| N-(Phosphonomethyl)glycine (Glyphosate) \| 20 \| \| 12 \| ligand_7244 \| 1,4,7,10,13-Pentaa... |
+| 12 | 0 | exact_value | \| 12 \| ligand_7244 \| 1,4,7,10,13-Pentaazatridecane (Tetraethylenepentamine) \| 18 \| | ...phonomethyl)glycine (Glyphosate) \| 20 \| \| 12 \| ligand_7244 \| 1,4,7,10,13-Pentaazatridecane (Tetraethylenepentamine) \| 18 \| \| 13 \| ligand_8907 \| Butanedioic acid (... |
+| 13 | 0 | exact_value | \| 13 \| ligand_8907 \| Butanedioic acid (Succinic acid) \| 16 \| | ...idecane (Tetraethylenepentamine) \| 18 \| \| 13 \| ligand_8907 \| Butanedioic acid (Succinic acid) \| 16 \| \| 14 \| ligand_8873 \| Propanedioic acid ... |
+| 14 | 0 | exact_value | \| 14 \| ligand_8873 \| Propanedioic acid (Malonic acid) \| 16 \| | ...Butanedioic acid (Succinic acid) \| 16 \| \| 14 \| ligand_8873 \| Propanedioic acid (Malonic acid) \| 16 \| \| 15 \| ligand_8872 \| Ethanedioic acid (... |
+| 15 | 0 | exact_value | \| 15 \| ligand_8872 \| Ethanedioic acid (Oxalic acid) \| 15 \| | ...Propanedioic acid (Malonic acid) \| 16 \| \| 15 \| ligand_8872 \| Ethanedioic acid (Oxalic acid) \| 15 \| \| 16 \| ligand_5760 \| Aminoacetic acid (... |
+| 16 | 0 | exact_value | \| 16 \| ligand_5760 \| Aminoacetic acid (Glycine) \| 15 \| | ...\| Ethanedioic acid (Oxalic acid) \| 15 \| \| 16 \| ligand_5760 \| Aminoacetic acid (Glycine) \| 15 \| \| 17 \| ligand_9058 \| 2-Hydroxypropane-1... |
+| 17 | 0 | exact_value | \| 17 \| ligand_9058 \| 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid) \| 14 \| | ...760 \| Aminoacetic acid (Glycine) \| 15 \| \| 17 \| ligand_9058 \| 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid) \| 14 \| \| 18 \| ligand_5898 \| L-2-Amino-3-(4-imi... |
+| 18 | 0 | exact_value | \| 18 \| ligand_5898 \| L-2-Amino-3-(4-imidazolyl)propanoic acid (Histidine) \| 14 \| | ...tricarboxylic acid (Citric acid) \| 14 \| \| 18 \| ligand_5898 \| L-2-Amino-3-(4-imidazolyl)propanoic acid (Histidine) \| 14 \| \| 19 \| ligand_10096 \| Hydrogen carbonat... |
+| 19 | 0 | exact_value | \| 19 \| ligand_10096 \| Hydrogen carbonate (Carbonic acid) \| 13 \| | ...zolyl)propanoic acid (Histidine) \| 14 \| \| 19 \| ligand_10096 \| Hydrogen carbonate (Carbonic acid) \| 13 \| \| 20 \| ligand_10077 \| Hydrogen vanadate... |
+| 20 | 0 | exact_value | \| 20 \| ligand_10077 \| Hydrogen vanadate (Vanadic acid) \| 13 \| | ...drogen carbonate (Carbonic acid) \| 13 \| \| 20 \| ligand_10077 \| Hydrogen vanadate (Vanadic acid) \| 13 \|... |
+| 21 | 1 | counting | **NTP leads with 42 pKa entries** | ...### Key Insights  - **NTP leads with 42 pKa entries** — this aminophosphonate has 6 distinct ... |
+| 22 | 1 | counting | **DTPA (38 entries)** | ...ditions, generating numerous entries. - **DTPA (38 entries)** has up to **8 distinct protonation spec... |
+| 23 | 1 | counting | **EDTA (36 entries)** | ...ate groups and three amine nitrogens. - **EDTA (36 entries)** is one of the most extensively studied ... |
+| 24 | 1 | range | 5–41°C | ...ured across a wide range of conditions (5–41°C, ionic strengths up to 3 M). - The high... |

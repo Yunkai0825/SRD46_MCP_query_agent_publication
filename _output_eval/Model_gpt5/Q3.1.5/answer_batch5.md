@@ -1,0 +1,36 @@
+Below is a shortlist of oxygen‑donor ligands (resolved in NIST SRD‑46) to consider when you want to suppress Ca2+ without strongly tying up Cu2+. I’ve grouped them by practical use and flagged ligands that are commonly non‑selective for Cu2+. The acid–base brackets shown are taken directly from SRD‑46 ligand cards to indicate the pH range where the deprotonated (binding) forms exist; you can use these to choose pH conditions before pulling matched stability constants.
+
+Candidate ligands located in SRD‑46 (for Ca2+ vs Cu2+ selectivity screening)
+
+| Ligand (acid form in SRD‑46) | SRD‑46 ligand_id | Key pKa brackets from SRD‑46 | Qualitative note for Ca2+ masking (to confirm with SRD‑46 constants) |
+|---|---|---|---|
+| Hydrogen sulfate (sulfuric acid) | ligand_10148 | HL 1.54 → L | Strongly deprotonated above mildly acidic pH; commonly used where Ca2+ removal by sulfate is desired while Cu2+ remains in solution. Verify constants for your I and T. |
+| Hydrogen fluoride (hydrofluoric acid) | ligand_10162 | HL 2.94 → L | Becomes F− above ~pH 3; fluoride is a hard base. Often considered for Ca2+ masking; verify Cu2+ affinity under your conditions. Handle with care (safety!). |
+| Hydrogen carbonate (carbonic acid) | ligand_10096 | H2L 6.13 → HL 9.91 → L | Above pH ~8–10, CO3^2− predominates; hard base. Useful when carbonate alkalinity can suppress Ca2+; check Cu2+ speciation at chosen pH. |
+| Hydrogen diphosphate (pyrophosphoric acid) | ligand_10114 | H4L −0.8 → H3L −0.8 → H2L 5.94 → HL 8.25 → L | Polyphosphate hard donor; deprotonated forms present from near‑neutral to basic pH. Pull matched β1/β2 for Ca2+ vs Cu2+ at your I and 25 °C. |
+| Hydrogen phosphate (phosphoric acid) | ligand_10113 | H3L 1.92 → H2L 6.71 → HL 11.52 → L | Orthophosphate hard donor; significant deprotonation near neutral and basic pH. Evaluate Ca2+ vs Cu2+ constants and potential precipitation pathways. |
+| D‑Gluconic acid (gluconate) | ligand_8668 | HL 3.46 → L | Hard O‑donor mono‑carboxylate with multiple hydroxyls; check if Ca2+ affinity is sufficient while Cu2+ remains weakly bound at your pH. |
+| Lactic acid (lactate) | ligand_8641 | HL 3.67 → L | Mono‑carboxylate; deprotonated above pH ~4. Often only moderate binding; verify if masking is adequate. |
+| L‑Malic acid (malate) | ligand_8953 | H2L 3.24 → HL 4.68 → L | Di‑carboxylate/hydroxy; deprotonated forms above ~pH 4–5. Check matched constants to see if Ca2+ preference over Cu2+ is sufficient. |
+| Tartaric acid (D‑ and meso‑) | ligand_8955 (D), 8956 (meso) | D: 2.82, 3.97; meso: 2.97, 4.49 | Di‑carboxylate/diol; potential moderate Ca2+ binding near neutral pH. Confirm Cu2+ affinity before use. |
+
+Ligands to avoid or use with caution if you need to keep Cu2+ “free” (often non‑selective)
+
+| Ligand (acid form in SRD‑46) | SRD‑46 ligand_id | Key pKa brackets from SRD‑46 | Caution |
+|---|---|---|---|
+| Oxalic acid (oxalate) | ligand_8872 | H2L −1.2 → HL 3.8 → L | Frequently forms strong complexes with many divalent metals, including Cu2+. Likely not selective for masking Ca2+ without impacting Cu2+. |
+| Citric acid (citrate) | ligand_9058 | H3L 2.9 → H2L 4.35 → HL 5.65 → L | Polycarboxylate that can chelate Cu2+ effectively; often not ideal if you want Cu2+ to remain available. |
+
+How to finalize the choice with SRD‑46 (recommended next step)
+- Pull matched, same‑condition (25 ± 5 °C; I ≲ 0.1–0.2 M; water) formation constants for Ca2+ and Cu2+ for the short‑list ligands above, focusing first on: sulfate (ligand_10148), fluoride (ligand_10162), carbonate/bicarbonate (ligand_10096), hydrogen diphosphate (ligand_10114), hydrogen phosphate (ligand_10113), and gluconate (ligand_8668). Rank each ligand by the ratio β(Ca2+)/β(Cu2+) at comparable stoichiometry (β1 where available).
+- Prefer ligands where β1 (or conditional stability at your pH/ionic strength) is high for Ca2+ but low for Cu2+. If precipitation (e.g., sulfate, fluoride, carbonate/phosphate systems) is intended, confirm that Cu2+ remains largely soluble/weakly complexed under your exact pH and ionic strength.
+
+Notes and practical guidance
+- The pKa brackets above (from SRD‑46 ligand cards) help you pick a pH where the ligand is in a deprotonated, binding‑competent form.
+- Hard oxygen‑donor anions (sulfate, fluoride, carbonate, polyphosphates) are typically the first place to look for Ca2+ selectivity; polycarboxylates like citrate and oxalate often also sequester Cu2+ and are therefore less selective for this purpose.
+- Once you specify your working pH and ionic strength, I can extract the matched Ca2+ vs Cu2+ constants from SRD‑46 and deliver a ranked recommendation.
+
+Source
+- NIST Standard Reference Database 46 (SRD‑46): Ligand cards and pKa brackets for the entries above (ligand IDs as listed).
+
+---

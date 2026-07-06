@@ -1,0 +1,98 @@
+# Q3.1.4 — Tool Results (batch 5)
+
+### Step 2: `search_metals`
+**Args:**
+```json
+{
+  "name": "iron"
+}
+```
+
+[summary]
+## search_metals — 2 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_61 | Fe^[3+] | Fe | 3 | ✓ | [Fe+3] | InChI=1S/Fe/q+3 | beta_totN_128 | ligand_totN_406 | vlm_totN_1473 |
+| metal_62 | Fe^[2+] | Fe | 2 | ✓ | [Fe+2] | InChI=1S/Fe/q+2 | beta_totN_57 | ligand_totN_217 | vlm_totN_667 |
+
+---
+
+### Step 4: `get_table_schema`
+**Args:**
+```json
+{
+  "table_name": "ligandmetal_card",
+  "database": "cards"
+}
+```
+
+[summary]
+## get_table_schema - 17 column(s)
+
+| cid | name | type | notnull | pk |
+|-----|------|------|---------|----|
+| 0 | card_id | INTEGER | False | True |
+| 1 | complex_system_id | INTEGER | True | False |
+| 2 | metal_id | INTEGER | True | False |
+| 3 | ligand_id | INTEGER | True | False |
+| 4 | beta_definition_id | INTEGER | True | False |
+| 5 | complex_id | TEXT | False | False |
+| 6 | ligand_class_id | INTEGER | False | False |
+| 7 | ligand_class_name | TEXT | False | False |
+| 8 | metal_name_SRD | TEXT | False | False |
+| 9 | metal_SMILES | TEXT | False | False |
+| 10 | metal_InChi | TEXT | False | False |
+| 11 | ligand_name_SRD | TEXT | False | False |
+| 12 | ligand_SMILES | TEXT | False | False |
+| 13 | ligand_InChi | TEXT | False | False |
+| 14 | ligand_HxL_definition_SRD | TEXT | False | False |
+| 15 | beta_definition_name | TEXT | False | False |
+| 16 | created_at | TIMESTAMP | False | False |
+
+---
+
+### Step 5: `execute_srd46_sql`
+**Args:**
+```json
+{
+  "sql_query": "SELECT fe3.ligand_id, fe3.ligand_name_SRD FROM (SELECT DISTINCT ligand_id, ligand_name_SRD FROM ligandmetal_card WHERE metal_id = 61) fe3 INNER JOIN (SELECT DISTINCT ligand_id FROM ligandmetal_card WHERE metal_id = 62) fe2 ON fe3.ligand_id = fe2.ligand_id ORDER BY fe3.ligand_name_SRD",
+  "attach_equilibrium": false,
+  "attach_literature": false
+}
+```
+
+[summary]
+## execute_srd46_sql - 50 row(s)
+
+| ligand_id | ligand_name_SRD |
+|-----------|-----------------|
+| ligand_6333 | (2-Hydroxytrimethylene)dinitrilotetraacetic acid |
+| ligand_9015 | (Ethylenedithio)diacetic acid |
+| ligand_8191 | 1,10-Phenanthroline (Dipyridino[a,c]benzene) |
+| ligand_9337 | 1,2-Dihydroxybenzene (Catechol) |
+| ligand_9467 | 1,2-Dihydroxynaphthalene-4-sulfonic acid |
+| ligand_6102 | 1,4,7,10-Tetraazacyclododecane-N,N',N'',N'''-tetraacetic acid (DOTA) |
+| ligand_6104 | 1,4,7,10-Tetraazacyclotridecane-N,N',N'',N'''-tetraacetic acid (TRITA) |
+| ligand_6109 | 1,4,8,11-Tetraazacyclotetradecane-N,N',N'',N'''-tetraacetic acid (TETA) |
+| ligand_6371 | 1,4-Bis[2,5,5-tris(carboxymethyl)-2,5-diazapentyl]benzene (PXED3A) |
+| ligand_6760 | 1,4-Diazine-2-carboxylic acid (Pyrazinecarboxylic acid) |
+| ligand_6084 | 1-Oxa-4,7,10-triazacyclododecane-4,7,10-triacetic acid |
+| ligand_8156 | 2,2'-Bipyridyl |
+| ligand_9759 | 2,3-Dimercaptopropanol (BAL) |
+| ligand_9284 | 2-Hydroxy-5-sulfobenzoic acid (5-Sulfosalicylic acid) |
+| ligand_9257 | 2-Hydroxybenzoic acid (Salicylic acid) |
+| ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid) |
+| ligand_7673 | 3,7,11,15-Tetraaza-5,13(2)-dihydroxy-5,13(5)-dimethyl-1,9(2,6)-dipyridina-5,13(... |
+| ligand_6780 | 4-Aminopyridine-2,6-dicarboxylic acid |
+| ligand_8196 | 5,6-Dimethyl-1,10-phenanthroline |
+| ligand_8201 | 5-Nitro-1,10-phenanthroline |
+| ligand_9873 | Acetohydroxamic acid |
+| ligand_8360 | Amino(phenyl)methylenediphosphonic acid |
+| ligand_5760 | Aminoacetic acid (Glycine) |
+| ligand_8907 | Butanedioic acid (Succinic acid) |
+| ligand_10163 | Chloride ion |
+
+... 25 more row(s) omitted
+
+---

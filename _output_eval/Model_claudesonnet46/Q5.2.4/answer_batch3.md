@@ -1,0 +1,48 @@
+## Final Answer
+
+### Stability Constant of Pu(IV) with Aspirin — **Not Found in NIST SRD-46**
+
+After a complete search through all relevant pathways, **NIST SRD-46 contains no stability constant data for the Pu(IV) + aspirin (acetylsalicylic acid) system.**
+
+#### What was searched
+
+| Search | Result |
+|---|---|
+| `search_stability` — Pu(IV) + ligand_8701 (2-Acetoxybenzoic acid / Aspirin) | ❌ No data |
+| `search_stability` — Pu(IV) + ligand_10913 (Aspirin, unselected entry) | ❌ No data |
+| `search_networks` — Pu(IV) + aspirin ligands | ❌ No data |
+| `search_citations` — keywords "aspirin" / "acetylsalic" in literature | ❌ No data |
+
+#### What Pu(IV) *does* have data for in SRD-46
+
+Pu⁴⁺ (`metal_149`) has 36 measurements across 11 ligands, all inorganic or simple organic species:
+
+| Ligand | # Measurements |
+|---|---|
+| Nitrate (NO₃⁻) | 9 |
+| Hydroxide (OH⁻) | 5 |
+| Fluoride (F⁻) | 4 |
+| Sulfate (SO₄²⁻) | 4 |
+| Acetylacetone | 4 |
+| Chloride (Cl⁻) | 3 |
+| Oxalate | 2 |
+| DTPA | 1 |
+
+#### What aspirin *does* have data for in SRD-46
+
+Acetylsalicylic acid (`ligand_8701`, pKₐ = 3.45 at 37 °C, I = 0.15 M) has only 5 measurements, all with biologically relevant divalent metals:
+
+| Metal | # Measurements |
+|---|---|
+| Cu²⁺ | 2 |
+| Mg²⁺ | 1 |
+| Ca²⁺ | 1 |
+| H⁺ (pKa) | 1 |
+
+#### Chemistry context
+
+Aspirin hydrolyzes rapidly in aqueous solution to **salicylate** and acetate — the actual coordinating species under physiological or aqueous conditions. Pu⁴⁺ is a hard, highly charged (4+) cation that forms strong complexes with hard oxygen donors, so a significant interaction with salicylate's carboxylate/phenolate groups would be chemically expected. However, this system has not been characterized in the SRD-46 curated literature. For the closest available Pu(IV) analog, the **oxalate** or **DTPA** systems in SRD-46 may offer useful comparison points.
+
+> **Source:** NIST SRD-46 — Critically Selected Stability Constants of Metal Complexes Database.
+
+---

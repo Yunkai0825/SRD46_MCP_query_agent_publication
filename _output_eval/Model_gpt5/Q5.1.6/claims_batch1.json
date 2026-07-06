@@ -1,0 +1,964 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt5\\Q5.1.6\\Q5.1.6_result_batch1.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Here’s a quick, data-backed “interesting” snapshot from NIST SRD‑46: in aqueous complexation thermodynamics, the trivalent rare‑earth state overwhelmingly dominates, while unusual oxidation states (Ce(IV), Eu(II), Yb(II)) appear only sparsely.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 50,
+            "text": "Here’s a quick, data-backed “interesting” snapshot",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 51,
+            "end": 67,
+            "text": "from NIST SRD‑46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 69,
+            "end": 164,
+            "text": "in aqueous complexation thermodynamics, the trivalent rare‑earth state overwhelmingly dominates",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 172,
+            "end": 243,
+            "text": "unusual oxidation states (Ce(IV), Eu(II), Yb(II)) appear only sparsely.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool outputs are from this SRD-46 run, but no row/header prints 'SRD-46' or '46'; thus the provenance is inferred rather than quoted verbatim.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "## search_metals — 3 result(s)\n| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |\n| metal_27 | Ce^[3+] | Ce | 3 | ✓ | [Ce+3] | InChI=1S/Ce/q+3 | beta_totN_22 | ligand_totN_188 | vlm_totN_567 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_27",
+              "metal_28",
+              "metal_58",
+              "metal_59",
+              "metal_206",
+              "metal_207",
+              "metal_79",
+              "metal_65",
+              "metal_110"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Ce^[3+] vlm_totN_567 vs Ce^[4+] vlm_totN_9; Eu^[3+] vlm_totN_870 vs Eu^[2+] vlm_totN_2; Yb^[3+] vlm_totN_771 vs Yb^[2+] vlm_totN_0.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_27 | Ce^[3+] | Ce | 3 | ✓ | [Ce+3] | ... | beta_totN_22 | ligand_totN_188 | vlm_totN_567 |\n| metal_28 | Ce^[4+] | Ce | 4 | ✓ | [Ce+4] | ... | beta_totN_5 | ligand_totN_3 | vlm_totN_9 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_metals",
+                "snippet": "| metal_58 | Eu^[3+] | Eu | 3 | ✓ | [Eu+3] | ... | beta_totN_30 | ligand_totN_267 | vlm_totN_870 |\n| metal_59 | Eu^[2+] | Eu | 2 | ✓ | [Eu+2] | ... | beta_totN_1 | ligand_totN_2 | vlm_totN_2 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_metals",
+                "snippet": "| metal_206 | Yb^[3+] | Yb | 3 | ✓ | [Yb+3] | ... | beta_totN_28 | ligand_totN_235 | vlm_totN_771 |\n| metal_207 | Yb^[2+] | Yb | 2 | ✓ | [Yb+2] | ... | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_28",
+              "metal_59",
+              "metal_207"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Ce^[4+] entries small (beta_totN_5, ligand_totN_3, vlm_totN_9); Eu^[2+] very few (beta_totN_1, vlm_totN_2); Yb^[2+] present with zeros (vlm_totN_0).",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_28 | Ce^[4+] | Ce | 4 | ✓ | [Ce+4] | ... | beta_totN_5 | ligand_totN_3 | vlm_totN_9 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_metals",
+                "snippet": "| metal_59 | Eu^[2+] | Eu | 2 | ✓ | [Eu+2] | ... | beta_totN_1 | ligand_totN_2 | vlm_totN_2 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_metals",
+                "snippet": "| metal_207 | Yb^[2+] | Yb | 2 | ✓ | [Yb+2] | ... | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Metal species | ID        | Distinct ligands (count) | β-definition entries (count) |\n|---|---|---:|---:|\n| La3+ | metal_79 | 297 | 30 |\n| Ce3+ | metal_27 | 188 | 22 |\n| Ce4+ | metal_28 | 3 | 5 |\n| Nd3+ | metal_110 | 263 | 29 |\n| Gd3+ | metal_65 | 288 | 28 |\n| Eu3+ | metal_58 | 267 | 30 |\n| Eu2+ | metal_59 | 2 | 1 |\n| Eu4+ | metal_60 | 0 | 0 |\n| Yb3+ | metal_206 | 235 | 28 |\n| Yb2+ | metal_207 | 0 | 0 |\n| Lu3+ | metal_81 | 234 | 25 |\n| Y3+  | metal_205 | 182 | 26 |\n| Sc3+ | metal_169 | 44 | 16 |",
+        "claims": [
+          {
+            "start": 108,
+            "end": 138,
+            "text": "| La3+ | metal_79 | 297 | 30 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 139,
+            "end": 169,
+            "text": "| Ce3+ | metal_27 | 188 | 22 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 170,
+            "end": 197,
+            "text": "| Ce4+ | metal_28 | 3 | 5 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 198,
+            "end": 229,
+            "text": "| Nd3+ | metal_110 | 263 | 29 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 230,
+            "end": 260,
+            "text": "| Gd3+ | metal_65 | 288 | 28 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 261,
+            "end": 291,
+            "text": "| Eu3+ | metal_58 | 267 | 30 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 292,
+            "end": 319,
+            "text": "| Eu2+ | metal_59 | 2 | 1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 320,
+            "end": 347,
+            "text": "| Eu4+ | metal_60 | 0 | 0 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 348,
+            "end": 379,
+            "text": "| Yb3+ | metal_206 | 235 | 28 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 380,
+            "end": 408,
+            "text": "| Yb2+ | metal_207 | 0 | 0 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 409,
+            "end": 439,
+            "text": "| Lu3+ | metal_81 | 234 | 25 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 440,
+            "end": 471,
+            "text": "| Y3+  | metal_205 | 182 | 26 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 472,
+            "end": 502,
+            "text": "| Sc3+ | metal_169 | 44 | 16 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "What this shows\n- The +3 state is richly documented across the lanthanides (hundreds of ligands per Ln3+), reflecting its dominance in aqueous coordination chemistry.\n- Oxidation‑state “exceptions” are rare in this dataset: Ce(IV) has only a handful of ligand systems; Eu(II) and Yb(II) are scarcely represented or absent. This underscores how uncommon and condition‑sensitive these non‑+3 states are in aqueous complexation measurements.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 15,
+            "text": "What this shows",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 18,
+            "end": 74,
+            "text": "The +3 state is richly documented across the lanthanides",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 75,
+            "end": 105,
+            "text": "(hundreds of ligands per Ln3+)",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 107,
+            "end": 166,
+            "text": "reflecting its dominance in aqueous coordination chemistry.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 169,
+            "end": 223,
+            "text": "Oxidation‑state “exceptions” are rare in this dataset:",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 224,
+            "end": 268,
+            "text": "Ce(IV) has only a handful of ligand systems;",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 269,
+            "end": 322,
+            "text": "Eu(II) and Yb(II) are scarcely represented or absent.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 323,
+            "end": 438,
+            "text": "This underscores how uncommon and condition‑sensitive these non‑+3 states are in aqueous complexation measurements.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_79",
+              "metal_27",
+              "metal_110",
+              "metal_65",
+              "metal_58",
+              "metal_206",
+              "metal_81",
+              "metal_44"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ligand_totN_297",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_79 | La^[3+] | La | 3 | ✓ | [La+3] | InChI=1S/La/q+3 | beta_totN_30 | ligand_totN_297 | vlm_totN_931 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_metals",
+                "snippet": "| metal_58 | Eu^[3+] | Eu | 3 | ✓ | [Eu+3] | InChI=1S/Eu/q+3 | beta_totN_30 | ligand_totN_267 | vlm_totN_870 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_metals",
+                "snippet": "| metal_206 | Yb^[3+] | Yb | 3 | ✓ | [Yb+3] | InChI=1S/Yb/q+3 | beta_totN_28 | ligand_totN_235 | vlm_totN_771 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_27",
+              "metal_110",
+              "metal_65",
+              "metal_58",
+              "metal_206",
+              "metal_81"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ligand_totN_263",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_27 | Ce^[3+] | Ce | 3 | ✓ | [Ce+3] | InChI=1S/Ce/q+3 | beta_totN_22 | ligand_totN_188 | vlm_totN_567 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_metals",
+                "snippet": "| metal_110 | Nd^[3+] | Nd | 3 | ✓ | [Nd+3] | InChI=1S/Nd/q+3 | beta_totN_29 | ligand_totN_263 | vlm_totN_794 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_metals",
+                "snippet": "| metal_65 | Gd^[3+] | Gd | 3 | ✓ | [Gd+3] | InChI=1S/Gd/q+3 | beta_totN_28 | ligand_totN_288 | vlm_totN_897 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Qualitative interpretation: dominance is inferred from high ligand_totN for Ln3+; not directly stated in rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_28",
+              "metal_59",
+              "metal_207",
+              "metal_60"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ligand_totN_3",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_28 | Ce^[4+] | Ce | 4 | ✓ | [Ce+4] | InChI=1S/Ce/q+4 | beta_totN_5 | ligand_totN_3 | vlm_totN_9 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_metals",
+                "snippet": "| metal_59 | Eu^[2+] | Eu | 2 | ✓ | [Eu+2] | InChI=1S/Eu/q+2 | beta_totN_1 | ligand_totN_2 | vlm_totN_2 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_metals",
+                "snippet": "| metal_207 | Yb^[2+] | Yb | 2 | ✓ | [Yb+2] | InChI=1S/Yb/q+2 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_28"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_28 | Ce^[4+] | ... | ligand_totN_3 |",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_28 | Ce^[4+] | Ce | 4 | ✓ | [Ce+4] | InChI=1S/Ce/q+4 | beta_totN_5 | ligand_totN_3 | vlm_totN_9 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_59",
+              "metal_207"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ligand_totN_0",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_metals",
+                "snippet": "| metal_59 | Eu^[2+] | Eu | 2 | ✓ | [Eu+2] | InChI=1S/Eu/q+2 | beta_totN_1 | ligand_totN_2 | vlm_totN_2 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_metals",
+                "snippet": "| metal_207 | Yb^[2+] | Yb | 2 | ✓ | [Yb+2] | InChI=1S/Yb/q+2 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Qualitative assessment about condition-sensitivity; not directly enumerated in database rows.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "If you’d like, I can pull a matched‑condition set of EDTA stability constants across La→Lu to visualize the lanthanide‑contraction trend (increasing logβ from La3+ to Lu3+), or compare Ce(IV)/Eu(II)/Yb(II) with their +3 counterparts under consistent media.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 77,
+            "text": "If you’d like, I can pull a matched‑condition set of EDTA stability constants",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 78,
+            "end": 90,
+            "text": "across La→Lu",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 91,
+            "end": 136,
+            "text": "to visualize the lanthanide‑contraction trend",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 137,
+            "end": 172,
+            "text": "(increasing logβ from La3+ to Lu3+)",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 174,
+            "end": 184,
+            "text": "or compare",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 185,
+            "end": 205,
+            "text": "Ce(IV)/Eu(II)/Yb(II)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 211,
+            "end": 232,
+            "text": "their +3 counterparts",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 233,
+            "end": 255,
+            "text": "under consistent media",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_79",
+              "metal_81"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "metal_79 | La^[3+] … ; metal_81 | Lu^[3+] …",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_79 | La^[3+] | La | 3 | ✓ | [La+3] | InChI=1S/La/q+3 | … |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_metals",
+                "snippet": "| metal_81 | Lu^[3+] | Lu | 3 | ✓ | [Lu+3] | InChI=1S/Lu/q+3 | … |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Lanthanide-contraction trend (increasing EDTA logβ from La3+ to Lu3+) is general chemistry; no SRD-46 constant rows provided here to cite.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_28",
+              "metal_59",
+              "metal_207"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Ce^[4+], Eu^[2+], Yb^[2+] are present in SRD-46 search results.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_28 | Ce^[4+] | Ce | 4 | ✓ | [Ce+4] | InChI=1S/Ce/q+4 | … |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_metals",
+                "snippet": "| metal_59 | Eu^[2+] | Eu | 2 | ✓ | [Eu+2] | InChI=1S/Eu/q+2 | … |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_metals",
+                "snippet": "| metal_207 | Yb^[2+] | Yb | 2 | ✓ | [Yb+2] | InChI=1S/Yb/q+2 | … |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_27",
+              "metal_58",
+              "metal_206"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Ce^[3+], Eu^[3+], Yb^[3+] counterparts are present in SRD-46 search results.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_27 | Ce^[3+] | Ce | 3 | ✓ | [Ce+3] | InChI=1S/Ce/q+3 | … |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_metals",
+                "snippet": "| metal_58 | Eu^[3+] | Eu | 3 | ✓ | [Eu+3] | InChI=1S/Eu/q+3 | … |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_metals",
+                "snippet": "| metal_206 | Yb^[3+] | Yb | 3 | ✓ | [Yb+3] | InChI=1S/Yb/q+3 | … |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No constant rows with media conditions (I, electrolyte) were provided; cannot verify 'under consistent media'.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "Source: NIST Standard Reference Database 46 (SRD‑46), metal search results cited above.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 7,
+            "text": "Source:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 8,
+            "end": 52,
+            "text": "NIST Standard Reference Database 46 (SRD‑46)",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 52,
+            "end": 53,
+            "text": ",",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 54,
+            "end": 87,
+            "text": "metal search results cited above.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Tool outputs do not contain the literal 'NIST Standard Reference Database 46 (SRD-46)' or the number 46; no provenance string with '46' is present to cite.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_79",
+              "metal_27",
+              "metal_58"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "## search_metals — 3 result(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "## search_metals — 3 result(s)\n| metal_27 | Ce^[3+] | Ce | 3 | ✓ | [Ce+3] | InChI=1S/Ce/q+3 | beta_totN_22 | ligand_totN_188 | vlm_totN_567 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "## search_metals — 1 result(s)\n| metal_79 | La^[3+] | La | 3 | ✓ | [La+3] | InChI=1S/La/q+3 | beta_totN_30 | ligand_totN_297 | vlm_totN_931 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_metals",
+                "snippet": "## search_metals — 3 result(s)\n| metal_58 | Eu^[3+] | Eu | 3 | ✓ | [Eu+3] | InChI=1S/Eu/q+3 | beta_totN_30 | ligand_totN_267 | vlm_totN_870 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

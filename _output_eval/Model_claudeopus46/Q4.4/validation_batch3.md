@@ -1,0 +1,28 @@
+# Q4.4 — Validation (batch 3)
+
+**22 of 117 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 1 | existence_absence | the following amino acids clearly have Zn²⁺ data in SRD-46: | …ch results (truncated but informative), the following amino acids clearly have Zn²⁺ data in SRD-46:  \| Amino Acid \| ligand_id \| Key Donor S… |
+| 2 | 1 | exact_value | \| **Cysteine** \| ligand_5856 \| NH₂, COO⁻, **SH/S⁻** \| ~9.8–18.2 (varies by protonation state) \| | …e log β (ML, 25 °C) \| \|---\|---\|---\|---\| \| **Cysteine** \| ligand_5856 \| NH₂, COO⁻, **SH/S⁻** \| ~9.8–18.2 (varies by protonation state) \| \| **Glycine** \| ligand_5760 \| NH₂, COO⁻… |
+| 3 | 1 | exact_value | \| **Glycine** \| ligand_5760 \| NH₂, COO⁻ \| ~5.0–5.5 (typical) \| | ….8–18.2 (varies by protonation state) \| \| **Glycine** \| ligand_5760 \| NH₂, COO⁻ \| ~5.0–5.5 (typical) \| \| **Histidine** \| ligand_5898 \| NH₂, CO… |
+| 4 | 1 | exact_value | \| **Histidine** \| ligand_5898 \| NH₂, COO⁻, **imidazole N** \| ~6.5–7.0 (typical) \| | …5760 \| NH₂, COO⁻ \| ~5.0–5.5 (typical) \| \| **Histidine** \| ligand_5898 \| NH₂, COO⁻, **imidazole N** \| ~6.5–7.0 (typical) \|  Other standard amino acids with signif… |
+| 5 | 1 | existence_absence | (suggesting Zn²⁺ data likely exists) | …amino acids with significant VLM counts (suggesting Zn²⁺ data likely exists): **alanine** (159 vlm), **phenylalanine… |
+| 6 | 2 | exact_value | \| Arginine \| ligand_5917 \| 2.03 \| 9.00 \| ~12.5 (guanidinium) \| Guanidinium (non-coord.) \| | … \| 2.15 \| 10.66 \| 9.15 (ε-NH₃⁺) \| NH₂ \| \| Arginine \| ligand_5917 \| 2.03 \| 9.00 \| ~12.5 (guanidinium) \| Guanidinium (non-coord.) \| \| **Tyrosine** \| ligand_5819 \| 2.24 \| 9… |
+| 7 | 3 | comparison | gives the **highest** log β values with Zn²⁺ | …rend:  1. **Cysteine** (thiolate donor) gives the **highest** log β values with Zn²⁺ — up to ~9.8 for ML and ~18.2 for ML₂. … |
+| 8 | 3 | exact_value | up to ~9.8 for ML | …he **highest** log β values with Zn²⁺ — up to ~9.8 for ML and ~18.2 for ML₂. The thiolate S⁻ (pKa… |
+| 9 | 3 | exact_value | ~18.2 for ML₂. | …alues with Zn²⁺ — up to ~9.8 for ML and ~18.2 for ML₂. The thiolate S⁻ (pKa 8.18) is an excell… |
+| 10 | 3 | comparison | is the next strongest binder | …stidine** (imidazole N donor, pKa 6.05) is the next strongest binder — the imidazole nitrogen is deprotonate… |
+| 11 | 3 | comparison | give the weakest complexes | …ine, etc.) with only {NH₂, COO⁻} donors give the weakest complexes (log β₁ ≈ 5).… |
+| 12 | 3 | exact_value | log β₁ ≈ 5 | …OO⁻} donors give the weakest complexes (log β₁ ≈ 5).… |
+| 13 | 4 | exact_value | \| Chelate ring \| 5-membered (amino acid) + 6-membered (phenolate) \| Favorable geometry \| | …\| Zn²⁺ binds O well (borderline acid) \| \| Chelate ring \| 5-membered (amino acid) + 6-membered (phenolate) \| Favorable geometry \| \| Analogy \| o-Tyrosine (ligand_5817, pK… |
+| 14 | 4 | comparison | The predicted log β₁ for Zn²⁺–tyrosine would be **intermediate between histidine (~6.5–7) and simple amino acids (~5)** | …motes thiol deprotonation in cysteine.  The predicted log β₁ for Zn²⁺–tyrosine would be **intermediate between histidine (~6.5–7) and simple amino acids (~5)**, likely around **log β₁ ≈ 6–7**, becaus… |
+| 15 | 4 | range | log β₁ ≈ 6–7 | …ple amino acids (~5)**, likely around **log β₁ ≈ 6–7**, because: - The phenolate O⁻ is a har… |
+| 16 | 5 | exact_value | (8-membered) | …eates an unfavorable large chelate ring (8-membered), reducing the chelate effect. Its predi… |
+| 17 | 5 | comparison | Its predicted stability would be only slightly above glycine. | …membered), reducing the chelate effect. Its predicted stability would be only slightly above glycine.… |
+| 18 | 6 | exact_value | \| 1 \| Cysteine ✅ (studied) \| Thiolate S⁻ \| 8.18 \| ★★★★★ (log β₁ ~9.8) \| | … Zn²⁺ Stability \| \|---\|---\|---\|---\|---\| \| 1 \| Cysteine ✅ (studied) \| Thiolate S⁻ \| 8.18 \| ★★★★★ (log β₁ ~9.8) \| \| 2 \| Histidine ✅ (studied) \| Imidazole… |
+| 19 | 6 | exact_value | \| 2 \| Histidine ✅ (studied) \| Imidazole N \| 6.05 \| ★★★★ (log β₁ ~6.5–7) \| | …olate S⁻ \| 8.18 \| ★★★★★ (log β₁ ~9.8) \| \| 2 \| Histidine ✅ (studied) \| Imidazole N \| 6.05 \| ★★★★ (log β₁ ~6.5–7) \| \| **3** \| **Tyrosine 🎯 (predicted)** \| … |
+| 20 | 6 | exact_value | \| **3** \| **Tyrosine 🎯 (predicted)** \| **Phenolate O⁻** \| **10.10** \| **★★★ (log β₁ ~6–7)** \| | …azole N \| 6.05 \| ★★★★ (log β₁ ~6.5–7) \| \| **3** \| **Tyrosine 🎯 (predicted)** \| **Phenolate O⁻** \| **10.10** \| **★★★ (log β₁ ~6–7)** \| \| 4 \| Aspartic/Glutamic acid \| COO⁻ \| 3… |
+| 21 | 6 | exact_value | \| 5 \| Glycine, Ala, etc. \| None \| — \| ★★ (log β₁ ~5) \| | …/Glutamic acid \| COO⁻ \| 3.7/4.2 \| ★★½ \| \| 5 \| Glycine, Ala, etc. \| None \| — \| ★★ (log β₁ ~5) \|  **Bottom line:** Among amino acids pot… |
+| 22 | 6 | comparison | **tyrosine** is the strongest candidate for forming the most stable zinc complex, | …otentially lacking Zn²⁺ stability data, **tyrosine** is the strongest candidate for forming the most stable zinc complex, thanks to its phenolate side-chain dono… |

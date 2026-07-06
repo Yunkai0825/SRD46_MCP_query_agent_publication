@@ -1,0 +1,38 @@
+Based on my thorough search of the NIST SRD-46 database, I was unable to find a citation from around 2005 for zinc–histidine equilibria. The database contains **53 literature references** for the Zn²⁺–L-histidine system, but the most recent one dates to **1999** (Anwar & Azab, *J. Chem. Eng. Data*, 1999, 44, 1151; shortcut `99AA`).
+
+---
+
+## What SRD-46 Does Have for Zn²⁺–Histidine
+
+The database holds **29 measured entries** across 6 equilibrium species. Here are the key **log K** values (recommended/critical compilations):
+
+| Equilibrium | log K | T (°C) | I (mol/L) | vlm_id |
+|---|---|---|---|---|
+| Zn²⁺ + L ⇌ ZnL | 6.51 | 25 | 0.1 | vlm_98899 |
+| Zn²⁺ + L ⇌ ZnL | 6.48 | 25 | 0.5 | vlm_98901 |
+| Zn²⁺ + L ⇌ ZnL | 6.58 | 25 | 1.0 | vlm_98902 |
+| Zn²⁺ + L ⇌ ZnL | 7.07 | 25 | 3.0 | vlm_98903 |
+| Zn²⁺ + 2L ⇌ ZnL₂ | 12.04 | 25 | 0.1 | vlm_98907 |
+| Zn²⁺ + 2L ⇌ ZnL₂ | 11.91 | 25 | 0.5 | vlm_98910 |
+| Zn²⁺ + 2L ⇌ ZnL₂ | 12.29 | 25 | 1.0 | vlm_98911 |
+| Zn²⁺ + 2L ⇌ ZnL₂ | 12.74 | 25 | 3.0 | vlm_98912 |
+| ZnL + H ⇌ ZnHL | 4.86 | 25 | 0.1 | vlm_98919 |
+| ZnL₂ + H ⇌ ZnHL₂ | 5.80 | 25 | 0.1 | vlm_98924 |
+| ZnHL₂ + H ⇌ Zn(HL)₂ | 5.67 | 25 | 0.1 | vlm_98923 |
+| Zn(OH)L₂ + H ⇌ ZnL₂ + H₂O | 9.95 | 25 | 0.5 | vlm_98927 |
+
+---
+
+## Possible Explanations
+
+1. **The ~2005 paper may not yet be incorporated into SRD-46.** The NIST critical stability constants database is periodically updated, and newer publications can lag behind.
+2. **The study might use a different ligand form** (e.g., D-histidine, DL-histidine, or a histidine derivative like histidine methyl ester) — these would appear under a different `ligand_id`.
+3. **The paper may be indexed under a different metal oxidation state or mixed-ligand system** not captured by a simple Zn²⁺ + histidine query.
+
+### Suggestions for Follow-Up
+- If you can provide the **author name(s)** or **journal**, I can do a more targeted citation search across the entire SRD-46 literature database.
+- I can also search for histidine derivatives or mixed-ligand systems involving zinc if the study wasn't purely binary Zn–His.
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).*
+
+---

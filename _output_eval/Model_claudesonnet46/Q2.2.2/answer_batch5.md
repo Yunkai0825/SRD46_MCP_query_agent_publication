@@ -1,0 +1,28 @@
+## 🏆 Cu²⁺ Has the Most Ligands Studied
+
+Among all metal ions in the NIST SRD-46 database, **Cu²⁺ (copper(II))** holds the record for the largest number of different ligands studied.
+
+> **Note:** H⁺ (the proton) technically tops the raw ranking with 4,081 ligand entries, but it is a pseudo-metal placeholder used to encode protonation equilibria (pKa values), not a true metal ion.
+
+### Top 10 Metal Ions by Number of Distinct Ligands
+
+| Rank | Metal Ion | metal_id | # Distinct Ligands | # Measurements |
+|------|-----------|----------|--------------------|----------------|
+| 1 | **Cu²⁺** | metal_41 | **1,951** | 8,963 |
+| 2 | Ni²⁺ | metal_112 | 1,369 | — |
+| 3 | Zn²⁺ | metal_208 | 1,169 | — |
+| 4 | Co²⁺ | metal_33 | 977 | — |
+| 5 | Cd²⁺ | metal_26 | 818 | — |
+| 6 | Ag⁺ | metal_2 | 649 | — |
+| 7 | Ca²⁺ | metal_25 | 644 | — |
+| 8 | Mg²⁺ | metal_92 | 508 | — |
+| 9 | Mn²⁺ | metal_94 | 486 | — |
+| 10 | Pb²⁺ | metal_125 | 470 | — |
+
+### Chemistry Insight
+
+**Cu²⁺'s dominance** is no surprise to coordination chemists. Its d⁹ electronic configuration gives it a strong thermodynamic preference for nitrogen- and oxygen-donor ligands (the Irving–Williams series places Cu²⁺ at the top), making it the most studied transition metal in complexation chemistry. Its top ligand partners in SRD-46 include histidine, ammonia, imidazole, and acetic acid — reflecting its biological relevance (metalloproteins, enzymes) and industrial importance. The breadth of functional groups covered (47% carboxylate, 40% aromatic rings, 35% primary amines) underscores Cu²⁺'s versatility as a Lewis acid.
+
+*Source: NIST SRD-46 database*
+
+---

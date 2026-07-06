@@ -1,0 +1,39 @@
+DTPA does **not** have one single binding constant; it has **metal-specific stability constants**. In SRD-46, DTPA is **ligand_6356**: **Diethylenetrinitrilopentaacetic acid**, formula **C14H23N3O10**, defined as **H5L**.
+
+A concise SRD-46-supported answer is:
+
+| Ligand | Conditions represented in the retrieved SRD-46 set | What was found |
+|---|---|---|
+| DTPA (diethylenetrinitrilopentaacetic acid, H5L) | mostly **25 °C**, **I = 0.1 M** | stability constants are available for many metals, including **Ca²⁺, Mg²⁺, Cu²⁺, Zn²⁺, Fe²⁺, Fe³⁺, Al³⁺, Pb²⁺, Gd³⁺**, and many lanthanides |
+
+Representative metals present in the SRD-46 DTPA dataset at **25 °C, 0.1 M** include:
+
+| Metal ions found for DTPA |
+|---|
+| Al³⁺ |
+| Ca²⁺ |
+| Mg²⁺ |
+| Mn²⁺ |
+| Co²⁺ |
+| Ni²⁺ |
+| Cu²⁺ |
+| Zn²⁺ |
+| Fe²⁺ |
+| Fe³⁺ |
+| Pb²⁺ |
+| Gd³⁺ |
+| La³⁺–Lu³⁺ (many lanthanides) |
+| Th⁴⁺, U⁴⁺ |
+
+Also relevant: DTPA protonation data are present at **25 °C, 0.1 M**, with pKa values including **4.28, 2.70, and 2.00** for higher protonation steps, so any **conditional** binding strength depends strongly on pH.
+
+| Key point | Meaning |
+|---|---|
+| No single “DTPA binding constant” exists | You must specify the **metal ion** |
+| Constants depend on conditions | Especially **pH**, ionic strength, and temperature |
+
+If you want, I can next pull the **actual log K / log β value** from SRD-46 for a specific complex such as **Gd–DTPA**, **Fe(III)–DTPA**, **Cu(II)–DTPA**, or **Ca–DTPA**.  
+
+*Source: NIST SRD-46.*
+
+---

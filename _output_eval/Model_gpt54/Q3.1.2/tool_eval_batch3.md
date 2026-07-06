@@ -1,0 +1,476 @@
+# Q3.1.2 — Tool Results (batch 3)
+
+### Step 2: `search_metals`
+**Args:**
+```json
+{
+  "name": "Cu(II), Ni(II)",
+  "limit": 10
+}
+```
+
+[summary]
+## search_metals
+
+*(no results)*
+
+---
+
+### Step 3: `search_ligands`
+**Args:**
+```json
+{
+  "name": "glycine, histidine, cysteine, aspartic acid, glutamic acid, alanine, serine, proline, lysine, arginine, tyrosine, methionine, threonine",
+  "limit": 50
+}
+```
+
+[summary]
+## search_ligands
+
+*(no results)*
+
+---
+
+### Step 4: `search_metals`
+**Args:**
+```json
+{
+  "symbol": "Cu, Ni",
+  "limit": 10
+}
+```
+
+[summary]
+## search_metals
+
+*(no results)*
+
+---
+
+### Step 5: `search_ligands`
+**Args:**
+```json
+{
+  "name": "glyc, hist, cyst, aspart, glutam, alan, ser, prol, lys, argin, tyros, methion, threon",
+  "limit": 100
+}
+```
+
+[summary]
+## search_ligands
+
+*(no results)*
+
+---
+
+### Step 7: `build_system_catalog`
+**Args:**
+```json
+{}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog
+
+**Error:** Provide at least one of metal_id, ligand_id, or beta_definition_id.
+
+---
+
+### Step 8: `search_stability`
+**Args:**
+```json
+{
+  "where": "c.metal_name_SRD LIKE '%copper%' OR c.metal_name_SRD LIKE '%nickel%' AND c.ligand_class_name LIKE '%amino%'",
+  "order_by": "c.ligand_name_SRD ASC",
+  "limit": 200
+}
+```
+
+[PHASE ERROR] Tool 'search_stability' is not available yet. You must call 0_plan_search_strategy first (PHASE 2) before using the execution tools.
+
+---
+
+### Step 9: `search_metals`
+**Args:**
+```json
+{
+  "exclude": [],
+  "limit": 50
+}
+```
+
+[TOOL ERROR] search_metals: Error executing tool search_metals: 1 validation error for search_metalsArguments
+exclude
+  Input should be a valid string [type=string_type, input_value=[], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+
+---
+
+### Step 10: `search_ligands`
+**Args:**
+```json
+{
+  "ligand_class": "amino acid",
+  "limit": 100
+}
+```
+
+[summary]
+## search_ligands — 100 result(s)
+
+**stats:** 297 SQL matches · showing 100 · limit 100
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | 428 | `NCC(=O)O` | (-inf, H2L, 2.33, HL, 9.57, L, +inf) |
+| ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | Amino Acids | 159 | `C[C@H](N)C(=O)O` | (-inf, H2L, 2.33, HL, 9.71, L, +inf) |
+| ligand_5762 | DL-2-Aminobutanoic acid | HL | Amino Acids | 53 | `CCC(N)C(=O)O` | (-inf, H2L, 2.3, HL, 9.63, L, +inf) |
+| ligand_5763 | DL-2-Aminopentanoic acid (Norvaline) | HL | Amino Acids | 35 | `CCC[C@H](N)C(=O)O` | (-inf, H2L, 2.31, HL, 9.65, L, +inf) |
+| ligand_5764 | DL-2-Aminohexanoic acid (Norleucine) | HL | Amino Acids | 33 | `CCCC[C@H](N)C(=O)O` | (-inf, H2L, 2.31, HL, 9.68, L, +inf) |
+| ligand_5765 | L-2-Amino-3-methylbutanoic acid (Valine) | HL | Amino Acids | 81 | `CC(C)[C@H](N)C(=O)O` | (-inf, H2L, 2.27, HL, 9.52, L, +inf) |
+| ligand_5766 | L-2-Amino-4-methylpentanoic acid (Leucine) | HL | Amino Acids | 49 | `CC(C)C[C@H](N)C(=O)O` | (-inf, H2L, 2.32, HL, 9.58, L, +inf) |
+| ligand_5767 | L-2-Amino-3-methylpentanoic acid (Isoleucine) | HL | Amino Acids | 51 | `CC[C@H](C)[C@H](N)C(=O)O` | (-inf, H2L, 2.26, HL, 9.6, L, +inf) |
+| ligand_5768 | D-allo-2-Amino-3-methylpentan… (D-allo-Isoleucine) | HL | Amino Acids | 16 | `CC[C@H](C)[C@@H](N)C(=O)O` | (-inf, H2L, 2.2, HL, 9.62, L, +inf) |
+| ligand_5769 | 2-Amino-2-methylpropanoi… (2-Aminoisobutyric acid) | HL | Amino Acids | 41 | `CC(C)(N)C(=O)O` | (-inf, H2L, 2.34, HL, 10.1, L, +inf) |
+| ligand_5770 | DL-2-Amino-4-pentenoic acid | HL | Amino Acids | 18 | `C=CCC(N)C(=O)O` | (-inf, H2L, 2.13, HL, 9.28, L, +inf) |
+| ligand_5771 | DL-2-Amino-5-hexenoic acid | HL | Amino Acids | 15 | `C=CCCC(N)C(=O)O` | (-inf, H2L, 2.25, HL, 9.43, L, +inf) |
+| ligand_5772 | DL-2-Amino-6-heptenoic acid | HL | Amino Acids | 15 | `C=CCCCC(N)C(=O)O` | (-inf, H2L, 2.34, HL, 9.52, L, +inf) |
+| ligand_5773 | 1-Aminocyclopentanecarboxylic acid (Cycloleucine) | HL | Amino Acids | 11 | `NC1(C(=O)O)CCCC1` | (-inf, H2L, 2.4, HL, 10.31, L, +inf) |
+| ligand_5774 | 1-Aminocyclohexanecarboxylic acid | HL | Amino Acids | 11 | `NC1(C(=O)O)CCCCC1` | (-inf, H2L, 2.41, HL, 10.13, L, +inf) |
+| ligand_5775 | 1-Aminocycloheptanecarboxylic acid | HL | Amino Acids | 11 | `NC1(C(=O)O)CCCCCC1` | (-inf, H2L, 2.59, HL, 10.46, L, +inf) |
+| ligand_5776 | DL-Aminophenylacetic acid (Phenylglycine) | HL | Amino Acids | 12 | `NC(C(=O)O)c1ccccc1` | (-inf, H2L, -1.9, HL, 8.92, L, +inf) |
+| ligand_5777 | L-2-Amino-3-phenylpropanoic acid (Phenylalanine) | HL | Amino Acids | 138 | `N[C@@H](Cc1ccccc1)C(=O)O` | (-inf, H2L, 2.18, HL, 9.09, L, +inf) |
+| ligand_5778 | DL-2-Amino-3-chloropropanoic ac… (3-Chloroalanine) | HL | Amino Acids | 10 | `N[C@@H](CCl)C(=O)O` | (-inf, H2L, 2, HL, 8.18, L, +inf) |
+| ligand_5779 | DL-2-Amino-3-chlorobutanoic acid | HL | Amino Acids | 8 | `CC(Cl)C(N)C(=O)O` | (-inf, H2L, -1.5, HL, 8.07, L, +inf) |
+| ligand_5780 | DL-2-Amino-3-(2-fluorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 6 | `N[C@@H](Cc1ccccc1F)C(=O)O` | (-inf, H2L, 2.12, HL, 9.01, L, +inf) |
+| ligand_5781 | DL-2-Amino-3-(3-fluorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 6 | `N[C@@H](Cc1cccc(F)c1)C(=O)O` | (-inf, H2L, 2.1, HL, 8.98, L, +inf) |
+| ligand_5782 | DL-2-Amino-3-(4-fluorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 6 | `N[C@@H](Cc1ccc(F)cc1)C(=O)O` | (-inf, H2L, 2.13, HL, 9.05, L, +inf) |
+| ligand_5783 | DL-2-Amino-3-(2-chlorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 2 | `N[C@@H](Cc1ccccc1Cl)C(=O)O` | (-inf, H2L, 2.23, HL, 8.94, L, +inf) |
+| ligand_5784 | DL-2-Amino-3-(3-chlorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 2 | `N[C@@H](Cc1cccc(Cl)c1)C(=O)O` | (-inf, H2L, 2.17, HL, 8.91, L, +inf) |
+| ligand_5785 | DL-2-Amino-3-(4-chlorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 2 | `N[C@@H](Cc1ccc(Cl)cc1)C(=O)O` | (-inf, H2L, 2.08, HL, 8.96, L, +inf) |
+| ligand_5786 | DL-Amino-4-sulfophenylacet… (4-Sulfophenylglycine) | H2L | Amino Acids | 12 | `NC(C(=O)O)c1ccc(S(=O)(=O)O)cc1` | (-inf, H2L, -1.8, HL, 8.66, L, +inf) |
+| ligand_5787 | DL-2-Amino-4-sulfobutanoic acid (Homocysteic acid) | H2L | Amino Acids | 4 | `N[C@@H](CCS(=O)(=O)O)C(=O)O` | (-inf, H2L, 2.11, HL, 8.93, L, +inf) |
+| ligand_5788 | 3-Aminopropanoic acid (beta-Alanine) | HL | Amino Acids | 111 | `NCCC(=O)O` | (-inf, H2L, 3.51, HL, 10.08, L, +inf) |
+| ligand_5789 | DL-3-Aminobutanoic acid | HL | Amino Acids | 33 | `CC(N)CC(=O)O` | (-inf, H2L, 3.43, HL, 10.05, L, +inf) |
+| ligand_5790 | cis-2-Aminocyclopentane-1-carboxylic acid | HL | Amino Acids | 6 | `N[C@H]1CCC[C@H]1C(=O)O` | (-inf, H2L, 3.54, HL, 10.1, L, +inf) |
+| ligand_5791 | trans-2-Aminocyclopentane-1-carboxylic acid | HL | Amino Acids | 3 | `N[C@@H]1CCC[C@H]1C(=O)O` | (-inf, H2L, 3.75, HL, 9.91, L, +inf) |
+| ligand_5792 | cis-2-Aminocyclohexane-1-carboxylic acid | HL | Amino Acids | 6 | `N[C@H]1CCCC[C@H]1C(=O)O` | (-inf, H2L, 3.49, HL, 10.54, L, +inf) |
+| ligand_5793 | trans-2-Aminocyclohexane-1-carboxylic acid | HL | Amino Acids | 6 | `N[C@@H]1CCCC[C@H]1C(=O)O` | (-inf, H2L, 3.47, HL, 10.01, L, +inf) |
+| ligand_5794 | cis-2-Amino-4-cyclohexene-1-carboxylic acid | HL | Amino Acids | 6 | `N[C@H]1CC=CC[C@H]1C(=O)O` | (-inf, H2L, 3.29, HL, 10.2, L, +inf) |
+| ligand_5795 | trans-2-Amino-4-cyclohexene-1-carboxylic acid | HL | Amino Acids | 5 | `N[C@@H]1CC=CC[C@H]1C(=O)O` | (-inf, H2L, 3.33, HL, 10.29, L, +inf) |
+| ligand_5796 | DL-3-Amino-3-phenylpropanoi… (Phenyl-beta-Alanine) | HL | Amino Acids | 2 | `NC(CC(=O)O)c1ccccc1` | (-inf, H2L, 3.4, HL, 9, L, +inf) |
+| ligand_5797 | 4-Aminobutanoic acid | HL | Amino Acids | 51 | `NCCCC(=O)O` | (-inf, H2L, 4.02, HL, 10.35, L, +inf) |
+| ligand_5798 | 5-Aminopentanoic acid | HL | Amino Acids | 20 | `NCCCCC(=O)O` | (-inf, H2L, 4.27, HL, 10.766, L, +inf) |
+| ligand_5799 | 6-Aminohexanoic acid | HL | Amino Acids | 29 | `NCCCCCC(=O)O` | (-inf, H2L, 4.373, HL, 10.804, L, +inf) |
+| ligand_5800 | 7-Aminoheptanoic acid | HL | Amino Acids | 3 | `NCCCCCCC(=O)O` | (-inf, H2L, 4.502, HL, +inf) |
+| ligand_5801 | Aminopropanedioic acid (Aminomalonic acid) | H2L | Amino Acids | 14 | `NC(C(=O)O)C(=O)O` | (-inf, H3L, -1.8, H2L, 2.94, HL, 9.22, L, +inf) |
+| ligand_5802 | L-Aminobutanedioic acid (Aspartic acid) | H2L | Amino Acids | 174 | `N[C@@H](CC(=O)O)C(=O)O` | (-inf, H3L, 1.95, H2L, 3.71, HL, 9.66, L, +inf) |
+| ligand_5803 | DL-2-Amino-3-methylbutane… (3-Methylaspartic acid) | H2L | Amino Acids | 6 | `CC(C(=O)O)[C@H](N)C(=O)O` | (-inf, H3L, 1.99, H2L, 3.59, HL, 9.48, L, +inf) |
+| ligand_5804 | L-2-Aminopentanedioic acid (Glutamic acid) | H2L | Amino Acids | 94 | `N[C@@H](CCC(=O)O)C(=O)O` | (-inf, H3L, 2.16, H2L, 4.15, HL, 9.58, L, +inf) |
+| ligand_5805 | DL-2-Amino-2-methylpentan… (2-Methylglutamic acid) | H2L | Amino Acids | 4 | `C[C@](N)(CCC(=O)O)C(=O)O` | (-inf, H2L, 4.05, HL, 9.72, L, +inf) |
+| ligand_5806 | DL-2-Aminohexanedioic acid | H2L | Amino Acids | 1 | `NC(CCCC(=O)O)C(=O)O` | (-inf, HL, 9.73, L, +inf) |
+| ligand_5807 | DL-2-Amino-3-hydroxypent… (3-Hydroxyglutamic acid) | H2L | Amino Acids | 8 | `N[C@H](C(=O)O)C(O)CC(=O)O` | (-inf, H3L, 2.09, H2L, 4.08, HL, 9.06, L, +inf) |
+| ligand_5808 | (3-Aminopropyl)malonic acid | H2L | Amino Acids | 18 | `NCCCC(C(=O)O)C(=O)O` | (-inf, H3L, 2.52, H2L, 4.86, HL, 10.45, L, +inf) |
+| ligand_5809 | L-2-Amino-3-phosphopropanoic acid (Phosphoserine) | H3L | Amino Acids | 52 | `N[C@@H](COP(=O)(O)O)C(=O)O` | (-inf, H4L, -0.7, H3L, 2.14, H2L, 5.7, HL, 9.8, L, +inf) |
+| ligand_5810 | L-2-Amino-2-methyl-3-phosphopropanoic acid | H4L | Amino Acids | 3 | `CC(N)(COP(=O)(O)O)C(=O)O` | (-inf, H3L, 2.07, H2L, 5.68, HL, 10.07, L, +inf) |
+| ligand_5811 | L-2-Amino-3-phosphobutanoic ac… (Phosphothreonine) | H4L | Amino Acids | 3 | `C[C@@H](OP(=O)(O)O)[C@H](N)C(=O)O` | (-inf, H3L, 2.25, H2L, 5.83, HL, 9.67, L, +inf) |
+| ligand_5812 | DL-2-Amino-3-(phenylphospho)propanoic acid | H3L | Amino Acids | 2 | `NC(COP(=O)(O)Oc1ccccc1)C(=O)O` | (-inf, H2L, 2.13, HL, 8.79, L, +inf) |
+| ligand_5813 | DL-2-Amino-3-phosphonopropanoic acid | H4L | Amino Acids | 31 | `NC(CP(=O)(O)O)C(=O)O` | (-inf, H3L, 2.37, H2L, 6.06, HL, 10.74, L, +inf) |
+| ligand_5814 | DL-2-Amino-4-phosphonobutanoic acid | H4L | Amino Acids | 16 | `NC(CCP(=O)(O)O)C(=O)O` | (-inf, H3L, 2.51, H2L, 6.9, HL, 10.21, L, +inf) |
+| ligand_5815 | DL-3-Amino-2-phosphonopropanoic acid | H4L | Amino Acids | 20 | `NCC(C(=O)O)P(=O)(O)O` | (-inf, H3L, 3.44, H2L, 5.52, HL, 10.07, L, +inf) |
+| ligand_5816 | D-3-Amino-3-carboxyp… (Asparagine hydroxamic acid) | H2L | Amino Acids | 17 | `NC(CC(=O)NO)C(=O)O` | (-inf, H3L, 2.18, H2L, 8.15, HL, 9.37, L, +inf) |
+| ligand_5817 | DL-2-Amino-3-(2-hydroxyphenyl)propan… (o-Tyrosine) | H2L | Amino Acids | 71 | `NC(Cc1ccccc1O)C(=O)O` | (-inf, H3L, 2.41, H2L, 8.67, HL, 11.01, L, +inf) |
+| ligand_5818 | DL-2-Amino-3-(3-hydroxyphenyl)propan… (m-Tyrosine) | H2L | Amino Acids | 86 | `N[C@@H](Cc1cccc(O)c1)C(=O)O` | (-inf, H3L, 2.22, H2L, 8.95, HL, 10.04, L, +inf) |
+| ligand_5819 | L-2-Amino-3-(4-hydroxyphenyl)propanoic… (Tyrosine) | H2L | Amino Acids | 107 | `N[C@@H](Cc1ccc(O)cc1)C(=O)O` | (-inf, H3L, 2.24, H2L, 9.04, HL, 10.1, L, +inf) |
+| ligand_5820 | L-2-Amino-2-methyl-3-(4-hydrox… (L-Methyltyrosine) | H2L | Amino Acids | 7 | `CC(N)(Cc1ccc(O)cc1)C(=O)O` | (-inf, H3L, 2.16, H2L, 9.14, HL, 10.24, L, +inf) |
+| ligand_5821 | L-2-Amino-3-(4-hydroxy-3,5… (L-3,5-Diiodotyrosine) | H2L | Amino Acids | 3 | `N[C@@H](Cc1cc(I)c(O)c(I)c1)C(=O)O` | (-inf, H2L, 6.16, HL, 9.1, L, +inf) |
+| ligand_5822 | DL-2-Amino-3-(3-hydroxy-4-methoxyphenyl)propanoic… | H2L | Amino Acids | 3 | `COc1ccc(CC(N)C(=O)O)cc1O` | (-inf, H3L, 2.23, H2L, 8.84, HL, 10.12, L, +inf) |
+| ligand_5823 | DL-2-Amino-3-(4-hydroxy-3-methoxyphenyl)propanoic… | H2L | Amino Acids | 3 | `COc1cc(CC(N)C(=O)O)ccc1O` | (-inf, H3L, 2.13, H2L, 8.78, HL, 10.14, L, +inf) |
+| ligand_5824 | L-2-Amino-3-(3-amino-4-hydroxyp… (m-Aminotyrosine) | H2L | Amino Acids | 9 | `Nc1cc(C[C@H](N)C(=O)O)ccc1O` | (-inf, H4L, 2, H3L, 4.48, H2L, 9.09, HL, 10.19, L, +inf) |
+| ligand_5825 | DL-2-Amino-2-(3,4-dihydroxyphenyl)acetic a… (DOPG) | H3L | Amino Acids | 6 | `NC(C(=O)O)c1ccc(O)c(O)c1` | (-inf, H4L, 2, H3L, 8.56, H2L, 9.75, HL, 9.75, L, +inf) |
+| ligand_5826 | L-2-Amino-3-(3,4-dihydroxyphenyl)propanoic… (DOPA) | H3L | Amino Acids | 91 | `NC(Cc1ccc(O)c(O)c1)C(=O)O` | (-inf, H4L, 2.2, H3L, 8.75, H2L, 9.81, HL, 9.81, L, +inf) |
+| ligand_5827 | L-2-Amino-2-methyl-3-(3,4-dihydr… (L-2-MethylDOPA) | H3L | Amino Acids | 13 | `CC(N)(Cc1ccc(O)c(O)c1)C(=O)O` | (-inf, H4L, 2.24, H3L, 8.88, H2L, 9.99, HL, +inf) |
+| ligand_5828 | L-2-Amino-3-hydroxypropanoic acid (Serine) | HL | Amino Acids | 139 | `N[C@@H](CO)C(=O)O` | (-inf, H2L, 2.16, HL, 9.05, L, +inf) |
+| ligand_5829 | L-2-Amino-3-hydroxybutanoic acid (Threonine) | HL | Amino Acids | 117 | `C[C@@H](O)[C@H](N)C(=O)O` | (-inf, H2L, 2.2, HL, 8.94, L, +inf) |
+| ligand_5830 | allo-L-2-Amino-3-hydroxybutano… (L-allo-Threonine) | HL | Amino Acids | 31 | `C[C@H](O)[C@H](N)C(=O)O` | (-inf, H2L, 2.11, HL, 8.92, L, +inf) |
+| ligand_5831 | erythro-2-Amino-3-hydroxy-… (erythro-Phenylserine) | HL | Amino Acids | 22 | `NC(C(=O)O)C(O)c1ccccc1` | (-inf, H2L, -1.9, HL, 8.7, L, +inf) |
+| ligand_5832 | threo-2-Amino-3-hydroxy-3-ph… (threo-Phenylserine) | HL | Amino Acids | 13 | `NC(C(=O)O)C(O)c1ccccc1` | (-inf, H2L, -1.9, HL, 8.87, L, +inf) |
+| ligand_5833 | L-2-Amino-4-hydroxybutanoic acid (Homoserine) | HL | Amino Acids | 31 | `N[C@@H](CCO)C(=O)O` | (-inf, H2L, 2.24, HL, 9.28, L, +inf) |
+| ligand_5834 | DL-3-Amino-2-hydroxypropanoic acid (Isoserine) | HL | Amino Acids | 36 | `NCC(O)C(=O)O` | (-inf, H2L, 2.66, HL, 9.13, L, +inf) |
+| ligand_5835 | DL-4-Amino-3-hydroxybutanoic acid | HL | Amino Acids | 21 | `NCC(O)CC(=O)O` | (-inf, H2L, 3.9, HL, 9.46, L, +inf) |
+| ligand_5836 | L-trans-2-Amino-3-hydroxy-2,3-dihydrobenzoic acid | HL | Amino Acids | 6 | `N[C@H]1C(C(=O)O)=CC=C[C@@H]1O` | (-inf, H2L, 3.36, HL, 8.56, L, +inf) |
+| ligand_5837 | D-gluco-2-Amino-3,4,5,6-tet… (D-Glucosaminic acid) | HL | Amino Acids | 30 | `N[C@@H](C(=O)O)[C@@H](O)[C@H](O)[C@H](O)CO` | (-inf, H2L, 2.2, HL, 9.08, L, +inf) |
+| ligand_5838 | DL-Amino-4-Methoxyphenyl… (4-Methoxyphenylglycine) | HL | Amino Acids | 12 | `COc1ccc(C(N)C(=O)O)cc1` | (-inf, H2L, 2, HL, 9.07, L, +inf) |
+| ligand_5839 | L-2-Aminobutanedioic acid 4-… (4-Methyl aspartate) | HL | Amino Acids | 1 | `COC(=O)CC(N)C(=O)O` | (-inf, HL, 8.5, L, +inf) |
+| ligand_5840 | DL-2-Aminopentanedioic acid 5… (5-Ethyl glutamate) | HL | Amino Acids | 2 | `CCOC(=O)CC[C@H](N)C(=O)O` | (-inf, H2L, 2.15, HL, 9.19, L, +inf) |
+| ligand_5841 | L-2-Aminopentanedioic acid 5… (5-Benzyl glutamate) | HL | Amino Acids | 2 | `N[C@@H](CCC(=O)OCc1ccccc1)C(=O)O` | (-inf, H2L, 2.06, HL, 8.89, L, +inf) |
+| ligand_5842 | DL-2-Aminopentanedioic acid 1… (1-Ethyl glutamate) | HL | Amino Acids | 2 | `CCOC(=O)[C@@H](N)CCC(=O)O` | (-inf, H2L, 3.85, HL, 7.84, L, +inf) |
+| ligand_5843 | L-2-Aminobutanedioic acid 4-amide (Asparagine) | HL | Amino Acids | 92 | `NC(=O)C[C@H](N)C(=O)O` | (-inf, H2L, 2.16, HL, 8.73, L, +inf) |
+| ligand_5844 | L-2-Aminopentanedioic acid 5-amide (Glutamine) | HL | Amino Acids | 71 | `NC(=O)CC[C@H](N)C(=O)O` | (-inf, H2L, 2.19, HL, 9, L, +inf) |
+| ligand_5845 | L-2-Amino-6-(2-methylpropamido)hexanoic acid (N(6… | HL | Amino Acids | 30 | `CC(C)C(=O)NCCCCC(N)C(=O)O` | (-inf, H2L, 2.4, HL, 9.42, L, +inf) |
+| ligand_5846 | L-6-Amino-2-acetamidohexanoic acid (N(2)-Acetyl-L… | HL | Amino Acids | 1 | `CC(=O)N[C@@H](CCCCN)C(=O)O` | *** |
+| ligand_5847 | L-2-Amino-6-acetamidohexanoic acid (N(6)-Acetyl-L… | HL | Amino Acids | 7 | `CC(=O)NCCCCC(N)C(=O)O` | (-inf, H2L, 2.13, HL, 9.52, L, +inf) |
+| ligand_5848 | L-2-Amino-3-(oxalylamido)propanoic acid | HL | Amino Acids | 10 | `NC(CNC(=O)C(=O)O)C(=O)O` | (-inf, H3L, -1.2, H2L, 2.44, HL, 8.95, L, +inf) |
+| ligand_5849 | N(6)-d-Biotinyl-L-lysine (d-Biocytin) | HL | Amino Acids | 7 | `NC(CCCCNC(=O)CCCCC1SCC2NC(=O)NC21)C(=O)O` | (-inf, H2L, 2.26, HL, 9.29, L, +inf) |
+| ligand_5850 | d-Biocytin sulfoxide | HL | Amino Acids | 4 | `NC(CCCCNC(=O)CCCCC1C2NC(=O)NC2CS1=O)C(=O)O` | (-inf, HL, 9.3, L, +inf) |
+| ligand_5851 | d-Biocytin sulfone | HL | Amino Acids | 4 | `NC(CCCCNC(=O)CCCCC1C2NC(=O)NC2CS1(=O)=O)C(=O)O` | (-inf, HL, 9.31, L, +inf) |
+| ligand_5852 | L-2-Amino-5-ureidopentanoic acid (Citrulline) | HL | Amino Acids | 16 | `NC(=O)NCCC[C@H](N)C(=O)O` | (-inf, H2L, 2.3, HL, 9.33, L, +inf) |
+| ligand_5853 | L-2-Amino-3-(phenylmethoxy)propa… (O-Benzylserine) | HL | Amino Acids | 4 | `N[C@@H](COCc1ccccc1)C(=O)O` | (-inf, H2L, -1.9, HL, 9.03, L, +inf) |
+| ligand_5854 | L-2-Amino-3-(4-methoxyph… (4-Methoxyphenylalanine) | HL | Amino Acids | 5 | `COc1ccc(C[C@H](N)C(=O)O)cc1` | (-inf, HL, -9.15, L, +inf) |
+| ligand_5855 | DL-2-Amino-3-(3,4-di… (3,4-Dimethoxyphenylalanine) | HL | Amino Acids | 2 | `COc1ccc(C[C@H](N)C(=O)O)cc1OC` | (-inf, H2L, 2.37, HL, 9.02, L, +inf) |
+| ligand_5856 | L-2-Amino-3-mercaptopropanoic acid (Cysteine) | H2L | Amino Acids | 134 | `N[C@@H](CS)C(=O)O` | (-inf, H3L, -1.9, H2L, 8.18, HL, 10.3, L, +inf) |
+| ligand_5857 | D-2-Amino-3-mercapto-3-methylbuta… (Penicillamine) | H2L | Amino Acids | 91 | `CC(C)(S)[C@H](N)C(=O)O` | (-inf, H3L, -1.9, H2L, 7.96, HL, 10.67, L, +inf) |
+| ligand_5858 | DL-2-Amino-3-mercapto-3-methylpentanoic acid | H2L | Amino Acids | 2 | `CCC(C)(S)C(N)C(=O)O` | (-inf, H2L, 7.96, HL, 10.5, L, +inf) |
+| ligand_5859 | DL-2-Amino-4-mercaptobutanoic acid (Homocysteine) | H2L | Amino Acids | 3 | `NC(CCS)C(=O)O` | (-inf, H3L, 2.15, H2L, 8.57, HL, 10.38, L, +inf) |
+
+### Functional groups across all SQL matches (294 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 294 | 100% |
+| primary_amine | 167 | 57% |
+| aromatic_ring | 99 | 34% |
+| hydroxyl | 79 | 27% |
+| secondary_amine | 68 | 23% |
+| tertiary_amine | 48 | 16% |
+| amide | 40 | 14% |
+| thioether | 26 | 9% |
+| phenol | 22 | 7% |
+| pyridine | 17 | 6% |
+| halide | 13 | 4% |
+| thiol | 11 | 4% |
+| imine | 9 | 3% |
+| ester | 6 | 2% |
+| ether | 6 | 2% |
+| phosphonate | 6 | 2% |
+| phosphate | 5 | 2% |
+| sulfonate | 4 | 1% |
+| nitrile | 1 | 0% |
+
+---
+
+### Step 11: `build_system_catalog`
+**Args:**
+```json
+{
+  "ligand_id": "ligand_5760"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 20 pair(s), 67 species *(ultra-compact)*
+
+### Equation legend
+
+| beta_def_id | equation | note |
+|-------------|----------|------|
+| beta_def_32 | [HL] + [H] <=> [H2L] |  |
+| beta_def_79 | [L] + [H] <=> [HL] |  |
+| beta_def_194 | [M] + [HL]^2 <=> [M(HL)2] |  |
+| beta_def_204 | [MHL2] + [H] <=> [M(HL)2] |  |
+| beta_def_208 | [M] + [HL]^3 <=> [M(HL)3] |  |
+| beta_def_238 | [M(OH)2L] + [H] <=> [M(OH)L] + [H2O] |  |
+| beta_def_427 | [M(OH)L]^2 <=> [M2(OH)2L2] |  |
+| beta_def_713 | [MCl2] + [L] <=> [MClL] + [Cl] |  |
+| beta_def_779 | [M] + [HL] <=> [MHL] |  |
+| beta_def_792 | [ML2] + [H] <=> [MHL2] |  |
+| beta_def_812 | [M] + [L] <=> [ML] |  |
+| beta_def_840 | [M] + [L]^2 <=> [ML2] |  |
+| beta_def_845 | [MCl2] + [L]^2 <=> [ML2] + [Cl]^2 |  |
+| beta_def_872 | [M] + [L]^3 <=> [ML3] |  |
+| beta_def_966 | [M(OH)L] + [H] <=> [ML] + [H2O] |  |
+| beta_def_984 | [M(OH)L2] + [H] <=> [ML2] + [H2O] |  |
+
+*(all species aqueous)*
+
+**1. Ni^[2+] + Aminoacetic acid (Glycine)** (metal_112 + ligand_5760) — ligand_def_HxL: HL | 49 ent, 3 sp, 49 vlms (vlm_93798…vlm_93846)
+   - species: beta_def_812(17) beta_def_840(17) beta_def_872(15)
+   - eq:9 nets T:5~45°C I:-0.15~3.15M max 3n/3e
+**2. H^[+] + Aminoacetic acid (Glycine)** (metal_68 + ligand_5760) — ligand_def_HxL: HL | 48 ent, 2 sp, 48 vlms (vlm_93606…vlm_93653)
+   - species: beta_def_32(27) beta_def_79(21)
+   - eq:15 nets T:5~45°C I:-0.15~3.15M max 2n/1e
+**3. Zn^[2+] + Aminoacetic acid (Glycine)** (metal_208 + ligand_5760) — ligand_def_HxL: HL | 37 ent, 4 sp, 37 vlms (vlm_93924…vlm_93960)
+   - species: beta_def_812(12) beta_def_840(13) beta_def_872(11) beta_def_966(1)
+   - eq:7 nets T:5~45°C I:-0.15~1.15M max 4n/4e
+**4. Co^[2+] + Aminoacetic acid (Glycine)** (metal_33 + ligand_5760) — ligand_def_HxL: HL | 37 ent, 4 sp, 37 vlms (vlm_93761…vlm_93797)
+   - species: beta_def_812(12) beta_def_840(12) beta_def_872(12) beta_def_966(1)
+   - eq:7 nets T:5~45°C I:-0.15~1.15M max 4n/4e
+**5. Cd^[2+] + Aminoacetic acid (Glycine)** (metal_26 + ligand_5760) — ligand_def_HxL: HL | 32 ent, 3 sp, 32 vlms (vlm_93961…vlm_93992)
+   - species: beta_def_812(11) beta_def_840(11) beta_def_872(10)
+   - eq:7 nets T:5~45°C I:-0.15~1.15M max 3n/3e
+**6. Cu^[2+] + Aminoacetic acid (Glycine)** (metal_41 + ligand_5760) — ligand_def_HxL: HL | 30 ent, 2 sp, 30 vlms (vlm_93847…vlm_93876)
+   - species: beta_def_812(15) beta_def_840(15)
+   - eq:9 nets T:5~45°C I:-0.15~2.65M max 2n/1e
+**7. Pb^[2+] + Aminoacetic acid (Glycine)** (metal_125 + ligand_5760) — ligand_def_HxL: HL | 25 ent, 8 sp, 25 vlms (vlm_94001…vlm_94025)
+   - species: beta_def_194(2) beta_def_204(1) beta_def_208(1) beta_def_779(5) beta_def_792(1) beta_def_812(8) beta_def_840(4) beta_def_966(3)
+   - eq:4 nets T:19~30°C I:-0.05~3.15M max 6n/11e
+**8. Mn^[2+] + Aminoacetic acid (Glycine)** (metal_94 + ligand_5760) — ligand_def_HxL: HL | 14 ent, 2 sp, 14 vlms (vlm_93733…vlm_93746)
+   - species: beta_def_812(11) beta_def_840(3)
+   - eq:6 nets T:5~45°C I:-0.15~0.65M max 2n/1e
+**9. Fe^[2+] + Aminoacetic acid (Glycine)** (metal_62 + ligand_5760) — ligand_def_HxL: HL | 14 ent, 3 sp, 14 vlms (vlm_93747…vlm_93760)
+   - species: beta_def_812(11) beta_def_840(2) beta_def_872(1)
+   - eq:7 nets T:5~45°C I:-0.15~3.15M max 3n/3e
+**10. Ag^[+] + Aminoacetic acid (Glycine)** (metal_2 + ligand_5760) — ligand_def_HxL: HL | 14 ent, 4 sp, 14 vlms (vlm_93900…vlm_93913)
+   - species: beta_def_779(1) beta_def_812(6) beta_def_840(6) beta_def_966(1)
+   - eq:4 nets T:19~30°C I:-0.15~3.15M max 4n/4e
+**11. VO^[2+] + Aminoacetic acid (Glycine)** (metal_201 + ligand_5760) — ligand_def_HxL: HL | 13 ent, 9 sp, 13 vlms (vlm_93886…vlm_93898)
+   - species: beta_def_194(3) beta_def_238(1) beta_def_427(1) beta_def_779(3) beta_def_792(1) beta_def_812(1) beta_def_840(1) beta_def_966(1) beta_def_984(1)
+   - eq:1 nets T:16.5~31.5°C I:0.775~1.225M max 9n/17e
+**12. Ca^[2+] + Aminoacetic acid (Glycine)** (metal_25 + ligand_5760) — ligand_def_HxL: HL | 12 ent, 2 sp, 12 vlms (vlm_93666…vlm_93677)
+   - species: beta_def_779(4) beta_def_812(8)
+   - eq:6 nets T:15~41°C I:-0.15~3.15M max 2n/1e
+**13. Th^[4+] + Aminoacetic acid (Glycine)** (metal_185 + ligand_5760) — ligand_def_HxL: HL | 9 ent, 3 sp, 9 vlms (vlm_93712…vlm_93720)
+   - species: beta_def_194(3) beta_def_208(3) beta_def_779(3)
+   - eq:1 nets T:16.5~31.5°C I:0.775~1.225M max 3n/3e
+**14. Mg^[2+] + Aminoacetic acid (Glycine)** (metal_92 + ligand_5760) — ligand_def_HxL: HL | 9 ent, 3 sp, 9 vlms (vlm_93657…vlm_93665)
+   - species: beta_def_779(1) beta_def_812(7) beta_def_840(1)
+   - eq:5 nets T:15~30°C I:-0.15~3.15M max 2n/1e
+**15. Hg^[2+] + Aminoacetic acid (Glycine)** (metal_71 + ligand_5760) — ligand_def_HxL: HL | 8 ent, 4 sp, 8 vlms (vlm_93993…vlm_94000)
+   - species: beta_def_713(3) beta_def_812(1) beta_def_840(1) beta_def_845(3)
+   - eq:2 nets T:15~30°C I:-0.05~0.65M max 2n/1e
+**16. UO_[2]^[2+] + Aminoacetic acid (Glycine)** (metal_195 + ligand_5760) — ligand_def_HxL: HL | 7 ent, 2 sp, 7 vlms (vlm_93724…vlm_93730)
+   - species: beta_def_194(3) beta_def_779(4)
+   - eq:2 nets T:19~30°C I:-0.05~1.15M max 2n/1e
+**17. Fe^[3+] + Aminoacetic acid (Glycine)** (metal_61 + ligand_5760) — ligand_def_HxL: HL | 6 ent, 3 sp, 6 vlms (vlm_93880…vlm_93885)
+   - species: beta_def_194(1) beta_def_779(3) beta_def_812(2)
+   - eq:3 nets T:16.5~31.5°C I:0.275~3.225M max 3n/3e
+**18. Eu^[3+] + Aminoacetic acid (Glycine)** (metal_58 + ligand_5760) — ligand_def_HxL: HL | 4 ent, 2 sp, 4 vlms (vlm_93694…vlm_93697)
+   - species: beta_def_779(3) beta_def_812(1)
+   - eq:2 nets T:19~30°C I:-0.05~2.15M max 1n/0e
+**19. Ti^[3+] + Aminoacetic acid (Glycine)** (metal_187 + ligand_5760) — ligand_def_HxL: HL | 3 ent, 3 sp, 3 vlms (vlm_93877, vlm_93878, vlm_93879)
+   - species: beta_def_779(1) beta_def_812(1) beta_def_966(1)
+   - eq:1 nets T:16.5~31.5°C I:0.775~1.225M max 3n/2e
+**20. Pm^[3+] + Aminoacetic acid (Glycine)** (metal_137 + ligand_5760) — ligand_def_HxL: HL | 3 ent, 1 sp, 3 vlms (vlm_93690, vlm_93691, vlm_93692)
+   - species: beta_def_779(3)
+   - eq:1 nets T:12.5~27.5°C I:1.775~2.225M max 1n/0e
+
+---
+
+### Step 13: `search_stability`
+**Args:**
+```json
+{
+  "where": "((c.ligand_id = ligand_5760 OR c.ligand_id = ligand_5761 OR c.ligand_id = ligand_5802 OR c.ligand_id = ligand_5804 OR c.ligand_id = ligand_5819 OR c.ligand_id = ligand_5828 OR c.ligand_id = ligand_5829 OR c.ligand_id = ligand_5856 OR c.ligand_id = ligand_5857) AND (c.metal_name_SRD = 'Cu^[2+]' OR c.metal_name_SRD = 'Ni^[2+]') AND (s.constant_type = 'logB' OR s.constant_type = 'log beta' OR s.constant_type = 'lgK'))",
+  "order_by": "c.ligand_id ASC, c.metal_name_SRD ASC, c.beta_definition_name ASC, ABS(s.temperature_c-25) ASC, ABS(s.ionic_strength_mol_l-0.1) ASC",
+  "limit": 500
+}
+```
+
+[summary]
+## search_stability
+
+*(no results)*
+
+---
+
+### Step 14: `search_pka_values`
+**Args:**
+```json
+{
+  "where": "(lc.ligand_id = ligand_5760 OR lc.ligand_id = ligand_5761 OR lc.ligand_id = ligand_5802 OR lc.ligand_id = ligand_5804 OR lc.ligand_id = ligand_5819 OR lc.ligand_id = ligand_5828 OR lc.ligand_id = ligand_5829 OR lc.ligand_id = ligand_5856 OR lc.ligand_id = ligand_5857)",
+  "order_by": "lc.ligand_id ASC, ABS(p.temperature_c-25) ASC, ABS(p.ionic_strength_mol_l-0.1) ASC, p.pKa ASC",
+  "limit": 300
+}
+```
+
+[summary]
+## search_pka_values — 23 row(s)
+
+### pKa -2.0–-1.5 (2 entries)
+
+| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T°C | I(M) | bracket_from→to | M_bind_totN_below | M_bind_totN_above |
+|--------|-----------|-------------|---------|--------|-----|-----|------|-----------------|-------------------|-------------------|
+| vlm_97397 | ligand_5856 | L-2-Amino-3-mercaptopropanoic acid… | H2L | N[C@@H](CS)C(=O)O | -1.9 | 25 | 0.1 | H2L→H3L | M_tot_1 | M_tot_2 |
+| vlm_97563 | ligand_5857 | D-2-Amino-3-mercapto-3-methylbutan… | H2L | CC(C)(S)[C@H](N)C(=O)O | -1.9 | 25 | 0.1 | H2L→H3L | M_tot_1 | M_tot_1 |
+
+### pKa 1.5–2.0 (1 entries)
+
+| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T°C | I(M) | bracket_from→to | M_bind_totN_below | M_bind_totN_above |
+|--------|-----------|-------------|---------|--------|-----|-----|------|-----------------|-------------------|-------------------|
+| vlm_95563 | ligand_5802 | L-Aminobutanedioic acid (Aspartic … | H2L | N[C@@H](CC(=O)O)C(=O)O | 1.95 | 25 | 0.1 | H2L→H3L | M_tot_1 | M_tot_1 |
+
+### pKa 2.0–2.5 (6 entries)
+
+| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T°C | I(M) | bracket_from→to | M_bind_totN_below | M_bind_totN_above |
+|--------|-----------|-------------|---------|--------|-----|-----|------|-----------------|-------------------|-------------------|
+| vlm_95761 | ligand_5804 | L-2-Aminopentanedioic acid (Glutam… | H2L | N[C@@H](CCC(=O)O)C(=O)O | 2.16 | 25 | 0.1 | H2L→H3L | M_tot_1 | M_tot_2 |
+| vlm_96511 | ligand_5828 | L-2-Amino-3-hydroxypropanoic acid … | HL | N[C@@H](CO)C(=O)O | 2.16 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_3 |
+| vlm_96687 | ligand_5829 | L-2-Amino-3-hydroxybutanoic acid (… | HL | C[C@@H](O)[C@H](N)C(=O)O | 2.2 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_2 |
+| vlm_96241 | ligand_5819 | L-2-Amino-3-(4-hydroxyphenyl)propa… | H2L | N[C@@H](Cc1ccc(O)cc1)C(=O)O | 2.24 | 25 | 0.1 | H2L→H3L | M_tot_1 | M_tot_1 |
+| vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 2.33 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_20 |
+
+**Band stats (all 6 entries):**
+
+| stat | value |
+|------|-------|
+| entries | 6 |
+| unique ligands | 6 |
+| pKa range | 2.16 – 2.33 |
+| T°C range | 25 – 25 |
+| I(M) range | 0.1 – 0.1 |
+| HxL forms | HL(4), H2L(2) |
+| functional groups | carboxyl(6), primary_amine(6), hydroxyl(3), aromatic_ring(1), phenol(1) |
+
+### pKa 3.5–4.0 (1 entries)
+
+| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T°C | I(M) | bracket_from→to | M_bind_totN_below | M_bind_totN_above |
+|--------|-----------|-------------|---------|--------|-----|-----|------|-----------------|-------------------|-------------------|
+| vlm_95550 | ligand_5802 | L-Aminobutanedioic acid (Aspartic … | H2L | N[C@@H](CC(=O)O)C(=O)O | 3.71 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_9 |
+
+### pKa 4.0–4.5 (1 entries)
+
+| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T°C | I(M) | bracket_from→to | M_bind_totN_below | M_bind_totN_above |
+|--------|-----------|-------------|---------|--------|-----|-----|------|-----------------|-------------------|-------------------|
+| vlm_95750 | ligand_5804 | L-2-Aminopentanedioic acid (Glutam… | H2L | N[C@@H](CCC(=O)O)C(=O)O | 4.15 | 25 | 0.1 | HL→H2L | M_tot_2 | M_tot_8 |
+
+### pKa 7.5–8.0 (1 entries)
+
+| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T°C | I(M) | bracket_from→to | M_bind_totN_below | M_bind_totN_above |
+|--------|-----------|-------------|---------|--------|-----|-----|------|-----------------|-------------------|-------------------|
+| vlm_97556 | ligand_5857 | D-2-Amino-3-mercapto-3-methylbutan… | H2L | CC(C)(S)[C@H](N)C(=O)O | 7.96 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_9 |
+
+### pKa 8.0–8.5 (1 entries)
+
+| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T°C | I(M) | bracket_from→to | M_bind_totN_below | M_bind_totN_above |
+|--------|-----------|-------------|---------|--------|-----|-----|------|-----------------|-------------------|-------------------|
+| vlm_97384 | ligand_5856 | L-2-Amino-3-mercaptopropanoic acid… | H2L | N[C@@H](CS)C(=O)O | 8.18 | 25 | 0.1 | HL→H2L | M_tot_2 | M_tot_9 |
+
+### pKa 8.5–9.0 (1 entries)
+
+| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T°C | I(M) | bracket_from→to | M_bind_totN_below | M_bind_totN_above |
+|--------|-----------|-------------|---------|--------|-----|-----|------|-----------------|-------------------|-------------------|
+| vlm_96674 | ligand_5829 | L-2-Amino-3-hydroxybutanoic acid (… | HL | C[C@@H](O)[C@H](N)C(=O)O | 8.94 | 25 | 0.1 | L→HL | M_tot_2 | M_tot_11 |
+
+### pKa 9.0–9.5 (2 entries)
+
+| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T°C | I(M) | bracket_from→to | M_bind_totN_below | M_bind_totN_above |
+|--------|-----------|-------------|---------|--------|-----|-----|------|-----------------|-------------------|-------------------|
+| vlm_96234 | ligand_5819 | L-2-Amino-3-(4-hydroxyphenyl)propa… | H2L | N[C@@H](Cc1ccc(O)cc1)C(=O)O | 9.04 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_10 |
+| vlm_96498 | ligand_5828 | L-2-Amino-3-hydroxypropanoic acid … | HL | N[C@@H](CO)C(=O)O | 9.05 | 25 | 0.1 | L→HL | M_tot_3 | M_tot_16 |
+
+### pKa 9.5–10.0 (4 entries)
+
+| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T°C | I(M) | bracket_from→to | M_bind_totN_below | M_bind_totN_above |
+|--------|-----------|-------------|---------|--------|-----|-----|------|-----------------|-------------------|-------------------|
+| vlm_93606 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 9.57 | 25 | 0.1 | L→HL | M_tot_20 | M_tot_43 |
+| vlm_95739 | ligand_5804 | L-2-Aminopentanedioic acid (Glutam… | H2L | N[C@@H](CCC(=O)O)C(=O)O | 9.58 | 25 | 0.1 | L→HL | M_tot_8 | M_tot_17 |
+| vlm_95537 | ligand_5802 | L-Aminobutanedioic acid (Aspartic … | H2L | N[C@@H](CC(=O)O)C(=O)O | 9.66 | 25 | 0.1 | L→HL | M_tot_9 | M_tot_36 |
+| vlm_94058 | ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | C[C@H](N)C(=O)O | 9.71 | 25 | 0.1 | L→HL | M_tot_6 | M_tot_19 |
+
+### pKa 10.0–10.5 (2 entries)
+
+| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T°C | I(M) | bracket_from→to | M_bind_totN_below | M_bind_totN_above |
+|--------|-----------|-------------|---------|--------|-----|-----|------|-----------------|-------------------|-------------------|
+| vlm_96227 | ligand_5819 | L-2-Amino-3-(4-hydroxyphenyl)propa… | H2L | N[C@@H](Cc1ccc(O)cc1)C(=O)O | 10.1 | 25 | 0.1 | L→HL | M_tot_10 | M_tot_1 |
+| vlm_97371 | ligand_5856 | L-2-Amino-3-mercaptopropanoic acid… | H2L | N[C@@H](CS)C(=O)O | 10.3 | 25 | 0.1 | L→HL | M_tot_9 | M_tot_17 |
+
+### pKa 10.5–11.0 (1 entries)
+
+| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T°C | I(M) | bracket_from→to | M_bind_totN_below | M_bind_totN_above |
+|--------|-----------|-------------|---------|--------|-----|-----|------|-----------------|-------------------|-------------------|
+| vlm_97549 | ligand_5857 | D-2-Amino-3-mercapto-3-methylbutan… | H2L | CC(C)(S)[C@H](N)C(=O)O | 10.67 | 25 | 0.1 | L→HL | M_tot_9 | M_tot_14 |
+
+---

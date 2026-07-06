@@ -1,0 +1,1404 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q3.2.6\\Q3.2.6_result_batch2.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Using SRD-46 data for **malonic acid** and **Cu²⁺–malonate**, an estimate at **pH 4** is:\n\n| Quantity | Value | Conditions / note |\n|---|---:|---|\n| pKa1 | 2.65 | malonic acid, 25 °C, I = 0.1 M |\n| pKa2 | 5.27 | malonic acid, 25 °C, I = 0.1 M |\n| log K (Cu²⁺ + L²⁻ ⇌ CuL) | 5.04 | Cu–malonate, 25 °C, I = 0.1 M |\n| Estimated log K′ at pH 4 | 3.82 | conditional for total uncomplexed malonate acid/base pool |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 17,
+            "text": "Using SRD-46 data",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 18,
+            "end": 60,
+            "text": "for **malonic acid** and **Cu²⁺–malonate**",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 62,
+            "end": 89,
+            "text": "an estimate at **pH 4** is:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 147,
+            "end": 195,
+            "text": "| pKa1 | 2.65 | malonic acid, 25 °C, I = 0.1 M |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 196,
+            "end": 244,
+            "text": "| pKa2 | 5.27 | malonic acid, 25 °C, I = 0.1 M |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 245,
+            "end": 312,
+            "text": "| log K (Cu²⁺ + L²⁻ ⇌ CuL) | 5.04 | Cu–malonate, 25 °C, I = 0.1 M |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 313,
+            "end": 408,
+            "text": "| Estimated log K′ at pH 4 | 3.82 | conditional for total uncomplexed malonate acid/base pool |",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_8873",
+              "vlm_152316",
+              "vlm_151949"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "## search_stability — 8 measurement(s)\nmetal_id: metal_41 | ligand_id: ligand_8873",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 8 measurement(s)\nmetal_id: metal_41 | ligand_id: ligand_8873\n| vlm_id | ... | value | T°C | I(M) | equation |\n| vlm_152316 | ... | logK | 5.04 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "## search_pka_values — 2 row(s)\n| vlm_id | ligand_id | ligand_name | ... | pKa | T°C | I(M) |\n| vlm_151949 | ligand_8873 | Propanedioic acid (Malonic acid) | ... | 2.65 | 25 | 0.1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_8873",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Cu^[2+] + Propanedioic acid (Malonic acid) — metal_id: metal_41 | ligand_id: ligand_8873 ... beta_def_812 | [ML]/[M][L]",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "Cu^[2+] + Propanedioic acid (Malonic acid)\nmetal_id: metal_41 | ligand_id: ligand_8873\n| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | ... |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_metals",
+                "snippet": "| metal_41 | Cu^[2+] | Cu | 2 | ... | beta_totN_264 | ligand_totN_1951 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "| ligand_8873 | Propanedioic acid (Malonic acid) | H2L | ... | pka_brackets | (-inf, H2L, 2.65, HL, 5.27, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_8873",
+              "vlm_151949"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_151949 … pKa 2.65 | T°C 25 | I(M) 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151949 | ligand_8873 | Propanedioic acid (Malonic acid) | H2L | O=C(O)CC(=O)O | 2.65 | 25 | 0.1 | HL→H2L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_8873",
+              "vlm_151918"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_151918 … pKa 5.27 | T°C 25 | I(M) 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151918 | ligand_8873 | Propanedioic acid (Malonic acid) | H2L | O=C(O)CC(=O)O | 5.27 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_8873",
+              "beta_def_812",
+              "vlm_152316"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_152316 … logK 5.04 | 25 | 0.1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| vlm_152316 | ref_eq_map_20105 | beta_def_812 | logK | 5.04 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (5.27, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No SRD‑46 row reports a conditional log K′ at pH 4; only pKa (2.65, 5.27) and logK (5.04) are provided. The value 3.82 is not present in tool results.",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151949 | … | pKa | 2.65 | 25 | 0.1 | … |\n| vlm_151918 | … | pKa | 5.27 | 25 | 0.1 | … |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| vlm_152316 | … | logK | 5.04 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "### Calculation\n\nFor diprotic malonic acid:\n\n| Equilibrium | Expression |\n|---|---|\n| H₂L ⇌ H⁺ + HL⁻ | \\(K_{a1} = 10^{-2.65}\\) |\n| HL⁻ ⇌ H⁺ + L²⁻ | \\(K_{a2} = 10^{-5.27}\\) |\n\nAt pH 4, \\([H^+] = 10^{-4}\\).\n\nThe fraction of total free ligand present as **L²⁻** is:\n\n| Formula | Value |\n|---|---:|\n| \\(\\alpha_{L^{2-}} = \\dfrac{K_{a1}K_{a2}}{[H^+]^2 + [H^+]K_{a1} + K_{a1}K_{a2}}\\) | — |\n\nNumerically:\n\n| Term | Value |\n|---|---:|\n| \\(K_{a1}\\) | \\(2.24 \\times 10^{-3}\\) |\n| \\(K_{a2}\\) | \\(5.37 \\times 10^{-6}\\) |\n| \\(K_{a1}K_{a2}\\) | \\(1.20 \\times 10^{-8}\\) |\n| \\([H^+]^2\\) | \\(1.00 \\times 10^{-8}\\) |\n| \\([H^+]K_{a1}\\) | \\(2.24 \\times 10^{-7}\\) |\n| Denominator | \\(2.46 \\times 10^{-7}\\) |\n| \\(\\alpha_{L^{2-}}\\) | 0.0487 |\n\nSo only about **4.9%** of free malonate is in the fully deprotonated **L²⁻** form at pH 4.\n\nNow use:\n\n| Relation | Value |\n|---|---:|\n| \\(K' = K \\alpha_{L^{2-}}\\) | — |\n| \\(K = 10^{5.04}\\) | \\(1.10 \\times 10^{5}\\) |\n| \\(K' = 1.10 \\times 10^5 \\times 0.0487\\) | \\(5.35 \\times 10^3\\) |\n\nTherefore:\n\n| Conditional constant | Value |\n|---|---:|\n| \\(K'\\) | \\(5.4 \\times 10^3\\) |\n| \\(\\log K'\\) | **3.73** |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 15,
+            "text": "### Calculation",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 17,
+            "end": 43,
+            "text": "For diprotic malonic acid:",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 84,
+            "end": 128,
+            "text": "| H₂L ⇌ H⁺ + HL⁻ | \\(K_{a1} = 10^{-2.65}\\) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 129,
+            "end": 173,
+            "text": "| HL⁻ ⇌ H⁺ + L²⁻ | \\(K_{a2} = 10^{-5.27}\\) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 175,
+            "end": 183,
+            "text": "At pH 4,",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 184,
+            "end": 204,
+            "text": "\\([H^+] = 10^{-4}\\).",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 206,
+            "end": 262,
+            "text": "The fraction of total free ligand present as **L²⁻** is:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 295,
+            "end": 383,
+            "text": "| \\(\\alpha_{L^{2-}} = \\dfrac{K_{a1}K_{a2}}{[H^+]^2 + [H^+]K_{a1} + K_{a1}K_{a2}}\\) | — |",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 385,
+            "end": 397,
+            "text": "Numerically:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 427,
+            "end": 467,
+            "text": "| \\(K_{a1}\\) | \\(2.24 \\times 10^{-3}\\) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 468,
+            "end": 508,
+            "text": "| \\(K_{a2}\\) | \\(5.37 \\times 10^{-6}\\) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 509,
+            "end": 555,
+            "text": "| \\(K_{a1}K_{a2}\\) | \\(1.20 \\times 10^{-8}\\) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 556,
+            "end": 597,
+            "text": "| \\([H^+]^2\\) | \\(1.00 \\times 10^{-8}\\) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 598,
+            "end": 643,
+            "text": "| \\([H^+]K_{a1}\\) | \\(2.24 \\times 10^{-7}\\) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 644,
+            "end": 685,
+            "text": "| Denominator | \\(2.46 \\times 10^{-7}\\) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 686,
+            "end": 718,
+            "text": "| \\(\\alpha_{L^{2-}}\\) | 0.0487 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 720,
+            "end": 810,
+            "text": "So only about **4.9%** of free malonate is in the fully deprotonated **L²⁻** form at pH 4.",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 812,
+            "end": 820,
+            "text": "Now use:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 854,
+            "end": 888,
+            "text": "| \\(K' = K \\alpha_{L^{2-}}\\) | — |",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 889,
+            "end": 935,
+            "text": "| \\(K = 10^{5.04}\\) | \\(1.10 \\times 10^{5}\\) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 936,
+            "end": 1002,
+            "text": "| \\(K' = 1.10 \\times 10^5 \\times 0.0487\\) | \\(5.35 \\times 10^3\\) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1004,
+            "end": 1014,
+            "text": "Therefore:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1060,
+            "end": 1092,
+            "text": "| \\(K'\\) | \\(5.4 \\times 10^3\\) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1093,
+            "end": 1119,
+            "text": "| \\(\\log K'\\) | **3.73** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_8873",
+              "vlm_151949",
+              "vlm_151918"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "pKa_brackets: (-inf, H2L, 2.65, HL, 5.27, L, +inf)",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "| ligand_8873 | Propanedioic acid (Malonic acid) | H2L | ... | pka_brackets | (-inf, H2L, 2.65, HL, 5.27, L, +inf) |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151949 | ... | pKa | 2.65 | 25 | 0.1 | bracket_from→to HL→H2L |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151918 | ... | pKa | 5.27 | 25 | 0.1 | bracket_from→to L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_151949",
+              "ligand_8873"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "pKa = 2.65 (HL→H2L); Ka1 = 10^-pKa1 = 10^-2.65",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151949 | ligand_8873 | ... | pKa | 2.65 | 25 | 0.1 | bracket_from→to HL→H2L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "vlm_151918",
+              "ligand_8873"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "pKa = 5.27 (L→HL); Ka2 = 10^-pKa2 = 10^-5.27",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151918 | ligand_8873 | ... | pKa | 5.27 | 25 | 0.1 | bracket_from→to L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Chosen calculation condition (pH 4); not a database datum in SRD-46 results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "By definition pH = -log10[H+]; pH 4 ⇒ [H+] = 10^-4. Not a database value.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Speciation formula for a diprotic acid; not provided as a row in SRD-46.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "vlm_151949",
+              "ligand_8873"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "pKa1 = 2.65 ⇒ Ka1 = 10^-2.65 ≈ 2.24×10^-3",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151949 | ... | pKa | 2.65 | 25 | 0.1 | bracket_from→to HL→H2L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "vlm_151918",
+              "ligand_8873"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "pKa2 = 5.27 ⇒ Ka2 = 10^-5.27 ≈ 5.37×10^-6",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151918 | ... | pKa | 5.27 | 25 | 0.1 | bracket_from→to L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "vlm_151949",
+              "vlm_151918",
+              "ligand_8873"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "From pKa1=2.65 and pKa2=5.27 ⇒ Ka1·Ka2 ≈ 1.20×10^-8",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151949 | ... | pKa | 2.65 | 25 | 0.1 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151918 | ... | pKa | 5.27 | 25 | 0.1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "[H+] = 10^-4 at pH 4 ⇒ [H+]^2 = 10^-8; not a database value.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "[H+]·Ka1 = 10^-4 × 2.24×10^-3 = 2.24×10^-7; derived by calculation.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Denominator sum computed from prior terms; not present in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Alpha fraction calculated from acid-base speciation; not in database rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Percentage of L2- at pH 4 derived from computed α; not a database datum.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 17,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 18,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Relationship between conditional and intrinsic constants is theoretical.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 19,
+            "canonical_ids": [
+              "vlm_152316",
+              "beta_def_812",
+              "metal_41",
+              "ligand_8873"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "logK = 5.04 (at 25 °C, I=0.1) for [M]+[L]⇌[ML] ⇒ K = 10^5.04 ≈ 1.10×10^5",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| vlm_152316 | ... | beta_def_812 | logK | 5.04 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              }
+            ]
+          },
+          {
+            "claim_index": 20,
+            "canonical_ids": [
+              "vlm_152316"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Uses K from logK=5.04 (K≈1.10×10^5) and computed α=0.0487 to give K'≈5.35×10^3.",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| vlm_152316 | ... | logK | 5.04 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              }
+            ]
+          },
+          {
+            "claim_index": 21,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 22,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "K' value (5.4×10^3) is a computed conditional constant; not present in SRD-46.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 23,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "log K' = 3.73 is calculated from K'; no direct database row contains this.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "### Note on the reported estimate\nIf you instead use the **I = 0** value from SRD-46, **log K = 5.80**, then:\n\n| Assumption | log K′ at pH 4 |\n|---|---:|\n| using log K = 5.80 | 4.49 |\n| using log K = 5.04 (matched to pKa ionic strength 0.1 M) | **3.73** |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 33,
+            "text": "### Note on the reported estimate",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 34,
+            "end": 52,
+            "text": "If you instead use",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 53,
+            "end": 72,
+            "text": "the **I = 0** value",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 73,
+            "end": 84,
+            "text": "from SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 86,
+            "end": 102,
+            "text": "**log K = 5.80**",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 104,
+            "end": 109,
+            "text": "then:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 154,
+            "end": 183,
+            "text": "| using log K = 5.80 | 4.49 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 184,
+            "end": 255,
+            "text": "| using log K = 5.04 (matched to pKa ionic strength 0.1 M) | **3.73** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_152319",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_152319 | ... | beta_def_812 | logK | 5.8 | 25 | 0 | `[M] + [L] <=> [ML]` |",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| vlm_152319 | ref_eq_map_20108 | beta_def_812 | logK | 5.8 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (5.27, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Provenance claim to SRD-46; tool outputs do not print 'SRD-46' explicitly, but all results in this run are from that database context.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "vlm_152319",
+              "beta_def_812",
+              "metal_41",
+              "ligand_8873"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_152319 | ... | logK | 5.8 | 25 | 0 |",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| vlm_152319 | ref_eq_map_20108 | beta_def_812 | logK | 5.8 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (5.27, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "vlm_152319",
+              "vlm_151949",
+              "vlm_151918"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| vlm_152319 | ... | logK | 5.8 | 25 | 0 | (with pKa 2.65 & 5.27 from Step 14)",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| vlm_152319 | ref_eq_map_20108 | beta_def_812 | logK | 5.8 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (5.27, L, +inf) |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151949 | ligand_8873 | Propanedioic acid (Malonic acid) | H2L | O=C(O)CC(=O)O | 2.65 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151918 | ligand_8873 | Propanedioic acid (Malonic acid) | H2L | O=C(O)CC(=O)O | 5.27 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "vlm_152316",
+              "vlm_151949",
+              "vlm_151918"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| vlm_152316 | ... | logK | 5.04 | 25 | 0.1 | (with pKa 2.65 & 5.27 from Step 14)",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| vlm_152316 | ref_eq_map_20105 | beta_def_812 | logK | 5.04 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (5.27, L, +inf) |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151949 | ligand_8873 | Propanedioic acid (Malonic acid) | H2L | O=C(O)CC(=O)O | 2.65 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151918 | ligand_8873 | Propanedioic acid (Malonic acid) | H2L | O=C(O)CC(=O)O | 5.27 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "### Interpretation\n\nAt pH 4, Cu²⁺ binding is weakened by about **1.31 log units** relative to the intrinsic \\( \\mathrm{Cu^{2+} + L^{2-} \\rightleftharpoons CuL} \\) constant, because most malonate is present as **HL⁻**, not **L²⁻**. So the best matched SRD-46 estimate is **log K′ ≈ 3.73** at 25 °C, I = 0.1 M.\n\n**Source:** NIST SRD-46 entries for malonic acid pKa (ligand_8873; vlm_151949, vlm_151918) and Cu²⁺–malonate stability constant (beta_def_812; vlm_152316).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 18,
+            "text": "### Interpretation",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 173,
+            "end": 230,
+            "text": "because most malonate is present as **HL⁻**, not **L²⁻**.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 231,
+            "end": 233,
+            "text": "So",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 234,
+            "end": 266,
+            "text": "the best matched SRD-46 estimate",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 270,
+            "end": 287,
+            "text": "**log K′ ≈ 3.73**",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 291,
+            "end": 296,
+            "text": "25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 298,
+            "end": 307,
+            "text": "I = 0.1 M",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 310,
+            "end": 321,
+            "text": "**Source:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 322,
+            "end": 333,
+            "text": "NIST SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 346,
+            "end": 362,
+            "text": "malonic acid pKa",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 364,
+            "end": 375,
+            "text": "ligand_8873",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 377,
+            "end": 387,
+            "text": "vlm_151949",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 389,
+            "end": 399,
+            "text": "vlm_151918",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 405,
+            "end": 437,
+            "text": "Cu²⁺–malonate stability constant",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 439,
+            "end": 451,
+            "text": "beta_def_812",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 453,
+            "end": 463,
+            "text": "vlm_152316",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_8873",
+              "vlm_151949",
+              "vlm_151918"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "pKa 5.27 | 25 | 0.1 | bracket_from→to L→HL   ;   pKa 2.65 | 25 | 0.1 | bracket_from→to HL→H2L",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151918 | ligand_8873 | Propanedioic acid (Malonic acid) | H2L | O=C(O)CC(=O)O | 5.27 | 25 | 0.1 | L→HL | M_tot_26 | M_tot_50"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151949 | ligand_8873 | Propanedioic acid (Malonic acid) | H2L | O=C(O)CC(=O)O | 2.65 | 25 | 0.1 | HL→H2L | M_tot_2 | M_tot_26"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "beta_def_812",
+              "vlm_152316"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "vlm_152316 | beta_def_812 | logK | 5.04 | 25 | 0.1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "vlm_152316 | ref_eq_map_20105 | beta_def_812 | logK | 5.04 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (5.27, L, +inf)"
+              },
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | ... | n_entries: 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "vlm_152316",
+              "vlm_151918",
+              "vlm_151949"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "vlm_152316 | logK | 5.04 | 25 | 0.1 ; pKa rows at 25 °C, I=0.1: 5.27 and 2.65",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "vlm_152316 | ... | beta_def_812 | logK | 5.04 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151918 | ligand_8873 | ... | pKa | 5.27 | 25 | 0.1 | L→HL"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151949 | ligand_8873 | ... | pKa | 2.65 | 25 | 0.1 | HL→H2L"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "vlm_152316"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_152316 | ... | logK | 5.04 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "vlm_152316 | ref_eq_map_20105 | beta_def_812 | logK | 5.04 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "vlm_152316"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_152316 | ... | logK | 5.04 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "vlm_152316 | ref_eq_map_20105 | beta_def_812 | logK | 5.04 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Provenance statement; tool rows do not print the literal 'SRD-46' token to quote.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "ligand_8873",
+              "vlm_151949",
+              "vlm_151918"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "pKa entries for Propanedioic acid (Malonic acid): 2.65 and 5.27 at 25 °C, I=0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151949 | ligand_8873 | Propanedioic acid (Malonic acid) | ... | pKa | 2.65 | 25 | 0.1 | HL→H2L"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151918 | ligand_8873 | Propanedioic acid (Malonic acid) | ... | pKa | 5.27 | 25 | 0.1 | L→HL"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "ligand_8873"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_8873 | Propanedioic acid (Malonic acid) | H2L | ... | pKa_brackets: (-inf, H2L, 2.65, HL, 5.27, L, +inf)",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "ligand_8873 | Propanedioic acid (Malonic acid) | H2L | Carboxylic acids diacids | 505 | `O=C(O)CC(=O)O` | (-inf, H2L, 2.65, HL, 5.27, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "vlm_151949"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_151949 | ... | pKa | 2.65 | 25 | 0.1 | HL→H2L",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151949 | ligand_8873 | Propanedioic acid (Malonic acid) | H2L | O=C(O)CC(=O)O | 2.65 | 25 | 0.1 | HL→H2L | M_tot_2 | M_tot_26"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "vlm_151918"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_151918 | ... | pKa | 5.27 | 25 | 0.1 | L→HL",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151918 | ligand_8873 | Propanedioic acid (Malonic acid) | H2L | O=C(O)CC(=O)O | 5.27 | 25 | 0.1 | L→HL | M_tot_26 | M_tot_50"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_8873",
+              "beta_def_812",
+              "vlm_152316"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Cu2+–malonate ML: vlm_152316 | beta_def_812 | logK 5.04 at 25 °C, I=0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "vlm_152316 | ... | beta_def_812 | logK | 5.04 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "Cu^[2+] + Propanedioic acid (Malonic acid) ... beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | ... | n_entries: 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML]",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | n_entries: 8"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "… | beta_def_812 | … (all rows listed under this beta definition)"
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [
+              "vlm_152316"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_152316 | beta_def_812 | logK | 5.04 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "vlm_152316 | ref_eq_map_20105 | beta_def_812 | logK | 5.04 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (5.27, L, +inf)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

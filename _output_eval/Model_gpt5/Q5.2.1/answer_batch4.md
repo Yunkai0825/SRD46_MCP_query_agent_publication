@@ -1,0 +1,25 @@
+Short answer: SRD‑46 contains no stability-constant records for U(VI) (uranyl, UO2^2+) with crown ethers.
+
+What I checked in SRD‑46
+- Crown ether ligands resolved: 12‑crown‑4, 15‑crown‑5, 18‑crown‑6, dibenzo‑18‑crown‑6, dicyclohexano‑18‑crown‑6 (and related). Their system catalogs in SRD‑46 list many alkali/alkaline‑earth complexes but no uranium entries.
+- A direct stability search for uranyl (metal_name containing “UO…”) combined with crown‑ether class returned zero hits.
+
+Summary of surveyed ligands (SRD‑46)
+| Ligand (common name) | SRD‑46 ligand_id | U(VI)/uranyl stability constants present? |
+| --- | --- | --- |
+| 12‑crown‑4 | ligand_9672 | No records found |
+| 15‑crown‑5 | ligand_9674 | No records found |
+| 18‑crown‑6 | ligand_9676 | No records found |
+| Dibenzo‑18‑crown‑6 | ligand_9680 | No records found |
+| Dicyclohexano‑18‑crown‑6 | ligand_9677 / ligand_9678 | No records found |
+
+Chemistry note
+- Crown ethers preferentially encapsulate spherically symmetric alkali/alkaline‑earth cations by size matching. Uranyl (UO2^2+) is a linear dioxo cation that binds donors in an equatorial plane; simple ether crowns generally do not provide an ideal equatorial chelation environment in water, so uranyl–crown complexation is weak in aqueous media. Reported uranyl binding to crowns, when it occurs, is often in non‑aqueous or with functionalized crowns (e.g., phosphoryl/aza‑crowns), which may fall outside SRD‑46 coverage.
+
+If you’d like, I can:
+- Broaden the search to functionalized crowns (aza‑crown, phosphoryl‑crown) or to non‑aqueous media within SRD‑46 synonyms (e.g., “U(VI)”, “uranyl nitrate/perchlorate”), or
+- Look up uranyl stability constants with other macrocycles (e.g., cryptands) that are more likely to form measurable complexes.
+
+Source: NIST Standard Reference Database 46 (Critical Stability Constants of Metal Complexes).
+
+---

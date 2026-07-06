@@ -1,0 +1,1023 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q3.2.1\\Q3.2.1_result_batch1.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "SRD-46 does **not appear to provide an explicit stepwise \\(K_2\\)** entry for Cu²⁺–glycine in this resolved system. The database entries available here are:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 115,
+            "end": 155,
+            "text": "The database entries available here are:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "This run includes tool results from the NIST SRD-46 context (e.g., Cu2+–glycine stability entries), though the literal 'SRD-46' string is not shown in the raw rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "metal_41 | Cu^[2+] | beta_def_count ... vlm_totN_8963"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "ligand_5760 | Aminoacetic acid (Glycine) | HL | vlm_count 428 | pKa_brackets ... (2.33, HL, 9.57, L, +inf)"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "Cu^[2+] + Aminoacetic acid (Glycine) — 30 measurement(s) | vlm_93854 | beta_def_812 | logK | 8.56 | 25 | 0 | [M]+[L]<=>[ML]"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Quantity | Definition in SRD-46 | Example reported values |\n|---|---|---|\n| \\(K_1\\) / \\(\\beta_1\\) | \\([M] + [L] \\rightleftharpoons [ML]\\) (`beta_def_812`) | logK = 8.56 at 25 °C, I = 0 |\n| \\(\\beta_2\\) | \\([M] + 2[L] \\rightleftharpoons [ML_2]\\) (`beta_def_840`) | logK = 15.7 at 25 °C, I = 0 |",
+        "claims": [
+          {
+            "start": 76,
+            "end": 188,
+            "text": "| \\(K_1\\) / \\(\\beta_1\\) | \\([M] + [L] \\rightleftharpoons [ML]\\) (`beta_def_812`) | logK = 8.56 at 25 °C, I = 0 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 189,
+            "end": 294,
+            "text": "| \\(\\beta_2\\) | \\([M] + 2[L] \\rightleftharpoons [ML_2]\\) (`beta_def_840`) | logK = 15.7 at 25 °C, I = 0 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "beta_def_812",
+              "vlm_93854",
+              "metal_41",
+              "ligand_5760"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93854 | ref_eq_map_93 | beta_def_812 | logK | 8.56 | 25 | 0 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93854 | ref_eq_map_93 | beta_def_812 | logK | 8.56 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aq), [M](aq), [L](aq) | 15"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "beta_def_840",
+              "vlm_93869",
+              "metal_41",
+              "ligand_5760"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93869 | ref_eq_map_93 | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]`",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93869 | ref_eq_map_93 | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf) |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2] | [ML2](aq), [M](aq), [L](aq) | 15"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "So, with the data retrieved, I can confirm:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 43,
+            "text": "So, with the data retrieved, I can confirm:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "| Condition | log \\(K_1\\) | log \\(\\beta_2\\) reported directly |\n|---|---:|---:|\n| 10 °C, I = 0 | 8.8 | 16.3 |\n| 25 °C, I = 0 | 8.56 | 15.7 |\n| 25 °C, I = 0.1 | 8.19 | 15.1 |\n| 25 °C, I = 0.5 | 8.1 | 15.0 |\n| 25 °C, I = 1.0 | 8.2 | 15.1 |\n| 25 °C, I = 2.0 | 8.38 | 15.4 |\n| 25 °C, I = 2.5 | 8.34 | 15.4 |\n| 37 °C, I = 0.15 | 7.99 | 14.69 |\n| 40 °C, I = 0 | 8.37 | 15.3 |",
+        "claims": [
+          {
+            "start": 80,
+            "end": 109,
+            "text": "| 10 °C, I = 0 | 8.8 | 16.3 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 110,
+            "end": 140,
+            "text": "| 25 °C, I = 0 | 8.56 | 15.7 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 141,
+            "end": 173,
+            "text": "| 25 °C, I = 0.1 | 8.19 | 15.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 174,
+            "end": 205,
+            "text": "| 25 °C, I = 0.5 | 8.1 | 15.0 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 206,
+            "end": 237,
+            "text": "| 25 °C, I = 1.0 | 8.2 | 15.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 238,
+            "end": 270,
+            "text": "| 25 °C, I = 2.0 | 8.38 | 15.4 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 271,
+            "end": 303,
+            "text": "| 25 °C, I = 2.5 | 8.34 | 15.4 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 304,
+            "end": 338,
+            "text": "| 37 °C, I = 0.15 | 7.99 | 14.69 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 339,
+            "end": 369,
+            "text": "| 40 °C, I = 0 | 8.37 | 15.3 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "vlm_93853",
+              "vlm_93868"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| beta_def_812 | logK | 8.8 | 10 | 0 | ; | beta_def_840 | logK | 16.3 | 10 | 0 |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93853 | ref_eq_map_92 | beta_def_812 | logK | 8.8 | 10 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93868 | ref_eq_map_92 | beta_def_840 | logK | 16.3 | 10 | 0 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_93854",
+              "vlm_93869"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| beta_def_812 | logK | 8.56 | 25 | 0 | ; | beta_def_840 | logK | 15.7 | 25 | 0 |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93854 | ref_eq_map_93 | beta_def_812 | logK | 8.56 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93869 | ref_eq_map_93 | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_93847",
+              "vlm_93862"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| beta_def_812 | logK | 8.19 | 25 | 0.1 | ; | beta_def_840 | logK | 15.1 | 25 | 0.1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93847 | ref_eq_map_86 | beta_def_812 | logK | 8.19 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93862 | ref_eq_map_86 | beta_def_840 | logK | 15.1 | 25 | 0.1 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "vlm_93849",
+              "vlm_93864"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| beta_def_812 | logK | 8.1 | 25 | 0.5 | ; | beta_def_840 | logK | 15 | 25 | 0.5 |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93849 | ref_eq_map_88 | beta_def_812 | logK | 8.1 | 25 | 0.5 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93864 | ref_eq_map_88 | beta_def_840 | logK | 15 | 25 | 0.5 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "vlm_93850",
+              "vlm_93865"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| beta_def_812 | logK | 8.2 | 25 | 1 | ; | beta_def_840 | logK | 15.1 | 25 | 1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93850 | ref_eq_map_89 | beta_def_812 | logK | 8.2 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93865 | ref_eq_map_89 | beta_def_840 | logK | 15.1 | 25 | 1 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "vlm_93851",
+              "vlm_93866"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| beta_def_812 | logK | 8.38 | 25 | 2 | ; | beta_def_840 | logK | 15.4 | 25 | 2 |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93851 | ref_eq_map_90 | beta_def_812 | logK | 8.38 | 25 | 2 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93866 | ref_eq_map_90 | beta_def_840 | logK | 15.4 | 25 | 2 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "vlm_93852",
+              "vlm_93867"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| beta_def_812 | logK | 8.34 | 25 | 2.5 | ; | beta_def_840 | logK | 15.4 | 25 | 2.5 |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93852 | ref_eq_map_91 | beta_def_812 | logK | 8.34 | 25 | 2.5 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93867 | ref_eq_map_91 | beta_def_840 | logK | 15.4 | 25 | 2.5 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "vlm_93848",
+              "vlm_93863"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| beta_def_812 | logK | 7.99 | 37 | 0.15 | ; | beta_def_840 | logK | 14.69 | 37 | 0.15 |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93848 | ref_eq_map_87 | beta_def_812 | logK | 7.99 | 37 | 0.15 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93863 | ref_eq_map_87 | beta_def_840 | logK | 14.69 | 37 | 0.15 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "vlm_93855",
+              "vlm_93870"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| beta_def_812 | logK | 8.37 | 40 | 0 | ; | beta_def_840 | logK | 15.3 | 40 | 0 |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93855 | ref_eq_map_94 | beta_def_812 | logK | 8.37 | 40 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93870 | ref_eq_map_94 | beta_def_840 | logK | 15.3 | 40 | 0 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf) |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "For a true estimate,\n\\[\n\\beta_2 = K_1K_2\n\\quad\\text{or}\\quad\n\\log \\beta_2 = \\log K_1 + \\log K_2\n\\]\nbut **an explicit \\(K_2\\) value was not found** in the SRD-46 records returned for Cu²⁺–glycine, so a non-tautological estimate of \\(\\beta_2\\) from stepwise constants alone cannot be completed from this dataset slice.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 20,
+            "text": "For a true estimate,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 24,
+            "end": 40,
+            "text": "\\beta_2 = K_1K_2",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 61,
+            "end": 95,
+            "text": "\\log \\beta_2 = \\log K_1 + \\log K_2",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 99,
+            "end": 102,
+            "text": "but",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 103,
+            "end": 195,
+            "text": "**an explicit \\(K_2\\) value was not found** in the SRD-46 records returned for Cu²⁺–glycine,",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 196,
+            "end": 198,
+            "text": "so",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 199,
+            "end": 316,
+            "text": "a non-tautological estimate of \\(\\beta_2\\) from stepwise constants alone cannot be completed from this dataset slice.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "This is a standard thermodynamic identity (β2 = K1·K2) and is not explicitly listed in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Standard relation: log β2 = log K1 + log K2; this is general thermodynamics, not a database row.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_5760",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML]; beta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2]",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | ... | 15 |\n| beta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2] | ... | 15 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93854 | ... | beta_def_812 | logK | 8.56 | 25 | 0 | `[M] + [L] <=> [ML]` |\n| vlm_93869 | ... | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]` |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_5760",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Only cumulative β1 ([ML]/[M][L]) and β2 ([ML2]/[M][L]^2) are listed; no separate stepwise K2 entry is present.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | ... | 15 |\n| beta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2] | ... | 15 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93854 | ... | beta_def_812 | logK | 8.56 | 25 | 0 | `[M] + [L] <=> [ML]` |\n| vlm_93869 | ... | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]` |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "The **directly reported** overall \\(\\beta_2\\) values are therefore the valid database values to use; for example, at **25 °C and I = 0**, **log \\(\\beta_2 = 15.7\\)**. Since \\(K_2\\) is not explicitly reported here, any estimate using \\(K_2 = \\beta_2/K_1\\) would just reproduce the database \\(\\beta_2\\) by construction and would not be an independent comparison.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 99,
+            "text": "The **directly reported** overall \\(\\beta_2\\) values are therefore the valid database values to use",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 101,
+            "end": 113,
+            "text": "for example,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 119,
+            "end": 124,
+            "text": "25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 129,
+            "end": 134,
+            "text": "I = 0",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 140,
+            "end": 162,
+            "text": "log \\(\\beta_2 = 15.7\\)",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 166,
+            "end": 211,
+            "text": "Since \\(K_2\\) is not explicitly reported here",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 213,
+            "end": 299,
+            "text": "any estimate using \\(K_2 = \\beta_2/K_1\\) would just reproduce the database \\(\\beta_2\\)",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 320,
+            "end": 358,
+            "text": "would not be an independent comparison",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "beta_def_840",
+              "vlm_93869"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_93869 | ref_eq_map_93 | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]`",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93869 | ref_eq_map_93 | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf)"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2] | [ML2](aqueous), [M](aqueous), [L](aqueous) | 15"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_93869"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_93869 | ref_eq_map_93 | beta_def_840 | logK | 15.7 | 25 | 0 |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93869 | ref_eq_map_93 | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "vlm_93869"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_93869 | ref_eq_map_93 | beta_def_840 | logK | 15.7 | 25 | 0 |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93869 | ref_eq_map_93 | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "vlm_93869",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_93869 | ref_eq_map_93 | beta_def_840 | logK | 15.7 | 25 | 0 |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93869 | ref_eq_map_93 | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Only overall β definitions listed: beta_def_812 ([ML]/[M][L]) and beta_def_840 ([ML2]/[M][L]^2); no step [ML]+[L]⇌[ML2] K2 row shown.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 15"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2] | [ML2](aqueous), [M](aqueous), [L](aqueous) | 15"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "All rows are beta_def_812 ([M]+[L]⇌[ML]) or beta_def_840 ([M]+[L]^2⇌[ML2]); no [ML]+[L]⇌[ML2] entries present."
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Stoichiometric identity: β2 = K1·K2 ⇒ K2 = β2/K1. DB lists β1 (beta_def_812) and β2 (beta_def_840), not K2; derived K2 isn’t an independent datum.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| beta_def_812 | logK | 8.56 | 25 | 0 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "If K2 is computed as β2/K1 using the same DB β1 and β2, it does not provide an independent check against the reported β2.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "DB provides β1 (beta_def_812) and β2 (beta_def_840) values; no separate stepwise K2 is listed."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "*Source: NIST SRD-46 (Cu²⁺ / glycine stability entries for `beta_def_812` and `beta_def_840`).*",
+        "claims": [
+          {
+            "start": 1,
+            "end": 20,
+            "text": "Source: NIST SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 22,
+            "end": 36,
+            "text": "Cu²⁺ / glycine",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 37,
+            "end": 54,
+            "text": "stability entries",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 59,
+            "end": 73,
+            "text": "`beta_def_812`",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 78,
+            "end": 92,
+            "text": "`beta_def_840`",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Source: NIST Standard Reference Database 46 (SRD-46). Tool results in this run derive from SRD-46.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_5760"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Cu^[2+] + Aminoacetic acid (Glycine) — metal_id: metal_41 | ligand_id: ligand_5760",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Cu^[2+] + Aminoacetic acid (Glycine)\nmetal_id: metal_41 | ligand_id: ligand_5760 | ligand_def_HxL: HL"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "Cu^[2+] + Aminoacetic acid (Glycine) — 30 measurement(s)\nmetal_id: metal_41 | ligand_id: ligand_5760"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML]",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aq), [M](aq), [L](aq) | 15"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2]",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2] | [ML2](aq), [M](aq), [L](aq) | 15"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 7,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

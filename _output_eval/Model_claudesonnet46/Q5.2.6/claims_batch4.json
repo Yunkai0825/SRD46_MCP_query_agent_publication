@@ -1,0 +1,728 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudesonnet46\\Q5.2.6\\Q5.2.6_result_batch4.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "## Result\n\nAll **79,063 stability constant measurements** in the NIST SRD-46 database are recorded with the solvent `H₂O` (water). There are **no stability constants measured in supercritical CO₂** (or any non-aqueous solvent) in this database.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 9,
+            "text": "## Result",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 11,
+            "end": 57,
+            "text": "All **79,063 stability constant measurements**",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 58,
+            "end": 85,
+            "text": "in the NIST SRD-46 database",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 86,
+            "end": 130,
+            "text": "are recorded with the solvent `H₂O` (water).",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 131,
+            "end": 226,
+            "text": "There are **no stability constants measured in supercritical CO₂** (or any non-aqueous solvent)",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 227,
+            "end": 243,
+            "text": "in this database",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "**total_rows:** 79063 | H_[2]O | 79063 | 100.0%",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "db_distribution",
+                "snippet": "## db_distribution - ligandmetal_stability_measured by solvent_name\n\n**total_rows:** 79063\n\n| value | count | pct |\n|-------|-------|-----|\n| H_[2]O | 79063 | 100.0% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "## db_distribution - ligandmetal_stability_measured by solvent_name",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "db_distribution",
+                "snippet": "## db_distribution - ligandmetal_stability_measured by solvent_name\n\n**total_rows:** 79063"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "| H_[2]O | 79063 | 100.0% |",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "db_distribution",
+                "snippet": "| value | count | pct |\n|-------|-------|-----|\n| H_[2]O | 79063 | 100.0% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "| H_[2]O | 79063 | 100.0% |",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "db_distribution",
+                "snippet": "| value | count | pct |\n|-------|-------|-----|\n| H_[2]O | 79063 | 100.0% |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(s.solvent_name LIKE '%supercritical%')\"\n\n*(no results)*"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(s.solvent_name LIKE '%CO2%')\"\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "## db_distribution - ligandmetal_stability_measured by solvent_name",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "db_distribution",
+                "snippet": "## db_distribution - ligandmetal_stability_measured by solvent_name\n\n**total_rows:** 79063"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "### Why This Matters\n\n| Aspect | Detail |\n|---|---|\n| Database scope | NIST SRD-46 covers aqueous metal–ligand equilibria exclusively |\n| Solvent coverage | 100% of 79,063 measurements use `H₂O` as solvent |\n| scCO₂ hits | 0 — neither `supercritical`, `CO2`, nor `carbon dioxide` appear in any solvent field |\n| Citation search | No references mentioning \"supercritical\" found in the literature index |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 20,
+            "text": "### Why This Matters",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 52,
+            "end": 135,
+            "text": "| Database scope | NIST SRD-46 covers aqueous metal–ligand equilibria exclusively |",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 136,
+            "end": 207,
+            "text": "| Solvent coverage | 100% of 79,063 measurements use `H₂O` as solvent |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 208,
+            "end": 309,
+            "text": "| scCO₂ hits | 0 — neither `supercritical`, `CO2`, nor `carbon dioxide` appear in any solvent field |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 310,
+            "end": 402,
+            "text": "| Citation search | No references mentioning \"supercritical\" found in the literature index |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "db_distribution by solvent_name: total_rows: 79063 | H_[2]O 79063 100.0% — all stability data in water (aqueous).",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "db_distribution",
+                "snippet": "Args.table: ligandmetal_stability_measured, group_column: solvent_name"
+              },
+              {
+                "step": "Step 7",
+                "tool": "db_distribution",
+                "snippet": "total_rows: 79063 | value | count | pct | H_[2]O | 79063 | 100.0%"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "No solvent_name matches: '%supercritical%', '%CO2%', '%carbon dioxide%' — (no results).",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "Args.where: (s.solvent_name LIKE '%supercritical%') → (no results)"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_stability",
+                "snippet": "Args.where: (s.solvent_name LIKE '%CO2%') → (no results)"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "Args.where: (s.solvent_name LIKE '%carbon dioxide%') → (no results)"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Citation search for '%supercritical%' returned (no results).",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_citations",
+                "snippet": "Args.where: (la.citation LIKE '%supercritical%') → (no results)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "### Chemistry Context\n\nSupercritical CO₂ (T > 31.1 °C, P > 73.8 bar) is a fascinating non-polar, tuneable solvent used in metal extraction (e.g., uranium, lanthanides with fluorinated β-diketonate ligands like TTA or HFA), but the equilibrium constants measured in scCO₂ are typically **distribution ratios** or **extraction equilibria** rather than classical stepwise formation constants — which is why they fall outside the scope of SRD-46, a database focused on aqueous solution thermodynamics.\n\nFor scCO₂ stability/extraction data, specialized resources such as the **IUPAC Solubility Data Series** or literature from groups like Wai, Laintz, and Darr would be the appropriate starting point.",
+        "claims": [
+          {
+            "start": 41,
+            "end": 68,
+            "text": "(T > 31.1 °C, P > 73.8 bar)",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 69,
+            "end": 85,
+            "text": "is a fascinating",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 86,
+            "end": 95,
+            "text": "non-polar",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 97,
+            "end": 113,
+            "text": "tuneable solvent",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 114,
+            "end": 138,
+            "text": "used in metal extraction",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 140,
+            "end": 145,
+            "text": "e.g.,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 146,
+            "end": 153,
+            "text": "uranium",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 155,
+            "end": 166,
+            "text": "lanthanides",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 172,
+            "end": 204,
+            "text": "fluorinated β-diketonate ligands",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 210,
+            "end": 220,
+            "text": "TTA or HFA",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 223,
+            "end": 226,
+            "text": "but",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 227,
+            "end": 337,
+            "text": "the equilibrium constants measured in scCO₂ are typically **distribution ratios** or **extraction equilibria**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 338,
+            "end": 388,
+            "text": "rather than classical stepwise formation constants",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 389,
+            "end": 403,
+            "text": "— which is why",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 404,
+            "end": 441,
+            "text": "they fall outside the scope of SRD-46",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 443,
+            "end": 496,
+            "text": "a database focused on aqueous solution thermodynamics",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 499,
+            "end": 535,
+            "text": "For scCO₂ stability/extraction data,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 536,
+            "end": 569,
+            "text": "specialized resources such as the",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 570,
+            "end": 602,
+            "text": "**IUPAC Solubility Data Series**",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 603,
+            "end": 633,
+            "text": "or literature from groups like",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 634,
+            "end": 655,
+            "text": "Wai, Laintz, and Darr",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 656,
+            "end": 696,
+            "text": "would be the appropriate starting point.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Critical point of CO2 (~31.1 °C, ~73.8 bar) is established domain knowledge; not represented in SRD-46 tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "scCO2 is commonly described as non-polar; this characterization is not present in SRD-46 tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "scCO2 solvating power is tunable by P/T or modifiers; not a database-stated fact in SRD-46 outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Use of scCO2 in metal extraction is established in literature; SRD-46 does not cover such systems in tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Uranium extraction in scCO2 is documented in literature; not represented in SRD-46 tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Lanthanide extraction in scCO2 is documented in literature; not represented in SRD-46 tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fluorinated β-diketonates used for scCO2 extractions are known in literature; not in SRD-46 tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "TTA/HFA as β-diketonates for scCO2 extraction are known; SRD-46 tool outputs contain no such entries.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "In scCO2, reported equilibria are typically distribution/extraction ratios; SRD-46 focuses on aqueous formation constants.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Classical stepwise formation constants are aqueous-solution constructs; scCO2 studies often use extraction equilibria.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "search_stability (supercritical): *(no results)*; solvent distribution shows only H_[2]O (100%).",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "where: (s.solvent_name LIKE '%supercritical%')\n\n## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_stability",
+                "snippet": "where: (s.solvent_name LIKE '%CO2%')\n\n## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 7",
+                "tool": "db_distribution",
+                "snippet": "ligandmetal_stability_measured by solvent_name\n| value | count | pct |\n| H_[2]O | 79063 | 100.0% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Solvent distribution: H_[2]O | 79063 | 100.0% → database entries are aqueous.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "db_distribution",
+                "snippet": "ligandmetal_stability_measured by solvent_name\n**total_rows:** 79063\n| value | count | pct |\n| H_[2]O | 79063 | 100.0% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 17,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 18,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "External resource (IUPAC Solubility Data Series); not represented in SRD-46 tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 19,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 20,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "External literature author names; not verifiable within SRD-46 tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 21,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

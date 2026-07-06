@@ -1,0 +1,33 @@
+Selected network: ref_eq_net_171 — Zn2+ with 6,16-Dioxa-3,9,13,19-tetraaza-1,11(2,6)-dipyridinacycloeicosanaphane (O-BISBAMP; ligand_7653)
+
+Conditions (reference state reported by SRD‑46): temperature ≈ 20–30 °C; ionic strength ≈ −0.05 to 0.25 M; logK values span 3.8–11
+
+Species nodes in this equilibrium network (nodes count = 6; nodes are the Zn–ligand complexes; free Zn2+, H+, and H2O appear only as reagents in the equilibria):
+
+| Complex node | Stoichiometry (M = Zn2+, L = O‑BISBAMP) | Description |
+|--------------|------------------------------------------|-------------|
+| ML           | 1:1                                      | Monomeric Zn–L chelate |
+| MHL          | 1:1                                      | Protonated 1:1 complex |
+| M(OH)L       | 1:1                                      | Hydroxo 1:1 complex |
+| M(OH)2L      | 1:1                                      | Bis‑hydroxo 1:1 complex |
+| M2L          | 2:1                                      | Dimeric Zn2–L complex |
+| M2(OH)L      | 2:1                                      | Hydroxo dimer |
+
+Equilibria and reported constants for this network (reference conditions):
+
+| beta_def | Equation | Type | logK |
+|----------|----------|------|------|
+| beta_def_516 | [ML] + [M] ⇌ [M2L] | logK | 3.8 |
+| beta_def_515 | [M2(OH)L] + [H] ⇌ [M2L] + [H2O] | logK | 7.07 |
+| beta_def_788 | [ML] + [H] ⇌ [MHL] | logK | 7.45 |
+| beta_def_812 | [M] + [L] ⇌ [ML] | logK | 8.89 |
+| beta_def_839 | [M(OH)L] + [H] ⇌ [ML] + [H2O] | logK | 9.52 |
+| beta_def_975 | [M(OH)2L] + [H] ⇌ [M(OH)L] + [H2O] | logK | 11 |
+
+Notes and context:
+- This network includes a balanced set of protonation and hydrolysis steps for the 1:1 complex, plus dimerization and its hydroxo variant, resulting in six complex nodes overall.
+- The relatively high ML formation constant (logK ≈ 8.9) signals strong chelation by the macrocyclic O‑BISBAMP; the presence of hydroxo species indicates deprotonation/hydrolysis pathways accessible at higher pH, and dimerization (M2L) provides an additional aggregation route under suitable conditions.
+
+Source: NIST Standard Reference Database 46 (IUPAC Stability Constants Database), network ref_eq_net_171; ligand_7653; metal_208 (Zn2+).
+
+---

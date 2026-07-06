@@ -1,0 +1,1006 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q3.2.3\\Q3.2.3_result_batch2.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Using SRD-46 data for oxalic acid and Ca²⁺–oxalate at about room temperature:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 17,
+            "text": "Using SRD-46 data",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 18,
+            "end": 50,
+            "text": "for oxalic acid and Ca²⁺–oxalate",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 51,
+            "end": 76,
+            "text": "at about room temperature",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 76,
+            "end": 77,
+            "text": ":",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "This run’s tool outputs are from the SRD‑46 context; e.g., metal_25 and ligand_8872 were retrieved via SRD‑46 query tools.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_25 | Ca^[2+] | Ca | 2 | ✓ | [Ca+2] | InChI=1S/Ca/q+2 | ..."
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "| ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | Carboxylic acids diacids | 394 | O=C(O)C(=O)O | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_8872",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Ca^[2+] + Ethanedioic acid (Oxalic acid) — metal_id: metal_25 | ligand_id: ligand_8872; includes [M]+[L]<=>[ML] (beta_def_812).",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Ca^[2+] + Ethanedioic acid (Oxalic acid)\nmetal_id: metal_25 | ligand_id: ligand_8872 | ligand_def_HxL: H2L"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 6 |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "| ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | ... | O=C(O)C(=O)O | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_151599"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "vlm_151599 shows a Ca–oxalate measurement at T°C 25 (room temperature): value 3.19 at I(M) 0.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151599 | ref_eq_map_19899 | beta_def_812 | logK | 3.19 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (3.8, L, +inf) |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151494 | ... | pKa | 3.8 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Quantity | Value | Conditions | SRD-46 interpretation |\n|---|---:|---|---|\n| pKa relevant to forming oxalate \\( \\mathrm{C_2O_4^{2-}} \\) | 3.8 | 25 °C, I = 0.1 M | \\( \\mathrm{HC_2O_4^- \\rightleftharpoons H^+ + C_2O_4^{2-}} \\) |\n| Ca²⁺ + oxalate(aq) formation | logK = 3.19 | 25 °C, I = 0 | \\( \\mathrm{Ca^{2+} + C_2O_4^{2-} \\rightleftharpoons CaOx(aq)} \\) |\n| Calcium oxalate monohydrate dissolution | logK = -7.86 to -7.90 | 20–25 °C, I = 0.1 M | \\( \\mathrm{CaOx \\cdot H_2O(s) \\rightleftharpoons Ca^{2+} + C_2O_4^{2-} + H_2O} \\) |",
+        "claims": [
+          {
+            "start": 77,
+            "end": 228,
+            "text": "| pKa relevant to forming oxalate \\( \\mathrm{C_2O_4^{2-}} \\) | 3.8 | 25 °C, I = 0.1 M | \\( \\mathrm{HC_2O_4^- \\rightleftharpoons H^+ + C_2O_4^{2-}} \\) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 229,
+            "end": 357,
+            "text": "| Ca²⁺ + oxalate(aq) formation | logK = 3.19 | 25 °C, I = 0 | \\( \\mathrm{Ca^{2+} + C_2O_4^{2-} \\rightleftharpoons CaOx(aq)} \\) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 358,
+            "end": 531,
+            "text": "| Calcium oxalate monohydrate dissolution | logK = -7.86 to -7.90 | 20–25 °C, I = 0.1 M | \\( \\mathrm{CaOx \\cdot H_2O(s) \\rightleftharpoons Ca^{2+} + C_2O_4^{2-} + H_2O} \\) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_8872",
+              "beta_def_812",
+              "vlm_151599"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_151599 | ref_eq_map_19899 | beta_def_812 | logK | 3.19 | 25 | 0 | `[M] + [L] <=> [ML]` |",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151599 | ref_eq_map_19899 | beta_def_812 | logK | 3.19 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (3.8, L, +inf) |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "Ca^[2+] + Ethanedioic acid (Oxalic acid) — 5 measurement(s)\nmetal_id: metal_25 | ligand_id: ligand_8872"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_8872",
+              "beta_def_327",
+              "vlm_151601",
+              "vlm_151602"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_151601 | ref_eq_map_19899 | beta_def_327 | logK | -7.86 | 25 | 0.1 | `[ML(H2O)(s)] <=> [M] + [L] + [H2O]` |",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151601 | ref_eq_map_19899 | beta_def_327 | logK | -7.86 | 25 | 0.1 | `[ML(H2O)(s)] <=> [M] + [L] + [H2O]` | solid | [L] | (3.8, L, +inf) |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151602 | ref_eq_map_19904 | beta_def_327 | logK | -7.9 | 20 | 0.1 | `[ML(H2O)(s)] <=> [M] + [L] + [H2O]` | solid | [L] | (3.8, L, +inf) |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "So the **approximate pH where calcium oxalate precipitation becomes significant is around pH 4**, and more clearly **above about 4–5**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "So",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 3,
+            "end": 96,
+            "text": "the **approximate pH where calcium oxalate precipitation becomes significant is around pH 4**",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 96,
+            "end": 114,
+            "text": ", and more clearly",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 115,
+            "end": 134,
+            "text": "**above about 4–5**",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 134,
+            "end": 135,
+            "text": ".",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_8872",
+              "vlm_151494",
+              "vlm_151601",
+              "beta_def_327"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| vlm_151494 | ... | 3.8 | 25 | 0.1 | L→HL |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151494 | ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | O=C(O)C(=O)O | 3.8 | 25 | 0.1 | L→HL | M_tot_7 | M_tot_56 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151601 | ref_eq_map_19899 | beta_def_327 | logK | -7.86 | 25 | 0.1 | `[ML(H2O)(s)] <=> [M] + [L] + [H2O]` | solid | [L] | (3.8, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_8872",
+              "vlm_151494",
+              "vlm_151601",
+              "beta_def_327"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| vlm_151601 | ... logK | -7.86 | 25 | 0.1 | [ML(H2O)(s)] <=> [M] + [L] + [H2O] ... | (3.8, L, +inf) |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151494 | ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | O=C(O)C(=O)O | 3.8 | 25 | 0.1 | L→HL | M_tot_7 | M_tot_56 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151601 | ref_eq_map_19899 | beta_def_327 | logK | -7.86 | 25 | 0.1 | `[ML(H2O)(s)] <=> [M] + [L] + [H2O]` | solid | [L] | (3.8, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "Why: below pH 3.8, most oxalate is still protonated as hydrogen oxalate, so free \\( \\mathrm{C_2O_4^{2-}} \\) is limited. Around **pH = pKa2 = 3.8**, the fully deprotonated oxalate form starts becoming substantial, which is the form that both **binds Ca²⁺ strongly** and **enters the low-solubility solid**. Because Ca–oxalate complexation is fairly favorable \\( \\log K \\approx 3.2 \\), oxalate is effectively “captured” by calcium once enough \\( \\mathrm{C_2O_4^{2-}} \\) appears, so precipitation tends to turn on near this region.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Why:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 5,
+            "end": 71,
+            "text": "below pH 3.8, most oxalate is still protonated as hydrogen oxalate",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 76,
+            "end": 118,
+            "text": "free \\( \\mathrm{C_2O_4^{2-}} \\) is limited",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 134,
+            "end": 144,
+            "text": "pKa2 = 3.8",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 148,
+            "end": 211,
+            "text": "the fully deprotonated oxalate form starts becoming substantial",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 243,
+            "end": 262,
+            "text": "binds Ca²⁺ strongly",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 271,
+            "end": 302,
+            "text": "enters the low-solubility solid",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 314,
+            "end": 357,
+            "text": "Ca–oxalate complexation is fairly favorable",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 362,
+            "end": 379,
+            "text": "log K \\approx 3.2",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 384,
+            "end": 475,
+            "text": "oxalate is effectively “captured” by calcium once enough \\( \\mathrm{C_2O_4^{2-}} \\) appears",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 480,
+            "end": 527,
+            "text": "precipitation tends to turn on near this region",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_8872",
+              "vlm_151494"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "pKa 3.8 | 25 °C | I 0.1 | bracket L→HL (oxalic acid)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151494 | Ethanedioic acid (Oxalic acid) | pKa 3.8 | 25 | 0.1 | L→HL |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "ligand_8872 | Ethanedioic acid (Oxalic acid) | pKa_brackets: (-inf, H2L, -1.2, HL, 3.8, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_8872",
+              "vlm_151494"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "pKa 3.8 at 25 °C, I=0.1 for L→HL (second deprotonation)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151494 | ... | pKa 3.8 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_8872",
+              "vlm_151494"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "pKa 3.8 | 25 °C | I 0.1 | L→HL (oxalic acid)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151494 | Ethanedioic acid (Oxalic acid) | pKa 3.8 | 25 | 0.1 | L→HL |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "ligand_8872 ... pKa_brackets ... 3.8, L ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_8872",
+              "vlm_151494"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "At pKa2=3.8 (L↔HL), the deprotonated form L becomes significant",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151494 | ... | pKa 3.8 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_8872",
+              "beta_def_812",
+              "vlm_151599"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "logK 3.19 at 25 °C, I=0 for [M]+[L]⇌[ML] (Ca2+ + oxalate)",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151599 | beta_def_812 | logK | 3.19 | 25 | 0 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "metal_25 | Ca^[2+]"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_8872",
+              "beta_def_327",
+              "vlm_151601",
+              "vlm_151608",
+              "beta_def_307",
+              "vlm_151610"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Solid Ca–oxalate phases: logK -7.86 (25 °C, I 0.1) and -8.75 (25 °C, I 0)",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151601 | beta_def_327 | logK | -7.86 | 25 | 0.1 | `[ML(H2O)(s)] <=> [M] + [L] + [H2O]` | solid |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151608 | beta_def_327 | logK | -8.75 | 25 | 0 | `[ML(H2O)(s)] <=> [M] + [L] + [H2O]` | solid |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151610 | beta_def_307 | logK | -8.32 | 25 | 0 | `[ML(H2O)3(s)] <=> [M] + [L] + [H2O]^3` | solid |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_8872",
+              "beta_def_812",
+              "vlm_151599"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Ca–oxalate ML formation: logK 3.19 at 25 °C, I=0",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151599 | beta_def_812 | logK | 3.19 | 25 | 0 | `[M] + [L] <=> [ML]` |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "beta_def_812",
+              "vlm_151599"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "logK 3.19 (≈3.2) at 25 °C, I=0 for [M]+[L]⇌[ML]",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151599 | ... | beta_def_812 | logK | 3.19 | 25 | 0 | `[M] + [L] <=> [ML]` |"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "ligand_8872",
+              "vlm_151494",
+              "beta_def_812",
+              "vlm_151599"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "pKa2 3.8 (L↔HL) and Ca–oxalate logK 3.19 (25 °C) underpin capture of L by Ca2+",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151494 | ... | pKa 3.8 | 25 | 0.1 | L→HL |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151599 | beta_def_812 | logK | 3.19 | 25 | 0 | `[M] + [L] <=> [ML]` |"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "ligand_8872",
+              "vlm_151494",
+              "beta_def_327",
+              "vlm_151601",
+              "vlm_151608"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "pKa2=3.8 and existence of solid Ca–oxalate (logK -7.86, -8.75) support onset of precipitation near that pH",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151494 | ... | pKa 3.8 | 25 | 0.1 | L→HL |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151601 | beta_def_327 | logK | -7.86 | 25 | 0.1 | `[ML(H2O)(s)] <=> [M] + [L] + [H2O]` | solid |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151608 | beta_def_327 | logK | -8.75 | 25 | 0 | `[ML(H2O)(s)] <=> [M] + [L] + [H2O]` | solid |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "A practical rule-of-thumb from these numbers is:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 48,
+            "text": "A practical rule-of-thumb from these numbers is:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "| pH range | Expected behavior |\n|---|---|\n| < 3 | Little calcium oxalate precipitation expected |\n| ~3.5–4.5 | Onset region; precipitation can become significant |\n| > 4.5 | Much more favorable for significant precipitation |",
+        "claims": [
+          {
+            "start": 43,
+            "end": 98,
+            "text": "| < 3 | Little calcium oxalate precipitation expected |",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 99,
+            "end": 164,
+            "text": "| ~3.5–4.5 | Onset region; precipitation can become significant |",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 165,
+            "end": 226,
+            "text": "| > 4.5 | Much more favorable for significant precipitation |",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_8872",
+              "vlm_151494",
+              "vlm_151532",
+              "beta_def_327",
+              "vlm_151601"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "pKa 3.8 | 25 | 0.1 | L→HL",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151494 | ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | O=C(O)C(=O)O | 3.8 | 25 | 0.1 | L→HL |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151532 | ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | O=C(O)C(=O)O | -1.2 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151601 | ... | beta_def_327 | logK | -7.86 | 25 | 0.1 | `[ML(H2O)(s)] <=> [M] + [L] + [H2O]` | solid |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_8872",
+              "vlm_151494",
+              "beta_def_327",
+              "vlm_151601"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "pKa 3.8 | 25 | 0.1 | L→HL",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151494 | ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | O=C(O)C(=O)O | 3.8 | 25 | 0.1 | L→HL |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151601 | ref_eq_map_19899 | beta_def_327 | logK | -7.86 | 25 | 0.1 | `[ML(H2O)(s)] <=> [M] + [L] + [H2O]` | solid |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_8872",
+              "vlm_151494",
+              "beta_def_327",
+              "vlm_151608"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "beta_def_327 | logK | -8.75 | 25 | 0 | `[ML(H2O)(s)] <=> [M] + [L] + [H2O]`",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_151608 | ref_eq_map_19907 | beta_def_327 | logK | -8.75 | 25 | 0 | `[ML(H2O)(s)] <=> [M] + [L] + [H2O]` | solid | [L] |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151494 | ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | O=C(O)C(=O)O | 3.8 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "**Answer:** **around pH 4** is the best approximate threshold, with precipitation becoming increasingly significant as pH rises above that.  \n*Source: NIST SRD-46.*",
+        "claims": [
+          {
+            "start": 0,
+            "end": 11,
+            "text": "**Answer:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 12,
+            "end": 61,
+            "text": "**around pH 4** is the best approximate threshold",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 63,
+            "end": 139,
+            "text": "with precipitation becoming increasingly significant as pH rises above that.",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 142,
+            "end": 164,
+            "text": "*Source: NIST SRD-46.*",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_8872",
+              "vlm_151494",
+              "beta_def_327",
+              "vlm_151601"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "pKa 3.8 | 25 | 0.1 | L→HL",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151494 | ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | O=C(O)C(=O)O | 3.8 | 25 | 0.1 | L→HL | M_tot_7 | M_tot_56"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "vlm_151601 | ref_eq_map_19899 | beta_def_327 | logK | -7.86 | 25 | 0.1 | `[ML(H2O)(s)] <=> [M] + [L] + [H2O]` | solid | [L] | (3.8, L, +inf)"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_327 | [M][L]/[ML(H2O)(s)] | [ML(H2O)(s)] <=> [M] + [L] + [H2O] | [M](aqueous), [L](aqueous), [H2O](aqueous), [ML(H2O)(s)](solid) | 9"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_25",
+              "ligand_8872",
+              "vlm_151494",
+              "beta_def_327",
+              "vlm_151601"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "pKa 3.8 | 25 | 0.1 | L→HL; '[ML(H2O)(s)] <=> [M] + [L] + [H2O]' | solid",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151494 | ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | O=C(O)C(=O)O | 3.8 | 25 | 0.1 | L→HL | M_tot_7 | M_tot_56"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "vlm_151601 | ref_eq_map_19899 | beta_def_327 | logK | -7.86 | 25 | 0.1 | `[ML(H2O)(s)] <=> [M] + [L] + [H2O]` | solid | [L] | (3.8, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Tool results in this run are from NIST Standard Reference Database 46 (SRD-46).",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 7,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

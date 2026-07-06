@@ -1,0 +1,76 @@
+## Selective Complexation of Cu²⁺ over Ni²⁺ at pH 7: Best Amino-Acid Ligand
+
+*All stability constants from NIST SRD-46, 25 °C, I = 0.1 M, aqueous.*
+
+---
+
+### Raw Stability Constants (log β)
+
+| Ligand | log β₁(ML) Cu²⁺ | log β₁(ML) Ni²⁺ | log β₂(ML₂) Cu²⁺ | log β₂(ML₂) Ni²⁺ |
+|--------|:-:|:-:|:-:|:-:|
+| **Glycine** (ligand_5760) | 8.57 | 6.18 | 15.54 | 11.12 |
+| **L-Histidine** (ligand_5898) | 10.60 | 8.70 | 19.60 | 16.40 |
+| **L-Cysteine** (ligand_5856) | 19.20 | 9.90 | — | — |
+
+---
+
+### pKa Values at 25 °C, I = 0.1 M (from SRD-46)
+
+| Ligand | pKa₁ (COOH) | pKa₂ | pKa₃ |
+|--------|:-:|:-:|:-:|
+| Glycine | 2.33 | 9.57 (–NH₃⁺) | — |
+| L-Histidine | 1.70 | 6.05 (imidazole-H⁺) | 9.10 (–NH₃⁺) |
+| L-Cysteine | 1.90 | 8.18 (–SH) | 10.30 (–NH₃⁺) |
+
+---
+
+### pH-7 Conditional Stability Correction
+
+At pH 7, each ligand exists partly in protonated (non-coordinating) forms. The α-correction penalises ligands whose key donor groups are still protonated at pH 7. The log α correction (log αL = how many log units are lost) is computed from the pKa values above:
+
+**Glycine** — amine pKa = 9.57; at pH 7: log αL ≈ 9.57 − 7 = **2.57 log units lost**
+- log β′₁(Cu²⁺) = 8.57 − 2.57 = **6.00**
+- log β′₁(Ni²⁺) = 6.18 − 2.57 = **3.61**
+- **Δlog β′ = 2.39**
+
+**L-Histidine** — imidazole pKa = 6.05 (≈90% free at pH 7); amine pKa = 9.10. The dominant correction comes from the amine: log αL ≈ 9.10 − 7 = **2.10 log units lost** (imidazole correction is only ~0.09, negligible)
+- log β′₁(Cu²⁺) = 10.60 − 2.10 = **8.50**
+- log β′₁(Ni²⁺) = 8.70 − 2.10 = **6.60**
+- **Δlog β′ = 1.90**
+
+For the bis-complex (ML₂), both ligands must be deprotonated, so the correction doubles:
+- log β′₂(Cu²⁺) = 19.60 − 4.20 = **15.40**
+- log β′₂(Ni²⁺) = 16.40 − 4.20 = **12.20**
+- **Δlog β′₂ = 3.20** ← largest gap of all
+
+**L-Cysteine** — thiol pKa = 8.18; at pH 7: log αL ≈ 8.18 − 7 = **1.18** (thiol) + 10.30 − 7 = 3.30 (amine) ≈ **3.30 log units lost** (amine dominates)
+- log β′₁(Cu²⁺) = 19.20 − 3.30 = **15.90**
+- log β′₁(Ni²⁺) = 9.90 − 3.30 = **6.60**
+- **Δlog β′ = 9.30** — enormous gap, but read the caveat below.
+
+---
+
+### Selectivity Ranking at pH 7
+
+| Ligand | log β′₁(Cu²⁺) | log β′₁(Ni²⁺) | **Δlog β′ (ML)** | Selectivity ratio (10^Δ) |
+|--------|:-:|:-:|:-:|:-:|
+| **L-Cysteine** | 15.90 | 6.60 | **9.30** | ~2 × 10⁹ |
+| **Glycine** | 6.00 | 3.61 | **2.39** | ~245 |
+| **L-Histidine (ML)** | 8.50 | 6.60 | **1.90** | ~79 |
+| **L-Histidine (ML₂)** | 15.40 | 12.20 | **3.20** | ~1600 |
+
+---
+
+### 🏆 Verdict
+
+**For maximum thermodynamic selectivity: L-Cysteine** delivers a staggering Δlog β′ ≈ 9.3 at pH 7 (selectivity ratio ~2 × 10⁹). This is because Cu²⁺ has an exceptionally high affinity for soft sulfur donors (log β₁ = 19.2 vs Ni²⁺'s 9.9 — a raw gap of 9.3 log units), and the thiol is only partially protonated at pH 7 (pKa = 8.18), so the penalty is modest. Ni²⁺ is a harder metal and barely coordinates the thiol under these conditions.
+
+**For practical, clean selectivity without redox complications: L-Histidine (bis-complex)** is the best choice. Its imidazole nitrogen (pKa = 6.05) is fully deprotonated at pH 7, providing a tridentate {N_imidazole, N_amine, O_carboxylate} donor set that is pre-organised for Cu²⁺'s preferred square-planar geometry. The ML₂ complex gives Δlog β′₂ = 3.2 (~1600-fold selectivity) — robust and well-documented.
+
+> **Practical note:** Cysteine's thiol is susceptible to oxidation (→ cystine disulfide) and can also coordinate other metals non-selectively under aerobic conditions. Histidine is far more stable and is the ligand used by biology itself in copper-binding proteins (e.g., superoxide dismutase, ceruloplasmin, azurin) precisely because of this Cu²⁺ selectivity at physiological pH.
+
+---
+
+*Source: NIST SRD-46 — metal_41 (Cu²⁺), metal_112 (Ni²⁺), ligand_5760 (Glycine), ligand_5898 (L-Histidine), ligand_5856 (L-Cysteine). All constants at 25 °C, I = 0.1 M, aqueous.*
+
+---

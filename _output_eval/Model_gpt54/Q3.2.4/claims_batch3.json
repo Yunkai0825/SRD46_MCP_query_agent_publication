@@ -1,0 +1,2108 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q3.2.4\\Q3.2.4_result_batch3.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "SRD-46 has **broad coverage for both oxidation states**, but the current extracted records support a **much clearer Fe(III) trend than Fe(II)**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 55,
+            "text": "SRD-46 has **broad coverage for both oxidation states**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 55,
+            "end": 60,
+            "text": ", but",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 61,
+            "end": 144,
+            "text": "the current extracted records support a **much clearer Fe(III) trend than Fe(II)**.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Fe^[3+] (metal_61)… ligand_totN_406 | vlm_totN_1473; Fe^[2+] (metal_62)… ligand_totN_217 | vlm_totN_667",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_61 | Fe^[3+] | Fe | 3 | ✓ | [Fe+3] | … | beta_totN_128 | ligand_totN_406 | vlm_totN_1473 |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_62 | Fe^[2+] | Fe | 2 | ✓ | [Fe+2] | … | beta_totN_57 | ligand_totN_217 | vlm_totN_667 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "More Fe(III) records than Fe(II): Fe^[3+] ligand_totN_406, vlm_totN_1473 vs Fe^[2+] ligand_totN_217, vlm_totN_667; Fe^[3+] rows appear prominently in extracted list.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_61 | Fe^[3+] | … | ligand_totN_406 | vlm_totN_1473 | …; | metal_62 | Fe^[2+] | … | ligand_totN_217 | vlm_totN_667 |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "| Fe^[3+] | … | [M2L3]/[M]^2[L]^3 | K | 62.4 | 25.0 | 0.1 |\n| Fe^[3+] | … | [M2L3]/[M]^2[L]^3 | K | 62.3 | 25.0 | 0.1 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "## Database coverage\n\n| Metal ion | Ligands | β definitions | VLM / measurement records |\n|---|---:|---:|---:|\n| Fe(III) | 406 | 128 | 1473 |\n| Fe(II) | 217 | 57 | 667 |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 20,
+            "text": "## Database coverage",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 111,
+            "end": 141,
+            "text": "| Fe(III) | 406 | 128 | 1473 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 142,
+            "end": 169,
+            "text": "| Fe(II) | 217 | 57 | 667 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "## Ligand classes visibly present for Fe(III) in the catalog\n\n| Fe(III) ligand-class examples seen in SRD-46 |\n|---|\n| Inorganic ligands: F⁻, Cl⁻, SCN⁻, N₃⁻, OH⁻ |\n| Carboxylate / O-donor ligands: acetate, oxalate, malonate, salicylates |\n| Aromatic O-donors: Tiron, 8-hydroxyquinoline |\n| Aminopolycarboxylates: NTA, EDTA, CDTA |\n| Hydroxamates / siderophore-like O-donors |\n| Macrocyclic / polyaza systems with appended O-donor groups |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 60,
+            "text": "## Ligand classes visibly present for Fe(III) in the catalog",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 117,
+            "end": 163,
+            "text": "| Inorganic ligands: F⁻, Cl⁻, SCN⁻, N₃⁻, OH⁻ |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 164,
+            "end": 238,
+            "text": "| Carboxylate / O-donor ligands: acetate, oxalate, malonate, salicylates |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 239,
+            "end": 287,
+            "text": "| Aromatic O-donors: Tiron, 8-hydroxyquinoline |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 288,
+            "end": 330,
+            "text": "| Aminopolycarboxylates: NTA, EDTA, CDTA |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 331,
+            "end": 375,
+            "text": "| Hydroxamates / siderophore-like O-donors |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 376,
+            "end": 438,
+            "text": "| Macrocyclic / polyaza systems with appended O-donor groups |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_10162",
+              "ligand_10163",
+              "ligand_10092",
+              "ligand_10106",
+              "ligand_10076"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "**11. Fe^[3+] + Chloride ion** (metal_61 + ligand_10163) — ligand_def_HxL: ***",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "**12. Fe^[3+] + Hydrogen fluoride (Hydrofluoric acid)** (metal_61 + ligand_10162) — ligand_def_HxL: HL"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "**1. Fe^[3+] + Hydrogen thiocyanate (Thiocyanic acid)** (metal_61 + ligand_10092) — ligand_def_HxL: HL"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "**3. Fe^[3+] + Hydrogen azide (Hydrazoic acid)** (metal_61 + ligand_10106) — ligand_def_HxL: HL; **2. Fe^[3+] + Hydroxide ion** (metal_61 + ligand_10076)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_8465",
+              "ligand_8872",
+              "ligand_8873",
+              "ligand_9257",
+              "ligand_9297"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "**5. Fe^[3+] + Ethanoic acid (Acetic acid)** (metal_61 + ligand_8465) — ligand_def_HxL: HL",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "**16. Fe^[3+] + Ethanedioic acid (Oxalic acid)** (metal_61 + ligand_8872) — ligand_def_HxL: H2L"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "**8. Fe^[3+] + Propanedioic acid (Malonic acid)** (metal_61 + ligand_8873) — ligand_def_HxL: H2L"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "**7. Fe^[3+] + 2-Hydroxybenzoic acid (Salicylic acid)** (metal_61 + ligand_9257); **13. ... p-Aminosalicylic acid** (metal_61 + ligand_9297)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_9358",
+              "ligand_8126"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "**4. Fe^[3+] + 1,2-Dihydroxybenzene-3,5-disulfonic acid (Tiron)** (metal_61 + ligand_9358)",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "**14. Fe^[3+] + 8-Hydroxyquinoline (8-Quinolinol)(Oxine)** (metal_61 + ligand_8126) — ligand_def_HxL: HL"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6165",
+              "ligand_6277",
+              "ligand_6301"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "**6. Fe^[3+] + Nitrilotriacetic acid (NTA)** (metal_61 + ligand_6165) — ligand_def_HxL: H3L",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "**10. Fe^[3+] + Ethylenedinitrilotetraacetic acid (EDTA)** (metal_61 + ligand_6277) — ligand_def_HxL: H4L"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "**9. Fe^[3+] + trans-1,2-Cyclohexylenedinitrilotetraacetic acid (CDTA)** (metal_61 + ligand_6301) — ligand_def_HxL: H4L"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6995",
+              "ligand_6994",
+              "ligand_6985",
+              "ligand_9873",
+              "ligand_7000"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "**20. Fe^[3+] + Acetohydroxamic acid** (metal_61 + ligand_9873) — ligand_def_HxL: HL",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "**15. ... Threoninehydroxamic acid** (metal_61 + ligand_6995) — ligand_def_HxL: HL"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "**18. ... Serinehydroxamic acid** (metal_61 + ligand_6994) — ligand_def_HxL: HL; **19. ... Norvalinehydroxamic acid** (metal_61 + ligand_6985)"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Rhodotorulic acid | miscellaneous hydroxamic acids | [M2L3]/[M]^2[L]^3 | K | 62.2 | 25.0 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_61"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+] | 1,4,7-Tris(3-hydroxy-6-methyl-2-pyridylmethyl)-1,4,7-triazacyclononane | Aza-macrocycles | [ML]/[M][L] | K | 50.0 | 25.0 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | 1,4,7-Tris(3-hydroxy-6-methyl-2-pyridylmethyl)-1,4,7-triazacyclononane | Aza-macrocycles | [ML]/[M][L] | K | 50.0 | 25.0 | 0.1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "## Highest-constant Fe(III) examples surfaced from the equilibrium records\n\nThese are **not directly comparable K1 values**; many are overall formation constants for multinuclear or higher-stoichiometry species. They are still useful for identifying the **classes that dominate the upper end**.\n\n| Metal | Ligand | Ligand class | Species / β definition | Constant type | Value | T (°C) | I (M) |\n|---|---|---|---|---|---:|---:|---:|\n| Fe(III) | Trimethylenedihydroxamic acid | miscellaneous hydroxamic acids | M2(HL)2L2 | K | 66.34 | 20.0 | 0.1 |\n| Fe(III) | N,N'-Di-2-propylpentamethylenodihydroxamic acid | miscellaneous hydroxamic acids | M2L3 | K | 62.4 | 25.0 | 0.1 |\n| Fe(III) | N,N'-Di-2-propylhexamethylenodihydroxamic acid | miscellaneous hydroxamic acids | M2L3 | K | 62.3 | 25.0 | 0.1 |\n| Fe(III) | N,N'-Di-2-propyltetramethylenodihydroxamic acid | miscellaneous hydroxamic acids | M2L3 | K | 62.2 | 25.0 | 0.1 |\n| Fe(III) | Rhodotorulic acid | miscellaneous hydroxamic acids | M2L3 | K | 62.2 | 25.0 | 0.1 |\n| Fe(III) | Trimethylenebis[aminocarbonyl(1,6-dihydro-1-hydroxy-6-oxo-2-pyridine)] | miscellaneous hydroxamic acids | ML3 | K | 52.3 | 25.0 | 0.1 |\n| Fe(III) | Piperazine-N,N'-diacetohydroxamic acid | Cyclic amines | M2L4 | K | 50.9 | 20.0 | 0.1 |\n| Fe(III) | 1,4,7-Tris(3-hydroxy-6-methyl-2-pyridylmethyl)-1,4,7-triazacyclononane | Aza-macrocycles | ML | K | 50.0 | 25.0 | 0.1 |\n| Fe(III) | Hydroxide ion | Inorganic ligands | M3L4 | K | 49.7–51.0 | 25.0 | 0.0–3.0 |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 74,
+            "text": "## Highest-constant Fe(III) examples surfaced from the equilibrium records",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 76,
+            "end": 123,
+            "text": "These are **not directly comparable K1 values**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 125,
+            "end": 211,
+            "text": "many are overall formation constants for multinuclear or higher-stoichiometry species.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 212,
+            "end": 294,
+            "text": "They are still useful for identifying the **classes that dominate the upper end**.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 433,
+            "end": 546,
+            "text": "| Fe(III) | Trimethylenedihydroxamic acid | miscellaneous hydroxamic acids | M2(HL)2L2 | K | 66.34 | 20.0 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 547,
+            "end": 672,
+            "text": "| Fe(III) | N,N'-Di-2-propylpentamethylenodihydroxamic acid | miscellaneous hydroxamic acids | M2L3 | K | 62.4 | 25.0 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 673,
+            "end": 797,
+            "text": "| Fe(III) | N,N'-Di-2-propylhexamethylenodihydroxamic acid | miscellaneous hydroxamic acids | M2L3 | K | 62.3 | 25.0 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 798,
+            "end": 923,
+            "text": "| Fe(III) | N,N'-Di-2-propyltetramethylenodihydroxamic acid | miscellaneous hydroxamic acids | M2L3 | K | 62.2 | 25.0 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 924,
+            "end": 1019,
+            "text": "| Fe(III) | Rhodotorulic acid | miscellaneous hydroxamic acids | M2L3 | K | 62.2 | 25.0 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1020,
+            "end": 1167,
+            "text": "| Fe(III) | Trimethylenebis[aminocarbonyl(1,6-dihydro-1-hydroxy-6-oxo-2-pyridine)] | miscellaneous hydroxamic acids | ML3 | K | 52.3 | 25.0 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1168,
+            "end": 1267,
+            "text": "| Fe(III) | Piperazine-N,N'-diacetohydroxamic acid | Cyclic amines | M2L4 | K | 50.9 | 20.0 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1268,
+            "end": 1399,
+            "text": "| Fe(III) | 1,4,7-Tris(3-hydroxy-6-methyl-2-pyridylmethyl)-1,4,7-triazacyclononane | Aza-macrocycles | ML | K | 50.0 | 25.0 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1400,
+            "end": 1487,
+            "text": "| Fe(III) | Hydroxide ion | Inorganic ligands | M3L4 | K | 49.7–51.0 | 25.0 | 0.0–3.0 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "No 'logK1' rows found for Fe(III) (Step 6); top entries show constant_type 'K' in Step 15.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "where: (c.metal_id = metal_61 AND s.constant_type = 'logK1' ...); result: *(no results)*"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Trimethylenedihydroxamic acid ... | ... | K | 66.34 | 20.0 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Step 15 shows multi-nuclear/higher stoichiometry species: [M2(HL)2L2], [M2L3], [M3L4] with 'K' constants.",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Trimethylenedihydroxamic acid ... | [M2(HL)2L2]/[M]^2[HL]^2[L]... | K | 66.34 | 20.0 | 0.1"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Rhodotorulic acid | ... | [M2L3]/[M]^2[L]^3 | K | 62.2 | 25.0 | 0.1"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Hydroxide ion | Inorganic ligands | [M3L4]/[M]^3[L]^4 | K | 49.7 | 25.0 | 0.0"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+] | Trimethylenedihydroxamic acid ... | [M2(HL)2L2]/[M]^2[HL]^2[L]... | K | 66.34 | 20.0 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Trimethylenedihydroxamic acid (Glutarodihydroxamic acid) | miscellaneous hydroxamic acids | [M2(HL)2L2]/[M]^2[HL]^2[L]... | K | 66.34 | 20.0 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+] | N,N'-Di-2-propylpentamethylenodihydroxamic acid ... | [M2L3]/[M]^2[L]^3 | K | 62.4 | 25.0 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | N,N'-Di-2-propylpentamethylenedihydroxamic acid ... | miscellaneous hydroxamic acids | [M2L3]/[M]^2[L]^3 | K | 62.4 | 25.0 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+] | N,N'-Di-2-propylhexamethylenedihydroxamic acid ... | [M2L3]/[M]^2[L]^3 | K | 62.3 | 25.0 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | N,N'-Di-2-propylhexamethylenedihydroxamic acid ... | miscellaneous hydroxamic acids | [M2L3]/[M]^2[L]^3 | K | 62.3 | 25.0 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+] | N,N'-Di-2-propyltetramethylenedihydroxamic acid ... | [M2L3]/[M]^2[L]^3 | K | 62.2 | 25.0 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | N,N'-Di-2-propyltetramethylenedihydroxamic acid ... | miscellaneous hydroxamic acids | [M2L3]/[M]^2[L]^3 | K | 62.2 | 25.0 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+] | Rhodotorulic acid | miscellaneous hydroxamic acids | [M2L3]/[M]^2[L]^3 | K | 62.2 | 25.0 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Rhodotorulic acid | miscellaneous hydroxamic acids | [M2L3]/[M]^2[L]^3 | K | 62.2 | 25.0 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+] | Trimethylenebis[...] (3-HOPOC...) | ... | [ML3]/[M][L]^3 | K | 52.3 | 25.0 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Trimethylenebis[aminocarbonyl(1,6-dihydro-1-hydroxy-6-oxo-2-pyridine)] (3-HOPOC...) | miscellaneous hydroxamic acids | [ML3]/[M][L]^3 | K | 52.3 | 25.0 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+] | Piperazine-N,N'-diacetohydroxamic acid | Cyclic amines | [M2L4]/[M]^2[L]^4 | K | 50.9 | 20.0 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Piperazine-N,N'-diacetohydroxamic acid | Cyclic amines | [M2L4]/[M]^2[L]^4 | K | 50.9 | 20.0 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+] | 1,4,7-Tris(3-hydroxy-6-methyl-2-pyridylmethyl)-1,4,7-triazacyclononane | Aza-macrocycles | [ML]/[M][L] | K | 50.0 | 25.0 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | 1,4,7-Tris(3-hydroxy-6-methyl-2-pyridylmethyl)-1,4,7-triazacyclononane | Aza-macrocycles | [ML]/[M][L] | K | 50.0 | 25.0 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_10076",
+              "beta_def_649"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Hydroxide ion | [M3L4]/[M]^3[L]^4 | K | 49.7 | 25.0 | 0.0 and K | 51.0 | 25.0 | 3.0; species list includes beta_def_649 for [M3L4].",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Hydroxide ion | Inorganic ligands | [M3L4]/[M]^3[L]^4 | K | 49.7 | 25.0 | 0.0"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Hydroxide ion | Inorganic ligands | [M3L4]/[M]^3[L]^4 | K | 51.0 | 25.0 | 3.0"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Hydroxide ion (metal_61 + ligand_10076) — species: ... beta_def_649(5) ... T:19~30°C I:-0.15~3.15M"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "## Main trend seen in SRD-46\n\n### Qualitative ordering\n| Approximate stability trend | Interpretation |\n|---|---|\n| **Fe(III): multidentate hard O-donor chelators** ≫ **simple O-donor chelates / carboxylates / phenolates** > **simple inorganic anions such as F⁻, SCN⁻, N₃⁻** > **Cl⁻** | Strongest support from the database |\n| **Fe(II): N-donor chelates and some mixed N/O chelators are expected to rise in relative importance vs Fe(III)**, while hard O-only ligands generally lose relative advantage | Chemically well-motivated, but less directly quantified from the extracted records here |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 28,
+            "text": "## Main trend seen in SRD-46",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 30,
+            "end": 54,
+            "text": "### Qualitative ordering",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 114,
+            "end": 324,
+            "text": "| **Fe(III): multidentate hard O-donor chelators** ≫ **simple O-donor chelates / carboxylates / phenolates** > **simple inorganic anions such as F⁻, SCN⁻, N₃⁻** > **Cl⁻** | Strongest support from the database |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 325,
+            "end": 592,
+            "text": "| **Fe(II): N-donor chelates and some mixed N/O chelators are expected to rise in relative importance vs Fe(III)**, while hard O-only ligands generally lose relative advantage | Chemically well-motivated, but less directly quantified from the extracted records here |",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6995",
+              "ligand_7000",
+              "ligand_6994",
+              "ligand_9358",
+              "ligand_8872",
+              "ligand_8873",
+              "ligand_8465",
+              "ligand_9257",
+              "ligand_8126",
+              "ligand_10162",
+              "ligand_10092",
+              "ligand_10106",
+              "ligand_10163"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "K | 66.34 | 20.0 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Trimethylenedihydroxamic acid (Glutarodihydroxamic acid) | miscellaneous hydroxamic acids | [M2(HL)2L2]/[M]^2[HL]^2[L]... | K | 66.34 | 20.0 | 0.1"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Trimethylenebis[aminocarbonyl(1,6-dihydro-1-hydroxy-6-oxo-2-pyridine)] (3-HOPOC...) | miscellaneous hydroxamic acids | [ML3]/[M][L]^3 | K | 52.3 | 25.0 | 0.1"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Hydrogen fluoride (Hydrofluoric acid) (metal_61 + ligand_10162) — ligand_def_HxL: HL | 13 ent, 3 sp, 13 vlms (vlm_176996…vlm_177008)\n... Fe^[3+] + Chloride ion (metal_61 + ligand_10163)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "HSAB chemistry: Fe(II) (softer) favors N donors vs Fe(III). Tool queries for Fe(II) logK returned no rows; trend is chemically motivated, not quantified here.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_61 | Fe^[3+] | Fe | 3 | ✓ | [Fe+3] | InChI=1S/Fe/q+3 | ...\n| metal_62 | Fe^[2+] | Fe | 2 | ✓ | [Fe+2] | InChI=1S/Fe/q+2 | ..."
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "Args.where: (c.metal_id = metal_62 AND s.constant_type = 'logK1' AND s.solvent_name LIKE '%water%' AND s.temperature_c >= 293 AND s.temperature_c <= 303 ...); result: (no results)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "## Thermodynamic explanation\n\n### 1. HSAB is the biggest driver\n| Metal | HSAB character | Favored donors | Consequence |\n|---|---|---|---|\n| Fe(III) | hard, highly charged acid | hard anionic O donors | Strong preference for hydroxamates, catecholates/phenolates, aminopolycarboxylates, hydroxo binding |\n| Fe(II) | less hard, more borderline | N donors become more competitive | Bipyridyl/phenanthroline-like and mixed N/O chelators gain relative stabilization |\n\nFe(III) has higher charge density, so electrostatic attraction and donor–acceptor matching strongly favor **deprotonated O donors**. That is why hydroxamates and related siderophore-type ligands sit at the top of the database’s Fe(III) constants.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 28,
+            "text": "## Thermodynamic explanation",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 30,
+            "end": 63,
+            "text": "### 1. HSAB is the biggest driver",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 140,
+            "end": 305,
+            "text": "| Fe(III) | hard, highly charged acid | hard anionic O donors | Strong preference for hydroxamates, catecholates/phenolates, aminopolycarboxylates, hydroxo binding |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 306,
+            "end": 464,
+            "text": "| Fe(II) | less hard, more borderline | N donors become more competitive | Bipyridyl/phenanthroline-like and mixed N/O chelators gain relative stabilization |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 466,
+            "end": 499,
+            "text": "Fe(III) has higher charge density",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 504,
+            "end": 597,
+            "text": "electrostatic attraction and donor–acceptor matching strongly favor **deprotonated O donors**",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 599,
+            "end": 610,
+            "text": "That is why",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 611,
+            "end": 712,
+            "text": "hydroxamates and related siderophore-type ligands sit at the top of the database’s Fe(III) constants.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "HSAB principle is general chemistry reasoning and not stored as rows/values in SRD-46.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6995",
+              "ligand_6994",
+              "ligand_6985",
+              "ligand_9873",
+              "ligand_7000",
+              "ligand_9358",
+              "ligand_9257",
+              "ligand_6277",
+              "ligand_6165",
+              "ligand_6301",
+              "ligand_10076"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Fe^[3+] | Trimethylenedihydroxamic acid ... | miscellaneous hydroxamic acids | K | 66.34",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Trimethylenedihydroxamic acid (Glutarodihydroxamic acid) | miscellaneous hydroxamic acids | ... | K | 66.34 | 20.0 | 0.1"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Hydroxide ion | Inorganic ligands | [M3L4]/[M]^3[L]^4 | K | 51.0 | 25.0 | 3.0"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Ethylenedinitrilotetraacetic acid (EDTA) (metal_61 + ligand_6277) — species: ... beta_def_812(4) ... beta_def_966(4)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_62"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe(II) N-donor preference is general HSAB reasoning; SRD-46 rows for Fe(II) constants not shown here.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "metal_62 | Fe^[2+] | Fe | 2 | ✓ | [Fe+2] | InChI=1S/Fe/q+2 | beta_totN_57 | ligand_totN_217 | vlm_totN_667"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Fe^[3+] has charge 3 vs Fe^[2+] charge 2, implying higher charge density.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "metal_61 | Fe^[3+] | Fe | 3 | ✓ | [Fe+3] | InChI=1S/Fe/q+3 | beta_totN_128 | ligand_totN_406 | vlm_totN_1473"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "metal_62 | Fe^[2+] | Fe | 2 | ✓ | [Fe+2] | InChI=1S/Fe/q+2 | beta_totN_57 | ligand_totN_217 | vlm_totN_667"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_10076"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General HSAB reasoning; high Fe(III) constants for O donors (e.g., hydroxide) are consistent but not a direct statement in SRD-46.",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Hydroxide ion | Inorganic ligands | [M3L4]/[M]^3[L]^4 | K | 51.0 | 25.0 | 3.0"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Rhodotorulic acid | miscellaneous hydroxamic acids | [M2L3]/[M]^2[L]^3 | K | 62.2 | 25.0 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_61"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Top Fe^[3+] rows include hydroxamic acids (e.g., K=66.34) and Rhodotorulic acid (a siderophore) K=62.2.",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Trimethylenedihydroxamic acid (Glutarodihydroxamic acid) | miscellaneous hydroxamic acids | ... | K | 66.34 | 20.0 | 0.1"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Rhodotorulic acid | miscellaneous hydroxamic acids | [M2L3]/[M]^2[L]^3 | K | 62.2 | 25.0 | 0.1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "### 2. Chelate effect strongly amplifies binding\n| Ligand feature | Thermodynamic effect |\n|---|---|\n| Higher denticity | More favorable ΔS on complexation and lower dissociation probability |\n| Preorganization / macrocycles | Can further reduce entropic and conformational penalties |\n| Multiple deprotonated donor sites | Raises electrostatic attraction, especially for Fe(III) |\n\nThis explains why **EDTA/CDTA/NTA-type systems** and **hydroxamate-rich ligands** outrank simple monodentate ligands. The very large constants at the top of the Fe(III) list are often for **polyligand or multinuclear species**, which further accumulate stabilization.",
+        "claims": [
+          {
+            "start": 7,
+            "end": 48,
+            "text": "Chelate effect strongly amplifies binding",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 101,
+            "end": 192,
+            "text": "| Higher denticity | More favorable ΔS on complexation and lower dissociation probability |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 193,
+            "end": 285,
+            "text": "| Preorganization / macrocycles | Can further reduce entropic and conformational penalties |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 286,
+            "end": 381,
+            "text": "| Multiple deprotonated donor sites | Raises electrostatic attraction, especially for Fe(III) |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 383,
+            "end": 400,
+            "text": "This explains why",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 401,
+            "end": 500,
+            "text": "**EDTA/CDTA/NTA-type systems** and **hydroxamate-rich ligands** outrank simple monodentate ligands.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 501,
+            "end": 609,
+            "text": "The very large constants at the top of the Fe(III) list are often for **polyligand or multinuclear species**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 611,
+            "end": 650,
+            "text": "which further accumulate stabilization.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_61"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] | Trimethylenedihydroxamic acid (Glutarodihydroxamic acid) | ... | K | 66.34 | 20.0 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Trimethylenedihydroxamic acid (Glutarodihydroxamic acid) | miscellaneous hydroxamic acids | [M2(HL)2L2]/[M]^2[HL]^2[L]... | K | 66.34 | 20.0 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "eq_node columns: constant_type, constant_value, temperature, ionic_strength; no ΔS in schema.",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "get_table_schema",
+                "snippet": "| 9 | constant_type | TEXT | ... | 10 | constant_value | REAL | ... | 11 | temperature | REAL | ... | 12 | ionic_strength | REAL | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] | Aza-macrocycles | [ML]/[M][L] | K | 50.0 | 25.0 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | 1,4,7-Tris(3-hydroxy-6-methyl-2-pyridylmethyl)-1,4,7-triazacyclononane | Aza-macrocycles | [ML]/[M][L] | K | 50.0 | 25.0 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] entry shows charge 3 (highly charged, favors anionic donors).",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_61 | Fe^[3+] | Fe | 3 | ✓ | [Fe+3] | InChI=1S/Fe/q+3 | beta_totN_128 | ligand_totN_406 | vlm_totN_1473 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6277",
+              "ligand_6301",
+              "ligand_6165",
+              "ligand_9873"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Fe^[3+] | Rhodotorulic acid | ... [M2L3]/[M]^2[L]^3 | K | 62.2 | 25.0 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Rhodotorulic acid | miscellaneous hydroxamic acids | [M2L3]/[M]^2[L]^3 | K | 62.2 | 25.0 | 0.1"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "**10. Fe^[3+] + Ethylenedinitrilotetraacetic acid (EDTA) (metal_61 + ligand_6277) — ligand_def_HxL: H4L | 14 ent, 4 sp, 14 vlms (vlm_108639…vlm_108652)"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "**9. Fe^[3+] + trans-1,2-Cyclohexylenedinitrilotetraacetic acid (CDTA) (metal_61 + ligand_6301) — ligand_def_HxL: H4L | 14 ent, 4 sp, 14 vlms (vlm_109793…vlm_109806)"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_61",
+              "beta_def_649"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+] | Hydroxide ion | [M3L4]/[M]^3[L]^4 | K | 51.0 | 25.0 | 3.0",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Hydroxide ion | Inorganic ligands | [M3L4]/[M]^3[L]^4 | K | 51.0 | 25.0 | 3.0"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "species: ... beta_def_649(5) ... | beta_def_649 | [M]^3 + [L]^4 <=> [M3L4]"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "High K for M2/M3 species (e.g., [M2L3] 62.4; [M3L4] 51.0) is consistent with accumulated stabilization.",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | N,N'-Di-2-propylpentamethylenodihydroxamic acid | [M2L3]/[M]^2[L]^3 | K | 62.4 | 25.0 | 0.1"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Hydroxide ion | [M3L4]/[M]^3[L]^4 | K | 51.0 | 25.0 | 3.0"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 7,
+        "text": "### 3. Crystal-field effects matter more for Fe(II) than Fe(III)\n| Ion | d count | Typical spin-state situation | Effect on stability trends |\n|---|---|---|---|\n| Fe(III) | d5 | often high-spin; CFSE modest in many aqueous systems | HSAB + charge dominates |\n| Fe(II) | d6 | stronger sensitivity to ligand field; low-spin stabilization possible with strong-field ligands | Strong-field N/C ligands can be unusually favorable |\n\nSo for Fe(II), **strong-field ligands** can gain extra stabilization through larger ligand-field splitting and possible low-spin formation. For Fe(III), that contribution is usually less decisive than simple hard-acid/hard-base matching.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 64,
+            "text": "### 3. Crystal-field effects matter more for Fe(II) than Fe(III)",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 161,
+            "end": 258,
+            "text": "| Fe(III) | d5 | often high-spin; CFSE modest in many aqueous systems | HSAB + charge dominates |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 259,
+            "end": 426,
+            "text": "| Fe(II) | d6 | stronger sensitivity to ligand field; low-spin stabilization possible with strong-field ligands | Strong-field N/C ligands can be unusually favorable |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 428,
+            "end": 567,
+            "text": "So for Fe(II), **strong-field ligands** can gain extra stabilization through larger ligand-field splitting and possible low-spin formation.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 568,
+            "end": 665,
+            "text": "For Fe(III), that contribution is usually less decisive than simple hard-acid/hard-base matching.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] is present (metal_61); d5/high-spin/CFSE details are not in SRD-46 rows—this relies on general ligand field chemistry.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_61 | Fe^[3+] | Fe | 3 | ✓ | [Fe+3] | InChI=1S/Fe/q+3 | beta_totN_128 | ligand_totN_406 | vlm_totN_1473 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_62"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[2+] is present (metal_62); d6/low-spin sensitivity is not provided by SRD-46 rows—this is background ligand field knowledge.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_62 | Fe^[2+] | Fe | 2 | ✓ | [Fe+2] | InChI=1S/Fe/q+2 | beta_totN_57 | ligand_totN_217 | vlm_totN_667 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_62"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "SRD-46 tool results do not report spin states or CFSE; the Fe(II) strong-field stabilization statement reflects ligand field theory.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_62 | Fe^[2+] | Fe | 2 | ✓ | [Fe+2] | InChI=1S/Fe/q+2 | beta_totN_57 | ligand_totN_217 | vlm_totN_667 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_61"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Spin-state/CFSE are not in SRD-46 rows; Fe(III) HSAB reasoning is background. Example: Fe3+ + OH− shows large K values.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_61 | Fe^[3+] | Fe | 3 | ✓ | [Fe+3] | InChI=1S/Fe/q+3 | beta_totN_128 | ligand_totN_406 | vlm_totN_1473 |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "| Fe^[3+] | Hydroxide ion | Inorganic ligands | [M3L4]/[M]3[L]4 | K | 49.7 | 25.0 | 0.0 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 8,
+        "text": "## Why the Fe(III) ordering looks the way it does\n\n| Class | Expected relative Fe(III) stability | Why |\n|---|---|---|\n| Hydroxamates / siderophore-like O-donors | Highest | Hard O donors, often multidentate, often multiply deprotonated |\n| Aminopolycarboxylates | Very high | Multidentate chelation plus several carboxylate O donors |\n| Catecholate / phenolate-rich ligands, Tiron-like ligands | High | Strong anionic O binding; often bidentate or polydentate |\n| Simple carboxylates (acetate, malonate, oxalate) | Moderate to high | O-donor match is good, but denticity/charge density lower |\n| F⁻ | Moderate among simple anions | Hard donor, so better than softer pseudohalides/chloride |\n| SCN⁻, N₃⁻, Cl⁻ | Lower overall | Poorer hard-hard match, often monodentate, less chelate stabilization |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 49,
+            "text": "## Why the Fe(III) ordering looks the way it does",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 119,
+            "end": 238,
+            "text": "| Hydroxamates / siderophore-like O-donors | Highest | Hard O donors, often multidentate, often multiply deprotonated |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 239,
+            "end": 335,
+            "text": "| Aminopolycarboxylates | Very high | Multidentate chelation plus several carboxylate O donors |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 336,
+            "end": 462,
+            "text": "| Catecholate / phenolate-rich ligands, Tiron-like ligands | High | Strong anionic O binding; often bidentate or polydentate |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 463,
+            "end": 594,
+            "text": "| Simple carboxylates (acetate, malonate, oxalate) | Moderate to high | O-donor match is good, but denticity/charge density lower |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 595,
+            "end": 691,
+            "text": "| F⁻ | Moderate among simple anions | Hard donor, so better than softer pseudohalides/chloride |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 692,
+            "end": 798,
+            "text": "| SCN⁻, N₃⁻, Cl⁻ | Lower overall | Poorer hard-hard match, often monodentate, less chelate stabilization |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6995",
+              "ligand_6994",
+              "ligand_6985",
+              "ligand_7000",
+              "ligand_9873"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Fe^[3+] | Rhodotorulic acid | miscellaneous hydroxamic acids | K | 62.2 | 25.0 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Rhodotorulic acid | miscellaneous hydroxamic acids | [M2L3]/[M]^2[L]^3 | K | 62.2 | 25.0 | 0.1"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Trimethylenedihydroxamic acid (Glutarodihydroxamic acid) | miscellaneous hydroxamic acids | K | 66.34 | 20.0 | 0.1"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Acetohydroxamic acid (metal_61 + ligand_9873) — HL | 10 ent, 3 sp, 10 vlms (vlm_168447…vlm_168456)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6277",
+              "ligand_6301",
+              "ligand_6165"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] + Ethylenedinitrilotetraacetic acid (EDTA) (metal_61 + ligand_6277) — H4L | 14 ent, 4 sp",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Ethylenedinitrilotetraacetic acid (EDTA) (metal_61 + ligand_6277) — H4L | 14 ent, 4 sp, 14 vlms (vlm_108639…vlm_108652)"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + trans-1,2-Cyclohexylenedinitrilotetraacetic acid (CDTA) (metal_61 + ligand_6301) — H4L | 14 ent, 4 sp"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Nitrilotriacetic acid (NTA) (metal_61 + ligand_6165) — H3L | 16 ent, 8 sp"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_9358",
+              "ligand_9257",
+              "ligand_9297",
+              "ligand_8126"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] + 1,2-Dihydroxybenzene-3,5-disulfonic acid (Tiron) (metal_61 + ligand_9358) — H4L | 16 ent",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + 1,2-Dihydroxybenzene-3,5-disulfonic acid (Tiron) (metal_61 + ligand_9358) — H4L | 16 ent, 4 sp, 16 vlms"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + 2-Hydroxybenzoic acid (Salicylic acid) (metal_61 + ligand_9257) — H2L | 15 ent, 3 sp"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + 8-Hydroxyquinoline (Oxine) (metal_61 + ligand_8126) — HL | 13 ent, 4 sp"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_8465",
+              "ligand_8873",
+              "ligand_8872"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] + Ethanoic acid (Acetic acid) (metal_61 + ligand_8465) — HL | 16 ent, 5 sp",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Ethanoic acid (Acetic acid) (metal_61 + ligand_8465) — HL | 16 ent, 5 sp, 16 vlms"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Propanedioic acid (Malonic acid) (metal_61 + ligand_8873) — H2L | 14 ent, 3 sp"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Ethanedioic acid (Oxalic acid) (metal_61 + ligand_8872) — H2L | 11 ent, 3 sp"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_10162"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] + Hydrogen fluoride (Hydrofluoric acid) (metal_61 + ligand_10162) — HL | 13 ent, 3 sp",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Hydrogen fluoride (Hydrofluoric acid) (metal_61 + ligand_10162) — HL | 13 ent, 3 sp, 13 vlms"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Chloride ion (metal_61 + ligand_10163) — *** | 13 ent, 2 sp, 13 vlms"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_10092",
+              "ligand_10106",
+              "ligand_10163"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] + Hydrogen thiocyanate (Thiocyanic acid) (metal_61 + ligand_10092) — HL | 39 ent",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Hydrogen thiocyanate (Thiocyanic acid) (metal_61 + ligand_10092) — HL | 39 ent, 5 sp, 39 vlms"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Hydrogen azide (Hydrazoic acid) (metal_61 + ligand_10106) — HL | 22 ent, 5 sp"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Chloride ion (metal_61 + ligand_10163) — *** | 13 ent, 2 sp, 13 vlms"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 9,
+        "text": "## Edge cases and cautions\n\n| Edge case | Why it is special |\n|---|---|\n| **OH⁻** | Very strong Fe(III) binding appears in the database, but this is entangled with hydrolysis, polynuclear hydroxo species, and precipitation tendencies rather than simple “ligand strength” |\n| **8-hydroxyquinoline** | Often binds strongly because it is chelating and partly O-donor, but poor solubility / precipitation can complicate equilibrium interpretation |\n| **SCN⁻** | Spectroscopically dramatic Fe(III) complexation does not necessarily mean the highest thermodynamic stability |\n| **Catechol / redox-active ligands** | Can blur pure Fe(III) equilibrium trends because redox chemistry may accompany coordination |\n| **Macrocycles with appended hydroxypyridone or hydroxamate donors** | Can exceed ordinary class behavior because they combine hard donor matching, denticity, and preorganization |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 26,
+            "text": "## Edge cases and cautions",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 72,
+            "end": 272,
+            "text": "| **OH⁻** | Very strong Fe(III) binding appears in the database, but this is entangled with hydrolysis, polynuclear hydroxo species, and precipitation tendencies rather than simple “ligand strength” |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 273,
+            "end": 444,
+            "text": "| **8-hydroxyquinoline** | Often binds strongly because it is chelating and partly O-donor, but poor solubility / precipitation can complicate equilibrium interpretation |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 445,
+            "end": 569,
+            "text": "| **SCN⁻** | Spectroscopically dramatic Fe(III) complexation does not necessarily mean the highest thermodynamic stability |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 570,
+            "end": 703,
+            "text": "| **Catechol / redox-active ligands** | Can blur pure Fe(III) equilibrium trends because redox chemistry may accompany coordination |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 704,
+            "end": 885,
+            "text": "| **Macrocycles with appended hydroxypyridone or hydroxamate donors** | Can exceed ordinary class behavior because they combine hard donor matching, denticity, and preorganization |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_10076",
+              "beta_def_649",
+              "beta_def_351",
+              "beta_def_357"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] | Hydroxide ion | [M3L4]/[M]^3[L]^4 | K | 51.0 | 25.0 | 3.0",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Hydroxide ion | Inorganic ligands | [M3L4]/[M]^3[L]^4 | K | 51.0 | 25.0 | 3.0"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Hydroxide ion ... species: beta_def_351(1) beta_def_352(2) beta_def_357(2) beta_def_519(10) beta_def_649(5) beta_def_812(11) beta_def_840(6) beta_def_894(1)"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_351 | [(M2O3)0.5(s,alpha)] + H2O^1.5 <=> M + OH^3 | solid; beta_def_357 | [MOOH(s,alpha)] + H2O <=> M + OH^3 | solid"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_8126",
+              "beta_def_352"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] + 8-Hydroxyquinoline ... species: beta_def_352(1) beta_def_812(4) beta_def_840(4) beta_def_872(4)",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + 8-Hydroxyquinoline (8-Quinolinol)(Oxine) ... species: beta_def_352(1) beta_def_812(4) beta_def_840(4) beta_def_872(4)"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_352 | [ML3(s)] <=> [M] + [L]^3 | solid"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_10092"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] + Hydrogen thiocyanate (Thiocyanic acid) — species: beta_def_812(21) beta_def_840(8) beta_def_872(5) beta_def_894(1) beta_def_981(4)",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Hydrogen thiocyanate (Thiocyanic acid) ... species: beta_def_812(21) beta_def_840(8) beta_def_872(5) beta_def_894(1) beta_def_981(4)"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Hydroxide ion | Inorganic ligands | [M3L4]/[M]^3[L]^4 | K | 51.0 | 25.0 | 3.0"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_9358"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] + 1,2-Dihydroxybenzene-3,5-disulfonic acid (Tiron) — ligand_def_HxL: H4L | 16 ent, 4 sp",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + 1,2-Dihydroxybenzene-3,5-disulfonic acid (Tiron) — ligand_def_HxL: H4L | 16 ent, 4 sp, 16 vlms"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_61"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Fe^[3+] | 1,4,7-Tris(3-hydroxy-6-methyl-2-pyridylmethyl)-1,4,7-triazacyclononane | Aza-macrocycles | K | 50.0 | 25.0 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | 1,4,7-Tris(3-hydroxy-6-methyl-2-pyridylmethyl)-1,4,7-triazacyclononane | Aza-macrocycles | [ML]/[M][L] | K | 50.0 | 25.0 | 0.1"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Trimethylenebis[aminocarbonyl(1,6-dihydro-1-hydroxy-6-oxo-2-pyridine)] (3-HOPOC...) | ... | [ML3]/[M][L]^3 | K | 52.3 | 25.0 | 0.1"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Piperazine-N,N'-diacetohydroxamic acid | Cyclic amines | [M2L4]/[M]^2[L]^4 | K | 50.9 | 20.0 | 0.1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 10,
+        "text": "## Bottom line\n\n| Conclusion | Summary |\n|---|---|\n| Dominant database pattern | **Fe(III) overwhelmingly prefers hard, multidentate O-donor ligands** |\n| Relative Fe(II) shift | **Fe(II) should show comparatively greater affinity for N-donor and strong-field ligands**, though the extracted records here did not cleanly quantify that side |\n| Best explanation | **HSAB + chelate effect** set the main order; **crystal-field stabilization** becomes an important modifier especially for Fe(II) |\n| Main edge cases | **Hydroxo species, redox-active ligands, precipitation-prone ligands, and multinuclear stoichiometries** can inflate or distort simple ligand-strength rankings |\n\nIf you want, I can do a **second pass focused specifically on Fe(II)** and extract representative Fe(II) ligand classes and top constants from SRD-46 for a more explicit Fe(II) vs Fe(III) side-by-side table.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 14,
+            "text": "## Bottom line",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 51,
+            "end": 152,
+            "text": "| Dominant database pattern | **Fe(III) overwhelmingly prefers hard, multidentate O-donor ligands** |",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 153,
+            "end": 341,
+            "text": "| Relative Fe(II) shift | **Fe(II) should show comparatively greater affinity for N-donor and strong-field ligands**, though the extracted records here did not cleanly quantify that side |",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 342,
+            "end": 494,
+            "text": "| Best explanation | **HSAB + chelate effect** set the main order; **crystal-field stabilization** becomes an important modifier especially for Fe(II) |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 495,
+            "end": 676,
+            "text": "| Main edge cases | **Hydroxo species, redox-active ligands, precipitation-prone ligands, and multinuclear stoichiometries** can inflate or distort simple ligand-strength rankings |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 678,
+            "end": 885,
+            "text": "If you want, I can do a **second pass focused specifically on Fe(II)** and extract representative Fe(II) ligand classes and top constants from SRD-46 for a more explicit Fe(II) vs Fe(III) side-by-side table.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_9873",
+              "ligand_6277",
+              "ligand_6165",
+              "ligand_8872",
+              "ligand_10076"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Fe^[3+] | Trimethylenedihydroxamic acid ... | K | 66.34 | 20.0 | 0.1; Fe^[3+] | Hydroxide ion | ... | K | 51.0 | 25.0 | 3.0",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Trimethylenedihydroxamic acid (Glutarodihydroxamic acid) | miscellaneous hydroxamic acids | [M2(HL)2L2]/[M]^2[HL]^2[L]... | K | 66.34 | 20.0 | 0.1"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Hydroxide ion | Inorganic ligands | [M3L4]/[M]^3[L]^4 | K | 51.0 | 25.0 | 3.0"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Ethylenedinitrilotetraacetic acid (EDTA) (metal_61 + ligand_6277) — species: beta_def_427(3) beta_def_788(3) beta_def_812(4) beta_def_966(4)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_62"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe(II) trend is mechanistic; SRD-46 extraction here lacks Fe(II) quantification: search_stability for metal_62 returned no results.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "Args.where: (c.metal_id = metal_62 AND s.constant_type = 'logK1' ...); summary: *(no results)*"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "Args.where: (c.metal_id = metal_62 AND (s.solvent_name LIKE '%water%' OR s.solvent_name IS NULL) ...); summary: *(no results)*"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "WHERE c.metal_id IN (61,62) ... LIMIT 80; output rows shown are Fe^[3+] only (no Fe^[2+] rows in the 50 row(s) excerpt)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Mechanistic explanation (HSAB, chelate effect, CFSE) is not a database row; consistent with high Fe(III) K for chelating O-donors (e.g., hydroxamic acids at 62.2–66.34).",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Rhodotorulic acid | miscellaneous hydroxamic acids | [M2L3]/[M]^2[L]^3 | K | 62.2 | 25.0 | 0.1"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Trimethylenedihydroxamic acid (Glutarodihydroxamic acid) | ... | K | 66.34 | 20.0 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_61",
+              "beta_def_351",
+              "beta_def_352",
+              "beta_def_357",
+              "beta_def_519",
+              "beta_def_649"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Hydroxo, solids, and multinuclear species present: beta_def_351, 352, 357 (solid); beta_def_519 (M2L2); beta_def_649 (M3L4).",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Hydroxide ion ... species: beta_def_351(1) beta_def_352(2) beta_def_357(2) beta_def_519(10) beta_def_649(5) beta_def_812(11) beta_def_840(6) beta_def_894(1)"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Equation legend: beta_def_351 | [(M2O3)0.5(s,alpha)] + [H2O]^1.5 <=> [M] + [OH]^3 | solid; beta_def_352 | [ML3(s)] <=> [M] + [L]^3 | solid"
+              },
+              {
+                "step": "Step 15",
+                "tool": "execute_srd46_sql",
+                "snippet": "Fe^[3+] | Hydroxide ion | Inorganic ligands | [M3L4]/[M]^3[L]^4 | K | 49.7–51.0 at 25.0 °C (multiple rows)"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

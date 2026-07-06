@@ -1,0 +1,590 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt5\\Q5.2.4\\Q5.2.4_result_batch2.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Summary (SRD‑46): No stability-constant entry is recorded for Pu(IV) with acetylsalicylate (aspirin).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 17,
+            "text": "Summary (SRD‑46):",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 18,
+            "end": 101,
+            "text": "No stability-constant entry is recorded for Pu(IV) with acetylsalicylate (aspirin).",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "This is a provenance label. The tools used (e.g., search_metals, search_ligands) are the SRD‑46 interface; tool results from this run are from NIST SRD‑46.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "## search_metals — 4 result(s)\n| metal_id | metal_name | symbol | charge | ... |\n| metal_149 | Pu^[4+] | Pu | 4 | ✓ | [Pu+4] | ... |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands — 2 result(s)\n| ligand_id | ligand_name | ... |\n| ligand_10913 | Acetylsalicylic acid (Aspirin) | *** | ... | 0 | *** | *** |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_8701",
+              "ligand_10913"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "build_system_catalog (Pu4+ with acetylsalicylic acid): no pairs found; summary: n_pairs: 0.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "[CATALOG]\n## build_system_catalog\n*(no pairs found)*\nsummary: {'n_metals': 0, 'n_ligands': 0, 'n_pairs': 0, 'total_species': 0}"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_149 | Pu^[4+] | Pu | 4 | ✓ | [Pu+4] | InChI=1S/Pu/q+4 | ..."
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_8701 | 2-Acetoxybenzoic acid (Acetylsalicylic acid) | HL | Carboxylic acids keto | 5 | CC(=O)Oc1ccccc1C(=O)O | ..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Metal (ID) | Ligand (ID) | Result in SRD‑46 | Evidence |\n|---|---|---|---|\n| Pu(IV), Pu4+ (metal_149) | Acetylsalicylic acid, acetylsalicylate (ligand_8701) | No entries found | build_system_catalog(metal_149, ligand_8701) returned “no pairs found,” indicating no ligand–metal stability records for this pair in SRD‑46 |",
+        "claims": [
+          {
+            "start": 77,
+            "end": 322,
+            "text": "| Pu(IV), Pu4+ (metal_149) | Acetylsalicylic acid, acetylsalicylate (ligand_8701) | No entries found | build_system_catalog(metal_149, ligand_8701) returned “no pairs found,” indicating no ligand–metal stability records for this pair in SRD‑46 |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_8701"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "*(no pairs found)*  **summary:** {'n_metals': 0, 'n_ligands': 0, 'n_pairs': 0, 'total_species': 0}",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "## build_system_catalog\n\n*(no pairs found)*\n\n**summary:** {'n_metals': 0, 'n_ligands': 0, 'n_pairs': 0, 'total_species': 0}"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_149 | Pu^[4+] | Pu | 4 | ✓ | [Pu+4] | InChI=1S/Pu/q+4 | beta_totN_6 | ligand_totN_11 | vlm_totN_36 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_8701 | 2-Acetoxybenzoic acid (Acetylsalicylic acid) | HL | Carboxylic acids keto | 5 | `CC(=O)Oc1ccccc1C(=O)O` | (-inf, HL, 3.45, L, +inf) |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "Notes and context\n- Aspirin readily hydrolyzes to salicylic acid in aqueous media; SRD‑46 contains extensive salicylate records overall (ligand_9257), whereas acetylsalicylate coverage is limited and not observed for Pu(IV) here.\n- Pu(IV) strongly hydrolyzes and can form colloidal/hydroxo species; many studies report conditional constants that depend on medium and ionic strength, which may contribute to the lack of Pu(IV)–aspirin entries.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 17,
+            "text": "Notes and context",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 20,
+            "end": 81,
+            "text": "Aspirin readily hydrolyzes to salicylic acid in aqueous media",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 83,
+            "end": 149,
+            "text": "SRD‑46 contains extensive salicylate records overall (ligand_9257)",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 159,
+            "end": 195,
+            "text": "acetylsalicylate coverage is limited",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 200,
+            "end": 228,
+            "text": "not observed for Pu(IV) here",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 232,
+            "end": 258,
+            "text": "Pu(IV) strongly hydrolyzes",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 263,
+            "end": 297,
+            "text": "can form colloidal/hydroxo species",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 299,
+            "end": 340,
+            "text": "many studies report conditional constants",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 341,
+            "end": 381,
+            "text": "that depend on medium and ionic strength",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 411,
+            "end": 441,
+            "text": "lack of Pu(IV)–aspirin entries",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Hydrolysis of aspirin to salicylic acid is established chemistry; SRD‑46 tool outputs here do not report hydrolysis reactions.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_9257"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ligand_9257 | 2-Hydroxybenzoic acid (Salicylic acid) | ... | 227 |",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_ligands",
+                "snippet": "| ligand_9257 | 2-Hydroxybenzoic acid (Salicylic acid) | H2L | Phenols salicylic acids | 227 | `O=C(O)c1ccccc1O` | (-inf, H2L, 2.8, HL, 2.8, L, +inf) |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "| ligand_9257 | 2-Hydroxybenzoic acid (Salicylic acid) | H2L | Phenols salicylic acids | 227 | `O=C(O)c1ccccc1O` | (-inf, H2L, 2.8, HL, 2.8, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_8701",
+              "ligand_10913"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "acetylsalicylate search: (no results); ligand_8701 vlm_count 5; ligand_10913 vlm_count 0.",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_8701 | 2-Acetoxybenzoic acid (Acetylsalicylic acid) | HL | Carboxylic acids keto | 5 | `CC(=O)Oc1ccccc1C(=O)O` | (-inf, HL, 3.45, L, +inf) |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "| ligand_10913 | Acetylsalicylic acid (Aspirin) | *** | Ligands not selected | 0 | *** | *** |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_8701"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "build_system_catalog metal_149 + ligand_8701: (no pairs found).",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "## build_system_catalog\n\n*(no pairs found)*\n\nsummary: {'n_metals': 0, 'n_ligands': 0, 'n_pairs': 0, 'total_species': 0}"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_149 | Pu^[4+] | Pu | 4 | ✓ | [Pu+4] | InChI=1S/Pu/q+4 | beta_totN_6 | ligand_totN_11 | vlm_totN_36 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_8701 | 2-Acetoxybenzoic acid (Acetylsalicylic acid) | HL | Carboxylic acids keto | 5 | `CC(=O)Oc1ccccc1C(=O)O` | (-inf, HL, 3.45, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Pu(IV) is known to strongly hydrolyze; this property is not reported in the given SRD‑46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Formation of hydroxo/colloidal Pu(IV) species is established; not shown in these tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Literature often reports conditional constants; no direct constants shown in this batch of SRD‑46 results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Dependence of conditional constants on medium and ionic strength is well-known; not verified by rows here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_8701",
+              "ligand_10913"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Pu(IV)–aspirin: build_system_catalog for metal_149/ligand_8701 shows (no pairs found); ligand_10913 has vlm_count 0.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "## build_system_catalog\n\n*(no pairs found)*"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "| ligand_10913 | Acetylsalicylic acid (Aspirin) | *** | Ligands not selected | 0 | *** | *** |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_8701 | 2-Acetoxybenzoic acid (Acetylsalicylic acid) | HL | Carboxylic acids keto | 5 | `CC(=O)Oc1ccccc1C(=O)O` | (-inf, HL, 3.45, L, +inf) |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "If helpful, I can look up Pu(IV)–salicylate stability constants (with conditions and citations) or survey related actinide–acetylsalicylate systems.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 11,
+            "text": "If helpful,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 12,
+            "end": 95,
+            "text": "I can look up Pu(IV)–salicylate stability constants (with conditions and citations)",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 96,
+            "end": 148,
+            "text": "or survey related actinide–acetylsalicylate systems.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "Source: NIST Standard Reference Database 46 (SRD‑46), Ligand–Metal Stability Database.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 7,
+            "text": "Source:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 8,
+            "end": 52,
+            "text": "NIST Standard Reference Database 46 (SRD‑46)",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 52,
+            "end": 53,
+            "text": ",",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 54,
+            "end": 86,
+            "text": "Ligand–Metal Stability Database.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_8701"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| ligand_8701 | 2-Acetoxybenzoic acid (Acetylsalicylic acid) | HL | Carboxylic acids keto | 5 |",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_149 | Pu^[4+] | Pu | 4 | ✓ | [Pu+4] | InChI=1S/Pu/q+4 | beta_totN_6 | ligand_totN_11 | vlm_totN_36 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_8701 | 2-Acetoxybenzoic acid (Acetylsalicylic acid) | HL | Carboxylic acids keto | 5 | `CC(=O)Oc1ccccc1C(=O)O` |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_9257"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_149 | Pu^[4+] | Pu | 4 | ✓ | [Pu+4] |",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_149 | Pu^[4+] | Pu | 4 | ✓ | [Pu+4] | InChI=1S/Pu/q+4 | beta_totN_6 | ligand_totN_11 | vlm_totN_36 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "| ligand_9257 | 2-Hydroxybenzoic acid (Salicylic acid) | H2L | Phenols salicylic acids | 227 | `O=C(O)c1ccccc1O` |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

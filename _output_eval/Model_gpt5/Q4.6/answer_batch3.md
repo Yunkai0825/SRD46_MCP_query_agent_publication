@@ -1,0 +1,60 @@
+Goal
+Test the Irving–Williams (IW) order for divalent 3d metals (Mn2+ < Fe2+ < Co2+ < Ni2+ < Cu2+ > Zn2+) using SRD‑46 stability data under harmonized conditions and flag any ligand systems that invert the expected ordering.
+
+What we resolved from SRD‑46 (this pass)
+We successfully resolved the six metals and several common ligands and confirmed that 1:1 ML constants (beta_def_812) are present in aqueous media with temperature windows that include 20–30 °C. This establishes that the needed numeric data exist for the comparisons; however, due to time limits we were unable to pull the numerical constants in this turn. The table below summarizes coverage evidence from system catalogs.
+
+| Ligand (SRD-46 ID) | Mn2+ (metal_94) ML present | Fe2+ (metal_62) ML present | Co2+ (metal_33) ML present | Ni2+ (metal_112) ML present | Cu2+ (metal_41) ML present | Zn2+ (metal_208) ML present | Notes on stoichiometry windows and conditions (from catalogs) |
+|---|---|---|---|---|---|---|---|
+| Ammonia (ligand_10103) | Yes | Yes | Yes | Yes | Yes | Yes | Aqueous; T 19–30 °C nets; low-to-moderate I. Ni shows ML→ML6; Cu shows ML→ML4 in the compiled nets. |
+| Ethylenediamine, en (ligand_7029) | Yes | Yes | Yes | Yes | Yes | Yes | Aqueous; T 19–41 °C nets include 20–30 °C; low-to-moderate I. Ni/Co/Zn show up to ML3; Cu up to ML2 in compiled nets. |
+| Glycine (ligand_5760) | Yes | Yes | Yes | Yes | Yes | Yes | Aqueous; T 5–45 °C nets include 20–30 °C; low-to-moderate I. Various ML→ML3 present. |
+| Imidazole (ligand_7795) | Yes | Yes (sparser) | Yes | Yes | Yes | Yes | Aqueous; T 19–41 °C nets; low-to-moderate I. ML→ML4 present for Ni/Cu; other metals sparser. |
+| EDTA (ligand_6277) | Yes | Yes | Yes | Yes | Yes | Yes | Aqueous; T 19–30 °C; I down to 0.05 M or corrected; robust ML coverage across all six metals. |
+
+Source: NIST SRD‑46 system catalogs built for ligand_10103, ligand_7029, ligand_5760, ligand_7795, ligand_6277 (with metals metal_94, metal_62, metal_33, metal_112, metal_41, metal_208).
+
+What we can and cannot conclude from this pass
+- The database clearly contains the ML stability constants under appropriate conditions for all six metals and the five ligands shown. This is sufficient to perform an IW test.
+- However, because the numerical constants could not be retrieved in this time budget, we cannot, in this message, assert specific inversions or provide numerical rankings within each ligand from SRD‑46.
+
+Likely exception patterns to watch (hypotheses to test with the numeric pull)
+These hypotheses are guided by the stoichiometry coverage in SRD‑46 and well‑established coordination chemistry; they should be confirmed by the planned numeric extraction:
+
+1) Ammine systems at octahedral stoichiometry (hexaammine, ML6; beta_def_907)
+- SRD‑46 shows Ni2+ supports ML6 with ammonia, while Cu2+ coverage in the same catalogs tops out at ML4 under similar conditions. This suggests that for overall β6 (hexaammine) the usual Cu2+ > Ni2+ portion of IW can invert (Ni2+ ≥ Cu2+), because Cu2+ octahedral ammine complexes are Jahn–Teller‑destabilized while Ni2+ (d8, high LFSE in octahedral) is favored.
+- Hypothesis: In ammonia, the Ni2+ vs Cu2+ ordering may invert for ML6 (β6), whereas for ML (K1/β1) the IW order likely persists or the difference is smaller.
+
+2) En (ethylenediamine) and higher polyamines
+- Catalogs show Ni2+ forms higher coordination numbers (ML3) more readily than Cu2+ (mostly ML2) with en under comparable conditions. Macrochelation and preferred geometry can stabilize Ni2+ strongly.
+- Hypothesis: For overall complexes with higher denticity/coordination numbers (e.g., tris‑en), Ni2+ may approach or exceed Cu2+, nudging an inversion of the Ni/Cu step within this ligand family.
+
+3) Imidazole (neutral N‑donor)
+- Both Ni2+ and Cu2+ show rich ML→ML4 series. Cu2+ often leads in K1, but multi‑ligand shells and possible geometry changes (square‑planar/tetragonally distorted for Cu2+) can complicate direct IW comparisons.
+- Hypothesis: Small deviations might occur in higher order complexes (e.g., ML4), but ML (1:1) is likely to conform to IW.
+
+4) EDTA and simple O/N donors (glycine)
+- These typically follow the IW trend closely under comparable conditions.
+- Hypothesis: EDTA, glycine ML (β1/K1) will largely adhere to Mn < Fe < Co < Ni < Cu > Zn.
+
+Why these exceptions occur (mechanistic rationale)
+- Jahn–Teller distortion in Cu2+: Octahedral Cu2+ is often destabilized relative to Ni2+ for ML6 (ammonia, some polyamines), which can invert Ni/Cu specifically at that stoichiometry.
+- Ligand preorganization/macrocyclic effect: Polyamines or macrocycles (e.g., cyclam/cyclen, not yet pulled here) can preorganize an optimal cavity for Ni2+, boosting Ni2+ stability relative to Cu2+, again potentially inverting the Ni/Cu step.
+- Donor type and HSAB matching: Softer donors (e.g., thiolates, not included in this pass) can elevate Zn2+ relative to harder donors, possibly perturbing the Cu/Zn step.
+- Spin‑state and LFSE effects: High‑field N‑donors can alter Fe2+/Co2+/Ni2+ ordering locally by changing LFSE and spin state; these effects are stoichiometry‑ and geometry‑dependent.
+
+Clear next steps (pre‑planned and ready to run)
+- Extract ML (beta_def_812) log stability constants at 20–30 °C in water and I ≤ 0.2 M for each ligand across Mn2+, Fe2+, Co2+, Ni2+, Cu2+, Zn2+; select the best‑normalized record per metal (lowest ionic strength, closest to 25 °C).
+- For ammonia, also pull ML stepwise K1 and overall β6 (beta_def_907) to test the predicted Ni/Cu inversion at ML6.
+- Compare metal rankings within each ligand to IW and tabulate any inversions with conditions.
+
+Summary
+- SRD‑46 contains the needed aqueous ML stability data at near‑ambient conditions for ammonia, ethylenediamine, glycine, imidazole, and EDTA with Mn2+, Fe2+, Co2+, Ni2+, Cu2+, and Zn2+.
+- Based on the cataloged stoichiometry coverage and established coordination chemistry, the most plausible exceptions to the Irving–Williams ordering in this set are:
+  • Ammine ML6 (hexaammine): Ni2+ ≥ Cu2+ due to Jahn–Teller destabilization of Cu2+.
+  • Polyamine systems at higher coordination numbers (e.g., tris‑en): Ni2+ can approach/exceed Cu2+.
+- EDTA and simple amino/imidazole ML values are expected to conform, but this should be confirmed numerically.
+
+If you’d like, I can run the queued stability-constant pulls next and deliver a compact table of log K/log β values for each ligand that explicitly flags any IW inversions, with conditions and citations from NIST SRD‑46.
+
+---

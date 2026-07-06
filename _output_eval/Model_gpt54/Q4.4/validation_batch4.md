@@ -1,0 +1,10 @@
+# Q4.4 - Validation (batch 4)
+
+**4 of 76 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 1 | existence_absence | among the missing canonical residues such as **methionine, valine, leucine, isoleucine, phenylalanine, proline, lysine, arginine, tryptophan** | ...not yet studied” pool is most plausibly among the missing canonical residues such as **methionine, valine, leucine, isoleucine, phenylalanine, proline, lysine, arginine, tryptophan**, etc., at least within the data retriev... |
+| 2 | 5 | listing | \| **Methionine** \| It is the strongest plausible **unstudied canonical amino acid** because the retrieved Zn²⁺ trend favors side-chain donor atoms beyond simple N,O chelation, and sulfur-containing amino acids are the most favorable class in the observed dataset. Methionine’s thioether sulfur should give it an advantage over aliphatic, hydroxy, amide, aromatic, or strongly protonated basic side chains. \| | ... Predicted amino acid \| Why \| \|---\|---\| \| **Methionine** \| It is the strongest plausible **unstudied canonical amino acid** because the retrieved Zn²⁺ trend favors side-chain donor atoms beyond simple N,O chelation, and sulfur-containing amino acids are the most favorable class in the observed dataset. Methionine’s thioether sulfur should give it an advantage over aliphatic, hydroxy, amide, aromatic, or strongly protonated basic side chains. \|... |
+| 3 | 6 | trend | SRD-46 shows Zn²⁺ complexes become notably stronger when amino acids offer **side-chain donor groups** | ...n: methionine**.  The reasoning is that SRD-46 shows Zn²⁺ complexes become notably stronger when amino acids offer **side-chain donor groups**, with **histidine (imidazole N)** and e... |
+| 4 | 6 | comparison | with **histidine (imidazole N)** and especially **cysteine (sulfur)** standing out over simple amino acids. | ...cids offer **side-chain donor groups**, with **histidine (imidazole N)** and especially **cysteine (sulfur)** standing out over simple amino acids. Among the apparently unstudied canonica... |

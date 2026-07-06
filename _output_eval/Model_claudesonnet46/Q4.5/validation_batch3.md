@@ -1,0 +1,44 @@
+# Q4.5 — Validation (batch 3)
+
+**38 of 118 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 0 | property_attribution | (NaClO₄ or similar) | … NIST SRD-46 database, 25 °C, I = 0.1 M (NaClO₄ or similar)*  ---… |
+| 2 | 1 | exact_value | \| Oxalic acid \| Dicarboxylate \| 2 \| 1.2, **3.8** \| 3.8 \| ~2.7 \| | …\|----------------------\|--------------\| \| Oxalic acid \| Dicarboxylate \| 2 \| 1.2, **3.8** \| 3.8 \| ~2.7 \| \| D-Tartaric acid \| Hydroxy-dicarboxyla… |
+| 3 | 1 | exact_value | \| D-Tartaric acid \| Hydroxy-dicarboxylate \| 2–4 \| 2.82, **3.97** \| 3.97 \| ~1.8 \| | …ylate \| 2 \| 1.2, **3.8** \| 3.8 \| ~2.7 \| \| D-Tartaric acid \| Hydroxy-dicarboxylate \| 2–4 \| 2.82, **3.97** \| 3.97 \| ~1.8 \| \| Citric acid \| Hydroxy-tricarboxylate … |
+| 4 | 1 | exact_value | \| Citric acid \| Hydroxy-tricarboxylate \| 3–4 \| 3.13, 4.35, **5.65** \| 5.65 \| ~3.5 \| | … \| 2–4 \| 2.82, **3.97** \| 3.97 \| ~1.8 \| \| Citric acid \| Hydroxy-tricarboxylate \| 3–4 \| 3.13, 4.35, **5.65** \| 5.65 \| ~3.5 \| \| Tricarballylic acid \| Tricarboxylate … |
+| 5 | 1 | exact_value | \| Tricarballylic acid \| Tricarboxylate \| 3 \| 3.47, 4.51, **5.85** \| 5.85 \| ~2.5 \| | … \| 3.13, 4.35, **5.65** \| 5.65 \| ~3.5 \| \| Tricarballylic acid \| Tricarboxylate \| 3 \| 3.47, 4.51, **5.85** \| 5.85 \| ~2.5 \| \| Glycine \| Amino acid \| 2 \| 2.33, **9.… |
+| 6 | 1 | exact_value | \| Glycine \| Amino acid \| 2 \| 2.33, **9.57** \| 9.57 (N) \| ~1.4 \| | … \| 3.47, 4.51, **5.85** \| 5.85 \| ~2.5 \| \| Glycine \| Amino acid \| 2 \| 2.33, **9.57** \| 9.57 (N) \| ~1.4 \| \| NTA \| Aminocarboxylate \| 4 \| 1.81, 2.… |
+| 7 | 1 | exact_value | \| NTA \| Aminocarboxylate \| 4 \| 1.81, 2.52, **9.46** \| 9.46 (N) \| ~6.4 \| | … 2 \| 2.33, **9.57** \| 9.57 (N) \| ~1.4 \| \| NTA \| Aminocarboxylate \| 4 \| 1.81, 2.52, **9.46** \| 9.46 (N) \| ~6.4 \| \| EDTA \| Aminocarboxylate \| 6 \| 2.0, 2.… |
+| 8 | 1 | exact_value | \| EDTA \| Aminocarboxylate \| 6 \| 2.0, 2.69, 6.13, **9.52** \| 9.52 (N) \| ~10.7 \| | ….81, 2.52, **9.46** \| 9.46 (N) \| ~6.4 \| \| EDTA \| Aminocarboxylate \| 6 \| 2.0, 2.69, 6.13, **9.52** \| 9.52 (N) \| ~10.7 \| \| DTPA \| Aminocarboxylate \| 8 \| 2.0–4.2… |
+| 9 | 1 | exact_value | \| DTPA \| Aminocarboxylate \| 8 \| 2.0–4.28, **8.60** \| 8.60 (N) \| ~10.8 \| | …69, 6.13, **9.52** \| 9.52 (N) \| ~10.7 \| \| DTPA \| Aminocarboxylate \| 8 \| 2.0–4.28, **8.60** \| 8.60 (N) \| ~10.8 \| \| TTHA \| Aminocarboxylate \| 10 \| 2.3–10… |
+| 10 | 1 | exact_value | \| TTHA \| Aminocarboxylate \| 10 \| 2.3–10.62 \| **10.62** (N) \| ~10.5 \| | …2.0–4.28, **8.60** \| 8.60 (N) \| ~10.8 \| \| TTHA \| Aminocarboxylate \| 10 \| 2.3–10.62 \| **10.62** (N) \| ~10.5 \| \| Phosphoric acid \| Phosphate \| 1 \| 1.9… |
+| 11 | 1 | exact_value | \| Phosphoric acid \| Phosphate \| 1 \| 1.92, 6.71, **11.52** \| 11.52 \| ~1.4 (HPO₄²⁻) \| | …0 \| 2.3–10.62 \| **10.62** (N) \| ~10.5 \| \| Phosphoric acid \| Phosphate \| 1 \| 1.92, 6.71, **11.52** \| 11.52 \| ~1.4 (HPO₄²⁻) \| \| Triphosphate \| Polyphosphate \| 3–4 \| … |
+| 12 | 1 | exact_value | \| Triphosphate \| Polyphosphate \| 3–4 \| −0.5–**7.77** \| 7.77 \| ~5.0 \| | …71, **11.52** \| 11.52 \| ~1.4 (HPO₄²⁻) \| \| Triphosphate \| Polyphosphate \| 3–4 \| −0.5–**7.77** \| 7.77 \| ~5.0 \| \| ATP \| Nucleotide \| 4 \| 3.99, 6.38 \| 6… |
+| 13 | 1 | exact_value | \| ATP \| Nucleotide \| 4 \| 3.99, 6.38 \| 6.38 \| ~3.9 \| | …e \| 3–4 \| −0.5–**7.77** \| 7.77 \| ~5.0 \| \| ATP \| Nucleotide \| 4 \| 3.99, 6.38 \| 6.38 \| ~3.9 \|… |
+| 14 | 2 | exact_value | \| Oxalate \| 3.8 \| ~2.7 \| | …-\|---------------------\|--------------\| \| Oxalate \| 3.8 \| ~2.7 \| \| Tartrate \| 3.97 \| ~1.8 \| \| Citrate \| … |
+| 15 | 2 | exact_value | \| Tartrate \| 3.97 \| ~1.8 \| | …-------------\| \| Oxalate \| 3.8 \| ~2.7 \| \| Tartrate \| 3.97 \| ~1.8 \| \| Citrate \| 5.65 \| ~3.5 \| \| Tricarbally… |
+| 16 | 2 | exact_value | \| Citrate \| 5.65 \| ~3.5 \| | …3.8 \| ~2.7 \| \| Tartrate \| 3.97 \| ~1.8 \| \| Citrate \| 5.65 \| ~3.5 \| \| Tricarballylate \| 5.85 \| ~2.5 \|  A **… |
+| 17 | 2 | exact_value | \| Tricarballylate \| 5.85 \| ~2.5 \| | …3.97 \| ~1.8 \| \| Citrate \| 5.65 \| ~3.5 \| \| Tricarballylate \| 5.85 \| ~2.5 \|  A **weak positive trend** exists: high… |
+| 18 | 2 | trend | A **weak positive trend** exists | ….5 \| \| Tricarballylate \| 5.85 \| ~2.5 \|  A **weak positive trend** exists: higher carboxylate pKa → slightly high… |
+| 19 | 2 | trend | higher carboxylate pKa → slightly higher log K. | ….5 \|  A **weak positive trend** exists: higher carboxylate pKa → slightly higher log K. However, the correlation is noisy becau… |
+| 20 | 2 | comparison | boost its Ca²⁺ affinity beyond what pKa alone predicts. | … and favorable 5-membered chelate rings boost its Ca²⁺ affinity beyond what pKa alone predicts.… |
+| 21 | 3 | exact_value | \| Glycine \| 9.57 \| 2 \| ~1.4 \| | …-----------\|-----------\|--------------\| \| Glycine \| 9.57 \| 2 \| ~1.4 \| \| NTA \| 9.46 \| 4 \| ~6.4 \| \| EDTA \| 9.52… |
+| 22 | 3 | exact_value | \| NTA \| 9.46 \| 4 \| ~6.4 \| | …--------\| \| Glycine \| 9.57 \| 2 \| ~1.4 \| \| NTA \| 9.46 \| 4 \| ~6.4 \| \| EDTA \| 9.52 \| 6 \| ~10.7 \| \| DTPA \| 8.… |
+| 23 | 3 | exact_value | \| EDTA \| 9.52 \| 6 \| ~10.7 \| | … \| 2 \| ~1.4 \| \| NTA \| 9.46 \| 4 \| ~6.4 \| \| EDTA \| 9.52 \| 6 \| ~10.7 \| \| DTPA \| 8.60 \| 8 \| ~10.8 \| \| TTHA \| 10… |
+| 24 | 3 | exact_value | \| DTPA \| 8.60 \| 8 \| ~10.8 \| | … 4 \| ~6.4 \| \| EDTA \| 9.52 \| 6 \| ~10.7 \| \| DTPA \| 8.60 \| 8 \| ~10.8 \| \| TTHA \| 10.62 \| 10 \| ~10.5 \|  Here the… |
+| 25 | 3 | exact_value | \| TTHA \| 10.62 \| 10 \| ~10.5 \| | …6 \| ~10.7 \| \| DTPA \| 8.60 \| 8 \| ~10.8 \| \| TTHA \| 10.62 \| 10 \| ~10.5 \|  Here the amine pKa is **nearly constan… |
+| 26 | 3 | calculation | log K₁ increases by **~9 log units** from glycine to EDTA. | …onstant** (~9.5) across the series, yet log K₁ increases by **~9 log units** from glycine to EDTA. This demonstrates that **denticity and … |
+| 27 | 3 | trend | The plateau from EDTA → DTPA → TTHA | …nate over basicity** within this class. The plateau from EDTA → DTPA → TTHA reflects steric saturation of the Ca²⁺ … |
+| 28 | 4 | exact_value | \| Oxalate (–COO⁻) \| 3.8 \| ~2.7 \| | …-----\|-----------------\|--------------\| \| Oxalate (–COO⁻) \| 3.8 \| ~2.7 \| \| Phosphate (HPO₄²⁻) \| 6.71 \| ~1.4 \| \| … |
+| 29 | 4 | exact_value | \| Phosphate (HPO₄²⁻) \| 6.71 \| ~1.4 \| | …-----\| \| Oxalate (–COO⁻) \| 3.8 \| ~2.7 \| \| Phosphate (HPO₄²⁻) \| 6.71 \| ~1.4 \| \| Triphosphate \| 7.77 \| ~5.0 \|  Phospha… |
+| 30 | 4 | exact_value | \| Triphosphate \| 7.77 \| ~5.0 \| | … \| \| Phosphate (HPO₄²⁻) \| 6.71 \| ~1.4 \| \| Triphosphate \| 7.77 \| ~5.0 \|  Phosphate has a **higher pKa** than ca… |
+| 31 | 4 | comparison | Phosphate has a **higher pKa** than carboxylate but a **lower** log K with Ca²⁺ for 1:1 binding. | … ~1.4 \| \| Triphosphate \| 7.77 \| ~5.0 \|  Phosphate has a **higher pKa** than carboxylate but a **lower** log K with Ca²⁺ for 1:1 binding. This is a key anomaly: the higher basic… |
+| 32 | 5 | range | \| Carboxylate pKa vs. log K (carboxylates only) \| Positive, weak \| r ≈ 0.4–0.6 \| | …gth \| \|------------\|-------\|----------\| \| Carboxylate pKa vs. log K (carboxylates only) \| Positive, weak \| r ≈ 0.4–0.6 \| \| Amine pKa vs. log K (aminocarboxylate… |
+| 33 | 5 | exact_value | \| Amine pKa vs. log K (aminocarboxylates) \| Essentially flat \| r ≈ 0.1 \| | … only) \| Positive, weak \| r ≈ 0.4–0.6 \| \| Amine pKa vs. log K (aminocarboxylates) \| Essentially flat \| r ≈ 0.1 \| \| Denticity vs. log K (aminocarboxylate… |
+| 34 | 5 | exact_value | \| Denticity vs. log K (aminocarboxylates) \| Strong positive \| r ≈ 0.95 \| | …xylates) \| Essentially flat \| r ≈ 0.1 \| \| Denticity vs. log K (aminocarboxylates) \| Strong positive \| r ≈ 0.95 \| \| Total anionic charge vs. log K (all l… |
+| 35 | 5 | range | \| Total anionic charge vs. log K (all ligands) \| Moderate positive \| r ≈ 0.6–0.7 \| | …xylates) \| Strong positive \| r ≈ 0.95 \| \| Total anionic charge vs. log K (all ligands) \| Moderate positive \| r ≈ 0.6–0.7 \| \| pKa alone vs. log K (all ligands, mix… |
+| 36 | 5 | exact_value | \| pKa alone vs. log K (all ligands, mixed classes) \| Weak/ambiguous \| r ≈ 0.3 \| | …ds) \| Moderate positive \| r ≈ 0.6–0.7 \| \| pKa alone vs. log K (all ligands, mixed classes) \| Weak/ambiguous \| r ≈ 0.3 \|… |
+| 37 | 6 | trend | Within a fixed donor class and denticity, higher pKa correlates modestly with stronger binding | …fficient predictor of binding strength. Within a fixed donor class and denticity, higher pKa correlates modestly with stronger binding because more basic donors carry greater… |
+| 38 | 7 | range | by 3–4 log units | …pete a monodentate phosphate (pKa ~6.7) by 3–4 log units — a striking demonstration that **how m… |

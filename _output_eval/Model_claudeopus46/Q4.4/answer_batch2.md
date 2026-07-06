@@ -1,0 +1,76 @@
+Based on the comprehensive catalog search, here is a striking finding and my analysis:
+
+---
+
+## All 20 Proteinogenic Amino Acids Already Have Zn²⁺ Data in SRD-46
+
+The NIST SRD-46 database contains stability constant measurements for **all 20 standard proteinogenic amino acids** with Zn²⁺. None are "unstudied." This makes sense — zinc is one of the most biologically important metals, and amino acids are foundational ligands in coordination chemistry.
+
+| Amino Acid | ligand_id | VLM Count | Key pKa Values | Donor Groups |
+|---|---|---|---|---|
+| Glycine | ligand_5760 | 428 | 2.33, 9.57 | NH₂, COO⁻ |
+| Alanine | ligand_5761 | 159 | 2.33, 9.71 | NH₂, COO⁻ |
+| Valine | ligand_5765 | 81 | 2.27, 9.52 | NH₂, COO⁻ |
+| Leucine | ligand_5766 | 49 | 2.32, 9.58 | NH₂, COO⁻ |
+| Isoleucine | ligand_5767 | 51 | 2.26, 9.60 | NH₂, COO⁻ |
+| Serine | ligand_5828 | 139 | 2.16, 9.05 | NH₂, COO⁻, OH |
+| Threonine | ligand_5829 | 117 | 2.20, 8.94 | NH₂, COO⁻, OH |
+| **Cysteine** | ligand_5856 | **134** | 1.9, **8.18**, 10.3 | NH₂, COO⁻, **SH** |
+| Methionine | ligand_5863 | 63 | 2.18, 9.08 | NH₂, COO⁻, S(CH₃) |
+| Aspartic acid | ligand_5802 | 174 | 1.95, 3.71, 9.66 | NH₂, 2×COO⁻ |
+| Glutamic acid | ligand_5804 | 94 | 2.16, 4.15, 9.58 | NH₂, 2×COO⁻ |
+| Asparagine | ligand_5843 | 92 | 2.16, 8.73 | NH₂, COO⁻, CONH₂ |
+| Glutamine | ligand_5844 | 71 | 2.19, 9.00 | NH₂, COO⁻, CONH₂ |
+| **Histidine** | ligand_5898 | **250** | 1.7, **6.05**, 9.10 | NH₂, COO⁻, **imidazole** |
+| Lysine | ligand_5887 | 98 | 2.15, 9.15, 10.66 | 2×NH₂, COO⁻ |
+| Arginine | ligand_5917 | 45 | 2.03, 9.00 | NH₂, COO⁻, guanidinium |
+| Phenylalanine | ligand_5777 | 138 | 2.18, 9.09 | NH₂, COO⁻ |
+| Tyrosine | ligand_5819 | 107 | 2.24, 9.04, 10.10 | NH₂, COO⁻, phenol-OH |
+| Tryptophan | ligand_5907 | 107 | 2.37, 9.33 | NH₂, COO⁻, indole-NH |
+| Proline | ligand_5930 | 66 | 1.89, 10.46 | sec-NH, COO⁻ |
+
+## Predictive Analysis: If One *Were* Unstudied, Which Would Be Strongest?
+
+Since all 20 are already studied, I can still use the pKa data and coordination chemistry principles from SRD-46 to rank which amino acids would be *predicted* to form the most stable Zn²⁺ complexes — and explain why.
+
+### 🥇 **Cysteine** — the strongest predicted (and actual) Zn²⁺ binder
+- The **thiolate** side chain (pKa ~8.18) is a soft donor with exceptional affinity for Zn²⁺, which is a borderline-soft metal ion.
+- At physiological pH, the thiolate is partially deprotonated and readily available for coordination.
+- Cysteine offers **tridentate** chelation (NH₂, COO⁻, S⁻), forming two favorable 5-membered chelate rings.
+- Zn²⁺ in biology overwhelmingly uses cysteine residues (e.g., zinc fingers: Cys₂His₂ motifs).
+
+### 🥈 **Histidine** — second strongest
+- The **imidazole** nitrogen (pKa ~6.05) provides a strong N-donor at physiological pH — it is already deprotonated and available for coordination well below neutral pH.
+- The lower pKa compared to the α-amino group (pKa ~9.1) means the imidazole is a better donor at neutral pH.
+- Histidine also offers tridentate chelation (NH₂, COO⁻, imidazole-N).
+
+### 🥉 **Aspartic acid / Glutamic acid** — third tier
+- Extra carboxylate groups (pKa 3.71 and 4.15 respectively) provide additional chelation sites, but O-donors are weaker for Zn²⁺ than S or imidazole-N.
+- These form stable but less exceptional complexes.
+
+### Lower tiers
+- **Simple aliphatic amino acids** (Gly, Ala, Val, Leu, Ile) — only bidentate NH₂/COO⁻ coordination, no special side-chain donors. Stability follows modest trends based on steric effects and amine pKa.
+- **Asparagine, Glutamine** — the amide side chain is a very weak donor.
+- **Arginine** — the guanidinium group (pKa ~12.5) is almost never deprotonated and is a poor metal ligand.
+- **Proline** — the secondary amine (pKa 10.46) is sterically constrained.
+
+## Reasoning Framework from pKa Data
+
+The key predictive factors derived from the SRD-46 pKa data are:
+
+1. **Donor atom softness**: S⁻ (thiolate) > N (imidazole) > N (amine) > O⁻ (carboxylate). Zn²⁺ is borderline-soft per HSAB theory and strongly prefers thiolate and imidazole donors.
+
+2. **pKa and proton competition**: Lower side-chain pKa means the donor is deprotonated and available for metal binding at lower pH. Cysteine's thiol (pKa 8.18) and histidine's imidazole (pKa 6.05) are both accessible near physiological pH, while lysine's ε-amino (pKa 10.66) and arginine's guanidinium remain protonated.
+
+3. **Chelate effect**: Amino acids that can coordinate through three sites (tridentate: α-NH₂ + COO⁻ + side chain donor) form more stable complexes than bidentate ones. Cysteine and histidine both achieve this with optimal 5-membered chelate rings.
+
+4. **General trend**: Among the 20 amino acids, the predicted stability order with Zn²⁺ would be:
+   **Cys > His >> Asp ≈ Glu > Tyr > Lys > Gly ≈ Ala ≈ other aliphatics > Asn ≈ Gln > Arg**
+
+This analysis perfectly mirrors biological reality — zinc metalloenzymes and zinc finger proteins overwhelmingly coordinate through **cysteine and histidine** residues, exactly as the pKa and donor-type trends from SRD-46 would predict. If any amino acid were hypothetically unstudied with Zn²⁺, **cysteine** would be the clear frontrunner prediction for the most stable complex, followed closely by **histidine**.
+
+---
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes)*
+
+---

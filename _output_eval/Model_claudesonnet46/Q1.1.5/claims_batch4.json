@@ -1,0 +1,761 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudesonnet46\\Q1.1.5\\Q1.1.5_result_batch4.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "## Oxalic Acid — pKa Values from NIST SRD-46\n\n**Oxalic acid** (Ethanedioic acid, SMILES: `O=C(O)C(=O)O`) is a **diprotic acid** with **two dissociation steps**:\n\n| Step | Equilibrium | pKa | T (°C) | I (M) |\n|------|-------------|-----|--------|-------|\n| 1st dissociation | H₂L → HL⁻ + H⁺ | **−1.2** | 25 | 0.1 |\n| 2nd dissociation | HL⁻ → L²⁻ + H⁺ | **3.8** | 25 | 0.1 |",
+        "claims": [
+          {
+            "start": 3,
+            "end": 16,
+            "text": "Oxalic Acid —",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 17,
+            "end": 44,
+            "text": "pKa Values from NIST SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 63,
+            "end": 79,
+            "text": "Ethanedioic acid",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 81,
+            "end": 103,
+            "text": "SMILES: `O=C(O)C(=O)O`",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 133,
+            "end": 159,
+            "text": "**two dissociation steps**",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 254,
+            "end": 313,
+            "text": "| 1st dissociation | H₂L → HL⁻ + H⁺ | **−1.2** | 25 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 314,
+            "end": 372,
+            "text": "| 2nd dissociation | HL⁻ → L²⁻ + H⁺ | **3.8** | 25 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_8872",
+              "vlm_151532",
+              "vlm_151494"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "search_pka_values — 2 row(s) … | -1.2 | 25 | 0.1 … | 3.8 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "## search_pka_values — 2 row(s)\n| vlm_id | ligand_id | ligand_name | … | pKa | T°C | I(M) |\n| vlm_151532 | ligand_8872 | Ethanedioic acid (Oxalic acid) | … | -1.2 | 25 | 0.1 |\n| vlm_151494 | ligand_8872 | … | 3.8 | 25 | 0.1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_8872"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "| ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | Carboxylic acids diacids | 394 | `O=C(O)C(=O)O` | (-inf, H2L, -1.2, HL, 3.8, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_8872"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_8872 … smiles | O=C(O)C(=O)O",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "| ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | … | `O=C(O)C(=O)O` | … |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_8872",
+              "vlm_151532",
+              "vlm_151494"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Two pKa rows found: -1.2 and 3.8 (both at 25 °C, I 0.1) → two dissociation steps.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151532 | … | pKa | -1.2 | T°C 25 | I(M) 0.1 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151494 | … | pKa | 3.8 | T°C 25 | I(M) 0.1 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "pka_brackets | (-inf, H2L, -1.2, HL, 3.8, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "vlm_151532"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_151532 … pKa -1.2 | T°C 25 | I(M) 0.1 | bracket HL→H2L",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151532 | ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | O=C(O)C(=O)O | -1.2 | 25 | 0.1 | HL→H2L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "vlm_151494"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_151494 … pKa 3.8 | T°C 25 | I(M) 0.1 | bracket L→HL",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151494 | ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | O=C(O)C(=O)O | 3.8 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "### Key Findings\n\n- **Two dissociation steps** are confirmed (H₂L → HL⁻ → L²⁻), consistent with oxalic acid being a dicarboxylic acid.\n- **pKa₁ = −1.2** — This is unusually low (strongly acidic), meaning the first proton is released almost completely even in moderately acidic solutions. This reflects the strong electron-withdrawing effect of the adjacent carbonyl group.\n- **pKa₂ = 3.8** — The second dissociation is much weaker, as the negatively charged HL⁻ intermediate resists losing another proton.\n- The large gap (~5 pKa units) between the two steps is characteristic of dicarboxylic acids where the two carboxylate groups are adjacent (α-position), maximizing inductive destabilization of the dianion.\n\n> **Source:** NIST SRD-46 (ligand_8872, metal_68/H⁺), measured at 25 °C, I = 0.1 M (aqueous), with 56 total VLM entries across both steps.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 16,
+            "text": "### Key Findings",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 20,
+            "end": 60,
+            "text": "**Two dissociation steps** are confirmed",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 61,
+            "end": 78,
+            "text": "(H₂L → HL⁻ → L²⁻)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 80,
+            "end": 134,
+            "text": "consistent with oxalic acid being a dicarboxylic acid.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 137,
+            "end": 152,
+            "text": "**pKa₁ = −1.2**",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 155,
+            "end": 194,
+            "text": "This is unusually low (strongly acidic)",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 196,
+            "end": 287,
+            "text": "meaning the first proton is released almost completely even in moderately acidic solutions.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 288,
+            "end": 372,
+            "text": "This reflects the strong electron-withdrawing effect of the adjacent carbonyl group.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 375,
+            "end": 389,
+            "text": "**pKa₂ = 3.8**",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 392,
+            "end": 430,
+            "text": "The second dissociation is much weaker",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 432,
+            "end": 505,
+            "text": "as the negatively charged HL⁻ intermediate resists losing another proton.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 508,
+            "end": 558,
+            "text": "The large gap (~5 pKa units) between the two steps",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 559,
+            "end": 657,
+            "text": "is characteristic of dicarboxylic acids where the two carboxylate groups are adjacent (α-position)",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 659,
+            "end": 711,
+            "text": "maximizing inductive destabilization of the dianion.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 715,
+            "end": 726,
+            "text": "**Source:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 727,
+            "end": 738,
+            "text": "NIST SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 739,
+            "end": 765,
+            "text": "(ligand_8872, metal_68/H⁺)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 767,
+            "end": 784,
+            "text": "measured at 25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 786,
+            "end": 795,
+            "text": "I = 0.1 M",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 796,
+            "end": 805,
+            "text": "(aqueous)",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 807,
+            "end": 851,
+            "text": "with 56 total VLM entries across both steps.",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_8872",
+              "beta_def_32",
+              "beta_def_79",
+              "vlm_151532",
+              "vlm_151494"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_32 … [HL] + [H] <=> [H2L] … | 18 ; beta_def_79 … [L] + [H] <=> [HL] … | 38",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_32 | [H2L]/[HL][H] | [HL] + [H] <=> [H2L] | … | 18\nbeta_def_79 | [HL]/[L][H] | [L] + [H] <=> [HL] | … | 38"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151532 | … | pKa | -1.2 | 25 | 0.1 | HL→H2L\nvlm_151494 | … | pKa | 3.8 | 25 | 0.1 | L→HL"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_8872",
+              "beta_def_32",
+              "beta_def_79"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "pka_brackets | (-inf, H2L, -1.2, HL, 3.8, L, +inf)",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | … | pka_brackets: (-inf, H2L, -1.2, HL, 3.8, L, +inf)"
+              },
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "[HL] + [H] <=> [H2L] ; [L] + [H] <=> [HL]"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_8872"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_class | Carboxylic acids diacids",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "ligand_8872 | Ethanedioic acid (Oxalic acid) | … | ligand_class | Carboxylic acids diacids"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "vlm_151532",
+              "ligand_8872"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_151532 … pKa | -1.2 | T°C 25 | I(M) 0.1 | bracket HL→H2L",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151532 | ligand_8872 | Ethanedioic acid (Oxalic acid) | … | pKa | -1.2 | 25 | 0.1 | HL→H2L"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "The database provides pKa=-1.2 but does not label it as “unusually low”; this qualitative assessment is domain knowledge.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "… pKa | -1.2 | 25 | 0.1 | HL→H2L"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Extent of proton release at given acidity is an interpretation; not stated in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Attribution to electron-withdrawing carbonyls is explanatory chemistry; not recorded in SRD-46 entries.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "vlm_151494",
+              "ligand_8872"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_151494 … pKa | 3.8 | T°C 25 | I(M) 0.1 | bracket L→HL",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151494 | ligand_8872 | Ethanedioic acid (Oxalic acid) | … | pKa | 3.8 | 25 | 0.1 | L→HL"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "vlm_151532",
+              "vlm_151494"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "pKa1 -1.2 vs pKa2 3.8 indicates the second dissociation is weaker.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "… pKa | -1.2 | 25 | 0.1 | HL→H2L"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "… pKa | 3.8 | 25 | 0.1 | L→HL"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Reason for weaker second dissociation (charge effects) is explanatory; not in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "vlm_151532",
+              "vlm_151494"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Difference between pKa values: 3.8 − (−1.2) ≈ 5.0",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "… pKa | -1.2 | 25 | 0.1 | HL→H2L"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "… pKa | 3.8 | 25 | 0.1 | L→HL"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Characterization of α-dicarboxylic acids is general chemistry; not a database row.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Inductive destabilization discussion is explanatory; not present in SRD-46 entries.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Tool results for this run are sourced from NIST Standard Reference Database 46 (SRD-46).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [
+              "ligand_8872",
+              "metal_68"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_8872 | Ethanedioic acid (Oxalic acid) … ; metal_68 | H^[+]",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | …"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "metal_68 | H^[+] | H | 1 | ✓ | [H+]"
+              }
+            ]
+          },
+          {
+            "claim_index": 17,
+            "canonical_ids": [
+              "vlm_151532",
+              "vlm_151494"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "T°C | 25 for both pKa entries",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151532 … pKa | -1.2 | 25 | 0.1 | HL→H2L"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151494 … pKa | 3.8 | 25 | 0.1 | L→HL"
+              }
+            ]
+          },
+          {
+            "claim_index": 18,
+            "canonical_ids": [
+              "vlm_151532",
+              "vlm_151494"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "I(M) | 0.1 for both pKa entries",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151532 … | I(M) | 0.1 | …"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "vlm_151494 … | I(M) | 0.1 | …"
+              }
+            ]
+          },
+          {
+            "claim_index": 19,
+            "canonical_ids": [
+              "beta_def_32",
+              "beta_def_79"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "phases | [H2L](aqueous), [HL](aqueous), [H](aqueous) … and [HL](aqueous), [L](aqueous), [H](aqueous)",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "… phases | [H2L](aqueous), [HL](aqueous), [H](aqueous)"
+              },
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "… phases | [HL](aqueous), [L](aqueous), [H](aqueous)"
+              }
+            ]
+          },
+          {
+            "claim_index": 20,
+            "canonical_ids": [
+              "ligand_8872",
+              "metal_68",
+              "beta_def_32",
+              "beta_def_79"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "entries: 56 | species: 2 | vlm_count: 56 ; n_entries: 18 and 38 across the two steps",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "H^[+] + Ethanedioic acid (Oxalic acid) … entries: 56 | species: 2 | vlm_count: 56"
+              },
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_32 … | … | 18\nbeta_def_79 … | … | 38"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+# Stability Constants for the Copper(II)–Glycine System
+
+**Source:** NIST Standard Reference Database 46 (SRD-46)
+
+The Cu²⁺–glycine (aminoacetic acid) system has **30 measurements** covering two complex species: **CuL** (1:1) and **CuL₂** (1:2). The data include log K values, enthalpies (ΔH), and entropies (ΔS) under various conditions.
+
+---
+
+## Overall Formation Constants (log K)
+
+### CuL — Cu²⁺ + L⁻ ⇌ CuL (β₁)
+
+| T (°C) | I (mol/L) | log K | VLM ID |
+|--------|-----------|-------|--------|
+| 10 | 0 | 8.80 | vlm_93853 |
+| **25** | **0** | **8.56** | **vlm_93854** |
+| 25 | 0.1 | 8.19 | vlm_93847 |
+| 25 | 0.5 | 8.10 | vlm_93849 |
+| 25 | 1.0 | 8.20 | vlm_93850 |
+| 25 | 2.0 | 8.38 | vlm_93851 |
+| 25 | 2.5 | 8.34 | vlm_93852 |
+| 37 | 0.15 | 7.99 | vlm_93848 |
+| 40 | 0 | 8.37 | vlm_93855 |
+
+### CuL₂ — Cu²⁺ + 2L⁻ ⇌ CuL₂ (β₂)
+
+| T (°C) | I (mol/L) | log K | VLM ID |
+|--------|-----------|-------|--------|
+| 10 | 0 | 16.30 | vlm_93868 |
+| **25** | **0** | **15.70** | **vlm_93869** |
+| 25 | 0.1 | 15.10 | vlm_93862 |
+| 25 | 0.5 | 15.00 | vlm_93864 |
+| 25 | 1.0 | 15.10 | vlm_93865 |
+| 25 | 2.0 | 15.40 | vlm_93866 |
+| 25 | 2.5 | 15.40 | vlm_93867 |
+| 37 | 0.15 | 14.69 | vlm_93863 |
+| 40 | 0 | 15.30 | vlm_93870 |
+
+---
+
+## Thermodynamic Parameters (at 25 °C, I = 0)
+
+| Species | log K | ΔH (kJ/mol) | ΔS (J/mol·K) |
+|---------|-------|-------------|---------------|
+| CuL | 8.56 | −25.1 | 79.5 |
+| CuL₂ | 15.70 | −54.4 | 118.0 |
+
+---
+
+## Key Observations
+
+- **Reference values at 25 °C, I = 0:** log β₁ = **8.56** and log β₂ = **15.70**, giving a stepwise log K₂ ≈ 7.14. The modest drop from K₁ to K₂ reflects the well-known ability of glycine to occupy two coordination sites via its amino and carboxylate groups, leaving room for a second chelate ring in the square-planar CuL₂ complex.
+
+- **Ionic strength effect:** Increasing ionic strength from 0 to ~0.5 M lowers log K by roughly 0.4–0.7 units (activity coefficient effects), but at higher I the values partially recover — a pattern consistent with specific ion interactions in concentrated electrolyte media.
+
+- **Temperature dependence:** The negative ΔH values confirm that complex formation is exothermic, while the large positive ΔS (driven by desolvation of Cu²⁺ and glycinate) ensures that the reaction is strongly favoured at all temperatures studied (10–40 °C). The slight decrease in log K with rising temperature is consistent with the Le Chatelier prediction for an exothermic process.
+
+---

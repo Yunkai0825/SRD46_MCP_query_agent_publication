@@ -1,0 +1,126 @@
+# Survey of Fe(II) and Fe(III) Ligand Systems in NIST SRD-46
+
+## Database Coverage
+
+| Property | Fe³⁺ (metal_61) | Fe²⁺ (metal_62) |
+|----------|-----------------|-----------------|
+| **Ligand partners** | 406 | 217 |
+| **β-definitions** | 128 | 57 |
+| **VLM measurements** | 1,473 | 667 |
+
+Fe(III) has roughly twice the coverage of Fe(II), reflecting its greater importance in environmental, biological, and industrial chemistry.
+
+---
+
+## Ligand-Class Distribution (Top Classes by Measurement Count)
+
+### Fe(III) — Dominant Ligand Classes
+
+| Ligand Class | VLM Count | % |
+|---|---|---|
+| Inorganic ligands (F⁻, Cl⁻, OH⁻, SCN⁻, N₃⁻) | 198 | 13.4% |
+| Catechols | 140 | 9.5% |
+| Hydroxamic acids | 124 | 8.4% |
+| Amino acids | 116 | 7.9% |
+| EDTA & derivatives | 106 | 7.2% |
+| Aliphatic amines | 102 | 6.9% |
+| Phenols / salicylic acids | 99 | 6.7% |
+| Phenols | 67 | 4.6% |
+| Carboxylic acids | 61 | 4.1% |
+| NTA & derivatives | 45 | 3.1% |
+
+### Fe(II) — Dominant Ligand Classes
+
+| Ligand Class | VLM Count | % |
+|---|---|---|
+| Amino acids | 101 | 15.1% |
+| EDTA & derivatives | 78 | 11.7% |
+| Inorganic ligands | 75 | 11.2% |
+| Phenanthrolines | 33 | 5.0% |
+| Aminophosphorus acids | 31 | 4.7% |
+| Bipyridines | 30 | 4.5% |
+| NTA & derivatives | 29 | 4.4% |
+| Pyridines (azines) | 28 | 4.2% |
+| Pyridine carboxylic acids | 24 | 3.6% |
+| Aza-macrocycles | 16 | 2.4% |
+
+---
+
+## Key Stability-Constant Trends
+
+### Highest-Stability Systems Observed
+
+| Metal | Ligand Class | Representative Ligands | Relative log K | Thermodynamic Driver |
+|---|---|---|---|---|
+| **Fe³⁺** | Catechols / siderophores | Enterobactin-type tris-catecholates | Very high (log β ~ 40–49) | Hard–hard O⁻ donors + chelate effect |
+| **Fe³⁺** | Hydroxamic acids | Desferrioxamine, rhodotorulic acid | Very high (log β ~ 25–30) | Hard O-donors, 5-membered chelate rings |
+| **Fe³⁺** | EDTA & polyaminocarboxylates | EDTA, DTPA | High (log K ~ 25–28) | Hexadentate chelate effect |
+| **Fe³⁺** | Phenols / salicylates | Salicylaldehyde, substituted phenols | Moderate–high (log K ~ 6–16) | Hard phenolate O⁻ donors |
+| **Fe³⁺** | Carboxylic acids | Oxalate, citrate, acetate | Moderate (log K₁ ~ 1–8) | Hard carboxylate O-donors |
+| **Fe³⁺** | Inorganic (F⁻) | Fluoride | Moderate (log K₁ ~ 6) | Hardest halide → hardest acid |
+| **Fe²⁺** | Phenanthrolines | 1,10-Phenanthroline, 5-Me-phen | Very high (log K₁ ~ 5–6, log β₃ ~ 21) | π-backbonding, low-spin stabilisation |
+| **Fe²⁺** | Bipyridines | 2,2′-Bipyridyl | Very high (log β₃ ~ 17) | Same as phenanthrolines |
+| **Fe²⁺** | CN⁻ | Cyanide | Extremely high (log β₆ ~ 35) | Strong-field, π-acceptor, low-spin d⁶ |
+| **Fe²⁺** | EDTA & derivatives | EDTA, CyDTA | High (log K ~ 14–16) | Chelate effect, mixed N/O donors |
+| **Fe²⁺** | Thiolates | BAL (dimercaptopropanol) | Moderate–high | Soft S-donors match borderline Fe²⁺ |
+
+---
+
+## Thermodynamic Reasoning
+
+### 1. Hard/Soft Acid–Base (HSAB) Theory
+
+Fe³⁺ is a **hard Lewis acid** (small, highly charged, d⁵). It shows the strongest affinity for **hard oxygen donors**:
+
+- **Catecholates / phenolates** (charged O⁻): log K values for Fe³⁺ far exceed those for Fe²⁺ with the same ligands. The database shows 140 catechol entries for Fe³⁺ vs. only 15 for Fe²⁺.
+- **Hydroxamates**: 124 entries for Fe³⁺ vs. 9 for Fe²⁺ — nature exploits this in siderophores.
+- **Fluoride**: Fe³⁺–F⁻ is a classic hard–hard pair (log K₁ ≈ 6); Fe²⁺–F⁻ is far weaker.
+
+Fe²⁺ is a **borderline acid** (larger, lower charge, d⁶). It favours **softer N-donors and π-acceptors**:
+
+- **Phenanthrolines and bipyridines** dominate the Fe²⁺ landscape (33 + 30 entries) but are nearly absent for Fe³⁺ (11 + 0). The soft π-accepting N-heterocycles stabilise the electron-rich Fe²⁺ centre.
+- **Thiolates** (S-donors): present for Fe²⁺ (mercaptans, thia-macrocycles) but essentially absent for Fe³⁺.
+
+### 2. Crystal-Field / Ligand-Field Effects
+
+| | Fe³⁺ (d⁵ high-spin) | Fe²⁺ (d⁶) |
+|---|---|---|
+| **CFSE (high-spin, Oh)** | 0 Dq | −4 Dq |
+| **CFSE (low-spin, Oh)** | −20 Dq + 2P | −24 Dq + 3P |
+| **Spin-state switching** | Rare | Common with strong-field ligands |
+
+- Fe²⁺ with **CN⁻, phen, bipy** achieves a **low-spin d⁶ (t₂g⁶)** configuration — a filled, maximally stabilised subshell. This provides an enormous extra CFSE (≈ −24 Dq), explaining the exceptionally high log β₃ for [Fe(phen)₃]²⁺ and log β₆ for [Fe(CN)₆]⁴⁻.
+- Fe³⁺ in high-spin d⁵ has **zero CFSE**, so crystal-field stabilisation contributes nothing extra — its binding is driven purely by electrostatics and covalency with hard donors.
+
+### 3. Chelate Effect
+
+Both oxidation states show dramatic stability increases with polydentate ligands:
+
+- **EDTA** (hexadentate): log K(Fe³⁺) ≈ 25, log K(Fe²⁺) ≈ 14 — both far exceed monodentate analogues.
+- **Siderophore tris-catecholates** (hexadentate O₆): log β ≈ 49 for Fe³⁺, the highest values in the database.
+- **Aza-macrocycles with carboxylates** (DOTA-type): 42 entries for Fe³⁺, 18 for Fe²⁺ — preorganised cavities add a macrocyclic effect on top of the chelate effect.
+
+### 4. Edge Cases and Anomalies
+
+| Edge Case | Explanation |
+|---|---|
+| **Fe²⁺–CN⁻ ≫ Fe³⁺–CN⁻** | CN⁻ is a strong π-acceptor; Fe²⁺ (more electron-rich) back-donates into CN π*, yielding enormous synergistic stabilisation. Fe³⁺–CN⁻ is weaker despite higher charge. |
+| **Fe³⁺–catechol ≫ Fe²⁺–catechol** | Catecholate is a hard dianionic O-donor; Fe³⁺ wins on electrostatics. Additionally, Fe²⁺ can reduce catechol (redox non-innocence), complicating measurements. |
+| **Fe³⁺–hydroxamate dominance** | Biological siderophores (desferrioxamine, rhodotorulic acid) are optimised for Fe³⁺ scavenging — the database's 124 hydroxamate entries for Fe³⁺ reflect decades of biomimetic research. |
+| **Fe²⁺–thia-macrocycles** | Soft S-donor macrocycles appear only for Fe²⁺ (4 entries), consistent with its borderline softness. |
+| **Δlog K (Fe³⁺ − Fe²⁺) for EDTA ≈ +11** | The ~10¹¹ selectivity for Fe³⁺ over Fe²⁺ with the same hexadentate ligand reflects the z²/r advantage of the tripositive ion with hard carboxylate O-donors. |
+
+---
+
+## Summary
+
+The SRD-46 data paint a textbook-consistent picture:
+
+1. **Fe³⁺ (hard acid)** → strongest with **O-donor ligands** (catecholates > hydroxamates > phenolates > carboxylates > F⁻), driven by electrostatic hard–hard matching and zero CFSE dependence.
+2. **Fe²⁺ (borderline acid)** → strongest with **N-heterocyclic π-acceptors** (CN⁻ > phen > bipy > terpyridine), driven by π-backbonding and low-spin d⁶ crystal-field stabilisation.
+3. **Both ions** benefit enormously from the **chelate and macrocyclic effects**, with hexadentate ligands (EDTA, siderophores) topping their respective rankings.
+4. The **crossover** between Fe³⁺ and Fe²⁺ preferences is the single most striking feature: the same metal element, differing by one electron, switches from O-philic to N-philic — a direct manifestation of HSAB theory and ligand-field physics.
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).*
+
+---

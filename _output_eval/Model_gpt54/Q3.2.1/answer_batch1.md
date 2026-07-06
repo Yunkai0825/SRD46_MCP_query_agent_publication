@@ -1,0 +1,34 @@
+SRD-46 does **not appear to provide an explicit stepwise \(K_2\)** entry for Cu²⁺–glycine in this resolved system. The database entries available here are:
+
+| Quantity | Definition in SRD-46 | Example reported values |
+|---|---|---|
+| \(K_1\) / \(\beta_1\) | \([M] + [L] \rightleftharpoons [ML]\) (`beta_def_812`) | logK = 8.56 at 25 °C, I = 0 |
+| \(\beta_2\) | \([M] + 2[L] \rightleftharpoons [ML_2]\) (`beta_def_840`) | logK = 15.7 at 25 °C, I = 0 |
+
+So, with the data retrieved, I can confirm:
+
+| Condition | log \(K_1\) | log \(\beta_2\) reported directly |
+|---|---:|---:|
+| 10 °C, I = 0 | 8.8 | 16.3 |
+| 25 °C, I = 0 | 8.56 | 15.7 |
+| 25 °C, I = 0.1 | 8.19 | 15.1 |
+| 25 °C, I = 0.5 | 8.1 | 15.0 |
+| 25 °C, I = 1.0 | 8.2 | 15.1 |
+| 25 °C, I = 2.0 | 8.38 | 15.4 |
+| 25 °C, I = 2.5 | 8.34 | 15.4 |
+| 37 °C, I = 0.15 | 7.99 | 14.69 |
+| 40 °C, I = 0 | 8.37 | 15.3 |
+
+For a true estimate,
+\[
+\beta_2 = K_1K_2
+\quad\text{or}\quad
+\log \beta_2 = \log K_1 + \log K_2
+\]
+but **an explicit \(K_2\) value was not found** in the SRD-46 records returned for Cu²⁺–glycine, so a non-tautological estimate of \(\beta_2\) from stepwise constants alone cannot be completed from this dataset slice.
+
+The **directly reported** overall \(\beta_2\) values are therefore the valid database values to use; for example, at **25 °C and I = 0**, **log \(\beta_2 = 15.7\)**. Since \(K_2\) is not explicitly reported here, any estimate using \(K_2 = \beta_2/K_1\) would just reproduce the database \(\beta_2\) by construction and would not be an independent comparison.
+
+*Source: NIST SRD-46 (Cu²⁺ / glycine stability entries for `beta_def_812` and `beta_def_840`).*
+
+---

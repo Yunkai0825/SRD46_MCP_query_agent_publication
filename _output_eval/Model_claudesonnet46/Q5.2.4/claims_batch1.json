@@ -1,0 +1,850 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudesonnet46\\Q5.2.4\\Q5.2.4_result_batch1.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "## Result: No Stability Constant Found for Pu(IV) + Aspirin\n\nAfter a thorough search of the **NIST SRD-46** database, **no stability constant exists for plutonium(IV) with aspirin (acetylsalicylic acid / 2-acetoxybenzoic acid)**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 10,
+            "text": "## Result:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 11,
+            "end": 59,
+            "text": "No Stability Constant Found for Pu(IV) + Aspirin",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 61,
+            "end": 117,
+            "text": "After a thorough search of the **NIST SRD-46** database,",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 120,
+            "end": 179,
+            "text": "no stability constant exists for plutonium(IV) with aspirin",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 181,
+            "end": 225,
+            "text": "acetylsalicylic acid / 2-acetoxybenzoic acid",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_8701",
+              "ligand_10913"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "search_stability — (no results) for Pu4+ + 2-Acetoxybenzoic acid (Aspirin).",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "Args: {\"where\": \"(c.metal_id = metal_149 AND c.ligand_id = ligand_8701)\"}\n## search_stability\n*(no results)*"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "Args: {\"metal_id\": \"metal_149\", \"ligand_id\": \"ligand_8701\"}\n## build_system_catalog\n*(no pairs found)*"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Args: {\"metal_id\": \"metal_149\", \"ligand_id\": \"ligand_10913\"}\n## build_system_catalog\n*(no pairs found)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Multiple database tool queries were executed (search_metals, search_ligands, build_system_catalog, search_stability), indicating a search of SRD-46.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "Args: {\"name\": \"plutonium\"}\n## search_metals — 4 result(s)\n| metal_149 | Pu^[4+] | Pu | 4 | ✓ | [Pu+4] | InChI=1S/Pu/q+4 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_ligands",
+                "snippet": "Args: {\"name\": \"acetylsalicyl\"}\n## search_ligands — 2 result(s)\n| ligand_8701 | 2-Acetoxybenzoic acid (Acetylsalicylic acid) | HL | ..."
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "Args: {\"where\": \"(c.metal_id = metal_149 AND c.ligand_id = ligand_8701)\"}\n## search_stability\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_8701",
+              "ligand_10913"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "No Pu(IV)–aspirin stability constants found: search_stability returned (no results).",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "Args: {\"where\": \"(c.metal_id = metal_149 AND c.ligand_id = ligand_8701)\"}\n## search_stability\n*(no results)*"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "Args: {\"metal_id\": \"metal_149\", \"ligand_id\": \"ligand_8701\"}\n## build_system_catalog\n*(no pairs found)*"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Args: {\"metal_id\": \"metal_149\", \"ligand_id\": \"ligand_10913\"}\n## build_system_catalog\n*(no pairs found)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_8701"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_8701 | 2-Acetoxybenzoic acid (Acetylsalicylic acid) | HL | Carboxylic acids keto",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "search_ligands",
+                "snippet": "| ligand_8701 | 2-Acetoxybenzoic acid (Acetylsalicylic acid) | HL | Carboxylic acids keto | 5 | `CC(=O)Oc1ccccc1C(=O)O` |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "inspect_card",
+                "snippet": "**Name:** 2-Acetoxybenzoic acid (Acetylsalicylic acid)\n**HxL definition:** HL"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "### What Was Checked\n\n| Step | Finding |\n|------|---------|\n| `ligand_8701` (2-Acetoxybenzoic acid / Aspirin) | 0 measurements with any Pu species |\n| `ligand_10913` (Aspirin, alternate entry) | 0 measurements with any metal |\n| `metal_149` (Pu⁴⁺) partner list | 11 ligands — aspirin is **not** among them |\n| Citation search for Pu + aspirin | No relevant literature found in SRD-46 |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 20,
+            "text": "### What Was Checked",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 60,
+            "end": 148,
+            "text": "| `ligand_8701` (2-Acetoxybenzoic acid / Aspirin) | 0 measurements with any Pu species |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 149,
+            "end": 226,
+            "text": "| `ligand_10913` (Aspirin, alternate entry) | 0 measurements with any metal |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 227,
+            "end": 307,
+            "text": "| `metal_149` (Pu⁴⁺) partner list | 11 ligands — aspirin is **not** among them |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 308,
+            "end": 385,
+            "text": "| Citation search for Pu + aspirin | No relevant literature found in SRD-46 |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_8701",
+              "metal_148",
+              "metal_149",
+              "metal_150",
+              "metal_151"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ligand_8701 card shows partners only with Cu2+, Mg2+, H+, Ca2+ (no Pu). search_stability(metal_149, ligand_8701): (no results).",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "inspect_card",
+                "snippet": "Partners: 4 metal(s), 5 measurement(s) total\n| metal_41 | Cu^[2+] | 2 |\n| metal_92 | Mg^[2+] | 1 |\n| metal_68 | H^[+] | 1 |\n| metal_25 | Ca^[2+] | 1 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_148 | Pu^[3+] | Pu | 3 | ✓ | [Pu+3] |\n| metal_149 | Pu^[4+] | Pu | 4 | ✓ | [Pu+4] |\n| metal_150 | PuO_[2]^[2+] | Pu | 2 |\n| metal_151 | PuO_[2]^[+] | Pu | 1 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_10913"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_10913 | Acetylsalicylic acid (Aspirin) | … | vlm_count 0",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "| ligand_10913 | Acetylsalicylic acid (Aspirin) | *** | Ligands not selected | 0 | *** | *** |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "## build_system_catalog\n*(no pairs found)*\nsummary: {'n_metals': 0, 'n_ligands': 0, 'n_pairs': 0, 'total_species': 0}"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_8701",
+              "ligand_10913"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_149 card: Partners: 11 ligand(s), 36 measurement(s) total; catalog with ligand_8701/10913: (no pairs found).",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "inspect_card",
+                "snippet": "Partners: 11 ligand(s), 36 measurement(s) total\n| ligand_10109 | Nitrate ion | 9 |\n| ligand_10076 | Hydroxide ion | 5 |\n| ligand_10162 | Hydrogen fluoride | 4 |\n| … | *(showing top 5 of 11)* |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "metal_149 + ligand_10913 → ## build_system_catalog\n*(no pairs found)*"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "metal_149 + ligand_8701 → ## build_system_catalog\n*(no pairs found)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No tool step shows a combined 'Pu + aspirin' citation query; Step 12 searched only for 'plutonium' or 'Pu', so absence of hits for both cannot be verified.",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_citations",
+                "snippet": "Args.where: (la.citation LIKE '%plutonium%' OR la.citation LIKE '%Pu%') … ## search_citations — 10 row(s)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "### What Pu(IV) *Does* Have Data For (SRD-46)\n\n| Ligand | # Measurements |\n|--------|---------------|\n| Nitrate ion | 9 |\n| Hydroxide ion | 5 |\n| Hydrofluoric acid | 4 |\n| Hydrogen sulfate ion | 4 |\n| Acetylacetone | 4 |\n| *(6 more ligands)* | — |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 45,
+            "text": "### What Pu(IV) *Does* Have Data For (SRD-46)",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 102,
+            "end": 121,
+            "text": "| Nitrate ion | 9 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 122,
+            "end": 143,
+            "text": "| Hydroxide ion | 5 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 144,
+            "end": 169,
+            "text": "| Hydrofluoric acid | 4 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 170,
+            "end": 198,
+            "text": "| Hydrogen sulfate ion | 4 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 199,
+            "end": 220,
+            "text": "| Acetylacetone | 4 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 221,
+            "end": 247,
+            "text": "| *(6 more ligands)* | — |",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_10109"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_10109 | Nitrate ion | 9",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "inspect_card",
+                "snippet": "Metal | metal_149 — Pu^[4+]\n| ligand_id | Ligand | # meas |\n| ligand_10109 | Nitrate ion | 9 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_10076"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_10076 | Hydroxide ion | 5",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "inspect_card",
+                "snippet": "Metal | metal_149 — Pu^[4+]\n| ligand_id | Ligand | # meas |\n| ligand_10076 | Hydroxide ion | 5 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_10162"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_10162 | Hydrogen fluoride (Hydrofluoric acid) | 4",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "inspect_card",
+                "snippet": "Metal | metal_149 — Pu^[4+]\n| ligand_id | Ligand | # meas |\n| ligand_10162 | Hydrogen fluoride (Hydrofluoric acid) | 4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_10148"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_10148 | Hydrogen sulfate ion (Sulfuric acid) | 4",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "inspect_card",
+                "snippet": "Metal | metal_149 — Pu^[4+]\n| ligand_id | Ligand | # meas |\n| ligand_10148 | Hydrogen sulfate ion (Sulfuric acid) | 4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_9526"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_9526 | Pentane-2,4-dione (Acetylacetone) | 4",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "inspect_card",
+                "snippet": "Metal | metal_149 — Pu^[4+]\n| ligand_id | Ligand | # meas |\n| ligand_9526 | Pentane-2,4-dione (Acetylacetone) | 4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_149"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Partners: 11 ligand(s)… | … | *(showing top 5 of 11)* |",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "inspect_card",
+                "snippet": "Partners: 11 ligand(s), 36 measurement(s) total\n| ligand_id | Ligand | # meas |\n... \n| … | *(showing top 5 of 11)* | |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "### Chemistry Context\n\nAspirin's only metal stability data in SRD-46 are with **Cu²⁺, Mg²⁺, and Ca²⁺** — biologically relevant metals. Pu(IV) is a highly charged, strongly hydrolyzing actinide (charge +4) that tends to form complexes with hard oxygen donors like fluoride, sulfate, nitrate, and β-diketones. While aspirin (pKₐ ≈ 3.45) carries a carboxylate group that could in principle coordinate Pu(IV), aspirin is also prone to hydrolysis to salicylate under aqueous conditions, which complicates any such measurement. It appears this system has simply not been studied and reported in the peer-reviewed literature captured by SRD-46.\n\n> **Source:** NIST SRD-46 (NIST Standard Reference Database 46 — Critically Selected Stability Constants of Metal Complexes)",
+        "claims": [
+          {
+            "start": 0,
+            "end": 21,
+            "text": "### Chemistry Context",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 23,
+            "end": 102,
+            "text": "Aspirin's only metal stability data in SRD-46 are with **Cu²⁺, Mg²⁺, and Ca²⁺**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 135,
+            "end": 192,
+            "text": "Pu(IV) is a highly charged, strongly hydrolyzing actinide",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 194,
+            "end": 203,
+            "text": "charge +4",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 210,
+            "end": 257,
+            "text": "tends to form complexes with hard oxygen donors",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 263,
+            "end": 306,
+            "text": "fluoride, sulfate, nitrate, and β-diketones",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 323,
+            "end": 333,
+            "text": "pKₐ ≈ 3.45",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 368,
+            "end": 404,
+            "text": "could in principle coordinate Pu(IV)",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 406,
+            "end": 480,
+            "text": "aspirin is also prone to hydrolysis to salicylate under aqueous conditions",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 482,
+            "end": 521,
+            "text": "which complicates any such measurement.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 522,
+            "end": 637,
+            "text": "It appears this system has simply not been studied and reported in the peer-reviewed literature captured by SRD-46.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 641,
+            "end": 763,
+            "text": "**Source:** NIST SRD-46 (NIST Standard Reference Database 46 — Critically Selected Stability Constants of Metal Complexes)",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_8701",
+              "metal_41",
+              "metal_92",
+              "metal_25"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Partners (ligand_8701): metal_41 Cu^[2+] | 2; metal_92 Mg^[2+] | 1; metal_25 Ca^[2+] | 1",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "inspect_card",
+                "snippet": "Partners: 4 metal(s), 5 measurement(s) total\n| metal_id | Metal | # meas |\n| metal_41 | Cu^[2+] | 2 |\n| metal_92 | Mg^[2+] | 1 |\n| metal_68 | H^[+] | 1 |\n| metal_25 | Ca^[2+] | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_149"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "DB shows Pu^[4+] and hydroxide complexes, consistent with a strongly hydrolyzing actinide; ‘strongly hydrolyzing’ not stated verbatim.",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "inspect_card",
+                "snippet": "Name: Pu^[4+] … Partners … | ligand_id | Ligand | # meas |\n| ligand_10076 | Hydroxide ion | 5 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_149"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Charge: 4",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "inspect_card",
+                "snippet": "Name: Pu^[4+]\nSymbol: Pu | Charge: 4\nSMILES: [Pu+4]"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_10109",
+              "ligand_10148",
+              "ligand_9526"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Pu^[4+] partners include oxygen donors: Nitrate ion | 9; Hydrogen sulfate ion | 4; Pentane-2,4-dione (Acetylacetone) | 4.",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "inspect_card",
+                "snippet": "| ligand_id | Ligand | # meas |\n| ligand_10109 | Nitrate ion | 9 |\n| ligand_10148 | Hydrogen sulfate ion (Sulfuric acid) | 4 |\n| ligand_9526 | Pentane-2,4-dione (Acetylacetone) | 4 |"
+              },
+              {
+                "step": "Step 13",
+                "tool": "inspect_card",
+                "snippet": "Functional groups across all ligand partners …\n| carboxyl | 2 | 33% | … | sulfonate | 2 | 33% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_10162",
+              "ligand_10148",
+              "ligand_10109",
+              "ligand_9526"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Pu^[4+] partners list: Hydrogen fluoride | 4; Hydrogen sulfate ion | 4; Nitrate ion | 9; Pentane-2,4-dione (Acetylacetone) | 4.",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "inspect_card",
+                "snippet": "| ligand_id | Ligand | # meas |\n| ligand_10162 | Hydrogen fluoride (Hydrofluoric acid) | 4 |\n| ligand_10148 | Hydrogen sulfate ion (Sulfuric acid) | 4 |\n| ligand_10109 | Nitrate ion | 9 |\n| ligand_9526 | Pentane-2,4-dione (Acetylacetone) | 4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "ligand_8701",
+              "vlm_149911"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_149911 | 3.45 | 37.0 | 0.15 | L → HL",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "inspect_card",
+                "snippet": "pKa values:\n| source_vlm | pKa | T (°C) | I (M) | From → To |\n| vlm_149911 | 3.45 | 37.0 | 0.15 | L → HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "ligand_8701",
+              "metal_149"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Plausible coordination: aspirin has a carboxylate; Pu(IV) forms complexes with O-donor ligands. Not directly stated in SRD-46 rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "inspect_card",
+                "snippet": "Functional groups across all ligand partners … | carboxyl | 2 | 33% |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "inspect_card",
+                "snippet": "Ligand (aspirin) class: Carboxylic acids keto; HxL definition: HL"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "SRD-46 tool results do not report hydrolysis kinetics for aspirin; hydrolysis to salicylate in water is general chemistry knowledge.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "No SRD-46 row states this; experimental complication from aspirin hydrolysis is general domain reasoning.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_8701"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "build_system_catalog: (no pairs found) for Pu^[4+] + acetylsalicylic acid; search_stability: (no results).",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "## build_system_catalog\n*(no pairs found)*\nsummary: {'n_metals': 0, 'n_ligands': 0, 'n_pairs': 0, 'total_species': 0}"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "This run’s tool outputs are from NIST SRD-46 (Critically Selected Stability Constants of Metal Complexes), per database provenance for this task.",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "inspect_card",
+                "snippet": "Example SRD-46 content in this run (metal card): Name: Pu^[4+]; Partners … (nitrate, sulfate, HF, acetylacetone)."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

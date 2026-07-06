@@ -1,0 +1,17 @@
+# Q3.1.5 - Validation (batch 1)
+
+**11 of 109 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 0 | property_attribution | the ligands below are good candidates to “mask” Ca2+ | ...and common hard/soft donor preferences, the ligands below are good candidates to “mask” Ca2+ while interacting relatively weakly wit... |
+| 2 | 0 | property_attribution | interacting relatively weakly with Cu2+ under typical aqueous conditions. | ...re good candidates to “mask” Ca2+ while interacting relatively weakly with Cu2+ under typical aqueous conditions. Where available, I note SRD‑46 coverage... |
+| 3 | 2 | property_attribution | not selective. | ...gand_8872). Cu2+ forms strong chelates; not selective. - Citrate (ligand_9058) and tartrate (l... |
+| 4 | 2 | property_attribution | these will not preferentially mask Ca2+. | ...d_8956). Cu2+ chelation is significant; these will not preferentially mask Ca2+. - Phosphonates such as HEDP/etidronate ... |
+| 5 | 2 | property_attribution | not ideal when you need weak Cu2+ interaction. | ...hibitors, but Cu2+ also binds strongly; not ideal when you need weak Cu2+ interaction. - Macrocycles 18‑crown‑6 (ligand_9676) ... |
+| 6 | 2 | property_attribution | these are not reliable Ca‑selective masks in trace Cu analysis. | ...plexes with donor nitrogens/oxygens, so these are not reliable Ca‑selective masks in trace Cu analysis.... |
+| 7 | 5 | listing | \| Diphosphate (ligand_10114) \| Recommended \| Polyphosphate; good Ca2+ sequestrant; typically less Cu2+ competition than with carboxylates. \| | ...low I; widely used to sequester Ca2+. \| \| Diphosphate (ligand_10114) \| Recommended \| Polyphosphate; good Ca2+ sequestrant; typically less Cu2+ competition than with carboxylates. \| \| Triphosphate (ligand_10117) \| Recomme... |
+| 8 | 5 | listing | \| Triphosphate (ligand_10117) \| Recommended \| As above; extended polyphosphate framework favors Ca2+. \| | ...+ competition than with carboxylates. \| \| Triphosphate (ligand_10117) \| Recommended \| As above; extended polyphosphate framework favors Ca2+. \| \| Carbonate (ligand_10096) \| Useful (pH... |
+| 9 | 5 | listing | \| Gluconate (ligand_8668), Lactate (ligand_8641) \| Mild \| Weak–moderate Ca2+ binding; Cu2+ interaction is usually limited but may not fully suppress Cu2+. \| | ...cipitation more pronounced than Cu2+. \| \| Gluconate (ligand_8668), Lactate (ligand_8641) \| Mild \| Weak–moderate Ca2+ binding; Cu2+ interaction is usually limited but may not fully suppress Cu2+. \| \| Oxalate (ligand_8872), Citrate (ligan... |
+| 10 | 5 | listing | \| 18‑crown‑6 (ligand_9676), Cryptand [2.2.2] (ligand_7601) \| Not preferred \| Not Ca‑selective in presence of Cu2+; Cu2+ can still be complexed. \| | ...a2+ and Cu2+ strongly; not selective. \| \| 18‑crown‑6 (ligand_9676), Cryptand [2.2.2] (ligand_7601) \| Not preferred \| Not Ca‑selective in presence of Cu2+; Cu2+ can still be complexed. \|... |
+| 11 | 6 | comparison | leaving transition‑metal signals less perturbed than with polycarboxylates. | ...they are often effective Ca‑masks while leaving transition‑metal signals less perturbed than with polycarboxylates.... |

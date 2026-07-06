@@ -1,0 +1,23 @@
+## Cu²⁺ + Chloride vs. Bromide: Stability Constant Comparison
+
+### Head-to-head: log K₁ for [M] + [L] ⇌ [ML] at 25 °C
+
+Both systems use the same equilibrium definition (**beta_def_812**: [ML]/[M][L]).
+
+| Halide | I = 0 M (log K₁) | I = 1 M | I = 2 M | I = 3 M | I = 4 M |
+|--------|:-----------------:|:-------:|:-------:|:-------:|:-------:|
+| **Cl⁻** (ligand_10163) | **+0.20** | −0.20 | −0.10 | 0.00 | +0.11 |
+| **Br⁻** (ligand_10168) | **−0.04** | −0.64 | −0.49 | −0.40 | −0.22 |
+| **Δ (Cl − Br)** | **+0.24** | +0.44 | +0.39 | +0.40 | +0.33 |
+
+### Answer
+
+**Chloride forms the stronger complex with Cu²⁺ at every ionic strength examined.** At the thermodynamic reference state (I → 0, 25 °C), log K₁(CuCl⁺) = **+0.20** while log K₁(CuBr⁺) = **−0.04**, a difference of ~0.24 log units — meaning the Cu–Cl association constant is roughly **1.7× larger** than Cu–Br.
+
+### Chemical Insight
+
+This ordering (Cl⁻ > Br⁻) is consistent with Cu²⁺ being a **borderline-hard** Lewis acid in the Irving–Williams / Pearson HSAB framework. Hard and borderline-hard metals preferentially bind the harder, smaller halide (Cl⁻, ionic radius 1.81 Å) over the softer, larger Br⁻ (1.96 Å). Note that both constants are very small (log K₁ ≈ 0), reflecting the generally weak affinity of Cu²⁺ for monodentate halide ions in aqueous solution — a stark contrast to the much larger stability constants Cu²⁺ forms with nitrogen- or oxygen-donor chelating ligands.
+
+*Source: NIST Standard Reference Database 46 (SRD-46).*
+
+---

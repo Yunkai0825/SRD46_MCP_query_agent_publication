@@ -1,0 +1,632 @@
+# Q3.1.1 — Tool Results (batch 1)
+
+### Step 2: `search_metals`
+**Args:**
+```json
+{
+  "name": "lead",
+  "symbol": "Pb",
+  "limit": 10
+}
+```
+
+[summary]
+## search_metals — 10 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_16 | Bu_[3]Pb^[+] | B | 1 |  | *** | *** | beta_totN_2 | ligand_totN_1 | vlm_totN_2 |
+| metal_46 | Et_[2]Pb^[2+] | E2Pb | 2 |  | *** | *** | beta_totN_2 | ligand_totN_3 | vlm_totN_5 |
+| metal_49 | Et_[3]Pb^[+] | E3Pb | 1 |  | *** | *** | beta_totN_2 | ligand_totN_3 | vlm_totN_5 |
+| metal_84 | Me_[2]Pb^[2+] | M2Pb | 2 |  | *** | *** | beta_totN_5 | ligand_totN_4 | vlm_totN_9 |
+| metal_87 | Me_[3]Pb^[+] | M3Pb | 1 |  | *** | *** | beta_totN_7 | ligand_totN_23 | vlm_totN_33 |
+| metal_125 | Pb^[2+] | Pb | 2 | ✓ | [Pb+2] | InChI=1S/Pb/q+2 | beta_totN_80 | ligand_totN_470 | vlm_totN_1585 |
+| metal_126 | Pb^[4+] | Pb | 4 | ✓ | [Pb+4] | InChI=1S/Pb/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_129 | Ph_[2]Pb^[2+] | Ph2Pb | 2 |  | *** | *** | beta_totN_2 | ligand_totN_1 | vlm_totN_2 |
+| metal_130 | Ph_[3]Pb^[+] | Ph3Pb | 1 |  | *** | *** | beta_totN_1 | ligand_totN_2 | vlm_totN_2 |
+| metal_140 | Pr_[2]Pb^[2+] | Pr | 2 |  | *** | *** | beta_totN_2 | ligand_totN_3 | vlm_totN_5 |
+
+---
+
+### Step 3: `search_ligands`
+**Args:**
+```json
+{
+  "name": "EDTA",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands — 5 result(s)
+
+**stats:** 5 SQL matches · showing 5 · limit 20
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_6118 | 6,11,18,23-Tetraoxo-1,4,7,10,13,16,19,… (24edtaen) | *** | Aza macrocycles with car… | 15 | *** | (-inf, H4L, 3.3, H3L, 4.18, H2L, 7.26, HL, 7.78, L, +inf) |
+| ligand_6275 | N-(2-Hydroxyethyl)ethylenedinitrilotriace… (HEDTA) | H3L | EDTA and derivatives | 237 | `O=C(O)CN(CCO)CCN(CC(=O)O)CC(=O)O` | (-inf, H3L, 2.62, H2L, 5.38, HL, 9.7, L, +inf) |
+| ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 | `O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CC(=O)O` | (-inf, H5L, -1.5, H4L, 2, H3L, 2.69, H2L, 6.13, HL, 9.52, L, +inf) |
+| ligand_6335 | Oxybis(ethylenenitrilo)tetraacetic acid (EEDTA) | H4L | EDTA and derivatives | 124 | `O=C(O)CN(CCOCCN(CC(=O)O)CC(=O)O)CC(=O)O` | (-inf, H4L, -1.8, H3L, 2.76, H2L, 8.75, HL, 9.39, L, +inf) |
+| ligand_6348 | Thiobis(ethylenenitrilo)tetraacetic acid (TEDTA) | H4L | EDTA and derivatives | 101 | `O=C(O)CN(CCSCCN(CC(=O)O)CC(=O)O)CC(=O)O` | (-inf, H4L, 2, H3L, 2.68, H2L, 8.37, HL, 9.31, L, +inf) |
+
+### Functional groups across all SQL matches (4 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 4 | 100% |
+| tertiary_amine | 4 | 100% |
+| ether | 1 | 25% |
+| hydroxyl | 1 | 25% |
+| thioether | 1 | 25% |
+
+---
+
+### Step 4: `search_ligands`
+**Args:**
+```json
+{
+  "name": "DTPA",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands — 5 result(s)
+
+**stats:** 5 SQL matches · showing 5 · limit 20
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_6117 | 9,17-Dioxo-1,4,7,10,13,16-hexaazacycl… (DTPA-dien) | H3L | Aza macrocycles with car… | 6 | `O=C(O)CN1CCN(CC(=O)O)CC(=O)NCCNCCNC(=O)CN(CC(=O)O)CC1` | (-inf, H5L, -1.8, H4L, 2.62, H3L, 4.1, H2L, 8.87, HL, 10.02, L, +inf) |
+| ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | H5L | EDTA and derivatives | 322 | `O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CCN(CC(=O)O)CC(=O)O` | (-inf, H8L, -0.1, H7L, -0.1, H6L, -0.7, H5L, 2, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, -8.4, L, +inf) |
+| ligand_6362 | Diethylenetrinitrilopentaacetic acid N… (DTPA-BMA) | *** | EDTA and derivatives | 43 | *** | (-inf, H4L, -1.4, H3L, 3.31, H2L, 4.38, HL, 9.37, L, +inf) |
+| ligand_6363 | Diethylenetrinitrilopentaacetic acid N… (DTPA-BBA) | *** | EDTA and derivatives | 9 | *** | (-inf, H3L, 3.31, H2L, 4.44, HL, 9.36, L, +inf) |
+| ligand_6364 | N,N"-Bis(2-pyridylmethyl)diethylenetrin… (DTPA-BP) | *** | EDTA and derivatives | 14 | *** | (-inf, H5L, 2.28, H4L, 3.41, H3L, 4.76, H2L, 6.46, HL, 9.5, L, +inf) |
+
+### Functional groups across all SQL matches (2 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 2 | 100% |
+| tertiary_amine | 2 | 100% |
+| amide | 1 | 50% |
+| secondary_amine | 1 | 50% |
+
+---
+
+### Step 5: `search_ligands`
+**Args:**
+```json
+{
+  "name": "EGTA",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands — 1 result(s)
+
+**stats:** 1 SQL matches · showing 1 · limit 20
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_6342 | Ethylenebis(oxyethylenenitrilo)tetraacetic… (EGTA) | H4L | EDTA and derivatives | 169 | `O=C(O)CN(CCOCCOCCN(CC(=O)O)CC(=O)O)CC(=O)O` | (-inf, H4L, -1.9, H3L, 2.7, H2L, 8.71, HL, 9.32, L, +inf) |
+
+### Functional groups across all SQL matches (1 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 1 | 100% |
+| ether | 1 | 100% |
+| tertiary_amine | 1 | 100% |
+
+---
+
+### Step 6: `search_ligands`
+**Args:**
+```json
+{
+  "name": "NTA",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands — 20 result(s)
+
+**stats:** 298 SQL matches · showing 20 · limit 20
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5763 | DL-2-Aminopentanoic acid (Norvaline) | HL | Amino Acids | 35 | `CCC[C@H](N)C(=O)O` | (-inf, H2L, 2.31, HL, 9.65, L, +inf) |
+| ligand_5766 | L-2-Amino-4-methylpentanoic acid (Leucine) | HL | Amino Acids | 49 | `CC(C)C[C@H](N)C(=O)O` | (-inf, H2L, 2.32, HL, 9.58, L, +inf) |
+| ligand_5767 | L-2-Amino-3-methylpentanoic acid (Isoleucine) | HL | Amino Acids | 51 | `CC[C@H](C)[C@H](N)C(=O)O` | (-inf, H2L, 2.26, HL, 9.6, L, +inf) |
+| ligand_5768 | D-allo-2-Amino-3-methylpentan… (D-allo-Isoleucine) | HL | Amino Acids | 16 | `CC[C@H](C)[C@@H](N)C(=O)O` | (-inf, H2L, 2.2, HL, 9.62, L, +inf) |
+| ligand_5773 | 1-Aminocyclopentanecarboxylic acid (Cycloleucine) | HL | Amino Acids | 11 | `NC1(C(=O)O)CCCC1` | (-inf, H2L, 2.4, HL, 10.31, L, +inf) |
+| ligand_5790 | cis-2-Aminocyclopentane-1-carboxylic acid | HL | Amino Acids | 6 | `N[C@H]1CCC[C@H]1C(=O)O` | (-inf, H2L, 3.54, HL, 10.1, L, +inf) |
+| ligand_5791 | trans-2-Aminocyclopentane-1-carboxylic acid | HL | Amino Acids | 3 | `N[C@@H]1CCC[C@H]1C(=O)O` | (-inf, H2L, 3.75, HL, 9.91, L, +inf) |
+| ligand_5798 | 5-Aminopentanoic acid | HL | Amino Acids | 20 | `NCCCCC(=O)O` | (-inf, H2L, 4.27, HL, 10.766, L, +inf) |
+| ligand_5804 | L-2-Aminopentanedioic acid (Glutamic acid) | H2L | Amino Acids | 94 | `N[C@@H](CCC(=O)O)C(=O)O` | (-inf, H3L, 2.16, H2L, 4.15, HL, 9.58, L, +inf) |
+| ligand_5805 | DL-2-Amino-2-methylpentan… (2-Methylglutamic acid) | H2L | Amino Acids | 4 | `C[C@](N)(CCC(=O)O)C(=O)O` | (-inf, H2L, 4.05, HL, 9.72, L, +inf) |
+| ligand_5807 | DL-2-Amino-3-hydroxypent… (3-Hydroxyglutamic acid) | H2L | Amino Acids | 8 | `N[C@H](C(=O)O)C(O)CC(=O)O` | (-inf, H3L, 2.09, H2L, 4.08, HL, 9.06, L, +inf) |
+| ligand_5840 | DL-2-Aminopentanedioic acid 5… (5-Ethyl glutamate) | HL | Amino Acids | 2 | `CCOC(=O)CC[C@H](N)C(=O)O` | (-inf, H2L, 2.15, HL, 9.19, L, +inf) |
+| ligand_5841 | L-2-Aminopentanedioic acid 5… (5-Benzyl glutamate) | HL | Amino Acids | 2 | `N[C@@H](CCC(=O)OCc1ccccc1)C(=O)O` | (-inf, H2L, 2.06, HL, 8.89, L, +inf) |
+| ligand_5842 | DL-2-Aminopentanedioic acid 1… (1-Ethyl glutamate) | HL | Amino Acids | 2 | `CCOC(=O)[C@@H](N)CCC(=O)O` | (-inf, H2L, 3.85, HL, 7.84, L, +inf) |
+| ligand_5844 | L-2-Aminopentanedioic acid 5-amide (Glutamine) | HL | Amino Acids | 71 | `NC(=O)CC[C@H](N)C(=O)O` | (-inf, H2L, 2.19, HL, 9, L, +inf) |
+| ligand_5852 | L-2-Amino-5-ureidopentanoic acid (Citrulline) | HL | Amino Acids | 16 | `NC(=O)NCCC[C@H](N)C(=O)O` | (-inf, H2L, 2.3, HL, 9.33, L, +inf) |
+| ligand_5858 | DL-2-Amino-3-mercapto-3-methylpentanoic acid | H2L | Amino Acids | 2 | `CCC(C)(S)C(N)C(=O)O` | (-inf, H2L, 7.96, HL, 10.5, L, +inf) |
+| ligand_5875 | 5-Amino-3-thi… (S-2-Aminoethylmercaptoacetic acid) | HL | Amino Acids | 32 | `NCCSCC(=O)O` | (-inf, H2L, 3.18, HL, 9.53, L, +inf) |
+| ligand_5886 | L-2,5-Diaminopentanoic acid (Ornithine) | HL | Amino Acids | 84 | `NCCC[C@H](N)C(=O)O` | (-inf, H3L, 2, H2L, 8.78, HL, 10.52, L, +inf) |
+| ligand_5917 | L-2-Amino-5-guanidopentanoic acid (Arginine) | H2L | Amino Acids | 45 | `N=C(N)NCCC[C@H](N)C(=O)O` | (-inf, H3L, 2.03, H2L, 9, HL, 9, L, +inf) |
+
+### Functional groups across all SQL matches (223 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 88 | 39% |
+| secondary_amine | 81 | 36% |
+| tertiary_amine | 60 | 27% |
+| amide | 46 | 21% |
+| primary_amine | 45 | 20% |
+| hydroxyl | 38 | 17% |
+| ether | 37 | 17% |
+| aromatic_ring | 31 | 14% |
+| thioether | 13 | 6% |
+| phosphonate | 10 | 4% |
+| pyridine | 9 | 4% |
+| imine | 7 | 3% |
+| ketone | 7 | 3% |
+| ester | 6 | 3% |
+| halide | 6 | 3% |
+| thiol | 5 | 2% |
+| oxime | 3 | 1% |
+| phenol | 2 | 1% |
+| phosphate | 2 | 1% |
+| sulfonate | 1 | 0% |
+
+---
+
+### Step 7: `search_ligands`
+**Args:**
+```json
+{
+  "name": "DOTA",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands — 2 result(s)
+
+**stats:** 2 SQL matches · showing 2 · limit 20
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_6102 | 1,4,7,10-Tetraazacyclododecane-N,N',N'',N'… (DOTA) | H4L | Aza macrocycles with car… | 119 | `O=C(O)CN1CCN(CC(=O)O)CCN(CC(=O)O)CCN(CC(=O)O)CC1` | (-inf, H4L, 4.23, H3L, 4.47, H2L, 9.69, HL, 9.69, L, +inf) |
+| ligand_7677 | 1,4,7,10-Tetraazacyclododecane-1,4,7,10-t… (DOTAM) | L | Aza-macrocycles | 12 | `CC(=O)NN1CCN(NC(C)=O)CCN(NC(C)=O)CCN(NC(C)=O)CC1` | (-inf, H2L, 6.21, HL, 7.7, L, +inf) |
+
+### Functional groups across all SQL matches (2 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| tertiary_amine | 2 | 100% |
+| amide | 1 | 50% |
+| carboxyl | 1 | 50% |
+
+---
+
+### Step 8: `search_ligands`
+**Args:**
+```json
+{
+  "name": "DMSA",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands — 1 result(s)
+
+**stats:** 1 SQL matches · showing 1 · limit 20
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_8997 | meso-2,3-Dimercaptobut… (meso-Dithiotartaric acid) | H4L | Carboxylic acids diacids… | 41 | `O=C(O)[C@@H](S)[C@@H](S)C(=O)O` | (-inf, H4L, 2.4, H3L, 3.46, H2L, 9.64, HL, 9.64, L, +inf) |
+
+### Functional groups across all SQL matches (1 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 1 | 100% |
+| thiol | 1 | 100% |
+
+---
+
+### Step 9: `search_ligands`
+**Args:**
+```json
+{
+  "name": "succimer",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands — 1 result(s)
+
+**stats:** 1 SQL matches · showing 1 · limit 20
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_8997 | meso-2,3-Dimercaptobut… (meso-Dithiotartaric acid) | H4L | Carboxylic acids diacids… | 41 | `O=C(O)[C@@H](S)[C@@H](S)C(=O)O` | (-inf, H4L, 2.4, H3L, 3.46, H2L, 9.64, HL, 9.64, L, +inf) |
+
+### Functional groups across all SQL matches (1 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 1 | 100% |
+| thiol | 1 | 100% |
+
+---
+
+### Step 10: `search_ligands`
+**Args:**
+```json
+{
+  "name": "DMPS",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands
+
+*(no results)*
+
+---
+
+### Step 11: `search_ligands`
+**Args:**
+```json
+{
+  "name": "dimercaprol",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands — 1 result(s)
+
+**stats:** 1 SQL matches · showing 1 · limit 20
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_9759 | 2,3-Dimercaptopropanol (BAL) | H2L | miscellaneous mercaptans | 25 | `OCC(S)CS` | (-inf, H2L, 8.63, HL, 10.65, L, +inf) |
+
+### Functional groups across all SQL matches (1 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| hydroxyl | 1 | 100% |
+| thiol | 1 | 100% |
+
+---
+
+### Step 12: `search_ligands`
+**Args:**
+```json
+{
+  "name": "BAL",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands — 3 result(s)
+
+**stats:** 3 SQL matches · showing 3 · limit 20
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_9048 | Propane-1,2,3-tricarboxylic… (Tricarballylic acid) | H3L | Carboxylic acids polyaci… | 107 | `O=C(O)CC(CC(=O)O)C(=O)O` | (-inf, H3L, 3.47, H2L, 4.51, HL, 5.85, L, +inf) |
+| ligand_9759 | 2,3-Dimercaptopropanol (BAL) | H2L | miscellaneous mercaptans | 25 | `OCC(S)CS` | (-inf, H2L, 8.63, HL, 10.65, L, +inf) |
+| ligand_10086 | Hexacyanocobaltate(III) ion | *** | Inorganic ligands | 13 | *** | *** |
+
+### Functional groups across all SQL matches (2 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 1 | 50% |
+| hydroxyl | 1 | 50% |
+| thiol | 1 | 50% |
+
+---
+
+### Step 13: `search_ligands`
+**Args:**
+```json
+{
+  "name": "penicillamine",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands — 6 result(s)
+
+**stats:** 6 SQL matches · showing 6 · limit 20
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5857 | D-2-Amino-3-mercapto-3-methylbuta… (Penicillamine) | H2L | Amino Acids | 91 | `CC(C)(S)[C@H](N)C(=O)O` | (-inf, H3L, -1.9, H2L, 7.96, HL, 10.67, L, +inf) |
+| ligand_5891 | D-3,3'-Dithiobis(2-amin… (Penicillamine disulfide) | H2L | Amino Acids | 23 | `CC(C)(SSC(C)(C)C(N)C(=O)O)C(N)C(=O)O` | (-inf, H4L, -1.3, H3L, 2.04, H2L, 7.77, HL, 8.74, L, +inf) |
+| ligand_6657 | L-5-Glutamyl… (Penicillamine-glutatione disulfide) | H3L | polypeptides | 2 | `CC(C)(SSCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O)C(N)C(=O)O` | (-inf, H2L, 7.99, HL, 9.1, L, +inf) |
+| ligand_8773 | N-Acetyl-D-penicillamine | H2L | Carboxylic acids thio | 19 | `CC(=O)N[C@@H](C(=O)O)C(C)(C)S` | (-inf, H2L, 3.29, HL, 10.1, L, +inf) |
+| ligand_10214 | DL-3,3-Di… (D-Penicillamine-DL-cysteine disulfide) | *** | Ligands not selected | 0 | *** | *** |
+| ligand_10500 | Penicillamine methylester | *** | Ligands not selected | 0 | *** | *** |
+
+### Functional groups across all SQL matches (4 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 4 | 100% |
+| primary_amine | 3 | 75% |
+| amide | 2 | 50% |
+| thiol | 2 | 50% |
+
+---
+
+### Step 14: `search_ligands`
+**Args:**
+```json
+{
+  "name": "cysteine",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands — 20 result(s)
+
+**stats:** 26 SQL matches · showing 20 · limit 20
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5856 | L-2-Amino-3-mercaptopropanoic acid (Cysteine) | H2L | Amino Acids | 134 | `N[C@@H](CS)C(=O)O` | (-inf, H3L, -1.9, H2L, 8.18, HL, 10.3, L, +inf) |
+| ligand_5859 | DL-2-Amino-4-mercaptobutanoic acid (Homocysteine) | H2L | Amino Acids | 3 | `NC(CCS)C(=O)O` | (-inf, H3L, 2.15, H2L, 8.57, HL, 10.38, L, +inf) |
+| ligand_5861 | L-2-Amino-3-(methylthio)propan… (S-Methylcysteine) | HL | Amino Acids | 39 | `CSC[C@H](N)C(=O)O` | (-inf, H2L, 2, HL, 8.74, L, +inf) |
+| ligand_5862 | L-2-Amino-3-(ethylthio)propanoi… (S-Ethylcysteine) | HL | Amino Acids | 46 | `CCSC[C@H](N)C(=O)O` | (-inf, H2L, -1.9, HL, 8.65, L, +inf) |
+| ligand_5871 | L-2-Amino-3-(2-Cyanoethylthio)propanoic acid (L-5… | HL | Amino Acids | 1 | `N#CCCSCC(N)C(=O)O` | (-inf, HL, 8.46, L, +inf) |
+| ligand_5872 | L-2-Amino-3-(Ethoxy-3-oxopropylthio)propanoic aci… | HL | Amino Acids | 1 | `CCOC(=O)CCSCC(N)C(=O)O` | (-inf, HL, 8.51, L, +inf) |
+| ligand_5879 | L-2-Amino-3-(2-aminoethylthio)propanoic acid (S-(… | HL | Amino Acids | 22 | `NCCSC[C@H](N)C(=O)O` | (-inf, H3L, -1.7, H2L, 8.32, HL, 9.67, L, +inf) |
+| ligand_6007 | L,L-Ethylenediimino-… (N,N'-Ethylenedi-L-cysteine) | H4L | Amino Acids | 32 | `O=C(O)C(CS)NCCNC(CS)C(=O)O` | (-inf, H5L, -1.7, H4L, 5.4, H3L, 7.91, H2L, 9.88, HL, 9.88, L, +inf) |
+| ligand_6397 | Glycyl-L-cysteine | H2L | Peptides | 12 | `NCC(=O)N[C@@H](CS)C(=O)O` | (-inf, H3L, 2.73, H2L, 8.04, HL, 9.48, L, +inf) |
+| ligand_6398 | Glycyl-L-S-methylcysteine | HL | Peptides | 4 | `CSC[C@H](NC(=O)CN)C(=O)O` | (-inf, H2L, 2.9, HL, 8.12, L, +inf) |
+| ligand_6433 | L-Alanyl-L-cysteine | H2L | Peptides | 19 | `C[C@H](N)C(=O)N[C@@H](CS)C(=O)O` | (-inf, H3L, 2.89, H2L, 7.98, HL, 9.52, L, +inf) |
+| ligand_6474 | L-Phenylalanyl-L-cysteine | H2L | Peptides | 6 | `N[C@@H](Cc1ccccc1)C(=O)N[C@@H](CS)C(=O)O` | (-inf, H3L, 2.98, H2L, 7.25, HL, 9.61, L, +inf) |
+| ligand_6518 | L-S-Methylcysteinyl-L-S-methylcysteine | HL | Peptides | 9 | `CSC[C@H](NC(=O)[C@@H](N)CSC)C(=O)O` | (-inf, H2L, 2.92, HL, 7.03, L, +inf) |
+| ligand_6521 | L-Methionyl-L-S-methylcysteine | HL | Peptides | 9 | `CSCC[C@H](N)C(=O)N[C@@H](CSC)C(=O)O` | (-inf, H2L, 2.98, HL, 7.4, L, +inf) |
+| ligand_6522 | D-Methionyl-L-S-methylcysteine | HL | Peptides | 9 | `CSCC[C@@H](N)C(=O)N[C@@H](CSC)C(=O)O` | (-inf, H2L, 2.72, HL, 7.62, L, +inf) |
+| ligand_6567 | Glycylglycyl-L-cysteine | H2L | tripeptides | 5 | `NCC(=O)NCC(=O)N[C@@H](CS)C(=O)O` | (-inf, H3L, 3.07, H2L, 7.82, HL, 9.48, L, +inf) |
+| ligand_6568 | L-Alanyl-L-alanyl-L-cysteine | H2L | tripeptides | 17 | `C[C@H](N)C(=O)N[C@@H](C)C(=O)N[C@@H](CS)C(=O)O` | (-inf, H3L, 3.22, H2L, 7.96, HL, 9.73, L, +inf) |
+| ligand_7008 | L-Cysteine methyl ester | HL | Aliphatic amines | 27 | `COC(=O)[C@@H](N)CS` | (-inf, H2L, 6.53, HL, 8.93, L, +inf) |
+| ligand_7009 | L-Cysteine ethyl ester | H2L | Aliphatic amines | 8 | `CCOC(=O)[C@@H](N)CS` | (-inf, H2L, 6.55, HL, 8.96, L, +inf) |
+| ligand_7019 | L-S-Methylcysteine methyl ester | L | Aliphatic amines | 3 | `COC(=O)[C@@H](N)CSC` | (-inf, HL, 6.7, L, +inf) |
+
+### Functional groups across all SQL matches (22 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 19 | 86% |
+| primary_amine | 19 | 86% |
+| thiol | 12 | 55% |
+| amide | 11 | 50% |
+| thioether | 10 | 45% |
+| ester | 4 | 18% |
+| aromatic_ring | 1 | 5% |
+| nitrile | 1 | 5% |
+| secondary_amine | 1 | 5% |
+
+---
+
+### Step 15: `search_ligands`
+**Args:**
+```json
+{
+  "name": "glutathione",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands — 4 result(s)
+
+**stats:** 4 SQL matches · showing 4 · limit 20
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_6592 | L-5-Glutamyl-L-cysteinylglycine (Glutathione) | H3L | tripeptides | 106 | `N[C@@H](CCC(=O)N[C@@H](CS)C(=O)NCC(=O)O)C(=O)O` | (-inf, H4L, 2.08, H3L, 3.49, H2L, 8.64, HL, 9.51, L, +inf) |
+| ligand_6593 | L-5-Glutamyl-(S-methyl-L-cy… (S-methylglutathione) | H2L | tripeptides | 5 | `CSC[C@H](NC(=O)CC[C@H](N)C(=O)O)C(=O)NCC(=O)O` | (-inf, HL, 9.08, L, +inf) |
+| ligand_6682 | N,N-[N'',N''''-Di(L-5-glu… (Glutathione disulfide) | *** | polypeptides | 53 | *** | (-inf, H6L, -1.5, H5L, 2.35, H4L, 3.16, H3L, 3.83, H2L, 8.85, HL, 9.81, L, +inf) |
+| ligand_10422 | L-5-Glutamyl-… (DL-Cysteine-glutathione disulfide) | *** | Ligands not selected | 0 | *** | *** |
+
+### Functional groups across all SQL matches (2 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| amide | 2 | 100% |
+| carboxyl | 2 | 100% |
+| primary_amine | 2 | 100% |
+| thioether | 1 | 50% |
+| thiol | 1 | 50% |
+
+---
+
+### Step 17: `search_ligands`
+**Args:**
+```json
+{
+  "name": "nitrilotriacetic acid",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 10 result(s)
+
+**stats:** 35 SQL matches · showing 10 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_6047 | N,N''-Bis(3-hydroxy-6-methyl-2-pyridiny… (DTTA-HP) | H5L | Amino Acids | 24 | `Cc1ccc(O)c(CN(CCN(CCN(CC(=O)O)Cc2nc(C)ccc2O)CC(=O)O)CC(=O)O)n1` | (-inf, H8L, -1.5, H7L, 2.25, H6L, 3.49, H5L, 5.19, H4L, 6.21, H3L, 8.9, H2L, 10.95, HL, 10.95, L, +inf) |
+| ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | NTA and derivatives | 534 | `O=C(O)CN(CC(=O)O)CC(=O)O` | (-inf, H4L, -1, H3L, -1, H2L, 2.52, HL, 9.46, L, +inf) |
+| ligand_6166 | Nitrilotriacetic acid N-oxide | H3L | NTA and derivatives | 4 | `O=C(O)C[N+]([O-])(CC(=O)O)CC(=O)O` | (-inf, H2L, 2.57, HL, 7.89, L, +inf) |
+| ligand_6172 | DL-2-Methylnitrilotriacetic acid | H3L | NTA and derivatives | 50 | `CC(C(=O)O)N(CC(=O)O)CC(=O)O` | (-inf, H3L, -1.5, H2L, -1.5, HL, -2.58, L, +inf) |
+| ligand_6173 | DL-2-Ethylnitrilotriacetic acid | H3L | NTA and derivatives | 43 | `CCC(C(=O)O)N(CC(=O)O)CC(=O)O` | (-inf, H3L, -1.9, H2L, -1.9, HL, 9.81, L, +inf) |
+| ligand_6174 | DL-2-Propylnitrilotriacetic acid | H3L | NTA and derivatives | 37 | `CCCC(C(=O)O)N(CC(=O)O)CC(=O)O` | (-inf, H3L, -1.6, H2L, 2.46, HL, 9.94, L, +inf) |
+| ligand_6175 | DL-2-(2-Propyl)nitrilotriacetic acid | H3L | NTA and derivatives | 37 | `CC(C)C(C(=O)O)N(CC(=O)O)CC(=O)O` | (-inf, H3L, -1.7, H2L, 2.4, HL, 9.68, L, +inf) |
+| ligand_6176 | DL-2-Hexylnitrilotriacetic acid | H3L | NTA and derivatives | 25 | `CCCCCCC(C(=O)O)N(CC(=O)O)CC(=O)O` | (-inf, H3L, -1.9, H2L, 2.51, HL, 10.08, L, +inf) |
+| ligand_6177 | 2,2-Dimethylnitrilotriacetic acid | H3L | NTA and derivatives | 8 | `CC(C)(C(=O)O)N(CC(=O)O)CC(=O)O` | (-inf, H3L, -1.5, H2L, 2.52, HL, 11.86, L, +inf) |
+| ligand_6178 | DL-2-Benzylnitrilotriacetic acid | H3L | NTA and derivatives | 28 | `O=C(O)CN(CC(=O)O)C(Cc1ccccc1)C(=O)O` | (-inf, H3L, 2, H2L, 2.51, HL, 9.59, L, +inf) |
+
+### Functional groups across all SQL matches (34 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 34 | 100% |
+| tertiary_amine | 33 | 97% |
+| aromatic_ring | 12 | 35% |
+| hydroxyl | 4 | 12% |
+| amide | 2 | 6% |
+| halide | 2 | 6% |
+| phenol | 1 | 3% |
+| pyridine | 1 | 3% |
+| secondary_amine | 1 | 3% |
+| sulfonate | 1 | 3% |
+| thioether | 1 | 3% |
+
+---
+
+### Step 18: `search_ligands`
+**Args:**
+```json
+{
+  "name": "2,3-dimercaptopropanesulfonic acid",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands — 1 result(s)
+
+**stats:** 1 SQL matches · showing 1 · limit 20
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_9758 | 2,3-Dimercaptopropanesulfonic acid (Unithiol) | H3L | miscellaneous mercaptans | 28 | `O=S(=O)(O)CC(S)CS` | (-inf, H3L, -1.1, H2L, 8.67, HL, 8.67, L, +inf) |
+
+### Functional groups across all SQL matches (1 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| hydroxyl | 1 | 100% |
+| sulfonate | 1 | 100% |
+| thiol | 1 | 100% |
+
+---
+
+### Step 19: `search_ligands`
+**Args:**
+```json
+{
+  "name": "unithiol",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands — 1 result(s)
+
+**stats:** 1 SQL matches · showing 1 · limit 20
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_9758 | 2,3-Dimercaptopropanesulfonic acid (Unithiol) | H3L | miscellaneous mercaptans | 28 | `O=S(=O)(O)CC(S)CS` | (-inf, H3L, -1.1, H2L, 8.67, HL, 8.67, L, +inf) |
+
+### Functional groups across all SQL matches (1 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| hydroxyl | 1 | 100% |
+| sulfonate | 1 | 100% |
+| thiol | 1 | 100% |
+
+---
+
+### Step 20: `build_system_catalog`
+**Args:**
+```json
+{
+  "metal_id": "metal_125",
+  "ligand_id": "ligand_6277"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 1 pair(s), 4 species
+
+### Pb^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)
+**metal_id:** metal_125 | **ligand_id:** ligand_6277 | **ligand_def_HxL:** H4L  
+**entries:** 8 | **species:** 4 | **vlm_count:** 8
+
+| beta_definition_id | beta_definition_name | equation_str | phases | n_entries |
+|--------------------|----------------------|--------------|--------|----------|
+| beta_def_739 | [MH<sub>2</sub>L]/[MHL][H] | [MHL] + [H] <=> [MH2L] | [MH2L](aqueous), [MHL](aqueous), [H](aqueous) | 1 |
+| beta_def_751 | [MH<sub>3</sub>L]/[MH<sub>2</sub>L][H] | [MH2L] + [H] <=> [MH3L] | [MH3L](aqueous), [MH2L](aqueous), [H](aqueous) | 1 |
+| beta_def_788 | [MHL]/[ML][H] | [ML] + [H] <=> [MHL] | [MHL](aqueous), [ML](aqueous), [H](aqueous) | 3 |
+| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 3 |
+
+**vlm_ids:** vlm_108762, vlm_108763, vlm_108764, vlm_108765, vlm_108766, vlm_108767, vlm_108768, vlm_108769
+
+**equilibrium_maps:** 3 preset reference network(s) *(clustered around room temperature & low ionic strength)*
+
+| network_id | nodes | edges | T range | I range |
+|------------|-------|-------|---------|---------|
+| ref_eq_net_5070 | 2 | 1 | 20~30 °C | -0.05~0.25 M |
+| ref_eq_net_5071 | 3 | 3 | 19~29 °C | 0.85~1.15 M |
+| ref_eq_net_5072 | 1 | 0 | 19~29 °C | 2.85~3.15 M |
+
+---
+
+### Step 21: `search_stability`
+**Args:**
+```json
+{
+  "where": "c.metal_id = metal_125 AND c.ligand_id IN (ligand_6277, ligand_6356, ligand_6342, ligand_6102, ligand_8997, ligand_9759, ligand_5857, ligand_5856, ligand_6592, ligand_6165, ligand_9758) AND (s.solvent_name LIKE '%water%' OR s.solvent_name LIKE '%aqueous%') AND (s.temperature_c BETWEEN 20 AND 30) AND (s.ionic_strength_mol_l IS NULL OR s.ionic_strength_mol_l <= 0.5)",
+  "order_by": "s.constant_value DESC",
+  "limit": 500
+}
+```
+
+[PHASE ERROR] Tool 'search_stability' is not available yet. You must call 0_plan_search_strategy first (PHASE 2) before using the execution tools.
+
+---
+
+### Step 23: `search_stability`
+**Args:**
+```json
+{
+  "where": "(c.metal_id = metal_125 AND c.ligand_id IN (ligand_6277, ligand_6356, ligand_6342, ligand_6102, ligand_8997, ligand_9758, ligand_9759, ligand_5857, ligand_6165, ligand_5856, ligand_6592) AND c.beta_definition_name IN ('ML','ML2','ML3') AND (s.solvent_name LIKE '%water%' OR s.solvent_name LIKE '%aqueous%') AND (s.temperature_c BETWEEN 20 AND 30) AND (s.ionic_strength_mol_l IS NULL OR s.ionic_strength_mol_l <= 0.5) AND (s.electrolyte_composition IS NULL OR (s.electrolyte_composition NOT LIKE '%Cl%' AND s.electrolyte_composition NOT LIKE '%chloride%' AND s.electrolyte_composition NOT LIKE '%NaCl%' AND s.electrolyte_composition NOT LIKE '%KCl%')))",
+  "order_by": "s.constant_value DESC",
+  "limit": 500
+}
+```
+
+[summary]
+## search_stability
+
+*(no results)*
+
+---

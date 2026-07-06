@@ -1,0 +1,653 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudeopus46\\Q2.2.3\\Q2.2.3_result_batch3.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Based on my query of the NIST SRD-46 database, **no ligands in the database have more than 6 distinct reported pKa values (pKa types).**",
+        "claims": [
+          {
+            "start": 0,
+            "end": 46,
+            "text": "Based on my query of the NIST SRD-46 database,",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 47,
+            "end": 136,
+            "text": "**no ligands in the database have more than 6 distinct reported pKa values (pKa types).**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "execute_srd46_sql: SELECT ... FROM ligand_card lc JOIN ligand_pka_measured p ...",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: SELECT lc.ligand_id, lc.ligand_name_SRD, lc.formula, COUNT(DISTINCT p.pKa_type) ... FROM ligand_card lc JOIN ligand_pka_measured p ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "execute_srd46_sql: HAVING COUNT(DISTINCT p.pKa_type) > 6 → (no results)",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: ... HAVING COUNT(DISTINCT p.pKa_type) > 6 ORDER BY distinct_pka_types DESC ..."
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "## execute_srd46_sql\n\n*(no results)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "This makes chemical sense when you consider how the database categorizes pKa values. Even highly polyprotic ligands like EDTA (which has up to 6 protonation steps: H₆L down to L) appear to max out at 6 distinct pKa types. The database records pKa values as stepwise dissociation constants (pKa₁, pKa₂, etc.), and even the most complex chelators in SRD-46 — such as EDTA derivatives, polyaminocarboxylates, and macrocyclic ligands — do not exceed this threshold.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 84,
+            "text": "This makes chemical sense when you consider how the database categorizes pKa values.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 85,
+            "end": 125,
+            "text": "Even highly polyprotic ligands like EDTA",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 127,
+            "end": 162,
+            "text": "which has up to 6 protonation steps",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 164,
+            "end": 177,
+            "text": "H₆L down to L",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 179,
+            "end": 221,
+            "text": "appear to max out at 6 distinct pKa types.",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 222,
+            "end": 288,
+            "text": "The database records pKa values as stepwise dissociation constants",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 290,
+            "end": 306,
+            "text": "pKa₁, pKa₂, etc.",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 313,
+            "end": 461,
+            "text": "even the most complex chelators in SRD-46 — such as EDTA derivatives, polyaminocarboxylates, and macrocyclic ligands — do not exceed this threshold.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_6277",
+              "beta_def_79",
+              "beta_def_32",
+              "beta_def_53",
+              "beta_def_64",
+              "beta_def_68",
+              "beta_def_72"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "beta_def_79 | [L] + [H] <=> [HL] … beta_def_72 | [H5L] + [H] <=> [H6L]",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_79 | [L] + [H] <=> [HL]\n...\nbeta_def_72 | [H5L] + [H] <=> [H6L]"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "1. H^[+] + Ethylenedinitrilotetraacetic acid (EDTA) … species: beta_def_32(18) beta_def_53(10) beta_def_64(7) beta_def_68(6) beta_def_72(4) beta_def_79(30)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_6277",
+              "beta_def_79",
+              "beta_def_32",
+              "beta_def_53",
+              "beta_def_64",
+              "beta_def_68",
+              "beta_def_72"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "**1. H^[+] + Ethylenedinitrilotetraacetic acid (EDTA)** … — ligand_def_HxL: H4L | 75 ent, 6 sp, 75 vlms",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "**1. H^[+] + Ethylenedinitrilotetraacetic acid (EDTA)** (metal_68 + ligand_6277) — ligand_def_HxL: H4L | 75 ent, 6 sp, 75 vlms (vlm_108224…vlm_108298)"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "Equation legend: beta_def_79 | [L] + [H] <=> [HL]; beta_def_32 | [HL] + [H] <=> [H2L]; … beta_def_72 | [H5L] + [H] <=> [H6L]"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_6277",
+              "beta_def_72",
+              "beta_def_79"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "[H5L] + [H] <=> [H6L]; and [L] + [H] <=> [HL]",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_72 | [H5L] + [H] <=> [H6L]"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_79 | [L] + [H] <=> [HL]"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "HAVING COUNT(DISTINCT p.pKa_type) > 6 … (no results)",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT … COUNT(DISTINCT p.pKa_type) … FROM ligand_pka_measured … HAVING COUNT(DISTINCT p.pKa_type) > 6"
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "## execute_srd46_sql\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_6277",
+              "beta_def_79",
+              "beta_def_32",
+              "beta_def_53",
+              "beta_def_64",
+              "beta_def_68",
+              "beta_def_72"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Stepwise H addition reactions: [L]+[H]<=>[HL] … [H5L]+[H]<=>[H6L]; pKa_type field used in ligand_pka_measured",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "[L] + [H] <=> [HL] … [H5L] + [H] <=> [H6L]"
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT lc.ligand_id … COUNT(DISTINCT p.pKa_type) … FROM ligand_pka_measured p"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Query references pKa_type (implying enumerated step indices): COUNT(DISTINCT p.pKa_type)",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT … COUNT(DISTINCT p.pKa_type) … FROM ligand_pka_measured"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "ligand_6277",
+              "ligand_6275",
+              "ligand_6118"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "No ligands with COUNT(DISTINCT p.pKa_type) > 6 found (no results).",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "… HAVING COUNT(DISTINCT p.pKa_type) > 6 …\n\n*(no results)*"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | … | pka_brackets … L, +inf"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6275 | … (HEDTA) | EDTA and derivatives | … pka_brackets (-inf, H3L, 2.62, …, L, +inf)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "For reference, EDTA itself (`ligand_6277`) has pKa brackets spanning from H₅L down to L, representing up to 5–6 stepwise constants. Ligands like DTPA or TTHA, which could theoretically have 7+ pKa values, either aren't in the database or have fewer than 7 distinct pKa types recorded.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 14,
+            "text": "For reference,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 15,
+            "end": 42,
+            "text": "EDTA itself (`ligand_6277`)",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 43,
+            "end": 87,
+            "text": "has pKa brackets spanning from H₅L down to L",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 89,
+            "end": 130,
+            "text": "representing up to 5–6 stepwise constants",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 132,
+            "end": 157,
+            "text": "Ligands like DTPA or TTHA",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 159,
+            "end": 203,
+            "text": "which could theoretically have 7+ pKa values",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 205,
+            "end": 234,
+            "text": "either aren't in the database",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 238,
+            "end": 283,
+            "text": "have fewer than 7 distinct pKa types recorded",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_6277"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 | `O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CC(=O)O` | (-inf, H5L, -1.5, H4L, 2, H3L, 2.69, H2L, 6.13, HL, 9.52, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_6277"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "pka_brackets | (-inf, H5L, -1.5, H4L, 2, H3L, 2.69, H2L, 6.13, HL, 9.52, L, +inf)",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) ... pka_brackets | (-inf, H5L, -1.5, H4L, 2, H3L, 2.69, H2L, 6.13, HL, 9.52, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_6277",
+              "beta_def_79",
+              "beta_def_32",
+              "beta_def_53",
+              "beta_def_64",
+              "beta_def_68",
+              "beta_def_72"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "species: beta_def_32(18) beta_def_53(10) beta_def_64(7) beta_def_68(6) beta_def_72(4) beta_def_79(30)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "1. H^[+] + Ethylenedinitrilotetraacetic acid (EDTA) ... species: beta_def_32(18) beta_def_53(10) beta_def_64(7) beta_def_68(6) beta_def_72(4) beta_def_79(30)"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "equation legend: beta_def_79 | [L] + [H] <=> [HL] ... beta_def_32 | [HL] + [H] <=> [H2L] ... beta_def_68 | [H4L] + [H] <=> [H5L] ... beta_def_72 | [H5L] + [H] <=> [H6L]"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "pka_brackets | (-inf, H5L, -1.5, H4L, 2, H3L, 2.69, H2L, 6.13, HL, 9.52, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No tool results in this run mention DTPA or TTHA by name or ID.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Polyaminopolycarboxylates like DTPA/TTHA possess >6 protonatable sites (carboxylates + amines), so 7+ pKa values are theoretically possible.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "The provided tool results did not include searches for DTPA/TTHA, so presence/absence in SRD-46 cannot be verified here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Query for ligands with COUNT(DISTINCT p.pKa_type) > 6 returned (no results), implying none recorded with ≥7 types.",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: ... COUNT(DISTINCT p.pKa_type) as distinct_pka_types ... HAVING COUNT(DISTINCT p.pKa_type) > 6 ...\n(no results)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "**Summary:** No ligands in NIST SRD-46 have more than 6 reported pKa values.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 12,
+            "text": "**Summary:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 13,
+            "end": 76,
+            "text": "No ligands in NIST SRD-46 have more than 6 reported pKa values.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: SELECT ... COUNT(DISTINCT p.pKa_type) as distinct_pka_types ... HAVING COUNT(DISTINCT p.pKa_type) > 6 ..."
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "## execute_srd46_sql\n\n*(no results)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "*Source: NIST Standard Reference Database 46 (SRD-46)*",
+        "claims": [
+          {
+            "start": 0,
+            "end": 54,
+            "text": "*Source: NIST Standard Reference Database 46 (SRD-46)*",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "### Step 8: `execute_srd46_sql`",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "### Step 8: `execute_srd46_sql`"
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "\"sql_query\": \"SELECT lc.ligand_id, lc.ligand_name_SRD, lc.formula, COUNT(DISTINCT p.pKa_type) as distinct_pka_types... FROM ligand_card lc JOIN ligand_pka_measured p ON lc.ligand_id = p.ligand_id ...\""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

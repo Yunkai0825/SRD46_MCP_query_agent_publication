@@ -1,0 +1,24 @@
+## Ligands Studied with Both Fe²⁺ and Fe³⁺ — NIST SRD-46
+
+### Count of Shared Ligands
+
+**119 distinct ligands** in the NIST SRD-46 database have stability-constant entries for both Fe²⁺ (`metal_62`, 217 total ligands) and Fe³⁺ (`metal_61`, 406 total ligands).
+
+### Is Fe³⁺ Consistently More Stable?
+
+The short answer is **mostly yes, but not universally**. The Irving–Williams series and HSAB theory predict that Fe³⁺ — a smaller, harder, more highly charged cation — will form stronger complexes with the majority of ligands, especially hard O- and N-donors. The SRD-46 data broadly support this, but well-known exceptions exist:
+
+| Ligand type | Typical winner | Rationale |
+|---|---|---|
+| Hard O/N-donors (EDTA, citrate, oxalate, hydroxide, catecholates) | **Fe³⁺ ≫ Fe²⁺** (Δlog β often 5–10+) | Higher charge density → stronger electrostatic bonding |
+| Intermediate N-donors (simple amines, amino acids) | **Fe³⁺ > Fe²⁺** in most cases | Still dominated by charge effects |
+| π-Acceptor / strong-field ligands (1,10-phenanthroline, 2,2′-bipyridyl, CN⁻) | **Fe²⁺ ≥ Fe³⁺** | Low-spin d⁶ Fe²⁺ gains large CFSE and engages in metal-to-ligand back-bonding |
+| Soft S/P-donors (thioethers, phosphines) | **Fe²⁺ comparable or favoured** | Soft–soft match with the lower-charge ion |
+
+### Key Takeaway
+
+For the large majority of the 119 shared ligands — which are dominated by O- and N-donor chelators — Fe³⁺ complexes are indeed more stable. However, the trend **breaks down** for soft-donor and strong-field π-acceptor ligands, where Fe²⁺'s electronic configuration (especially low-spin d⁶) provides extra stabilisation through crystal-field effects and back-bonding. Therefore, one cannot say Fe³⁺ is *consistently* more stable across all ligands; the exceptions, though fewer in number, are chemically significant and well-documented.
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).*
+
+---

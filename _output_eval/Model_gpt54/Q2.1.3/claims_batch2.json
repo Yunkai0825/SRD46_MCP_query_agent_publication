@@ -1,0 +1,630 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q2.1.3\\Q2.1.3_result_batch2.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Using SRD-46 data at matched conditions (aqueous, 25 °C, ionic strength 0.1 M), **glycine and alanine have essentially the same lower pKa, but alanine has a modestly higher upper pKa**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 17,
+            "text": "Using SRD-46 data",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 18,
+            "end": 39,
+            "text": "at matched conditions",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 40,
+            "end": 78,
+            "text": "(aqueous, 25 °C, ionic strength 0.1 M)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 82,
+            "end": 137,
+            "text": "glycine and alanine have essentially the same lower pKa",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 143,
+            "end": 182,
+            "text": "alanine has a modestly higher upper pKa",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "ligand_5760",
+              "ligand_5761",
+              "vlm_93627",
+              "vlm_93606",
+              "vlm_94078",
+              "vlm_94058"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Rows show SRD-46-style IDs (e.g., ligand_5760, vlm_93627). Tools used (search_ligands/search_pka_values) query SRD‑46; no explicit 'SRD-46' string in row outputs.",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 2.33 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_94058 | ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | C[C@H](N)C(=O)O | 9.71 | 25 | 0.1 | L→HL |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | 428 | `NCC(=O)O` | (-inf, H2L, 2.33, HL, 9.57, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_93627",
+              "vlm_94078",
+              "vlm_93606",
+              "vlm_94058"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93627 pKa 2.33 T 25 I 0.1; vlm_94078 pKa 2.33 T 25 I 0.1; vlm_93606 pKa 9.57 T 25 I 0.1; vlm_94058 pKa 9.71 T 25 I 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 2.33 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_94078 | ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | C[C@H](N)C(=O)O | 2.33 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93606 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 9.57 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_93627",
+              "vlm_94078",
+              "vlm_93606",
+              "vlm_94058",
+              "beta_def_32",
+              "beta_def_79"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "T°C=25 and I(M)=0.1 are shown in pKa rows; phases listed as '(aqueous)' for the glycine/H+ system. Solvent name not shown in pKa rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93606 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 9.57 | 25 | 0.1 | L→HL |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_94058 | ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | C[C@H](N)C(=O)O | 9.71 | 25 | 0.1 | L→HL |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "[HL] + [H] <=> [H2L] | [H2L](aqueous), [HL](aqueous), [H](aqueous)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "vlm_93627",
+              "vlm_94078"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Glycine pKa 2.33 (25 °C, I 0.1): vlm_93627; Alanine pKa 2.33 (25 °C, I 0.1): vlm_94078.",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 2.33 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_94078 | ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | C[C@H](N)C(=O)O | 2.33 | 25 | 0.1 | HL→H2L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "vlm_93606",
+              "vlm_94058"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Upper pKa: Glycine 9.57 (vlm_93606) vs Alanine 9.71 (vlm_94058) at 25 °C, I 0.1 M → alanine higher by 0.14.",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93606 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 9.57 | 25 | 0.1 | L→HL |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_94058 | ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | C[C@H](N)C(=O)O | 9.71 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Ligand | pKa1 | Assignment | pKa2 | Assignment | Conditions |\n|---|---:|---|---:|---|---|\n| Glycine | 2.33 | HL → H2L (carboxyl-related) | 9.57 | L → HL (ammonium-related) | water, 25 °C, I = 0.1 M |\n| Alanine | 2.33 | HL → H2L (carboxyl-related) | 9.71 | L → HL (ammonium-related) | water, 25 °C, I = 0.1 M |",
+        "claims": [
+          {
+            "start": 92,
+            "end": 201,
+            "text": "| Glycine | 2.33 | HL → H2L (carboxyl-related) | 9.57 | L → HL (ammonium-related) | water, 25 °C, I = 0.1 M |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 202,
+            "end": 311,
+            "text": "| Alanine | 2.33 | HL → H2L (carboxyl-related) | 9.71 | L → HL (ammonium-related) | water, 25 °C, I = 0.1 M |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "ligand_5760",
+              "vlm_93627",
+              "vlm_93606"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | … | 2.33 | 25 | 0.1 | HL→H2L; vlm_93606 | ligand_5760 | … | 9.57 | 25 | 0.1 | L→HL",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 2.33 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_20"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "vlm_93606 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 9.57 | 25 | 0.1 | L→HL | M_tot_20 | M_tot_43"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5760 | Aminoacetic acid (Glycine) | HL | … | −∞; H2L (M_tot_1); (2.33, vlm_93627); HL (M_tot_20); (9.57, vlm_93606); L (M_tot_43); +∞ | 25 | 0.1 | ***"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_5761",
+              "vlm_94078",
+              "vlm_94058"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_94078 | ligand_5761 | L-2-Aminopropanoic acid (Alanine) | … | 2.33 | 25 | 0.1 | HL→H2L; vlm_94058 | ligand_5761 | … | 9.71 | 25 | 0.1 | L→HL",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "vlm_94078 | ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | C[C@H](N)C(=O)O | 2.33 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_6"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "vlm_94058 | ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | C[C@H](N)C(=O)O | 9.71 | 25 | 0.1 | L→HL | M_tot_6 | M_tot_19"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | … | −∞; H2L (M_tot_1); (2.33, vlm_94078); HL (M_tot_6); (9.71, vlm_94058); L (M_tot_19); +∞ | 25 | 0.1 | ***"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "| Comparison | ΔpKa (alanine − glycine) | Interpretation |\n|---|---:|---|\n| pKa1 | 0.00 | No difference in this matched dataset |\n| pKa2 | 0.14 | Small but likely real difference; alanine is slightly more basic at the amino group |",
+        "claims": [
+          {
+            "start": 74,
+            "end": 129,
+            "text": "| pKa1 | 0.00 | No difference in this matched dataset |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 130,
+            "end": 231,
+            "text": "| pKa2 | 0.14 | Small but likely real difference; alanine is slightly more basic at the amino group |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "vlm_93627",
+              "vlm_94078"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93627 | Aminoacetic acid (Glycine) | ... | 2.33 | 25 | 0.1 | ... ; vlm_94078 | L-2-Aminopropanoic acid (Alanine) | ... | 2.33 | 25 | 0.1 | ...",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 2.33 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_20 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_94078 | ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | C[C@H](N)C(=O)O | 2.33 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_6 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_93606",
+              "vlm_94058"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93606 | Aminoacetic acid (Glycine) | ... | 9.57 | 25 | 0.1 | ... ; vlm_94058 | L-2-Aminopropanoic acid (Alanine) | ... | 9.71 | 25 | 0.1 | ...",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93606 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 9.57 | 25 | 0.1 | L→HL | M_tot_20 | M_tot_43 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_94058 | ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | C[C@H](N)C(=O)O | 9.71 | 25 | 0.1 | L→HL | M_tot_6 | M_tot_19 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "So, **not dramatically different overall**. The **carboxyl pKa is identical** in the matched SRD-46 entries, while the **amino-group pKa differs by 0.14 units**, which is small but a bit larger than typical experimental uncertainty often cited for good pKa measurements (~0.05–0.10). Chemically, that makes sense: the methyl group in alanine is slightly electron-donating relative to glycine, which can slightly increase the basicity of the amino group.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 43,
+            "text": "So, **not dramatically different overall**.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 44,
+            "end": 108,
+            "text": "The **carboxyl pKa is identical** in the matched SRD-46 entries,",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 115,
+            "end": 160,
+            "text": "the **amino-group pKa differs by 0.14 units**",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 162,
+            "end": 176,
+            "text": "which is small",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 181,
+            "end": 231,
+            "text": "a bit larger than typical experimental uncertainty",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 284,
+            "end": 313,
+            "text": "Chemically, that makes sense:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 314,
+            "end": 391,
+            "text": "the methyl group in alanine is slightly electron-donating relative to glycine",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 393,
+            "end": 453,
+            "text": "which can slightly increase the basicity of the amino group.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_93627",
+              "vlm_94078"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Aminoacetic acid (Glycine) | HL | NCC(=O)O | 2.33 | 25 | 0.1 | HL→H2L / L-2-Aminopropanoic acid (Alanine) | HL | C[C@H](N)C(=O)O | 2.33 | 25 | 0.1 | HL→H2L",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 2.33 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_20 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_94078 | ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | C[C@H](N)C(=O)O | 2.33 | 25 | 0.1 | HL→H2L | M_tot_1 | M_tot_6 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_93606",
+              "vlm_94058"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Aminoacetic acid (Glycine) | HL | NCC(=O)O | 9.57 | 25 | 0.1 | L→HL / L-2-Aminopropanoic acid (Alanine) | HL | C[C@H](N)C(=O)O | 9.71 | 25 | 0.1 | L→HL",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93606 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 9.57 | 25 | 0.1 | L→HL | M_tot_20 | M_tot_43 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_94058 | ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | C[C@H](N)C(=O)O | 9.71 | 25 | 0.1 | L→HL | M_tot_6 | M_tot_19 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "SRD-46 rows do not include measurement uncertainties; typical high-quality pKa uncertainties are literature-based and not in these tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Organic chemistry principle: a methyl group is weakly electron-donating vs H by inductive/hyperconjugative effects; not specified in SRD-46 tables.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Electron-donating substituents generally increase amine basicity; this rationale is chemical knowledge and not listed in SRD-46 rows.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "**Source:** NIST SRD-46.",
+        "claims": [
+          {
+            "start": 2,
+            "end": 9,
+            "text": "Source:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 12,
+            "end": 24,
+            "text": "NIST SRD-46.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Provenance claim: this run’s tool results are from the NIST SRD‑46 context; the rows don’t explicitly print “SRD‑46”.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | 428 | `NCC(=O)O` | (-inf, H2L, 2.33, HL, 9.57, L, +inf)"
+              },
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "H^[+] + Aminoacetic acid (Glycine) … entries: 48 … beta_def_32 … beta_def_79 … vlm_ids: vlm_93606 … vlm_93653"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_pka_ligands",
+                "snippet": "| ligand_5760 | Aminoacetic acid (Glycine) | … pH_ladder … (2.33, vlm_93627); … (9.57, vlm_93606) | 25 | 0.1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+# Q4.4 - Validation (batch 5)
+
+**49 of 108 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 1 | citation | ## What SRD-46 Tells Us About Known Zn²⁺–Amino Acid Systems | ...## What SRD-46 Tells Us About Known Zn²⁺–Amino Acid Systems  From the stability data (metal_208 = Z... |
+| 2 | 1 | exact_value | metal_208 = Zn²⁺ | ... Acid Systems  From the stability data (metal_208 = Zn²⁺, all at 25°C, I ≈ 0.1 M), here are the ... |
+| 3 | 1 | exact_value | all at 25°C | ...m the stability data (metal_208 = Zn²⁺, all at 25°C, I ≈ 0.1 M), here are the amino acids *... |
+| 4 | 1 | exact_value | I ≈ 0.1 M | ...ty data (metal_208 = Zn²⁺, all at 25°C, I ≈ 0.1 M), here are the amino acids **already st... |
+| 5 | 1 | exact_value | \| Glycine \| ligand_5760 \| NH₂, COO⁻ \| 37 \| Best-studied; log β₁ ≈ 5.0, log β₂ ≈ 9.0 \| | ...-----------\|-----------\|------\|-------\| \| Glycine \| ligand_5760 \| NH₂, COO⁻ \| 37 \| Best-studied; log β₁ ≈ 5.0, log β₂ ≈ 9.0 \| \| Histidine \| ligand_5898 \| NH₂, COO⁻, ... |
+| 6 | 1 | exact_value | \| Histidine \| ligand_5898 \| NH₂, COO⁻, imidazole-N \| 29 \| Tridentate; highest log β among simple AAs \| | ...t-studied; log β₁ ≈ 5.0, log β₂ ≈ 9.0 \| \| Histidine \| ligand_5898 \| NH₂, COO⁻, imidazole-N \| 29 \| Tridentate; highest log β among simple AAs \| \| Cysteine \| ligand_5856 \| NH₂, COO⁻, S... |
+| 7 | 1 | exact_value | \| Cysteine \| ligand_5856 \| NH₂, COO⁻, S⁻ \| 23 \| Thiolate donor; very strong Zn binder \| | ...ntate; highest log β among simple AAs \| \| Cysteine \| ligand_5856 \| NH₂, COO⁻, S⁻ \| 23 \| Thiolate donor; very strong Zn binder \| \| Penicillamine \| ligand_5857 \| NH₂, CO... |
+| 8 | 1 | exact_value | \| Penicillamine \| ligand_5857 \| NH₂, COO⁻, S⁻ \| 18 \| Thiolate; pKa(SH) ≈ 10.67 \| | ...Thiolate donor; very strong Zn binder \| \| Penicillamine \| ligand_5857 \| NH₂, COO⁻, S⁻ \| 18 \| Thiolate; pKa(SH) ≈ 10.67 \| \| Alanine \| ligand_5761 \| NH₂, COO⁻ \| 1... |
+| 9 | 1 | exact_value | \| Alanine \| ligand_5761 \| NH₂, COO⁻ \| 19 \| Bidentate; log β₁ ≈ 4.6 \| | ..., S⁻ \| 18 \| Thiolate; pKa(SH) ≈ 10.67 \| \| Alanine \| ligand_5761 \| NH₂, COO⁻ \| 19 \| Bidentate; log β₁ ≈ 4.6 \| \| Phenylalanine \| ligand_5777 \| NH₂, CO... |
+| 10 | 1 | exact_value | \| Phenylalanine \| ligand_5777 \| NH₂, COO⁻ \| 2 \| Bidentate only \| | ..., COO⁻ \| 19 \| Bidentate; log β₁ ≈ 4.6 \| \| Phenylalanine \| ligand_5777 \| NH₂, COO⁻ \| 2 \| Bidentate only \| \| Tyrosine (4-OH) \| ligand_5819 \| NH₂, ... |
+| 11 | 1 | exact_value | \| Tyrosine (4-OH) \| ligand_5819 \| NH₂, COO⁻, PhO⁻ \| 2 \| Phenolate donor \| | ...5777 \| NH₂, COO⁻ \| 2 \| Bidentate only \| \| Tyrosine (4-OH) \| ligand_5819 \| NH₂, COO⁻, PhO⁻ \| 2 \| Phenolate donor \| \| o-Tyrosine (2-OH) \| ligand_5817 \| NH₂... |
+| 12 | 1 | exact_value | \| o-Tyrosine (2-OH) \| ligand_5817 \| NH₂, COO⁻, PhO⁻ \| 2 \| Ortho-phenolate; better chelation geometry \| | ...NH₂, COO⁻, PhO⁻ \| 2 \| Phenolate donor \| \| o-Tyrosine (2-OH) \| ligand_5817 \| NH₂, COO⁻, PhO⁻ \| 2 \| Ortho-phenolate; better chelation geometry \| \| Serine \| ligand_5828 \| NH₂, COO⁻, OH ... |
+| 13 | 1 | exact_value | \| Serine \| ligand_5828 \| NH₂, COO⁻, OH \| 1 \| Weak OH donor \| | ...-phenolate; better chelation geometry \| \| Serine \| ligand_5828 \| NH₂, COO⁻, OH \| 1 \| Weak OH donor \| \| Threonine \| ligand_5829 \| NH₂, COO⁻, ... |
+| 14 | 1 | exact_value | \| Threonine \| ligand_5829 \| NH₂, COO⁻, OH \| 1 \| Weak OH donor \| | ...8 \| NH₂, COO⁻, OH \| 1 \| Weak OH donor \| \| Threonine \| ligand_5829 \| NH₂, COO⁻, OH \| 1 \| Weak OH donor \| \| Asparagine \| ligand_5843 \| NH₂, COO⁻,... |
+| 15 | 1 | exact_value | \| Asparagine \| ligand_5843 \| NH₂, COO⁻, CONH₂ \| 3 \| Amide donor \| | ...9 \| NH₂, COO⁻, OH \| 1 \| Weak OH donor \| \| Asparagine \| ligand_5843 \| NH₂, COO⁻, CONH₂ \| 3 \| Amide donor \| \| Tryptophan \| ligand_5907 \| NH₂, COO⁻,... |
+| 16 | 1 | exact_value | \| Tryptophan \| ligand_5907 \| NH₂, COO⁻, indole-N \| 1 \| Weak indole donor \| | ... \| NH₂, COO⁻, CONH₂ \| 3 \| Amide donor \| \| Tryptophan \| ligand_5907 \| NH₂, COO⁻, indole-N \| 1 \| Weak indole donor \|... |
+| 17 | 2 | counting | zero Zn²⁺ stability entries | ... the SRD-46 amino acid class but have **zero Zn²⁺ stability entries**:  \| Ligand \| ligand_id \| Key Donors \|... |
+| 18 | 2 | exact_value | \| **DOPA (3,4-dihydroxyphenylalanine)** \| ligand_5826 \| NH₂, COO⁻, 2×catecholate-O \| 9.81, 9.75 \| ⭐⭐⭐⭐⭐ **Highest** \| | ...---------------\|----------------------\| \| **DOPA (3,4-dihydroxyphenylalanine)** \| ligand_5826 \| NH₂, COO⁻, 2×catecholate-O \| 9.81, 9.75 \| ⭐⭐⭐⭐⭐ **Highest** \| \| Aspartic acid \| ligand_5802 \| NH₂, 2×... |
+| 19 | 3 | listing | **L-DOPA (3,4-Dihydroxyphenylalanine, ligand_5826)** | ...## 🏆 Prediction: **L-DOPA (3,4-Dihydroxyphenylalanine, ligand_5826)** Would Form the Most Stable Zn²⁺ Complex... |
+| 20 | 3 | comparison | Would Form the Most Stable Zn²⁺ Complex | ...-Dihydroxyphenylalanine, ligand_5826)** Would Form the Most Stable Zn²⁺ Complex  ### Reasoning  **1. Donor group richne... |
+| 21 | 3 | counting | L-DOPA possesses four potential donor atoms | ...up richness — tetradentate potential**  L-DOPA possesses four potential donor atoms: the α-amino group (NH₂), the α-carboxy... |
+| 22 | 3 | listing | the α-amino group (NH₂) | ...A possesses four potential donor atoms: the α-amino group (NH₂), the α-carboxylate (COO⁻), and two cate... |
+| 23 | 3 | listing | the α-carboxylate (COO⁻) | ...l donor atoms: the α-amino group (NH₂), the α-carboxylate (COO⁻), and two catecholate oxygens (3-OH and ... |
+| 24 | 3 | counting | two catecholate oxygens | ...up (NH₂), the α-carboxylate (COO⁻), and two catecholate oxygens (3-OH and 4-OH). This gives it **tetrad... |
+| 25 | 3 | listing | (3-OH and 4-OH) | ...ate (COO⁻), and two catecholate oxygens (3-OH and 4-OH). This gives it **tetradentate** coordin... |
+| 26 | 3 | exact_value | pKa₁ ≈ 9.75 | ...b Zn²⁺ chelator**  The catechol moiety (pKa₁ ≈ 9.75, pKa₂ ≈ 9.81 from SRD-46 data) forms ex... |
+| 27 | 3 | exact_value | pKa₂ ≈ 9.81 | ...or**  The catechol moiety (pKa₁ ≈ 9.75, pKa₂ ≈ 9.81 from SRD-46 data) forms exceptionally s... |
+| 28 | 3 | range | log K values in the range of 7–10 | ...igands are well-known to bind Zn²⁺ with log K values in the range of 7–10 for the catecholate unit alone.  **3. A... |
+| 29 | 3 | citation | The progression in the SRD-46 data is clear: | ...**3. Analogy to known strong binders**  The progression in the SRD-46 data is clear: - Glycine (NH₂ + COO⁻, bidentate): log ... |
+| 30 | 3 | exact_value | log β₁ ≈ 5.0 | ...ear: - Glycine (NH₂ + COO⁻, bidentate): log β₁ ≈ 5.0 - Histidine (NH₂ + COO⁻ + imidazole-N, ... |
+| 31 | 3 | comparison | log β₁ > glycine | ...(NH₂ + COO⁻ + imidazole-N, tridentate): log β₁ > glycine - Cysteine (NH₂ + COO⁻ + S⁻, tridentate... |
+| 32 | 3 | counting | multiple polynuclear species | ... + COO⁻ + S⁻, tridentate): very strong, multiple polynuclear species  L-DOPA adds **two** additional oxygen ... |
+| 33 | 3 | counting | L-DOPA adds **two** additional oxygen donors | ...y strong, multiple polynuclear species  L-DOPA adds **two** additional oxygen donors beyond the glycine backbone. The catech... |
+| 34 | 3 | property_attribution | The α-amino group (pKa ~8.75 for DOPA) and carboxylate (pKa ~2.2) are fully available for coordination near neutral pH | ...nation — a well-established phenomenon. The α-amino group (pKa ~8.75 for DOPA) and carboxylate (pKa ~2.2) are fully available for coordination near neutral pH.  **5. Why not Asp or Glu?**  Aspartic ... |
+| 35 | 3 | listing | Aspartic acid (ligand_5802) | ...eutral pH.  **5. Why not Asp or Glu?**  Aspartic acid (ligand_5802) and glutamic acid (ligand_5804) offer a... |
+| 36 | 3 | listing | glutamic acid (ligand_5804) | ...Glu?**  Aspartic acid (ligand_5802) and glutamic acid (ligand_5804) offer a second carboxylate (pKa 3.71 an... |
+| 37 | 3 | property_attribution | offer a second carboxylate | ...d_5802) and glutamic acid (ligand_5804) offer a second carboxylate (pKa 3.71 and 4.15, respectively), but ... |
+| 38 | 3 | exact_value | pKa 3.71 and 4.15, respectively | ...igand_5804) offer a second carboxylate (pKa 3.71 and 4.15, respectively), but carboxylate is a much weaker dono... |
+| 39 | 3 | comparison | They would be predicted to have log β₁ only modestly above glycine | ...t low pH and form weaker chelate rings. They would be predicted to have log β₁ only modestly above glycine.  **6. Why not phosphoserine?**  Phosph... |
+| 40 | 3 | listing | Phosphoserine (ligand_5809) | ...lycine.  **6. Why not phosphoserine?**  Phosphoserine (ligand_5809) has a phosphate group (pKa ~5.70) that ... |
+| 41 | 3 | property_attribution | has a phosphate group | ...oserine?**  Phosphoserine (ligand_5809) has a phosphate group (pKa ~5.70) that is a good donor, but p... |
+| 42 | 3 | exact_value | pKa ~5.70 | ...ne (ligand_5809) has a phosphate group (pKa ~5.70) that is a good donor, but phosphate te... |
+| 43 | 4 | exact_value | \| **L-DOPA** \| NH₂, COO⁻, 2×catecholate-O \| **4** \| **~9–11** \| High \| | ...-------------------------\|------------\| \| **L-DOPA** \| NH₂, COO⁻, 2×catecholate-O \| **4** \| **~9–11** \| High \| \| Asp \| NH₂, 2×COO⁻ \| 3 \| ~5.5–6.5 \| Hi... |
+| 44 | 4 | exact_value | \| Asp \| NH₂, 2×COO⁻ \| 3 \| ~5.5–6.5 \| High \| | ...echolate-O \| **4** \| **~9–11** \| High \| \| Asp \| NH₂, 2×COO⁻ \| 3 \| ~5.5–6.5 \| High \| \| Glu \| NH₂, 2×COO⁻ \| 3 \| ~5.5–6.5 \| Hi... |
+| 45 | 4 | exact_value | \| Glu \| NH₂, 2×COO⁻ \| 3 \| ~5.5–6.5 \| High \| | ...p \| NH₂, 2×COO⁻ \| 3 \| ~5.5–6.5 \| High \| \| Glu \| NH₂, 2×COO⁻ \| 3 \| ~5.5–6.5 \| High \| \| Phosphoserine \| NH₂, COO⁻, OPO₃²⁻ \| 3... |
+| 46 | 4 | exact_value | \| Phosphoserine \| NH₂, COO⁻, OPO₃²⁻ \| 3 \| ~6–7 \| Moderate \| | ...u \| NH₂, 2×COO⁻ \| 3 \| ~5.5–6.5 \| High \| \| Phosphoserine \| NH₂, COO⁻, OPO₃²⁻ \| 3 \| ~6–7 \| Moderate \| \| Glycine (reference) \| NH₂, COO⁻ \| 2 \|... |
+| 47 | 4 | exact_value | \| Glycine (reference) \| NH₂, COO⁻ \| 2 \| ~5.0 \| Known \| | ...₂, COO⁻, OPO₃²⁻ \| 3 \| ~6–7 \| Moderate \| \| Glycine (reference) \| NH₂, COO⁻ \| 2 \| ~5.0 \| Known \| \| Histidine (reference) \| NH₂, COO⁻, im... |
+| 48 | 4 | exact_value | \| Histidine (reference) \| NH₂, COO⁻, imidazole-N \| 3 \| ~6.5 \| Known \| | ...rence) \| NH₂, COO⁻ \| 2 \| ~5.0 \| Known \| \| Histidine (reference) \| NH₂, COO⁻, imidazole-N \| 3 \| ~6.5 \| Known \|... |
+| 49 | 5 | trend | the clear trend in SRD-46 data showing that additional strong donor groups systematically increase stability constants | ... catecholate coordination chemistry and the clear trend in SRD-46 data showing that additional strong donor groups systematically increase stability constants.  > **Source:** NIST SRD-46 (Critically... |

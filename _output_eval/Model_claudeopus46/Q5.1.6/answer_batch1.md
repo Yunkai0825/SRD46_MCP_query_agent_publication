@@ -1,0 +1,71 @@
+The answer has already been delivered above — here it is in its complete form:
+
+---
+
+# 🌟 The Lanthanide Contraction in Action: Rare Earth–EDTA Stability Constants
+
+One of the most elegant trends in inorganic chemistry is the **lanthanide contraction** — the steady decrease in ionic radius from La³⁺ to Lu³⁺ as the poorly-shielding 4f electrons are added. This directly translates into a smooth increase in complex stability with ligands like EDTA. Here's what the NIST SRD-46 database reveals:
+
+## EDTA (1:1) Stability Constants Across the Rare Earth Series
+
+All values at **25 °C, I = 0.1 mol/L (KNO₃), water**:
+
+| Z | Metal Ion | log β (ML) | Ionic Radius (Å)* |
+|---|-----------|------------|-------------------|
+| 21 | **Sc³⁺** | **23.1** | 0.745 |
+| 57 | La³⁺ | 15.46 | 1.032 |
+| 58 | Ce³⁺ | 15.93 | 1.010 |
+| 59 | Pr³⁺ | 16.40 | 0.990 |
+| 60 | Nd³⁺ | 16.56 | 0.983 |
+| 61 | Pm³⁺ | 17.45 | 0.970 |
+| 62 | Sm³⁺ | 17.10 | 0.958 |
+| 63 | Eu³⁺ | 17.32 | 0.947 |
+| 64 | Gd³⁺ | 17.35 | 0.938 |
+| 65 | Tb³⁺ | 17.92 | 0.923 |
+| 66 | Dy³⁺ | 18.28 | 0.912 |
+| 67 | Ho³⁺ | 18.60 | 0.901 |
+| 68 | Er³⁺ | 18.83 | 0.890 |
+| 69 | Tm³⁺ | 19.30 | 0.880 |
+| 70 | Yb³⁺ | 19.49 | 0.868 |
+| 71 | Lu³⁺ | 19.83 | 0.861 |
+| 39 | Y³⁺ | 18.07 | 0.900 |
+
+*\*Shannon ionic radii for CN=6, shown for context*
+
+## Data Richness Across the Rare Earths
+
+| Metal Ion | β Definitions | Ligand Partners | Total VLM Records |
+|-----------|:---:|:---:|:---:|
+| La³⁺ | 30 | 297 | **931** |
+| Gd³⁺ | 28 | 288 | 897 |
+| Eu³⁺ | 30 | 267 | 870 |
+| Sm³⁺ | 28 | 265 | 844 |
+| Nd³⁺ | 29 | 263 | 794 |
+| Er³⁺ | 29 | 241 | 792 |
+| Yb³⁺ | 28 | 235 | 771 |
+| Dy³⁺ | 23 | 252 | 758 |
+| Pr³⁺ | 24 | 231 | 723 |
+| Tb³⁺ | 24 | 235 | 709 |
+| Ho³⁺ | 24 | 230 | 705 |
+| Lu³⁺ | 25 | 234 | 671 |
+| Tm³⁺ | 22 | 223 | 633 |
+| Ce³⁺ | 22 | 188 | 567 |
+| Y³⁺ | 26 | 182 | 533 |
+| Sc³⁺ | 16 | 44 | 156 |
+| **Pm³⁺** | **4** | **14** | **24** |
+
+## Key Insights
+
+1. **The lanthanide contraction is beautifully monotonic**: log β increases by **4.4 log units** from La³⁺ (15.46) to Lu³⁺ (19.83) — meaning Lu-EDTA is roughly **25,000× more stable** than La-EDTA. Smaller ions create higher charge density, leading to stronger electrostatic binding to EDTA's carboxylate and amine donors.
+
+2. **Scandium is a dramatic outlier**: At log β = 23.1, Sc³⁺–EDTA is over **1,000× more stable** than even Lu³⁺–EDTA. Scandium's tiny radius (0.745 Å) creates extreme charge density, but it also means EDTA coordinates differently around it — a reminder that the "rare earth" label groups chemically diverse elements.
+
+3. **Y³⁺ behaves like a heavy lanthanide**: Its log β of 18.07 slots neatly between Dy³⁺ and Ho³⁺, consistent with its ionic radius (~0.90 Å). This is why yttrium is often found alongside the heavy rare earths in minerals and why it is grouped with them in separation chemistry.
+
+4. **Promethium is the ghost of the series**: With only 24 total measurements in the entire database (vs. ~930 for La³⁺), Pm's radioactivity (longest t½ = 17.7 years) makes it the least-studied rare earth by far. Its single EDTA log β value (17.45) fits the overall trend, but with far less certainty than its neighbors.
+
+5. **A subtle "gadolinium break"**: Notice that the increase from Sm³⁺ → Gd³⁺ (17.10 → 17.35) is relatively flat compared to the steeper jumps in the heavy lanthanides (Tb–Lu). This is sometimes attributed to the half-filled 4f⁷ shell at Gd³⁺ providing extra stabilization to the free ion, slightly reducing the driving force for complexation — a well-known phenomenon called the **gadolinium break** or "tetrad effect."
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes)*
+
+---

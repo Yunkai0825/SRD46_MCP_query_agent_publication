@@ -1,0 +1,250 @@
+[
+  {
+    "tool": "search_metals",
+    "primary_db_table": "cards.metal_card",
+    "secondary_db_tables": [
+      "cards.ligandmetal_card (counts)"
+    ],
+    "raw_keys_first_row": [
+      "beta_def_count",
+      "charge",
+      "inchi",
+      "is_simple_ion",
+      "ligand_count",
+      "metal_id",
+      "metal_name",
+      "smiles",
+      "symbol",
+      "vlm_count"
+    ],
+    "compacted": "## search_metals \u2014 1 result(s)\n\n| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |\n|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|\n| metal_41 | Cu^[2+] | Cu | 2 | \u2713 | [Cu+2] | InChI=1S/Cu/q+2 | beta_totN_264 | ligand_totN_1951 | vlm_totN_8963 |\n\n"
+  },
+  {
+    "tool": "search_ligands",
+    "primary_db_table": "cards.ligand_card",
+    "secondary_db_tables": [
+      "cards.ligand_pka_bracket  (-> pka_brackets enrichment)",
+      "cards.ligandmetal_card    (-> vlm_count enrichment)"
+    ],
+    "raw_keys_first_row": [
+      "common_name",
+      "formula",
+      "inchi",
+      "iupac_name",
+      "ligand_HxL_definition",
+      "ligand_class",
+      "ligand_id",
+      "ligand_name",
+      "pka_brackets",
+      "smiles",
+      "vlm_count"
+    ],
+    "compacted": "## search_ligands \u2014 1 result(s)\n\n**stats:** 1 SQL matches \u00b7 showing 1 \u00b7 limit 3\n\n| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |\n|-----------|-------------|---------|--------------|-----------|--------|--------------|\n| ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | 428 | `NCC(=O)O` | (-inf, H2L, 2.33, HL, 9.57, L, +inf) |\n\n### Functional groups across all SQL matches (1 parseable SMILES)\n\n| group | count | % |\n|-------|-------|---|\n| carboxyl | 1 | 100% |\n| primary_amine | 1 | 100% |\n\n"
+  },
+  {
+    "tool": "search_stability",
+    "primary_db_table": "cards.ligandmetal_card JOIN cards.ligandmetal_stability_measured",
+    "secondary_db_tables": [
+      "cards.ligand_pka_bracket  (-> pKa_bracket_involved enrichment)",
+      "equilibrium.eq_node JOIN equilibrium.eq_network  (-> map_id enrichment)"
+    ],
+    "raw_keys_first_row": [
+      "HxL_involved",
+      "HxL_involved_json",
+      "LHS_species_json",
+      "RHS_species_json",
+      "beta_definition_id",
+      "beta_definition_name",
+      "constant_type",
+      "electrolyte",
+      "equation",
+      "equation_str",
+      "equation_tree_json",
+      "ionic_strength",
+      "ligand_HxL_definition",
+      "ligand_SMILES",
+      "ligand_class_name",
+      "ligand_id",
+      "ligand_name",
+      "log_K",
+      "map_id",
+      "metal_id",
+      "metal_name",
+      "pKa_bracket_involved",
+      "reaction_type",
+      "solvent",
+      "temperature",
+      "vlm_id"
+    ],
+    "compacted": "## search_stability \u2014 5 row(s)\n\n### `Cu^[2+]` + Aminoacetic acid (Glycine) \u2014 5 measurement(s)\nmetal_id: metal_41 | ligand_id: ligand_5760\nligand_HxL_def: HL | ligand_SMILES: NCC(=O)O\n\n| vlm_id | ref_eq_map | beta_def | type | value | T\u00b0C | I(M) | equation | non_aqueous_phases | HxL_involved | pKa_bracket_involved |\n|--------|------------|----------|------|-------|-----|------|----------|--------------------|--------------|-------------|\n| vlm_93847 | ref_eq_map_86 | beta_def_812 | logK | 8.19 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |\n| vlm_93848 | ref_eq_map_87 | beta_d"
+  },
+  {
+    "tool": "search_pka_values",
+    "primary_db_table": "cards.ligand_card JOIN cards.ligand_pka_measured",
+    "secondary_db_tables": [
+      "cards.ligandmetal_card + cards.ligandmetal_stability_measured (-> M_tot, M_above, M_below per protonation form)"
+    ],
+    "raw_keys_first_row": [
+      "M_above",
+      "M_below",
+      "M_tot",
+      "bracket_from",
+      "bracket_to",
+      "electrolyte",
+      "formula",
+      "ionic_strength",
+      "ligand_HxL_definition",
+      "ligand_class_name",
+      "ligand_id",
+      "ligand_name",
+      "method",
+      "pKa",
+      "pKa_type",
+      "pka_id",
+      "quality",
+      "smiles",
+      "solvent",
+      "source_vlm_id",
+      "temperature"
+    ],
+    "compacted": "## search_pka_values \u2014 2 row(s)\n\n### pKa 2.0\u20132.5 (1 entries)\n\n| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T\u00b0C | I(M) | bracket_from\u2192to | M_bind_totN_below | M_bind_totN_above |\n|--------|-----------|-------------|---------|--------|-----|-----|------|-----------------|-------------------|-------------------|\n| vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 2.33 | 25 | 0.1 | HL\u2192H2L | M_tot_1 | M_tot_20 |\n\n### pKa 9.5\u201310.0 (1 entries)\n\n| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T\u00b0C | I(M) | bracket_from\u2192to | M_bind_totN_below | M_bind_"
+  },
+  {
+    "tool": "search_pka_ligands",
+    "primary_db_table": "cards.ligand_card JOIN cards.ligand_pka_measured",
+    "secondary_db_tables": [
+      "cards.ligandmetal_card + cards.ligandmetal_stability_measured (-> M_tot, M_above, M_below)"
+    ],
+    "raw_keys_first_row": [
+      "M_above",
+      "M_below",
+      "M_tot",
+      "bracket_from",
+      "bracket_to",
+      "electrolyte",
+      "formula",
+      "ionic_strength",
+      "ligand_HxL_definition",
+      "ligand_class_name",
+      "ligand_id",
+      "ligand_name",
+      "method",
+      "pKa",
+      "pKa_type",
+      "pka_id",
+      "quality",
+      "smiles",
+      "solvent",
+      "source_vlm_id",
+      "temperature"
+    ],
+    "compacted": "## search_pka_ligands \u2014 2 row(s)\n\n| ligand_id | ligand_name | HxL_def | formula | smiles | pH_ladder | T\u00b0C_range | I(M)_range | similarity_score |\n|-----------|-------------|---------|---------|--------|-----------|-----------|------------|------------------|\n| ligand_5760 | Aminoacetic acid (Glycine) | HL | C2H5N1O2 | NCC(=O)O | \u2212\u221e; H2L (M_tot_1); (2.33, vlm_93627); HL (M_tot_20); (9.57, vlm_93606); L (M_tot_43); +\u221e | 25 | 0.1 | *** |\n\n\n"
+  },
+  {
+    "tool": "search_networks",
+    "primary_db_table": "equilibrium.eq_map_collection JOIN eq_map JOIN eq_network JOIN eq_node",
+    "secondary_db_tables": [
+      "ATTACH cards.ligand_card  (-> ligand_HxL_definition, ligand_SMILES per row)"
+    ],
+    "raw_keys_first_row": [
+      "beta_definition_id",
+      "beta_definition_name",
+      "constant_type",
+      "edge_count",
+      "equation",
+      "ionic_max",
+      "ionic_min",
+      "ligand_HxL_definition",
+      "ligand_SMILES",
+      "ligand_id",
+      "ligand_name",
+      "log_K",
+      "metal_id",
+      "metal_name",
+      "network_db_id",
+      "node_count",
+      "node_id",
+      "temp_max",
+      "temp_min",
+      "vlm_id"
+    ],
+    "compacted": "## search_networks \u2014 6 row(s)\n\n> **Reference equilibrium networks** \u2014 each network is built around room-temperature (\u224820\u201325 \u00b0C) and low ionic-strength (\u22480 M) anchor conditions.\n\n### `Cu^[2+]` + Aminoacetic acid (Glycine) \u2014 3 network(s)\nmetal_id: metal_41 | ligand_id: ligand_5760 | ligand_def_HxL: HL | ligand_SMILES: NCC(=O)O\n\n| beta_def | equation |\n|----------|----------|\n| beta_def_840 | ``[M] + [L]^2 <=> [ML2]`` |\n| beta_def_812 | ``[M] + [L] <=> [ML]`` |\n\n| network_id | node_counts | edge_counts | T_range | I_range | vlm_counts | beta_def_ids | type | values |\n|------------|-------------|-"
+  },
+  {
+    "tool": "search_citations",
+    "primary_db_table": "cards.ref_vlm_literature_alt JOIN cards.ref_literature_alt (*** NOTE: NOT srd46_literature.db ***)",
+    "secondary_db_tables": [
+      "(none \u2014 single GROUP BY for vlm_count aggregation)"
+    ],
+    "raw_keys_first_row": [
+      "citation",
+      "example_vlm_id",
+      "literature_alt_id",
+      "shortcut",
+      "vlm_count"
+    ],
+    "compacted": "## search_citations \u2014 3 row(s)\n\n| example_vlm_id | vlm_count | lit_id | shortcut | citation |\n|----------------|-----------|--------|----------|----------|\n| vlm_161952 | 28 | lit_4478 | 64Ma | W. A. E. McBryde, Canad. J. Chem., 1964, 42, 1917 |\n| vlm_118645 | 55 | lit_4480 | 64MA | F. J. Millero, J. C. Ahluwalia, and L. G. Hepler, J. Phys. Chem., 1964, 68, 3435 |\n| vlm_161401 | 10 | lit_4481 | 64MAa | F. J. Millero, J. C. Ahluwalia, and L. G. Hepler, J. Chem. Eng. Data, 1964, 9, \u2026 |\n\n"
+  },
+  {
+    "tool": "search_similar_ligands",
+    "primary_db_table": "fingerprints.ligand_similarity",
+    "secondary_db_tables": [
+      "cards.ligand_card  (-> ligand_name, smiles, HxL_canonical)",
+      "equilibrium.eq_map_collection + eq_node (-> eq_richness: metals_covered, top_maps, n_beta_defs)"
+    ],
+    "raw_keys_first_row": [
+      "HxL_canonical",
+      "eq_richness",
+      "family_score",
+      "ligand_id",
+      "ligand_name",
+      "similarity_score",
+      "smiles",
+      "tversky_query_in_target",
+      "tversky_target_in_query"
+    ],
+    "compacted": "## search_similar_ligands \u2014 3 row(s)\n\n**Query:** Aminoacetic acid (Glycine)\n\n| ligand_id | ligand_name | smiles | HxL_canonical | family_score | similarity_score | tversky_query_in_target | tversky_target_in_query | diff_catalog_fun_group |\n|---|---|---|---|---|---|---|---|---|\n| ligand_5760 | Aminoacetic acid (Glycine) | NCC(=O)O | HL | \u2014 | \u2014 | \u2014 | \u2014 | *(query)* |\n| ligand_6951 | Glycinamide | NCC(N)=O | L | 0.5769 | 0.5385 | 0.7 | 0.7 | amide(+1); carboxyl(-1) |\n| ligand_5788 | 3-Aminopropanoic acid (beta-Alanine) | NCCC(=O)O | HL | 0.68 | 0.5333 | 0.7767 | 0.6299 | no_diff_catalog_fun |\n| l"
+  },
+  {
+    "tool": "build_system_catalog",
+    "primary_db_table": "cards.ligandmetal_card JOIN cards.ligandmetal_stability_measured (species_catalog, vlm_ids)",
+    "secondary_db_tables": [
+      "equilibrium.eq_map_collection JOIN eq_map JOIN eq_network (-> eq_maps per pair: networks, condition ranges)"
+    ],
+    "raw_keys_first_row": [
+      "pairs",
+      "summary"
+    ],
+    "compacted": "## build_system_catalog \u2014 1 pair(s), 2 species\n\n### Cu^[2+] + Aminoacetic acid (Glycine)\n**metal_id:** metal_41 | **ligand_id:** ligand_5760 | **ligand_def_HxL:** HL  \n**entries:** 30 | **species:** 2 | **vlm_count:** 30\n\n| beta_definition_id | beta_definition_name | equation_str | phases | n_entries |\n|--------------------|----------------------|--------------|--------|----------|\n| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 15 |\n| beta_def_840 | [ML<sub>2</sub>]/[M][L]<sup>2</sup> | [M] + [L]^2 <=> [ML2] | [ML2](aqueous), [M](aqueous), [L](a"
+  },
+  {
+    "tool": "inspect_card(vlm_93847)",
+    "primary_db_table": "cards.ligandmetal_card JOIN cards.ligandmetal_stability_measured",
+    "secondary_db_tables": [
+      "ATTACH equilibrium  (eq_node JOIN eq_network -> networks)",
+      "ATTACH literature   (vlm_literature_sic JOIN literature_alt -> citations)",
+      "cards.ligand_pka_bracket  (-> pKa_bracket_involved)"
+    ],
+    "raw_top_keys": [
+      "card",
+      "citations",
+      "networks",
+      "prefix_id",
+      "total_citations"
+    ],
+    "compacted": "## inspect_card \u2014 VLM | vlm_93847\n\n### Metal\n**metal_id:** metal_41 | **metal_name:** Cu^[2+]  \n**metal_SMILES:** `[Cu+2]`  \n**metal_InChi:** `InChI=1S/Cu/q+2`  \n\n### Ligand\n**ligand_id:** ligand_5760 | **ligand_name:** Aminoacetic acid (Glycine)  \n**ligand_HxL_definition:** HL  \n**ligand_SMILES:** `NCC(=O)O`  \n**ligand_InChi:** `InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)`  \n\n### Stability\n**vlm_id:** vlm_93847  \n**beta_definition_id:** beta_def_812 | **beta_definition_name:** [ML]/[M][L]  \n**data_type:** log_K | **log_K:** 8.19  \n**temperature:** 25.0 \u00b0C | **ionic_strength:** 0.1 M  \n**uncert"
+  },
+  {
+    "tool": "inspect_literature(vlm_93847)",
+    "primary_db_table": "literature.vlm_literature_sic JOIN literature.literature_alt",
+    "secondary_db_tables": [
+      "(none)"
+    ],
+    "raw_top_keys": [
+      "citations",
+      "prefix_id",
+      "total_citations"
+    ],
+    "compacted": "## inspect_literature \u2014 vlm_93847 \u2014 163 citation(s)\n\n| lit_id | shortcut | citation |\n|--------|----------|----------|\n| lit_297 | 31RG | H. L. Riley and V. Gallafent, J. Chem. Soc., 1931, 2029 |\n| lit_366 | 34FR | E. Ferrell, J. M. Ridgion, and H. L. Riley, J. Chem. Soc., 1934, 1440 |\n| lit_684 | 45FL | H. V. Flood and V. Lorzs, Tidskr. Kjemi. Berg., 1945, 5, 83 |\n| lit_705 | 46K | R. M. Keefer, J. Amer. Chem. Soc., 1946, 68, 2329 |\n| lit_762 | 48K | R. M. Keefer, J. Amer. Chem. Soc., 1948, 70, 476 |\n| lit_849 | 49LO | H. A. Laitinen, E. L. Onstott, J. C. Bailar, Jr., and S. Swann, Jr., J. Am"
+  }
+]

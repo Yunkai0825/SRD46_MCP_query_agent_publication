@@ -1,0 +1,75 @@
+I now have all the data needed. Let me deliver the complete answer.
+
+---
+
+## Cu²⁺–Malonate Conditional Stability Constant at pH 4
+
+### Data Retrieved from NIST SRD-46
+
+| Quantity | Value | Conditions | Source |
+|---|---|---|---|
+| pKa₁ (H₂L → HL⁻) | **2.65** | 25 °C, I = 0.1 M | vlm_151949 |
+| pKa₂ (HL⁻ → L²⁻) | **5.27** | 25 °C, I = 0.1 M | vlm_151918 |
+| log K (Cu²⁺ + L²⁻ ⇌ CuL) | **5.04** | 25 °C, I = 0.1 M | vlm_152316 |
+
+The stability constant used is the **1:1 thermodynamic constant** (β_def_812): Cu²⁺ + L²⁻ ⇌ CuL, with no protons bound.
+
+---
+
+### Step 1 — Compute the α-coefficient for L²⁻ at pH 4
+
+The **side-reaction coefficient** α_L(H) accounts for the fraction of total dissolved malonate that exists as the fully deprotonated form L²⁻ at a given pH:
+
+$$\alpha_{L^{2-}} = \frac{K_{a1} K_{a2}}{[\text{H}^+]^2 + K_{a1}[\text{H}^+] + K_{a1}K_{a2}}$$
+
+With pH = 4 → [H⁺] = 10⁻⁴ M, Ka₁ = 10⁻²·⁶⁵, Ka₂ = 10⁻⁵·²⁷:
+
+| Term | Value |
+|---|---|
+| [H⁺]² | 10⁻⁸ = 1.000 × 10⁻⁸ |
+| Ka₁·[H⁺] | 10⁻²·⁶⁵ × 10⁻⁴ = 10⁻⁶·⁶⁵ = 2.239 × 10⁻⁷ |
+| Ka₁·Ka₂ | 10⁻²·⁶⁵ × 10⁻⁵·²⁷ = 10⁻⁷·⁹² = 1.202 × 10⁻⁸ |
+| **Denominator** | 1.000×10⁻⁸ + 2.239×10⁻⁷ + 1.202×10⁻⁸ = **2.459 × 10⁻⁷** |
+| **Numerator** | 1.202 × 10⁻⁸ |
+| **α_L²⁻** | 1.202×10⁻⁸ / 2.459×10⁻⁷ = **0.04888** |
+
+$$\log \alpha_{L^{2-}} = \log(0.04888) = \mathbf{-1.311}$$
+
+This means at pH 4, only ~4.9% of dissolved malonate is in the reactive L²⁻ form; the rest is tied up as HL⁻ (dominant) or H₂L.
+
+---
+
+### Step 2 — Compute the Conditional Stability Constant
+
+The conditional constant K′ is defined for the reaction:
+
+$$\text{Cu}^{2+} + L_{\text{total}} \rightleftharpoons \text{CuL}$$
+
+where L_total = [L²⁻] + [HL⁻] + [H₂L]. It relates to the thermodynamic constant by:
+
+$$\log K' = \log K + \log \alpha_{L^{2-}}$$
+
+$$\log K' = 5.04 + (-1.311) = \mathbf{3.73}$$
+
+$$K' = 10^{3.73} \approx \mathbf{5{,}370 \ M^{-1}}$$
+
+---
+
+### Summary
+
+| Quantity | Value |
+|---|---|
+| log K (thermodynamic, pH-independent) | 5.04 |
+| log α_L²⁻ at pH 4 | −1.31 |
+| **log K′ (conditional, pH 4)** | **3.73** |
+| **K′** | **~5,400 M⁻¹** |
+
+---
+
+### Chemistry Insight
+
+The ~1.3 log-unit drop from the thermodynamic to the conditional constant is entirely due to **proton competition**: at pH 4, which sits between pKa₁ (2.65) and pKa₂ (5.27), malonate is predominantly in the singly protonated HL⁻ form and cannot bind Cu²⁺ as effectively. Raising the pH toward 6–7 would push α_L²⁻ → 1 and recover nearly the full thermodynamic constant. This pH-dependence is critical in environmental and biological contexts — for example, Cu²⁺ speciation in acidic soils or wine (pH ~3–4) is dramatically weaker than in neutral blood plasma.
+
+*Source: NIST SRD-46 (vlm_152316, vlm_151918, vlm_151949), 25 °C, I = 0.1 M.*
+
+---

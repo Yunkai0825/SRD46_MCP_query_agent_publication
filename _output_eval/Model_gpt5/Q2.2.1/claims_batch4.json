@@ -1,0 +1,464 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt5\\Q2.2.1\\Q2.2.1_result_batch4.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Here’s the breakdown for stability-constant measurements in SRD-46 (temperature window 24.8–25.2 °C):",
+        "claims": [
+          {
+            "start": 0,
+            "end": 56,
+            "text": "Here’s the breakdown for stability-constant measurements",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 57,
+            "end": 66,
+            "text": "in SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 68,
+            "end": 99,
+            "text": "temperature window 24.8–25.2 °C",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Provenance claim: results are from the NIST SRD-46 context for this run; the tool output does not explicitly print 'SRD-46'.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "db_count_records",
+                "snippet": "table: ligandmetal_stability_measured | where: constant_value IS NOT NULL | count: 79063"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "where: constant_value IS NOT NULL AND temperature_c BETWEEN 24.8 AND 25.2",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "db_count_records",
+                "snippet": "table: ligandmetal_stability_measured | where: constant_value IS NOT NULL AND temperature_c BETWEEN 24.8 AND 25.2 | count: 67237"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Category | Count | Share of total |\n|---|---:|---:|\n| All stability-constant measurements | 79,063 | 100% |\n| At 25.0 ± 0.2 °C | 67,237 | 85.04% |",
+        "claims": [
+          {
+            "start": 54,
+            "end": 109,
+            "text": "| All stability-constant measurements | 79,063 | 100% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 110,
+            "end": 148,
+            "text": "| At 25.0 ± 0.2 °C | 67,237 | 85.04% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "ligandmetal_stability_measured | constant_value IS NOT NULL | 79063",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL | 79063 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "ligandmetal_stability_measured | constant_value IS NOT NULL AND temperature_c BETWEEN 24.8 AND 25.2 | 67237",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL AND temperature_c BETWEEN 24.8 AND 25.2 | 67237 |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL | 79063 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "Notes:\n- All stability-constant records in this set have a temperature recorded (nTknown = 79,063), so the share relative to total and to temperature-known measurements is identical (85.04%).\n- The ±0.2 °C window captures typical entries recorded as “25 °C” (and closely equivalent values).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Notes:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 9,
+            "end": 79,
+            "text": "All stability-constant records in this set have a temperature recorded",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 81,
+            "end": 97,
+            "text": "nTknown = 79,063",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 103,
+            "end": 181,
+            "text": "the share relative to total and to temperature-known measurements is identical",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 183,
+            "end": 189,
+            "text": "85.04%",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 198,
+            "end": 205,
+            "text": "±0.2 °C",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 251,
+            "end": 256,
+            "text": "25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 259,
+            "end": 288,
+            "text": "and closely equivalent values",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL AND temperature_c IS NOT NULL | 79063 |",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL | 79063 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL AND temperature_c IS NOT NULL | 79063 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Count where temperature_c IS NOT NULL is 79063 (same numeric value as 79,063).",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL AND temperature_c IS NOT NULL | 79063 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL | 79063 |\n| ligandmetal_stability_measured | constant_value IS NOT NULL AND temperature_c IS NOT NULL | 79063 |",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL | 79063 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL AND temperature_c IS NOT NULL | 79063 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL AND temperature_c BETWEEN 24.8 AND 25.2 | 67237 |",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL AND temperature_c BETWEEN 24.8 AND 25.2 | 67237 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL AND temperature_c IS NOT NULL | 79063 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "where: temperature_c BETWEEN 24.8 AND 25.2",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL AND temperature_c BETWEEN 24.8 AND 25.2 | 67237 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Range 24.8–25.2 °C implies a 25 °C center point.",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL AND temperature_c BETWEEN 24.8 AND 25.2 | 67237 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "“closely equivalent values” is interpretive; not a database field. Consistent with ±0.2 °C around 25 °C capturing near-25 °C entries.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "Source: NIST SRD-46 (ligandmetal_stability_measured counts; temperature_c between 24.8 and 25.2 °C).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 19,
+            "text": "Source: NIST SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 21,
+            "end": 58,
+            "text": "ligandmetal_stability_measured counts",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 60,
+            "end": 98,
+            "text": "temperature_c between 24.8 and 25.2 °C",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Queries run on table 'ligandmetal_stability_measured' (SRD-46 schema for this run; the SRD-46 string is not printed in tool output).",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "db_count_records",
+                "snippet": "| table | where | count |\n| ligandmetal_stability_measured | constant_value IS NOT NULL | 79063 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL | 79063 |",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "db_count_records",
+                "snippet": "| table | where | count |\n| ligandmetal_stability_measured | constant_value IS NOT NULL | 79063 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL AND temperature_c IS NOT NULL | 79063 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "temperature_c BETWEEN 24.8 AND 25.2",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | constant_value IS NOT NULL AND temperature_c BETWEEN 24.8 AND 25.2 | 67237 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

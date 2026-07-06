@@ -1,0 +1,23 @@
+# Q4.1 - Validation (batch 5)
+
+**17 of 102 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 3 | exact_value | \| Fe²⁺ + DMF \| ~0.5 – 1.0 \| Weak O-donor; analogous to formamide/acetamide; Fe²⁺ prefers N/S donors \| | ...\| \|---------\|-----------------\|-------\| \| Fe²⁺ + DMF \| ~0.5 – 1.0 \| Weak O-donor; analogous to formamide/acetamide; Fe²⁺ prefers N/S donors \| \| Fe³⁺ + DMF \| ~1.0 – 1.5 \| Fe³⁺ is har... |
+| 2 | 3 | exact_value | \| Fe³⁺ + DMF \| ~1.0 – 1.5 \| Fe³⁺ is harder acid, slightly better affinity for O-donors \| | ...de/acetamide; Fe²⁺ prefers N/S donors \| \| Fe³⁺ + DMF \| ~1.0 – 1.5 \| Fe³⁺ is harder acid, slightly better affinity for O-donors \|  > **Note:** These are estimates for aq... |
+| 3 | 3 | property_attribution | These are estimates for aqueous solution. | ...er affinity for O-donors \|  > **Note:** These are estimates for aqueous solution. In pure DMF solvent, the "stability" is... |
+| 4 | 4 | exact_value | (log β up to ~7) | ...s complexes only with soft metals: Pd²⁺ (log β up to ~7), Ag⁺, Cu⁺. Iron(II) is a borderline met... |
+| 5 | 4 | exact_value | \| Fe²⁺ + MeCN \| ~0.3 – 0.8 \| Borderline metal + soft N; much weaker than Pd²⁺ or Ag⁺ \| | ...\| \|---------\|-----------------\|-------\| \| Fe²⁺ + MeCN \| ~0.3 – 0.8 \| Borderline metal + soft N; much weaker than Pd²⁺ or Ag⁺ \| \| Fe³⁺ + MeCN \| < 0.5 \| Hard acid + sof... |
+| 6 | 4 | exact_value | \| Fe³⁺ + MeCN \| < 0.5 \| Hard acid + soft donor = very unfavorable; hydrolysis competes \| | ... soft N; much weaker than Pd²⁺ or Ag⁺ \| \| Fe³⁺ + MeCN \| < 0.5 \| Hard acid + soft donor = very unfavorable; hydrolysis competes \|  > In pure acetonitrile solvent, [Fe(Me... |
+| 7 | 5 | exact_value | (pKa of conjugate acid ≈ −2.1) | ... the weakest donors due to low basicity (pKa of conjugate acid ≈ −2.1). THF forms no stable aqueous complexes ... |
+| 8 | 5 | exact_value | Fe²⁺ + THF \| < 0 (no complex) \| Ether O too weak; water outcompetes completely | ...\|---------\|-----------------\|-------\| \| Fe²⁺ + THF \| < 0 (no complex) \| Ether O too weak; water outcompetes completely \| \| Fe³⁺ + THF \| < 0 (no complex) \| Fe³... |
+| 9 | 5 | exact_value | Fe³⁺ + THF \| < 0 (no complex) \| Fe³⁺ hydrolyzes before THF can coordinate in water | ... weak; water outcompetes completely \| \| Fe³⁺ + THF \| < 0 (no complex) \| Fe³⁺ hydrolyzes before THF can coordinate in water \|  > THF–Fe complexes exist only in str... |
+| 10 | 6 | exact_value | pKa ~15 | ...equires deprotonation (glycolate anion, pKa ~15).  \| Species \| Estimated log β₁ \| Basis... |
+| 11 | 6 | exact_value | \| Fe²⁺ + EG (neutral) \| ~1.0 – 2.0 \| Weak bidentate O,O-chelate; analogous to glycerol/sorbitol–metal data \| | ...\| \|---------\|-----------------\|-------\| \| Fe²⁺ + EG (neutral) \| ~1.0 – 2.0 \| Weak bidentate O,O-chelate; analogous to glycerol/sorbitol–metal data \| \| Fe³⁺ + EG (neutral) \| ~2.0 – 3.5 \| Fe... |
+| 12 | 6 | exact_value | \| Fe³⁺ + EG (neutral) \| ~2.0 – 3.5 \| Fe³⁺ harder acid; better affinity for O-donors; but hydrolysis competes strongly \| | ...ogous to glycerol/sorbitol–metal data \| \| Fe³⁺ + EG (neutral) \| ~2.0 – 3.5 \| Fe³⁺ harder acid; better affinity for O-donors; but hydrolysis competes strongly \| \| Fe³⁺ + EG (deprotonated) \| ~5 – 8 \| G... |
+| 13 | 6 | exact_value | \| Fe³⁺ + EG (deprotonated) \| ~5 – 8 \| Glycolate-type coordination; analogous to catecholate/phenolate Fe³⁺ chemistry \| | ...ors; but hydrolysis competes strongly \| \| Fe³⁺ + EG (deprotonated) \| ~5 – 8 \| Glycolate-type coordination; analogous to catecholate/phenolate Fe³⁺ chemistry \|... |
+| 14 | 7 | exact_value | \| DMF \| O (amide carbonyl) \| Hard \| ~0.5–1.0 \| ~1.0–1.5 \| ❌ \| | ...--------\|-----------------\|-----------\| \| DMF \| O (amide carbonyl) \| Hard \| ~0.5–1.0 \| ~1.0–1.5 \| ❌ \| \| Acetonitrile \| N (nitrile) \| Soft \| ~... |
+| 15 | 7 | exact_value | \| Acetonitrile \| N (nitrile) \| Soft \| ~0.3–0.8 \| <0.5 \| ❌ (only Pd, Ag, Cu) \| | ...nyl) \| Hard \| ~0.5–1.0 \| ~1.0–1.5 \| ❌ \| \| Acetonitrile \| N (nitrile) \| Soft \| ~0.3–0.8 \| <0.5 \| ❌ (only Pd, Ag, Cu) \| \| THF \| O (ether) \| Hard \| <0 \| <0 \| ❌ ... |
+| 16 | 7 | exact_value | \| THF \| O (ether) \| Hard \| <0 \| <0 \| ❌ (not in DB) \| | ...~0.3–0.8 \| <0.5 \| ❌ (only Pd, Ag, Cu) \| \| THF \| O (ether) \| Hard \| <0 \| <0 \| ❌ (not in DB) \| \| Ethylene glycol \| O,O (diol) \| Hard \|... |
+| 17 | 7 | exact_value | \| Ethylene glycol \| O,O (diol) \| Hard \| ~1.0–2.0 \| ~2.0–3.5 \| ❌ (B, Ge, Ln only) \| | ...her) \| Hard \| <0 \| <0 \| ❌ (not in DB) \| \| Ethylene glycol \| O,O (diol) \| Hard \| ~1.0–2.0 \| ~2.0–3.5 \| ❌ (B, Ge, Ln only) \|... |

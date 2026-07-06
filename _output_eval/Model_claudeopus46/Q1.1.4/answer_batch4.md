@@ -1,0 +1,44 @@
+Based on the data retrieved from SRD-46, here is a comprehensive summary of the stability constants available for the **Ag⁺ + Ammonia** system.
+
+---
+
+## Stability Constants for Ag⁺ with Ammonia (NH₃)
+
+**Source:** NIST Standard Reference Database 46 (SRD-46)
+
+The database contains **47 measurements** across **two cumulative equilibria**, all at **25 °C** in aqueous solution:
+
+### Equilibria Defined
+
+| Species | Equilibrium | β Definition |
+|---------|------------|--------------|
+| [Ag(NH₃)]⁺ | Ag⁺ + NH₃ ⇌ [Ag(NH₃)]⁺ | β₁ (beta_def_812) — 22 entries |
+| [Ag(NH₃)₂]⁺ | Ag⁺ + 2 NH₃ ⇌ [Ag(NH₃)₂]⁺ | β₂ (beta_def_840) — 25 entries |
+
+### log K (Stability Constants)
+
+| Equilibrium | # Measurements | log K Range | Ionic Strength Range |
+|-------------|---------------|-------------|---------------------|
+| β₁: Ag⁺ + NH₃ ⇌ [Ag(NH₃)]⁺ | 13 | **3.20 – 3.80** | 0 – 5 M |
+| β₂: Ag⁺ + 2 NH₃ ⇌ [Ag(NH₃)₂]⁺ | 16 | **7.14 – 8.18** | 0 – 5 M |
+
+### Thermodynamic Parameters (ΔH and ΔS)
+
+| Equilibrium | Parameter | # Measurements | Range | I Range |
+|-------------|-----------|---------------|-------|---------|
+| β₁ | ΔH (kJ/mol) | 5 | −25.9 to −20.5 | 0 – 3 M |
+| β₁ | ΔS (J/mol·K) | 4 | −12.1 to −5.4 | 0 – 3 M |
+| β₂ | ΔH (kJ/mol) | 5 | −61.9 to −56.1 | 0 – 3 M |
+| β₂ | ΔS (J/mol·K) | 4 | −55.6 to −46.4 | 0 – 3 M |
+
+### Key Observations
+
+1. **Strong complexation:** The cumulative log β₂ ≈ 7.2–8.2 for [Ag(NH₃)₂]⁺ reflects the well-known high affinity of Ag⁺ for ammonia — this is the basis of Tollens' reagent used in qualitative analysis and the silver mirror reaction.
+
+2. **Stepwise trend:** The stepwise log K₂ (≈ log β₂ − log β₁ ≈ 3.9–4.4) is comparable to or slightly larger than log K₁ (≈ 3.2–3.8), which is somewhat unusual — the second NH₃ binds about as strongly as the first, consistent with the linear [H₃N–Ag–NH₃]⁺ geometry that is thermodynamically very favorable.
+
+3. **Exothermic binding:** Both steps are exothermic (negative ΔH) and entropically unfavorable (negative ΔS), indicating that the stability is enthalpy-driven through strong Ag–N σ-bonding.
+
+The database includes 16 reference equilibrium networks spanning ionic strengths from 0 to 5 M, allowing users to select constants appropriate for their specific solution conditions.
+
+---

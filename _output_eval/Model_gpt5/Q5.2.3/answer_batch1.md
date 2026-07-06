@@ -1,0 +1,28 @@
+Short answer: SRD‑46 contains no stability-constant measurements at 200 °C (≈473 K), and it does not store pressure as a structured field. Therefore, SRD‑46 has no entries that can be filtered to 200 °C and 50 bar.
+
+Evidence from SRD‑46
+| Check | Result |
+|---|---|
+| Structured pressure field in stability table | Not present (schema has no pressure column) |
+| Stability constants with temperature 198–202 °C | 0 measurements found |
+| Equilibrium networks mapped with 198–202 °C | 0 networks found |
+
+Temperature coverage snapshot (stability measurements)
+| temperature_c | count | pct |
+|---:|---:|---:|
+| 25.0 | 67237 | 85.04% |
+| 20.0 | 6845 | 8.66% |
+| 37.0 | 1699 | 2.15% |
+| 30.0 | 919 | 1.16% |
+| 35.0 | 488 | 0.62% |
+| 18.0 | 482 | 0.61% |
+
+What this means for your request
+- SRD‑46 does not support filtering by pressure, and a targeted search at 200 °C returned no stability-constant data. Most measurements in SRD‑46 are near ambient temperature (see table).
+
+Next steps (if helpful)
+- If you specify a metal–ligand system, I can: (a) report the closest‑temperature stability constants available in SRD‑46 along with full conditions, or (b) search the linked SRD‑46 citations for hydrothermal studies mentioning “200 °C” and “bar/MPa” and check those papers.
+
+Source: NIST SRD‑46 (ligandmetal_stability_measured schema and stability searches).
+
+---

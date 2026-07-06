@@ -1,0 +1,62 @@
+I have sufficient data to answer the question. Let me compute the stepwise constants from the cumulative log β values and deliver the analysis.
+
+---
+
+## Cu²⁺–Ammonia Stepwise Constants K₁–K₄
+
+### From Cumulative log β to Stepwise log Kᵢ
+
+The SRD-46 database reports **cumulative** log β values (M + nL ⇌ MLₙ). The stepwise constants are derived as:
+
+> log Kᵢ = log βᵢ − log βᵢ₋₁
+
+Using the consensus values at **25 °C, aqueous** (representative mid-range of the reported spreads):
+
+| Step | Reaction | log βᵢ (consensus) | log Kᵢ (stepwise) | Kᵢ |
+|------|----------|-------------------|-------------------|----|
+| 1 | Cu²⁺ + NH₃ ⇌ [Cu(NH₃)]²⁺ | **4.15** | **4.15** | ~14,100 |
+| 2 | + NH₃ ⇌ [Cu(NH₃)₂]²⁺ | **7.65** | **3.50** | ~3,160 |
+| 3 | + NH₃ ⇌ [Cu(NH₃)₃]²⁺ | **10.5** | **2.85** | ~710 |
+| 4 | + NH₃ ⇌ [Cu(NH₃)₄]²⁺ | **12.75** | **2.25** | ~178 |
+
+*(log β ranges from SRD-46: β₁ = 4.02–4.30, β₂ = 7.40–7.91, β₃ = 10.2–10.8, β₄ = 12.3–13.2, all at 25 °C)*
+
+---
+
+### Do They Decrease Monotonically?
+
+**Yes — strictly and significantly.** Each successive log Kᵢ drops by roughly 0.6–0.7 log units:
+
+| Transition | Δ log K |
+|------------|---------|
+| K₁ → K₂ | −0.65 |
+| K₂ → K₃ | −0.65 |
+| K₃ → K₄ | −0.60 |
+
+The decrease is remarkably *uniform* through K₁–K₄, which is itself chemically informative.
+
+---
+
+### What Does This Tell Us About Coordination Geometry?
+
+**1. Statistical effect (baseline expectation)**
+For a purely statistical reason, Kᵢ always decreases: there are fewer vacant sites for the incoming ligand and more occupied sites for the departing one. The statistical ratio predicts log Kᵢ − log Kᵢ₊₁ ≈ log[(n−i+1)/i], giving a modest but real decrease.
+
+**2. The Jahn–Teller story — why K₅ and K₆ are *dramatically* smaller**
+Cu²⁺ is a d⁹ ion subject to a **Jahn–Teller distortion**. In an octahedral field, the two axial bonds elongate strongly relative to the four equatorial bonds. The four equatorial NH₃ ligands (K₁–K₄) bind to a nearly square-planar Cu²⁺ core with good orbital overlap. The fifth and sixth axial positions are much weaker — log K₅ ≈ −0.5 and log K₆ is essentially unmeasurable in aqueous solution. This is why Cu²⁺–ammonia effectively stops at **[Cu(NH₃)₄]²⁺** in water.
+
+**3. The uniform K₁–K₄ drop signals square-planar preference**
+The *smooth, equal-step* decrease from K₁ to K₄ (rather than a sharp break) indicates that all four ligands are entering **equivalent equatorial sites** in a progressively more crowded coordination sphere. There is no geometric discontinuity within the equatorial set — consistent with a **D₄h square-planar / elongated octahedral** geometry where all four equatorial positions are chemically similar.
+
+**4. Thermodynamic context**
+The ΔH values (SRD-46: ΔH₄ ≈ −87 to −99 kJ/mol for β₄) confirm that binding is **enthalpically driven** throughout, while ΔS becomes increasingly negative (more negative ΔS for higher n), reflecting the entropic cost of organizing more NH₃ around the metal — another factor reinforcing the monotonic K decrease.
+
+---
+
+### Summary
+
+> The stepwise constants **K₁ > K₂ > K₃ > K₄** decrease monotonically and uniformly (~0.6 log units per step), consistent with filling four equivalent equatorial sites on a Jahn–Teller-distorted Cu²⁺ centre. The dramatic drop beyond K₄ (axial sites) is the hallmark of **square-planar preference** in Cu²⁺ chemistry and explains why the tetraammine complex is the dominant species in aqueous ammonia solutions.
+
+*Source: NIST SRD-46, metal_41 (Cu²⁺) + ligand_10103 (NH₃), 25 °C, aqueous, 17 logK measurements across ionic strengths 0–3 M.*
+
+---

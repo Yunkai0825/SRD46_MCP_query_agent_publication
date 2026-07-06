@@ -1,0 +1,78 @@
+Now I have sufficient data to deliver a comprehensive final answer.
+
+---
+
+# Hg²⁺ Donor Preference: S >> N >> O
+
+## Hypothesis
+
+**Mercury(II) strongly prefers sulfur-donor ligands**, followed by nitrogen-donors, with oxygen-donors being dramatically weaker. This is a textbook manifestation of **HSAB (Hard-Soft Acid-Base) theory**: Hg²⁺ is one of the softest metal ions known, and it forms the most stable complexes with the softest donor atoms (S > Se > N > O).
+
+---
+
+## Evidence: log K₁ Values at 25°C (ML Formation, β_def_812)
+
+### 🟡 Sulfur-Donor Ligands
+
+| Ligand | Donor Atom | log K₁ | T (°C) | I (M) |
+|---|---|---|---|---|
+| Thiourea (NC(N)=S) | S (thione) | **11.4** | 25 | 0.5 |
+| Thiocyanate (SCN⁻) | S | **9.64** | 25 | 0 |
+| Thiocyanate (SCN⁻) | S | **9.08** | 25 | 1.0 |
+| Thiodiglycol (thioether) | S | **6.4** | 25 | 0.5 |
+
+### 🔵 Nitrogen-Donor Ligands
+
+| Ligand | Donor Atom | log K₁ | T (°C) | I (M) |
+|---|---|---|---|---|
+| Ethylenediamine (en) | N, N (chelate) | **14.3** | 25 | 0.1 |
+| Imidazole | N (aromatic) | **9.18** | 25 | 3.0 |
+| Ammonia | N | **8.8** | 22 | 2.0 |
+| Methylamine | N | **8.66** | 25 | 0.5 |
+| Pyridine | N (aromatic) | **5.2** | 25 | 0.5 |
+
+### 🔴 Oxygen-Donor Ligands
+
+| Ligand | Donor Atom | log K₁ | T (°C) | I (M) |
+|---|---|---|---|---|
+| EDTA (mixed N/O chelate)* | N + O | **21.5** | 25 | 0.1 |
+| Carbonate (CO₃²⁻) | O | **−11.0** | 25 | 0.5 |
+| Carbonate (CO₃²⁻) | O | **−10.7** | 25 | 3.0 |
+
+*EDTA is a hexadentate chelate with both N and O donors — its exceptional log K reflects the chelate effect and N-donor contribution, not pure O-donor affinity.
+
+---
+
+## Interpretation & Chemistry Insight
+
+### The HSAB Hierarchy in Numbers
+
+Excluding the chelate-boosted EDTA, the pattern is stark:
+
+| Donor Class | Representative log K₁ Range |
+|---|---|
+| **S-donors** | **6.4 – 11.4** |
+| **N-donors** | **5.2 – 9.18** (monodentate) |
+| **O-donors** | **−11 to −10.7** (carbonate) |
+
+The carbonate values are **negative** — meaning Hg²⁺ actually *destabilizes* the CO₃²⁻ complex relative to the free ions at these conditions. This is extraordinary and underscores how poorly Hg²⁺ interacts with hard oxygen donors.
+
+### Why Does This Happen?
+
+1. **Hg²⁺ is the archetypal soft acid**: Its large ionic radius, high polarizability, and filled d¹⁰ shell make it ideal for covalent bonding with polarizable (soft) donor atoms like sulfur.
+
+2. **Sulfur's softness matches Hg²⁺**: The high log K for thiourea (11.4) and thiocyanate (9.6) reflects strong orbital overlap and significant covalent character in the Hg–S bond.
+
+3. **Nitrogen is intermediate**: Aliphatic amines (en, NH₃, methylamine) show moderate affinity (log K ~8–9). The chelate effect in ethylenediamine (log K = 14.3) dramatically boosts stability — but this is a geometric/entropic effect, not purely donor-atom preference.
+
+4. **Oxygen donors are essentially incompatible**: The negative log K for carbonate confirms that Hg²⁺ has negligible affinity for hard O-donors. In biological systems, this is why Hg²⁺ targets cysteine thiols in proteins rather than carboxylate or phosphate groups.
+
+### Real-World Relevance
+
+This donor hierarchy explains mercury's extreme toxicity: Hg²⁺ binds with extraordinary affinity to cysteine residues (–SH groups) in enzymes and structural proteins, irreversibly inhibiting them. It also underpins remediation strategies — sulfur-functionalized sorbents and chelating agents with thiol groups are far more effective at capturing Hg²⁺ than carboxylate-based materials.
+
+---
+
+*Source: NIST SRD-46 Critically Selected Stability Constants of Metal Complexes Database. All log K values are for the ML formation equilibrium [M] + [L] ⇌ [ML] at 25°C unless noted.*
+
+---

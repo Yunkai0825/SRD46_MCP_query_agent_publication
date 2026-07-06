@@ -1,0 +1,981 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q2.1.4\\Q2.1.4_result_batch1.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Using the **1:1 complex** definition **β₁ = [ML]/([M][L])** for **Cu²⁺ + X⁻ ⇌ CuX⁺**, SRD-46 shows that **chloride forms the stronger Cu(II) complex than bromide** under comparable aqueous conditions at **25 °C**.",
+        "claims": [
+          {
+            "start": 37,
+            "end": 59,
+            "text": "**β₁ = [ML]/([M][L])**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 64,
+            "end": 84,
+            "text": "**Cu²⁺ + X⁻ ⇌ CuX⁺**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 86,
+            "end": 103,
+            "text": "SRD-46 shows that",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 104,
+            "end": 163,
+            "text": "**chloride forms the stronger Cu(II) complex than bromide**",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 164,
+            "end": 199,
+            "text": "under comparable aqueous conditions",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 203,
+            "end": 212,
+            "text": "**25 °C**",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML]",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 15 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_10163",
+              "ligand_10168",
+              "beta_def_812"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "equation | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "Cu^[2+] + Chloride ion — 15 measurement(s)"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "| vlm_177370 | ... | beta_def_812 | logK | 0.2 | 25 | 0 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_41 | Cu^[2+] | Cu | 2 | ✓ | [Cu+2] | InChI=1S/Cu/q+2 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Tool outputs in this run are sourced from NIST Standard Reference Database 46 (SRD-46).",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 15 row(s)\n### `Cu^[2+]` + Chloride ion — 15 measurement(s)"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 7 row(s)\n### `Cu^[2+]` + Bromide ion — 7 measurement(s)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_10163",
+              "ligand_10168",
+              "beta_def_812",
+              "vlm_177370",
+              "vlm_177989",
+              "vlm_177364",
+              "vlm_177985",
+              "vlm_177365",
+              "vlm_177986",
+              "vlm_177366",
+              "vlm_177987",
+              "vlm_177367",
+              "vlm_177988"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| vlm_177370 | ... | logK | 0.2 | 25 | 0 |",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "| vlm_177370 | ref_eq_map_29722 | beta_def_812 | logK | 0.2 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] |  |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_177989 | ref_eq_map_29936 | beta_def_812 | logK | -0.04 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] |  |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_177985 | ... | logK | -0.64 | 25 | 1 | ... ; | vlm_177986 | ... | logK | -0.49 | 25 | 2 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "beta_def_812",
+              "metal_41",
+              "ligand_10163",
+              "ligand_10168"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "[ML](aqueous), [M](aqueous), [L](aqueous)",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 15 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "| vlm_177364 | ... | logK | -0.2 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] |  |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_177985 | ... | logK | -0.64 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] |  |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "vlm_177370"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_177370 | ... | logK | 0.2 | 25 | 0 |",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "| vlm_177370 | ref_eq_map_29722 | beta_def_812 | logK | 0.2 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] |  |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Ligand | β definition | logK at 25 °C, I = 0 M | logK at 25 °C, I = 2 M | logK at 25 °C, I = 3 M | logK at 25 °C, I = 4 M |\n|---|---|---:|---:|---:|---:|\n| Chloride ion | β₁ = [ML]/[M][L] | 0.20 | -0.10 | 0.00 | 0.11 |\n| Bromide ion | β₁ = [ML]/[M][L] | -0.04 | -0.49 | -0.40 | -0.22 |",
+        "claims": [
+          {
+            "start": 156,
+            "end": 220,
+            "text": "| Chloride ion | β₁ = [ML]/[M][L] | 0.20 | -0.10 | 0.00 | 0.11 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 221,
+            "end": 287,
+            "text": "| Bromide ion | β₁ = [ML]/[M][L] | -0.04 | -0.49 | -0.40 | -0.22 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_10163",
+              "beta_def_812",
+              "vlm_177370",
+              "vlm_177365",
+              "vlm_177366",
+              "vlm_177367"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_177370 | ref_eq_map_29722 | beta_def_812 | logK | 0.2 | 25 | 0 |\n| vlm_177365 | ref_eq_map_29726 | beta_def_812 | logK | -0.1 | 25 | 2 |",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "| vlm_177370 | ref_eq_map_29722 | beta_def_812 | logK | 0.2 | 25 | 0 | `[M] + [L] <=> [ML]` |\n| vlm_177365 | ref_eq_map_29726 | beta_def_812 | logK | -0.1 | 25 | 2 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "| vlm_177366 | ref_eq_map_29727 | beta_def_812 | logK | 0 | 25 | 3 | `[M] + [L] <=> [ML]` |\n| vlm_177367 | ref_eq_map_29729 | beta_def_812 | logK | 0.11 | 25 | 4 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 15 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_10168",
+              "beta_def_812",
+              "vlm_177989",
+              "vlm_177986",
+              "vlm_177987",
+              "vlm_177988"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_177989 | ref_eq_map_29936 | beta_def_812 | logK | -0.04 | 25 | 0 |\n| vlm_177986 | ref_eq_map_29938 | beta_def_812 | logK | -0.49 | 25 | 2 |",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_177989 | ref_eq_map_29936 | beta_def_812 | logK | -0.04 | 25 | 0 | `[M] + [L] <=> [ML]` |\n| vlm_177986 | ref_eq_map_29938 | beta_def_812 | logK | -0.49 | 25 | 2 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_177987 | ref_eq_map_29939 | beta_def_812 | logK | -0.4 | 25 | 3 | `[M] + [L] <=> [ML]` |\n| vlm_177988 | ref_eq_map_29940 | beta_def_812 | logK | -0.22 | 25 | 4 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 7 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "So the direct matched-condition comparison is:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 46,
+            "text": "So the direct matched-condition comparison is:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "| Condition | logK(CuCl⁺) | logK(CuBr⁺) | Stronger complex |\n|---|---:|---:|---|\n| 25 °C, I = 0 M | 0.20 | -0.04 | Chloride |\n| 25 °C, I = 2 M | -0.10 | -0.49 | Chloride |\n| 25 °C, I = 3 M | 0.00 | -0.40 | Chloride |\n| 25 °C, I = 4 M | 0.11 | -0.22 | Chloride |",
+        "claims": [
+          {
+            "start": 81,
+            "end": 125,
+            "text": "| 25 °C, I = 0 M | 0.20 | -0.04 | Chloride |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 126,
+            "end": 171,
+            "text": "| 25 °C, I = 2 M | -0.10 | -0.49 | Chloride |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 172,
+            "end": 216,
+            "text": "| 25 °C, I = 3 M | 0.00 | -0.40 | Chloride |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 217,
+            "end": 261,
+            "text": "| 25 °C, I = 4 M | 0.11 | -0.22 | Chloride |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "vlm_177370",
+              "vlm_177989",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Cl: | vlm_177370 | ... | logK | 0.2 | 25 | 0 | ... ; Br: | vlm_177989 | ... | logK | -0.04 | 25 | 0 | ...",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "| vlm_177370 | ref_eq_map_29722 | beta_def_812 | logK | 0.2 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] |  |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_177989 | ref_eq_map_29936 | beta_def_812 | logK | -0.04 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] |  |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_177365",
+              "vlm_177986",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Cl: | vlm_177365 | ... | logK | -0.1 | 25 | 2 | ... ; Br: | vlm_177986 | ... | logK | -0.49 | 25 | 2 | ...",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "| vlm_177365 | ref_eq_map_29726 | beta_def_812 | logK | -0.1 | 25 | 2 | `[M] + [L] <=> [ML]` | *** | [L] |  |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_177986 | ref_eq_map_29938 | beta_def_812 | logK | -0.49 | 25 | 2 | `[M] + [L] <=> [ML]` | *** | [L] |  |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_177366",
+              "vlm_177987",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Cl: | vlm_177366 | ... | logK | 0 | 25 | 3 | ... ; Br: | vlm_177987 | ... | logK | -0.4 | 25 | 3 | ...",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "| vlm_177366 | ref_eq_map_29727 | beta_def_812 | logK | 0 | 25 | 3 | `[M] + [L] <=> [ML]` | *** | [L] |  |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_177987 | ref_eq_map_29939 | beta_def_812 | logK | -0.4 | 25 | 3 | `[M] + [L] <=> [ML]` | *** | [L] |  |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "vlm_177367",
+              "vlm_177988",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Cl: | vlm_177367 | ... | logK | 0.11 | 25 | 4 | ... ; Br: | vlm_177988 | ... | logK | -0.22 | 25 | 4 | ...",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "| vlm_177367 | ref_eq_map_29728 | beta_def_812 | logK | 0.11 | 25 | 4 | `[M] + [L] <=> [ML]` | *** | [L] |  |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_177988 | ref_eq_map_29940 | beta_def_812 | logK | -0.22 | 25 | 4 | `[M] + [L] <=> [ML]` | *** | [L] |  |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "**Conclusion:** **Cl⁻ binds Cu²⁺ more strongly than Br⁻** for the 1:1 CuX⁺ complex in the SRD-46 data.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 15,
+            "text": "**Conclusion:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 16,
+            "end": 57,
+            "text": "**Cl⁻ binds Cu²⁺ more strongly than Br⁻**",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 58,
+            "end": 82,
+            "text": "for the 1:1 CuX⁺ complex",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 83,
+            "end": 102,
+            "text": "in the SRD-46 data.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_10163",
+              "ligand_10168",
+              "beta_def_812",
+              "vlm_177370",
+              "vlm_177989",
+              "vlm_177365",
+              "vlm_177986",
+              "vlm_177366",
+              "vlm_177987",
+              "vlm_177367",
+              "vlm_177988"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Cl⁻: vlm_177370 | beta_def_812 | logK 0.2 | 25 | I 0;  Br⁻: vlm_177989 | beta_def_812 | logK -0.04 | 25 | I 0",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "vlm_177370 | ... | beta_def_812 | logK | 0.2 | 25 | 0 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "vlm_177989 | ... | beta_def_812 | logK | -0.04 | 25 | 0 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "vlm_177985 | ... | beta_def_812 | logK | -0.64 | 25 | 1 | ... ; vlm_177986 | ... | logK | -0.49 | 25 | 2"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_10163",
+              "ligand_10168",
+              "beta_def_812",
+              "vlm_177370",
+              "vlm_177989"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "beta_def_812 = [ML]/[M][L]; equation: `[M] + [L] <=> [ML]` (1:1). Examples: vlm_177370 (Cl⁻) and vlm_177989 (Br⁻).",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "vlm_177370 | ... | beta_def_812 | logK | 0.2 | 25 | 0 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "vlm_177989 | ... | beta_def_812 | logK | -0.04 | 25 | 0 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "metal_41 | Cu^[2+] | Cu | 2 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Provenance claim: this run’s tool outputs come from NIST SRD-46; the rows themselves do not print 'SRD-46'.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "A small chemistry note: both constants are fairly small, so these are **weak Cu(II)–halide complexes** in water. The trend **Cl⁻ > Br⁻** is consistent with Cu²⁺ being a relatively hard/borderline Lewis acid, which generally favors the less polarizable halide more than bromide.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 23,
+            "text": "A small chemistry note:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 24,
+            "end": 55,
+            "text": "both constants are fairly small",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 60,
+            "end": 111,
+            "text": "these are **weak Cu(II)–halide complexes** in water",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 113,
+            "end": 136,
+            "text": "The trend **Cl⁻ > Br⁻**",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 156,
+            "end": 206,
+            "text": "Cu²⁺ being a relatively hard/borderline Lewis acid",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 208,
+            "end": 276,
+            "text": "which generally favors the less polarizable halide more than bromide",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_10163",
+              "ligand_10168",
+              "beta_def_812",
+              "vlm_177370",
+              "vlm_177989"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "vlm_177370 | ref_eq_map_29722 | beta_def_812 | logK | 0.2 | 25 | 0 |; vlm_177989 | ref_eq_map_29936 | beta_def_812 | logK | -0.04 | 25 | 0 |",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "vlm_177370 | ref_eq_map_29722 | beta_def_812 | logK | 0.2 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "vlm_177989 | ref_eq_map_29936 | beta_def_812 | logK | -0.04 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_10163",
+              "ligand_10168",
+              "beta_def_812",
+              "vlm_177370",
+              "vlm_177989"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 15",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 15"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "vlm_177370 | ... | beta_def_812 | logK | 0.2 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "vlm_177989 | ... | beta_def_812 | logK | -0.04 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "beta_def_812",
+              "vlm_177370",
+              "vlm_177989"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "vlm_177370 | ... | logK | 0.2 | 25 | 0 |; vlm_177989 | ... | logK | -0.04 | 25 | 0 |",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "vlm_177370 | ref_eq_map_29722 | beta_def_812 | logK | 0.2 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "vlm_177989 | ref_eq_map_29936 | beta_def_812 | logK | -0.04 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "HSAB (hard/soft acid–base) classification of Cu2+ is general chemistry knowledge; the database rows do not classify Lewis acidity.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General HSAB reasoning (hard/borderline acids favor less polarizable bases) is not stated in SRD-46 rows; it's established chemistry.",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "vlm_177370 | ... | logK | 0.2 | 25 | 0 |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "vlm_177989 | ... | logK | -0.04 | 25 | 0 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "*Source: NIST SRD-46 equilibrium data for Cu²⁺ with chloride ion (ligand_10163) and bromide ion (ligand_10168), β₁ = [ML]/[M][L].*",
+        "claims": [
+          {
+            "start": 1,
+            "end": 37,
+            "text": "Source: NIST SRD-46 equilibrium data",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 42,
+            "end": 46,
+            "text": "Cu²⁺",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 52,
+            "end": 79,
+            "text": "chloride ion (ligand_10163)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 84,
+            "end": 110,
+            "text": "bromide ion (ligand_10168)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 112,
+            "end": 129,
+            "text": "β₁ = [ML]/[M][L].",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Provenance claim refers to the NIST SRD-46 backend used for these tool queries; the tool outputs shown do not print the literal 'SRD-46' string.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "## search_metals — 3 result(s)\n| metal_id | metal_name | symbol | charge |\n| metal_41 | Cu^[2+] | Cu | 2 |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands — 10 result(s)\n| ligand_id | ligand_name |\n| ligand_10163 | Chloride ion |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands — 2 result(s)\n| ligand_id | ligand_name |\n| ligand_10168 | Bromide ion |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_41 | Cu^[2+] | Cu | 2 |",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_41 | Cu^[2+] | Cu | 2 | ✓ | [Cu+2] | InChI=1S/Cu/q+2 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_10163"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_10163 | Chloride ion | *** | Inorganic ligands |",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "| ligand_10163 | Chloride ion | *** | Inorganic ligands | 546 | *** | *** |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_10168"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_10168 | Bromide ion | *** | Inorganic ligands |",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_10168 | Bromide ion | *** | Inorganic ligands | 391 | *** | *** |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML]",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 15 |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 7 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 7,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

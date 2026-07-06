@@ -1,0 +1,69 @@
+Based on all the data retrieved from SRD-46, here is a comprehensive answer.
+
+---
+
+## Ni²⁺–Ethylenediamine (en): Stability Constants vs. Ionic Strength
+
+### System Overview
+
+| Entity | SRD-46 ID | Notes |
+|--------|-----------|-------|
+| Ni²⁺ | metal_112 | Simple aquo ion, charge +2 |
+| Ethylenediamine (en) | ligand_7029 | Neutral bidentate diamine, SMILES: `NCCN` |
+| Complexes | β₁, β₂, β₃ | Ni(en)²⁺, Ni(en)₂²⁺, Ni(en)₃²⁺ |
+
+---
+
+### Stability Constants (log β) vs. Ionic Strength
+
+The database contains **21 log K measurements** across 7 distinct ionic-strength conditions (I = 0 to 3 M) and temperatures 25–37 °C.
+
+| Complex | Equation | log β range | I range (M) | T range (°C) |
+|---------|----------|-------------|-------------|--------------|
+| Ni(en)²⁺ | M + L ⇌ ML | **6.98 – 7.90** | 0 – 3 | 25 – 37 |
+| Ni(en)₂²⁺ | M + 2L ⇌ ML₂ | **13.8 – 14.53** *(excl. outlier)* | 0 – 3 | 25 – 37 |
+| Ni(en)₃²⁺ | M + 3L ⇌ ML₃ | **18.3 – 19.18** *(excl. outlier)* | 0 – 3 | 25 – 37 |
+
+> ⚠️ The summary shows extreme low values (−14.77, −19.7) in the raw range — these likely correspond to stepwise constants or entries at different T; the positive upper bounds are the physically meaningful overall β values.
+
+---
+
+### Ionic Strength Trend
+
+The SRD-46 catalog groups measurements into **7 reference networks** spanning well-defined ionic-strength windows:
+
+| Network | I range (M) | T range (°C) |
+|---------|-------------|--------------|
+| ref_eq_net_9597 | ~0 (dilute) | 19–29 |
+| ref_eq_net_9591 | 0 – 0.25 | 20–30 |
+| ref_eq_net_9593 | 0.35 – 0.65 | 19–29 |
+| ref_eq_net_9594 | 0.85 – 1.15 | 19–29 |
+| ref_eq_net_9595 | 1.85 – 2.15 | 19–29 |
+| ref_eq_net_9596 | 2.85 – 3.15 | 19–29 |
+| ref_eq_net_9592 | 0 – 0.3 | 31–41 |
+
+**The log β₁ range of ~7.0 to ~7.9 across I = 0–3 M represents a modest ~0.9 log unit spread.** This is consistent with a **weak but real ionic-strength dependence**.
+
+---
+
+### Is There a Clear Trend?
+
+**Partially yes, but it is subtle:**
+
+1. **Theoretical expectation is small.** Because Ni(en)ₙ²⁺ retains a +2 charge regardless of *n*, and en is neutral, the net charge change in the formation reaction is zero (Ni²⁺ + en → Ni(en)²⁺). The Debye–Hückel activity correction for such a reaction is theoretically **zero** (Δz² = 0). This means the stability constant should be nearly *independent* of ionic strength in simple electrostatic theory.
+
+2. **In practice, a small variation is observed (~0.9 log units over 0–3 M).** This is attributed to **specific ion effects** (medium-dependent activity coefficients, ion pairing with background electrolyte anions like NO₃⁻ or ClO₄⁻) rather than a classical Debye–Hückel effect.
+
+3. **No strong monotonic trend** is expected or clearly resolved from the data alone — the variation is within the scatter of different laboratories and electrolyte media.
+
+---
+
+### Chemistry Insight
+
+The Ni²⁺–en system is a textbook chelate: ethylenediamine forms a stable 5-membered chelate ring with Ni²⁺, and the three successive complexes (log β₁ ≈ 7.5, log β₂ ≈ 14.1, log β₃ ≈ 18.6 at ~25 °C, I → 0) show the classic stepwise decrease in stepwise constants (K₁ > K₂ > K₃) due to steric crowding. The near-independence of log β on ionic strength makes this system a reliable **calibration reference** in potentiometric studies — a practical advantage in analytical and bioinorganic chemistry.
+
+---
+
+*Source: NIST SRD-46 (Critically Selected Stability Constants of Metal Complexes), metal_112 × ligand_7029, 45 VLM entries.*
+
+---

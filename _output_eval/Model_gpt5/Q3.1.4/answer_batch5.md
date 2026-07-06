@@ -1,0 +1,28 @@
+Short answer (what we can confirm now)
+- We resolved the SRD‑46 metal entries as Fe3+ = metal_61 and Fe2+ = metal_62.
+- Context: SRD‑46 reports 406 distinct ligands studied with Fe3+ and 217 with Fe2+ (individual tallies). The intersection (ligands with both Fe3+ and Fe2+ data) is therefore ≤217, but I didn’t complete the intersection count within the time budget.
+
+Summary of what’s known from SRD‑46 so far
+
+| Metal (SRD‑46) | metal_id | Distinct ligands with any stability data |
+|---|---|---|
+| Fe3+ | metal_61 | 406 |
+| Fe2+ | metal_62 | 217 |
+
+Assessment of “is Fe3+ consistently more stable?”
+- Typical chemistry expectation: For a given ligand and stoichiometry in aqueous solution under similar conditions, Fe3+ complexes generally have larger cumulative log β values than Fe2+ (higher charge density, hard‑acid behavior). However, exceptions can occur (e.g., soft donor bias, redox complications, or if stoichiometry/protonation states aren’t matched).
+- To answer rigorously, we need to compare matched pairs (same ligand, same stoichiometry βn, similar aqueous conditions near 25 °C and comparable ionic strength). I wasn’t able to complete that pairing and tally within the time limit.
+
+What I will do in a quick follow‑up (one pass):
+1) Count the intersection (distinct ligand_ids where both metal_61 and metal_62 appear) and report that number.
+2) For those ligands, pull aqueous log β values near 25 °C and I ≤ 0.2 M, grouped by identical β definition (stoichiometry), and classify each ligand as:
+   - consistently Fe3+ > Fe2+,
+   - any ties,
+   - any reversals.
+3) Present a compact table listing any exceptions with ligand_id, β definition, and representative log β values.
+
+If you’d like, I can run that now and deliver the exact intersection count and a per‑ligand consistency summary.
+
+Source: NIST SRD‑46 (Ligand–Metal Stability Database); metal_61 (Fe3+) and metal_62 (Fe2+) entity summaries.
+
+---

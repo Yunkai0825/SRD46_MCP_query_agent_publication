@@ -1,0 +1,60 @@
+## Cd²⁺–Chloride Stability Constants: Literature Survey
+
+*Source: NIST SRD-46 (Critically Selected Stability Constants of Metal Complexes)*
+
+---
+
+### Number of Independent Literature Sources
+
+The SRD-46 database records **68 independent literature citations** that have reported stability constants for the Cd²⁺–chloride system, spanning from **1930 to 1993**. These citations are attached to **30 measured values** across three chloride complex species.
+
+---
+
+### Species and log β Ranges
+
+| Species | Equilibrium | log β range | Ionic Strength I (M) | Temperature |
+|---------|-------------|-------------|----------------------|-------------|
+| CdCl⁺ (1:1) | Cd²⁺ + Cl⁻ ⇌ CdCl⁺ | **1.35 – 1.98** | 0 – 4 M | 25 °C |
+| CdCl₂ (1:2) | Cd²⁺ + 2 Cl⁻ ⇌ CdCl₂ | **1.70 – 2.60** | 0 – 4 M | 25 °C |
+| CdCl₃⁻ (1:3) | Cd²⁺ + 3 Cl⁻ ⇌ CdCl₃⁻ | **1.50 – 2.80** | 0 – 4 M | 25 °C |
+
+> **Thermodynamic (I → 0) values at 25 °C:** log β₁ = 1.98, log β₂ = 2.60, log β₃ = 2.40
+
+---
+
+### Ionic Strength Dependence (CdCl⁺, 25 °C)
+
+| I (M) | log K₁ |
+|-------|--------|
+| 0 (extrapolated) | 1.98 |
+| 0.1 | 1.52 |
+| 0.5 | 1.35 |
+| 1.0 | 1.35 |
+| 2.0 | 1.44 |
+| 3.0 | 1.54 |
+| 4.0 | 1.66 |
+
+---
+
+### Thermodynamic Data (ΔH, ΔS)
+
+| Species | I (M) | ΔH (kJ/mol) | ΔS (J/mol·K) |
+|---------|-------|-------------|--------------|
+| CdCl⁺ | 0.5 | +1.3 | +30.1 |
+| CdCl⁺ | 3.0 | −0.4 | +28.0 |
+| CdCl₂ | 0.5 | +3.8 | +45.2 |
+| CdCl₂ | 3.0 | 0.0 | +42.3 |
+| CdCl₃⁻ | 1.0 | +10.0 | +62.3 |
+| CdCl₃⁻ | 3.0 | +7.9 | +70.7 |
+
+---
+
+### Key Observations
+
+- **68 independent sources** over 63 years (1930–1993) make this one of the most thoroughly studied d-block halide systems in aqueous coordination chemistry.
+- All measurements are at **25 °C** in aqueous solution; the database captures 7 distinct ionic-strength networks (I = 0 to 4 M).
+- The **ionic-strength minimum** in log K₁ near I = 0.5–1 M followed by a rise at higher I is a classic Debye–Hückel/activity-coefficient effect, reflecting the interplay between electrostatic screening and ion-pair formation in concentrated chloride media.
+- The **large positive ΔS values** for all species indicate that complex formation is entropy-driven — consistent with the release of water molecules from the coordination sphere of Cd²⁺ upon chloride binding (an inner-sphere mechanism).
+- The moderate stability (log β₁ ≈ 2) explains why Cd²⁺ is significantly mobilised in saline/marine environments, with environmental and toxicological implications.
+
+---

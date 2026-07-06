@@ -1,0 +1,556 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt5\\Q2.2.4\\Q2.2.4_result_batch5.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Here’s what SRD‑46 reports:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 27,
+            "text": "Here’s what SRD‑46 reports:",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Provenance claim: results are from NIST SRD‑46, but the raw tool outputs here do not display the literal “46” as a standalone token to quote (only in the internal tool name).",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "execute_srd46_sql",
+                "snippet": "## execute_srd46_sql - 1 row(s)\n| distinct_class_count |\n|----------------------|\n| 59 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "## execute_srd46_sql - 5 row(s)\n| ligand_class_name | ligand_class_id | ligand_count |\n| Ligands not selected | 59 | 1339 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "- Total distinct ligand classes: 59",
+        "claims": [
+          {
+            "start": 0,
+            "end": 35,
+            "text": "- Total distinct ligand classes: 59",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "| distinct_class_count |\n|----------------------|\n| 59 |",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT COUNT(1) AS distinct_class_count FROM ( SELECT DISTINCT ligand_class_id FROM ligand_card WHERE ligand_class_id IS NOT NULL ) x;"
+              },
+              {
+                "step": "Step 4",
+                "tool": "execute_srd46_sql",
+                "snippet": "| distinct_class_count |\n|----------------------|\n| 59 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "Top five classes by number of ligands:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 38,
+            "text": "Top five classes by number of ligands:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "| Rank | Ligand class           | Class ID | Ligand count |\n|------|-------------------------|----------|--------------|\n| 1    | Ligands not selected    | 59       | 1339         |\n| 2    | Amino Acids             | 1        | 297          |\n| 3    | Aliphatic amines        | 11       | 250          |\n| 4    | Pyridines (azines)      | 20       | 248          |\n| 5    | Carboxylic acids        | 29       | 182          |",
+        "claims": [
+          {
+            "start": 121,
+            "end": 181,
+            "text": "| 1    | Ligands not selected    | 59       | 1339         |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 182,
+            "end": 242,
+            "text": "| 2    | Amino Acids             | 1        | 297          |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 243,
+            "end": 303,
+            "text": "| 3    | Aliphatic amines        | 11       | 250          |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 304,
+            "end": 364,
+            "text": "| 4    | Pyridines (azines)      | 20       | 248          |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 365,
+            "end": 425,
+            "text": "| 5    | Carboxylic acids        | 29       | 182          |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| Ligands not selected | 59 | 1339 |",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "\"sql_query\": \"SELECT ligand_class_name, ligand_class_id, COUNT(*) AS ligand_count\\nFROM ligand_card\\nWHERE ligand_class_id IS NOT NULL\\nGROUP BY ligand_class_id, ligand_class_name\\nORDER BY ligand_count DESC, ligand_class_name ASC\\nLIMIT 5;\""
+              },
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "| Ligands not selected | 59 | 1339 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| Amino Acids | 1 | 297 |",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "\"sql_query\": \"SELECT ligand_class_name, ligand_class_id, COUNT(*) AS ligand_count\\nFROM ligand_card\\nWHERE ligand_class_id IS NOT NULL\\nGROUP BY ligand_class_id, ligand_class_name\\nORDER BY ligand_count DESC, ligand_class_name ASC\\nLIMIT 5;\""
+              },
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "| Amino Acids | 1 | 297 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| Aliphatic amines | 11 | 250 |",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "\"sql_query\": \"SELECT ligand_class_name, ligand_class_id, COUNT(*) AS ligand_count\\nFROM ligand_card\\nWHERE ligand_class_id IS NOT NULL\\nGROUP BY ligand_class_id, ligand_class_name\\nORDER BY ligand_count DESC, ligand_class_name ASC\\nLIMIT 5;\""
+              },
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "| Aliphatic amines | 11 | 250 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| Pyridines (azines) | 20 | 248 |",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "\"sql_query\": \"SELECT ligand_class_name, ligand_class_id, COUNT(*) AS ligand_count\\nFROM ligand_card\\nWHERE ligand_class_id IS NOT NULL\\nGROUP BY ligand_class_id, ligand_class_name\\nORDER BY ligand_count DESC, ligand_class_name ASC\\nLIMIT 5;\""
+              },
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "| Pyridines (azines) | 20 | 248 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Carboxylic acids | 29 | 182",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT ligand_class_name, ligand_class_id, COUNT(*) AS ligand_count FROM ligand_card ... ORDER BY ligand_count DESC, ligand_class_name ASC LIMIT 5;"
+              },
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "Carboxylic acids | 29 | 182"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "Notes:\n- “Ligands not selected” appears to be a placeholder/catch‑all category and dominates the counts; among curated categories, amino acids and common N‑donor ligands (amines, pyridines) are most frequent, reflecting their broad coordination chemistry and abundant measurements in SRD‑46.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 6,
+            "text": "Notes:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 9,
+            "end": 78,
+            "text": "“Ligands not selected” appears to be a placeholder/catch‑all category",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 83,
+            "end": 103,
+            "text": "dominates the counts",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 105,
+            "end": 130,
+            "text": "among curated categories,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 131,
+            "end": 207,
+            "text": "amino acids and common N‑donor ligands (amines, pyridines) are most frequent",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 209,
+            "end": 254,
+            "text": "reflecting their broad coordination chemistry",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 259,
+            "end": 290,
+            "text": "abundant measurements in SRD‑46",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "DB lists class 'Ligands not selected', but no indication it's a placeholder/catch‑all.",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "| Ligands not selected | 59 | 1339 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| Ligands not selected | 59 | 1339 |; | Amino Acids | 1 | 297 |",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "| Ligands not selected | 59 | 1339 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "| Amino Acids | 1 | 297 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| Amino Acids | 1 | 297 |; | Aliphatic amines | 11 | 250 |; | Pyridines (azines) | 20 | 248 |",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "| Amino Acids | 1 | 297 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "| Aliphatic amines | 11 | 250 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "| Pyridines (azines) | 20 | 248 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General coordination chemistry reasoning; not specified in SRD‑46 tool rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Tool results show ligand counts per class, not measurement counts; 'abundant measurements' not shown.",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "| ligand_class_name | ligand_class_id | ligand_count |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "| Amino Acids | 1 | 297 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "Source: NIST SRD‑46 (ligand_card aggregation).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 7,
+            "text": "Source:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 8,
+            "end": 19,
+            "text": "NIST SRD‑46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 21,
+            "end": 44,
+            "text": "ligand_card aggregation",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool results show queries against SRD-46 tables (e.g., ligand_card), establishing SRD‑46 provenance for this run.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "get_table_schema",
+                "snippet": "Args: { \"table_name\": \"ligand_card\" }"
+              },
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: \"SELECT ligand_class_name, ligand_class_id, COUNT(*) AS ligand_count\nFROM ligand_card\n...\""
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "SQL aggregates on ligand_card: \"SELECT COUNT(1)... FROM (SELECT DISTINCT ligand_class_id FROM ligand_card...)\" and \"COUNT(*) ... FROM ligand_card ... GROUP BY\"",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: \"SELECT COUNT(1) AS distinct_class_count\nFROM (\n  SELECT DISTINCT ligand_class_id\n  FROM ligand_card\n  WHERE ligand_class_id IS NOT NULL\n) x;\""
+              },
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: \"SELECT ligand_class_name, ligand_class_id, COUNT(*) AS ligand_count\nFROM ligand_card\nWHERE ligand_class_id IS NOT NULL\nGROUP BY ligand_class_id, ligand_class_name\nORDER BY ligand_count DESC ...\""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

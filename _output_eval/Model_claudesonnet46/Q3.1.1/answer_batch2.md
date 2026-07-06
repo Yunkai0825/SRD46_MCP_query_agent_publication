@@ -1,0 +1,58 @@
+Based on the data I've gathered from SRD-46, here is a comprehensive answer about Pb²⁺ chelation:
+
+---
+
+## Pb²⁺ Chelation: Highest-Affinity Ligands in SRD-46
+
+### What the Database Tells Us
+
+SRD-46 contains **metal_125 (Pb²⁺)** with data on **470 ligands** and **1,585 stability measurements** — one of the richest heavy-metal datasets in the database.
+
+The catalog reveals the most data-rich Pb²⁺ systems. Note: the `search_stability` queries with log_beta filters returned no rows in this session, likely due to the constant_type label differing from the filter string. The catalog data and ligand metadata still allow a well-grounded answer.
+
+---
+
+### Top Ligands by Database Coverage & Known Affinity
+
+| Ligand | SRD-46 ID | Class | VLM Count | Clinical Use? | Notes |
+|--------|-----------|-------|-----------|---------------|-------|
+| **EDTA** (Ethylenedinitrilotetraacetic acid) | ligand_6277 | EDTA & derivatives | 596 | ✅ **Yes** — CaNa₂EDTA (IV) | Gold standard for acute Pb poisoning; log β(PbEDTA) ≈ 18.0 |
+| **DTPA** (Diethylenetrinitrilopentaacetic acid) | ligand_6356 | EDTA & derivatives | 322 | ✅ **Yes** — used for radionuclides; off-label Pb | log β(PbDTPA) ≈ 18.8; higher denticity than EDTA |
+| **HEDTA** (N-Hydroxyethyl EDTA) | ligand_6275 | EDTA & derivatives | 237 | ⚠️ Research/limited | Slightly lower affinity than EDTA |
+| **Penicillamine** (D-form) | ligand_5857 | Amino acids | 13 | ✅ **Yes** — oral chelator | Thiol + amine donor; used in mild/chronic Pb poisoning |
+| **Cysteine** | ligand_5856 | Amino acids | 16 | ❌ Not clinical | Thiol donor; model compound |
+| **Glutathione** | ligand_6592 | Peptides | 14 | ❌ Not clinical | Endogenous; model for biological Pb binding |
+| **Citric acid** | ligand_9058 | Carboxylic acids | 12 | ❌ Not clinical | Weak affinity; physiological relevance only |
+| **Glycine** | ligand_5760 | Amino acids | 25 | ❌ Not clinical | Simple bidentate; low affinity |
+| **[36]aneN₁₂** (macrocyclic polyamine) | ligand_7541 | Aza macrocycles | 12 | ❌ Research only | High denticity macrocycle; kinetically stable |
+| **[33]aneN₁₁** (macrocyclic polyamine) | ligand_7540 | Aza macrocycles | 11 | ❌ Research only | Similar macrocyclic scaffold |
+
+> **Note:** DMSA (succimer/meso-2,3-dimercaptosuccinic acid) and DMPS are the first-line oral agents in modern protocols but appear in SRD-46 under different name entries not resolved in this session.
+
+---
+
+### Clinically Used Chelators for Lead Poisoning
+
+| Agent | Route | Status | Mechanism |
+|-------|-------|--------|-----------|
+| **CaNa₂-EDTA** | IV infusion | ✅ FDA-approved | Hexadentate; forms stable PbEDTA²⁻ complex excreted renally |
+| **DMSA (Succimer)** | Oral | ✅ FDA-approved (1991) | Dithiol; highly selective for Pb over Ca/Zn |
+| **Dimercaprol (BAL)** | IM injection | ✅ Approved; older | Dithiol; used with EDTA in severe poisoning |
+| **D-Penicillamine** | Oral | ✅ Used off-label | Thiol + amine; less potent than DMSA |
+| **DMPS** | IV/oral | ⚠️ Not FDA-approved in US | Dithiol; used in Europe |
+
+---
+
+### Chemistry Insights
+
+1. **Why polyaminocarboxylates dominate:** EDTA and DTPA wrap around Pb²⁺ with 4–5 donor atoms (N + O), forming thermodynamically stable 5-membered chelate rings. Pb²⁺ is a large, soft-borderline metal that tolerates both hard (carboxylate O) and soft (thiol S) donors — explaining why both EDTA-type and dithiol agents work.
+
+2. **Thiol selectivity matters clinically:** DMSA and DMPS exploit Pb²⁺'s affinity for sulfur donors while being less disruptive to essential metals (Ca²⁺, Zn²⁺, Mg²⁺) than EDTA, making them preferred for outpatient oral therapy.
+
+3. **Macrocyclic ligands (aza-macrocycles in the catalog):** The [36]aneN₁₂ and [33]aneN₁₁ entries show research interest in kinetically inert Pb complexes, but their slow complexation kinetics make them impractical for acute therapy.
+
+---
+
+*Source: NIST SRD-46 (metal_125 = Pb²⁺; ligand IDs as noted). Clinical status based on established pharmacology; log β values from literature consensus where SRD-46 filter results were unavailable in this session.*
+
+---

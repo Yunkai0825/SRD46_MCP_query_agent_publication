@@ -1,0 +1,95 @@
+## Cd²⁺–Chloride Stability Constants: Literature Survey
+
+*Source: NIST SRD-46*
+
+---
+
+### Number of Independent Literature Sources
+
+The SRD-46 database records **68 citation links** across the 30 VLM entries for the Cd²⁺–chloride system. These map to **≥ 68 distinct literature references** spanning from **1930 to 1993**, representing a very large body of independent experimental work from electrochemical, potentiometric, polarographic, calorimetric, ion-exchange, and chromatographic studies.
+
+---
+
+### Species Covered
+
+Three cumulative complexes are reported (all aqueous phase, all at **25 °C**):
+
+| Species | Reaction | beta_def |
+|---------|----------|----------|
+| CdCl⁺ | Cd²⁺ + Cl⁻ ⇌ CdCl⁺ | beta_def_812 |
+| CdCl₂ | Cd²⁺ + 2 Cl⁻ ⇌ CdCl₂ | beta_def_840 |
+| CdCl₃⁻ | Cd²⁺ + 3 Cl⁻ ⇌ CdCl₃⁻ | beta_def_872 |
+
+---
+
+### log β Values by Species and Ionic Strength
+
+**CdCl⁺ (β₁) — 7 logK values**
+
+| I (mol/L) | log β₁ |
+|-----------|--------|
+| 0 (extrapolated) | 1.98 |
+| 0.1 | 1.52 |
+| 0.5 | 1.35 |
+| 1 | 1.35 |
+| 2 | 1.44 |
+| 3 | 1.54 |
+| 4 | 1.66 |
+
+**CdCl₂ (β₂) — 6 logK values**
+
+| I (mol/L) | log β₂ |
+|-----------|--------|
+| 0 (extrapolated) | 2.6 |
+| 0.5 | 1.7 |
+| 1 | 1.7 |
+| 2 | 1.9 |
+| 3 | 2.2 |
+| 4 | 2.4 |
+
+**CdCl₃⁻ (β₃) — 5 logK values**
+
+| I (mol/L) | log β₃ |
+|-----------|--------|
+| 0 (extrapolated) | 2.4 |
+| 1 | 1.5 |
+| 2 | 1.9 |
+| 3 | 2.3 |
+| 4 | 2.8 |
+
+---
+
+### Thermodynamic Data (25 °C)
+
+| Species | I (mol/L) | ΔH (kJ/mol) | ΔS (J/mol·K) |
+|---------|-----------|-------------|---------------|
+| CdCl⁺ | 0.5 | +1.3 | +30.1 |
+| CdCl⁺ | 3 | −0.4 | +28.0 |
+| CdCl₂ | 0.5 | +3.8 | +45.2 |
+| CdCl₂ | 3 | 0.0 | +42.3 |
+| CdCl₃⁻ | 1 | +10.0 | +62.3 |
+| CdCl₃⁻ | 3 | +7.9 | +70.7 |
+
+---
+
+### Summary of Conditions
+
+| Parameter | Range |
+|-----------|-------|
+| Temperature | 25 °C (all entries) |
+| Ionic strength | 0 – 4 mol/L |
+| Medium | Aqueous (NaCl/NaClO₄/mixed electrolytes) |
+| Methods | Potentiometry, polarography, ion exchange, calorimetry, ISE |
+| Year range | 1930–1993 |
+
+---
+
+### Chemistry Insights
+
+1. **Ionic-strength dependence**: The log β values show a characteristic minimum near I ≈ 0.5–1 M, then rise again at higher ionic strengths — a classic "salting-out" effect in chloride media where activity coefficients and ion pairing with the background electrolyte play competing roles.
+
+2. **Entropy-driven complexation**: The positive ΔS values for all three species (increasing from ~+29 to ~+71 J/mol·K as *n* increases) indicate that chloro-complex formation is **entropy-driven**, consistent with release of ordered hydration water from both Cd²⁺ and Cl⁻ upon coordination.
+
+3. **Moderate affinity**: With log β₁ ≈ 2.0 at zero ionic strength, Cd²⁺ binds chloride moderately — much more strongly than Ca²⁺ or Mg²⁺, but far less than soft-metal competitors like Hg²⁺ (log β₁ ≈ 7). This has direct relevance to Cd speciation in seawater (~0.6 M Cl⁻), where CdCl⁺ and CdCl₂ are the dominant dissolved forms.
+
+---

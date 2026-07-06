@@ -1,0 +1,796 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q2.1.6\\Q2.1.6_result_batch5.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "I couldn’t complete a **numeric SRD-46 ranking** from the retrieved records because the execution results confirmed the relevant ligand but did **not expose matched log K values** for Cd²⁺, Pb²⁺, and Hg²⁺ under the same conditions.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 48,
+            "text": "I couldn’t complete a **numeric SRD-46 ranking**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 49,
+            "end": 75,
+            "text": "from the retrieved records",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 84,
+            "end": 135,
+            "text": "the execution results confirmed the relevant ligand",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 140,
+            "end": 179,
+            "text": "did **not expose matched log K values**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 180,
+            "end": 204,
+            "text": "for Cd²⁺, Pb²⁺, and Hg²⁺",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 205,
+            "end": 230,
+            "text": "under the same conditions",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "## search_stability — 89 row(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 89 row(s)\n\n### logK — 8 metal-ligand pair(s)\n| metal_id | metal_name | ligand_id | ligand_name | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_10092"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_10092 | Hydrogen thiocyanate (Thioc…) | HL | N=C=S",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_26 | Cd^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 23 | 4 | 25 | 0~3 | *** | 7 |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_71 | Hg^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 8 | 6 | 25 | 0~1 | solid | 2 |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_125 | Pb^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 8 | 3 | 25 | 1~4 | *** | 4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_26",
+              "metal_71",
+              "metal_125",
+              "ligand_10092"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "## search_stability\n\n*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.ligand_id = ligand_10092 AND c.metal_id IN (metal_26, metal_71, metal_125) AND s.constant_type = 'logK' AND s.temperature_c = 25 AND s.ionic_strength_mol_l = 1)\""
+              },
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_26",
+              "metal_125",
+              "metal_71"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_26 | Cd^[2+] … ; metal_125 | Pb^[2+] … ; metal_71 | Hg^[2+]",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_26 | Cd^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc…) | HL | N=C=S | 23 | 4 | 25 | 0~3 | *** | 7 |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_125 | Pb^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc…) | HL | N=C=S | 8 | 3 | 25 | 1~4 | *** | 4 |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_71 | Hg^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc…) | HL | N=C=S | 8 | 6 | 25 | 0~1 | solid | 2 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_26",
+              "metal_71",
+              "metal_125",
+              "ligand_10092"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "filter: s.temperature_c = 25 AND s.ionic_strength_mol_l = 1 → *(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.ligand_id = ligand_10092 AND c.metal_id IN (metal_26, metal_71, metal_125) AND s.constant_type = 'logK' AND s.temperature_c = 25 AND s.ionic_strength_mol_l = 1)\""
+              },
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "T°C_range 25 for Cd^[2+], Hg^[2+], Pb^[2+]; I(M)_range differ: Cd 0~3; Hg 0~1; Pb 1~4"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "What SRD-46 **did confirm** is that all three metals have reported stability data with **hydrogen thiocyanate / thiocyanate**:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "What",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 5,
+            "end": 27,
+            "text": "SRD-46 **did confirm**",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 28,
+            "end": 35,
+            "text": "is that",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 36,
+            "end": 52,
+            "text": "all three metals",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 53,
+            "end": 125,
+            "text": "have reported stability data with **hydrogen thiocyanate / thiocyanate**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 125,
+            "end": 126,
+            "text": ":",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "## search_stability — 89 row(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 89 row(s)\n\n### logK — 8 metal-ligand pair(s)\n| metal_id | metal_name | ligand_id | ligand_name | ... |\n| metal_26 | Cd^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 23 | 4 | 25 | 0~3 | *** | 7 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_26",
+              "metal_71",
+              "metal_125"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "metal_26 | Cd^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 23 | 4 | 25 | 0~3 | *** | 7",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "metal_26 | Cd^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 23 | 4 | 25 | 0~3 | *** | 7"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "metal_71 | Hg^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 8 | 6 | 25 | 0~1 | solid | 2"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "metal_125 | Pb^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 8 | 3 | 25 | 1~4 | *** | 4"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_26",
+              "metal_71",
+              "metal_125",
+              "ligand_10092"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "metal_26 | Cd^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 23 | 4 | 25 | 0~3 | *** | 7",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "metal_26 | Cd^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 23 | 4 | 25 | 0~3 | *** | 7"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "metal_71 | Hg^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 8 | 6 | 25 | 0~1 | solid | 2"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "metal_125 | Pb^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 8 | 3 | 25 | 1~4 | *** | 4"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "| Metal | SRD-46 coverage with ligand_10092 (HSCN / SCN⁻) |\n|---|---|\n| Cd²⁺ | 23 values, 4 β constants |\n| Hg²⁺ | 8 values, 6 β constants |\n| Pb²⁺ | 8 values, 3 β constants |",
+        "claims": [
+          {
+            "start": 70,
+            "end": 105,
+            "text": "| Cd²⁺ | 23 values, 4 β constants |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 106,
+            "end": 140,
+            "text": "| Hg²⁺ | 8 values, 6 β constants |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 141,
+            "end": 175,
+            "text": "| Pb²⁺ | 8 values, 3 β constants |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_26",
+              "ligand_10092"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_26 | Cd^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 23 | 4 | 25 | 0~3 | *** | 7",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_26 | Cd^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 23 | 4 | 25 | 0~3 | *** | 7 |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "Args.where: (c.ligand_id = ligand_10092 AND (c.metal_name_SRD LIKE '%Cd%' OR c.metal_name_SRD LIKE '%cadmium%' OR c.metal_name_SRD LIKE '%Pb%' OR c.metal_name_SRD LIKE '%lead%' OR c.metal_name_SRD LIKE '%Hg%' ...))"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_10092"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_71 | Hg^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 8 | 6 | 25 | 0~1 | solid | 2",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_71 | Hg^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 8 | 6 | 25 | 0~1 | solid | 2 |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "Args.where: (c.ligand_id = ligand_10092 AND (c.metal_name_SRD LIKE '%Cd%' OR c.metal_name_SRD LIKE '%cadmium%' OR c.metal_name_SRD LIKE '%Pb%' OR c.metal_name_SRD LIKE '%lead%' OR c.metal_name_SRD LIKE '%Hg%' ...))"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_125",
+              "ligand_10092"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_125 | Pb^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 8 | 3 | 25 | 1~4 | *** | 4",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_125 | Pb^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 8 | 3 | 25 | 1~4 | *** | 4 |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "Args.where: (c.ligand_id = ligand_10092 AND (c.metal_name_SRD LIKE '%Cd%' OR c.metal_name_SRD LIKE '%cadmium%' OR c.metal_name_SRD LIKE '%Pb%' OR c.metal_name_SRD LIKE '%lead%' OR c.metal_name_SRD LIKE '%Hg%' ...))"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "From the chemistry of soft-metal/soft-base interactions, the expected affinity trend is:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 88,
+            "text": "From the chemistry of soft-metal/soft-base interactions, the expected affinity trend is:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "| Rank | Metal | Relative affinity for thiocyanate |\n|---|---|---|\n| 1 | Hg²⁺ | Highest |\n| 2 | Cd²⁺ | Intermediate |\n| 3 | Pb²⁺ | Lowest of the three |",
+        "claims": [
+          {
+            "start": 67,
+            "end": 89,
+            "text": "| 1 | Hg²⁺ | Highest |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 90,
+            "end": 117,
+            "text": "| 2 | Cd²⁺ | Intermediate |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 118,
+            "end": 152,
+            "text": "| 3 | Pb²⁺ | Lowest of the three |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_10092"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "metal_71 | Hg^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc…) | HL | N=C=S | 8 | 6 | 25 | 0~1",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_71 | Hg^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 8 | 6 | 25 | 0~1 | solid | 2 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_26",
+              "ligand_10092"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "metal_26 | Cd^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc…) | HL | N=C=S | 23 | 4 | 25 | 0~3",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_26 | Cd^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 23 | 4 | 25 | 0~3 | *** | 7 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_125",
+              "ligand_10092"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "metal_125 | Pb^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc…) | HL | N=C=S | 8 | 3 | 25 | 1~4",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_125 | Pb^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 8 | 3 | 25 | 1~4 | *** | 4 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "So the soft metal with the **highest affinity** is **Hg²⁺**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 2,
+            "text": "So",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 3,
+            "end": 60,
+            "text": "the soft metal with the **highest affinity** is **Hg²⁺**.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_71",
+              "metal_26",
+              "metal_125"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "metal_71 | Hg^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc…) | HL | N=C=S | 8 | 6 | 25 | 0~1 | solid | 2",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_71 | Hg^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 8 | 6 | 25 | 0~1 | solid | 2 |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_26 | Cd^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 23 | 4 | 25 | 0~3 | *** | 7 |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_125 | Pb^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 8 | 3 | 25 | 1~4 | *** | 4 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "Source: **NIST SRD-46**, ligand entry **ligand_10092** (hydrogen thiocyanate / thiocyanate).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 7,
+            "text": "Source:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 8,
+            "end": 23,
+            "text": "**NIST SRD-46**",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 25,
+            "end": 54,
+            "text": "ligand entry **ligand_10092**",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 55,
+            "end": 91,
+            "text": "(hydrogen thiocyanate / thiocyanate)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool results from this run (e.g., search_stability outputs with ligand_10092) indicate queries to the NIST SRD-46 database, though 'SRD-46' string is not shown in rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 89 row(s)\n| metal_id | metal_name | ligand_id | ligand_name | ... |\n| metal_26 | Cd^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_10092"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_26 | Cd^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_26 | Cd^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 23 | 4 | 25 | 0~3 | *** | 7 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "| metal_2 | Ag^[+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S | 17 | 5 | 25 | 0~4 | solid | 4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_10092"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| metal_26 | Cd^[2+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "| metal_21 | Bi^[3+] | ligand_10092 | Hydrogen thiocyanate (Thioc… | HL | N=C=S |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 7,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

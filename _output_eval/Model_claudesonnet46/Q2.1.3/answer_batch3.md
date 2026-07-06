@@ -1,0 +1,68 @@
+# pKa Comparison: Glycine vs. Alanine
+
+*Source: NIST SRD-46 measured pKa values, all at 25°C in water*
+
+---
+
+## Condition-by-Condition Comparison at 25°C
+
+### pKa₁ (Carboxyl group, –COOH → –COO⁻)
+
+| Ionic Strength (M) | Electrolyte | Glycine pKa₁ | Alanine pKa₁ | Δ (Ala − Gly) |
+|---|---|---|---|---|
+| 3.15 | KNO₃ | 2.13 | 2.18 | +0.05 |
+| 2.15 | KNO₃ | 2.17 | 2.21 | +0.04 |
+| 2.15 | NaClO₄ | 2.17 | 2.22 | +0.05 |
+| 1.15 | KNO₃ | 2.18 | 2.23 | +0.05 |
+| 1.15 | NaClO₄ | 2.18 | 2.24 | +0.06 |
+| 1.15 | NaNO₃ | 2.19 | 2.25 | +0.06 |
+| 0.65 | KNO₃ | 2.21 | 2.26 | +0.05 |
+| 0.65 | NaClO₄ | 2.21 | 2.27 | +0.06 |
+| 0.65 | NaNO₃ | 2.22 | 2.27 | +0.05 |
+| 0.15 | KNO₃ | 2.24 | 2.29 | +0.05 |
+| 0.15 | NaClO₄ | 2.24 | 2.29 | +0.05 |
+| 0.15 | NaNO₃ | 2.25 | 2.30 | +0.05 |
+| ~0 (extrapolated) | — | 2.33–2.48 | 2.33–2.41 | ~0 to +0.05 |
+
+### pKa₂ (Ammonium group, –NH₃⁺ → –NH₂)
+
+| Ionic Strength (M) | Electrolyte | Glycine pKa₂ | Alanine pKa₂ | Δ (Ala − Gly) |
+|---|---|---|---|---|
+| 3.15 | KNO₃ | 9.47 | 9.52 | +0.05 |
+| 2.15 | KNO₃ | 9.52 | 9.56 | +0.04 |
+| 2.15 | NaClO₄ | 9.52 | 9.57 | +0.05 |
+| 1.15 | KNO₃ | 9.54 | 9.59 | +0.05 |
+| 1.15 | NaClO₄ | 9.54 | 9.59 | +0.05 |
+| 1.15 | NaNO₃ | 9.55 | 9.60 | +0.05 |
+| 0.65 | KNO₃ | 9.56 | 9.62 | +0.06 |
+| 0.65 | NaClO₄ | 9.56 | 9.62 | +0.06 |
+| 0.65 | NaNO₃ | 9.57 | 9.63 | +0.06 |
+| 0.15 | KNO₃ | 9.58 | 9.65 | +0.07 |
+| 0.15 | NaClO₄ | 9.58 | 9.65 | +0.07 |
+| 0.15 | NaNO₃ | 9.59 | 9.66 | +0.07 |
+| ~0 (extrapolated) | — | 9.60–9.68 | 9.71 | +0.03–0.11 |
+
+---
+
+## Summary Statistics
+
+| Property | Glycine | Alanine | Typical Δ |
+|---|---|---|---|
+| pKa₁ range (25°C, water) | 2.13 – 2.48 | 2.18 – 2.41 | **+0.05** |
+| pKa₂ range (25°C, water) | 9.47 – 9.68 | 9.52 – 9.71 | **+0.05 to +0.07** |
+| Measured data points | 48 | 35 | — |
+| Data quality | 3 (all) | 3 (all) | — |
+
+---
+
+## Are They Significantly Different?
+
+**The differences are real but small.** Across all matched conditions, alanine consistently shows pKa values **~0.05–0.07 units higher** than glycine for both ionization steps. This pattern is remarkably consistent across different ionic strengths and electrolytes, confirming it is a genuine structural effect rather than experimental scatter.
+
+### Chemistry Insight
+
+The systematic ~+0.05 shift in alanine's pKa values arises from the **methyl side chain (–CH₃)** at the α-carbon. This weakly electron-donating group slightly increases electron density at both the carboxyl and ammonium sites, making both groups marginally harder to deprotonate. The effect is small because the methyl group is two bonds away from the ionizable groups and exerts only an inductive influence.
+
+Practically speaking, a difference of 0.05–0.07 pKa units is **at or just above the threshold of experimental uncertainty** (~0.05 units) for high-quality potentiometric measurements. While statistically consistent across the dataset, it is **not chemically significant** for most applications — both amino acids buffer in the same pH ranges, form metal complexes of similar strength, and behave essentially identically at physiological pH (7.4), where both exist overwhelmingly as zwitterions (–NH₃⁺/–COO⁻).
+
+---

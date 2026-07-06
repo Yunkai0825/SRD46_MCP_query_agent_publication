@@ -1,0 +1,92 @@
+Here's a comprehensive overview of **zinc (Zn²⁺)** data in the NIST SRD-46 database:
+
+---
+
+## Zinc (Zn²⁺) — Overview
+
+| Property | Value |
+|---|---|
+| **Metal ID** | `metal_208` |
+| **Ion** | Zn²⁺ |
+| **SMILES** | `[Zn+2]` |
+| **Total ligand partners** | **1,169** |
+| **Total stability measurements (VLMs)** | **4,095** |
+| **Equilibrium definitions (β types)** | **122** |
+
+Zinc is one of the most extensively studied metals in the database, reflecting its enormous importance in bioinorganic chemistry (enzyme active sites, zinc fingers) and industrial applications (corrosion, electroplating).
+
+---
+
+## Ligand Class Distribution
+
+| Ligand Class | Measurements | % of Total |
+|---|---|---|
+| Amino Acids | 654 | 16.0% |
+| Inorganic ligands | 285 | 7.0% |
+| Aliphatic amines | 253 | 6.2% |
+| EDTA and derivatives | 203 | 5.0% |
+| Pyrroles (azoles) | 201 | 4.9% |
+| Pyridines (azines) | 188 | 4.6% |
+| Aliphatic amines (secondary N) | 180 | 4.4% |
+| Aza-macrocycles | 167 | 4.1% |
+| NTA and derivatives | 143 | 3.5% |
+| Aza-oxa-macrocycles | 126 | 3.1% |
+| Carboxylic diacids | 122 | 3.0% |
+| Aminophosphorus acids | 113 | 2.8% |
+| Peptides | 109 | 2.7% |
+| Naphthols | 109 | 2.7% |
+| Aza macrocycles + carboxylic acids | 106 | 2.6% |
+
+The dominance of **amino acids** (~16%) reflects Zn²⁺'s critical biological role — it coordinates histidine, cysteine, and other residues in metalloenzymes. The strong representation of **azoles, amines, and macrocycles** highlights Zn²⁺'s versatile coordination chemistry as a borderline Lewis acid.
+
+---
+
+## Top 20 Ligand Partners (by measurement count)
+
+| Rank | Ligand | Ligand ID | Measurements |
+|---|---|---|---|
+| 1 | Glycine | `ligand_5760` | 37 |
+| 2 | Ethylenediamine | `ligand_7029` | 36 |
+| 3 | Hydroxide ion (OH⁻) | `ligand_10076` | 33 |
+| 4 | Hydrocyanic acid (HCN) | `ligand_10090` | 30 |
+| 5 | Imidazole | `ligand_7795` | 30 |
+| 6 | Histidine | `ligand_5898` | 29 |
+| 7 | Thiocyanic acid | `ligand_10092` | 24 |
+| 8 | Cysteine | `ligand_5856` | 23 |
+| 9 | Ammonia | `ligand_10103` | 21 |
+| 10 | NTP (Nitrilotris(methylenephosphonic acid)) | `ligand_8412` | 21 |
+| 11 | Iminodiacetic acid (IDA) | `ligand_6127` | 20 |
+| 12 | Citric acid | `ligand_9058` | 19 |
+| 13 | 1,10-Phenanthroline | `ligand_8191` | 19 |
+| 14 | Alanine | `ligand_5761` | 19 |
+| 15 | 2,2'-Bipyridyl | `ligand_8156` | 18 |
+| 16 | EDTA | `ligand_6277` | 18 |
+| 17 | HIDA | `ligand_6204` | 18 |
+| 18 | Penicillamine | `ligand_5857` | 18 |
+| 19 | Acetic acid | `ligand_8465` | 17 |
+| 20 | 1,2-Propylenediamine | `ligand_7030` | 17 |
+
+---
+
+## Key Equilibrium Types Covered
+
+The database includes a wide variety of equilibrium definitions for Zn²⁺ systems:
+
+| Type | Example Equation |
+|---|---|
+| Stepwise formation | M + L ⇌ ML, M + 2L ⇌ ML₂, etc. |
+| Cumulative formation | Up to ML₄ |
+| Protonated complexes | MHL, MH₂L, MH₃L, MH₄L |
+| Hydroxo complexes | M(OH)L, M(OH)₂L |
+| Polynuclear species | M₂L, M₃L₄, M₄L₄ |
+| Solid-phase solubility | ZnL₂(s), ZnO(s) — multiple polymorphs (α, β, γ, δ, ε, amorphous) |
+
+Conditions span **5–45 °C** and ionic strengths from **~0 to 5 M**, providing excellent coverage for modeling Zn²⁺ speciation across environmental and biological conditions.
+
+---
+
+**Source:** NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).
+
+Feel free to ask about any specific Zn²⁺–ligand system, pKₐ data, or comparisons with other metals!
+
+---

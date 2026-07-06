@@ -1,0 +1,32 @@
+## Fe³⁺ Complex Stability: EDTA vs NTA
+
+Here are the log K values for the simple 1:1 ML formation reaction **[M] + [L] ⇌ [ML]** (β_def_812), all at 25 °C from NIST SRD-46:
+
+### Side-by-Side log K Comparison
+
+| Condition | Fe³⁺ + EDTA (ligand_6277) | Fe³⁺ + NTA (ligand_6165) | Δ log K (EDTA − NTA) |
+|-----------|:------------------------:|:------------------------:|:--------------------:|
+| 25 °C, I = 0.1 M | **25.1** | **15.9** | **+9.2** |
+| 25 °C, I = 1.0 M | **23.8** | **14.78** | **+9.0** |
+
+### Thermodynamic Data (25 °C, I = 0.1 M)
+
+| Parameter | Fe³⁺–EDTA | Fe³⁺–NTA |
+|-----------|:---------:|:--------:|
+| log K | 25.1 | 15.9 |
+| ΔH (kJ/mol) | −11.3 | +13.4 |
+| ΔS (J/mol·K) | +442.7 | +349.8 |
+
+---
+
+### 🏆 Verdict: EDTA wins — by a wide margin
+
+**EDTA forms a dramatically more stable complex with Fe³⁺**, with log K ≈ **25.1** vs NTA's **15.9** at I = 0.1 M, 25 °C — a difference of **~9 log units** (i.e., ~10⁹-fold greater stability).
+
+**Why?** EDTA is a hexadentate ligand (2 N + 4 O donors) that fully encapsulates Fe³⁺ in an octahedral coordination shell, while NTA is only tetradentate (1 N + 3 O donors), leaving two coordination sites open. The extra chelate rings in EDTA provide a much larger **chelate effect** — reflected in the enormous entropy contribution (ΔS = +443 J/mol·K for EDTA vs +350 for NTA).
+
+Interestingly, the Fe³⁺–NTA reaction is **endothermic** (ΔH = +13.4 kJ/mol), meaning it is driven entirely by entropy, while Fe³⁺–EDTA is slightly exothermic (ΔH = −11.3 kJ/mol) — both enthalpically and entropically favorable.
+
+> *Source: NIST SRD-46 (Standard Reference Database 46), β_def_812 [ML]/[M][L]*
+
+---

@@ -1,0 +1,38 @@
+Yes. Querying the SRD‑46 ligand pKa dataset shows at least 33 ligands with more than six reported pKa values. Below are the ones retrieved in our pull, with both the number of unique protonation steps (distinct bracketed acid–base transitions) and total measurements; for these, the counts are equal, indicating one measurement per step.
+
+| Ligand ID | Ligand name | Unique pKa steps | Total measurements |
+| --- | --- | ---: | ---: |
+| ligand_7540 | 1,4,7,10,13,16,19,22,25,28,31‑Undecaazacyclotritriacontane ([33]aneN11) | 11 | 11 |
+| ligand_7541 | 1,4,7,10,13,16,19,22,25,28,31,34‑Dodecaazacyclohexatriacontane ([36]aneN12) | 11 | 11 |
+| ligand_6368 | Pentaethylenehexanitrilooctaacetic acid (PHOA) | 10 | 10 |
+| ligand_7253 | 2,5,8,11,14,17,20,23,26,29‑Decaazatriacontane (Me2nonaen) | 10 | 10 |
+| ligand_7539 | 1,4,7,10,13,16,19,22,25,28‑Decaazacyclotriacontane ([30]aneN10) | 10 | 10 |
+| ligand_6367 | Tetraethylenepentanitriloheptaacetic acid (TPHA) | 9 | 9 |
+| ligand_7252 | 2,5,8,11,14,17,20,23,26‑Nonaazaheptacosane (Me2octaen) | 9 | 9 |
+| ligand_7538 | 1,4,7,10,13,16,19,22,25‑Nonaazacycloheptacosane ([27]aneN9) | 9 | 9 |
+| ligand_6041 | N,N′‑Bis(3‑hydroxy‑5‑phosphomethyl‑2‑methyl‑4‑pyridylmethyl)ethylenedinitrilodi… | 8 | 8 |
+| ligand_6047 | N,N″‑Bis(3‑hydroxy‑6‑methyl‑2‑pyridinylmethyl)diethylenetrinitrilotriacetic ac… | 8 | 8 |
+| ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | 8 | 8 |
+| ligand_6366 | Triethylenetetranitrilohexaacetic acid (TTHA) | 8 | 8 |
+| ligand_7251 | 2,5,8,11,14,17,20,23‑Octaazatetracosane (Me2heptaen) | 8 | 8 |
+| ligand_7254 | 1,3‑Bis(2,5,8,11‑tetraazaundecyl)benzene (MXTRIEN) | 8 | 8 |
+| ligand_7534 | 1,4,7,10,13,16,19,22‑Octaazacyclotetracosane ([24]aneN8) | 8 | 8 |
+| ligand_7535 | 1,5,9,13,17,21,25,32‑Octaazacyclodotriacontane ([32]aneN8) | 8 | 8 |
+| ligand_7543 | 1,5,9,13,17,21,28,32‑Octaazabicyclo[11.11.11]pentatriacontane | 8 | 8 |
+| ligand_8431 | Oxybis[ethylenenitrilobis(methylenephosphonic acid)] | 8 | 8 |
+| ligand_8433 | Diethylenetrinitrilopentakis(methylenephosphonic acid) (DTPP) | 8 | 8 |
+| ligand_9171 | myo‑Inositol‑hexa(dihydrogenphosphate) (Phytic acid) | 8 | 8 |
+| ligand_6046 | N,N′‑Bis(3‑hydroxy‑6‑methyl‑2‑pyridinylmethyl)ethylenedinitrilodiacetic acid (E… | 7 | 7 |
+| ligand_6125 | 7,19‑Bis(carboxymethyl)‑1,13(2,3)‑tetrahydroxy‑2,12,14,24‑tetraoxo‑3,7,11,15,19… | 7 | 7 |
+| ligand_6359 | Diethylenetrinitrilopentapropanoic acid (DTPP) | 7 | 7 |
+| ligand_6371 | 1,4‑Bis[2,5,5‑tris(carboxymethyl)‑2,5‑diazapentyl]benzene (PXED3A) | 7 | 7 |
+| ligand_7250 | 2,5,8,11,14,17,20‑Heptaazaheneicosane (Me2hexaen) | 7 | 7 |
+
+Notes and context:
+- Total count: The SRD‑46 query returned 33 ligands with >6 reported pKa values; 25 are listed above (the remainder can be provided on request).
+- Counting method: “Unique pKa steps” tallies distinct protonation transitions (from_state → to_state) for each ligand; “Total measurements” counts all entries in the pKa table. For the ligands above, these are equal, indicating minimal duplication across conditions.
+- Chemistry insight: The ligands with many pKa values are mainly highly polybasic systems—polyazamacrocycles ([24]aneN8 to [36]aneN12), extended polyaminopolycarboxylates (e.g., DTPA, TTHA, PHOA/TPHA), and polyphosphonates and inositol polyphosphates (e.g., phytic acid). Their many ionizable sites yield long stepwise protonation sequences.
+
+Source: NIST SRD‑46, ligand_pka_measured joined with ligand_card (query of ligands with COUNT(pKa entries) > 6).
+
+---

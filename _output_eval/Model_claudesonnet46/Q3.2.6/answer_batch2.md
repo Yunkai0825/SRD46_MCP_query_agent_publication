@@ -1,0 +1,87 @@
+I now have all the data needed. Let me compute and present the full answer.
+
+---
+
+## Cu²⁺–Malonate Conditional Stability Constant at pH 4
+
+All data from **NIST SRD-46** at **25 °C, I = 0.1 M**.
+
+---
+
+### Step 1 — Raw Data from SRD-46
+
+#### Malonic acid pKa values (ligand_8873, 25 °C, I = 0.1 M)
+
+| Equilibrium | pKa | Reaction |
+|---|---|---|
+| pKa₁ | **2.65** | H₂L ⇌ H⁺ + HL⁻ |
+| pKa₂ | **5.27** | HL⁻ ⇌ H⁺ + L²⁻ |
+
+#### Cu²⁺–malonate formation constant (beta_def_812, 25 °C, I = 0.1 M)
+
+| Reaction | log K₁ |
+|---|---|
+| Cu²⁺ + L²⁻ ⇌ CuL | **5.04** |
+
+---
+
+### Step 2 — Fraction of Free Malonate (α_L²⁻) at pH 4
+
+The conditional constant accounts for the fact that at pH 4, most malonate is protonated (as HL⁻ or H₂L), not as the fully deprotonated L²⁻ that binds Cu²⁺.
+
+Define:
+- [H⁺] = 10⁻⁴ M
+- Ka₁ = 10⁻²·⁶⁵ = 2.24 × 10⁻³
+- Ka₂ = 10⁻⁵·²⁷ = 5.37 × 10⁻⁶
+
+The fraction of total ligand present as L²⁻:
+
+$$\alpha_{L^{2-}} = \frac{K_{a1} \cdot K_{a2}}{[\text{H}^+]^2 + K_{a1}[\text{H}^+] + K_{a1} K_{a2}}$$
+
+**Numerator:**
+$$K_{a1} \cdot K_{a2} = 2.24 \times 10^{-3} \times 5.37 \times 10^{-6} = 1.20 \times 10^{-8}$$
+
+**Denominator terms:**
+| Term | Value |
+|---|---|
+| [H⁺]² = (10⁻⁴)² | 1.00 × 10⁻⁸ |
+| Ka₁·[H⁺] = 2.24×10⁻³ × 10⁻⁴ | 2.24 × 10⁻⁷ |
+| Ka₁·Ka₂ | 1.20 × 10⁻⁸ |
+| **Denominator total** | **2.46 × 10⁻⁷** |
+
+$$\alpha_{L^{2-}} = \frac{1.20 \times 10^{-8}}{2.46 \times 10^{-7}} = 0.0488$$
+
+$$\log \alpha_{L^{2-}} = \log(0.0488) = -1.31$$
+
+---
+
+### Step 3 — Conditional Stability Constant
+
+The conditional constant K′ is defined as:
+
+$$K' = K_1 \cdot \alpha_{L^{2-}}$$
+
+$$\log K' = \log K_1 + \log \alpha_{L^{2-}} = 5.04 + (-1.31) = \boxed{3.73}$$
+
+---
+
+### Summary Table
+
+| Quantity | Value |
+|---|---|
+| log K₁ (Cu²⁺ + L²⁻ ⇌ CuL) | 5.04 |
+| pKa₁ (malonic acid) | 2.65 |
+| pKa₂ (malonic acid) | 5.27 |
+| α_L²⁻ at pH 4 | 0.049 |
+| log α_L²⁻ | −1.31 |
+| **log K′ at pH 4** | **3.73** |
+
+---
+
+### Chemistry Insight
+
+At pH 4, the dominant malonate species is **HL⁻** (monoprotonated), since pH 4 sits between pKa₁ (2.65) and pKa₂ (5.27). Only ~5% of the total malonate pool exists as the fully deprotonated L²⁻ that binds Cu²⁺ strongly. This reduces the effective stability by about 1.3 log units compared to the thermodynamic constant. Note that SRD-46 also reports a **CuHL complex** (beta_def_779, 5 entries), meaning some Cu²⁺ binding via the monoprotonated form occurs at pH 4 — a full speciation model would include this term and yield a slightly higher effective conditional constant. The value log K′ ≈ 3.7 indicates Cu²⁺–malonate complexation is still moderately favourable at pH 4, relevant to soil chemistry and bioinorganic contexts where malonate is a common root exudate.
+
+> **Source:** NIST SRD-46 (vlm_151949, vlm_151918 for pKa; vlm_152316 for log K₁), 25 °C, I = 0.1 M.
+
+---

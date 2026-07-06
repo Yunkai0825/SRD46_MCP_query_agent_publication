@@ -1,0 +1,43 @@
+Short answer and hypothesis
+- Hypothesis: Hg(II) prefers sulfur-donor ligands over nitrogen-donor ligands, and both over oxygen-donor ligands (S ≫ N > O). This aligns with Pearson’s HSAB expectations for “soft” Hg(II).
+- Evidence gathered so far from SRD‑46 shows extensive and higher‑order complex formation with S‑donors and even sulfide precipitation, while N‑donor complexes are present but comparatively simpler, and O‑donor complexes appear less dominant for simple 1:1 species under comparable aqueous conditions.
+
+What we verified in SRD‑46 (entity coverage and speciation patterns)
+- Sulfur donors (examples we resolved):
+  • Thiourea (ligand_10004): Hg2+ + thiourea shows multiple MLn species up to ML4 at ambient conditions (beta_def_812, 840, 872, 894; 27 VLM measurements; build_system_catalog entry #5).
+  • Thioethers (e.g., 2,2′‑thiodiethanol, ligand_9697): ML up to ML4 (entry #10).
+  • Sulfide/H2S (ligand_10144): sulfide/thiol systems include solid Hg–S phases (beta_def_288, 292) — direct qualitative evidence of very strong Hg–S bonding (entry #18).
+- Nitrogen donors:
+  • Ammonia (ligand_10103): ML up to ML4 (entry #9).
+  • Ethylenediamine (ligand_7029): ML and ML2 (entry #8).
+  • Imidazole (ligand_7795) and pyridine (entry #14 and #20): ML and ML2/ML3 networks present, but fewer entries than for key S‑donors.
+- Oxygen donors:
+  • Carbonate (ligand_10096): mixed hydrolytic/carbonate speciation with limited simple ML entries (entry #13).
+  • Polycarboxylates (e.g., citrate, oxalate) are present in the database (citric acid ligand_9058; oxalic acid ligand_8872), but our run did not reach their Hg(II) constants.
+  • Hydroxide: extensive hydrolysis and polymerization/dimerization are observed (entry #3), but this reflects hydrolysis rather than strong simple O‑donor chelation.
+
+Why this supports S ≫ N > O
+- Hg–S systems exhibit:
+  • Multiple high‑stoichiometry complexes (ML→ML4) under ambient conditions across several S‑donor ligands (thiourea, thioethers).
+  • Formation of sparingly soluble Hg–S solids with H2S/HS–, consistent with very favorable Hg–S bond formation.
+- N‑donor ligands form well‑defined complexes (NH3, en, imidazole, pyridine), but the catalog shows fewer high‑order species and smaller networks than for S‑donors under similar ranges of T and ionic strength.
+- O‑donor ligands show limited simple HgL formation in our retrieved catalog snapshot (carbonate mostly mixed with hydrolysis; polycarboxylates present but not yet quantified here), consistent with weaker Hg–O binding relative to Hg–S and even Hg–N for 1:1 species in water.
+
+What’s missing (and how I’ll provide it in a follow‑up)
+- You asked for specific log K (log β1 for ML, possibly β2…); due to a phase block/time budget, I couldn’t execute the final “search_stability” pulls. I already set up the exact filters we’d use (25 ± 1 °C; ionic strength ≤ 0.2 M; β1 = beta_def_812 for ML) for:
+  • Hg2+ + thiourea (ligand_10004) — sulfur donor
+  • Hg2+ + mercaptoacetic acid (ligand_8766) — sulfur/oxygen donor
+  • Hg2+ + 2‑mercaptoethanol (ligand_9747) — sulfur donor
+  • Hg2+ + ammonia (ligand_10103) and ethylenediamine (ligand_7029) — nitrogen donors
+  • Hg2+ + oxalic acid (ligand_8872) or carbonate (ligand_10096) — oxygen donors
+- With one execution pass of those queries, I can deliver a compact table of log β1 (and, where comparable, log β2) at 25 °C and low I to numerically substantiate S ≫ N > O for Hg(II).
+
+Chemistry insight
+- This S‑donor preference is a hallmark of Hg(II) as a soft Lewis acid. The prevalence of Hg–S solids (e.g., with sulfide) and rich MLn families with thiourea/thioethers in SRD‑46 are qualitative fingerprints of strong Hg–S interactions, whereas N‑donor and especially O‑donor ligands show less extensive speciation under similar aqueous conditions.
+
+Source
+- All system and speciation information above is from NIST SRD‑46 (build_system_catalog for metal_71 Hg2+), with ligand and metal IDs as indicated.
+
+If you’d like, I can return with the exact log K values in a single follow‑up by running the prepared, filtered stability queries and present them in one table for S, N, and O donors at 25 °C.
+
+---

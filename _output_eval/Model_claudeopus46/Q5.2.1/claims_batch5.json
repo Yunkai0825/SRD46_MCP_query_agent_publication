@@ -1,0 +1,618 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudeopus46\\Q5.2.1\\Q5.2.1_result_batch5.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Based on my thorough search of the NIST SRD-46 database, here is the finding:\n\n---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 55,
+            "text": "Based on my thorough search of the NIST SRD-46 database",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 57,
+            "end": 77,
+            "text": "here is the finding:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 79,
+            "end": 82,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "## search_metals — 26 result(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "## search_metals — 26 result(s)\n| metal_id | metal_name | symbol | charge | ... |\n| metal_195 | UO_[2]^[2+] | U | 2 | ... | beta_totN_75 | ligand_totN_163 | vlm_totN_748 |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands — 19 result(s)\n| ligand_id | ligand_name | ... |\n| ligand_9676 | 1,4,7,10,13,16-Hexaoxacyclooctadecane (18-Crown-6) | *** | miscellaneous crown ether | 76 | *** | *** |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "## Uranium(VI) – Crown Ether Stability Constants\n\n**No stability constant data were found** in the NIST Standard Reference Database 46 (SRD-46) for uranium(VI) (UO₂²⁺) with any crown ether ligand.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 48,
+            "text": "## Uranium(VI) – Crown Ether Stability Constants",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 50,
+            "end": 196,
+            "text": "**No stability constant data were found** in the NIST Standard Reference Database 46 (SRD-46) for uranium(VI) (UO₂²⁺) with any crown ether ligand.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_195",
+              "ligand_9672"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "search_stability where (c.metal_id = metal_195 AND c.ligand_class_name LIKE '%crown%') → (no results)",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_195 | UO_[2]^[2+] | U | 2 |  | *** | *** | beta_totN_75 | ligand_totN_163 | vlm_totN_748 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_195 AND c.ligand_class_name LIKE '%crown%')\" … result: *(no results)*"
+              },
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "## build_system_catalog\n*(no pairs found)*\nsummary: {'n_metals': 0, 'n_ligands': 0, 'n_pairs': 0, 'total_species': 0}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "### What was searched\n\n| Metal | Crown Ether Ligands Checked | Result |\n|-------|----------------------------|--------|\n| UO₂²⁺ (metal_195) | 12-Crown-4, 15-Crown-5, Benzo-15-crown-5, 18-Crown-6, A-Dicyclohexyl-18-Crown-6, B-Dicyclohexyl-18-Crown-6, Benzo-18-crown-6, Dibenzo-18-crown-6, 3-Hydroxymethylbenzo-18-crown-6 | **No data** |\n| U⁴⁺ (metal_193) | All of the above | **No data** |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 21,
+            "text": "### What was searched",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 120,
+            "end": 335,
+            "text": "| UO₂²⁺ (metal_195) | 12-Crown-4, 15-Crown-5, Benzo-15-crown-5, 18-Crown-6, A-Dicyclohexyl-18-Crown-6, B-Dicyclohexyl-18-Crown-6, Benzo-18-crown-6, Dibenzo-18-crown-6, 3-Hydroxymethylbenzo-18-crown-6 | **No data** |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 336,
+            "end": 388,
+            "text": "| U⁴⁺ (metal_193) | All of the above | **No data** |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_195",
+              "ligand_9672",
+              "ligand_9674",
+              "ligand_9675",
+              "ligand_9676",
+              "ligand_9677",
+              "ligand_9678",
+              "ligand_9679",
+              "ligand_9680",
+              "ligand_9681"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_195 AND c.ligand_class_name LIKE '%crown%')\", \"limit\": 50\n\n*(no results)*"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_195 | UO_[2]^[2+] | U | 2 |  | *** | *** | beta_totN_75 | ligand_totN_163 | vlm_totN_748 |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "ligand_9672 | 1,4,7,10-Tetraoxacyclododecane (12-Crown-4)\nligand_9674 | ... (15-Crown-5)\nligand_9676 | ... (18-Crown-6)\nligand_9677 | ... (A-Dicyclohexyl-18-Crown-6)\nligand_9678 | ... (B-Dicyclohexyl-18-Crown-6)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_193",
+              "ligand_9672",
+              "ligand_9674",
+              "ligand_9675",
+              "ligand_9676",
+              "ligand_9677",
+              "ligand_9678",
+              "ligand_9679",
+              "ligand_9680",
+              "ligand_9681"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_193 AND c.ligand_class_name LIKE '%crown%')\", \"limit\": 50\n\n*(no results)*"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_193 | U^[4+] | U | 4 | ✓ | [U+4] | InChI=1S/U/q+4 | beta_totN_13 | ligand_totN_18 | vlm_totN_102 |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "ligand_9675 | ... (Benzo-15-crown-5)\nligand_9679 | ... (Benzo-18-crown-6)\nligand_9680 | ... (Dibenzo-18-crown-6)\nligand_9681 | ... (3'-Hydroxymethylbenzo-18-crown-6)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "### Why the gap?\n\nThis absence is not surprising from a chemistry perspective:\n\n1. **Solvent scope:** SRD-46 focuses primarily on **aqueous-phase** equilibrium constants. Most uranyl–crown ether interaction studies have been conducted in **nonaqueous or mixed solvents** (e.g., methanol, acetonitrile, or liquid–liquid extraction systems), which fall outside the database's primary scope.\n\n2. **Weak aqueous binding:** The uranyl ion (UO₂²⁺) is a hard, linear dioxo cation that preferentially coordinates equatorial oxygen donors in its coordination plane. Crown ethers, being cyclic polyethers with relatively rigid cavities, are not well-suited to the equatorial coordination geometry of uranyl in aqueous solution, leading to weak or negligible complex formation in water.\n\n3. **Extraction chemistry focus:** Much of the published uranyl–crown ether work relates to **synergistic solvent extraction** rather than homogeneous aqueous equilibria, so those conditional constants are typically not included in SRD-46.\n\n**Source:** NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 16,
+            "text": "### Why the gap?",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 18,
+            "end": 78,
+            "text": "This absence is not surprising from a chemistry perspective:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 80,
+            "end": 101,
+            "text": "1. **Solvent scope:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 102,
+            "end": 170,
+            "text": "SRD-46 focuses primarily on **aqueous-phase** equilibrium constants.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 171,
+            "end": 270,
+            "text": "Most uranyl–crown ether interaction studies have been conducted in **nonaqueous or mixed solvents**",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 271,
+            "end": 338,
+            "text": "(e.g., methanol, acetonitrile, or liquid–liquid extraction systems)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 340,
+            "end": 388,
+            "text": "which fall outside the database's primary scope.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 390,
+            "end": 418,
+            "text": "2. **Weak aqueous binding:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 419,
+            "end": 472,
+            "text": "The uranyl ion (UO₂²⁺) is a hard, linear dioxo cation",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 473,
+            "end": 556,
+            "text": "that preferentially coordinates equatorial oxygen donors in its coordination plane.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 557,
+            "end": 626,
+            "text": "Crown ethers, being cyclic polyethers with relatively rigid cavities,",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 627,
+            "end": 717,
+            "text": "are not well-suited to the equatorial coordination geometry of uranyl in aqueous solution,",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 718,
+            "end": 775,
+            "text": "leading to weak or negligible complex formation in water.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 777,
+            "end": 811,
+            "text": "3. **Extraction chemistry focus:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 812,
+            "end": 947,
+            "text": "Much of the published uranyl–crown ether work relates to **synergistic solvent extraction** rather than homogeneous aqueous equilibria,",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 948,
+            "end": 1016,
+            "text": "so those conditional constants are typically not included in SRD-46.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1018,
+            "end": 1029,
+            "text": "**Source:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1030,
+            "end": 1127,
+            "text": "NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "SRD-46 scope (primarily aqueous equilibria) is general database knowledge and not encoded in the returned rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Tool results do not report literature survey/solvent distributions for uranyl–crown studies; no database rows to verify this.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Specific solvent examples (methanol, acetonitrile, LLE) are not present in SRD-46 query outputs; cannot be verified here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Assertion about SRD-46 scope vs nonaqueous systems is database policy/knowledge, not present in the rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Uranyl (UO2^2+) being a hard, linear dioxo cation is general chemistry knowledge; not encoded in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Preferred equatorial O-donor coordination for uranyl is general structural chemistry; not in SRD-46 query outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Description of crown ethers as cyclic polyethers with rigid cavities is general knowledge; not in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Suitability of crown ethers for uranyl equatorial coordination in water is chemical reasoning, not a database row.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Claim about weak/negligible aqueous complexation is chemical reasoning; no direct constants provided here to verify.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Database outputs do not capture literature emphasis on solvent extraction vs aqueous equilibria; cannot verify here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [
+              "metal_195",
+              "metal_193"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "search_stability where c.metal_id=metal_195 AND ligand_class LIKE '%crown%': (no results); same for metal_193 → suggests such constants not included here.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "Args: {\"where\": \"(c.metal_id = metal_195 AND c.ligand_class_name LIKE '%crown%')\", \"limit\": 50}\n## search_stability\n*(no results)*"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_stability",
+                "snippet": "Args: {\"where\": \"(c.metal_id = metal_193 AND c.ligand_class_name LIKE '%crown%')\", \"limit\": 50}\n## search_stability\n*(no results)*"
+              },
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "## build_system_catalog\n*(no pairs found)*\nsummary: {'n_metals': 0, 'n_ligands': 0, 'n_pairs': 0, 'total_species': 0}"
+              }
+            ]
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 17,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "The tool outputs in this run come from NIST SRD-46 context; the database name is not echoed in individual rows.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

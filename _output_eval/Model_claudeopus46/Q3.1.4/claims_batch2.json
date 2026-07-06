@@ -1,0 +1,901 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudeopus46\\Q3.1.4\\Q3.1.4_result_batch2.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "## Ligands Studied with Both Fe²⁺ and Fe³⁺ in NIST SRD-46\n\n### Overlap Count\n\n**94 distinct ligands** have stability-constant data recorded for both Fe²⁺ (metal_62) and Fe³⁺ (metal_61) in the NIST SRD-46 database.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 57,
+            "text": "## Ligands Studied with Both Fe²⁺ and Fe³⁺ in NIST SRD-46",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 59,
+            "end": 76,
+            "text": "### Overlap Count",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 78,
+            "end": 184,
+            "text": "**94 distinct ligands** have stability-constant data recorded for both Fe²⁺ (metal_62) and Fe³⁺ (metal_61)",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 185,
+            "end": 213,
+            "text": "in the NIST SRD-46 database.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "overlap_count | 94; SQL filter: WHERE c.metal_id IN (61, 62) ... HAVING COUNT(DISTINCT c.metal_id) = 2",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: SELECT COUNT(*) AS overlap_count FROM (SELECT c.ligand_id FROM ligandmetal_card c WHERE c.metal_id IN (61, 62) GROUP BY c.ligand_id HAVING COUNT(DISTINCT c.metal_id) = 2)"
+              },
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "| overlap_count |\n|---------------|\n| 94 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "metal_61 | Fe^[3+] | Fe | 3 ... | vlm_totN_1473; metal_62 | Fe^[2+] | Fe | 2 ... | vlm_totN_667"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Tool usage indicates SRD-46: execute_srd46_sql (SRD-46 SQL) and search_metals drew data from the NIST SRD-46 source.",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "Step 5: `execute_srd46_sql` — SQL executed against SRD-46; result: | overlap_count | 94 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "### Is Fe³⁺ Consistently More Stable?\n\nWhen paired comparisons are made under matched conditions (same ligand, same stoichiometry/beta definition, temperature within ±1 °C, ionic strength within ±0.05 M), **Fe³⁺ complexes are overwhelmingly more stable** than their Fe²⁺ analogues. Representative examples:\n\n| Ligand | Stoichiometry | log β (Fe³⁺) | log β (Fe²⁺) | Δ log β |\n|---|---|---|---|---|\n| EDTA | Fe + L ⇌ FeL | 25.1 | 14.3 | **+10.8** |\n| Oxalic acid | Fe + L ⇌ FeL | 9.4 | 4.7 | **+4.7** |\n| Oxalic acid | Fe + 2L ⇌ FeL₂ | 16.2 | 8.6 | **+7.6** |\n| Citric acid | Fe + L ⇌ FeL | 11.5 | 4.4 | **+7.1** |\n\nAcross the 300 matched pairs examined, the **vast majority show positive Δ log β** (Fe³⁺ > Fe²⁺), typically by **2–15 log units**. A small number of exceptions appear for certain protonated or higher-order stoichiometries, but these are rare and do not overturn the general trend.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 37,
+            "text": "### Is Fe³⁺ Consistently More Stable?",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 39,
+            "end": 96,
+            "text": "When paired comparisons are made under matched conditions",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 98,
+            "end": 109,
+            "text": "same ligand",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 111,
+            "end": 145,
+            "text": "same stoichiometry/beta definition",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 147,
+            "end": 171,
+            "text": "temperature within ±1 °C",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 173,
+            "end": 202,
+            "text": "ionic strength within ±0.05 M",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 205,
+            "end": 281,
+            "text": "**Fe³⁺ complexes are overwhelmingly more stable** than their Fe²⁺ analogues.",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 282,
+            "end": 306,
+            "text": "Representative examples:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 397,
+            "end": 446,
+            "text": "| EDTA | Fe + L ⇌ FeL | 25.1 | 14.3 | **+10.8** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 447,
+            "end": 500,
+            "text": "| Oxalic acid | Fe + L ⇌ FeL | 9.4 | 4.7 | **+4.7** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 501,
+            "end": 557,
+            "text": "| Oxalic acid | Fe + 2L ⇌ FeL₂ | 16.2 | 8.6 | **+7.6** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 558,
+            "end": 612,
+            "text": "| Citric acid | Fe + L ⇌ FeL | 11.5 | 4.4 | **+7.1** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 614,
+            "end": 651,
+            "text": "Across the 300 matched pairs examined",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 653,
+            "end": 696,
+            "text": "the **vast majority show positive Δ log β**",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 697,
+            "end": 710,
+            "text": "(Fe³⁺ > Fe²⁺)",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 712,
+            "end": 743,
+            "text": "typically by **2–15 log units**",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 745,
+            "end": 780,
+            "text": "A small number of exceptions appear",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 781,
+            "end": 835,
+            "text": "for certain protonated or higher-order stoichiometries",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 841,
+            "end": 855,
+            "text": "these are rare",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 860,
+            "end": 894,
+            "text": "do not overturn the general trend.",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Methodological setup (“paired comparisons under matched conditions”) is not present in any tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No tool output listing or enforcing “same ligand” pairing criteria.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No tool output specifying “same stoichiometry/beta definition” pairing criteria.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No tool output specifying temperature matching within ±1 °C.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No tool output specifying ionic strength matching within ±0.05 M.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General inorganic chemistry: Fe(III) (higher charge density) typically forms stronger complexes than Fe(II); specific SRD-46 rows not cited here.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "metal_61 | Fe^[3+] | Fe | 3 ... beta_def_count ...\nmetal_62 | Fe^[2+] | Fe | 2 ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No SRD-46 rows provided here for Fe–EDTA β1 values (25.1 vs 14.3) to verify this example.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No SRD-46 rows provided here for Fe–oxalate β1 values (9.4 vs 4.7) to verify this example.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No SRD-46 rows provided here for Fe–oxalate β2 values (16.2 vs 8.6) to verify this example.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No SRD-46 rows provided here for Fe–citrate β1 values (11.5 vs 4.4) to verify this example.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Tool data show 94 ligands with both Fe(III) and Fe(II) entries; no evidence for “300 matched pairs.”",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "overlap_count\n94"
+              },
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT COUNT(*) AS overlap_count FROM (SELECT c.ligand_id FROM ligandmetal_card c WHERE c.metal_id IN (61, 62) GROUP BY c.ligand_id HAVING COUNT(DISTINCT c.metal_id) = 2)"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Well-known trend: Fe(III) forms stronger complexes than Fe(II) with many ligands; not directly shown in provided SRD-46 rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "metal_61 | Fe^[3+] ...\nmetal_62 | Fe^[2+] ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe(III) > Fe(II) stability is a standard qualitative comparison; no specific SRD-46 constants cited here.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "metal_61 | Fe^[3+] ...\nmetal_62 | Fe^[2+] ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No SRD-46 rows with paired log β values are provided to substantiate a “typical” 2–15 log-unit difference.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Exceptions to Fe(III) > Fe(II) can occur depending on speciation/protonation; not shown in tool rows here.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "Fe^[3+] (metal_61) and Fe^[2+] (metal_62) present in SRD-46."
+              }
+            ]
+          },
+          {
+            "claim_index": 17,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Higher-order/protonated stoichiometries can alter relative stability; this is general chemistry knowledge, not shown in provided rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "Fe^[3+] (metal_61) and Fe^[2+] (metal_62) entries exist; specific stoichiometries not listed here."
+              }
+            ]
+          },
+          {
+            "claim_index": 18,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Characterizing exceptions as rare is qualitative domain knowledge; no SRD-46 quantification provided here.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "Fe^[3+] and Fe^[2+] metals identified (metal_61, metal_62); no exception frequencies shown."
+              }
+            ]
+          },
+          {
+            "claim_index": 19,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General statement that exceptions do not overturn the Fe(III) > Fe(II) trend is qualitative domain knowledge; not evidenced by provided rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "Fe^[3+] (metal_61) and Fe^[2+] (metal_62) are present; stability data not shown here."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "### Chemical Insight\n\nThis trend is entirely expected from electrostatic considerations and hard–soft acid–base (HSAB) theory. Fe³⁺ is a harder, more charge-dense cation than Fe²⁺, so it forms stronger bonds with the hard oxygen- and nitrogen-donor ligands that dominate this dataset (carboxylates, aminopolycarboxylates, hydroxyacids). The ~11 log-unit gap seen for EDTA is a classic illustration: the higher charge of Fe³⁺ dramatically enhances its affinity for the hexadentate O/N donor set. The few cases where the gap narrows tend to involve softer donors (e.g., certain N-heterocycles), where Fe²⁺'s d⁶ low-spin crystal-field stabilization energy can partially offset the charge advantage of Fe³⁺. This Fe³⁺ > Fe²⁺ stability ordering has major real-world relevance — it underpins the design of siderophores (biological Fe³⁺ chelators) and the use of chelation therapy agents like deferoxamine that selectively sequester ferric iron.\n\n*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).*",
+        "claims": [
+          {
+            "start": 22,
+            "end": 126,
+            "text": "This trend is entirely expected from electrostatic considerations and hard–soft acid–base (HSAB) theory.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 127,
+            "end": 179,
+            "text": "Fe³⁺ is a harder, more charge-dense cation than Fe²⁺",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 181,
+            "end": 256,
+            "text": "so it forms stronger bonds with the hard oxygen- and nitrogen-donor ligands",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 284,
+            "end": 335,
+            "text": "(carboxylates, aminopolycarboxylates, hydroxyacids)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 337,
+            "end": 371,
+            "text": "The ~11 log-unit gap seen for EDTA",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 372,
+            "end": 398,
+            "text": "is a classic illustration:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 399,
+            "end": 494,
+            "text": "the higher charge of Fe³⁺ dramatically enhances its affinity for the hexadentate O/N donor set.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 495,
+            "end": 560,
+            "text": "The few cases where the gap narrows tend to involve softer donors",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 561,
+            "end": 591,
+            "text": "(e.g., certain N-heterocycles)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 593,
+            "end": 703,
+            "text": "where Fe²⁺'s d⁶ low-spin crystal-field stabilization energy can partially offset the charge advantage of Fe³⁺.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 709,
+            "end": 720,
+            "text": "Fe³⁺ > Fe²⁺",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 740,
+            "end": 770,
+            "text": "has major real-world relevance",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 773,
+            "end": 812,
+            "text": "it underpins the design of siderophores",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 813,
+            "end": 840,
+            "text": "(biological Fe³⁺ chelators)",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 841,
+            "end": 898,
+            "text": "and the use of chelation therapy agents like deferoxamine",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 899,
+            "end": 938,
+            "text": "that selectively sequester ferric iron.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 940,
+            "end": 1047,
+            "text": "*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).*",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "HSAB/electrostatic rationale is general chemistry knowledge; not a value or row in the tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Fe^[3+] (charge 3) vs Fe^[2+] (charge 2) supports “more charge-dense”; “harder” is domain knowledge.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_61 | Fe^[3+] | Fe | 3 | ✓ | [Fe+3] | InChI=1S/Fe/q+3 | ..."
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_62 | Fe^[2+] | Fe | 2 | ✓ | [Fe+2] | InChI=1S/Fe/q+2 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Statement about stronger bonds to hard O/N donors follows HSAB principles; not a database row.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Listing of ligand classes (carboxylates, aminopolycarboxylates, hydroxyacids) is general chemistry context; not in tool rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No EDTA Fe3+/Fe2+ stability constants are present in the provided tool results to substantiate a ~11 log-unit gap.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Charge-enhanced affinity to hexadentate O/N donors is HSAB/electrostatics reasoning; not a database value.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Trend about gap narrowing with softer donors is chemical reasoning; not directly shown in the tool results provided.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "“Certain N-heterocycles” as softer donors is general knowledge; not evidenced by specific rows here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Reference to Fe2+ d6 low-spin CFSE is textbook ligand field theory; not a database measurement in these results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General stability ordering Fe3+ > Fe2+ with O/N donors is well-known; not demonstrated by constants in provided results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Siderophore design targeting Fe3+ is general biochemical knowledge; not in the tool rows shown.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Siderophores as biological Fe3+ chelators is established knowledge; not a value in the tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Mention of deferoxamine in therapy is contextual; not evidenced by the provided database rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Selective sequestration of ferric iron by such agents is domain knowledge; not shown in provided tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Tooling used is SRD-46: the step name ‘execute_srd46_sql’ indicates NIST SRD-46 queries were run in this session.",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "## execute_srd46_sql - 1 row(s)\n| overlap_count |\n|---------------|\n| 94 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "**Args:** {\"sql_query\": \"SELECT COUNT(*) AS overlap_count FROM (SELECT c.ligand_id FROM ligandmetal_card c ... )\"}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

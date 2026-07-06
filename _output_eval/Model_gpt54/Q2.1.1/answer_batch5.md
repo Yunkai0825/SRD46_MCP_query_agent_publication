@@ -1,0 +1,19 @@
+Fe³⁺ forms the more stable 1:1 complex with **EDTA** than with **NTA** in SRD-46.
+
+| Ligand | Ligand ID | log K for Fe³⁺ + L ⇌ FeL | T (°C) | I (M) | Notes |
+|---|---:|---:|---:|---:|---|
+| EDTA | ligand_6277 | 25.1 | 25 | 0.1 | `[ML]/[M][L]` |
+| NTA | ligand_6165 | 15.9 | 25 | 0.1 | `[ML]/[M][L]` |
+
+For completeness, SRD-46 also lists values at **I = 1.0 M**:
+
+| Ligand | log K | T (°C) | I (M) |
+|---|---:|---:|---:|
+| EDTA | 23.8 | 25 | 1.0 |
+| NTA | 14.78 | 25 | 1.0 |
+
+So, side by side at matched conditions (**25 °C, 0.1 M**), **EDTA binds Fe³⁺ much more strongly than NTA**. The difference is about **9.2 log units**, meaning the Fe³⁺–EDTA complex is enormously more stable under those conditions.
+
+*Source: NIST SRD-46, Fe³⁺ stability data for `[ML]/[M][L]` with EDTA (ligand_6277) and NTA (ligand_6165).*
+
+---

@@ -1,0 +1,812 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudesonnet46\\Q5.2.3\\Q5.2.3_result_batch4.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "## Stability Constants at 200 °C and 50 bar — Not Available in SRD-46\n\nAfter a thorough search of the NIST SRD-46 database, **no stability constants at 200 °C (473 K) or 50 bar pressure exist in this dataset.** Here's a summary of what was found:\n\n| Search Attempted | Result |\n|---|---|\n| Stability data at 195–205 °C | No records |\n| Stability data at 150–250 °C | No records |\n| Maximum temperature in the equilibrium map table | **81 °C** |\n| Records with temperature ≥ 100 °C | **0 records** |\n| Citation search for \"hydrothermal\", \"473 K\", \"200 °C\" | No relevant hits |\n| Pressure field in database | **Not indexed** |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 69,
+            "text": "## Stability Constants at 200 °C and 50 bar — Not Available in SRD-46",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 71,
+            "end": 123,
+            "text": "After a thorough search of the NIST SRD-46 database,",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 126,
+            "end": 208,
+            "text": "no stability constants at 200 °C (473 K) or 50 bar pressure exist in this dataset.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 211,
+            "end": 246,
+            "text": "Here's a summary of what was found:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 288,
+            "end": 333,
+            "text": "| Stability data at 195–205 °C | No records |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 334,
+            "end": 379,
+            "text": "| Stability data at 150–250 °C | No records |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 380,
+            "end": 444,
+            "text": "| Maximum temperature in the equilibrium map table | **81 °C** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 445,
+            "end": 498,
+            "text": "| Records with temperature ≥ 100 °C | **0 records** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 499,
+            "end": 575,
+            "text": "| Citation search for \"hydrothermal\", \"473 K\", \"200 °C\" | No relevant hits |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 576,
+            "end": 624,
+            "text": "| Pressure field in database | **Not indexed** |",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "max_temp | 81.0",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: SELECT MAX(condition_temp_max) as max_temp, MIN(condition_temp_min) as min_temp FROM eq_map"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "| max_temp | min_temp |\n|----------|----------|\n| 81.0 | -7.5 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "## search_stability\n\n*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "Args: {\"where\": \"(s.temperature_c >= 195 AND s.temperature_c <= 205)\", \"order_by\": \"s.temperature_c ASC\", \"limit\": 50}"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_citations",
+                "snippet": "Args: {\"where\": \"(la.citation LIKE '%200%C%' OR la.citation LIKE '%473 K%' OR la.citation LIKE '%hydrothermal%')\", \"limit\": 20}"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "Args: {\"sql_query\": \"SELECT MAX(condition_temp_max) as max_temp, MIN(condition_temp_min) as min_temp FROM eq_map\", \"attach_equilibrium\": true}"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "## search_stability\n\n*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "Args: {\"where\": \"(s.temperature_c >= 195 AND s.temperature_c <= 205)\", \"order_by\": \"s.temperature_c ASC\", \"limit\": 50}\n\n## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_stability",
+                "snippet": "Args: {\"where\": \"(s.temperature_c >= 150 AND s.temperature_c <= 250)\", \"order_by\": \"s.temperature_c ASC\", \"limit\": 50}\n\n## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| max_temp_eq | total_maps |\n|-------------|------------|\n| *** | 0 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "## search_stability\n\n*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "Args: {\"where\": \"(s.temperature_c >= 195 AND s.temperature_c <= 205)\", \"order_by\": \"s.temperature_c ASC\", \"limit\": 50}\n\n## search_stability\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "## search_stability\n\n*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "search_stability",
+                "snippet": "Args: {\"where\": \"(s.temperature_c >= 150 AND s.temperature_c <= 250)\", \"order_by\": \"s.temperature_c ASC\", \"limit\": 50}\n\n## search_stability\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "| max_temp | min_temp |\n|----------|----------|\n| 81.0 | -7.5 |",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: SELECT MAX(condition_temp_max) as max_temp, MIN(condition_temp_min) as min_temp FROM eq_map"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "| max_temp | min_temp |\n|----------|----------|\n| 81.0 | -7.5 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "| max_temp_eq | total_maps |\n|-------------|------------|\n| *** | 0 |",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: SELECT MAX(condition_temp_max) as max_temp_eq, COUNT(*) as total_maps FROM eq_map WHERE condition_temp_max >= 100"
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| max_temp_eq | total_maps |\n|-------------|------------|\n| *** | 0 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "## search_citations — 2 row(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_citations",
+                "snippet": "## search_citations — 2 row(s)\n| example_vlm_id | vlm_count | lit_id | shortcut | citation |\n| vlm_105337 | 143 | lit_5365 | 66S | J. Stary, JINR 2000, 1965; ... |\n| vlm_177333 | 5 | lit_5750 | 67OMa | ... 1967, 9, 200; ... |"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No schema/column listing for pressure was provided; cannot verify that a pressure field is not indexed.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT MAX(condition_temp_max) as max_temp, MIN(condition_temp_min) as min_temp FROM eq_map"
+              },
+              {
+                "step": "Step 3",
+                "tool": "get_table_schema",
+                "snippet": "Error - Table 'ligandmetal_stability_measured' not found. Available tables: ... eq_map, eq_map_collection, ..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "### Why This Gap Exists\n\nSRD-46 (NIST Critically Selected Stability Constants of Metal Complexes) is primarily a **room-temperature database**. The vast majority of its ~200,000+ measurements were made at or near **25 °C** in aqueous solution at atmospheric pressure. The database's temperature ceiling is only **81 °C**, and **pressure is not indexed at all** — most measurements are implicitly at 1 atm.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 23,
+            "text": "### Why This Gap Exists",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 25,
+            "end": 97,
+            "text": "SRD-46 (NIST Critically Selected Stability Constants of Metal Complexes)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 169,
+            "end": 191,
+            "text": "~200,000+ measurements",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 223,
+            "end": 242,
+            "text": "in aqueous solution",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 243,
+            "end": 266,
+            "text": "at atmospheric pressure",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 268,
+            "end": 320,
+            "text": "The database's temperature ceiling is only **81 °C**",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 326,
+            "end": 360,
+            "text": "**pressure is not indexed at all**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 363,
+            "end": 405,
+            "text": "most measurements are implicitly at 1 atm.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Provenance: this run uses the SRD‑46 SQL tool (execute_srd46_sql).",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "execute_srd46_sql - 1 row(s) | Args sql_query: SELECT MAX(condition_temp_max) as max_temp, MIN(condition_temp_min) as min_temp FROM eq_map"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No tool result provides a total measurement count; no aggregate near ~200,000 is shown.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "SRD‑46 primarily covers aqueous stability constants; solvent not shown in provided tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Typical measurements are at ambient/atmospheric pressure; pressure fields are not shown in provided outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "SELECT MAX(condition_temp_max)... FROM eq_map → max_temp = 81.0",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT MAX(condition_temp_max) as max_temp, MIN(condition_temp_min) as min_temp FROM eq_map → | max_temp | min_temp | 81.0 | -7.5 |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT MAX(condition_temp_max) as max_temp_eq, COUNT(*) as total_maps FROM eq_map WHERE condition_temp_max >= 100 → | max_temp_eq | total_maps | *** | 0 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No schema/column listing for pressure was provided; absence cannot be verified from the shown results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "With no pressure indexing and typical lab practice, measurements are generally at ~1 atm; not directly shown in tool results.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "### What You Would Need Instead\n\nFor stability constants at **200 °C / 50 bar** (hydrothermal conditions), you would need to consult:\n\n- **Hydrothermal geochemistry databases** (e.g., SUPCRT92, GEMS, or the LLNL thermodynamic database)\n- **Specific literature** on high-temperature aqueous speciation (e.g., work by Shock, Helgeson, or Sverjensky)\n- **Extrapolation models** such as the Helgeson–Kirkham–Flowers (HKF) equation of state, which can predict stability constants at elevated T and P from 25 °C reference values\n\n> **Note:** At 200 °C and 50 bar, water is still liquid (the saturation pressure of water at 200 °C is ~15.5 bar, so 50 bar keeps it liquid). This is a classic hydrothermal regime relevant to geothermal systems, nuclear reactor coolants, and ore deposit formation — but it is outside the scope of SRD-46.\n\n*Source: NIST SRD-46 database (queried directly)*",
+        "claims": [
+          {
+            "start": 0,
+            "end": 31,
+            "text": "### What You Would Need Instead",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 33,
+            "end": 133,
+            "text": "For stability constants at **200 °C / 50 bar** (hydrothermal conditions), you would need to consult:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 137,
+            "end": 176,
+            "text": "**Hydrothermal geochemistry databases**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 184,
+            "end": 234,
+            "text": "SUPCRT92, GEMS, or the LLNL thermodynamic database",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 238,
+            "end": 300,
+            "text": "**Specific literature** on high-temperature aqueous speciation",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 316,
+            "end": 346,
+            "text": "Shock, Helgeson, or Sverjensky",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 350,
+            "end": 374,
+            "text": "**Extrapolation models**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 387,
+            "end": 435,
+            "text": "Helgeson–Kirkham–Flowers (HKF) equation of state",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 437,
+            "end": 522,
+            "text": "which can predict stability constants at elevated T and P from 25 °C reference values",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 526,
+            "end": 535,
+            "text": "**Note:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 536,
+            "end": 579,
+            "text": "At 200 °C and 50 bar, water is still liquid",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 581,
+            "end": 636,
+            "text": "the saturation pressure of water at 200 °C is ~15.5 bar",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 641,
+            "end": 663,
+            "text": "50 bar keeps it liquid",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 666,
+            "end": 703,
+            "text": "This is a classic hydrothermal regime",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 716,
+            "end": 787,
+            "text": "geothermal systems, nuclear reactor coolants, and ore deposit formation",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 800,
+            "end": 827,
+            "text": "outside the scope of SRD-46",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 830,
+            "end": 879,
+            "text": "*Source: NIST SRD-46 database (queried directly)*",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "SUPCRT92, GEMS, LLNL are well-known hydrothermal databases; not represented in SRD-46 tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Shock, Helgeson, Sverjensky are established authors in high-T/P aqueous geochemistry; not in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "HKF EoS is a standard model in geochemical thermodynamics; not part of SRD-46 outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "HKF is widely used to extrapolate stability constants from 25 °C to high T/P; not in SRD-46 tool rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "At 200 °C, water’s saturation pressure is ~15.5 bar, so at 50 bar it remains liquid; outside SRD-46 scope.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Water saturation pressure at 200 °C ≈15.5 bar is standard steam-table knowledge; not from SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Since 50 bar > ~15.5 bar (Psat at 200 °C), water remains liquid; general thermodynamics knowledge.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "200 °C/50 bar as a hydrothermal regime is standard geochemical context; not a database-derived fact.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Applications listed (geothermal, reactor coolants, ore deposits) are general context; not in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Max mapped temperature in SRD-46 is 81 °C and no maps at ≥100 °C; no 200 °C data present.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT MAX(condition_temp_max) as max_temp, MIN(condition_temp_min) as min_temp FROM eq_map\n| max_temp | min_temp |\n| 81.0 | -7.5 |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT MAX(condition_temp_max) as max_temp_eq, COUNT(*) as total_maps FROM eq_map WHERE condition_temp_max >= 100\n| max_temp_eq | total_maps |\n| *** | 0 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_stability",
+                "snippet": "where: (s.temperature_c >= 150 AND s.temperature_c <= 250)\n## search_stability\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Tool queries to the SRD‑46 equilibrium dataset were executed in this run (e.g., execute_srd46_sql, search_stability).",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT MAX(condition_temp_max) as max_temp, MIN(condition_temp_min) as min_temp FROM eq_map"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "where: (s.temperature_c >= 195 AND s.temperature_c <= 205)\n## search_stability\n*(no results)*"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

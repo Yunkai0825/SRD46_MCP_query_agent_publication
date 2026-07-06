@@ -1,0 +1,47 @@
+## Best Amino Acid Ligand for Selective Cu²⁺ over Ni²⁺ Complexation at pH 7
+
+Using log β₁ values for the 1:1 **[ML]/[M][L]** species at **25 °C, I ≈ 0.1 M** from **NIST SRD-46**, I computed Δlog β = log β(Cu²⁺) − log β(Ni²⁺) for each amino acid. The selectivity ratio is 10^(Δlog β).
+
+| Amino Acid | log β (Cu²⁺) | log β (Ni²⁺) | Δlog β | Selectivity Ratio |
+|---|---|---|---|---|
+| **o-Tyrosine** | **13.0** | **8.95** | **4.05** | **≈ 11,200** |
+| Histidine | 10.12 | 8.65 | 1.47 | ≈ 30 |
+| Proline | 8.68 | 5.72 | 2.96 | ≈ 910 |
+| Glycine | 8.16 | 5.78 | 2.38 | ≈ 240 |
+| Alanine | 8.44 | 5.73 | 2.71 | ≈ 510 |
+| Asparagine | 8.25 | 5.71 | 2.54 | ≈ 350 |
+| Aspartic acid | 8.57 | 7.06 | 1.51 | ≈ 32 |
+| Glutamic acid | 8.09 | 5.89 | 2.20 | ≈ 160 |
+| Phenylalanine | 8.14 | 5.71 | 2.43 | ≈ 270 |
+| Tyrosine (p-) | 8.10 | 5.67 | 2.43 | ≈ 270 |
+| Tryptophan | 8.10 | 5.67 | 2.43 | ≈ 270 |
+| Serine | 8.06 | 5.65 | 2.41 | ≈ 260 |
+| Threonine | 7.99 | 5.55 | 2.44 | ≈ 275 |
+| Valine | 7.98 | 5.63 | 2.35 | ≈ 225 |
+| Leucine | 8.09 | 5.63 | 2.46 | ≈ 290 |
+| Isoleucine | 8.09 | 5.61 | 2.48 | ≈ 300 |
+| Glutamine | 7.97 | 5.52 | 2.45 | ≈ 280 |
+| Methionine | 7.68 | 5.23 | 2.45 | ≈ 280 |
+| Lysine | 7.47 | 5.30 | 2.17 | ≈ 150 |
+| Arginine | 7.50 | 5.08 | 2.42 | ≈ 265 |
+| m-Tyrosine | 8.28 | 5.81 | 2.47 | ≈ 295 |
+
+### Winner: **o-Tyrosine** (Δlog β ≈ 4.05, selectivity ≈ 11,200×)
+
+### Key Insights
+
+1. **o-Tyrosine is the clear standout** with a selectivity ratio exceeding 10,000. The ortho-hydroxyphenyl group creates a tridentate O,N,O⁻ chelate with Cu²⁺ that is extraordinarily stabilized by the Jahn-Teller-distorted d⁹ geometry of copper(II). The phenolate oxygen (pKa ≈ 11) is partially deprotonated upon coordination, and Cu²⁺ benefits far more from this extra donor than Ni²⁺ does. At pH 7, the phenol is still protonated in the free ligand but is pulled off by Cu²⁺ coordination, giving an enormous boost to the Cu²⁺ complex.
+
+2. **Histidine** is often cited as Cu²⁺-selective due to its imidazole nitrogen (pKa ≈ 6.05, largely deprotonated at pH 7), but its Δlog β of only ~1.5 gives a modest ~30-fold selectivity — far less than o-tyrosine. This is because the imidazole also coordinates Ni²⁺ quite well.
+
+3. **Simple aliphatic amino acids** (glycine, alanine, valine, etc.) all show Δlog β ≈ 2.3–2.7, reflecting the universal Irving-Williams order (Cu²⁺ > Ni²⁺) for bidentate N,O-chelation. Proline stands out among these (Δlog β ≈ 3.0) because its rigid pyrrolidine ring geometry favors the tetragonal Cu²⁺ coordination.
+
+4. **Cysteine** data was absent at these conditions in SRD-46, likely because Cu²⁺–cysteine systems involve redox chemistry (Cu²⁺ → Cu⁺ with disulfide formation), making simple stability constant comparisons unreliable.
+
+### Practical Recommendation
+
+If you need to selectively complex Cu²⁺ in the presence of Ni²⁺ at pH 7 using a natural amino acid, **L-histidine** is the most practical proteinogenic choice (selectivity ~30×, readily available, well-behaved in solution). However, if you can use the non-standard isomer **o-tyrosine**, you gain roughly **three orders of magnitude** better selectivity (~11,000×) thanks to the powerful tridentate chelation with the ortho-phenolate donor.
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes), 25 °C, I = 0.1 M.*
+
+---

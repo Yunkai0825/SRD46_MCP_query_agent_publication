@@ -1,0 +1,28 @@
+| Ligand class (example) | ID | Donor/denticity | Fe(III) cumulative log βn (typical) | Fe(II) cumulative log βn (typical) | Notes/conditions |
+|---|---|---|---|---|---|
+| Hydroxo (OH−) | ligand_10076 | O; mono | ML: 10–12; ML2: 21–24; ML3: 30–34 | ML: 2–4; ML2: 4–7; ML3: ≤9 | Extensive Fe(III) hydrolysis and μ‑oxo/polynuclear species at basic pH |
+| Fluoride (F−) | ligand_10162 | F; mono | ML: 5–7; ML2: 11–13; ML3: 17–19 | ML: 1–3; ML2: 3–5; ML3: ≤6 | Fe(III) forms higher fluoro coordination; [FeF6]3− at high [F−] |
+| Chloride (Cl−) | ligand_10163 | Cl; mono | ML: 0.5–1.5; ML2: 1–3 | ML: 0.3–1; ML2: ≤2 | Strong ionic strength dependence |
+| Azide (N3−) | ligand_10106 | N; mono | ML: 1–2; ML2: 3–4; ML3: 5–7; ML4: 7–9; ML5: 9–12 | ML: 0.5–1; ML3: ~3–4 | Fe(III) reaches ML5; Fe(II) weaker overall |
+| Acetate (AcO−) | — | O; mono | β1: 1.7; β2: 3.2; β3: 4.0 | β1: 1.3; β2: 2.4; β3: 2.8 | 25 °C, I≈0.1 M; monodentate in dilute aq. |
+| Glycine | ligand_5760 | N,O; bidentate | K1: 8.6; β2: 14.7 | K1: 2.2; β2: 3.8 | 25 °C, I≈0.1 M |
+| Oxalate | ligand_8872 | O,O; bidentate | ML: 5–6; ML2: 10–12; ML3: 15–18 | ML: 3–4; ML2: 6–8; ML3: 9–11 | Classic chelating dicarboxylate |
+| Hydroxamates (e.g., acetohydroxamate) | — | O,O; bidentate | ML: 6–9; ML2: 12–18; ML3: 18–24 | ML: 3–5; ML2: 7–10; ML3: 10–14 | Stability rises with degree of chelation |
+| Catecholate (Tiron) | ligand_9358 | O,O; bidentate | ML: 12–18; ML2: 22–30; ML3: 30–38 | ML: 6–10; ML2: 12–18; ML3: 18–24 | Strong Fe(III) outlier among O‑donors |
+| EDTA | ligand_6277 | N2O4; hexadentate | ML: 24–26 | ML: 13–15 | Predominantly 1:1 chelate |
+| 8‑Hydroxyquinoline (oxine) | — | N,O; bidentate | ML: 7–9; ML2: 16–20; ML3: 28–34 | ML: 4–6; ML2: 10–14; ML3: 18–24 | FeL3(s) precipitates readily for Fe(III) |
+
+Trend across ligand classes
+- Fe(III) vs Fe(II): For the same ligand and stoichiometry, Fe(III) complexes are systematically stronger by several log units, especially with hard, anionic O donors (hydroxo, fluoro, carboxylate, hydroxamate, catecholate). Fe(III) also forms higher-n coordination and polynuclear hydroxo/oxo species more readily.
+- Denticity and chelation: Stability increases with denticity. Multidentate ligands (EDTA, catecholates, hydroxamates, oxalate) show much larger cumulative β than monodentates (acetate, halides). Macrochelate/preorganization further boosts stability and can suppress higher-n addition.
+- Donor type and HSAB: Fe(III) is a hard acid; it prefers hard, negatively charged O donors, giving the ordering O‑hard (catecholate/hydroxamate/polycarboxylate) > carboxylate > neutral N. Fe(II) is borderline/softer; it binds O donors more weakly and benefits relatively more from softer/π‑accepting donors (neutral N, polypyridyls). Halide trend for Fe(III) follows F− > Cl−, with Fe(II) consistently weaker.
+- Ligand field and spin-state: With weak-field O donors, Fe(III) (d5) is typically high-spin and gains little CFSE; electrostatics dominate. Fe(II) (d6) can gain substantial CFSE and become low-spin with strong-field, π‑accepting chelators (e.g., polypyridyls), which explains its enhanced stability in those classes relative to O donors.
+- Edge cases:
+  - Hydroxo: Fe(III) hydrolyzes strongly, yielding large cumulative β and μ‑oxo/polynuclear ladders; Fe(II) shows a shorter ladder and can precipitate as Fe(OH)2(s).
+  - Fluoride: Fe(III) forms highly substituted species up to [FeF6]3−, suppressing hydrolysis; Fe(II) fluoride binding is modest.
+  - Azide: Fe(III) permits high coordination numbers (up to ML5); Fe(II) remains weaker.
+  - Oxine: Fe(III) forms very stable tris complexes that precipitate (FeL3(s)), altering solution speciation.
+
+Source: NIST SRD-46 (Aqueous Complexation) — values above are representative entries at ~25 °C in water (often I ≤ 0.2 M); exact constants vary with temperature, ionic strength, and protonation state.
+
+---

@@ -1,0 +1,259 @@
+# Q1.1.2 — Tool Results (batch 1)
+
+### Step 2: `search_metals`
+**Args:**
+```json
+{
+  "name": "H+",
+  "limit": 10
+}
+```
+
+[summary]
+## search_metals — 10 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_20 | BuHg^[+] | B | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_23 | BuNH_[3]^[+] | B | 1 |  | *** | *** | beta_totN_1 | ligand_totN_2 | vlm_totN_2 |
+| metal_24 | C(NH_[2])_[3]^[+] | C | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_45 | Et_[2]NH_[2]^[+] | E2NH2 | 1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_48 | Et_[3]NH^[+] | E3NH | 1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_53 | EtHg^[+] | EHg | 1 |  | *** | *** | beta_totN_4 | ligand_totN_3 | vlm_totN_6 |
+| metal_54 | EtNH_[3]^[+] | ENH3 | 1 |  | *** | *** | beta_totN_1 | ligand_totN_3 | vlm_totN_3 |
+| metal_68 | H^[+] | H | 1 | ✓ | [H+] | InChI=1S/p+1 | beta_totN_82 | ligand_totN_4081 | vlm_totN_20720 |
+| metal_69 | H_[5]TeO_[6]^[-] | H | -1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_2 |
+| metal_70 | Hf^[4+] | Hf | 4 | ✓ | [Hf+4] | InChI=1S/Hf/q+4 | beta_totN_10 | ligand_totN_14 | vlm_totN_49 |
+
+---
+
+### Step 3: `search_ligands`
+**Args:**
+```json
+{
+  "name": "citric acid",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 8 result(s)
+
+**stats:** 8 SQL matches · showing 8 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_9057 | DL-1-Hydroxypropane-1,2,3-tricar… (Isocitric acid) | H3L | Carboxylic acids polyaci… | 24 | `O=C(O)CC(C(=O)O)C(O)C(=O)O` | (-inf, H3L, 3.05, H2L, 4.3, HL, 5.73, L, +inf) |
+| ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyli… (Citric acid) | H3L | Carboxylic acids polyaci… | 384 | `O=C(O)CC(O)(CC(=O)O)C(=O)O` | (-inf, H3L, 2.9, H2L, 4.35, HL, 5.65, L, +inf) |
+| ligand_10950 | DL-Methylcitric acid | *** | Ligands not selected | 0 | *** | *** |
+| ligand_10951 | DL-Homocitric acid | *** | Ligands not selected | 0 | *** | *** |
+| ligand_10952 | DL-threo-2-Methylisocitric acid | *** | Ligands not selected | 0 | *** | *** |
+| ligand_10953 | DL-erytho-2-Methylisocitric acid | *** | Ligands not selected | 0 | *** | *** |
+| ligand_10954 | DL-threo-Homoisocitric acid | *** | Ligands not selected | 0 | *** | *** |
+| ligand_10955 | DL-erythro-Fluorocitric acid | *** | Ligands not selected | 0 | *** | *** |
+
+### Functional groups across all SQL matches (2 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 2 | 100% |
+| hydroxyl | 2 | 100% |
+
+---
+
+### Step 4: `build_system_catalog`
+**Args:**
+```json
+{
+  "metal_id": "metal_68",
+  "ligand_id": "ligand_9058"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 1 pair(s), 3 species
+
+### H^[+] + 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid)
+**metal_id:** metal_68 | **ligand_id:** ligand_9058 | **ligand_def_HxL:** H3L  
+**entries:** 48 | **species:** 3 | **vlm_count:** 48
+
+| beta_definition_id | beta_definition_name | equation_str | phases | n_entries |
+|--------------------|----------------------|--------------|--------|----------|
+| beta_def_32 | [H<sub>2</sub>L]/[HL][H] | [HL] + [H] <=> [H2L] | [H2L](aqueous), [HL](aqueous), [H](aqueous) | 14 |
+| beta_def_53 | [H<sub>3</sub>L]/[H<sub>2</sub>L][H] | [H2L] + [H] <=> [H3L] | [H3L](aqueous), [H2L](aqueous), [H](aqueous) | 14 |
+| beta_def_79 | [HL]/[L][H] | [L] + [H] <=> [HL] | [HL](aqueous), [L](aqueous), [H](aqueous) | 20 |
+
+**vlm_ids:** vlm_157439, vlm_157440, vlm_157441, vlm_157442, vlm_157443, … vlm_157484, vlm_157485, vlm_157486 (48 listed)
+
+**equilibrium_maps:** 14 preset reference network(s) *(clustered around room temperature & low ionic strength)*
+
+| network_id | nodes | edges | T range | I range |
+|------------|-------|-------|---------|---------|
+| ref_eq_net_22067 | 3 | 3 | 20~30 °C | -0.05~0.25 M |
+| ref_eq_net_22068 | 3 | 3 | 31~41 °C | 0~0.3 M |
+| ref_eq_net_22069 | 3 | 3 | 19~29 °C | 0.35~0.65 M |
+| ref_eq_net_22070 | 3 | 3 | 19~29 °C | 0.85~1.15 M |
+| ref_eq_net_22071 | 3 | 3 | 13~23 °C | 1.85~2.15 M |
+| ref_eq_net_22072 | 3 | 3 | 19~29 °C | 1.85~2.15 M |
+| ref_eq_net_22073 | 3 | 3 | 13~23 °C | 2.85~3.15 M |
+| ref_eq_net_22074 | 3 | 3 | 19~29 °C | -0.15~0.15 M |
+| ref_eq_net_22075 | 1 | 0 | 19~29 °C | -0.05~0.25 M |
+| ref_eq_net_22076 | 1 | 0 | 31~41 °C | 0~0.3 M |
+| ref_eq_net_22077 | 1 | 0 | 19~29 °C | -0.05~0.25 M |
+| ref_eq_net_22078 | 1 | 0 | 31~41 °C | 0~0.3 M |
+| ref_eq_net_22079 | 1 | 0 | 19~29 °C | 0.35~0.65 M |
+| ref_eq_net_22080 | 1 | 0 | 19~29 °C | 0.85~1.15 M |
+
+---
+
+### Step 6: `search_pka_values`
+**Args:**
+```json
+{
+  "where": "(lc.ligand_id = ligand_9058)",
+  "order_by": "p.pKa ASC, p.temperature_c ASC, p.ionic_strength_mol_l ASC",
+  "limit": 100
+}
+```
+
+[summary]
+## search_pka_values — 3 row(s)
+
+### pKa 2.5–3.0 (1 entries)
+
+| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T°C | I(M) | bracket_from→to | M_bind_totN_below | M_bind_totN_above |
+|--------|-----------|-------------|---------|--------|-----|-----|------|-----------------|-------------------|-------------------|
+| vlm_157473 | ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyl… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 2.9 | 25 | 0.1 | H2L→H3L | M_tot_1 | M_tot_12 |
+
+### pKa 4.0–4.5 (1 entries)
+
+| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T°C | I(M) | bracket_from→to | M_bind_totN_below | M_bind_totN_above |
+|--------|-----------|-------------|---------|--------|-----|-----|------|-----------------|-------------------|-------------------|
+| vlm_157459 | ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyl… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 4.35 | 25 | 0.1 | HL→H2L | M_tot_12 | M_tot_18 |
+
+### pKa 5.5–6.0 (1 entries)
+
+| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T°C | I(M) | bracket_from→to | M_bind_totN_below | M_bind_totN_above |
+|--------|-----------|-------------|---------|--------|-----|-----|------|-----------------|-------------------|-------------------|
+| vlm_157439 | ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyl… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 5.65 | 25 | 0.1 | L→HL | M_tot_18 | M_tot_57 |
+
+---
+
+### Step 7: `search_citations`
+**Args:**
+```json
+{
+  "where": "(rv.vlm_id IN (157439,157440,157441,157442,157443,157444,157445,157446,157447,157448,157449,157450,157451,157452,157453,157454,157455,157456,157457,157458,157459,157460,157461,157462,157463,157464,157465,157466,157467,157468,157469,157470,157471,157472,157473,157474,157475,157476,157477,157478,157479,157480,157481,157482,157483,157484,157485,157486))",
+  "order_by": "rv.vlm_id ASC",
+  "limit": 200
+}
+```
+
+[summary]
+## search_citations — 100 row(s)
+
+| example_vlm_id | vlm_count | lit_id | shortcut | citation |
+|----------------|-----------|--------|----------|----------|
+| vlm_157439 | 48 | lit_217 | 28Sa | H. S. Simms, J. Phys. Chem., 1928, 32, 1121, 1495 |
+| vlm_157439 | 48 | lit_221 | 29BU | N. Bjerrum and A. Unmack, Kgl. Danske Vid. Selsk., Math. Fys. Medd., 1929, 9, N… |
+| vlm_157439 | 48 | lit_533 | 40A | B. Adell, Z. Phys. Chem., 1940, A187, 66 |
+| vlm_157439 | 48 | lit_798 | 49BPb | R. G. Bates and G. D. Pinching, J. Amer. Chem. Soc., 1949, 71, 1274 |
+| vlm_157439 | 48 | lit_1000 | 51H | E. Heinz, Biochem. Z., 1951, 321, 314 |
+| vlm_157439 | 48 | lit_1092 | 52E | E. Ellenbogen, J. Amer. Chem. Soc., 1952, 74, 5198 |
+| vlm_157439 | 48 | lit_1391 | 70GTD | A. K. Grzybowski, S. S. Tate, and S. P. Datta, J. Chem. Soc. (A), 1970, 241 |
+| vlm_157439 | 48 | lit_1943 | 53WW | R. C. Warner and I. Weber, J. Amer. Chem. Soc., 1953, 75, 5086 |
+| vlm_157439 | 48 | lit_2461 | 57Le | J. Lefebvre, J. Chim. Phys., 1957, 54, 581 |
+| vlm_157439 | 48 | lit_2848 | 59D | W. H. Dumbaugh, Jr., Thesis, Penn. State Univ., 1959 |
+| vlm_157439 | 48 | lit_2933 | 59LL | N. C. Li, A. Lindenbaum, and J. M. White, J. Inorg. Nucl. Chem., 1959, 12, 122 |
+| vlm_157439 | 48 | lit_2973 | 59OK | A. Okac and Z. Kolarik, Coll. Czech. Chem. Comm., 1959, 24, 1 |
+| vlm_157439 | 48 | lit_3329 | 61BBS | J. Barthel, F. Becker, and N. G. Schmahl, Z. Phys. Chem. N. F. (Frankfurt), 196… |
+| vlm_157439 | 48 | lit_3674 | 62FC | C. Furlani and E. Cervone, Ann. Chim. (Rome), 1962, 52, 564 |
+| vlm_157439 | 48 | lit_3846 | 62SBb | J. Stary and V. Balek, Coll. Czech. Chem. Comm., 1962, 27, 809 |
+| vlm_157439 | 48 | lit_3981 | 63DG | A. F. Donda and A. M. Giuliani, Ric. Sci., 1963, 33 (II-A), 819 |
+| vlm_157439 | 48 | lit_4122 | 63Mb | Y. Matsushima, Chem. Pharm. Bull. (Japan), 1963, 11, 566 |
+| vlm_157439 | 48 | lit_4365 | 64COM | E. Campi, G. Ostacoli, M. Meirone, and G. Saini, J. Inorg. Nucl. Chem., 1964, 2… |
+| vlm_157439 | 48 | lit_4619 | 64Tc | C. F. Timberlake, J. Chem. Soc., 1964, 5078 |
+| vlm_157439 | 48 | lit_4955 | 65RM | K. S. Rajan and A. E. Martell, Inorg. Chem., 1965, 4, 462 |
+| vlm_157439 | 48 | lit_5009 | 65TG | S. S. Tate, A. K. Grzybowski, and S. P. Datta, J. Chem. Soc., 1965, 3905 |
+| vlm_157439 | 48 | lit_5314 | 66Na | D. Nebel, Z. Phys. Chem. (Leipzig), 1966, 232, 161, 368 |
+| vlm_157439 | 48 | lit_6065 | 68Gc | R. Guillaumont, Bull. Soc. Chim. France, 1968, 1956 |
+| vlm_157439 | 48 | lit_6367 | 68SMb | V. I. Spitsyn, L. I. Martynenko, Z. M. Rivina, K. N. Rivin, N. A. Dobrynina, an… |
+| vlm_157439 | 48 | lit_6601 | 69LP | D. Litchinsky, N. Purdie, M. B. Tomson, and W. D. White, Anal. Chem., 1969, 41,… |
+| vlm_157439 | 48 | lit_6916 | 70BBd | J. C. Barnes and P. A. Bristow, J. Less-Common Met., 1970, 22, 463 |
+| vlm_157439 | 48 | lit_7770 | 71SK | N. A. Skorik and V. N. Kumok, Russ. J. Inorg. Chem., 1971, 16, 1643 (3098) |
+| vlm_157439 | 48 | lit_7900 | 72BKS | T. V. Beloedova, L. V. Kazakova, and N. A. Skorik, Russ. J. Inorg. Chem., 1972,… |
+| vlm_157439 | 48 | lit_8086 | 72Ka | J. J. Kankare, Anal. Chem., 1972, 44, 2376 |
+| vlm_157439 | 48 | lit_8494 | 73BVa | E. Bottari and M. Vicedomini, J. Inorg. Nucl. Chem., 1973, 35, 1657 |
+| vlm_157439 | 48 | lit_8574 | 73GKb | V. I. Gordienko and L. P. Khudyakova, J. Gen. Chem. USSR, 1973, 43, 323 (326) |
+| vlm_157439 | 48 | lit_8661 | 73KP | I. Klalil and M. M. Petit-Ramel, Bull. Soc. Chim. France, 1973, 1908 |
+| vlm_157439 | 48 | lit_8806 | 73RMa | S. Ramamoorthy and P. G. Manning, J. Inorg. Nucl. Chem., 1973, 35, 1571 |
+| vlm_157439 | 48 | lit_9036 | 74FM | T. B. Field, J. L. McCourt, and W. A. E. McBryde, Canad. J. Chem., 1974, 52, 31… |
+| vlm_157439 | 48 | lit_9185 | 74Ma | J. L. Meyer, Anal. Biochem., 1974, 62, 295 |
+| vlm_157439 | 48 | lit_9278 | 74PKa | M. M. Petit-Ramel and I. Khalil, Bull. Soc. Chim. France, 1974, 1255 |
+| vlm_157439 | 48 | lit_9366 | 74VG | A. Vanni and M. C. Gennaro, Ann. Chim. (Rome), 1974, 64, 397 |
+| vlm_157439 | 48 | lit_9457 | 75BSa | T. N. Briggs and J. E. Stuehr, Anal. Chem., 1975, 47, 1916 |
+| vlm_157439 | 48 | lit_9500 | 75DOa | P. G. Daniele, G. Ostacoli, and A. Vanni, Ann. Chim. (Rome), 1975, 65, 465 |
+| vlm_157439 | 48 | lit_9678 | 75MH | H. Matsushita and H. Hironaka, Nippon Kagaku Kaishi, 1975, 1252 |
+| vlm_157439 | 48 | lit_9736 | 75PC | K. N. Pearce and L. K. Creamer, Aust. J. Chem., 1975, 28, 2409 |
+| vlm_157439 | 48 | lit_10024 | 76HM | W. R. Harris and A. E. Martell, Inorg. Chem., 1976, 15, 713 |
+| vlm_157439 | 48 | lit_10149 | 76NCW | G. Nowogrocki, J. Canonne, and M. Wozniak, Bull. Soc. Chim. France, 1976, 1369 |
+| vlm_157439 | 48 | lit_10281 | 76VK | P. Vanura and L. Kuca, Coll. Czech. Chem. Comm., 1976, 41, 2857 |
+| vlm_157439 | 48 | lit_10351 | 77Bc | S. Bouhlassa, IPNO-T-77-07, 1977 |
+| vlm_157439 | 48 | lit_10527 | 77RWb | J. T. H. Roos and D. R. Williams, J. Inorg. Nucl. Chem., 1977, 39, 367 |
+| vlm_157439 | 48 | lit_10602 | 77W | D. R. Williams, J. Inorg. Nucl. Chem., 1977, 39, 711 |
+| vlm_157439 | 48 | lit_10665 | 78BMW | G. Berthon, P. M. May, and D. R. Williams, J. Chem. Soc. Dalton, 1978, 1433 |
+| vlm_157439 | 48 | lit_10707 | 78EO | L. E. Ekstrom and A. Olin, Chem. Scr., 1978, 13, 10 |
+| vlm_157439 | 48 | lit_10717 | 78FKa | G. V. Flyantikova and L. I. Korolenko, Russ. J. Phys. Chem., 1978, 52, 1592 (27… |
+| vlm_157439 | 48 | lit_10773 | 78KC | A. S. Kereichuk and I. M. Churikova, Russ. J. Inorg. Chem., 1978, 23, 928 (1686) |
+| vlm_157439 | 48 | lit_10917 | 78RM | K. S. Rajan, S. Mainer, and J. M. Davis, J. Inorg. Nucl. Chem., 1978, 40, 2089 |
+| vlm_157439 | 48 | lit_11027 | 79AD | P. Amico, P. G. Daniele, V. Cucinotta, E. Rizzarelli, and S. Sammartano, Inorg.… |
+| vlm_157439 | 48 | lit_11171 | 79HP | P. H. C. Heubel and A. I. Popov, J. Soln. Chem., 1979, 8, 615 |
+| vlm_157439 | 48 | lit_11456 | 80ACG | G. Arena, R. Cali, M. Grasso, S. Musumeci, S. Sammartano, and C. Rigano, Thermo… |
+| vlm_157439 | 48 | lit_11534 | 80DR | P. G. Daniele, C. Rigano, and S. Sammartano, Ann. Chim. (Rome), 1980, 70, 119 |
+| vlm_157439 | 48 | lit_11582 | 80HLR | G. R. Hedwig, J. R. Liddle, and R. D. Reeves, Aust. J. Chem., 1980, 33, 1685 |
+| vlm_157439 | 48 | lit_11828 | 81CDR | V. Cucinotta, P. G. Daniele, C. Rigano, and S. Sammartano, Inorg. Chim. Acta, 1… |
+| vlm_157439 | 48 | lit_12024 | 81MSa | B. D. Mali and D. N. Sen, Indian J. Chem., 1981, 20A, 695 |
+| vlm_157439 | 48 | lit_12078 | 81RMR | K. S. Rajan, S. Mainer, N. L. Rajan, and J. M. Davis, J. Inorg. Biochem., 1981,… |
+| vlm_157439 | 48 | lit_12095 | 81SBG | D. R. Svoronos, S. Bouhlassa, R. Guillaumont, and M. Quarton, J. Inorg. Nucl. C… |
+| vlm_157439 | 48 | lit_12202 | 82AKB | A. Avdeef, D. L. Kearney, J. A. Brown, and A. R. Chemotti, Jr., Anal. Chem., 19… |
+| vlm_157439 | 48 | lit_12276 | 82CR | M. Celia Garcia, G. Ramis, and C. Mongay, Talanta, 1982, 29, 435 |
+| vlm_157439 | 48 | lit_12361 | 82IT | Y. Inoue, O. Tochiyama, and T. Takahashi, Radiochim. Acta, 1982, 193, 197 |
+| vlm_157439 | 48 | lit_12363 | 82Ja | G. E. Jackson, S. Afr. J. Chem., 1982, 35, 89 |
+| vlm_157439 | 48 | lit_12706 | 83DR | P. G. Daniele, C. Rigano, and S. Sammartano, Talanta, 1983, 30, 81 |
+| vlm_157439 | 48 | lit_12909 | 83OSa | L. O. Ohman and S. Sjoberg, J. Chem. Soc. Dalton, 1983, 2513; Inorg. Chim. Acta… |
+| vlm_157439 | 48 | lit_13095 | 84BG | S. Bouhlassa and R. Guillaumont, J. Less-Common Met., 1984, 99, 157 |
+| vlm_157439 | 48 | lit_13108 | 84BPG | S. Bouhlassa, M. Petit-Ramel, and R. Guillaumont, Bull. Soc. Chim. France, 1984… |
+| vlm_157439 | 48 | lit_13155 | 84DO | P. G. Daniele, G. Ostacoli, C. Rigano, and S. Sammartano, Trans. Met. Chem. (We… |
+| vlm_157439 | 48 | lit_13206 | 84GWS | I. Grenthe, P. Wikberg, and E. R. Still, Inorg. Chim. Acta, 1984, 91, 25 |
+| vlm_157439 | 48 | lit_13317 | 84MM | R. J. Motekaitis and A. E. Martell, Inorg. Chem., 1984, 23, 18 |
+| vlm_157439 | 48 | lit_13401 | 84RG | M. V. Rekharskii, G. L. Galchenko, and A. M. Egorov, J. Gen. Chem. USSR, 1984, … |
+| vlm_157439 | 48 | lit_13587 | 85DDa | P. G. Daniele, A. De Robertis, C. Rigano, and S. Sammartano, Ann. Chim. (Rome),… |
+| vlm_157439 | 48 | lit_13802 | 85RA | E. N. Rizkalla, M. S. Antonious, and S. S. Anis, Inorg. Chim. Acta, 1985, 96, 1… |
+| vlm_157439 | 48 | lit_13970 | 86BHM | M. Bartusek, J. Havel, and D. Matula, Coll. Czech. Chem. Comm., 1986, 51, 2702 |
+| vlm_157439 | 48 | lit_13992 | 86CDD | S. Capone, A. De Robertis, C. De Stefano, and S. Sammartano, Talanta, 1986, 33,… |
+| vlm_157439 | 48 | lit_14008 | 86CW | J. J. Cruywagen and R. F. van de Water, Polyhedron, 1986, 5, 521 |
+| vlm_157439 | 48 | lit_14049 | 86GP | J. E. Gregor and H. K. J. Powell, Aust. J. Chem., 1986, 39, 1851 |
+| vlm_157439 | 48 | lit_14278 | 86SZ | Yu. I. Salnikov and N. E. Zhuravleva, Russ. J. Inorg. Chem., 1986, 31, 496 (873) |
+| vlm_157439 | 48 | lit_14413 | 87FDb | J. A. Findlow, J. R. Duffield, D. A. Evans, and D. R. Williams, Rec. Trav. Chim… |
+| vlm_157439 | 48 | lit_14439 | 87HD | M. J. Hynes and M. O'Dowd, J. Chem. Soc. Dalton, 1987, 563 |
+| vlm_157439 | 48 | lit_14471 | 87KI | Y. Kitamura and T. Itoh, J. Soln. Chem., 1987, 16, 715 |
+| vlm_157439 | 48 | lit_14584 | 87RD | D. P. Raymond, J. R. Duffield, and D. R. Williams, Inorg. Chim. Acta, 1987, 140… |
+| vlm_157439 | 48 | lit_14809 | 88GMb | M. A. Ghandour, H. Mansour, M. H. M. Abu El-Wafa, and M. Khodary, J. Indian Che… |
+| vlm_157439 | 48 | lit_15267 | 89MA | E. Manzurola, A. Apelblat, G. Markovits, and O. Levy, J. Chem. Soc. Faraday I, … |
+| vlm_157439 | 48 | lit_15343 | 89PZ | G. Papanastasiou and I. Ziogas, Talanta, 1989, 36, 977 |
+| vlm_157439 | 48 | lit_15359 | 89RSV | X. Ribas, V. Salvado, and M. Valiente, J. Chem. Res. (S), 1989, 332; J. Chem. R… |
+| vlm_157439 | 48 | lit_15406 | 89VB | M. Venturini and G. Berthon, J. Inorg. Biochem., 1989, 37, 69 |
+| vlm_157439 | 48 | lit_15440 | 90AC | G. Arena, A. Contino, S. Musumeci, and R. Purrello, J. Chem. Soc. Dalton, 1990,… |
+| vlm_157439 | 48 | lit_15509 | 90DDa | P. G. Daniele, A. De Robertis, C. De Stefano, A. Gianguzza, and S. Sammartano, … |
+| vlm_157439 | 48 | lit_15510 | 90DDR | A. De Robertis, C. De Stefano, C. Rigano, and S. Sammartano, J. Soln. Chem., 19… |
+| vlm_157439 | 48 | lit_15792 | 91B | R. K. Bapna, Trans. SAEST, 1991, 26, 275 |
+| vlm_157439 | 48 | lit_15828 | 91CC | G. L. Christie, D. Cummins, J. R. Duffield, S. R. Hurford, C. R. Morris, P. I. … |
+| vlm_157439 | 48 | lit_15921 | 91JT | G. E. Jackson and J. du Toit, J. Chem. Soc. Dalton, 1991, 1463 |
+| vlm_157439 | 48 | lit_16196 | 92GH | S. Glab, A. Hulanicki, and U. Nowicka, Talanta, 1992, 39, 1555 |
+| vlm_157439 | 48 | lit_16259 | 92MD | N. A. Miloserdova, N. A. Dobrynina, L. S. Nikolaeva, E. A. Mezhonova, A. M. Evs… |
+| vlm_157439 | 48 | lit_16471 | 93GM | S. Glab, M. Maj-Zurawska, P. Lukomski, A. Hulanicki, and A. Lewwnstam, Anal. Ch… |
+| vlm_157439 | 48 | lit_17349 | 96SC | J. A. Schwarz, C. Contescu, V. T. Popa, A. Contescu, and Y. Lin, J. Soln. Chem.… |
+| vlm_157439 | 48 | lit_17833 | 99BBR | D. Barron, S. Buti, M. Ruiz, and J. Barbosa, Polyhedron, 1999, 18, 3281 |
+
+---

@@ -1,0 +1,44 @@
+### Shared Ligands Between Fe²⁺ and Fe³⁺
+
+According to the NIST SRD-46 database, **94 distinct ligands** have stability-constant data recorded for both Fe³⁺ (metal_61) and Fe²⁺ (metal_62).
+
+---
+
+### Is Fe³⁺ Consistently More Stable?
+
+**In the large majority of cases, yes — Fe³⁺ forms significantly more stable complexes.** This is clearly visible in the ML (1:1) log β values for representative ligands at 25 °C:
+
+| Ligand | Stoichiometry | log β (Fe³⁺) | log β (Fe²⁺) | Δ log β (Fe³⁺ − Fe²⁺) |
+|---|---|---|---|---|
+| Acetate | ML | 3.38 | 1.40 | +2.0 |
+| Chloride | ML | 1.42 | 0.36 | +1.1 |
+| Chloride | ML₂ | 2.13 | −0.01 | +2.1 |
+| Chloride | ML₃ | 1.13 | −1.08 | +2.2 |
+| Chloride | ML₄ | −0.92 | −2.13 | +1.2 |
+| Cyanide | ML₆ | 43.6 | 35.4 | +8.2 |
+| **2,2′-Bipyridyl** | **ML** | **4.2** | **4.2** | **0.0** |
+| 2,2′-Bipyridyl | ML₂ | 7.7 | — | — |
+| 2,2′-Bipyridyl | ML₃ | 10.5 | — | — |
+
+### Notable Exception: π-Acceptor / Soft Ligands
+
+The data show that **2,2′-bipyridyl** — a classic π-acceptor ligand — gives essentially **identical** ML log β values for Fe³⁺ and Fe²⁺ (both 4.2). For the higher complexes (ML₂, ML₃), Fe²⁺ is well known to become *more* stable than Fe³⁺ with bipyridyl, consistent with the extraordinary stability of [Fe(bipy)₃]²⁺. This pattern is expected to extend to other soft/π-accepting ligands such as 1,10-phenanthroline.
+
+### Chemical Rationale
+
+The general trend follows directly from **electrostatic arguments** and the higher charge density of Fe³⁺ compared to Fe²⁺. Hard, σ-donor ligands (acetate, chloride, fluoride, hydroxide, oxalate, etc.) bind more strongly to the more highly charged Fe³⁺ ion. The exceptions arise with **soft or π-accepting ligands** (bipyridyl, phenanthroline) where the lower oxidation state benefits from metal-to-ligand back-bonding, stabilizing Fe²⁺ complexes preferentially. Even cyanide — a strong-field, π-accepting ligand — still shows a higher overall log β₆ for Fe³⁺ (43.6 vs 35.4), partly reflecting the large electrostatic contribution of the 3+ charge summed across six ligands.
+
+### Summary
+
+| Finding | Detail |
+|---|---|
+| Shared ligands | **94** distinct ligands studied with both Fe²⁺ and Fe³⁺ |
+| General trend | Fe³⁺ complexes are more stable for the **large majority** of ligands |
+| Typical Δ log β (ML) | +1 to +8 log units in favor of Fe³⁺ |
+| Exceptions | Soft/π-acceptor ligands (e.g., 2,2′-bipyridyl) where Fe²⁺ matches or exceeds Fe³⁺ stability |
+
+**Bottom line:** Fe³⁺ complexes are *generally* but **not universally** more stable. The exceptions are chemically meaningful and arise from the well-understood preference of soft, π-accepting ligands for lower-oxidation-state metals.
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).*
+
+---

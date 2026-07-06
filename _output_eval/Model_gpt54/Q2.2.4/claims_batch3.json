@@ -1,0 +1,493 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q2.2.4\\Q2.2.4_result_batch3.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "SRD-46 contains **59 distinct nonblank ligand classes**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 56,
+            "text": "SRD-46 contains **59 distinct nonblank ligand classes**.",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "distinct_ligand_classes | 59  (COUNT DISTINCT TRIM(ligand_class_name) where name IS NOT NULL and <> '')",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: SELECT COUNT(DISTINCT TRIM(ligand_class_name)) AS distinct_ligand_classes FROM ligand_card WHERE ligand_class_name IS NOT NULL AND TRIM(ligand_class_name) <> '';"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "| distinct_ligand_classes |\n|-------------------------|\n| 59 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Rank | Ligand class | Ligand count | Share of 5750 ligands |\n|---|---|---:|---:|\n| 1 | Ligands not selected | 1339 | 23.29% |\n| 2 | Amino Acids | 297 | 5.17% |\n| 3 | Aliphatic amines | 250 | 4.35% |\n| 4 | Pyridines (azines) | 248 | 4.31% |\n| 5 | Carboxylic acids | 182 | 3.17% |",
+        "claims": [
+          {
+            "start": 83,
+            "end": 127,
+            "text": "| 1 | Ligands not selected | 1339 | 23.29% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 128,
+            "end": 161,
+            "text": "| 2 | Amino Acids | 297 | 5.17% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 162,
+            "end": 200,
+            "text": "| 3 | Aliphatic amines | 250 | 4.35% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 201,
+            "end": 241,
+            "text": "| 4 | Pyridines (azines) | 248 | 4.31% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 242,
+            "end": 280,
+            "text": "| 5 | Carboxylic acids | 182 | 3.17% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| Ligands not selected | 1339 | 23.29% |",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_distribution",
+                "snippet": "| Ligands not selected | 1339 | 23.29% |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "db_distribution",
+                "snippet": "**total_rows:** 5750"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| Amino Acids | 297 | 5.17% |",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_distribution",
+                "snippet": "| Amino Acids | 297 | 5.17% |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "db_distribution",
+                "snippet": "**total_rows:** 5750"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| Aliphatic amines | 250 | 4.35% |",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_distribution",
+                "snippet": "| Aliphatic amines | 250 | 4.35% |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "db_distribution",
+                "snippet": "**total_rows:** 5750"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| Pyridines (azines) | 248 | 4.31% |",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_distribution",
+                "snippet": "| Pyridines (azines) | 248 | 4.31% |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "db_distribution",
+                "snippet": "**total_rows:** 5750"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| Carboxylic acids | 182 | 3.17% |",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_distribution",
+                "snippet": "| Carboxylic acids | 182 | 3.17% |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "db_distribution",
+                "snippet": "**total_rows:** 5750"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "A quick chemistry note: the largest named classes are rich in common donor atoms such as **N** and **O**, which is consistent with the heavy representation of amines, amino acids, pyridines, and carboxylates in metal–ligand equilibrium studies. The very large “**Ligands not selected**” bucket suggests a substantial portion of entries were not assigned to a specific curated class label in the database.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 23,
+            "text": "A quick chemistry note:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 24,
+            "end": 80,
+            "text": "the largest named classes are rich in common donor atoms",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 81,
+            "end": 104,
+            "text": "such as **N** and **O**",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 106,
+            "end": 130,
+            "text": "which is consistent with",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 131,
+            "end": 243,
+            "text": "the heavy representation of amines, amino acids, pyridines, and carboxylates in metal–ligand equilibrium studies",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 245,
+            "end": 293,
+            "text": "The very large “**Ligands not selected**” bucket",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 294,
+            "end": 302,
+            "text": "suggests",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 303,
+            "end": 403,
+            "text": "a substantial portion of entries were not assigned to a specific curated class label in the database",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Top named classes include: Amino Acids | 297 | 5.17%; Aliphatic amines | 250 | 4.35%; Pyridines (azines) | 248 | 4.31%; Carboxylic acids | 182 | 3.17%",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_distribution",
+                "snippet": "| Amino Acids | 297 | 5.17% |\n| Aliphatic amines | 250 | 4.35% |\n| Pyridines (azines) | 248 | 4.31% |\n| Carboxylic acids | 182 | 3.17% |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "Functional groups... | carboxyl | 1693 | 42% | ... | primary_amine | 1101 | 27% | ... | pyridine | 428 | 11% | ... | hydroxyl | 1430 | 35% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Functional groups across matches: carboxyl | 1693 | 42%; hydroxyl | 1430 | 35%; primary_amine | 1101 | 27%; pyridine | 428 | 11%",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "| carboxyl | 1693 | 42% |\n| hydroxyl | 1430 | 35% |\n| primary_amine | 1101 | 27% |\n| pyridine | 428 | 11% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Amino Acids | 297 | 5.17%; Aliphatic amines | 250 | 4.35%; Pyridines (azines) | 248 | 4.31%; Carboxylic acids | 182 | 3.17%",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_distribution",
+                "snippet": "| Amino Acids | 297 | 5.17% |\n| Aliphatic amines | 250 | 4.35% |\n| Pyridines (azines) | 248 | 4.31% |\n| Carboxylic acids | 182 | 3.17% |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "Functional groups... | primary_amine | 1101 | 27% | ... | pyridine | 428 | 11% | ... | carboxyl | 1693 | 42% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Ligands not selected | 1339 | 23.29%",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_distribution",
+                "snippet": "| Ligands not selected | 1339 | 23.29% |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "| Ligands not selected | 1339 | 23.29% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Ligands not selected | 1339 | 23.29% (entries lacking a selected class)",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_distribution",
+                "snippet": "| Ligands not selected | 1339 | 23.29% |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "| Ligands not selected | 1339 | 23.29% |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "**Source:** NIST SRD-46 ligand_card table.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 11,
+            "text": "**Source:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 12,
+            "end": 42,
+            "text": "NIST SRD-46 ligand_card table.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Args: {\"table_name\": \"ligand_card\", \"database\": \"cards\"}",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "get_table_schema",
+                "snippet": "\"table_name\": \"ligand_card\", \"database\": \"cards\""
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query\": \"SELECT COUNT(DISTINCT TRIM(ligand_class_name)) AS distinct_ligand_classes FROM ligand_card WHERE ligand_class_name IS NOT NULL AND TRIM(ligand_class_name) <> '';"
+              },
+              {
+                "step": "Step 4",
+                "tool": "db_distribution",
+                "snippet": "{\"table\": \"ligand_card\", \"group_column\": \"ligand_class_name\", \"where\": \"ligand_class_name IS NOT NULL AND TRIM(ligand_class_name) <> ''\", \"limit\": 200}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

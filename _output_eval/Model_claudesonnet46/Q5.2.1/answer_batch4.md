@@ -1,0 +1,35 @@
+## Stability Constants of Uranium(VI) with Crown Ethers — NIST SRD-46
+
+### Key Finding
+
+The NIST SRD-46 database contains stability constant data for **UO₂²⁺ (uranyl, uranium(VI))** with **18-Crown-6 only**. No stability constants were found for other crown ethers (12-crown-4, 15-crown-5, benzo-15-crown-5, dicyclohexyl-18-crown-6, dibenzo-18-crown-6, or benzo-18-crown-6) paired with any uranium species.
+
+---
+
+### Stability Constants: UO₂²⁺ + 18-Crown-6 (1:1 ML complex)
+
+| Metal | Ligand | Complex | log K | T (°C) | Ionic Strength (mol/L) | Solvent | Electrolyte |
+|-------|--------|---------|-------|--------|----------------------|---------|-------------|
+| UO₂²⁺ | 18-Crown-6 | ML | **0.82** | 25 | 0.1 | water | NaClO₄ |
+| UO₂²⁺ | 18-Crown-6 | ML | **1.0** | 25 | 0.1 | water | NaClO₄ |
+| UO₂²⁺ | 18-Crown-6 | ML | **2.36** | 25 | 0 (extrapolated) | water | none |
+
+> **Primary reference:** Bhatt, M.V.; Periasamy, M. *Indian Journal of Chemistry* **1982**, *21A*, 1001.
+
+---
+
+### Chemistry Insights
+
+1. **Modest stability:** Log K values of 0.82–2.36 indicate weak but real complexation. This is much lower than typical alkali or lanthanide–crown ether complexes (log K often 3–6), reflecting the geometric constraint of the linear uranyl ion (O=U=O²⁺), which can only accept equatorial ligands and must displace coordinated water molecules to bind the crown ether.
+
+2. **Large ionic strength correction:** The stability constant rises from ~0.82–1.0 at I = 0.1 mol/L (NaClO₄) to **2.36 at zero ionic strength** (extrapolated) — a correction of ~1.4 log units. This is significant and reflects strong activity coefficient effects for the doubly-charged UO₂²⁺ cation.
+
+3. **Size selectivity:** Only 18-crown-6 data appear in SRD-46 for uranium. The 18-crown-6 cavity (~2.6–3.2 Å diameter) is geometrically compatible with the equatorial coordination belt of UO₂²⁺, whereas smaller crowns (12-crown-4, 15-crown-5) are likely too small for effective binding of this large actinyl cation.
+
+4. **Nuclear relevance:** Uranyl–crown ether interactions are of interest in nuclear fuel reprocessing and actinide separation, where macrocyclic oxygen-donor ligands are explored as selective extractants for uranium over competing ions.
+
+---
+
+> **Source:** NIST SRD-46 (Critically Selected Stability Constants of Metal Complexes Database). All measurements at 25 °C in aqueous solution.
+
+---

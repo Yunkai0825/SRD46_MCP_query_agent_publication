@@ -1,0 +1,36 @@
+Based on my thorough investigation of the SRD-46 database, here is what I found:
+
+---
+
+## Stability Constants in Supercritical CO₂ — SRD-46 Search Results
+
+### 🔍 Finding: No Data Available
+
+After systematically searching across all relevant fields in the SRD-46 database, **no stability constants measured in supercritical CO₂ as solvent are present** in the database.
+
+| Search Target | Fields Checked | Result |
+|---|---|---|
+| `solvent_name` | All 79,063 stability rows | Only `H₂O` present |
+| `electrolyte_composition` | All non-null rows | No CO₂/supercritical entries |
+| `notes` field | All non-null rows | One incidental CO₂ mention (gas evolution artifact) |
+| Literature citations | Full citation text | No supercritical CO₂ papers |
+
+### Why This Makes Chemical Sense
+
+The SRD-46 (NIST Critical Stability Constants) database is historically rooted in **aqueous solution thermodynamics** — the overwhelming majority of classical coordination chemistry measurements were performed in water (often with controlled ionic strength, e.g., NaClO₄ or KNO₃ media). Supercritical CO₂ as a reaction medium for metal–ligand complexation is a relatively niche and modern research area, primarily explored in:
+
+- **Nuclear waste separations** (e.g., UO₂²⁺ with β-diketones in scCO₂)
+- **Metal extraction/processing** using chelating agents like TBP, dithiocarbamates, or fluorinated β-diketones
+- **Green chemistry** applications replacing organic solvents
+
+These studies tend to report **distribution ratios (D)** or **extraction efficiencies** rather than thermodynamic formation constants (log β), which may explain their absence from a formation-constant database.
+
+### Suggested Follow-Up
+
+If you are researching metal complexation in scCO₂, the relevant literature is found in journals such as *J. Supercritical Fluids*, *Inorg. Chem.*, and *Solvent Extraction and Ion Exchange*. Key systems studied include:
+- **UO₂²⁺ / Cu²⁺ / Zn²⁺** with fluorinated β-diketones (e.g., TTA, HFA)
+- **Lanthanides** with organophosphorus extractants
+
+*Source: NIST SRD-46 database (queried via all stability, electrolyte, notes, and citation fields).*
+
+---

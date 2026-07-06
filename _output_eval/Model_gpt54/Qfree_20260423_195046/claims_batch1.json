@@ -1,0 +1,1655 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Qfree_20260423_195046\\Qfree_20260423_195046_result_batch1.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "# Qfree_20260423_195046 -- Result (batch 1)\n\n**Section:** freeform -- Fe(III)/Fe(II) ligand selection (corrected)\n\n**Prompt:** I would like to find ligands that can complex Fe(III) to stabilize the acidic solution (pH<5), yet with limited complexation to Fe(II) so that it does not decrease the free Fe2+ concentration too much. This is for Fe electrodeposition since we also try to minimize the hydrogen evolution reaction when Fe electrodeposition happens. The expected concentration of Fe(II) is ~0.1M. Meanwhile, be cautious about ligand pH and its actual state, and be cautious about possible precipitations. If there are missing entries, try to observe similar metal-ligand systems with available data to estimate those with very robust reasons and explanations. You have unlimited time and unlimited turns.\n\n**Tool calls:** 23  |  **Time:** 61s planning + 315s execution + 0s verdict = 376s total\n\n---\n\nBased on SRD-46, the best-supported answer is: **there is no clearly ideal ligand in this dataset for pH < 5 that strongly stabilizes Fe(III) while only weakly affecting Fe(II)**. Most ligands that bind Fe(III) well are either **too protonated in acid**, **also bind Fe(II) appreciably**, or raise **hydrolysis / precipitation / insoluble-complex** concerns.",
+        "claims": [
+          {
+            "start": 910,
+            "end": 925,
+            "text": "Based on SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 927,
+            "end": 956,
+            "text": "the best-supported answer is:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 959,
+            "end": 1086,
+            "text": "there is no clearly ideal ligand in this dataset for pH < 5 that strongly stabilizes Fe(III) while only weakly affecting Fe(II)",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1090,
+            "end": 1268,
+            "text": "Most ligands that bind Fe(III) well are either **too protonated in acid**, **also bind Fe(II) appreciably**, or raise **hydrolysis / precipitation / insoluble-complex** concerns.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_61 | Fe^[3+] | Fe | 3 | ✓ | [Fe+3] | InChI=1S/Fe/q+3 |",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_metals",
+                "snippet": "| metal_61 | Fe^[3+] | Fe | 3 | ✓ | [Fe+3] | InChI=1S/Fe/q+3 | beta_totN_128 | ligand_totN_406 | vlm_totN_1473 |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | O=C(O)CN(CC(=O)O)CC(=O)O | 14 | 8 | 20~25 | 0.1~1 | *** | 4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_6165",
+              "ligand_8872",
+              "ligand_8873",
+              "ligand_9257",
+              "ligand_9873",
+              "ligand_8465"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_62 | Fe^[2+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | ... | 7 | 3 | 20~25 | 0.1~1 | *** | 3 |",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | O=C(O)CN(CC(=O)O)CC(=O)O | 14 | 8 | 20~25 | 0.1~1 | *** | 4 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | O=C(O)CN(CC(=O)O)CC(=O)O | 7 | 3 | 20~25 | 0.1~1 | *** | 3 |"
+              },
+              {
+                "step": "Step 23",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_105186 | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | ... | 2.52 | 25 | 0.1 | HL→H2L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_8126",
+              "ligand_6165",
+              "ligand_9257",
+              "ligand_8873",
+              "ligand_8465",
+              "beta_def_352"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_61 | Fe^[3+] | ligand_8126 | 8-Hydroxyquinoline (8-Quino… | HL | Oc1cccc2cccnc12 | 13 | 4 | 25 | 0~1 | solid | 4 |",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_8126 | 8-Hydroxyquinoline (8-Quino… | HL | Oc1cccc2cccnc12 | 13 | 4 | 25 | 0~1 | solid | 4 |"
+              },
+              {
+                "step": "Step 23",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_137922 | ligand_8126 | 8-Hydroxyquinoline (8-Quinolinol)(…) | HL | ... | 4.97 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali… | H2L | O=C(O)c1ccccc1O | 2 | 2 | 20 | 0.1 | *** | 1 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "## Most relevant candidates from SRD-46\n\n| Ligand | Acid/base state relevant to pH<5 | Fe(III) support in SRD-46 | Fe(II) concern | Practical verdict for acidic Fe plating |\n|---|---|---:|---|---|\n| Oxalic acid | pKa = -1.2, 3.8; at pH<5 mainly **HC2O4⁻** with some **C2O4²⁻** | Fe(III) complexes present; among the few still plausibly active in acid | **Non-negligible Fe(II) complexation**; may reduce free Fe²⁺ at ~0.1 M | **Best “maybe,” but risky** due to Fe(II) binding and possible iron-oxalate / mixed-speciation precipitation |\n| Salicylic acid | pKa(carboxyl) = 2.8; phenol remains protonated in acid | Fe(III) data present | Fe(II) binding only **moderate** | **Possible weak-to-moderate compromise**, but low-pH protonation limits useful Fe(III) chelation |\n| Malonic acid | pKa = 2.65, 5.27; mostly H2L/HL⁻ below pH 5 | Fe(III) complexes present but modest | Fe(II) binding limited | **Too weak to be a strong Fe(III) stabilizer**; safer for Fe²⁺ retention but likely insufficient for ferric control |\n| Acetic acid | pKa = 4.56; mostly protonated below ~4.5 | Fe(III) data present, but weak ligand | Weak Fe(II) binding | **Reference/baseline only**, not a real Fe(III)-stabilizing solution |\n| NTA | pKa = -1.81, -1.00, 2.52, 9.46; still protonation-sensitive | Strong Fe(III) binder | **Meaningful Fe(II) affinity** | **Avoid** if you want to preserve free Fe²⁺ near 0.1 M |\n| Acetohydroxamic acid | pKa = 9.29; mostly protonated at pH<5 | Fe(III) data present | Moderate Fe(II) binding possible | **Looks attractive on paper, but too protonation-limited in strong acid** |\n| 8-Hydroxyquinoline | pKa = 4.97 and 9.65; largely protonated at pH<5 | Fe(III) data present | Less relevant than solubility issue | **Poor practical fit**; insoluble/solid-phase risk |\n| Tiron (catechol-disulfonate) | catechol donor protonation still important; one listed pKa = 7.62 for HL→H2L | Strong Fe(III) support in dataset | Fe(II) data missing here | **Interesting Fe(III)-selective conceptually**, but at pH<5 catechol protonation weakens binding; not robust enough from this dataset alone |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 39,
+            "text": "## Most relevant candidates from SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 197,
+            "end": 536,
+            "text": "| Oxalic acid | pKa = -1.2, 3.8; at pH<5 mainly **HC2O4⁻** with some **C2O4²⁻** | Fe(III) complexes present; among the few still plausibly active in acid | **Non-negligible Fe(II) complexation**; may reduce free Fe²⁺ at ~0.1 M | **Best “maybe,” but risky** due to Fe(II) binding and possible iron-oxalate / mixed-speciation precipitation |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 537,
+            "end": 769,
+            "text": "| Salicylic acid | pKa(carboxyl) = 2.8; phenol remains protonated in acid | Fe(III) data present | Fe(II) binding only **moderate** | **Possible weak-to-moderate compromise**, but low-pH protonation limits useful Fe(III) chelation |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 770,
+            "end": 1014,
+            "text": "| Malonic acid | pKa = 2.65, 5.27; mostly H2L/HL⁻ below pH 5 | Fe(III) complexes present but modest | Fe(II) binding limited | **Too weak to be a strong Fe(III) stabilizer**; safer for Fe²⁺ retention but likely insufficient for ferric control |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1015,
+            "end": 1206,
+            "text": "| Acetic acid | pKa = 4.56; mostly protonated below ~4.5 | Fe(III) data present, but weak ligand | Weak Fe(II) binding | **Reference/baseline only**, not a real Fe(III)-stabilizing solution |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1207,
+            "end": 1390,
+            "text": "| NTA | pKa = -1.81, -1.00, 2.52, 9.46; still protonation-sensitive | Strong Fe(III) binder | **Meaningful Fe(II) affinity** | **Avoid** if you want to preserve free Fe²⁺ near 0.1 M |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1391,
+            "end": 1589,
+            "text": "| Acetohydroxamic acid | pKa = 9.29; mostly protonated at pH<5 | Fe(III) data present | Moderate Fe(II) binding possible | **Looks attractive on paper, but too protonation-limited in strong acid** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1590,
+            "end": 1776,
+            "text": "| 8-Hydroxyquinoline | pKa = 4.97 and 9.65; largely protonated at pH<5 | Fe(III) data present | Less relevant than solubility issue | **Poor practical fit**; insoluble/solid-phase risk |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1777,
+            "end": 2093,
+            "text": "| Tiron (catechol-disulfonate) | catechol donor protonation still important; one listed pKa = 7.62 for HL→H2L | Strong Fe(III) support in dataset | Fe(II) data missing here | **Interesting Fe(III)-selective conceptually**, but at pH<5 catechol protonation weakens binding; not robust enough from this dataset alone |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_8872",
+              "ligand_9257",
+              "ligand_8873",
+              "ligand_8465",
+              "ligand_6165",
+              "ligand_9873",
+              "ligand_8126",
+              "ligand_9358"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+] pairs include NTA, 8‑Hydroxyquinoline, Acetic acid, Salicylic acid, Malonic acid, Oxalic acid; Fe^[2+] pairs include NTA, Malonic acid, Salicylic acid, Acetohydroxamic acid, Oxalic acid.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_61 | Fe^[3+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | ... | vlm_counts 14 | beta_counts 8 | T 20~25 | I 0.1~1 | ***"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_61 | Fe^[3+] | ligand_8126 | 8-Hydroxyquinoline (8-Quino… | HL | ... | vlm_counts 13 | beta_counts 4 | 25 | 0~1 | solid"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "metal_62 | Fe^[2+] | ligand_8872 | Ethanedioic acid (Oxalic ac… | H2L | ... | vlm_counts 2 | beta_counts 2 | 25 | 1 | ***"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_8872",
+              "vlm_151532",
+              "vlm_151494",
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Oxalic acid pKa: −1.20 (HL→H2L) and 3.80 (L→HL) at 25 °C, I=0.1 (vlm_151532, vlm_151494). Fe(III) and Fe(II) complexes are listed for this ligand.",
+            "tool_snippets": [
+              {
+                "step": "Step 19",
+                "tool": "inspect_card",
+                "snippet": "vlm_151532 | -1.20 | 25.0 | 0.1 | HL → H2L | ***"
+              },
+              {
+                "step": "Step 19",
+                "tool": "inspect_card",
+                "snippet": "vlm_151494 | 3.80 | 25.0 | 0.1 | L → HL | ***"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_61 | Fe^[3+] | ligand_8872 | Ethanedioic acid (Oxalic ac… | H2L | ... | vlm_counts 5 | beta_counts 3 | 25 | 0.5~3 | ***"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_9257",
+              "vlm_160226",
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Salicylic acid pKa(carboxyl)=2.80 (HL→H2L) at 25 °C, I=0.1 (vlm_160226). Fe(III) and Fe(II) data entries exist for this ligand.",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "inspect_card",
+                "snippet": "vlm_160226 | 2.80 | 25.0 | 0.1 | HL → H2L | ***"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_61 | Fe^[3+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali… | H2L | ... | vlm_counts 11 | beta_counts 3 | 20~25 | 0~3"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "metal_62 | Fe^[2+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali… | H2L | ... | vlm_counts 2 | beta_counts 2 | 20 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_8873",
+              "vlm_151949",
+              "vlm_151918",
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Malonic acid pKa=2.65 (HL→H2L) and 5.27 (L→HL) at 25 °C, I=0.1 (vlm_151949, vlm_151918). Fe(III) and Fe(II) entries are present.",
+            "tool_snippets": [
+              {
+                "step": "Step 17",
+                "tool": "inspect_card",
+                "snippet": "vlm_151949 | 2.65 | 25.0 | 0.1 | HL → H2L | ***"
+              },
+              {
+                "step": "Step 17",
+                "tool": "inspect_card",
+                "snippet": "vlm_151918 | 5.27 | 25.0 | 0.1 | L → HL | ***"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_61 | Fe^[3+] | ligand_8873 | Propanedioic acid (Malonic … | H2L | ... | vlm_counts 8 | beta_counts 3 | 25 | 0.1~1 | ***"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_8465",
+              "vlm_144406",
+              "metal_61"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Acetic acid pKa=4.56 (L→HL) at 25 °C, I=0.1 (vlm_144406). Fe(III) entry exists; example network shows logK(ML)=3.23.",
+            "tool_snippets": [
+              {
+                "step": "Step 18",
+                "tool": "inspect_card",
+                "snippet": "vlm_144406 | 4.56 | 25.0 | 0.1 | L → HL | ***"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_61 | Fe^[3+] | ligand_8465 | Ethanoic acid (Acetic acid) | HL | ... | vlm_counts 12 | beta_counts 5 | 20~25 | 0.1~3"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_networks",
+                "snippet": "Global max-node network: Fe^[3+] + Ethanoic acid (Acetic acid) … beta_def_812 … value 3.23; beta_def_840 … 6.22"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_6165",
+              "vlm_105204",
+              "vlm_105223",
+              "vlm_105186",
+              "vlm_105158",
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "NTA pKa values: −1.81, −1.00, 2.52, 9.46 at 25 °C, I=0.1 (vlm_105204, 105223, 105186, 105158). Fe(III) and Fe(II) complexes are listed.",
+            "tool_snippets": [
+              {
+                "step": "Step 21",
+                "tool": "inspect_card",
+                "snippet": "vlm_105204 | -1.81 | 25.0 | 0.1 | H2L → H3L | ***"
+              },
+              {
+                "step": "Step 21",
+                "tool": "inspect_card",
+                "snippet": "vlm_105223 | -1.00 | 25.0 | 0.1 | H3L → H4L | ***"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_61 | Fe^[3+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | ... | vlm_counts 14 | beta_counts 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "ligand_9873",
+              "vlm_168403",
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Acetohydroxamic acid pKa=9.29 (L→HL) at 25 °C, I=0.1 (vlm_168403). Fe(III) and Fe(II) entries exist for this ligand.",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "inspect_card",
+                "snippet": "vlm_168403 | 9.29 | 25.0 | 0.1 | L → HL | ***"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_61 | Fe^[3+] | ligand_9873 | Acetohydroxamic acid | HL | ... | vlm_counts 8 | beta_counts 3 | 20~25 | 0.1~2"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "metal_62 | Fe^[2+] | ligand_9873 | Acetohydroxamic acid | HL | ... | vlm_counts 2 | beta_counts 2 | 20 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "ligand_8126",
+              "vlm_137922",
+              "vlm_137913",
+              "metal_61",
+              "beta_def_352"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "8‑Hydroxyquinoline pKa=4.97 and 9.65 at 25 °C, I=0.1. Fe(III) data present; solid phase noted for Fe(III) complexes.",
+            "tool_snippets": [
+              {
+                "step": "Step 20",
+                "tool": "inspect_card",
+                "snippet": "vlm_137922 | 4.97 | 25.0 | 0.1 | HL → H2L | ***"
+              },
+              {
+                "step": "Step 20",
+                "tool": "inspect_card",
+                "snippet": "vlm_137913 | 9.65 | 25.0 | 0.1 | L → HL | ***"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_352 | [ML3(s)] <=> [M] + [L]^3 | solid"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "ligand_9358",
+              "vlm_161957",
+              "metal_61"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Tiron pKa=7.62 (HL→H2L) at 25 °C, I=0.1 (vlm_161957). Fe(III) entries present; Fe(II) pair not listed in Step 11’s Fe(II) subset.",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "inspect_card",
+                "snippet": "vlm_161957 | 7.62 | 25.0 | 0.1 | HL → H2L | ***"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_61 | Fe^[3+] | ligand_9358 | 1,2-Dihydroxybenzene-3,5-di… (Tiron) | H4L | ... | vlm_counts 16 | beta_counts 4"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "logK — 8 metal-ligand pair(s) for Fe^[2+]; list does not include ligand_9358 (Tiron)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "## What the dataset says about Fe(II) binding tendency\n\n| Relative Fe(II) binding in SRD-46 screen | Ligands |\n|---|---|\n| Strongest / problematic for free Fe²⁺ retention | CDDTA ≈ EDTA >> NTA |\n| Still notable | Salicylate |\n| Moderate | Oxalate ≈ acetohydroxamate |\n| Weakest among screened acids | Malonate > acetate |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 54,
+            "text": "## What the dataset says about Fe(II) binding tendency",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 121,
+            "end": 194,
+            "text": "| Strongest / problematic for free Fe²⁺ retention | CDDTA ≈ EDTA >> NTA |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 195,
+            "end": 225,
+            "text": "| Still notable | Salicylate |",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 226,
+            "end": 267,
+            "text": "| Moderate | Oxalate ≈ acetohydroxamate |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 268,
+            "end": 321,
+            "text": "| Weakest among screened acids | Malonate > acetate |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Tool results do not provide Fe(II) logK values for CDTA (ligand_6301), EDTA (ligand_6277), and NTA (ligand_6165) needed to substantiate the ranking “CDTA ≈ EDTA >> NTA.”",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "“Still notable” is a qualitative attribution; available Fe(II)+salicylate entries are listed without numerical logK values to judge notability.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No Fe(II) logK values shown to compare oxalate (ligand_8872) and acetohydroxamate (ligand_9873); cannot verify “Oxalate ≈ acetohydroxamate.”",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Missing Fe(II) numeric logK values for malonate (ligand_8873) and acetate (ligand_8465); cannot confirm ordering “Malonate > acetate” or that they are the weakest.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "## Why the shortlist is so limited\n\n| Issue | SRD-46-based implication |\n|---|---|\n| Ligand protonation | At pH < 5, many donor groups are protonated, so raw Fe(III) logβ values overstate actual useful binding |\n| Ferric hydrolysis | Weak ligands do not fully suppress Fe(III) hydrolysis/polymerization; acetate networks explicitly showed hydrolyzed/oligomeric Fe(III) species |\n| Fe(II) preservation | Ligands strong enough to tame Fe(III) often also grab Fe(II), which is bad when you want free Fe²⁺ around 0.1 M |\n| Solids/precipitates | Oxalate, salicylate, 8-hydroxyquinoline, and some catechol-type systems carry precipitation or insoluble-complex concerns |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 34,
+            "text": "## Why the shortlist is so limited",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 83,
+            "end": 211,
+            "text": "| Ligand protonation | At pH < 5, many donor groups are protonated, so raw Fe(III) logβ values overstate actual useful binding |",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 212,
+            "end": 378,
+            "text": "| Ferric hydrolysis | Weak ligands do not fully suppress Fe(III) hydrolysis/polymerization; acetate networks explicitly showed hydrolyzed/oligomeric Fe(III) species |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 379,
+            "end": 516,
+            "text": "| Fe(II) preservation | Ligands strong enough to tame Fe(III) often also grab Fe(II), which is bad when you want free Fe²⁺ around 0.1 M |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 517,
+            "end": 664,
+            "text": "| Solids/precipitates | Oxalate, salicylate, 8-hydroxyquinoline, and some catechol-type systems carry precipitation or insoluble-complex concerns |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_8465",
+              "ligand_8873",
+              "ligand_8126",
+              "ligand_9257",
+              "ligand_8872"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| vlm_144406 | ligand_8465 | Ethanoic acid (Acetic acid) | HL | … | 4.56 | 25 | 0.1 | L→HL |",
+            "tool_snippets": [
+              {
+                "step": "Step 23",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_144406 | ligand_8465 | Ethanoic acid (Acetic acid) | HL | CC(=O)O | 4.56 | 25 | 0.1 | L→HL |"
+              },
+              {
+                "step": "Step 23",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151949 | ligand_8873 | Propanedioic acid (Malonic acid) | H2L | … | 2.65 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 23",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_137922 | ligand_8126 | 8-Hydroxyquinoline (8-Quinolinol)(Oxine) | HL | … | 4.97 | 25 | 0.1 | HL→H2L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_8465",
+              "beta_def_597",
+              "beta_def_601",
+              "beta_def_708"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_597 | [M]^3 + [L]^6 + [H2O]^2 <=> [M3(OH)2L6] + [H]^2 | logK | 22.05",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_networks",
+                "snippet": "Global max-node network: Fe^[3+] + Ethanoic acid (Acetic acid)\n| beta_def_597 | [M]^3 + [L]^6 + [H2O]^2 <=> [M3(OH)2L6] + [H]^2 | logK | 22.05 |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_networks",
+                "snippet": "| beta_def_601 | [M]^3 + [L]^2 + [H2O]^3 <=> [M3(OH)3L2] + [H]^3 | logK | 5.87 |\n| beta_def_708 | [M]^7 + [L]^6 + [H2O]^9 <=> [M7(OH)9L6] + [H]^9 | logK | 17.26 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "**Fe^[3+] + Ethanoic acid (Acetic acid)** … species: beta_def_597(5) beta_def_601(1) beta_def_708(1) beta_def_812(6) beta_def_840(3)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "SRD-46 lists stability constants but not application targets like “free Fe²⁺ around 0.1 M”; statement is general reasoning, not a database row.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] | Nitrilotriacetic acid (NTA) | … | vlm_counts 14 | beta_counts 8 | T 20~25 | I 0.1~1 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "Fe^[2+] | Nitrilotriacetic acid (NTA) | … | vlm_counts 7 | beta_counts 3 | T 20~25 | I 0.1~1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_8126",
+              "beta_def_352"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+] | 8-Hydroxyquinoline (8-Quinolinol)(Oxine) … non_aqueous_phases | solid",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_8126 | 8-Hydroxyquinoline (8-Quinolinol)(Oxine) | … | non_aqueous_phases | solid |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "**Fe^[3+] + 8-Hydroxyquinoline …** species: beta_def_352(1) beta_def_812(4) beta_def_840(4) beta_def_872(4)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "## My practical ranking from the available SRD-46 evidence\n\n| Rank | Ligand | Reason |\n|---:|---|---|\n| 1 | **Oxalate** | Best chance to still affect Fe(III) below pH 5 because it remains partially deprotonated in this range; but must be used cautiously because Fe(II) binding is not negligible and precipitation/speciation risks are real |\n| 2 | **Salicylate** | Moderate Fe(II) binding rather than extreme, and some Fe(III) stabilization; however phenol protonation strongly limits low-pH chelation |\n| 3 | **Malonate** | Least disruptive to Fe²⁺ among the dicarboxylates examined, but likely too weak to solve ferric instability by itself |\n| 4 | **Tiron** | Chemically promising for Fe(III) over Fe(II), but SRD-46 support here is incomplete on Fe(II), and catechol protonation below pH 5 is a major limitation |\n| 5 | **Acetate** | Too weak to be useful except as a background/buffer-like weak ligand |\n| Avoid | **NTA, EDTA-like ligands, strong N-donors** | Too likely to suppress free Fe²⁺ significantly |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 23,
+            "text": "## My practical ranking",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 24,
+            "end": 58,
+            "text": "from the available SRD-46 evidence",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 102,
+            "end": 340,
+            "text": "| 1 | **Oxalate** | Best chance to still affect Fe(III) below pH 5 because it remains partially deprotonated in this range; but must be used cautiously because Fe(II) binding is not negligible and precipitation/speciation risks are real |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 341,
+            "end": 502,
+            "text": "| 2 | **Salicylate** | Moderate Fe(II) binding rather than extreme, and some Fe(III) stabilization; however phenol protonation strongly limits low-pH chelation |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 503,
+            "end": 643,
+            "text": "| 3 | **Malonate** | Least disruptive to Fe²⁺ among the dicarboxylates examined, but likely too weak to solve ferric instability by itself |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 644,
+            "end": 816,
+            "text": "| 4 | **Tiron** | Chemically promising for Fe(III) over Fe(II), but SRD-46 support here is incomplete on Fe(II), and catechol protonation below pH 5 is a major limitation |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 817,
+            "end": 907,
+            "text": "| 5 | **Acetate** | Too weak to be useful except as a background/buffer-like weak ligand |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 908,
+            "end": 1012,
+            "text": "| Avoid | **NTA, EDTA-like ligands, strong N-donors** | Too likely to suppress free Fe²⁺ significantly |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Tool results from the NIST SRD-46 session are present (e.g., search_stability outputs for Fe systems).",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 139 row(s)\n| metal_61 | Fe^[3+] | ligand_9257 | 2-Hydroxybenzoic acid (Salicylic acid) | ... | vlm_counts 11 | beta_counts 3 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 29 row(s)\n| metal_62 | Fe^[2+] | ligand_6165 | Nitrilotriacetic acid (NTA) | ... | vlm_counts 7 | beta_counts 3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_8872",
+              "metal_61",
+              "metal_62",
+              "vlm_151494",
+              "vlm_151532"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Oxalic acid pKa: 3.80 (L→HL) and -1.20 (HL→H2L) at 25 °C support partial deprotonation below pH 5; Fe(II)/Fe(III)-oxalate complexes are present.",
+            "tool_snippets": [
+              {
+                "step": "Step 19",
+                "tool": "inspect_card",
+                "snippet": "Ethanedioic acid (Oxalic acid) — pKa values:\nvlm_151494 | 3.80 | 25.0 | 0.1 | L → HL\nvlm_151532 | -1.20 | 25.0 | 0.1 | HL → H2L"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_8872 | Ethanedioic acid (Oxalic ac…) | H2L | vlm_counts 2 | beta_counts 2 | T 25 | I 1 |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_8872 | Ethanedioic acid (Oxalic ac…) | H2L | vlm_counts 5 | beta_counts 3 | T 25 | I 0.5~3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_9257",
+              "metal_61",
+              "metal_62",
+              "vlm_160226",
+              "vlm_160211"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Salicylic acid pKa: 2.80 (HL→H2L) and −13.40 (L→HL) at 25 °C imply phenol is protonated at low pH; Fe(II)/Fe(III) salicylate entries exist.",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "inspect_card",
+                "snippet": "2-Hydroxybenzoic acid (Salicylic acid) — pKa:\nvlm_160211 | -13.40 | 25.0 | 0.1 | L → HL\nvlm_160226 | 2.80 | 25.0 | 0.1 | HL → H2L"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali…) | H2L | vlm_counts 2 | beta_counts 2 | T 20 | I 0.1 |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali…) | H2L | vlm_counts 11 | beta_counts 3 | T 20~25 | I 0~3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No comparative stability constants are provided to verify “least disruptive to Fe²⁺ among dicarboxylates.” Only existence of malonate data is shown.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_9358",
+              "metal_61",
+              "vlm_161957"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Tiron pKa 7.62 (HL→H2L) → catechol groups protonated below pH 5; Fe(III)+Tiron has 16 logK entries; Fe(II)+Tiron entries are not returned in Step 11.",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "inspect_card",
+                "snippet": "1,2-Dihydroxybenzene-3,5-disulfonic acid (Tiron) pKa:\nvlm_161957 | 7.62 | 25.0 | 0.1 | HL → H2L"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_9358 | 1,2-Dihydroxybenzene-3,5-di… | H4L | vlm_counts 16 | beta_counts 4 | T 20~25 | I 0.1~1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "ligand_8465",
+              "metal_61",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Fe^[3+] + acetate shows low logK: ML 3.23; ML2 6.22 (25 °C, low I), consistent with a weak/background ligand.",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_networks",
+                "snippet": "Global max-node network: Fe^[3+] + Ethanoic acid (Acetic acid)\n| beta_def_812 | [M]+[L] <=> [ML] | logK | 3.23 |\n| beta_def_840 | [M]+[L]^2 <=> [ML2] | logK | 6.22 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_62",
+              "ligand_6165",
+              "ligand_6277",
+              "ligand_8156",
+              "ligand_8191"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe²⁺ forms complexes with NTA, EDTA, and strong N-donors (e.g., bipyridyl/phenanthroline), which are known to strongly chelate Fe²⁺.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | vlm_counts 7 | beta_counts 3 | 20~25 °C |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_6277 | Ethylenedinitrilotetraaceti… (EDTA) | H4L | vlm_counts 2 | beta_counts 2 | 25 °C |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_8156 | 2,2'-Bipyridyl | vlm_counts 6 | beta_counts 3 | 25~30 °C | I 0~1 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "## Best recommendation\n\n| Recommendation | SRD-46-grounded rationale |\n|---|---|\n| If you must choose from this dataset, test **low-to-moderate oxalate** first | It is the only screened ligand with acid-range deprotonation compatible with some real Fe(III) binding below pH 5 |\n| Secondary fallback: **salicylate**, if only mild ferric control is needed | Less severe Fe(II) sequestration than NTA/EDTA-class ligands, but also weaker ferric stabilization in acid |\n| If preserving Fe²⁺ is the top priority, prefer **very weak ligands** and control ferric contamination by process design instead of chelation | The SRD-46 evidence suggests the selectivity window is narrow: strong ferric stabilization usually costs Fe²⁺ availability |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 22,
+            "text": "## Best recommendation",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 81,
+            "end": 277,
+            "text": "| If you must choose from this dataset, test **low-to-moderate oxalate** first | It is the only screened ligand with acid-range deprotonation compatible with some real Fe(III) binding below pH 5 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 278,
+            "end": 464,
+            "text": "| Secondary fallback: **salicylate**, if only mild ferric control is needed | Less severe Fe(II) sequestration than NTA/EDTA-class ligands, but also weaker ferric stabilization in acid |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 465,
+            "end": 734,
+            "text": "| If preserving Fe²⁺ is the top priority, prefer **very weak ligands** and control ferric contamination by process design instead of chelation | The SRD-46 evidence suggests the selectivity window is narrow: strong ferric stabilization usually costs Fe²⁺ availability |",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Exclusivity not supported. Oxalate has acid-range pKa (3.8; -1.2), but several screened ligands also have pKa<5 and Fe(III) data (e.g., salicylate 2.8; malonate 2.65; 8‑HQ 4.97; NTA 2.52).",
+            "tool_snippets": [
+              {
+                "step": "Step 23",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_160226 | ligand_9257 | 2-Hydroxybenzoic acid (Salicylic a… | H2L | ... | 2.8 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 23",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151949 | ligand_8873 | Propanedioic acid (Malonic acid) | H2L | ... | 2.65 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali… | H2L | ... | 11 | 3 | 20~25 | 0~3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_9257",
+              "ligand_6165",
+              "ligand_6277"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "SRD-46 outputs here list Fe(II)/Fe(III) pairs but do not show comparative logK values; general chelation chemistry: EDTA/NTA >> salicylate. Pairs exist for all three ligands.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali… | H2L | ... | 2 | 2 | 20 | 0.1 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | ... | 7 | 3 | 20~25 | 0.1~1 |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali… | H2L | ... | 11 | 3 | 20~25 | 0~3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_6165",
+              "ligand_6277",
+              "ligand_9257"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Same ligands form complexes with both Fe(III) and Fe(II) (e.g., NTA, EDTA, salicylate), suggesting limited selectivity; stronger ferric complexants can also bind ferrous.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | ... | 14 | 8 | 20~25 | 0.1~1 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | ... | 7 | 3 | 20~25 | 0.1~1 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_6277 | Ethylenedinitrilotetraaceti… | H4L | ... | 2 | 2 | 25 | 0.1 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "## Important caveat for electrodeposition\n\n| Bath issue | Likely consequence |\n|---|---|\n| Local cathode pH rise during plating | Even if bulk pH is <5, near-electrode pH can rise enough to trigger Fe(III) hydrolysis / Fe(OH)x formation |\n| Trace Fe(III) contamination | A ligand that merely “solubilizes Fe(III)” may still increase HER or alter deposition kinetics if it also complexes Fe(II) |\n| 0.1 M Fe²⁺ | Even moderate Fe(II) complexation can materially lower free Fe²⁺ |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 41,
+            "text": "## Important caveat for electrodeposition",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 89,
+            "end": 238,
+            "text": "| Local cathode pH rise during plating | Even if bulk pH is <5, near-electrode pH can rise enough to trigger Fe(III) hydrolysis / Fe(OH)x formation |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 239,
+            "end": 395,
+            "text": "| Trace Fe(III) contamination | A ligand that merely “solubilizes Fe(III)” may still increase HER or alter deposition kinetics if it also complexes Fe(II) |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 396,
+            "end": 477,
+            "text": "| 0.1 M Fe²⁺ | Even moderate Fe(II) complexation can materially lower free Fe²⁺ |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_10076",
+              "beta_def_351",
+              "beta_def_357"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] + Hydroxide ion (metal_61 + ligand_10076) … species: beta_def_351(1) … beta_def_357(2) …",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "**2. Fe^[3+] + Hydroxide ion** (metal_61 + ligand_10076) — … species: beta_def_351(1) beta_def_352(2) beta_def_357(2) …"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_351 | [(M2O3)0.5(s,alpha)] + [H2O]^1.5 <=> [M] + [OH]^3 | solid"
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_357 | [MOOH(s,alpha)] + [H2O] <=> [M] + [OH]^3 | solid"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_6165"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[2+] + Nitrilotriacetic acid (NTA) … | Fe^[3+] + Nitrilotriacetic acid (NTA) … (same ligand binds both Fe(II) and Fe(III))",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "metal_62 | Fe^[2+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | … vlm_counts 7 | beta_counts 3 | T°C_range 20~25 | I(M)_range 0.1~1"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_61 | Fe^[3+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | … vlm_counts 14 | beta_counts 8 | T°C_range 20~25 | I(M)_range 0.1~1"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "SRD-46 tool results here contain logK/pKa data, not total Fe(II) concentrations (e.g., “0.1 M Fe2+”) or speciation at 0.1 M. No rows specify [Fe2+] = 0.1 M.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 7,
+        "text": "### Bottom line\nFrom SRD-46, **oxalate is the only serious acidic candidate**, but it is **not cleanly selective** and has **precipitation/speciation risks**. **Salicylate** and **malonate** are gentler toward Fe(II) but likely **too weak under pH < 5** to robustly stabilize Fe(III). **NTA/EDTA-class ligands should be avoided** for your goal.\n\nIf you want, I can do a next pass focused specifically on **matched Fe(III)/Fe(II) constants for oxalate vs salicylate vs malonate under the closest common temperature/ionic-strength conditions**, and turn that into a more decision-oriented comparison table from SRD-46.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 15,
+            "text": "### Bottom line",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 16,
+            "end": 28,
+            "text": "From SRD-46,",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 31,
+            "end": 75,
+            "text": "oxalate is the only serious acidic candidate",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 91,
+            "end": 112,
+            "text": "not cleanly selective",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 125,
+            "end": 155,
+            "text": "precipitation/speciation risks",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 191,
+            "end": 216,
+            "text": "are gentler toward Fe(II)",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 230,
+            "end": 251,
+            "text": "too weak under pH < 5",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 287,
+            "end": 327,
+            "text": "NTA/EDTA-class ligands should be avoided",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 330,
+            "end": 344,
+            "text": "for your goal.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 346,
+            "end": 358,
+            "text": "If you want,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 359,
+            "end": 379,
+            "text": "I can do a next pass",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 406,
+            "end": 539,
+            "text": "matched Fe(III)/Fe(II) constants for oxalate vs salicylate vs malonate under the closest common temperature/ionic-strength conditions",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 543,
+            "end": 603,
+            "text": "and turn that into a more decision-oriented comparison table",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 604,
+            "end": 615,
+            "text": "from SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "search_stability — 139 row(s)… | metal_61 | Fe^[3+] | … ligands … (tool results from this SRD-46 run)",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 139 row(s)\n\n### logK — 10 metal-ligand pair(s)\n| metal_id | metal_name | ligand_id | ligand_name | … |\n| metal_61 | Fe^[3+] | ligand_9358 | … |\n| metal_61 | Fe^[3+] | ligand_6165 | … |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_8872",
+              "ligand_9257",
+              "ligand_8873",
+              "ligand_8465"
+            ],
+            "support_class": "unsupported",
+            "evidence_snippet": "SRD-46 lists multiple acidic ligands with Fe(III): salicylate, malonate, oxalate, acetic acid; no row states oxalate is the only serious acidic candidate.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali…) | … |\n| metal_61 | Fe^[3+] | ligand_8873 | Propanedioic acid (Malonic …) | … |\n| metal_61 | Fe^[3+] | ligand_8872 | Ethanedioic acid (Oxalic ac…) | … |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_8465 | Ethanoic acid (Acetic acid) | … |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_8872"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Oxalate forms complexes with both Fe(III) and Fe(II), indicating no clean selectivity.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_8872 | Ethanedioic acid (Oxalic ac…) | … | vlm_counts 5 | …"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_8872 | Ethanedioic acid (Oxalic ac…) | … | vlm_counts 2 | …"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_8872"
+            ],
+            "support_class": "unsupported",
+            "evidence_snippet": "Tool rows for Fe(III)+oxalate show only aqueous ML/ML2/ML3 species; no solids or precipitation noted.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "**16. Fe^[3+] + Ethanedioic acid (Oxalic acid)** … species: beta_def_812(5) beta_def_840(3) beta_def_872(3) …"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_networks",
+                "snippet": "`Fe^[3+]` + Ethanedioic acid (Oxalic acid) | ligand_id: ligand_8872 | … net_count 3 | max_nodes 3 | (no 'solid' tag shown)"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_9257",
+              "ligand_8873"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Both Fe(III) and Fe(II) form complexes with salicylate and malonate; “gentler toward Fe(II)” is a domain trend, not a database-stated fact.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali…) | … |\n| metal_61 | Fe^[3+] | ligand_8873 | Propanedioic acid (Malonic …) | … |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali…) | … |\n| metal_62 | Fe^[2+] | ligand_8873 | Propanedioic acid (Malonic …) | … |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "ligand_9257",
+              "ligand_8873",
+              "vlm_160226",
+              "vlm_151949"
+            ],
+            "support_class": "unsupported",
+            "evidence_snippet": "SRD-46 provides pKa for salicylate (2.8) and malonate (2.65), but does not state they are too weak to stabilize Fe(III) at pH<5.",
+            "tool_snippets": [
+              {
+                "step": "Step 23",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_160226 | ligand_9257 | … | pKa | 2.8 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 23",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_151949 | ligand_8873 | … | pKa | 2.65 | 25 | 0.1 | HL→H2L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "search_stability — 29 row(s)… | Fe^[2+] with ligands (tool results from this SRD-46 run).",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 29 row(s)\n\n### logK — 8 metal-ligand pair(s)\n| metal_62 | Fe^[2+] | ligand_6165 | Nitrilotriacetic acid (NTA) | … |\n| metal_62 | Fe^[2+] | ligand_8872 | Ethanedioic acid (Oxalic ac…) | … |"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

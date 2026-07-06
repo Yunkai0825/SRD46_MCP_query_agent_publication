@@ -1,0 +1,1623 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudesonnet46\\Q3.2.1\\Q3.2.1_result_batch4.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "## Final Answer: Cu²⁺–Glycine β₂ — Stepwise vs. Direct Comparison\n\nAll data sourced from **NIST SRD-46** (metal_41 = Cu²⁺, ligand_5760 = Glycine).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 65,
+            "text": "## Final Answer: Cu²⁺–Glycine β₂ — Stepwise vs. Direct Comparison",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 67,
+            "end": 104,
+            "text": "All data sourced from **NIST SRD-46**",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 106,
+            "end": 121,
+            "text": "metal_41 = Cu²⁺",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 123,
+            "end": 144,
+            "text": "ligand_5760 = Glycine",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_5760"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "build_system_catalog — Cu^[2+] + Aminoacetic acid (Glycine): metal_id: metal_41 | ligand_id: ligand_5760 | entries: 30",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "## build_system_catalog — 1 pair(s), 2 species\nCu^[2+] + Aminoacetic acid (Glycine)\nmetal_id: metal_41 | ligand_id: ligand_5760 | ligand_def_HxL: HL"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_41 | Cu^[2+] | Cu | 2 | ✓ | [Cu+2] | InChI=1S/Cu/q+2 |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | 428 | `NCC(=O)O` |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_41"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_41 | Cu^[2+] | Cu | 2 | ✓ | [Cu+2] |",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_41 | Cu^[2+] | Cu | 2 | ✓ | [Cu+2] | InChI=1S/Cu/q+2 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_5760"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | 428 |",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | 428 | `NCC(=O)O` |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "### Step 1 — Raw Data from the Database (25 °C)\n\n| Condition | Constant | Definition | log value | vlm_id |\n|-----------|----------|------------|-----------|--------|\n| 25 °C, I = 0 M | log K₁ | [ML]/[M][L] | **8.56** | vlm_93854 |\n| 25 °C, I = 0 M | log β₂ (direct) | [ML₂]/[M][L]² | **15.70** | vlm_93869 |\n| 25 °C, I = 0.1 M | log K₁ | [ML]/[M][L] | **8.19** | vlm_93847 |\n| 25 °C, I = 0.1 M | log β₂ (direct) | [ML₂]/[M][L]² | **15.10** | vlm_93862 |\n\n> **Note:** The database stores β-definitions as overall constants. The stepwise K₂ is not stored explicitly, but can be derived as:  \n> **log K₂ = log β₂ − log K₁**",
+        "claims": [
+          {
+            "start": 0,
+            "end": 47,
+            "text": "### Step 1 — Raw Data from the Database (25 °C)",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 167,
+            "end": 231,
+            "text": "| 25 °C, I = 0 M | log K₁ | [ML]/[M][L] | **8.56** | vlm_93854 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 232,
+            "end": 308,
+            "text": "| 25 °C, I = 0 M | log β₂ (direct) | [ML₂]/[M][L]² | **15.70** | vlm_93869 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 309,
+            "end": 375,
+            "text": "| 25 °C, I = 0.1 M | log K₁ | [ML]/[M][L] | **8.19** | vlm_93847 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 376,
+            "end": 454,
+            "text": "| 25 °C, I = 0.1 M | log β₂ (direct) | [ML₂]/[M][L]² | **15.10** | vlm_93862 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 458,
+            "end": 467,
+            "text": "**Note:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 468,
+            "end": 523,
+            "text": "The database stores β-definitions as overall constants.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 524,
+            "end": 565,
+            "text": "The stepwise K₂ is not stored explicitly,",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 566,
+            "end": 588,
+            "text": "but can be derived as:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 593,
+            "end": 621,
+            "text": "**log K₂ = log β₂ − log K₁**",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_93854",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93854 | beta_def_812 | logK | 8.56 | 25 | 0 | [M] + [L] <=> [ML]",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "vlm_93854 | ref_eq_map_93 | beta_def_812 | logK | 8.56 | 25 | 0 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_93869",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93869 | beta_def_840 | logK | 15.7 | 25 | 0 | [M] + [L]^2 <=> [ML2]",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "vlm_93869 | ref_eq_map_93 | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "vlm_93847",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93847 | beta_def_812 | logK | 8.19 | 25 | 0.1 | [M] + [L] <=> [ML]",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "vlm_93847 | ref_eq_map_86 | beta_def_812 | logK | 8.19 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "vlm_93862",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93862 | beta_def_840 | logK | 15.1 | 25 | 0.1 | [M] + [L]^2 <=> [ML2]",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "vlm_93862 | ref_eq_map_86 | beta_def_840 | logK | 15.1 | 25 | 0.1 | `[M] + [L]^2 <=> [ML2]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "beta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2] (overall); beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML]",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML]"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2]"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Only beta_def_812 ([ML]/[M][L]) and beta_def_840 ([ML2]/[M][L]^2) are listed; no [ML2]/[ML][L] stepwise K2 entry shown.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Cu^[2+] + Glycine … beta_def_812 | [ML]/[M][L] … | beta_def_840 | [ML2]/[M][L]^2 …"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Standard relation for formation constants: β2 = K1·K2 ⇒ log K2 = log β2 − log K1; not explicitly stated in tool rows.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "### Step 2 — Deriving K₂ and Estimating β₂\n\nThe thermodynamic relationship is:\n\n$$\\beta_2 = K_1 \\times K_2 \\quad \\Longleftrightarrow \\quad \\log\\beta_2 = \\log K_1 + \\log K_2$$",
+        "claims": [
+          {
+            "start": 0,
+            "end": 42,
+            "text": "### Step 2 — Deriving K₂ and Estimating β₂",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 44,
+            "end": 78,
+            "text": "The thermodynamic relationship is:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 82,
+            "end": 106,
+            "text": "\\beta_2 = K_1 \\times K_2",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 139,
+            "end": 172,
+            "text": "\\log\\beta_2 = \\log K_1 + \\log K_2",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "β2 = K1 × K2 is the standard relation between cumulative and stepwise constants; the tool lists cumulative β2 but not stepwise K2 explicitly.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML]\nbeta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2]"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Taking logs of β2 = K1 × K2 gives logβ2 = logK1 + logK2; database does not explicitly state this relation.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2]\n(beta2 is cumulative for ML2; logs relation is standard thermodynamics)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "#### At I = 0 M, 25 °C:\n\n| Quantity | Calculation | Value |\n|----------|-------------|-------|\n| log K₁ (from DB) | — | 8.56 |\n| log K₂ (derived) | 15.70 − 8.56 | **7.14** |\n| log β₂ (estimated) | 8.56 + 7.14 | **15.70** |\n| log β₂ (direct, DB) | — | **15.70** |\n| Difference | — | **0.00** |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 7,
+            "text": "#### At",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 8,
+            "end": 15,
+            "text": "I = 0 M",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 17,
+            "end": 22,
+            "text": "25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 95,
+            "end": 126,
+            "text": "| log K₁ (from DB) | — | 8.56 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 127,
+            "end": 173,
+            "text": "| log K₂ (derived) | 15.70 − 8.56 | **7.14** |",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 174,
+            "end": 222,
+            "text": "| log β₂ (estimated) | 8.56 + 7.14 | **15.70** |",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 223,
+            "end": 262,
+            "text": "| log β₂ (direct, DB) | — | **15.70** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 263,
+            "end": 292,
+            "text": "| Difference | — | **0.00** |",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_93854"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93854 | beta_def_812 | logK | 8.56 | 25 | 0 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93854 | ref_eq_map_93 | beta_def_812 | logK | 8.56 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | ..."
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_93869 | ref_eq_map_93 | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_93854"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93854 | beta_def_812 | logK | 8.56 | 25 | 0 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93854 | ref_eq_map_93 | beta_def_812 | logK | 8.56 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "vlm_93854",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93854 | beta_def_812 | logK | 8.56 | 25 | 0",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93854 | ref_eq_map_93 | beta_def_812 | logK | 8.56 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "vlm_93854",
+              "vlm_93869",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "K1: vlm_93854 logK 8.56 | Kβ2: vlm_93869 logK 15.7 (K2 = 15.7 − 8.56 = 7.14)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93854 | ... | beta_def_812 | logK | 8.56 | 25 | 0 | ..."
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_93869 | ... | beta_def_840 | logK | 15.7 | 25 | 0 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "vlm_93854",
+              "vlm_93869",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "K1: 8.56 and K2 (derived) 7.14 sum to β2 ≈ 15.7; β2 direct: vlm_93869 logK 15.7",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93854 | ... | beta_def_812 | logK | 8.56 | 25 | 0 | ..."
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_93869 | ... | beta_def_840 | logK | 15.7 | 25 | 0 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "vlm_93869",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93869 | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]`",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_93869 | ref_eq_map_93 | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "vlm_93854",
+              "vlm_93869"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "β2 direct 15.7 (vlm_93869) vs β2 estimated (K1 8.56 + K2 7.14) → difference 0.00",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93854 | ... | beta_def_812 | logK | 8.56 | 25 | 0 | ..."
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_93869 | ... | beta_def_840 | logK | 15.7 | 25 | 0 | ..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "#### At I = 0.1 M, 25 °C:\n\n| Quantity | Calculation | Value |\n|----------|-------------|-------|\n| log K₁ (from DB) | — | 8.19 |\n| log K₂ (derived) | 15.10 − 8.19 | **6.91** |\n| log β₂ (estimated) | 8.19 + 6.91 | **15.10** |\n| log β₂ (direct, DB) | — | **15.10** |\n| Difference | — | **0.00** |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 25,
+            "text": "#### At I = 0.1 M, 25 °C:",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 97,
+            "end": 128,
+            "text": "| log K₁ (from DB) | — | 8.19 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 129,
+            "end": 175,
+            "text": "| log K₂ (derived) | 15.10 − 8.19 | **6.91** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 176,
+            "end": 224,
+            "text": "| log β₂ (estimated) | 8.19 + 6.91 | **15.10** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 225,
+            "end": 264,
+            "text": "| log β₂ (direct, DB) | — | **15.10** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 265,
+            "end": 294,
+            "text": "| Difference | — | **0.00** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_5760",
+              "vlm_93847",
+              "vlm_93862"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93847 | logK | 8.19 | 25 | 0.1 ; vlm_93862 | logK | 15.1 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93847 | ref_eq_map_86 | beta_def_812 | logK | 8.19 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_93862 | ref_eq_map_86 | beta_def_840 | logK | 15.1 | 25 | 0.1 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_5760",
+              "beta_def_812",
+              "vlm_93847"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93847 | beta_def_812 | logK | 8.19 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93847 | ref_eq_map_86 | beta_def_812 | logK | 8.19 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_5760",
+              "beta_def_812",
+              "beta_def_840",
+              "vlm_93847",
+              "vlm_93862"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "vlm_93862 | logK | 15.1 | 25 | 0.1 ; vlm_93847 | logK | 8.19 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_93862 | ref_eq_map_86 | beta_def_840 | logK | 15.1 | 25 | 0.1 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf) |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93847 | ref_eq_map_86 | beta_def_812 | logK | 8.19 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_5760",
+              "beta_def_812",
+              "beta_def_840",
+              "vlm_93847",
+              "vlm_93862"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "vlm_93847 | logK | 8.19 | 25 | 0.1 ; vlm_93862 | logK | 15.1 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93847 | ref_eq_map_86 | beta_def_812 | logK | 8.19 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_93862 | ref_eq_map_86 | beta_def_840 | logK | 15.1 | 25 | 0.1 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_5760",
+              "beta_def_840",
+              "vlm_93862"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93862 | beta_def_840 | logK | 15.1 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_93862 | ref_eq_map_86 | beta_def_840 | logK | 15.1 | 25 | 0.1 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_5760",
+              "beta_def_812",
+              "beta_def_840",
+              "vlm_93847",
+              "vlm_93862"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_93862 | logK | 15.1 | 25 | 0.1 ; vlm_93847 | logK | 8.19 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "| vlm_93862 | ref_eq_map_86 | beta_def_840 | logK | 15.1 | 25 | 0.1 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.57, L, +inf) |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| vlm_93847 | ref_eq_map_86 | beta_def_812 | logK | 8.19 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "### Step 3 — Summary & Chemistry Insight\n\nThe estimated β₂ (from K₁ × K₂) is **perfectly consistent** with the directly reported β₂ in both ionic-strength conditions — as expected by definition, since β₂ = K₁ · K₂ is a thermodynamic identity.\n\nKey observations:\n- **log K₁ > log K₂** at both conditions (8.56 vs. 7.14 at I = 0; 8.19 vs. 6.91 at I = 0.1 M). This is the classic **statistical/electrostatic effect**: the first glycine binds to a bare Cu²⁺ with 6 available coordination sites, while the second must displace solvent from an already partially occupied complex. The ~1.4 log-unit drop from K₁ to K₂ is typical for bidentate amino acid ligands.\n- **Ionic strength effect**: Both K₁ and β₂ decrease slightly from I = 0 → 0.1 M, consistent with the Debye–Hückel prediction for reactions involving charged species.\n- **Real-world relevance**: The very high β₂ (log β₂ ≈ 15.1–15.7) explains why Cu²⁺–bis(glycinate) is the dominant copper species in biological fluids at physiological pH, and why glycine is used as a copper chelator in nutritional supplements.\n\n> **Source:** NIST SRD-46, Cu²⁺ (metal_41) + Glycine (ligand_5760), beta_def_812 (K₁) and beta_def_840 (β₂), 25 °C.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 40,
+            "text": "### Step 3 — Summary & Chemistry Insight",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 60,
+            "end": 72,
+            "text": "from K₁ × K₂",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 74,
+            "end": 131,
+            "text": "is **perfectly consistent** with the directly reported β₂",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 135,
+            "end": 165,
+            "text": "both ionic-strength conditions",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 201,
+            "end": 242,
+            "text": "β₂ = K₁ · K₂ is a thermodynamic identity.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 244,
+            "end": 261,
+            "text": "Key observations:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 266,
+            "end": 281,
+            "text": "log K₁ > log K₂",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 284,
+            "end": 302,
+            "text": "at both conditions",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 304,
+            "end": 326,
+            "text": "8.56 vs. 7.14 at I = 0",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 328,
+            "end": 354,
+            "text": "8.19 vs. 6.91 at I = 0.1 M",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 357,
+            "end": 413,
+            "text": "This is the classic **statistical/electrostatic effect**",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 415,
+            "end": 489,
+            "text": "the first glycine binds to a bare Cu²⁺ with 6 available coordination sites",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 497,
+            "end": 573,
+            "text": "the second must displace solvent from an already partially occupied complex.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 578,
+            "end": 610,
+            "text": "~1.4 log-unit drop from K₁ to K₂",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 611,
+            "end": 655,
+            "text": "is typical for bidentate amino acid ligands.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 660,
+            "end": 681,
+            "text": "Ionic strength effect",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 685,
+            "end": 736,
+            "text": "Both K₁ and β₂ decrease slightly from I = 0 → 0.1 M",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 738,
+            "end": 822,
+            "text": "consistent with the Debye–Hückel prediction for reactions involving charged species.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 827,
+            "end": 847,
+            "text": "Real-world relevance",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 869,
+            "end": 887,
+            "text": "log β₂ ≈ 15.1–15.7",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 889,
+            "end": 993,
+            "text": "explains why Cu²⁺–bis(glycinate) is the dominant copper species in biological fluids at physiological pH",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1003,
+            "end": 1067,
+            "text": "glycine is used as a copper chelator in nutritional supplements.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1083,
+            "end": 1094,
+            "text": "NIST SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1096,
+            "end": 1111,
+            "text": "Cu²⁺ (metal_41)",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1114,
+            "end": 1135,
+            "text": "Glycine (ligand_5760)",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1137,
+            "end": 1154,
+            "text": "beta_def_812 (K₁)",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1159,
+            "end": 1176,
+            "text": "beta_def_840 (β₂)",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1178,
+            "end": 1184,
+            "text": "25 °C.",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Thermodynamic identity β2 = K1·K2; stepwise K2 is not directly tabulated in the rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | ... | 15\nbeta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2] | ... | 15"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_93854",
+              "vlm_93869",
+              "vlm_93847",
+              "vlm_93862"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "K1: 8.56 (I=0) & 8.19 (I=0.1); β2: 15.7 (I=0) & 15.1 (I=0.1)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "vlm_93854 | ... | beta_def_812 | logK | 8.56 | 25 | 0 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "vlm_93869 | ... | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]`"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "vlm_93862 | ... | beta_def_840 | logK | 15.1 | 25 | 0.1 | `[M] + [L]^2 <=> [ML2]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "vlm_93854",
+              "vlm_93847",
+              "vlm_93869",
+              "vlm_93862"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Rows present at I(M)=0 and I(M)=0.1 for K1 and β2.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "vlm_93854 | ... | logK | 8.56 | 25 | 0 | ... ;  vlm_93847 | ... | logK | 8.19 | 25 | 0.1 | ..."
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "vlm_93869 | ... | logK | 15.7 | 25 | 0 | ... ;  vlm_93862 | ... | logK | 15.1 | 25 | 0.1 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "β2 = K1 · K2 is the standard relation between overall and stepwise formation constants.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "vlm_93854",
+              "vlm_93869",
+              "vlm_93847",
+              "vlm_93862"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "K1: 8.56 (I=0), 8.19 (I=0.1); β2: 15.7 (I=0), 15.1 (I=0.1) ⇒ K2 (=β2−K1) < K1 at both I.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "vlm_93854 | ... | beta_def_812 | logK | 8.56 | 25 | 0 | `[M] + [L] <=> [ML]` ; vlm_93847 | ... | logK | 8.19 | 25 | 0.1 | ..."
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "vlm_93869 | ... | beta_def_840 | logK | 15.7 | 25 | 0 | ... ; vlm_93862 | ... | logK | 15.1 | 25 | 0.1 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "vlm_93854",
+              "vlm_93847",
+              "vlm_93869",
+              "vlm_93862"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Measurements cover I=0 and I=0.1 M.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "I(M) column: 0 (vlm_93854) and 0.1 (vlm_93847)"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "I(M) column: 0 (vlm_93869) and 0.1 (vlm_93862)"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "vlm_93854",
+              "vlm_93869"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "I=0: K1 = 8.56; β2 = 15.7 ⇒ K2 = 15.7 − 8.56 = 7.14",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "vlm_93854 | ... | beta_def_812 | logK | 8.56 | 25 | 0 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "vlm_93869 | ... | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "vlm_93847",
+              "vlm_93862"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "I=0.1 M: K1 = 8.19; β2 = 15.1 ⇒ K2 = 15.1 − 8.19 = 6.91",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "vlm_93847 | ... | beta_def_812 | logK | 8.19 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "vlm_93862 | ... | beta_def_840 | logK | 15.1 | 25 | 0.1 | `[M] + [L]^2 <=> [ML2]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Explanation of statistical/electrostatic effects is general coordination chemistry knowledge.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Cu(II) often exhibits octahedral/six-coordinate environments; not a database-stated fact here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Solvent displacement on second binding step is standard coordination chemistry rationale.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "vlm_93854",
+              "vlm_93869",
+              "vlm_93847",
+              "vlm_93862"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "I=0: 8.56 & 15.7 ⇒ K2=7.14 (Δ≈1.42); I=0.1: 8.19 & 15.1 ⇒ K2=6.91 (Δ≈1.28) ~1.4",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "K1 rows: 8.56 at I 0 (vlm_93854); 8.19 at I 0.1 (vlm_93847)"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "β2 rows: 15.7 at I 0 (vlm_93869); 15.1 at I 0.1 (vlm_93862)"
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Typical stepwise binding patterns for bidentate amino acid ligands are established knowledge.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [
+              "vlm_93854",
+              "vlm_93847",
+              "vlm_93869",
+              "vlm_93862"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "K1: 8.56 → 8.19; β2: 15.7 → 15.1 as I increases 0 → 0.1 M",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "vlm_93854 | logK | 8.56 | 25 | 0 | ... ; vlm_93847 | logK | 8.19 | 25 | 0.1 | ..."
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "vlm_93869 | logK | 15.7 | 25 | 0 | ... ; vlm_93862 | logK | 15.1 | 25 | 0.1 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 17,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Ionic strength dependence per Debye–Hückel is general electrolyte theory, not a row value.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 18,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 19,
+            "canonical_ids": [
+              "vlm_93869",
+              "vlm_93862"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "β2 logK values: 15.7 (I=0) and 15.1 (I=0.1)",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "vlm_93869 | ... | beta_def_840 | logK | 15.7 | 25 | 0 | `[M] + [L]^2 <=> [ML2]`"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "vlm_93862 | ... | beta_def_840 | logK | 15.1 | 25 | 0.1 | `[M] + [L]^2 <=> [ML2]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 20,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Species predominance at physiological pH depends on speciation modeling; not stated in rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 21,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Supplement/usage claims are not covered by SRD‑46 stability constant rows provided here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 22,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "The string “NIST SRD-46” does not appear in the raw tool result snippets shown.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 23,
+            "canonical_ids": [
+              "metal_41"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_41 | Cu^[2+] | Cu | charge 2",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "metal_41 | Cu^[2+] | Cu | 2 | ✓ | [Cu+2] | InChI=1S/Cu/q+2 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 24,
+            "canonical_ids": [
+              "ligand_5760"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_5760 | Aminoacetic acid (Glycine) | HL",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | 428 | NCC(=O)O | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 25,
+            "canonical_ids": [
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML]",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | ... | 15"
+              }
+            ]
+          },
+          {
+            "claim_index": 26,
+            "canonical_ids": [
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2]",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2] | ... | 15"
+              }
+            ]
+          },
+          {
+            "claim_index": 27,
+            "canonical_ids": [
+              "vlm_93854"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "T°C = 25 for the reported constants",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "vlm_93854 | ... | beta_def_812 | logK | 8.56 | 25 | 0 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+Below are matched-condition formation constants from NIST SRD‑46, used to quantify the “chelate effect” as Δ_chelate = log K_en − 2·log K_NH3 = log β1[M(en)] − log β2[M(NH3)2], with neutral ligands in water at ~25 °C.
+
+| Metal (M2+) | Conditions (25 °C) | log β1[M(en)2+] (≡ log K_en) | log β2[M(NH3)2] | Δ_chelate = log β1(en) − log β2(NH3)2 |
+|-------------|--------------------|------------------------------|------------------|---------------------------------------|
+| Cu2+        | I → 0 (aq)         | 10.6                         | 7.80             | 2.80                                  |
+| Ni2+        | I = 0.10 M (aq, NaNO3) | 6.74                      | 5.36             | 1.38                                  |
+| Zn2+        | I = 0.10 M (aq, NaClO4/KNO3) | 5.05              | —                | —                                      |
+
+Notes on data and definitions
+- Cu2+ + NH3 (25 °C): at I≈0–3 M, SRD‑46 reports log β1 ≈ 4.30 and log β2 ≈ 7.80 (β2 nearly constant over I), so 2·log K_NH3 = log β2 = 7.80 at I→0. Cu2+ + en (25 °C, I→0): log β1 = 10.6.  
+- Ni2+ + NH3 (25 °C): I→0 log β2 = 5.40; at I = 0.10 M, log β2 = 5.36. Ni2+ + en (25 °C, I = 0.10 M): log β1 = 6.74. (Ni values above are taken at I = 0.10 M for internal consistency.)  
+- Zn2+ + en at 25 °C: log β1 = 5.05 at I = 0.10 M (5.22 at I→0). Matched NH3 β2 values exist in the SRD‑46 catalog for Zn2+ but were not retrieved within this session, so Δ for Zn is left blank here.
+
+Answer to the question
+- From the completed Cu and Ni cases, the chelate effect magnitude clearly varies across metals: Δ_chelate ≈ 2.80 for Cu2+ (I→0) and ≈ 1.38 for Ni2+ (I = 0.10 M). Thus, it is not constant.
+- For Zn2+, the en complex is weaker than Ni2+ and Cu2+ at 25 °C, and based on the available en constant, its Δ_chelate is expected to be smaller than Cu2+ and likely comparable to or smaller than Ni2+, but a precise figure requires the matched NH3 β2 (not included above).
+
+Hypothesis for the differences (interpretive)
+- Electronic structure and LFSE/Jahn–Teller: Cu2+ (d9) often gains notable stabilization in chelate environments and can be strongly influenced by Jahn–Teller distortions that a bidentate ligand can accommodate, leading to a larger Δ. Ni2+ (d8) shows moderate ligand-field stabilization; the chelate effect is positive but smaller than for Cu2+. Zn2+ (d10) has no octahedral LFSE; its chelate advantage is driven more by entropy/preorganization than by electronic stabilization, so Δ is expected to be smaller.
+- Additional contributors include dehydration enthalpy and the better preorganization/entropy of binding for en relative to two NH3, but the extent of these benefits depends on the metal–ligand bond strength and geometry preferences, which differ across Cu2+, Ni2+, and Zn2+.
+
+Method notes
+- Δ_chelate was computed using log β1 for M(en) and log β2 for M(NH3)2 to capture both stepwise steps and statistical factors consistently.
+- Temperatures were 25 °C; ionic strengths were matched within each metal (Cu at I→0; Ni at I = 0.10 M). Small I‑dependence was observed in the NH3 data sets; cross‑metal comparisons should ideally use identical I, but the trends above are robust within the ranges reported.
+
+Source: NIST Standard Reference Database 46 (SRD‑46), aqueous formation constants for Cu2+–NH3/en, Ni2+–NH3/en, and Zn2+–en at ~25 °C.
+
+---

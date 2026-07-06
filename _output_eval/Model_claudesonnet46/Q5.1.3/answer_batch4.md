@@ -1,0 +1,77 @@
+# Iron vs. Copper: A Coordination Chemistry Comparison
+
+Here's a comprehensive comparison of iron and copper based on SRD-46 data.
+
+---
+
+## 1. Database Coverage Overview
+
+| Ion | metal_id | Charge | β-definitions | Ligands | VLMs (measurements) |
+|-----|----------|--------|--------------|---------|---------------------|
+| Fe³⁺ | metal_61 | +3 | 128 | 406 | 1,473 |
+| Fe²⁺ | metal_62 | +2 | 57 | 217 | 667 |
+| Cu²⁺ | metal_41 | +2 | 264 | 1,951 | 8,963 |
+| Cu⁺ | metal_42 | +1 | 32 | 117 | 285 |
+| Cu³⁺ | metal_43 | +3 | 4 | 8 | 10 |
+
+**Key insight:** Cu²⁺ is by far the most-studied ion in SRD-46 — nearly **6× more VLMs** than Fe³⁺ and **13× more than Fe²⁺**. This reflects copper's central role in bioinorganic chemistry, catalysis, and industrial applications.
+
+---
+
+## 2. Top Ligand Systems for Fe³⁺
+
+| Rank | Ligand | VLMs | Notable Species |
+|------|--------|------|-----------------|
+| 1 | Thiocyanic acid (SCN⁻) | 39 | ML, ML₂, ML₃, ML₄ |
+| 2 | Hydroxide (OH⁻) | 38 | ML–ML₄, M₂L₂, M₃L₄ (polynuclear!) |
+| 3 | Hydrazoic acid (N₃⁻) | 22 | ML–ML₅ |
+| 4 | Tiron (catecholsulfonate) | 16 | ML–ML₃ |
+| 5 | Acetic acid | 16 | ML, ML₂ + polynuclear |
+| 6 | NTA | 16 | ML + hydroxo species |
+| 7 | Salicylic acid | 15 | ML–ML₃ |
+| 8 | EDTA | 14 | ML + hydroxo |
+
+---
+
+## 3. Key Chemical Comparisons
+
+### Hard/Soft Acid Character
+| Property | Fe³⁺ | Fe²⁺ | Cu²⁺ | Cu⁺ |
+|----------|------|------|------|-----|
+| HSAB class | Hard acid | Borderline | Borderline | Soft acid |
+| Preferred donors | O >> N > S | N ≈ O > S | N > O > S | S > N >> O |
+| Coordination geometry | Octahedral | Octahedral | Square planar / Jahn-Teller distorted | Tetrahedral / linear |
+| Hydrolysis tendency | Very strong (Fe³⁺ hydrolyzes at pH > 3) | Moderate | Moderate | Low |
+
+### Ligand Breadth
+- **Cu²⁺** partners with **1,951 ligands** — the broadest coordination chemistry in the database, reflecting its versatility with N-, O-, and S-donors.
+- **Fe³⁺** partners with **406 ligands**, showing preference for hard O-donors (catecholates, hydroxamates, carboxylates).
+- **Fe²⁺** (217 ligands) and **Cu⁺** (117 ligands) are more selective.
+
+### Polynuclear Complex Formation
+Fe³⁺ shows extensive **polynuclear hydroxo complex** formation (M₂L₂, M₃L₄, M₇(OH)₉L₆ species observed), reflecting its strong tendency to hydrolyze and oligomerize in aqueous solution — a critical consideration in environmental and biological iron chemistry.
+
+---
+
+## 4. Chemistry Highlights
+
+| Theme | Iron | Copper |
+|-------|------|--------|
+| **Biology** | Oxygen transport (hemoglobin), electron transfer (cytochromes), Fe–S clusters | Electron transfer (blue copper proteins), oxidases (laccase, ceruloplasmin) |
+| **Chelation therapy** | Desferrioxamine targets Fe³⁺ via hydroxamate groups | D-penicillamine targets Cu²⁺ via thiol groups |
+| **Redox** | Fe³⁺/Fe²⁺ couple (E° = +0.77 V) — tunable by ligand field | Cu²⁺/Cu⁺ couple (E° = +0.16 V) — strongly ligand-dependent |
+| **Hydrolysis** | Fe³⁺ hydrolyzes at pH > 3; forms rust/goethite | Cu²⁺ hydrolyzes at pH > 6 |
+| **Industrial use** | Steel, catalysis, pigments | Electrical wiring, antimicrobials, catalysis |
+
+---
+
+## Summary
+
+Iron and copper represent two contrasting coordination chemistry paradigms in SRD-46:
+- **Fe³⁺** is a classic **hard acid** with a rich hydroxo/polynuclear chemistry and strong affinity for oxygen donors — making it the target of siderophore-based chelation in biology and environmental chemistry.
+- **Cu²⁺** is the database's **most-studied metal ion**, with unmatched ligand breadth and a borderline-to-soft character that makes it uniquely versatile across N-, O-, and S-donor environments.
+- The Fe³⁺/Fe²⁺ and Cu²⁺/Cu⁺ redox couples are both biologically exploited, but iron's higher charge density and harder character make it more prone to hydrolysis and precipitation under physiological conditions.
+
+*Source: NIST SRD-46 Critically Selected Stability Constants of Metal Complexes Database.*
+
+---

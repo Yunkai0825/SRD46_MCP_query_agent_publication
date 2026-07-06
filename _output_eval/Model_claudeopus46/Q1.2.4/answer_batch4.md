@@ -1,0 +1,23 @@
+## Ni²⁺–EDTA Equilibrium Networks (SRD-46)
+
+The Ni²⁺–EDTA system contains **2 distinct equilibrium networks**:
+
+| Network ID | Nodes | Edges | T range (°C) | I range (M) | Beta definitions |
+|------------|-------|-------|---------------|-------------|------------------|
+| ref_eq_net_5023 | 3 | 3 | 20–30 | −0.05–0.25 | β_def_966, β_def_788, β_def_812 |
+| ref_eq_net_5024 | 3 | 3 | 19–29 | 0.85–1.15 | β_def_966, β_def_739, β_def_788 |
+
+Both networks have the same node count (3), so they tie for "largest." Selecting **ref_eq_net_5023** (the low-ionic-strength, reference-condition network), its **3 VLM node IDs** are:
+
+| VLM ID | Equilibrium | log K |
+|--------|-------------|-------|
+| **vlm_108585** | [M(OH)L] + [H] ⇌ [ML] + H₂O | −11.9 |
+| **vlm_108586** | [ML] + [H] ⇌ [MHL] | 3.1 |
+| **vlm_108587** | [M] + [L] ⇌ [ML] | 18.4 |
+
+### Chemistry insight
+The dominant species is the 1:1 Ni–EDTA complex (log K = 18.4), reflecting EDTA's exceptional hexadentate chelation of Ni²⁺. The protonated complex MHL (log K = 3.1 for the protonation step) is relevant near pH 3, while the hydroxo species M(OH)L only becomes significant at very high pH (log K = −11.9). The two networks differ mainly in ionic strength regime, with the higher-I network (ref_eq_net_5024) additionally including the MH₂L species (β_def_739) instead of the overall formation constant (β_def_812).
+
+*Source: NIST SRD-46 (Critically Selected Stability Constants of Metal Complexes)*
+
+---

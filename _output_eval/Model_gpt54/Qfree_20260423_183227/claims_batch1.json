@@ -1,0 +1,1392 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Qfree_20260423_183227\\Qfree_20260423_183227_result_batch1.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "# Qfree_20260423_183227 -- Result (batch 1)\n\n**Section:** freeform -- Fe(III) vs Fe(II) ligand screening\n\n**Prompt:** I would like to find ligands that can complex Fe(III) to stabilize the acidic solution (pH<5), yet with limited complexation to Fe(II) so that it does not decrease the free Fe2+ concentration too much. This is for Fe electrodeposition since we also try to minimize the hydrogen evolution reaction when Fe electrodeposition happens. The expected concentration of Fe(II) is ~0.1M. Meanwhile, be cautious about ligand pH and its actual state, and be cautious about possible precipitations. If there are missing entries, try to observe similar metal-ligand systems with available data to estimate those with very robust reasons and explanations. You have unlimited time and unlimited turns.\n\n**Tool calls:** 15  |  **Time:** 117s planning + 234s execution + 0s verdict = 351s total\n\n---\n\nSRD-46 points to a **small acidic-window shortlist** rather than a perfect ligand. For your goal—**hold Fe(III) in solution at pH < 5, but avoid tying up Fe(II) (~0.1 M) too strongly**—the best-supported candidates in the retrieved SRD-46 data are **5-sulfosalicylic acid**, **salicylic acid**, and then **citric acid** with more caution.",
+        "claims": [
+          {
+            "start": 902,
+            "end": 918,
+            "text": "SRD-46 points to",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 919,
+            "end": 984,
+            "text": "a **small acidic-window shortlist** rather than a perfect ligand.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 985,
+            "end": 999,
+            "text": "For your goal—",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1001,
+            "end": 1025,
+            "text": "hold Fe(III) in solution",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1029,
+            "end": 1035,
+            "text": "pH < 5",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1037,
+            "end": 1062,
+            "text": "but avoid tying up Fe(II)",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1064,
+            "end": 1070,
+            "text": "~0.1 M",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1087,
+            "end": 1116,
+            "text": "the best-supported candidates",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1117,
+            "end": 1145,
+            "text": "in the retrieved SRD-46 data",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1150,
+            "end": 1221,
+            "text": "**5-sulfosalicylic acid**, **salicylic acid**, and then **citric acid**",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1222,
+            "end": 1239,
+            "text": "with more caution",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "WHERE: (c.metal_name_SRD LIKE '%Fe%' OR c.metal_name_SRD LIKE '%iron%')",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "Args.where: (c.metal_name_SRD LIKE '%Fe%' OR c.metal_name_SRD LIKE '%iron%')"
+              },
+              {
+                "step": "Step 7",
+                "tool": "db_distribution",
+                "snippet": "ligandmetal_card by metal_name_SRD … | Fe^[3+] | 1473 | … | Fe^[2+] | 667 | …"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "The tool results list logK, pKa, I, T, etc., but no rows state a target “pH < 5” condition.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "“~0.1 M” refers to expected Fe(II) concentration; SRD-46 outputs show ionic strength (I), not Fe(II) bulk concentration.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "WHERE includes: c.metal_name_SRD = 'Fe^[3+]' OR 'Fe^[2+]' AND c.ligand_name_SRD LIKE '%salicylic acid%' OR '%citric acid%'",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "Args.where: ((c.metal_name_SRD = 'Fe^[3+]' OR c.metal_name_SRD = 'Fe^[2+]') AND (c.ligand_name_SRD LIKE '%citric acid%' … OR c.ligand_name_SRD LIKE '%salicylic acid%' …))"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_networks",
+                "snippet": "Metal-ligand pair summary includes Fe^[3+]/Fe^[2+] with salicylic acid, 5‑sulfosalicylic acid, and citric acid entries."
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "ligand_9284",
+              "ligand_9257",
+              "ligand_9058"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Global max-node network: `Fe^[2+]` + 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid)",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_networks",
+                "snippet": "| `Fe^[3+]` | metal_61 | 2-Hydroxy-5-sulfobenzoic acid (5-Sulfosalicylic acid) | ligand_9284 | …"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_networks",
+                "snippet": "| `Fe^[3+]` | metal_61 | 2-Hydroxybenzoic acid (Salicylic acid) | ligand_9257 | …"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_networks",
+                "snippet": "Global max-node network: `Fe^[2+]` + 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid)"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "## Best-supported shortlist from SRD-46\n\n| Ligand | Fe(III) evidence in SRD-46 | Fe(II) evidence in SRD-46 | Acid-state / protonation caution | Practical judgment for Fe electrodeposition |\n|---|---:|---:|---|---|\n| **5-Sulfosalicylic acid** | Fe(III) present; 7 VLM, 3 β-definitions; network summary says richer Fe(III) complexation | Fe(II) present but only 1 VLM / 1 β-definition; network summary says trivial Fe(II) network | COOH pKa ~2.48; phenol remains protonated until much higher pH; sulfonate stays ionized but is a weak donor | **Best current candidate**: likely enough Fe(III) stabilization in pH ~3–5 with comparatively limited Fe(II) loss |\n| **Salicylic acid** | Fe(III) present; 11 VLM, 3 β-definitions; network summary richer than Fe(II) | Fe(II) present; 2 VLM, 2 β-definitions | Below ~pH 2 mostly too protonated; at pH 3–5 carboxylate becomes available, phenol mostly protonated | **Good conditional candidate** for **pH ~3–5**, but less water-friendly / less acid-robust than sulfosalicylate |\n| **Citric acid** | Fe(III) present; 6 VLM, 4 β-definitions | Fe(II) present more substantially; 11 VLM, 5 β-definitions | pKa 2.9, 4.35, 5.65; donor set turns on across pH 3–5 | **Usable but risky**: good Fe(III) solubilizer, but also more likely to reduce free Fe2+ if overdosed |\n| **Glycine** | Fe(III) present; 6 VLM, 3 β-definitions | Fe(II) present; 10 VLM, 3 β-definitions | pKa 2.33, 9.57; amine protonated in acid | **Not attractive**: weakly helpful in strong acid and not clearly selective enough |\n| **Diglycine** | Fe(III) present; 1 VLM | Fe(II) present; 1 VLM | Still strongly protonated below pH 5 | **Low priority** |\n| **HEDTA-like aminocarboxylate** | Fe(III) present; 7 VLM, 5 β-definitions | Fe(II) also present; 2 VLM, 2 β-definitions | Multidentate ligand still develops donor capacity in pH 3–5 | **Avoid** if preserving free Fe2+ is important |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 27,
+            "text": "## Best-supported shortlist",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 28,
+            "end": 39,
+            "text": "from SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 214,
+            "end": 655,
+            "text": "| **5-Sulfosalicylic acid** | Fe(III) present; 7 VLM, 3 β-definitions; network summary says richer Fe(III) complexation | Fe(II) present but only 1 VLM / 1 β-definition; network summary says trivial Fe(II) network | COOH pKa ~2.48; phenol remains protonated until much higher pH; sulfonate stays ionized but is a weak donor | **Best current candidate**: likely enough Fe(III) stabilization in pH ~3–5 with comparatively limited Fe(II) loss |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 656,
+            "end": 1015,
+            "text": "| **Salicylic acid** | Fe(III) present; 11 VLM, 3 β-definitions; network summary richer than Fe(II) | Fe(II) present; 2 VLM, 2 β-definitions | Below ~pH 2 mostly too protonated; at pH 3–5 carboxylate becomes available, phenol mostly protonated | **Good conditional candidate** for **pH ~3–5**, but less water-friendly / less acid-robust than sulfosalicylate |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1016,
+            "end": 1298,
+            "text": "| **Citric acid** | Fe(III) present; 6 VLM, 4 β-definitions | Fe(II) present more substantially; 11 VLM, 5 β-definitions | pKa 2.9, 4.35, 5.65; donor set turns on across pH 3–5 | **Usable but risky**: good Fe(III) solubilizer, but also more likely to reduce free Fe2+ if overdosed |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1299,
+            "end": 1526,
+            "text": "| **Glycine** | Fe(III) present; 6 VLM, 3 β-definitions | Fe(II) present; 10 VLM, 3 β-definitions | pKa 2.33, 9.57; amine protonated in acid | **Not attractive**: weakly helpful in strong acid and not clearly selective enough |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1527,
+            "end": 1651,
+            "text": "| **Diglycine** | Fe(III) present; 1 VLM | Fe(II) present; 1 VLM | Still strongly protonated below pH 5 | **Low priority** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1652,
+            "end": 1886,
+            "text": "| **HEDTA-like aminocarboxylate** | Fe(III) present; 7 VLM, 5 β-definitions | Fe(II) also present; 2 VLM, 2 β-definitions | Multidentate ligand still develops donor capacity in pH 3–5 | **Avoid** if preserving free Fe2+ is important |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool results from the NIST SRD-46 context are present (e.g., search_stability — 200 row(s) for Fe^[3+]/Fe^[2+]).",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali… | H2L | … | 11 | 3 | 20~25 | 0~3 | *** | 7 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "db_distribution",
+                "snippet": "value | count | pct\nFe^[3+] | 1473 | 68.83%\nFe^[2+] | 667 | 31.17%"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_9284",
+              "vlm_160822"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_61 | Fe^[3+] | ligand_9284 | 2-Hydroxy-5-sulfobenzoic ac… | … | 7 | 3 | 20~25 | 0.1~3 |",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_9284 | 2-Hydroxy-5-sulfobenzoic ac… | H3L | … | 7 | 3 | 20~25 | 0.1~3 | *** | 4 |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_9284 | 2-Hydroxy-5-sulfobenzoic ac… | H3L | … | 1 | 1 | 20 | 0.1 | *** | 1 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_160822 | ligand_9284 | 2-Hydroxy-5-sulfobenzoic acid (5-S… | H3L | … | 2.48 | 25 | 0.1 | HL→H2L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_9257",
+              "vlm_160226"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_61 | Fe^[3+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali… | … | 11 | 3 | 20~25 | 0~3 |",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali… | H2L | … | 11 | 3 | 20~25 | 0~3 | *** | 7 |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali… | H2L | … | 2 | 2 | 20 | 0.1 | *** | 1 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_160226 | ligand_9257 | 2-Hydroxybenzoic acid (Salicylic a… | H2L | … | 2.8 | 25 | 0.1 | HL→H2L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_9058",
+              "vlm_157473",
+              "vlm_157459",
+              "vlm_157439"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_62 | Fe^[2+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | … | 11 | 5 | 20~37 | 0.1~3 |",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | … | 6 | 4 | 20~25 | 0.1~1 | *** | 3 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157473 | ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyl… | H3L | … | 2.9 | 25 | 0.1 | H2L→H3L |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157459 | ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyl… | H3L | … | 4.35 | 25 | 0.1 | HL→H2L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_5760",
+              "vlm_93627",
+              "vlm_93606"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_62 | Fe^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | … | 10 | 3 | 10~40 | 0~3 |",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | … | 6 | 3 | 25 | 0.5~3 | *** | 3 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | HL | … | 2.33 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93606 | ligand_5760 | Aminoacetic acid (Glycine) | HL | … | 9.57 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_6372",
+              "vlm_113459",
+              "vlm_113440"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_61 | Fe^[3+] | ligand_6372 | Glycylglycine (Diglycine) | HL | NCC(=O)NCC(=O)O | 1 | 1 | 20 | 1 | *** | 1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_6372 | Glycylglycine (Diglycine) | HL | NCC(=O)NCC(=O)O | 1 | 1 | 20 | 1 | *** | 1 |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_6372 | Glycylglycine (Diglycine) | HL | NCC(=O)NCC(=O)O | 1 | 1 | 20 | 1 | *** | 1 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_113440 | ligand_6372 | Glycylglycine (Diglycine) | HL | NCC(=O)NCC(=O)O | 8.09 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_6275"
+            ],
+            "support_class": "unsupported",
+            "evidence_snippet": "Mismatch: DB shows Fe^[3+]+HEDTA vlm_counts 2, beta_counts 4; Fe^[2+] vlm_counts 1, beta_counts 2 — not 7/5 and 2/2.",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_6275 | N-(2-Hydroxyethyl)ethylened… | H3L | … | 2 | 4 | 25 | 0.1~1 | *** | 2 |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_6275 | N-(2-Hydroxyethyl)ethylened… | H3L | … | 1 | 2 | 25 | 0.1 | *** | 1 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "## pKa-based acidic feasibility\n\n| Ligand | Retrieved pKa information | What that means at pH < 5 |\n|---|---|---|\n| **Citric acid** | 2.9, 4.35, 5.65 | At pH 3–5, 1–2 carboxylates are available, so Fe(III) binding becomes plausible |\n| **Salicylic acid** | ~2.8 for COOH; phenol much less acidic | Real chelation is much better near pH 3–5 than at pH < 2 |\n| **5-Sulfosalicylic acid** | ~2.48 for COOH, ~11.85 for phenol; sulfonate strongly acidic | At pH 3–5, carboxylate is available and sulfonate helps solubility; phenol mostly still protonated |\n| **Glycine** | 2.33, 9.57 | Mostly zwitterionic / protonated in your window; limited chelation in acid |\n| **Diglycine** | 3.11, 8.09 | Similar story; modest donor availability only near upper end of your pH window |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 31,
+            "text": "## pKa-based acidic feasibility",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 114,
+            "end": 233,
+            "text": "| **Citric acid** | 2.9, 4.35, 5.65 | At pH 3–5, 1–2 carboxylates are available, so Fe(III) binding becomes plausible |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 234,
+            "end": 356,
+            "text": "| **Salicylic acid** | ~2.8 for COOH; phenol much less acidic | Real chelation is much better near pH 3–5 than at pH < 2 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 357,
+            "end": 550,
+            "text": "| **5-Sulfosalicylic acid** | ~2.48 for COOH, ~11.85 for phenol; sulfonate strongly acidic | At pH 3–5, carboxylate is available and sulfonate helps solubility; phenol mostly still protonated |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 551,
+            "end": 656,
+            "text": "| **Glycine** | 2.33, 9.57 | Mostly zwitterionic / protonated in your window; limited chelation in acid |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 657,
+            "end": 768,
+            "text": "| **Diglycine** | 3.11, 8.09 | Similar story; modest donor availability only near upper end of your pH window |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_9058",
+              "vlm_157473",
+              "vlm_157459",
+              "vlm_157439"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "…(Citric acid)… (2.9, vlm_157473); … (4.35, vlm_157459); … (5.65, vlm_157439)…",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid) | … (2.9, vlm_157473); … (4.35, vlm_157459); … (5.65, vlm_157439) … | 25 | 0.1"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_157473 | ligand_9058 | … | pKa | 2.9 | 25 | 0.1 | …"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_157459 | ligand_9058 | … | pKa | 4.35 | 25 | 0.1 | …"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_9257",
+              "vlm_160226"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "…(Salicylic acid)… L (M_tot_3); (2.8, vlm_160226)…",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_9257 | 2-Hydroxybenzoic acid (Salicylic acid) | … HL (M_tot_37); (-13.4, vlm_160211); L (M_tot_3); (2.8, vlm_160226); … | 25 | 0.1"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_160226 | ligand_9257 | 2-Hydroxybenzoic acid (Salicylic a…) | … | pKa | 2.8 | 25 | 0.1 | HL→H2L"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_9284",
+              "vlm_160822",
+              "vlm_160810"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "…(5-Sulfosalicylic acid)… (2.48, vlm_160822); … (11.85, vlm_160810)…",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_9284 | 2-Hydroxy-5-sulfobenzoic acid (5-Sulfosalicylic acid) | … (2.48, vlm_160822); … (11.85, vlm_160810) … | 25 | 0.1"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_160822 | ligand_9284 | … | pKa | 2.48 | 25 | 0.1 | HL→H2L"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_160810 | ligand_9284 | … | pKa | 11.85 | 25 | 0.1 | L→HL"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_5760",
+              "vlm_93627",
+              "vlm_93606"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "…(Glycine)… (2.33, vlm_93627); … (9.57, vlm_93606)…",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5760 | Aminoacetic acid (Glycine) | … (2.33, vlm_93627); … (9.57, vlm_93606) … | 25 | 0.1"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | … | pKa | 2.33 | 25 | 0.1 | HL→H2L"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_93606 | ligand_5760 | Aminoacetic acid (Glycine) | … | pKa | 9.57 | 25 | 0.1 | L→HL"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_6372",
+              "vlm_113459",
+              "vlm_113440"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Glycylglycine (Diglycine) … pKa 3.11 … (vlm_113459); and 8.09 … (vlm_113440)",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_113459 | ligand_6372 | Glycylglycine (Diglycine) | … | pKa | 3.11 | 25 | 0.1 | HL→H2L"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_113440 | ligand_6372 | Glycylglycine (Diglycine) | … | pKa | 8.09 | 25 | 0.1 | L→HL"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "## Recommended ranking for your use case\n\n| Rank | Ligand | Why |\n|---:|---|---|\n| 1 | **5-Sulfosalicylic acid** | Best SRD-46 balance of **Fe(III)-favored complexation** with **limited Fe(II) evidence**, plus good acid solubility logic |\n| 2 | **Salicylic acid** | Also Fe(III)-favored over Fe(II), but more protonation/solubility caution |\n| 3 | **Citric acid** | Strong practical Fe(III) stabilizer, but much more likely than the salicylates to **decrease free Fe2+** at meaningful dosage |\n| 4 | **Glycine / diglycine** | Too protonated / too weak / not clearly selective enough |\n| 5 | **HEDTA-like aminocarboxylates** | Too likely to complex Fe(II) substantially |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 40,
+            "text": "## Recommended ranking for your use case",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 81,
+            "end": 238,
+            "text": "| 1 | **5-Sulfosalicylic acid** | Best SRD-46 balance of **Fe(III)-favored complexation** with **limited Fe(II) evidence**, plus good acid solubility logic |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 239,
+            "end": 341,
+            "text": "| 2 | **Salicylic acid** | Also Fe(III)-favored over Fe(II), but more protonation/solubility caution |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 342,
+            "end": 493,
+            "text": "| 3 | **Citric acid** | Strong practical Fe(III) stabilizer, but much more likely than the salicylates to **decrease free Fe2+** at meaningful dosage |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 494,
+            "end": 584,
+            "text": "| 4 | **Glycine / diglycine** | Too protonated / too weak / not clearly selective enough |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 585,
+            "end": 670,
+            "text": "| 5 | **HEDTA-like aminocarboxylates** | Too likely to complex Fe(II) substantially |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_9284"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+] + 2-Hydroxy-5-sulfobenzoic acid: vlm_counts 7; Fe^[2+] + same ligand: vlm_counts 1.",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_9284 | 2-Hydroxy-5-sulfobenzoic ac… | H3L | … | 7 | 3 | 20~25 | 0.1~3 |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_9284 | 2-Hydroxy-5-sulfobenzoic ac… | H3L | … | 1 | 1 | 20 | 0.1 |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_networks",
+                "snippet": "Fe^[3+] + 2-Hydroxy-5-sulfobenzoic acid … net_count 4 … | Fe^[2+] + 2-Hydroxy-5-sulfobenzoic acid … net_count 1"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_9257"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+] + salicylic acid: vlm_counts 11; Fe^[2+] + salicylic acid: vlm_counts 2. pKa steps include 2.8.",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali… | … | 11 | 3 | 20~25 | 0~3 |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali… | … | 2 | 2 | 20 | 0.1 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_160226 | ligand_9257 | 2-Hydroxybenzoic acid (Salicylic a…) | … | pKa | 2.8 | 25 | 0.1 | HL→H2L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_9058",
+              "ligand_9257",
+              "ligand_9284"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[2+] + citric acid: vlm_counts 11; Fe^[3+] + citric acid: vlm_counts 6. Fe^[2+] + salicylic: 2; +5‑sulfosalicylic: 1.",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | … | 11 | 5 | 20~37 | 0.1~3 |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | … | 6 | 4 | 20~25 | 0.1~1 |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_9257 | 2-Hydroxybenzoic acid (Sali…) | … | 2 | 2 | 20 | 0.1 | … || metal_62 | Fe^[2+] | ligand_9284 | … | 1 | 1 | 20 | 0.1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_5760",
+              "ligand_6372"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Glycine complexes with both Fe^[2+] (vlm 10) and Fe^[3+] (vlm 6); diglycine with Fe^[2+] and Fe^[3+] (1 each). Glycine pKa 9.57.",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | … | 10 | 3 | 10~40 | 0~3 |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_5760 | Aminoacetic acid (Glycine) | … | 6 | 3 | 25 | 0.5~3 | … || metal_62 | Fe^[2+] | ligand_6372 | Glycylglycine (Diglycine) | … | 1 | 1 | 20 | 1 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93606 | ligand_5760 | Aminoacetic acid (Glycine) | … | pKa | 9.57 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_62",
+              "ligand_6275"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Fe^[2+] forms complexes with HEDTA-like N-(2-Hydroxyethyl)ethylenedinitrilotriacetic acid (vlm_counts 1; beta_counts 2).",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_6275 | N-(2-Hydroxyethyl)ethylened… | H3L | … | 1 | 2 | 25 | 0.1 |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_6275 | N-(2-Hydroxyethyl)ethylened… | H3L | … | 2 | 2 | 25 | 0.1 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "## Interpretation for plating-bath design\n\n| Design point | SRD-46-grounded implication |\n|---|---|\n| **Very low pH (<~2.5)** | None of the retrieved ligands look ideal; most are too protonated, so Fe(III) stabilization by ligand complexation is limited |\n| **pH ~3–5** | This is the realistic window where the shortlisted O-donor ligands begin to work |\n| **Need to keep free Fe2+ near 0.1 M** | Favor **low-to-moderate ligand concentration** and avoid multidentate aminocarboxylates like HEDTA-like systems |\n| **Avoid Fe(III) precipitation/hydrolysis** | Ligands that give some Fe(III) complexation in this window help, but retrieved network summaries did **not explicitly resolve precipitation risk**, so absence of a precipitate node is **not proof of safety** |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 41,
+            "text": "## Interpretation for plating-bath design",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 100,
+            "end": 255,
+            "text": "| **Very low pH (<~2.5)** | None of the retrieved ligands look ideal; most are too protonated, so Fe(III) stabilization by ligand complexation is limited |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 256,
+            "end": 354,
+            "text": "| **pH ~3–5** | This is the realistic window where the shortlisted O-donor ligands begin to work |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 355,
+            "end": 510,
+            "text": "| **Need to keep free Fe2+ near 0.1 M** | Favor **low-to-moderate ligand concentration** and avoid multidentate aminocarboxylates like HEDTA-like systems |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 511,
+            "end": 767,
+            "text": "| **Avoid Fe(III) precipitation/hydrolysis** | Ligands that give some Fe(III) complexation in this window help, but retrieved network summaries did **not explicitly resolve precipitation risk**, so absence of a precipitate node is **not proof of safety** |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_5760",
+              "ligand_9058",
+              "ligand_9257",
+              "ligand_9284",
+              "ligand_6021",
+              "ligand_6372",
+              "vlm_93627",
+              "vlm_157473",
+              "vlm_160226"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "pKa near/above ~2.5: Glycine 2.33; Salicylic acid 2.8; Citric acid 2.9 → ligands mostly protonated below ~2.5.",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_93627 | ligand_5760 | Aminoacetic acid (Glycine) | ... | pKa | 2.33 | 25 | 0.1 | HL→H2L"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_160226 | ligand_9257 | 2-Hydroxybenzoic acid (Salicylic a…) | ... | pKa | 2.8 | 25 | 0.1 | HL→H2L"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_157473 | ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyl… | ... | pKa | 2.9 | 25 | 0.1 | H2L→H3L"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_9058",
+              "ligand_6372",
+              "ligand_9257",
+              "ligand_5760",
+              "vlm_157459",
+              "vlm_157439",
+              "vlm_113459"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Deprotonations in 3–5 range: Citric acid pKa 4.35 and 5.65; Diglycine pKa 3.11; Salicylic acid HL→H2L at 2.8.",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_157459 | ligand_9058 | ... | pKa | 4.35 | 25 | 0.1 | HL→H2L"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_157439 | ligand_9058 | ... | pKa | 5.65 | 25 | 0.1 | L→HL"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_113459 | ligand_6372 | Glycylglycine (Diglycine) | ... | pKa | 3.11 | 25 | 0.1 | HL→H2L"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_62",
+              "metal_61",
+              "ligand_6275",
+              "vlm_107963",
+              "vlm_107958",
+              "vlm_107949"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "HEDTA-like ligand present and multidentate: N-(2-Hydroxyethyl)ethylenedinitrilotriacetic acid shows multiple pKa (2.62, 5.38, 9.7).",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_107963 | ligand_6275 | N-(2-Hydroxyethyl)ethylenedinitril… | pKa | 2.62 | 25 | 0.1 | H2L→H3L"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_107958 | ligand_6275 | ... | pKa | 5.38 | 25 | 0.1 | HL→H2L"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_pka_values",
+                "snippet": "vlm_107949 | ligand_6275 | ... | pKa | 9.7 | 25 | 0.1 | L→HL"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "beta_def_966",
+              "beta_def_246",
+              "beta_def_263",
+              "beta_def_238"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Reference equilibrium networks (compact) built at low I; beta-defs include hydroxo species, no explicit solids/precipitates listed.",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_networks",
+                "snippet": "Reference equilibrium networks (compact) — each network is built around room-temperature (≈20–25 °C) and low ionic-strength (≈0 M) anchor conditions."
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_networks",
+                "snippet": "Beta-definition legend | beta_def_966 | ``[M(OH)L] + [H] <=> [ML] + [H2O]``; beta_def_246 | ``[M] + [OH]^2 + [L] <=> [M(OH)2L]``"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "## My practical conclusion\n\n| Recommendation | Confidence from SRD-46 |\n|---|---|\n| Start with **5-sulfosalicylic acid** as first screening additive | **Best supported** |\n| Test **salicylic acid** only if bath composition allows its solubility and pH is closer to 3–5 than to 1–2 | **Moderate** |\n| Use **citrate** only cautiously and at restrained concentration because it is more likely to tie up Fe(II) | **Moderate, but caution-heavy** |\n\nChemically, this makes sense: **Fe(III)** is a harder, more hydrolysis-prone ion, so even partially deprotonated O-donor ligands can help keep it soluble, while **Fe(II)** usually needs either higher pH or stronger donor sets to be strongly chelated. That is why **acid-soluble, moderately strong O-donor ligands** often give the best compromise for iron plating baths.\n\n**Source: NIST SRD-46.**\n\nIf you want, I can next do a **second-pass SRD-46 screen focused on analog ligands** around **sulfosalicylate / salicylate / citrate families** and build a more explicit **estimated Fe(III)-selectivity ranking with precipitation cautions**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 26,
+            "text": "## My practical conclusion",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 82,
+            "end": 171,
+            "text": "| Start with **5-sulfosalicylic acid** as first screening additive | **Best supported** |",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 172,
+            "end": 297,
+            "text": "| Test **salicylic acid** only if bath composition allows its solubility and pH is closer to 3–5 than to 1–2 | **Moderate** |",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 298,
+            "end": 442,
+            "text": "| Use **citrate** only cautiously and at restrained concentration because it is more likely to tie up Fe(II) | **Moderate, but caution-heavy** |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 444,
+            "end": 473,
+            "text": "Chemically, this makes sense:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 474,
+            "end": 525,
+            "text": "**Fe(III)** is a harder, more hydrolysis-prone ion,",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 526,
+            "end": 598,
+            "text": "so even partially deprotonated O-donor ligands can help keep it soluble,",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 599,
+            "end": 694,
+            "text": "while **Fe(II)** usually needs either higher pH or stronger donor sets to be strongly chelated.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 695,
+            "end": 813,
+            "text": "That is why **acid-soluble, moderately strong O-donor ligands** often give the best compromise for iron plating baths.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 815,
+            "end": 839,
+            "text": "**Source: NIST SRD-46.**",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 841,
+            "end": 1081,
+            "text": "If you want, I can next do a **second-pass SRD-46 screen focused on analog ligands** around **sulfosalicylate / salicylate / citrate families** and build a more explicit **estimated Fe(III)-selectivity ranking with precipitation cautions**.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_62",
+              "ligand_9058",
+              "beta_def_812",
+              "beta_def_779"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[2+] + citric acid forms complexes: [M]+[L]⇌[ML] logK 4.56; [M]+[HL]⇌[MHL] logK 3.1 (indicative of Fe(II) binding).",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_networks",
+                "snippet": "Global max-node network: `Fe^[2+]` + 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid)\n| beta_def_812 | ``[M] + [L] <=> [ML]`` | logK | 4.56 |\n| beta_def_779 | ``[M] + [HL] <=> [MHL]`` | logK | 3.1 |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | vlm_counts 11 | beta_counts 5 | T 20~37 | I 0.1~3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe(III) hardness and hydrolysis propensity are general inorganic chemistry facts; not stated in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General principle: O-donor ligands stabilize Fe(III) via complexation; not a specific SRD-46 row.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General trend: Fe(II) often needs higher pH/stronger donors for strong chelation; not directly listed in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Practice guidance about ligand choice in baths is general reasoning; not a specific database datum.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Tool outputs from the NIST Standard Reference Database 46 (SRD-46) were used in this run.",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "Fe complexes present (SRD-46 query): | metal_61 | Fe^[3+] | ligand_9257 | 2-Hydroxybenzoic acid (Salicylic acid) | … |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_networks",
+                "snippet": "Reference equilibrium networks for Fe^[2+]/Fe^[3+] with citric/salicylic/5-sulfosalicylic acids are listed (SRD-46 anchor conditions)."
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+Based on the data retrieved from NIST SRD-46, here is a comprehensive summary of the stability constants available for **Ag⁺ with ammonia**:
+
+---
+
+## Ag⁺ – Ammonia Stability Constants (NIST SRD-46)
+
+### Species Overview
+
+| Species | Equation | β Definition | # Measurements |
+|---------|----------|-------------|----------------|
+| [Ag(NH₃)]⁺ | Ag⁺ + NH₃ ⇌ [Ag(NH₃)]⁺ | β₁ (beta_def_812) | 22 entries |
+| [Ag(NH₃)₂]⁺ | Ag⁺ + 2 NH₃ ⇌ [Ag(NH₃)₂]⁺ | β₂ (beta_def_840) | 25 entries |
+
+---
+
+### log K (Cumulative Stability Constants) at 25 °C
+
+| Species | Constant | Value Range (log K) | T (°C) | Ionic Strength I (M) | # Sources |
+|---------|----------|---------------------|--------|----------------------|-----------|
+| [Ag(NH₃)]⁺ | log β₁ | **3.20 – 3.80** | 25 | 0 – 5 | 13 networks |
+| [Ag(NH₃)₂]⁺ | log β₂ | **7.14 – 8.18** | 25 | 0 – 5 | 16 networks |
+
+---
+
+### Thermodynamic Data at 25 °C
+
+| Species | ΔH (kJ/mol) | ΔS (J/mol·K) | # Sources |
+|---------|-------------|--------------|-----------|
+| [Ag(NH₃)]⁺ | −25.9 to −20.5 | −12.1 to −5.4 | 5 / 4 |
+| [Ag(NH₃)₂]⁺ | −61.9 to −56.1 | −55.6 to −46.4 | 5 / 4 |
+
+---
+
+### Key Observations
+
+- **All measurements are at 25 °C**, spanning a wide ionic strength range (0–5 M), which explains the spread in log β values — higher ionic strength generally shifts apparent constants.
+- The **diamine complex [Ag(NH₃)₂]⁺ is strongly favored** (log β₂ ≈ 7.1–8.2), making it the dominant species in ammonia-rich solutions. This is the basis of Tollens' reagent, where excess ammonia stabilizes Ag⁺ against precipitation.
+- The **negative ΔH values** confirm that complexation is enthalpically driven, while the **negative ΔS** reflects the ordering of ammonia ligands around Ag⁺ — a typical pattern for small, charge-dense metal ions.
+- Ag⁺ forms only **two ammine complexes** (unlike Cu²⁺ or Ni²⁺ which can form up to 4 or 6), consistent with its d¹⁰ configuration and preference for linear coordination geometry.
+
+> **Source:** NIST SRD-46 Standard Reference Database, metal_2 (Ag⁺) × ligand_10103 (Ammonia), 47 total entries across 16 reference equilibrium networks.
+
+---

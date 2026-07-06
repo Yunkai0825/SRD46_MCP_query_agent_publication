@@ -1,0 +1,1132 @@
+# Q2.1.6 — Tool Results (batch 5)
+
+### Step 2: `search_metals`
+**Args:**
+```json
+{
+  "name": "Cadmium, Lead, Mercury",
+  "limit": 20
+}
+```
+
+[summary]
+## search_metals
+
+*(no results)*
+
+---
+
+### Step 3: `search_ligands`
+**Args:**
+```json
+{
+  "name": "thiocyan*",
+  "limit": 50
+}
+```
+
+[summary]
+## search_ligands
+
+*(no results)*
+
+---
+
+### Step 4: `search_metals`
+**Args:**
+```json
+{
+  "symbol": "Cd, Pb, Hg",
+  "limit": 20
+}
+```
+
+[summary]
+## search_metals
+
+*(no results)*
+
+---
+
+### Step 5: `search_ligands`
+**Args:**
+```json
+{
+  "name": "thiocyanate, thiocyanic acid, rhodanide, SCN",
+  "limit": 100
+}
+```
+
+[summary]
+## search_ligands
+
+*(no results)*
+
+---
+
+### Step 7: `build_system_catalog`
+**Args:**
+```json
+{}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog
+
+**Error:** Provide at least one of metal_id, ligand_id, or beta_definition_id.
+
+---
+
+### Step 8: `search_stability`
+**Args:**
+```json
+{
+  "where": "(c.metal_name_SRD LIKE 'Cadmium%') AND (c.ligand_name_SRD LIKE '%thiocyan%' OR c.ligand_name_SRD LIKE '%rhodan%')",
+  "order_by": "s.constant_value DESC",
+  "limit": 100
+}
+```
+
+[PHASE ERROR] Tool 'search_stability' is not available yet. You must call 0_plan_search_strategy first (PHASE 2) before using the execution tools.
+
+---
+
+### Step 9: `search_stability`
+**Args:**
+```json
+{
+  "where": "(c.metal_name_SRD LIKE 'Lead%') AND (c.ligand_name_SRD LIKE '%thiocyan%' OR c.ligand_name_SRD LIKE '%rhodan%')",
+  "order_by": "s.constant_value DESC",
+  "limit": 100
+}
+```
+
+[PHASE ERROR] Tool 'search_stability' is not available yet. You must call 0_plan_search_strategy first (PHASE 2) before using the execution tools.
+
+---
+
+### Step 10: `search_stability`
+**Args:**
+```json
+{
+  "where": "(c.metal_name_SRD LIKE 'Mercury%') AND (c.ligand_name_SRD LIKE '%thiocyan%' OR c.ligand_name_SRD LIKE '%rhodan%')",
+  "order_by": "s.constant_value DESC",
+  "limit": 100
+}
+```
+
+[PHASE ERROR] Tool 'search_stability' is not available yet. You must call 0_plan_search_strategy first (PHASE 2) before using the execution tools.
+
+---
+
+### Step 11: `search_metals`
+**Args:**
+```json
+{
+  "name": "Cadmium(II), Cadmium, Cd(II), Lead(II), Lead, Pb(II), Mercury(II), Mercury, Hg(II)",
+  "symbol": "Cd, Pb, Hg",
+  "limit": 50
+}
+```
+
+[summary]
+## search_metals
+
+*(no results)*
+
+---
+
+### Step 12: `search_ligands`
+**Args:**
+```json
+{
+  "name": "thiocyanate, thiocyanic acid, isothiocyanic acid, isothiocyanate, rhodanide, rhodanate, thiocyanato, thiocyanate ion, SCN, SCN-",
+  "formula": "HSCN, HNCS, SCN",
+  "limit": 200
+}
+```
+
+[summary]
+## search_ligands
+
+*(no results)*
+
+---
+
+### Step 13: `search_metals`
+**Args:**
+```json
+{
+  "limit": 200
+}
+```
+
+[summary]
+## search_metals — 200 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_1 | Ac^[3+] | Ac | 3 | ✓ | [Ac+3] | InChI=1S/Ac/q+3 | beta_totN_4 | ligand_totN_9 | vlm_totN_23 |
+| metal_2 | Ag^[+] | Ag | 1 | ✓ | [Ag+] | InChI=1S/Ag/q+1 | beta_totN_68 | ligand_totN_649 | vlm_totN_2885 |
+| metal_3 | Ag^[2+] | Ag | 2 | ✓ | [Ag+2] | InChI=1S/Ag/q+2 | beta_totN_1 | ligand_totN_5 | vlm_totN_5 |
+| metal_4 | Ag^[3+] | Ag | 3 | ✓ | [Ag+3] | InChI=1S/Ag/q+3 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_5 | Al^[3+] | Al | 3 | ✓ | [Al+3] | InChI=1S/Al/q+3 | beta_totN_108 | ligand_totN_187 | vlm_totN_792 |
+| metal_6 | Am^[3+] | Am | 3 | ✓ | [Am+3] | InChI=1S/Am/q+3 | beta_totN_13 | ligand_totN_46 | vlm_totN_190 |
+| metal_7 | Am^[4+] | Am | 4 | ✓ | [Am+4] | InChI=1S/Am/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_8 | AmO_[2]^[2+] | Am | 2 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_9 | AmO_[2]^[+] | Am | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_10 | As^[3+] | As | 3 | ✓ | [As+3] | InChI=1S/As/q+3 | beta_totN_17 | ligand_totN_42 | vlm_totN_62 |
+| metal_11 | As^[5+] | As | 5 | ✓ | [As+5] | InChI=1S/As/q+5 | beta_totN_5 | ligand_totN_6 | vlm_totN_8 |
+| metal_12 | At^[+] | At | 1 | ✓ | [At+] | InChI=1S/At/q+1 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_13 | Au^[+] | Au | 1 | ✓ | [Au+] | InChI=1S/Au/q+1 | beta_totN_5 | ligand_totN_3 | vlm_totN_13 |
+| metal_14 | Au^[3+] | Au | 3 | ✓ | [Au+3] | InChI=1S/Au/q+3 | beta_totN_11 | ligand_totN_10 | vlm_totN_22 |
+| metal_15 | B^[3+] | B | 3 | ✓ | [B+3] | InChI=1S/B/q+3 | beta_totN_23 | ligand_totN_86 | vlm_totN_195 |
+| metal_16 | Bu_[3]Pb^[+] | B | 1 |  | *** | *** | beta_totN_2 | ligand_totN_1 | vlm_totN_2 |
+| metal_17 | Bu_[4]N^[+] | B | 1 |  | *** | *** | beta_totN_1 | ligand_totN_2 | vlm_totN_2 |
+| metal_18 | Ba^[2+] | Ba | 2 | ✓ | [Ba+2] | InChI=1S/Ba/q+2 | beta_totN_36 | ligand_totN_344 | vlm_totN_749 |
+| metal_19 | Be^[2+] | Be | 2 | ✓ | [Be+2] | InChI=1S/Be/q+2 | beta_totN_69 | ligand_totN_107 | vlm_totN_443 |
+| metal_20 | BuHg^[+] | B | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_21 | Bi^[3+] | Bi | 3 | ✓ | [Bi+3] | InChI=1S/Bi/q+3 | beta_totN_30 | ligand_totN_44 | vlm_totN_283 |
+| metal_22 | Bk^[3+] | Bk | 3 | ✓ | [Bk+3] | InChI=1S/Bk/q+3 | beta_totN_2 | ligand_totN_15 | vlm_totN_28 |
+| metal_23 | BuNH_[3]^[+] | B | 1 |  | *** | *** | beta_totN_1 | ligand_totN_2 | vlm_totN_2 |
+| metal_24 | C(NH_[2])_[3]^[+] | C | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_25 | Ca^[2+] | Ca | 2 | ✓ | [Ca+2] | InChI=1S/Ca/q+2 | beta_totN_68 | ligand_totN_644 | vlm_totN_1761 |
+| metal_26 | Cd^[2+] | Cd | 2 | ✓ | [Cd+2] | InChI=1S/Cd/q+2 | beta_totN_95 | ligand_totN_818 | vlm_totN_2828 |
+| metal_27 | Ce^[3+] | Ce | 3 | ✓ | [Ce+3] | InChI=1S/Ce/q+3 | beta_totN_22 | ligand_totN_188 | vlm_totN_567 |
+| metal_28 | Ce^[4+] | Ce | 4 | ✓ | [Ce+4] | InChI=1S/Ce/q+4 | beta_totN_5 | ligand_totN_3 | vlm_totN_9 |
+| metal_29 | Cf^[3+] | Cf | 3 | ✓ | [Cf+3] | InChI=1S/Cf/q+3 | beta_totN_4 | ligand_totN_23 | vlm_totN_42 |
+| metal_30 | ClMe_[2]Sn^[+] | Cl | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_31 | Cm^[3+] | Cm | 3 | ✓ | [Cm+3] | InChI=1S/Cm/q+3 | beta_totN_6 | ligand_totN_31 | vlm_totN_84 |
+| metal_32 | CetMe_[3]N^[+] | C | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_33 | Co^[2+] | Co | 2 | ✓ | [Co+2] | InChI=1S/Co/q+2 | beta_totN_92 | ligand_totN_977 | vlm_totN_2977 |
+| metal_34 | Co^[3+] | Co | 3 | ✓ | [Co+3] | InChI=1S/Co/q+3 | beta_totN_20 | ligand_totN_19 | vlm_totN_55 |
+| metal_35 | Cr^[+] | Cr | 1 | ✓ | [Cr+] | InChI=1S/Cr/q+1 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_36 | Cr^[2+] | Cr | 2 | ✓ | [Cr+2] | InChI=1S/Cr/q+2 | beta_totN_7 | ligand_totN_32 | vlm_totN_66 |
+| metal_37 | Cr^[3+] | Cr | 3 | ✓ | [Cr+3] | InChI=1S/Cr/q+3 | beta_totN_35 | ligand_totN_37 | vlm_totN_130 |
+| metal_38 | Cr^[4+] | Cr | 4 | ✓ | [Cr+4] | InChI=1S/Cr/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_39 | CrO_[4]^[2-] | Cr | -2 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_40 | Cs^[+] | Cs | 1 | ✓ | [Cs+] | InChI=1S/Cs/q+1 | beta_totN_10 | ligand_totN_47 | vlm_totN_86 |
+| metal_41 | Cu^[2+] | Cu | 2 | ✓ | [Cu+2] | InChI=1S/Cu/q+2 | beta_totN_264 | ligand_totN_1951 | vlm_totN_8963 |
+| metal_42 | Cu^[+] | Cu | 1 | ✓ | [Cu+] | InChI=1S/Cu/q+1 | beta_totN_32 | ligand_totN_117 | vlm_totN_285 |
+| metal_43 | Cu^[3+] | Cu | 3 | ✓ | [Cu+3] | InChI=1S/Cu/q+3 | beta_totN_4 | ligand_totN_8 | vlm_totN_10 |
+| metal_44 | Dy^[3+] | Dy | 3 | ✓ | [Dy+3] | InChI=1S/Dy/q+3 | beta_totN_23 | ligand_totN_252 | vlm_totN_758 |
+| metal_45 | Et_[2]NH_[2]^[+] | E2NH2 | 1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_46 | Et_[2]Pb^[2+] | E2Pb | 2 |  | *** | *** | beta_totN_2 | ligand_totN_3 | vlm_totN_5 |
+| metal_47 | Et_[2]Sn^[2+] | E2Sn | 2 |  | *** | *** | beta_totN_4 | ligand_totN_1 | vlm_totN_12 |
+| metal_48 | Et_[3]NH^[+] | E3NH | 1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_49 | Et_[3]Pb^[+] | E3Pb | 1 |  | *** | *** | beta_totN_2 | ligand_totN_3 | vlm_totN_5 |
+| metal_50 | Et_[3]Sn^[+] | E3Sn | 1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_51 | Et_[4]N^[+] | E4N | 1 |  | *** | *** | beta_totN_1 | ligand_totN_3 | vlm_totN_5 |
+| metal_52 | Vy_[2]Sn^[2+] | Eene2Sn | 2 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_53 | EtHg^[+] | EHg | 1 |  | *** | *** | beta_totN_4 | ligand_totN_3 | vlm_totN_6 |
+| metal_54 | EtNH_[3]^[+] | ENH3 | 1 |  | *** | *** | beta_totN_1 | ligand_totN_3 | vlm_totN_3 |
+| metal_55 | Er^[3+] | Er | 3 | ✓ | [Er+3] | InChI=1S/Er/q+3 | beta_totN_29 | ligand_totN_241 | vlm_totN_792 |
+| metal_56 | Es^[3+] | Es | 3 | ✓ | [Es+3] | InChI=1S/Es/q+3 | beta_totN_2 | ligand_totN_6 | vlm_totN_7 |
+| metal_57 | EtSn^[3+] | ESn | 3 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_58 | Eu^[3+] | Eu | 3 | ✓ | [Eu+3] | InChI=1S/Eu/q+3 | beta_totN_30 | ligand_totN_267 | vlm_totN_870 |
+| metal_59 | Eu^[2+] | Eu | 2 | ✓ | [Eu+2] | InChI=1S/Eu/q+2 | beta_totN_1 | ligand_totN_2 | vlm_totN_2 |
+| metal_60 | Eu^[4+] | Eu | 4 | ✓ | [Eu+4] | InChI=1S/Eu/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_61 | Fe^[3+] | Fe | 3 | ✓ | [Fe+3] | InChI=1S/Fe/q+3 | beta_totN_128 | ligand_totN_406 | vlm_totN_1473 |
+| metal_62 | Fe^[2+] | Fe | 2 | ✓ | [Fe+2] | InChI=1S/Fe/q+2 | beta_totN_57 | ligand_totN_217 | vlm_totN_667 |
+| metal_63 | Fm^[3+] | Fm | 3 | ✓ | [Fm+3] | InChI=1S/Fm/q+3 | beta_totN_2 | ligand_totN_3 | vlm_totN_3 |
+| metal_64 | Ga^[3+] | Ga | 3 | ✓ | [Ga+3] | InChI=1S/Ga/q+3 | beta_totN_38 | ligand_totN_146 | vlm_totN_428 |
+| metal_65 | Gd^[3+] | Gd | 3 | ✓ | [Gd+3] | InChI=1S/Gd/q+3 | beta_totN_28 | ligand_totN_288 | vlm_totN_897 |
+| metal_66 | Ge^[4+] | Ge | 4 | ✓ | [Ge+4] | InChI=1S/Ge/q+4 | beta_totN_32 | ligand_totN_80 | vlm_totN_132 |
+| metal_67 | Ge^[2+] | Ge | 2 | ✓ | [Ge+2] | InChI=1S/Ge/q+2 | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_68 | H^[+] | H | 1 | ✓ | [H+] | InChI=1S/p+1 | beta_totN_82 | ligand_totN_4081 | vlm_totN_20720 |
+| metal_69 | H_[5]TeO_[6]^[-] | H | -1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_2 |
+| metal_70 | Hf^[4+] | Hf | 4 | ✓ | [Hf+4] | InChI=1S/Hf/q+4 | beta_totN_10 | ligand_totN_14 | vlm_totN_49 |
+| metal_71 | Hg^[2+] | Hg | 2 | ✓ | [Hg+2] | InChI=1S/Hg/q+2 | beta_totN_68 | ligand_totN_310 | vlm_totN_1097 |
+| metal_72 | Hg^[+] | Hg | 1 | ✓ | [Hg+] | InChI=1S/Hg/q+1 | beta_totN_12 | ligand_totN_31 | vlm_totN_83 |
+| metal_73 | Ho^[3+] | Ho | 3 | ✓ | [Ho+3] | InChI=1S/Ho/q+3 | beta_totN_24 | ligand_totN_230 | vlm_totN_705 |
+| metal_74 | In^[3+] | In | 3 | ✓ | [In+3] | InChI=1S/In/q+3 | beta_totN_41 | ligand_totN_109 | vlm_totN_433 |
+| metal_75 | In^[+] | In | 1 | ✓ | [In+] | InChI=1S/In/q+1 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_76 | Ir^[3+] | Ir | 3 | ✓ | [Ir+3] | InChI=1S/Ir/q+3 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_77 | Ir^[4+] | Ir | 4 | ✓ | [Ir+4] | InChI=1S/Ir/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_78 | K^[+] | K | 1 | ✓ | [K+] | InChI=1S/K/q+1 | beta_totN_19 | ligand_totN_134 | vlm_totN_335 |
+| metal_79 | La^[3+] | La | 3 | ✓ | [La+3] | InChI=1S/La/q+3 | beta_totN_30 | ligand_totN_297 | vlm_totN_931 |
+| metal_80 | Li^[+] | Li | 1 | ✓ | [Li+] | InChI=1S/Li/q+1 | beta_totN_11 | ligand_totN_92 | vlm_totN_216 |
+| metal_81 | Lu^[3+] | Lu | 3 | ✓ | [Lu+3] | InChI=1S/Lu/q+3 | beta_totN_25 | ligand_totN_234 | vlm_totN_671 |
+| metal_82 | Me_[2]Au^[+] | M2Au | 1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_83 | Me_[2]Ga^[+] | M2Ga | 1 |  | *** | *** | beta_totN_2 | ligand_totN_1 | vlm_totN_2 |
+| metal_84 | Me_[2]Pb^[2+] | M2Pb | 2 |  | *** | *** | beta_totN_5 | ligand_totN_4 | vlm_totN_9 |
+| metal_85 | Me_[2]Sn^[2+] | M2Sn | 2 |  | *** | *** | beta_totN_19 | ligand_totN_26 | vlm_totN_165 |
+| metal_86 | Me_[2]Tl^[+] | M2Tl | 1 |  | *** | *** | beta_totN_4 | ligand_totN_6 | vlm_totN_11 |
+| metal_87 | Me_[3]Pb^[+] | M3Pb | 1 |  | *** | *** | beta_totN_7 | ligand_totN_23 | vlm_totN_33 |
+| metal_88 | Me_[3]Sn^[+] | M3Sn | 1 |  | *** | *** | beta_totN_5 | ligand_totN_10 | vlm_totN_17 |
+| metal_89 | Me_[4]N^[+] | M4N | 1 |  | *** | *** | beta_totN_1 | ligand_totN_4 | vlm_totN_6 |
+| metal_90 | MeB(OH)_[2] | MB | 0 |  | *** | *** | beta_totN_2 | ligand_totN_4 | vlm_totN_4 |
+| metal_91 | Md^[3+] | Md | 3 | ✓ | [Md+3] | InChI=1S/Md/q+3 | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_92 | Mg^[2+] | Mg | 2 | ✓ | [Mg+2] | InChI=1S/Mg/q+2 | beta_totN_53 | ligand_totN_508 | vlm_totN_1422 |
+| metal_93 | MeHg^[+] | MHg | 1 |  | *** | *** | beta_totN_18 | ligand_totN_79 | vlm_totN_148 |
+| metal_94 | Mn^[2+] | Mn | 2 | ✓ | [Mn+2] | InChI=1S/Mn/q+2 | beta_totN_44 | ligand_totN_486 | vlm_totN_1273 |
+| metal_95 | Mn^[3+] | Mn | 3 | ✓ | [Mn+3] | InChI=1S/Mn/q+3 | beta_totN_8 | ligand_totN_12 | vlm_totN_26 |
+| metal_96 | Mn^[4+] | Mn | 4 | ✓ | [Mn+4] | InChI=1S/Mn/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_97 | MeNH_[3]^[+] | MNH3 | 1 |  | *** | *** | beta_totN_1 | ligand_totN_5 | vlm_totN_9 |
+| metal_98 | m-NO_[2]PhB(OH)_[2] | m-NOPhB(OH) | 0 |  | *** | *** | beta_totN_2 | ligand_totN_4 | vlm_totN_4 |
+| metal_99 | Mo_[2]O_[7]^[2-] | Mo | -2 |  | *** | *** | beta_totN_2 | ligand_totN_1 | vlm_totN_2 |
+| metal_100 | Mo^[3+] | Mo | 3 | ✓ | [Mo+3] | InChI=1S/Mo/q+3 | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_101 | Mo^[4+] | Mo | 4 | ✓ | [Mo+4] | InChI=1S/Mo/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_102 | Mo^[5+] | Mo | 5 | ✓ | [Mo+5] | InChI=1S/Mo/q+5 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_103 | Mo^[6+] | Mo | 6 | ✓ | [Mo+6] | InChI=1S/Mo/q+6 | beta_totN_33 | ligand_totN_29 | vlm_totN_108 |
+| metal_104 | MeReO_[3] | MReO3 | 0 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_105 | MeSn^[3+] | MSn | 3 |  | *** | *** | beta_totN_5 | ligand_totN_2 | vlm_totN_8 |
+| metal_106 | Na^[+] | Na | 1 | ✓ | [Na+] | InChI=1S/Na/q+1 | beta_totN_16 | ligand_totN_134 | vlm_totN_335 |
+| metal_107 | Nb(OH)_[2]^[+] | Nb | 1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_108 | Nb^[5+] | Nb | 5 | ✓ | [Nb+5] | InChI=1S/Nb/q+5 | beta_totN_5 | ligand_totN_2 | vlm_totN_5 |
+| metal_109 | Nb^[3+] | Nb | 3 | ✓ | [Nb+3] | InChI=1S/Nb/q+3 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_110 | Nd^[3+] | Nd | 3 | ✓ | [Nd+3] | InChI=1S/Nd/q+3 | beta_totN_29 | ligand_totN_263 | vlm_totN_794 |
+| metal_111 | NH_[4]^[+] | N | 1 |  | *** | *** | beta_totN_8 | ligand_totN_35 | vlm_totN_72 |
+| metal_112 | Ni^[2+] | Ni | 2 | ✓ | [Ni+2] | InChI=1S/Ni/q+2 | beta_totN_149 | ligand_totN_1369 | vlm_totN_5325 |
+| metal_113 | Ni^[3+] | Ni | 3 | ✓ | [Ni+3] | InChI=1S/Ni/q+3 | beta_totN_5 | ligand_totN_4 | vlm_totN_7 |
+| metal_114 | No^[2+] | No | 2 | ✓ | [No+2] | InChI=1S/No/q+2 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_115 | Np^[3+] | Np | 3 | ✓ | [Np+3] | InChI=1S/Np/q+3 | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_116 | Np^[4+] | Np | 4 | ✓ | [Np+4] | InChI=1S/Np/q+4 | beta_totN_7 | ligand_totN_15 | vlm_totN_51 |
+| metal_117 | NpO_[2]^[2+] | Np | 2 |  | *** | *** | beta_totN_7 | ligand_totN_15 | vlm_totN_64 |
+| metal_118 | NpO_[2]^[+] | Np | 1 |  | *** | *** | beta_totN_8 | ligand_totN_55 | vlm_totN_129 |
+| metal_119 | NpO_[3]^[+] | Np | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_120 | OsO_[2] | Os | 0 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_121 | OsO_[3] | Os | 0 |  | *** | *** | beta_totN_2 | ligand_totN_1 | vlm_totN_2 |
+| metal_122 | OsO_[4] | Os | 0 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_2 |
+| metal_123 | Pa^[4+] | Pa | 4 | ✓ | [Pa+4] | InChI=1S/Pa/q+4 | beta_totN_4 | ligand_totN_2 | vlm_totN_7 |
+| metal_124 | Pa^[5+] | Pa | 5 | ✓ | [Pa+5] | InChI=1S/Pa/q+5 | beta_totN_2 | ligand_totN_1 | vlm_totN_4 |
+| metal_125 | Pb^[2+] | Pb | 2 | ✓ | [Pb+2] | InChI=1S/Pb/q+2 | beta_totN_80 | ligand_totN_470 | vlm_totN_1585 |
+| metal_126 | Pb^[4+] | Pb | 4 | ✓ | [Pb+4] | InChI=1S/Pb/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_127 | Pd^[2+] | Pd | 2 | ✓ | [Pd+2] | InChI=1S/Pd/q+2 | beta_totN_43 | ligand_totN_86 | vlm_totN_245 |
+| metal_128 | Pd^[4+] | Pd | 4 | ✓ | [Pd+4] | InChI=1S/Pd/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_129 | Ph_[2]Pb^[2+] | Ph2Pb | 2 |  | *** | *** | beta_totN_2 | ligand_totN_1 | vlm_totN_2 |
+| metal_130 | Ph_[3]Pb^[+] | Ph3Pb | 1 |  | *** | *** | beta_totN_1 | ligand_totN_2 | vlm_totN_2 |
+| metal_131 | Ph_[3]Sn^[+] | Ph3Sn | 1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_132 | Ph_[4]As^[+] | Ph4As | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_133 | Ph_[4]P^[+] | Ph4P | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_134 | Ph_[4]Sb^[+] | Ph4Sb | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_135 | PhB(OH)_[2] | PhB | 0 |  | *** | *** | beta_totN_6 | ligand_totN_16 | vlm_totN_16 |
+| metal_136 | PhHg^[+] | PhHg | 1 |  | *** | *** | beta_totN_2 | ligand_totN_8 | vlm_totN_8 |
+| metal_137 | Pm^[3+] | Pm | 3 | ✓ | [Pm+3] | InChI=1S/Pm/q+3 | beta_totN_4 | ligand_totN_14 | vlm_totN_24 |
+| metal_138 | Po | Po | 0 | ✓ | [Po] | InChI=1S/Po | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_139 | Pr^[3+] | Pr | 3 | ✓ | [Pr+3] | InChI=1S/Pr/q+3 | beta_totN_24 | ligand_totN_231 | vlm_totN_723 |
+| metal_140 | Pr_[2]Pb^[2+] | Pr | 2 |  | *** | *** | beta_totN_2 | ligand_totN_3 | vlm_totN_5 |
+| metal_141 | Pr_[2]Sn^[2+] | Pr | 2 |  | *** | *** | beta_totN_2 | ligand_totN_1 | vlm_totN_2 |
+| metal_142 | Pr_[3]Pb^[+] | Pr | 1 |  | *** | *** | beta_totN_2 | ligand_totN_1 | vlm_totN_2 |
+| metal_143 | Pr_[3]Sn^[+] | Pr | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_144 | Pr_[4]N^[+] | Pr | 1 |  | *** | *** | beta_totN_1 | ligand_totN_3 | vlm_totN_5 |
+| metal_145 | PrHg^[+] | Pr | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_146 | Pt^[2+] | Pt | 2 | ✓ | [Pt+2] | InChI=1S/Pt/q+2 | beta_totN_12 | ligand_totN_19 | vlm_totN_36 |
+| metal_147 | Pt^[4+] | Pt | 4 | ✓ | [Pt+4] | InChI=1S/Pt/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_148 | Pu^[3+] | Pu | 3 | ✓ | [Pu+3] | InChI=1S/Pu/q+3 | beta_totN_7 | ligand_totN_12 | vlm_totN_28 |
+| metal_149 | Pu^[4+] | Pu | 4 | ✓ | [Pu+4] | InChI=1S/Pu/q+4 | beta_totN_6 | ligand_totN_11 | vlm_totN_36 |
+| metal_150 | PuO_[2]^[2+] | Pu | 2 |  | *** | *** | beta_totN_10 | ligand_totN_22 | vlm_totN_76 |
+| metal_151 | PuO_[2]^[+] | Pu | 1 |  | *** | *** | beta_totN_2 | ligand_totN_6 | vlm_totN_6 |
+| metal_152 | R_[4]N^[+] | R4N | 1 | ✓ | [N+] | InChI=1S/N/q+1 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_153 | Ra^[2+] | Ra | 2 | ✓ | [Ra+2] | InChI=1S/Ra/q+2 | beta_totN_2 | ligand_totN_10 | vlm_totN_11 |
+| metal_154 | Rb^[+] | Rb | 1 | ✓ | [Rb+] | InChI=1S/Rb/q+1 | beta_totN_9 | ligand_totN_43 | vlm_totN_74 |
+| metal_155 | Re^[2+] | Re | 2 | ✓ | [Re+2] | InChI=1S/Re/q+2 | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_156 | Re^[4+] | Re | 4 | ✓ | [Re+4] | InChI=1S/Re/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_157 | Re^[5+] | Re | 5 | ✓ | [Re+5] | InChI=1S/Re/q+5 | beta_totN_2 | ligand_totN_2 | vlm_totN_2 |
+| metal_158 | Re^[7+] | Re | 7 | ✓ | [Re+7] | InChI=1S/Re/q+7 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_159 | Rh^[+] | Rh | 1 | ✓ | [Rh+] | InChI=1S/Rh/q+1 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_160 | Rh^[3+] | Rh | 3 | ✓ | [Rh+3] | InChI=1S/Rh/q+3 | beta_totN_6 | ligand_totN_2 | vlm_totN_16 |
+| metal_161 | Rh^[4+] | Rh | 4 | ✓ | [Rh+4] | InChI=1S/Rh/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_162 | Rh^[5+] | Rh | 5 | ✓ | [Rh+5] | InChI=1S/Rh/q+5 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_163 | Ru^[2+] | Ru | 2 | ✓ | [Ru+2] | InChI=1S/Ru/q+2 | beta_totN_1 | ligand_totN_1 | vlm_totN_6 |
+| metal_164 | Ru^[3+] | Ru | 3 | ✓ | [Ru+3] | InChI=1S/Ru/q+3 | beta_totN_2 | ligand_totN_1 | vlm_totN_2 |
+| metal_165 | Ru^[4+] | Ru | 4 | ✓ | [Ru+4] | InChI=1S/Ru/q+4 | beta_totN_1 | ligand_totN_1 | vlm_totN_6 |
+| metal_166 | Ru^[6+] | Ru | 6 | ✓ | [Ru+6] | InChI=1S/Ru/q+6 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_167 | Sb^[3+] | Sb | 3 | ✓ | [Sb+3] | InChI=1S/Sb/q+3 | beta_totN_32 | ligand_totN_17 | vlm_totN_57 |
+| metal_168 | Sb^[5+] | Sb | 5 | ✓ | [Sb+5] | InChI=1S/Sb/q+5 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_169 | Sc^[3+] | Sc | 3 | ✓ | [Sc+3] | InChI=1S/Sc/q+3 | beta_totN_16 | ligand_totN_44 | vlm_totN_156 |
+| metal_170 | Se^[4+] | Se | 4 | ✓ | [Se+4] | InChI=1S/Se/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_171 | Se^[6+] | Se | 6 | ✓ | [Se+6] | InChI=1S/Se/q+6 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_172 | Si^[4+] | Si | 4 | ✓ | [Si+4] | InChI=1S/Si/q+4 | beta_totN_8 | ligand_totN_13 | vlm_totN_24 |
+| metal_173 | Sm^[3+] | Sm | 3 | ✓ | [Sm+3] | InChI=1S/Sm/q+3 | beta_totN_28 | ligand_totN_265 | vlm_totN_844 |
+| metal_174 | Sn^[2+] | Sn | 2 | ✓ | [Sn+2] | InChI=1S/Sn/q+2 | beta_totN_22 | ligand_totN_27 | vlm_totN_145 |
+| metal_175 | Sn^[4+] | Sn | 4 | ✓ | [Sn+4] | InChI=1S/Sn/q+4 | beta_totN_5 | ligand_totN_1 | vlm_totN_5 |
+| metal_176 | O_[3]SPhHg | S | 0 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_177 | Sr^[2+] | Sr | 2 | ✓ | [Sr+2] | InChI=1S/Sr/q+2 | beta_totN_34 | ligand_totN_362 | vlm_totN_784 |
+| metal_178 | Ta^[5+] | Ta | 5 | ✓ | [Ta+5] | InChI=1S/Ta/q+5 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_179 | Tb^[3+] | Tb | 3 | ✓ | [Tb+3] | InChI=1S/Tb/q+3 | beta_totN_24 | ligand_totN_235 | vlm_totN_709 |
+| metal_180 | Tc^[7+] | Tc | 7 | ✓ | [Tc+7] | InChI=1S/Tc/q+7 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_181 | TcO^[2+] | Tc | 2 |  | *** | *** | beta_totN_2 | ligand_totN_1 | vlm_totN_2 |
+| metal_182 | Te^[4+] | Te | 4 | ✓ | [Te+4] | InChI=1S/Te/q+4 | beta_totN_2 | ligand_totN_19 | vlm_totN_21 |
+| metal_183 | Te^[6+] | Te | 6 | ✓ | [Te+6] | InChI=1S/Te/q+6 | beta_totN_2 | ligand_totN_2 | vlm_totN_3 |
+| metal_185 | Th^[4+] | Th | 4 | ✓ | [Th+4] | InChI=1S/Th/q+4 | beta_totN_44 | ligand_totN_99 | vlm_totN_476 |
+| metal_186 | Ti | Ti | 0 | ✓ | [Ti] | InChI=1S/Ti | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_187 | Ti^[3+] | Ti | 3 | ✓ | [Ti+3] | InChI=1S/Ti/q+3 | beta_totN_21 | ligand_totN_11 | vlm_totN_39 |
+| metal_188 | Ti^[4+] | Ti | 4 | ✓ | [Ti+4] | InChI=1S/Ti/q+4 | beta_totN_6 | ligand_totN_3 | vlm_totN_10 |
+| metal_189 | TiO^[2+] | Ti | 2 |  | *** | *** | beta_totN_1 | ligand_totN_2 | vlm_totN_6 |
+| metal_190 | Tl^[3+] | Tl | 3 | ✓ | [Tl+3] | InChI=1S/Tl/q+3 | beta_totN_13 | ligand_totN_23 | vlm_totN_130 |
+| metal_191 | Tl^[+] | Tl | 1 | ✓ | [Tl+] | InChI=1S/Tl/q+1 | beta_totN_14 | ligand_totN_87 | vlm_totN_272 |
+| metal_192 | Tm^[3+] | Tm | 3 | ✓ | [Tm+3] | InChI=1S/Tm/q+3 | beta_totN_22 | ligand_totN_223 | vlm_totN_633 |
+| metal_193 | U^[4+] | U | 4 | ✓ | [U+4] | InChI=1S/U/q+4 | beta_totN_13 | ligand_totN_18 | vlm_totN_102 |
+| metal_194 | U^[3+] | U | 3 | ✓ | [U+3] | InChI=1S/U/q+3 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_195 | UO_[2]^[2+] | U | 2 |  | *** | *** | beta_totN_75 | ligand_totN_163 | vlm_totN_748 |
+| metal_196 | UO_[2]^[+] | U | 1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_197 | V^[5+] | V | 5 | ✓ | [V+5] | InChI=1S/V/q+5 | beta_totN_8 | ligand_totN_2 | vlm_totN_8 |
+| metal_198 | V^[2+] | V | 2 | ✓ | [V+2] | InChI=1S/V/q+2 | beta_totN_5 | ligand_totN_8 | vlm_totN_17 |
+| metal_199 | V^[3+] | V | 3 | ✓ | [V+3] | InChI=1S/V/q+3 | beta_totN_21 | ligand_totN_13 | vlm_totN_53 |
+| metal_200 | V^[4+] | V | 4 | ✓ | [V+4] | InChI=1S/V/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_201 | VO^[2+] | V | 2 |  | *** | *** | beta_totN_58 | ligand_totN_96 | vlm_totN_364 |
+
+---
+
+### Step 14: `search_ligands`
+**Args:**
+```json
+{
+  "limit": 300
+}
+```
+
+[summary]
+## search_ligands — 300 result(s)
+
+**stats:** 5750 SQL matches · showing 300 · limit 300
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | 428 | `NCC(=O)O` | (-inf, H2L, 2.33, HL, 9.57, L, +inf) |
+| ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | Amino Acids | 159 | `C[C@H](N)C(=O)O` | (-inf, H2L, 2.33, HL, 9.71, L, +inf) |
+| ligand_5762 | DL-2-Aminobutanoic acid | HL | Amino Acids | 53 | `CCC(N)C(=O)O` | (-inf, H2L, 2.3, HL, 9.63, L, +inf) |
+| ligand_5763 | DL-2-Aminopentanoic acid (Norvaline) | HL | Amino Acids | 35 | `CCC[C@H](N)C(=O)O` | (-inf, H2L, 2.31, HL, 9.65, L, +inf) |
+| ligand_5764 | DL-2-Aminohexanoic acid (Norleucine) | HL | Amino Acids | 33 | `CCCC[C@H](N)C(=O)O` | (-inf, H2L, 2.31, HL, 9.68, L, +inf) |
+| ligand_5765 | L-2-Amino-3-methylbutanoic acid (Valine) | HL | Amino Acids | 81 | `CC(C)[C@H](N)C(=O)O` | (-inf, H2L, 2.27, HL, 9.52, L, +inf) |
+| ligand_5766 | L-2-Amino-4-methylpentanoic acid (Leucine) | HL | Amino Acids | 49 | `CC(C)C[C@H](N)C(=O)O` | (-inf, H2L, 2.32, HL, 9.58, L, +inf) |
+| ligand_5767 | L-2-Amino-3-methylpentanoic acid (Isoleucine) | HL | Amino Acids | 51 | `CC[C@H](C)[C@H](N)C(=O)O` | (-inf, H2L, 2.26, HL, 9.6, L, +inf) |
+| ligand_5768 | D-allo-2-Amino-3-methylpentan… (D-allo-Isoleucine) | HL | Amino Acids | 16 | `CC[C@H](C)[C@@H](N)C(=O)O` | (-inf, H2L, 2.2, HL, 9.62, L, +inf) |
+| ligand_5769 | 2-Amino-2-methylpropanoi… (2-Aminoisobutyric acid) | HL | Amino Acids | 41 | `CC(C)(N)C(=O)O` | (-inf, H2L, 2.34, HL, 10.1, L, +inf) |
+| ligand_5770 | DL-2-Amino-4-pentenoic acid | HL | Amino Acids | 18 | `C=CCC(N)C(=O)O` | (-inf, H2L, 2.13, HL, 9.28, L, +inf) |
+| ligand_5771 | DL-2-Amino-5-hexenoic acid | HL | Amino Acids | 15 | `C=CCCC(N)C(=O)O` | (-inf, H2L, 2.25, HL, 9.43, L, +inf) |
+| ligand_5772 | DL-2-Amino-6-heptenoic acid | HL | Amino Acids | 15 | `C=CCCCC(N)C(=O)O` | (-inf, H2L, 2.34, HL, 9.52, L, +inf) |
+| ligand_5773 | 1-Aminocyclopentanecarboxylic acid (Cycloleucine) | HL | Amino Acids | 11 | `NC1(C(=O)O)CCCC1` | (-inf, H2L, 2.4, HL, 10.31, L, +inf) |
+| ligand_5774 | 1-Aminocyclohexanecarboxylic acid | HL | Amino Acids | 11 | `NC1(C(=O)O)CCCCC1` | (-inf, H2L, 2.41, HL, 10.13, L, +inf) |
+| ligand_5775 | 1-Aminocycloheptanecarboxylic acid | HL | Amino Acids | 11 | `NC1(C(=O)O)CCCCCC1` | (-inf, H2L, 2.59, HL, 10.46, L, +inf) |
+| ligand_5776 | DL-Aminophenylacetic acid (Phenylglycine) | HL | Amino Acids | 12 | `NC(C(=O)O)c1ccccc1` | (-inf, H2L, -1.9, HL, 8.92, L, +inf) |
+| ligand_5777 | L-2-Amino-3-phenylpropanoic acid (Phenylalanine) | HL | Amino Acids | 138 | `N[C@@H](Cc1ccccc1)C(=O)O` | (-inf, H2L, 2.18, HL, 9.09, L, +inf) |
+| ligand_5778 | DL-2-Amino-3-chloropropanoic ac… (3-Chloroalanine) | HL | Amino Acids | 10 | `N[C@@H](CCl)C(=O)O` | (-inf, H2L, 2, HL, 8.18, L, +inf) |
+| ligand_5779 | DL-2-Amino-3-chlorobutanoic acid | HL | Amino Acids | 8 | `CC(Cl)C(N)C(=O)O` | (-inf, H2L, -1.5, HL, 8.07, L, +inf) |
+| ligand_5780 | DL-2-Amino-3-(2-fluorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 6 | `N[C@@H](Cc1ccccc1F)C(=O)O` | (-inf, H2L, 2.12, HL, 9.01, L, +inf) |
+| ligand_5781 | DL-2-Amino-3-(3-fluorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 6 | `N[C@@H](Cc1cccc(F)c1)C(=O)O` | (-inf, H2L, 2.1, HL, 8.98, L, +inf) |
+| ligand_5782 | DL-2-Amino-3-(4-fluorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 6 | `N[C@@H](Cc1ccc(F)cc1)C(=O)O` | (-inf, H2L, 2.13, HL, 9.05, L, +inf) |
+| ligand_5783 | DL-2-Amino-3-(2-chlorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 2 | `N[C@@H](Cc1ccccc1Cl)C(=O)O` | (-inf, H2L, 2.23, HL, 8.94, L, +inf) |
+| ligand_5784 | DL-2-Amino-3-(3-chlorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 2 | `N[C@@H](Cc1cccc(Cl)c1)C(=O)O` | (-inf, H2L, 2.17, HL, 8.91, L, +inf) |
+| ligand_5785 | DL-2-Amino-3-(4-chlorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 2 | `N[C@@H](Cc1ccc(Cl)cc1)C(=O)O` | (-inf, H2L, 2.08, HL, 8.96, L, +inf) |
+| ligand_5786 | DL-Amino-4-sulfophenylacet… (4-Sulfophenylglycine) | H2L | Amino Acids | 12 | `NC(C(=O)O)c1ccc(S(=O)(=O)O)cc1` | (-inf, H2L, -1.8, HL, 8.66, L, +inf) |
+| ligand_5787 | DL-2-Amino-4-sulfobutanoic acid (Homocysteic acid) | H2L | Amino Acids | 4 | `N[C@@H](CCS(=O)(=O)O)C(=O)O` | (-inf, H2L, 2.11, HL, 8.93, L, +inf) |
+| ligand_5788 | 3-Aminopropanoic acid (beta-Alanine) | HL | Amino Acids | 111 | `NCCC(=O)O` | (-inf, H2L, 3.51, HL, 10.08, L, +inf) |
+| ligand_5789 | DL-3-Aminobutanoic acid | HL | Amino Acids | 33 | `CC(N)CC(=O)O` | (-inf, H2L, 3.43, HL, 10.05, L, +inf) |
+| ligand_5790 | cis-2-Aminocyclopentane-1-carboxylic acid | HL | Amino Acids | 6 | `N[C@H]1CCC[C@H]1C(=O)O` | (-inf, H2L, 3.54, HL, 10.1, L, +inf) |
+| ligand_5791 | trans-2-Aminocyclopentane-1-carboxylic acid | HL | Amino Acids | 3 | `N[C@@H]1CCC[C@H]1C(=O)O` | (-inf, H2L, 3.75, HL, 9.91, L, +inf) |
+| ligand_5792 | cis-2-Aminocyclohexane-1-carboxylic acid | HL | Amino Acids | 6 | `N[C@H]1CCCC[C@H]1C(=O)O` | (-inf, H2L, 3.49, HL, 10.54, L, +inf) |
+| ligand_5793 | trans-2-Aminocyclohexane-1-carboxylic acid | HL | Amino Acids | 6 | `N[C@@H]1CCCC[C@H]1C(=O)O` | (-inf, H2L, 3.47, HL, 10.01, L, +inf) |
+| ligand_5794 | cis-2-Amino-4-cyclohexene-1-carboxylic acid | HL | Amino Acids | 6 | `N[C@H]1CC=CC[C@H]1C(=O)O` | (-inf, H2L, 3.29, HL, 10.2, L, +inf) |
+| ligand_5795 | trans-2-Amino-4-cyclohexene-1-carboxylic acid | HL | Amino Acids | 5 | `N[C@@H]1CC=CC[C@H]1C(=O)O` | (-inf, H2L, 3.33, HL, 10.29, L, +inf) |
+| ligand_5796 | DL-3-Amino-3-phenylpropanoi… (Phenyl-beta-Alanine) | HL | Amino Acids | 2 | `NC(CC(=O)O)c1ccccc1` | (-inf, H2L, 3.4, HL, 9, L, +inf) |
+| ligand_5797 | 4-Aminobutanoic acid | HL | Amino Acids | 51 | `NCCCC(=O)O` | (-inf, H2L, 4.02, HL, 10.35, L, +inf) |
+| ligand_5798 | 5-Aminopentanoic acid | HL | Amino Acids | 20 | `NCCCCC(=O)O` | (-inf, H2L, 4.27, HL, 10.766, L, +inf) |
+| ligand_5799 | 6-Aminohexanoic acid | HL | Amino Acids | 29 | `NCCCCCC(=O)O` | (-inf, H2L, 4.373, HL, 10.804, L, +inf) |
+| ligand_5800 | 7-Aminoheptanoic acid | HL | Amino Acids | 3 | `NCCCCCCC(=O)O` | (-inf, H2L, 4.502, HL, +inf) |
+| ligand_5801 | Aminopropanedioic acid (Aminomalonic acid) | H2L | Amino Acids | 14 | `NC(C(=O)O)C(=O)O` | (-inf, H3L, -1.8, H2L, 2.94, HL, 9.22, L, +inf) |
+| ligand_5802 | L-Aminobutanedioic acid (Aspartic acid) | H2L | Amino Acids | 174 | `N[C@@H](CC(=O)O)C(=O)O` | (-inf, H3L, 1.95, H2L, 3.71, HL, 9.66, L, +inf) |
+| ligand_5803 | DL-2-Amino-3-methylbutane… (3-Methylaspartic acid) | H2L | Amino Acids | 6 | `CC(C(=O)O)[C@H](N)C(=O)O` | (-inf, H3L, 1.99, H2L, 3.59, HL, 9.48, L, +inf) |
+| ligand_5804 | L-2-Aminopentanedioic acid (Glutamic acid) | H2L | Amino Acids | 94 | `N[C@@H](CCC(=O)O)C(=O)O` | (-inf, H3L, 2.16, H2L, 4.15, HL, 9.58, L, +inf) |
+| ligand_5805 | DL-2-Amino-2-methylpentan… (2-Methylglutamic acid) | H2L | Amino Acids | 4 | `C[C@](N)(CCC(=O)O)C(=O)O` | (-inf, H2L, 4.05, HL, 9.72, L, +inf) |
+| ligand_5806 | DL-2-Aminohexanedioic acid | H2L | Amino Acids | 1 | `NC(CCCC(=O)O)C(=O)O` | (-inf, HL, 9.73, L, +inf) |
+| ligand_5807 | DL-2-Amino-3-hydroxypent… (3-Hydroxyglutamic acid) | H2L | Amino Acids | 8 | `N[C@H](C(=O)O)C(O)CC(=O)O` | (-inf, H3L, 2.09, H2L, 4.08, HL, 9.06, L, +inf) |
+| ligand_5808 | (3-Aminopropyl)malonic acid | H2L | Amino Acids | 18 | `NCCCC(C(=O)O)C(=O)O` | (-inf, H3L, 2.52, H2L, 4.86, HL, 10.45, L, +inf) |
+| ligand_5809 | L-2-Amino-3-phosphopropanoic acid (Phosphoserine) | H3L | Amino Acids | 52 | `N[C@@H](COP(=O)(O)O)C(=O)O` | (-inf, H4L, -0.7, H3L, 2.14, H2L, 5.7, HL, 9.8, L, +inf) |
+| ligand_5810 | L-2-Amino-2-methyl-3-phosphopropanoic acid | H4L | Amino Acids | 3 | `CC(N)(COP(=O)(O)O)C(=O)O` | (-inf, H3L, 2.07, H2L, 5.68, HL, 10.07, L, +inf) |
+| ligand_5811 | L-2-Amino-3-phosphobutanoic ac… (Phosphothreonine) | H4L | Amino Acids | 3 | `C[C@@H](OP(=O)(O)O)[C@H](N)C(=O)O` | (-inf, H3L, 2.25, H2L, 5.83, HL, 9.67, L, +inf) |
+| ligand_5812 | DL-2-Amino-3-(phenylphospho)propanoic acid | H3L | Amino Acids | 2 | `NC(COP(=O)(O)Oc1ccccc1)C(=O)O` | (-inf, H2L, 2.13, HL, 8.79, L, +inf) |
+| ligand_5813 | DL-2-Amino-3-phosphonopropanoic acid | H4L | Amino Acids | 31 | `NC(CP(=O)(O)O)C(=O)O` | (-inf, H3L, 2.37, H2L, 6.06, HL, 10.74, L, +inf) |
+| ligand_5814 | DL-2-Amino-4-phosphonobutanoic acid | H4L | Amino Acids | 16 | `NC(CCP(=O)(O)O)C(=O)O` | (-inf, H3L, 2.51, H2L, 6.9, HL, 10.21, L, +inf) |
+| ligand_5815 | DL-3-Amino-2-phosphonopropanoic acid | H4L | Amino Acids | 20 | `NCC(C(=O)O)P(=O)(O)O` | (-inf, H3L, 3.44, H2L, 5.52, HL, 10.07, L, +inf) |
+| ligand_5816 | D-3-Amino-3-carboxyp… (Asparagine hydroxamic acid) | H2L | Amino Acids | 17 | `NC(CC(=O)NO)C(=O)O` | (-inf, H3L, 2.18, H2L, 8.15, HL, 9.37, L, +inf) |
+| ligand_5817 | DL-2-Amino-3-(2-hydroxyphenyl)propan… (o-Tyrosine) | H2L | Amino Acids | 71 | `NC(Cc1ccccc1O)C(=O)O` | (-inf, H3L, 2.41, H2L, 8.67, HL, 11.01, L, +inf) |
+| ligand_5818 | DL-2-Amino-3-(3-hydroxyphenyl)propan… (m-Tyrosine) | H2L | Amino Acids | 86 | `N[C@@H](Cc1cccc(O)c1)C(=O)O` | (-inf, H3L, 2.22, H2L, 8.95, HL, 10.04, L, +inf) |
+| ligand_5819 | L-2-Amino-3-(4-hydroxyphenyl)propanoic… (Tyrosine) | H2L | Amino Acids | 107 | `N[C@@H](Cc1ccc(O)cc1)C(=O)O` | (-inf, H3L, 2.24, H2L, 9.04, HL, 10.1, L, +inf) |
+| ligand_5820 | L-2-Amino-2-methyl-3-(4-hydrox… (L-Methyltyrosine) | H2L | Amino Acids | 7 | `CC(N)(Cc1ccc(O)cc1)C(=O)O` | (-inf, H3L, 2.16, H2L, 9.14, HL, 10.24, L, +inf) |
+| ligand_5821 | L-2-Amino-3-(4-hydroxy-3,5… (L-3,5-Diiodotyrosine) | H2L | Amino Acids | 3 | `N[C@@H](Cc1cc(I)c(O)c(I)c1)C(=O)O` | (-inf, H2L, 6.16, HL, 9.1, L, +inf) |
+| ligand_5822 | DL-2-Amino-3-(3-hydroxy-4-methoxyphenyl)propanoic… | H2L | Amino Acids | 3 | `COc1ccc(CC(N)C(=O)O)cc1O` | (-inf, H3L, 2.23, H2L, 8.84, HL, 10.12, L, +inf) |
+| ligand_5823 | DL-2-Amino-3-(4-hydroxy-3-methoxyphenyl)propanoic… | H2L | Amino Acids | 3 | `COc1cc(CC(N)C(=O)O)ccc1O` | (-inf, H3L, 2.13, H2L, 8.78, HL, 10.14, L, +inf) |
+| ligand_5824 | L-2-Amino-3-(3-amino-4-hydroxyp… (m-Aminotyrosine) | H2L | Amino Acids | 9 | `Nc1cc(C[C@H](N)C(=O)O)ccc1O` | (-inf, H4L, 2, H3L, 4.48, H2L, 9.09, HL, 10.19, L, +inf) |
+| ligand_5825 | DL-2-Amino-2-(3,4-dihydroxyphenyl)acetic a… (DOPG) | H3L | Amino Acids | 6 | `NC(C(=O)O)c1ccc(O)c(O)c1` | (-inf, H4L, 2, H3L, 8.56, H2L, 9.75, HL, 9.75, L, +inf) |
+| ligand_5826 | L-2-Amino-3-(3,4-dihydroxyphenyl)propanoic… (DOPA) | H3L | Amino Acids | 91 | `NC(Cc1ccc(O)c(O)c1)C(=O)O` | (-inf, H4L, 2.2, H3L, 8.75, H2L, 9.81, HL, 9.81, L, +inf) |
+| ligand_5827 | L-2-Amino-2-methyl-3-(3,4-dihydr… (L-2-MethylDOPA) | H3L | Amino Acids | 13 | `CC(N)(Cc1ccc(O)c(O)c1)C(=O)O` | (-inf, H4L, 2.24, H3L, 8.88, H2L, 9.99, HL, +inf) |
+| ligand_5828 | L-2-Amino-3-hydroxypropanoic acid (Serine) | HL | Amino Acids | 139 | `N[C@@H](CO)C(=O)O` | (-inf, H2L, 2.16, HL, 9.05, L, +inf) |
+| ligand_5829 | L-2-Amino-3-hydroxybutanoic acid (Threonine) | HL | Amino Acids | 117 | `C[C@@H](O)[C@H](N)C(=O)O` | (-inf, H2L, 2.2, HL, 8.94, L, +inf) |
+| ligand_5830 | allo-L-2-Amino-3-hydroxybutano… (L-allo-Threonine) | HL | Amino Acids | 31 | `C[C@H](O)[C@H](N)C(=O)O` | (-inf, H2L, 2.11, HL, 8.92, L, +inf) |
+| ligand_5831 | erythro-2-Amino-3-hydroxy-… (erythro-Phenylserine) | HL | Amino Acids | 22 | `NC(C(=O)O)C(O)c1ccccc1` | (-inf, H2L, -1.9, HL, 8.7, L, +inf) |
+| ligand_5832 | threo-2-Amino-3-hydroxy-3-ph… (threo-Phenylserine) | HL | Amino Acids | 13 | `NC(C(=O)O)C(O)c1ccccc1` | (-inf, H2L, -1.9, HL, 8.87, L, +inf) |
+| ligand_5833 | L-2-Amino-4-hydroxybutanoic acid (Homoserine) | HL | Amino Acids | 31 | `N[C@@H](CCO)C(=O)O` | (-inf, H2L, 2.24, HL, 9.28, L, +inf) |
+| ligand_5834 | DL-3-Amino-2-hydroxypropanoic acid (Isoserine) | HL | Amino Acids | 36 | `NCC(O)C(=O)O` | (-inf, H2L, 2.66, HL, 9.13, L, +inf) |
+| ligand_5835 | DL-4-Amino-3-hydroxybutanoic acid | HL | Amino Acids | 21 | `NCC(O)CC(=O)O` | (-inf, H2L, 3.9, HL, 9.46, L, +inf) |
+| ligand_5836 | L-trans-2-Amino-3-hydroxy-2,3-dihydrobenzoic acid | HL | Amino Acids | 6 | `N[C@H]1C(C(=O)O)=CC=C[C@@H]1O` | (-inf, H2L, 3.36, HL, 8.56, L, +inf) |
+| ligand_5837 | D-gluco-2-Amino-3,4,5,6-tet… (D-Glucosaminic acid) | HL | Amino Acids | 30 | `N[C@@H](C(=O)O)[C@@H](O)[C@H](O)[C@H](O)CO` | (-inf, H2L, 2.2, HL, 9.08, L, +inf) |
+| ligand_5838 | DL-Amino-4-Methoxyphenyl… (4-Methoxyphenylglycine) | HL | Amino Acids | 12 | `COc1ccc(C(N)C(=O)O)cc1` | (-inf, H2L, 2, HL, 9.07, L, +inf) |
+| ligand_5839 | L-2-Aminobutanedioic acid 4-… (4-Methyl aspartate) | HL | Amino Acids | 1 | `COC(=O)CC(N)C(=O)O` | (-inf, HL, 8.5, L, +inf) |
+| ligand_5840 | DL-2-Aminopentanedioic acid 5… (5-Ethyl glutamate) | HL | Amino Acids | 2 | `CCOC(=O)CC[C@H](N)C(=O)O` | (-inf, H2L, 2.15, HL, 9.19, L, +inf) |
+| ligand_5841 | L-2-Aminopentanedioic acid 5… (5-Benzyl glutamate) | HL | Amino Acids | 2 | `N[C@@H](CCC(=O)OCc1ccccc1)C(=O)O` | (-inf, H2L, 2.06, HL, 8.89, L, +inf) |
+| ligand_5842 | DL-2-Aminopentanedioic acid 1… (1-Ethyl glutamate) | HL | Amino Acids | 2 | `CCOC(=O)[C@@H](N)CCC(=O)O` | (-inf, H2L, 3.85, HL, 7.84, L, +inf) |
+| ligand_5843 | L-2-Aminobutanedioic acid 4-amide (Asparagine) | HL | Amino Acids | 92 | `NC(=O)C[C@H](N)C(=O)O` | (-inf, H2L, 2.16, HL, 8.73, L, +inf) |
+| ligand_5844 | L-2-Aminopentanedioic acid 5-amide (Glutamine) | HL | Amino Acids | 71 | `NC(=O)CC[C@H](N)C(=O)O` | (-inf, H2L, 2.19, HL, 9, L, +inf) |
+| ligand_5845 | L-2-Amino-6-(2-methylpropamido)hexanoic acid (N(6… | HL | Amino Acids | 30 | `CC(C)C(=O)NCCCCC(N)C(=O)O` | (-inf, H2L, 2.4, HL, 9.42, L, +inf) |
+| ligand_5846 | L-6-Amino-2-acetamidohexanoic acid (N(2)-Acetyl-L… | HL | Amino Acids | 1 | `CC(=O)N[C@@H](CCCCN)C(=O)O` | *** |
+| ligand_5847 | L-2-Amino-6-acetamidohexanoic acid (N(6)-Acetyl-L… | HL | Amino Acids | 7 | `CC(=O)NCCCCC(N)C(=O)O` | (-inf, H2L, 2.13, HL, 9.52, L, +inf) |
+| ligand_5848 | L-2-Amino-3-(oxalylamido)propanoic acid | HL | Amino Acids | 10 | `NC(CNC(=O)C(=O)O)C(=O)O` | (-inf, H3L, -1.2, H2L, 2.44, HL, 8.95, L, +inf) |
+| ligand_5849 | N(6)-d-Biotinyl-L-lysine (d-Biocytin) | HL | Amino Acids | 7 | `NC(CCCCNC(=O)CCCCC1SCC2NC(=O)NC21)C(=O)O` | (-inf, H2L, 2.26, HL, 9.29, L, +inf) |
+| ligand_5850 | d-Biocytin sulfoxide | HL | Amino Acids | 4 | `NC(CCCCNC(=O)CCCCC1C2NC(=O)NC2CS1=O)C(=O)O` | (-inf, HL, 9.3, L, +inf) |
+| ligand_5851 | d-Biocytin sulfone | HL | Amino Acids | 4 | `NC(CCCCNC(=O)CCCCC1C2NC(=O)NC2CS1(=O)=O)C(=O)O` | (-inf, HL, 9.31, L, +inf) |
+| ligand_5852 | L-2-Amino-5-ureidopentanoic acid (Citrulline) | HL | Amino Acids | 16 | `NC(=O)NCCC[C@H](N)C(=O)O` | (-inf, H2L, 2.3, HL, 9.33, L, +inf) |
+| ligand_5853 | L-2-Amino-3-(phenylmethoxy)propa… (O-Benzylserine) | HL | Amino Acids | 4 | `N[C@@H](COCc1ccccc1)C(=O)O` | (-inf, H2L, -1.9, HL, 9.03, L, +inf) |
+| ligand_5854 | L-2-Amino-3-(4-methoxyph… (4-Methoxyphenylalanine) | HL | Amino Acids | 5 | `COc1ccc(C[C@H](N)C(=O)O)cc1` | (-inf, HL, -9.15, L, +inf) |
+| ligand_5855 | DL-2-Amino-3-(3,4-di… (3,4-Dimethoxyphenylalanine) | HL | Amino Acids | 2 | `COc1ccc(C[C@H](N)C(=O)O)cc1OC` | (-inf, H2L, 2.37, HL, 9.02, L, +inf) |
+| ligand_5856 | L-2-Amino-3-mercaptopropanoic acid (Cysteine) | H2L | Amino Acids | 134 | `N[C@@H](CS)C(=O)O` | (-inf, H3L, -1.9, H2L, 8.18, HL, 10.3, L, +inf) |
+| ligand_5857 | D-2-Amino-3-mercapto-3-methylbuta… (Penicillamine) | H2L | Amino Acids | 91 | `CC(C)(S)[C@H](N)C(=O)O` | (-inf, H3L, -1.9, H2L, 7.96, HL, 10.67, L, +inf) |
+| ligand_5858 | DL-2-Amino-3-mercapto-3-methylpentanoic acid | H2L | Amino Acids | 2 | `CCC(C)(S)C(N)C(=O)O` | (-inf, H2L, 7.96, HL, 10.5, L, +inf) |
+| ligand_5859 | DL-2-Amino-4-mercaptobutanoic acid (Homocysteine) | H2L | Amino Acids | 3 | `NC(CCS)C(=O)O` | (-inf, H3L, 2.15, H2L, 8.57, HL, 10.38, L, +inf) |
+| ligand_5860 | DL-2-Amino-3-(2-mercaptoimidazo-4… (Thiohistidine) | H2L | Amino Acids | 20 | `NC(Cc1cnc(S)[nH]1)C(=O)O` | (-inf, H2L, 8.59, HL, 8.59, L, +inf) |
+| ligand_5861 | L-2-Amino-3-(methylthio)propan… (S-Methylcysteine) | HL | Amino Acids | 39 | `CSC[C@H](N)C(=O)O` | (-inf, H2L, 2, HL, 8.74, L, +inf) |
+| ligand_5862 | L-2-Amino-3-(ethylthio)propanoi… (S-Ethylcysteine) | HL | Amino Acids | 46 | `CCSC[C@H](N)C(=O)O` | (-inf, H2L, -1.9, HL, 8.65, L, +inf) |
+| ligand_5863 | L-2-Amino-4-(methylthio)butanoic acid (Methionine) | HL | Amino Acids | 63 | `CSCC[C@H](N)C(=O)O` | (-inf, H2L, 2.18, HL, 9.08, L, +inf) |
+| ligand_5864 | L-2-Amino-4-(ethylthio)butanoic acid (Ethionine) | HL | Amino Acids | 28 | `CCSCC[C@H](N)C(=O)O` | (-inf, H2L, 2.19, HL, 9.05, L, +inf) |
+| ligand_5865 | L-2-Amino-3-(carboxymethylthio)propanoic acid | H2L | Amino Acids | 48 | `NC(CSCC(=O)O)C(=O)O` | (-inf, H3L, 2, H2L, 3.36, HL, 8.89, L, +inf) |
+| ligand_5866 | L-2-Amino-3-(2-carboxyethylthio)propanoic acid | H2L | Amino Acids | 17 | `NC(CSCCC(=O)O)C(=O)O` | (-inf, H3L, 2.14, H2L, 4.36, HL, 9.08, L, +inf) |
+| ligand_5867 | L-2-Amino-3-(2-hydroxyethylthio)propanoic acid | HL | Amino Acids | 3 | `NC(CSCCO)C(=O)O` | (-inf, HL, 8.64, L, +inf) |
+| ligand_5868 | L-2-Amino-3-(2-acetamidoethylthio)propanoic acid | HL | Amino Acids | 3 | `CC(=O)NCCSCC(N)C(=O)O` | (-inf, HL, 8.65, L, +inf) |
+| ligand_5869 | L-2-Amino-3-(2-acetamidoethylsulfinyl)propanoic a… | HL | Amino Acids | 3 | `CC(=O)NCCS(=O)CC(N)C(=O)O` | (-inf, HL, 7.57, L, +inf) |
+| ligand_5870 | L-2-Amino-3-(2-acetamidoethylsulfonyl)propanoic a… | HL | Amino Acids | 3 | `CC(=O)NCCS(=O)(=O)CC(N)C(=O)O` | (-inf, HL, 7.44, L, +inf) |
+| ligand_5871 | L-2-Amino-3-(2-Cyanoethylthio)propanoic acid (L-5… | HL | Amino Acids | 1 | `N#CCCSCC(N)C(=O)O` | (-inf, HL, 8.46, L, +inf) |
+| ligand_5872 | L-2-Amino-3-(Ethoxy-3-oxopropylthio)propanoic aci… | HL | Amino Acids | 1 | `CCOC(=O)CCSCC(N)C(=O)O` | (-inf, HL, 8.51, L, +inf) |
+| ligand_5873 | L-2-Amino-3-(carboxymethylsulfinyl)propanoic acid | H2L | Amino Acids | 1 | `NC(CS(=O)CC(=O)O)C(=O)O` | (-inf, HL, 7.9, L, +inf) |
+| ligand_5874 | L-2-Amino-3-(carboxymethylsulfonyl)propanoic acid | H2L | Amino Acids | 1 | `NC(CS(=O)(=O)CC(=O)O)C(=O)O` | (-inf, HL, 7.68, L, +inf) |
+| ligand_5875 | 5-Amino-3-thi… (S-2-Aminoethylmercaptoacetic acid) | HL | Amino Acids | 32 | `NCCSCC(=O)O` | (-inf, H2L, 3.18, HL, 9.53, L, +inf) |
+| ligand_5876 | 6-Amino-3-th… (S-3-Aminopropylmercaptoacetic acid) | HL | Amino Acids | 21 | `NCCCSCC(=O)O` | (-inf, H2L, 3.35, HL, 10.19, L, +inf) |
+| ligand_5877 | 6-Amino… (S-2-Aminoethyl-3-mercaptopropanoic acid) | HL | Amino Acids | 32 | `NCCSCCC(=O)O` | (-inf, HL, 9.54, L, +inf) |
+| ligand_5878 | DL-2-(Acetylamino)-3-(2-aminoethylthio)propanoic … | HL | Amino Acids | 1 | `CC(=O)NC(CSCCN)C(=O)O` | (-inf, HL, 9.39, L, +inf) |
+| ligand_5879 | L-2-Amino-3-(2-aminoethylthio)propanoic acid (S-(… | HL | Amino Acids | 22 | `NCCSC[C@H](N)C(=O)O` | (-inf, H3L, -1.7, H2L, 8.32, HL, 9.67, L, +inf) |
+| ligand_5880 | L-2-Amino-3-(2-aminoethylsulfinyl)propanoic acid | HL | Amino Acids | 4 | `NCCS(=O)CC(N)C(=O)O` | (-inf, H2L, 7.18, HL, 8.37, L, +inf) |
+| ligand_5881 | L-2-Amino-3-(2-aminoethylsulfonyl)propanoic acid | HL | Amino Acids | 4 | `NCCS(=O)(=O)CC(N)C(=O)O` | (-inf, H2L, 6.86, HL, 8.02, L, +inf) |
+| ligand_5882 | L-2-Amino-3-(2-aminoethyldithio)propanoic acid | HL | Amino Acids | 4 | `NCCSSCC(N)C(=O)O` | (-inf, H2L, 8.28, HL, 9.3, L, +inf) |
+| ligand_5883 | L-2,3-Diaminopropanoic acid | HL | Amino Acids | 66 | `NCC(N)C(=O)O` | (-inf, H3L, -1.3, H2L, 6.7, HL, 9.39, L, +inf) |
+| ligand_5884 | L-2-Amino-3-(methylamino)propanoic acid | HL | Amino Acids | 19 | `CNCC(N)C(=O)O` | (-inf, H2L, 6.63, HL, 9.76, L, +inf) |
+| ligand_5885 | L-2,4-Diaminobutanoic acid | HL | Amino Acids | 55 | `NCCC(N)C(=O)O` | (-inf, H3L, -1.9, H2L, 8.23, HL, 10.28, L, +inf) |
+| ligand_5886 | L-2,5-Diaminopentanoic acid (Ornithine) | HL | Amino Acids | 84 | `NCCC[C@H](N)C(=O)O` | (-inf, H3L, 2, H2L, 8.78, HL, 10.52, L, +inf) |
+| ligand_5887 | L-2,6-Diaminohexanoic acid (Lysine) | HL | Amino Acids | 98 | `NCCCC[C@H](N)C(=O)O` | (-inf, H3L, 2.15, H2L, 9.15, HL, 10.66, L, +inf) |
+| ligand_5888 | DL-2,7-Diaminooctanedioic acid | HL | Amino Acids | 10 | `NC(CCCCC(N)C(=O)O)C(=O)O` | (-inf, H4L, -1.8, H3L, 2.62, H2L, 9.23, HL, 9.89, L, +inf) |
+| ligand_5889 | DL-2,6-Diamino-5-hydroxyhexanoic acid | HL | Amino Acids | 78 | `NCC(O)CCC(N)C(=O)O` | (-inf, H3L, 2.1, H2L, 8.84, HL, 9.79, L, +inf) |
+| ligand_5890 | L-3,3'-Dithiobis(2-aminopropanoic acid) (Cystine) | H2L | Amino Acids | 17 | `NC(CSSC[C@H](N)C(=O)O)C(=O)O` | (-inf, H2L, 8.03, HL, 8.8, L, +inf) |
+| ligand_5891 | D-3,3'-Dithiobis(2-amin… (Penicillamine disulfide) | H2L | Amino Acids | 23 | `CC(C)(SSC(C)(C)C(N)C(=O)O)C(N)C(=O)O` | (-inf, H4L, -1.3, H3L, 2.04, H2L, 7.77, HL, 8.74, L, +inf) |
+| ligand_5892 | DL-4,4'-Dithiobis(2-aminobutanoic a… (Homocystine) | H2L | Amino Acids | 26 | `N[C@H](CCSSCC[C@H](N)C(=O)O)C(=O)O` | (-inf, H3L, 2.52, H2L, 8.68, HL, 9.41, L, +inf) |
+| ligand_5893 | L-Methylenedithio-3,3'-bis(2-ami… (Dienkolic acid) | H2L | Amino Acids | 33 | `NC(CSCSCC(N)C(=O)O)C(=O)O` | (-inf, H4L, -1.4, H3L, 2.17, H2L, 8.16, HL, 8.97, L, +inf) |
+| ligand_5894 | L-Ethylenedithio-3,3'-bis(2-aminopropanoic acid) | H2L | Amino Acids | 5 | `NC(CSCCSCC(N)C(=O)O)C(=O)O` | (-inf, H2L, 8.36, HL, 9.13, L, +inf) |
+| ligand_5895 | L-Trimethylenedithio-3,3'-bis(2-aminopropanoic ac… | H2L | Amino Acids | 5 | `NC(CSCCCSCC(N)C(=O)O)C(=O)O` | (-inf, H2L, 8.38, HL, 9.15, L, +inf) |
+| ligand_5896 | L-Tetramethylenedithio-3,3'-bis(2-aminopropanoic … | H2L | Amino Acids | 5 | `NC(CSCCCCSCC(N)C(=O)O)C(=O)O` | (-inf, H2L, 8.46, HL, 9.2, L, +inf) |
+| ligand_5897 | L-2-Hydroxytrimethylenedithio-3,3'-bis(2-aminopro… | H2L | Amino Acids | 6 | `NC(CSCC(O)CSCC(N)C(=O)O)C(=O)O` | (-inf, H4L, -1.5, H3L, 2.19, H2L, 8.36, HL, 9.2, L, +inf) |
+| ligand_5898 | L-2-Amino-3-(4-imidazolyl)propanoic a… (Histidine) | HL | Amino Acids | 250 | `N[C@@H](Cc1c[nH]cn1)C(=O)O` | (-inf, H3L, -1.7, H2L, 6.05, HL, 9.1, L, +inf) |
+| ligand_5899 | L-2-Amino-3-(N(1)-methyl-4-imidazolyl)propanoic a… | HL | Amino Acids | 14 | `Cn1cnc(C[C@H](N)C(=O)O)c1` | (-inf, H3L, -1.72, H2L, 5.87, HL, 9.16, L, +inf) |
+| ligand_5900 | L-2-Amino-3-(N(3)-methyl-4-imidazolyl)propanoic a… | HL | Amino Acids | 16 | `Cn1cncc1C[C@H](N)C(=O)O` | (-inf, H3L, -1.65, H2L, 6.48, HL, 8.61, L, +inf) |
+| ligand_5901 | L-4-(2-Amino-3-carboxypropyl)-1,3-dimethylimidazo… | HL | Amino Acids | 6 | `Cn1c[n+](C)cc1C[C@H](N)C(=O)O` | (-inf, H2L, -1.98, HL, 7.85, L, +inf) |
+| ligand_5902 | L-1-Carboxy-2-(4-imidazolyl)ethyl(dimethyl)ammoni… | HL | Amino Acids | 9 | `C[NH+](C)C(Cc1cnc[nH]1)C(=O)O` | (-inf, H3L, -1.03, H2L, 6.03, HL, 8.86, L, +inf) |
+| ligand_5903 | L-1-Carboxy-2-(4-imidazolyl)ethyl(trimethyl)ammon… | HL | Amino Acids | 6 | `C[N+](C)(C)C(Cc1c[nH]cn1)C(=O)O` | (-inf, H2L, -0.98, HL, 6, L, +inf) |
+| ligand_5904 | L-2-Amino-3-(N(3)-benzyl-4-imidazolyl)propanoic a… | HL | Amino Acids | 18 | `NC(Cc1cncn1Cc1ccccc1)C(=O)O` | (-inf, H3L, 1.94, H2L, 5.53, HL, 9.21, L, +inf) |
+| ligand_5905 | L-2-Amino-3-(5-iodo-4-imidazol… (5-Iodo-Histidine) | HL | Amino Acids | 23 | `N[C@@H](Cc1nc[nH]c1I)C(=O)O` | (-inf, H3L, -1.47, H2L, 4.21, HL, 8.6, L, +inf) |
+| ligand_5906 | L-2-Amino-3-(2,5-diiodo-4-… (2,5-Diiodo-Histidine) | HL | Amino Acids | 27 | `N[C@@H](Cc1nc(I)[nH]c1I)C(=O)O` | (-inf, H4L, -1.55, H3L, 2.74, H2L, 8.12, HL, 9.57, L, +inf) |
+| ligand_5907 | L-2-Amino-3-(3-indolyl)propanoic acid (Tryptophan) | HL | Amino Acids | 107 | `N[C@@H](Cc1c[nH]c2ccccc12)C(=O)O` | (-inf, H2L, 2.37, HL, 9.33, L, +inf) |
+| ligand_5908 | L-2-Amino-3-(1-methyl-3-indol… (1-Methyltryptopan) | HL | Amino Acids | 4 | `Cn1cc(CC(N)C(=O)O)c2ccccc21` | (-inf, H2L, 2.32, HL, 9.5, L, +inf) |
+| ligand_5909 | DL-2-Amino-3-(5-hydroxy-3-in… (5-Hydroxytryptopan) | HL | Amino Acids | 14 | `NC(Cc1c[nH]c2ccc(O)cc12)C(=O)O` | (-inf, H3L, 2.51, H2L, 9.49, HL, 10.54, L, +inf) |
+| ligand_5910 | DL-2-Amino-3-(6-oxo-1,6-dihydro-2-pyridinyl)propa… | HL | Amino Acids | 17 | `NC(Cc1cccc(=O)[nH]1)C(=O)O` | (-inf, H2L, -1.8, HL, 7.8, L, 11.7, H-1L, +inf) |
+| ligand_5911 | L-2-Amino-3-(3-hydroxo-4-oxo-1,4-dihyd… (Mimosine) | HL | Amino Acids | 15 | `N[C@@H](Cn1ccc(=O)c(O)c1)C(=O)O` | (-inf, H4L, -1, H3L, 2.5, H2L, 6.87, HL, 8.72, L, +inf) |
+| ligand_5912 | DL-2-Amino-3-(5-hydroxo-4-oxo-1,4-d… (Isomimosine) | HL | Amino Acids | 21 | `NC(Cc1cc(=O)c(O)c[nH]1)C(=O)O` | (-inf, H4L, -1.3, H3L, 3.01, H2L, 7.72, HL, 9.17, L, +inf) |
+| ligand_5913 | DL-2-Amino-3-(5-hydroxo-6-oxo-1,6-dihydro-2-pyrid… | HL | Amino Acids | 30 | `NC(Cc1ccc(O)c(=O)[nH]1)C(=O)O` | (-inf, H3L, -1.9, H2L, 7.85, HL, 9.01, L, +inf) |
+| ligand_5914 | L-2-Amino-3-(3-methoxy-4-… (Mimosine methyl ether) | HL | Amino Acids | 12 | `COc1cn(C[C@H](N)C(=O)O)ccc1=O` | (-inf, H2L, 2.19, HL, 6.86, L, +inf) |
+| ligand_5915 | L-2-Amino-3-(2-pyridyl)propanoic acid (3-(2-Pyrid… | HL | Amino Acids | 14 | `N[C@@H](Cc1ccccn1)C(=O)O` | (-inf, H2L, 3.89, HL, 8.95, L, +inf) |
+| ligand_5916 | L-2-Amino-3-(6-methyl-2-pyridyl)propanoic acid (3… | HL | Amino Acids | 14 | `Cc1cccc(C[C@H](N)C(=O)O)n1` | (-inf, H2L, 4.78, HL, 8.95, L, +inf) |
+| ligand_5917 | L-2-Amino-5-guanidopentanoic acid (Arginine) | H2L | Amino Acids | 45 | `N=C(N)NCCC[C@H](N)C(=O)O` | (-inf, H3L, 2.03, H2L, 9, HL, 9, L, +inf) |
+| ligand_5918 | DL-2-Amino-3-(4-guanidinophenyl)propanoic acid | HL | Amino Acids | 2 | `N=C(N)Nc1ccc(CC(N)C(=O)O)cc1` | (-inf, H2L, 8.44, HL, 10.91, L, +inf) |
+| ligand_5919 | DL-2-Amino-3-(4-guanidinomethylphenyl)propanoic a… | HL | Amino Acids | 1 | `N=C(N)NCc1ccc(CC(N)C(=O)O)cc1` | (-inf, H2L, 8.83, HL, +inf) |
+| ligand_5920 | DL-2-Amino-3-(4-aminophenyl)propanoic acid | HL | Amino Acids | 1 | `Nc1ccc(CC(N)C(=O)O)cc1` | (-inf, HL, 8.93, L, +inf) |
+| ligand_5921 | DL-2-Amino-3-(4-(aminomethyl)phenyl)propanoic acid | HL | Amino Acids | 2 | `NCc1ccc(CC(N)C(=O)O)cc1` | (-inf, H2L, 8.4, HL, 8.42, L, +inf) |
+| ligand_5922 | DL-2-Amino-3-(4-(dimethylamino)phenyl)propanoic a… | HL | Amino Acids | 1 | `CN(C)c1ccc(CC(N)C(=O)O)cc1` | (-inf, HL, 8.86, L, +inf) |
+| ligand_5923 | L-[1-Carboxy-2-(4-hydroxypheny… (Tyrosine betaine) | H2L | Amino Acids | 1 | `C[N+](C)(C)C(Cc1ccc(O)cc1)C(=O)O.[Cl-]` | (-inf, HL, 9.63, L, +inf) |
+| ligand_5924 | DL-(4-Amino-4-carboxybutyl)trimethylammonium ion … | HL | Amino Acids | 4 | `C[N+](C)(C)CCCC(N)C(=O)O` | (-inf, H2L, -1.8, HL, 8.7, L, +inf) |
+| ligand_5925 | N-Methylglycine (Sarcosine) | HL | Amino Acids | 39 | `CNCC(=O)O` | (-inf, H2L, 2.18, HL, 9.98, L, +inf) |
+| ligand_5926 | N-Ethylglycine | HL | Amino Acids | 6 | `CCNCC(=O)O` | (-inf, H2L, 2.3, HL, 10.1, L, +inf) |
+| ligand_5927 | N-Propylglycine | HL | Amino Acids | 6 | `CCCNCC(=O)O` | (-inf, H2L, 2.28, HL, 10.03, L, +inf) |
+| ligand_5928 | N-Butylglycine | HL | Amino Acids | 6 | `CCCCNCC(=O)O` | (-inf, H2L, 2.29, HL, 10.07, L, +inf) |
+| ligand_5929 | N-(2-Propyl)glycine | HL | Amino Acids | 5 | `CC(C)NCC(=O)O` | (-inf, H2L, 2.36, HL, 10.06, L, +inf) |
+| ligand_5930 | L-Pyrrolidine-2-carboxylic acid (L-Proline) | HL | Amino Acids | 66 | `O=C(O)C1CCCN1` | (-inf, H2L, 1.89, HL, 10.46, L, +inf) |
+| ligand_5931 | L-Piperidine-2-carboxylic acid (Pipecolic acid) | HL | Amino Acids | 4 | `O=C(O)C1CCCCN1` | (-inf, HL, 10.52, L, +inf) |
+| ligand_5932 | 2-Indolecarboxylic acid | HL | Amino Acids | 7 | `O=C(O)c1cc2ccccc2[nH]1` | (-inf, HL, 3.68, L, +inf) |
+| ligand_5933 | DL-N-Benzylaminobutanedioic acid | H2L | Amino Acids | 4 | `O=C(O)CC(NCc1ccccc1)C(=O)O` | (-inf, H3L, 2, H2L, 3.23, HL, 8.96, L, +inf) |
+| ligand_5934 | L-2-(Iminomethylamino)pentanedioic acid | H2L | Amino Acids | 6 | `N=CNC(CCC(=O)O)C(=O)O` | (-inf, H2L, 4.44, HL, 11, L, +inf) |
+| ligand_5935 | S-(1-Carboxy-3-phenylpropyl)-L-alan… (Enalaprilat) | H2L | Amino Acids | 15 | `C[C@H](N[C@@H](CCc1ccccc1)C(=O)O)C(=O)N1CCC[C@H]1C(=O)O` | (-inf, H3L, -1.6, H2L, 3.26, HL, 7.54, L, +inf) |
+| ligand_5936 | L-N-(2-Hydroxybenzyl)-2-aminopropanoic acid | H2L | Amino Acids | 25 | `CC(NCc1ccccc1O)C(=O)O` | (-inf, H3L, 2.11, H2L, 8.6, HL, 10.94, L, +inf) |
+| ligand_5937 | N-(Phosphonomethyl)glycine (Glyphosate) | H3L | Amino Acids | 146 | `O=C(O)CNCP(=O)(O)O` | (-inf, H4L, -0.5, H3L, 2.2, H2L, 5.45, HL, 10.1, L, +inf) |
+| ligand_5938 | (Carboxymethylamino)acetohydroxamic acid | H2L | Amino Acids | 11 | `O=C(O)CNCC(=O)NO` | (-inf, H3L, -1.8, H2L, 6.99, HL, 9.09, L, +inf) |
+| ligand_5939 | (Carboxymethylamino)aceto-N-methylhydroxamic acid | H2L | Amino Acids | 6 | `CN(O)C(=O)CNCC(=O)O` | (-inf, H3L, -1.9, H2L, 7.58, HL, 9.22, L, +inf) |
+| ligand_5940 | 3-(2-Hydroxyethylamino)propanoic acid | HL | Amino Acids | 9 | `O=C(O)CCNCCO` | (-inf, H2L, 3.4, HL, 9.72, L, +inf) |
+| ligand_5941 | L-4-Hydroxypyrrolidine-2-carbo… (L-Hydroxyproline) | HL | Amino Acids | 46 | `O=C(O)C1CC(O)CN1` | (-inf, H2L, 1.77, HL, 9.47, L, +inf) |
+| ligand_5942 | DL-1,3-Thiazolidine-4-carboxylic… (DL-Thiaproline) | HL | Amino Acids | 22 | `O=C(O)C1CSCN1` | (-inf, H2L, -1.5, HL, -1.5, L, +inf) |
+| ligand_5943 | L-1,4-Perhydrothiazine-3-carboxylic acid | HL | Amino Acids | 3 | `O=C(O)C1CSCCN1` | (-inf, HL, 8.49, L, +inf) |
+| ligand_5944 | DL-Benzylpenicilloic acid | H2L | Amino Acids | 5 | `CC1(C)SC(C(NC(=O)Cc2ccccc2)C(=O)O)NC1C(=O)O` | (-inf, H3L, -1.8, H2L, 2.3, HL, 5.14, L, +inf) |
+| ligand_5945 | L-N-Acetyltryptophan | HL | Amino Acids | 7 | `CC(=O)N[C@@H](Cc1c[nH]c2ccccc12)C(=O)O` | (-inf, HL, 3.23, L, +inf) |
+| ligand_5946 | L-2-(2-Pyridylmethylamino)-5-thiahexanoic acid | HL | Amino Acids | 4 | `CSCCC(NCc1ccccn1)C(=O)O` | (-inf, H2L, 2.1, HL, 7.6, L, +inf) |
+| ligand_5947 | DL-[1-Carboxy-2-(2-mercapto-4-imi… (Ergothioneine) | H2L | Amino Acids | 4 | `C[N+](C)(C)C(Cc1cnc(S)[nH]1)C(=O)O.[Cl-]` | (-inf, HL, 10.44, L, +inf) |
+| ligand_5948 | N-(2-Aminoethyl)glycine (Ethylenediamine m… (EDMA) | HL | Amino Acids | 30 | `NCCNCC(=O)O` | (-inf, H3L, -1.9, H2L, 6.67, HL, 9.84, L, +inf) |
+| ligand_5949 | N-[Tris(hydroxymethyl)methyl]glycine (Tricine) | HL | Amino Acids | 10 | `O=C(O)CNC(CO)(CO)CO` | (-inf, H2L, 2.023, HL, 8.135, L, +inf) |
+| ligand_5950 | 1-Carboxymethyl-2-ketopiperazine | HL | Aza macrocycles with car… | 1 | `O=C(O)CN1CCNCC1=O` | (-inf, HL, 6.55, L, +inf) |
+| ligand_5951 | 4-Carboxymethyl-2-ketopiperazine | HL | Aza macrocycles with car… | 1 | `O=C(O)CN1CCNC(=O)C1` | (-inf, HL, 5.51, L, +inf) |
+| ligand_5952 | 1,4-Bis(carboxymethyl)-2-ketopiperazine | H2L | Aza macrocycles with car… | 2 | `O=C(O)CN1CCN(CC(=O)O)C(=O)C1` | (-inf, H2L, 2.95, HL, 5.87, L, +inf) |
+| ligand_5953 | 1,2,3-Triazole-4-carboxylic acid | HL | Amino Acids | 6 | `O=C(O)c1cn[nH]n1` | (-inf, H2L, 3.22, HL, 8.7, L, +inf) |
+| ligand_5954 | 1-Phenyl-1,2,3-triazole-4-carboxylic acid | HL | Amino Acids | 3 | `O=C(O)c1cn(-c2ccccc2)nn1` | (-inf, HL, 2.88, L, +inf) |
+| ligand_5955 | 5-Methyl-1-phenyl-1,2,3-triazole-4-carboxylic acid | HL | Amino Acids | 3 | `Cc1c(C(=O)O)nnn1-c1ccccc1` | (-inf, HL, 3.73, L, +inf) |
+| ligand_5956 | 1,2,3-Triazole-4,5-dicarboxylic acid | H2L | Amino Acids | 13 | `O=C(O)c1nn[nH]c1C(=O)O` | (-inf, H3L, -1.86, H2L, 5.9, HL, 9.3, L, +inf) |
+| ligand_5957 | 1-Phenyl-1,2,3-triazole-4,5-dicarboxylic acid | H2L | Amino Acids | 6 | `O=C(O)c1nnn(-c2ccccc2)c1C(=O)O` | (-inf, H2L, 2.1, HL, 4.93, L, +inf) |
+| ligand_5958 | Diethylenetriamine-N(1)-acetic acid | HL | Amino Acids | 15 | `NCCNCCNCC(=O)O` | (-inf, H4L, -1.3, H3L, 4.32, H2L, 8.7, HL, 9.92, L, +inf) |
+| ligand_5959 | 2-(Carboxymethylaminomethyl)azole-4-sulfonic acid… | H2L | Amino Acids | 9 | `O=C(O)CNCc1cc(S(=O)(=O)O)c[nH]1` | (-inf, H2L, 2.25, HL, 8.71, L, +inf) |
+| ligand_5960 | L-2-(Methylamino)-3-(4-imidazolyl)propanoic acid … | HL | Amino Acids | 17 | `CNC(Cc1cnc[nH]1)C(=O)O` | (-inf, H3L, -1.4, H2L, 5.93, HL, 9.32, L, +inf) |
+| ligand_5961 | L-2-(Benzylamino)-3-(4-imidazolyl)propanoic acid … | HL | Amino Acids | 18 | `O=C(O)C(Cc1cnc[nH]1)NCc1ccccc1` | (-inf, H3L, -1.3, H2L, 5.94, HL, 8.32, L, +inf) |
+| ligand_5962 | L-2-(Benzylamino)-3-(3-benzyl-5-imidazolyl)propan… | HL | Amino Acids | 14 | `O=C(O)C(Cc1cn(Cc2ccccc2)cn1)NCc1ccccc1` | (-inf, H3L, 2, H2L, 5.5, HL, 8.47, L, +inf) |
+| ligand_5963 | L-4,5,6,7-Tetrahydro-1H-imidazo[4,5-c… (Spinacine) | HL | Amino Acids | 14 | `O=C(O)C1Cc2[nH]cnc2CN1` | (-inf, H3L, -1.5, H2L, 4.9, HL, 8.59, L, +inf) |
+| ligand_5964 | 4-Imidazolylacetic acid | HL | Amino Acids | 10 | `O=C(O)Cc1c[nH]cn1` | (-inf, H2L, 3.1, HL, 7.26, L, +inf) |
+| ligand_5965 | 3-(4-Imidazolyl)propanoic acid | HL | Amino Acids | 14 | `O=C(O)CCc1c[nH]cn1` | (-inf, H2L, 3.83, HL, 7.44, L, +inf) |
+| ligand_5966 | 2-Hydroxy-3-(4-imidazolyl)propanoic acid | HL | Amino Acids | 6 | `O=C(O)C(O)Cc1c[nH]cn1` | (-inf, H2L, 3, HL, 7.31, L, +inf) |
+| ligand_5967 | N-Acetyl-L-histidine | HL | Amino Acids | 23 | `CC(=O)N[C@@H](Cc1c[nH]cn1)C(=O)O` | (-inf, H2L, 2.84, HL, 7.02, L, +inf) |
+| ligand_5968 | N-(2-Methyl-2-propoxycarbonyl)-L-histidine | HL | Amino Acids | 6 | `CC(C)OC(=O)NC(Cc1c[nH]cn1)C(=O)O` | (-inf, H2L, 2.98, HL, 7.06, L, +inf) |
+| ligand_5969 | N-Acetylglycyl-L-histidine | HL | Amino Acids | 6 | `CC(=O)NCC(=O)N[C@@H](CC1C=NC=N1)C(=O)O` | (-inf, H2L, 2.87, HL, 6.99, L, +inf) |
+| ligand_5970 | N-Acetylglycylglycyl-L-histidine | HL | Amino Acids | 12 | `CC(=O)NCC(=O)NCC(=O)N[C@@H](CC1C=NC=N1)C(=O)O` | (-inf, H2L, 2.96, HL, 7.06, L, +inf) |
+| ligand_5971 | N-Acetylglycyl-L-histidylglycine | HL | Amino Acids | 7 | `CC(=O)NCC(=O)N[C@@H](CC1C=NC=N1)C(=O)NCC(=O)O` | (-inf, H2L, 3.13, HL, 6.74, L, +inf) |
+| ligand_5972 | N-Acetylglycyl(N(3)-benzyl-L-histidyl)glycine | HL | Amino Acids | 7 | `CC(=O)NCC(=O)NC(Cc1cncn1Cc1ccccc1)C(=O)NCC(=O)O` | (-inf, H2L, 3.18, HL, 6.25, L, +inf) |
+| ligand_5973 | N-Acetylglycylglycylglycyl-L-histidine | HL | Amino Acids | 7 | `CC(=O)NCC(=O)NCC(=O)NCC(=O)N[C@@H](CC1C=NC=N1)C(=O)O` | (-inf, H2L, 3.04, HL, 7.09, L, +inf) |
+| ligand_5974 | N-Acetylglycylglycyl-L-histidylglycine | HL | Amino Acids | 11 | `CC(=O)NCC(=O)NCC(=O)N[C@@H](CC1C=NC=N1)C(=O)NCC(=O)O` | (-inf, H2L, 3.17, HL, 6.78, L, +inf) |
+| ligand_5975 | Ethylenediiminodiacetic acid (EDDA) | H2L | Amino Acids | 198 | `O=C(O)CNCCNCC(=O)O` | (-inf, H4L, -1.3, H3L, 2.12, H2L, 6.55, HL, 9.61, L, +inf) |
+| ligand_5976 | Ethylenediiminodi-3-propanoic acid (EDDP) | H2L | Amino Acids | 13 | `O=C(O)CCNCCNCCC(=O)O` | (-inf, H2L, 6.87, HL, 9.6, L, +inf) |
+| ligand_5977 | Ethylenediiminodi-2-propanoic acid | H2L | Amino Acids | 21 | `CC(NCCNC(C)C(=O)O)C(=O)O` | (-inf, H2L, -6.74, HL, -6.74, L, +inf) |
+| ligand_5978 | Ethylenediiminodi-2-butanoic acid | H2L | Amino Acids | 6 | `CCC(NCCNC(CC)C(=O)O)C(=O)O` | (-inf, H2L, 6.29, HL, 9.15, L, +inf) |
+| ligand_5979 | Ethylenediiminobis(dimethylacetic acid) | H2L | Amino Acids | 4 | `CC(C)(NCCNC(C)(C)C(=O)O)C(=O)O` | (-inf, H2L, 7, HL, 9.85, L, +inf) |
+| ligand_5980 | 1,4-Diaminobutane-N,N'-diacetic acid | H2L | Amino Acids | 12 | `O=C(O)CNCCCCNCC(=O)O` | (-inf, H4L, -1.84, H3L, 2.52, H2L, 9.04, HL, 10.33, L, +inf) |
+| ligand_5981 | Bis(carboxymethyliminomethyl)phosphinic acid | H3L | Amino Acids | 4 | `O=C(O)CNCP(=O)(O)CNCC(=O)O` | (-inf, H3L, 2.1, H2L, 6.55, HL, 9, L, +inf) |
+| ligand_5982 | 3-(Carboxymethyl)-2-oxo-1,4-diazacy… (Cyclic-EDDS) | H3L | Amino Acids | 64 | `O=C(O)CC1NCCN(C(CC(=O)O)C(=O)O)C1=O` | (-inf, H3L, 3.38, H2L, 4.39, HL, 7, L, +inf) |
+| ligand_5983 | Ethylenediiminodipropanedioic acid (EDDM) | H4L | Amino Acids | 65 | `O=C(O)C(NCCNC(C(=O)O)C(=O)O)C(=O)O` | (-inf, H4L, 2.1, H3L, 2.72, H2L, 6.56, HL, 9.69, L, +inf) |
+| ligand_5984 | Ethylenediiminodibutanedioic acid (EDDS) | H4L | Amino Acids | 108 | `O=C(O)CC(NCCNC(CC(=O)O)C(=O)O)C(=O)O` | (-inf, H4L, 2.95, H3L, 3.86, H2L, 6.84, HL, 10.01, L, +inf) |
+| ligand_5985 | Ethylenediiminodi-2-pentanedioic acid (EDDG) | H4L | Amino Acids | 63 | `O=C(O)CCC(NCCNC(CCC(=O)O)C(=O)O)C(=O)O` | (-inf, H4L, -3.28, H3L, 4.25, H2L, 6.81, HL, 6.81, L, +inf) |
+| ligand_5986 | meso-(1,2-Dimethylethylene)diiminodipropanedioic … | H4L | Amino Acids | 22 | `C[C@H](NC(C(=O)O)C(=O)O)[C@@H](C)NC(C(=O)O)C(=O)O` | (-inf, H4L, 2.34, H3L, 2.75, H2L, 6.06, HL, 9.94, L, +inf) |
+| ligand_5987 | meso-(1,2-Dimethylethylene)diiminodibutanedioic a… | H4L | Amino Acids | 23 | `CC(NC(CC(=O)O)C(=O)O)C(C)NC(CC(=O)O)C(=O)O` | (-inf, H4L, 2.8, H3L, 3.64, H2L, 6.55, HL, 10.59, L, +inf) |
+| ligand_5988 | trans-1,2-Cyclohexylenediiminodipropanedioic acid | H4L | Amino Acids | 33 | `O=C(O)C(N[C@@H]1CCCC[C@H]1NC(C(=O)O)C(=O)O)C(=O)O` | (-inf, H4L, -1.7, H3L, 2.83, H2L, 6.27, HL, 10.49, L, +inf) |
+| ligand_5989 | trans-1,2-Cyclohexylenediiminodibutanedioic acid | H4L | Amino Acids | 20 | `O=C(O)CC(N[C@@H]1CCCC[C@H]1NC(CC(=O)O)C(=O)O)C(=O)O` | (-inf, H4L, 2.95, H3L, 3.81, H2L, 6.71, HL, 10.67, L, +inf) |
+| ligand_5990 | DL-Trimethylenediiminodibutanedioic acid | H4L | Amino Acids | 27 | `O=C(O)CC(NCCCNC(CC(=O)O)C(=O)O)C(=O)O` | (-inf, H4L, 3.2, H3L, 4.26, H2L, 8.79, HL, 10.21, L, +inf) |
+| ligand_5991 | cis-1,4-Cyclohexylenediiminodipropanedioic acid | H4L | Amino Acids | 8 | `O=C(O)C(N[C@H]1CC[C@@H](NC(C(=O)O)C(=O)O)CC1)C(=O)O` | (-inf, H4L, 2.36, H3L, 3.11, H2L, 8.14, HL, 9.72, L, +inf) |
+| ligand_5992 | trans-1,4-Cyclohexylenediiminodipropanedioic acid | H4L | Amino Acids | 8 | `O=C(O)C(N[C@H]1CC[C@H](NC(C(=O)O)C(=O)O)CC1)C(=O)O` | (-inf, H4L, 2.32, H3L, 2.96, H2L, 8.21, HL, 9.92, L, +inf) |
+| ligand_5993 | DL-2,3-Diaminopropanoic-N,N'-dipropanedioic acid | H4L | Amino Acids | 38 | `O=C(O)C(CNC(C(=O)O)C(=O)O)NC(C(=O)O)C(=O)O` | (-inf, H5L, -1.6, H4L, 2.45, H3L, 2.98, H2L, 6.55, HL, 9.71, L, +inf) |
+| ligand_5994 | N,N'-Bis(2-hydroxyphenyl)ethylenediiminodi… (HPED) | H4L | Amino Acids | 37 | `O=C(O)CN(CCN(CC(=O)O)c1ccccc1O)c1ccccc1O` | (-inf, H5L, -1.9, H4L, 3.58, H3L, 6.15, H2L, 10.44, HL, 10.44, L, +inf) |
+| ligand_5995 | rac-Ethylenediiminobis[(2-hydroxyphenyl)ac… (EHPG) | H4L | Amino Acids | 21 | `O=C(O)C(Cc1ccccc1O)NCCNC(Cc1ccccc1O)C(=O)O` | (-inf, H4L, 6.33, H3L, 8.79, H2L, 10.87, HL, 10.87, L, +inf) |
+| ligand_5996 | meso-Ethylenediiminobis[(2-hydroxyphenyl)a… (EHPG) | H4L | Amino Acids | 22 | `O=C(O)C(Cc1ccccc1O)NCCNC(Cc1ccccc1O)C(=O)O` | (-inf, H4L, 6.36, H3L, 8.76, H2L, 10.85, HL, 10.85, L, +inf) |
+| ligand_5997 | rac-Trimethylenebis[2-(2-hydroxy-3,5… (rac-TMPHPG) | *** | Amino Acids | 13 | *** | (-inf, H6L, 2.42, H5L, 2.49, H4L, 7.33, H3L, 8.94, H2L, 8.94, HL, -11.65, L, +inf) |
+| ligand_5998 | meso-Trimethylenebis[2-(2-hydroxy-3… (meso-TMPHPG) | H4L | Amino Acids | 13 | `Cc1cc(C)c(O)c([C@H](NCCCN[C@@H](C(=O)O)c2cc(C)cc(C)c2O)C(=O)O)c1` | (-inf, H6L, -1.8, H5L, 2.29, H4L, 7.33, H3L, 9.14, H2L, 9.14, HL, -12.08, L, +inf) |
+| ligand_5999 | Ethylenediiminob… (rac- or meso-isomer not stated) | H2L | Amino Acids | 17 | `O=C(O)C(CO)NCCNC(CO)C(=O)O` | (-inf, H4L, -1.6, H3L, 2.1, H2L, 6.07, HL, 9.2, L, +inf) |
+| ligand_6000 | Ethylenediiminob… (rac- or meso-isomer not stated) | H2L | Amino Acids | 17 | `O=C(O)C(CCO)NCCNC(CCO)C(=O)O` | (-inf, H4L, -1.6, H3L, 2.1, H2L, 5.82, HL, 9.23, L, +inf) |
+| ligand_6001 | 2-Hydroxy-1,3-propylenediiminodipropanedioic acid | H4L | Amino Acids | 21 | `O=C(O)C(NCC(O)CNC(C(=O)O)C(=O)O)C(=O)O` | (-inf, H4L, 2.41, H3L, 3.4, H2L, 8.9, HL, 10.4, L, +inf) |
+| ligand_6002 | 2-Hydroxy-1,3-pr… (rac- or meso-isomer not stated) | H4L | Amino Acids | 37 | `O=C(O)CC(NCC(O)CNC(CC(=O)O)C(=O)O)C(=O)O` | (-inf, H4L, 3.16, H3L, 4.08, H2L, 8.78, HL, 10.02, L, +inf) |
+| ligand_6003 | 6-Oxa-3,9-diazaundecanedioic acid [Oxybis(ethylen… | H2L | Amino Acids | 8 | `O=C(O)CNCCOCCNCC(=O)O` | (-inf, H4L, -1.9, H3L, 2.6, H2L, 8.65, HL, 9.61, L, +inf) |
+| ligand_6004 | 4,7,10-Triazatridecanedioic acid [Iminobis(ethyle… | H2L | Amino Acids | 8 | `O=C(O)CCNCCNCCNCCC(=O)O` | (-inf, H5L, 2.98, H4L, 3.55, H3L, 4.4, H2L, 9.31, HL, 9.99, L, +inf) |
+| ligand_6005 | Oxybis(ethyleneiminopropanedioic acid) | H4L | Amino Acids | 22 | `O=C(O)C(NCCOCCNC(C(=O)O)C(=O)O)C(=O)O` | (-inf, H4L, -1.8, H3L, 3.2, H2L, 8.46, HL, 9.52, L, +inf) |
+| ligand_6006 | N,N'-Bis(2,2-dimethyl-2-mercaptoethyl)ethylenedii… | H3L | Amino Acids | 10 | `CC(C)(S)CNCC(CC(=O)O)NCC(C)(C)S` | (-inf, H5L, -1.8, H4L, 4.95, H3L, 7.91, H2L, 10.03, HL, 10.03, L, +inf) |
+| ligand_6007 | L,L-Ethylenediimino-… (N,N'-Ethylenedi-L-cysteine) | H4L | Amino Acids | 32 | `O=C(O)C(CS)NCCNC(CS)C(=O)O` | (-inf, H5L, -1.7, H4L, 5.4, H3L, 7.91, H2L, 9.88, HL, 9.88, L, +inf) |
+| ligand_6008 | N,N'-Bis(2,2-dimethyl-2-mercaptoethyl)ethylenedin… | H4L | Amino Acids | 10 | `CC(C)(S)CN(CCN(CC(=O)O)CC(C)(C)S)CC(=O)O` | (-inf, H5L, 2.7, H4L, 4.24, H3L, 8.99, H2L, 10.56, HL, 10.56, L, +inf) |
+| ligand_6009 | N,N'-Bis(2,2-dimethyl-2-mercaptoethyl)-1-[4-(carb… | H5L | Amino Acids | 11 | `CC(C)(S)CN(CC(=O)O)CC(Cc1ccc(OCC(=O)O)cc1)N(CC(=O)O)CC(C)(C)S` | (-inf, H5L, 2.9, H4L, 3.89, H3L, 9.85, H2L, 9.85, HL, -11.7, L, +inf) |
+| ligand_6010 | Ethane-1,1,1-tris(methyleneiminoacetic acid) | H3L | Amino Acids | 11 | `CC(CNCC(=O)O)(CNCC(=O)O)CNCC(=O)O` | (-inf, H3L, 4.69, H2L, 7.73, HL, 10.73, L, +inf) |
+| ligand_6011 | cis,cis-Cyclohexane-1,3,5-tris(iminoacetic acid) | H3L | Amino Acids | 11 | `O=C(O)CN[C@H]1C[C@@H](NCC(=O)O)C[C@@H](NCC(=O)O)C1` | (-inf, H3L, 6.45, H2L, 8.06, HL, 9.6, L, +inf) |
+| ligand_6012 | 3,3',5,5'-Tetramethyl-2,2'-dipyrrolmethene-4,4'-d… | H2L | Amino Acids | 6 | `CC1=C(C(=O)O)C(C)/C(=C/c2[nH]c(C)c(C(=O)O)c2C)=N1` | (-inf, H4L, 3.6, H3L, 4.2, H2L, 8.03, HL, 8.03, L, +inf) |
+| ligand_6013 | N-(4-Methylphenylsulfonyl)ethylenediiminodiacetic… | H2L | Amino Acids | 2 | `Cc1ccc(S(=O)(=O)N(CCNCC(=O)O)CC(=O)O)cc1` | (-inf, H2L, 2, HL, 7.83, L, +inf) |
+| ligand_6014 | Nitrilobis(ethyleneimino)tributanedioic acid | H6L | Amino Acids | 6 | `O=C(O)CC(NCCN(CCNC(CC(=O)O)C(=O)O)C(CC(=O)O)C(=O)O)C(=O)O` | (-inf, H6L, 1.9, H5L, 2.55, H4L, 5.6, H3L, 8.75, H2L, 9.62, HL, 10.35, L, +inf) |
+| ligand_6015 | N,N-Dimethylglycine | HL | Amino Acids | 25 | `CN(C)CC(=O)O` | (-inf, H2L, 2, HL, 9.77, L, +inf) |
+| ligand_6016 | N,N-Diethylglycine | HL | Amino Acids | 5 | `CCN(CC)CC(=O)O` | (-inf, H2L, 2.04, HL, 10.47, L, +inf) |
+| ligand_6017 | N,N-Pentamethyleneglyc… (Piperidine-N-acetic acid) | HL | Amino Acids | 6 | `O=C(O)CN1CCCCC1` | (-inf, H2L, 2.13, HL, 10.25, L, +inf) |
+| ligand_6018 | L-N-Benzylproline | HL | Amino Acids | 15 | `O=C(O)[C@@H]1CCCN1Cc1ccccc1` | (-inf, H2L, 1.97, HL, 9.93, L, +inf) |
+| ligand_6019 | N,N-Bis(phosphonomethyl)glycine | H5L | Amino Acids | 55 | `O=C(O)CN(CP(=O)(O)O)CP(=O)(O)O` | (-inf, H5L, -1.7, H4L, 2.1, H3L, 5.04, H2L, 6.4, HL, 6.4, L, +inf) |
+| ligand_6020 | N-(Carboxymethyl)-N-(2-hydroxyethyl)aminoacetohyd… | H2L | Amino Acids | 9 | `O=C(O)CN(CCO)CC(=O)NO` | (-inf, H2L, 5.69, HL, 9.18, L, +inf) |
+| ligand_6021 | N,N-Bis(2-hydroxyethyl)glycine (Bicine) | HL | Amino Acids | 82 | `O=C(O)CN(CCO)CCO` | (-inf, H2L, -1.7, HL, 8.11, L, +inf) |
+| ligand_6022 | DL-N,N-Bis(2-hydroxyethyl)alanine | HL | Amino Acids | 35 | `CC(C(=O)O)N(CCO)CCO` | (-inf, H2L, -1.7, HL, 8.47, L, +inf) |
+| ligand_6023 | N,N-Bis(2-hydroxypropyl)glycine | HL | Amino Acids | 14 | `CC(O)CN(CC(=O)O)CC(C)O` | (-inf, HL, 8.13, L, +inf) |
+| ligand_6024 | N,N-Bis(3-oxo-3-(4-oxa-1-azacyclohexyl)propyl)gly… | HL | Amino Acids | 9 | `O=C(O)CN(CCC(=O)N1CCOCC1)CCC(=O)N1CCOCC1` | (-inf, H2L, -1.9, HL, 8.2, L, +inf) |
+| ligand_6025 | N,N-Bis(3-oxo-3-(4-oxa-1-azacyclohexyl)propyl)-3-… | HL | Amino Acids | 12 | `O=C(O)CCN(CCC(=O)N1CCOCC1)CCC(=O)N1CCOCC1` | (-inf, H2L, 3.58, HL, 8.24, L, +inf) |
+| ligand_6026 | 3-(3-Hydroxy-4-oxo-1,4-dihydro-1… (Mimosinic acid) | HL | Amino Acids | 17 | `O=C(O)CCn1ccc(=O)c(O)c1` | (-inf, H3L, 2.8, H2L, 3.84, HL, 8.79, L, +inf) |
+| ligand_6027 | L-2-(Dimethylamino)-3-(4-imidazolyl)propanoic aci… | HL | Amino Acids | 20 | `CN(C)C(Cc1cnc[nH]1)C(=O)O` | (-inf, H3L, -1.1, H2L, 6.01, HL, 8.88, L, +inf) |
+| ligand_6028 | 1,5-Diazacyclooctane-N-acetic acid | HL | Amino Acids | 4 | `O=C(O)CN1CCCNCCC1` | (-inf, H3L, -1.7, H2L, 5.18, HL, 5.18, L, +inf) |
+| ligand_6029 | N,N-Bis(2-aminoethyl)glycine | HL | Amino Acids | 16 | `NCCN(CCN)CC(=O)O` | (-inf, H3L, 3.24, H2L, 9.59, HL, 10.81, L, +inf) |
+| ligand_6030 | N,N'-Dimethylethylenedinitrilodiacetic acid | H2L | Amino Acids | 50 | `CN(CCN(C)CC(=O)O)CC(=O)O` | (-inf, H3L, -1.7, H2L, 5.88, HL, 9.92, L, +inf) |
+| ligand_6031 | 5-Thia-2,8-diazanonane-N,N'-diacetic acid | H2L | Amino Acids | 32 | `CN(CCSCCN(C)CC(=O)O)CC(=O)O` | (-inf, H4L, -1.3, H3L, 2.2, H2L, 8.24, HL, 9.3, L, +inf) |
+| ligand_6032 | N,N'-Diethylethylenedinitrilodiacetic acid | H2L | Amino Acids | 12 | `CCN(CCN(CC)CC(=O)O)CC(=O)O` | (-inf, H2L, 6.31, HL, 10.42, L, +inf) |
+| ligand_6033 | 1,4,7-Trimethyl-1,7-bis(4-carboxybenzyl)-1,4,7-tr… | H2L | Amino Acids | 25 | `CN(CCN(C)Cc1ccc(C(=O)O)cc1)CCN(C)Cc1ccc(C(=O)O)cc1` | (-inf, H5L, -1.6, H4L, 3.19, H3L, 3.7, H2L, 6.89, HL, 8.25, L, +inf) |
+| ligand_6034 | N,N'-Bis(phosphonomethyl)ethylenedinitrilodiaceti… | H6L | Amino Acids | 10 | `O=C(O)CN(CCN(CC(=O)O)CP(=O)(O)O)CP(=O)(O)O` | (-inf, H6L, -1.7, H5L, 2.49, H4L, 3.9, H3L, 6.38, H2L, 7.81, HL, 10.43, L, +inf) |
+| ligand_6035 | N,N'-Bis(carboxymethylaminocarbonylmet… (EDDAG-DA) | H4L | Amino Acids | 20 | `O=C(O)CNC(=O)CN(CCN(CC(=O)O)CC(=O)NCC(=O)O)CC(=O)O` | (-inf, H4L, 2.87, H3L, 3.51, H2L, 4.38, HL, 7.37, L, +inf) |
+| ligand_6036 | N,N'-Bis(carboxymethyl)ethylenedinitrilo-N,N'-dia… | H4L | Amino Acids | 24 | `O=C(O)CN(CCN(CC(=O)O)CC(=O)NO)CC(=O)NO` | (-inf, H5L, -1.6, H4L, 3.48, H3L, 6.67, H2L, 9, HL, 9.93, L, +inf) |
+| ligand_6037 | N,N'-Bis(2-hydroxybenzyl)ethylenedinitrilo… (HBED) | H4L | Amino Acids | 92 | `O=C(O)CN(CCN(CC(=O)O)Cc1ccccc1O)Cc1ccccc1O` | (-inf, H6L, -1.7, H5L, 2.3, H4L, 4.68, H3L, 8.38, H2L, 11.01, HL, 11.01, L, +inf) |
+| ligand_6038 | N,N'-Bis(2-hydroxy-5-sulfobenzyl)ethylene… (SHBED) | H4L | Amino Acids | 18 | `O=C(O)CN(CCN(CC(=O)O)Cc1cc(S(=O)(=O)O)ccc1O)Cc1cc(S(=O)(=O)O)ccc1O` | (-inf, H6L, -1.2, H5L, 2, H4L, 4.29, H3L, 7.9, H2L, 10.42, HL, 10.42, L, +inf) |
+| ligand_6039 | N,N"-Bis(2-hydroxybenzyl)diethylenetrinitr… (HBDT) | *** | Amino Acids | 49 | *** | (-inf, H6L, -1.7, H5L, 3.95, H4L, 7.17, H3L, 9.32, H2L, 10.98, HL, 10.98, L, +inf) |
+| ligand_6040 | N,N'-Bis(2-mercaptoethyl)ethylenedinitrilodiaceti… | H4L | Amino Acids | 22 | `O=C(O)CN(CCS)CCN(CCS)CC(=O)O` | (-inf, H5L, -1.4, H4L, 4.38, H3L, 8.19, H2L, 9.76, HL, 10.79, L, +inf) |
+| ligand_6041 | N,N'-Bis(3-hydroxy-5-phosphomethyl-2-methy… (DPDP) | H6L | Amino Acids | 28 | `Cc1ncc(COP(=O)(O)O)c(CN(CCN(CC(=O)O)Cc2c(COP(=O)(O)O)cnc(C)c2O)CC(=O)O)c1O` | (-inf, H8L, 2.1, H7L, 3.34, H6L, 5.35, H5L, 6.14, H4L, 6.92, H3L, 8.17, H2L, 8.17, HL, -11.2, L, +inf) |
+| ligand_6042 | N,N'-Bis(3-hydroxy-5-hydroxymethyl-2-methy… (PLED) | H4L | Amino Acids | 31 | `Cc1ncc(CO)c(CN(CCN(CC(=O)O)Cc2c(CO)cnc(C)c2O)CC(=O)O)c1O` | (-inf, H6L, 2, H5L, 3.19, H4L, 5.68, H3L, 7.16, H2L, 10.3, HL, 10.82, L, +inf) |
+| ligand_6043 | N,N'-Bis(3-hydroxy-5-hydroxymethyl-1,2-d… (DMPLED) | H4L | Amino Acids | 8 | `Cc1c([O-])c(CN(CCN(CC(=O)O)Cc2c(CO)c[n+](C)c(C)c2[O-])CC(=O)O)c(CO)c[n+]1C` | (-inf, H5L, -1.3, H4L, 2.24, H3L, 3.3, H2L, 6.85, HL, 8.95, L, +inf) |
+| ligand_6044 | N-(2-Hydroxybenzyl)-N'-(3-hydroxy-5-hydr… (HBPLED) | H4L | Amino Acids | 14 | `Cc1ncc(CO)c(CN(CCN(CC(=O)O)Cc2ccccc2O)CC(=O)O)c1O` | (-inf, H5L, 2.85, H4L, 5.71, H3L, 8.25, H2L, 10.73, HL, 10.73, L, +inf) |
+| ligand_6045 | N-(2-Hydroxy-3,5-dimethylbenzyl)-N'-(… (Me4HBPLED) | H4L | Amino Acids | 8 | `Cc1cc(C)c(O)c(CN(CCN(CC(=O)O)Cc2c(C)c[n+](C)c(C)c2[O-])CC(=O)O)c1` | (-inf, H5L, -1.1, H4L, 2.96, H3L, 5.99, H2L, 9.72, HL, 9.72, L, +inf) |
+| ligand_6046 | N,N'-Bis(3-hydroxy-6-methyl-2-pyridinyl… (ENDA-HP) | H4L | Amino Acids | 16 | `Cc1ccc(O)c(CN(CCN(CC(=O)O)Cc2nc(C)ccc2O)CC(=O)O)n1` | (-inf, H7L, -1.1, H6L, 2.27, H5L, 3.53, H4L, 5.61, H3L, 7.5, H2L, 7.5, HL, -11.03, L, +inf) |
+| ligand_6047 | N,N''-Bis(3-hydroxy-6-methyl-2-pyridiny… (DTTA-HP) | H5L | Amino Acids | 24 | `Cc1ccc(O)c(CN(CCN(CCN(CC(=O)O)Cc2nc(C)ccc2O)CC(=O)O)CC(=O)O)n1` | (-inf, H8L, -1.5, H7L, 2.25, H6L, 3.49, H5L, 5.19, H4L, 6.21, H3L, 8.9, H2L, 10.95, HL, 10.95, L, +inf) |
+| ligand_6048 | N,N'-Bis(2-hydroxyethyl)ethylenedinitrilodiacetic… | H2L | Amino Acids | 9 | `O=C(O)CN(CCO)CCN(CCO)CC(=O)O` | (-inf, H2L, 4.7, HL, 8.6, L, +inf) |
+| ligand_6049 | N,N'-Bis(2-hydroxyethyl)ethylenedinitrilodipropan… | H4L | Amino Acids | 15 | `O=C(O)C(C(=O)O)N(CCO)CCN(CCO)C(C(=O)O)C(=O)O` | (-inf, H4L, 3.47, H3L, 4.06, H2L, 5.62, HL, 9.29, L, +inf) |
+| ligand_6050 | DL-1-Methylethylenedinitrilotetraacetic acid N,N'… | H2L | Amino Acids | 31 | `CC(CN(CC(N)=O)CC(=O)O)N(CC(N)=O)CC(=O)O` | (-inf, H4L, -1.5, H3L, -1.5, H2L, 3.8, HL, 7.56, L, +inf) |
+| ligand_6051 | DL-1-Ethylethylenedinitrilotetraacetic acid N,N'-… | H2L | Amino Acids | 24 | `CCC(CN(CC(N)=O)CC(=O)O)N(CC(N)=O)CC(=O)O` | (-inf, H3L, -1.7, H2L, 3.7, HL, 7.58, L, +inf) |
+| ligand_6052 | rac-1,2-Dimethylethylenedinitrilotetraacetic acid… | H2L | Amino Acids | 15 | `CC(C(C)N(CC(N)=O)CC(=O)O)N(CC(N)=O)CC(=O)O` | (-inf, H3L, -1.8, H2L, 3.9, HL, 8.41, L, +inf) |
+| ligand_6053 | meso-1,2-Dimethylethylenedinitrilotetraacetic aci… | H2L | Amino Acids | 14 | `CC(C(C)N(CC(N)=O)CC(=O)O)N(CC(N)=O)CC(=O)O` | (-inf, H3L, -1.5, H2L, 3.63, HL, 6.87, L, +inf) |
+| ligand_6054 | N,N'-Bis(carboxymethyl)ethylenedinitrilobis(N-2-p… | H4L | Amino Acids | 8 | `CC(C)N(O)C(=O)CN(CCN(CC(=O)O)CC(=O)N(O)C(C)C)CC(=O)O` | (-inf, H4L, 4.2, H3L, 8.03, H2L, 9.67, HL, 10.56, L, +inf) |
+| ligand_6055 | N,N'-Bis(2-aminoethyl)ethylenedinitrilodiacetic a… | H2L | Amino Acids | 15 | `NCCN(CCN(CCN)CC(=O)O)CC(=O)O` | (-inf, H6L, -1.9, H5L, 2.76, H4L, 3.78, H3L, 9.7, H2L, 9.86, HL, 10.54, L, +inf) |
+| ligand_6056 | N,N'-Bis(2-pyridylmethyl)ethylenedinitrilodiaceti… | H2L | Amino Acids | 20 | `O=C(O)CN(CCN(CC(=O)O)Cc1ccccn1)Cc1ccccn1` | (-inf, H4L, 2.34, H3L, 3.06, H2L, 5.58, HL, 8.75, L, +inf) |
+| ligand_6057 | N,N',N''-Tris(carboxymethyl)diethylenetrinitrilob… | H5L | Amino Acids | 9 | `CC(C)N(O)C(=O)CN(CCN(CCN(CC(=O)O)CC(=O)N(O)C(C)C)CC(=O)O)CC(=O)O` | (-inf, H5L, 3.7, H4L, 5.94, H3L, 9.07, H2L, 10.1, HL, 10.85, L, +inf) |
+| ligand_6058 | 1,4-Diazacyclohexa… (Piperazine-1,4-diacetic acid) | H2L | Aza macrocycles with car… | 17 | `O=C(O)CN1CCN(CC(=O)O)CC1` | (-inf, H3L, -1.8, H2L, 4.4, HL, 8.67, L, +inf) |
+| ligand_6059 | 1,4-Diazacycloheptane-N,N'-diacetic acid | H2L | Aza macrocycles with car… | 18 | `O=C(O)CN1CCCN(CC(=O)O)CC1` | (-inf, H3L, 2.04, H2L, 5.92, HL, 9.53, L, +inf) |
+
+### Functional groups across all SQL matches (4054 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| aromatic_ring | 1903 | 47% |
+| carboxyl | 1693 | 42% |
+| hydroxyl | 1430 | 35% |
+| primary_amine | 1101 | 27% |
+| tertiary_amine | 820 | 20% |
+| amide | 756 | 19% |
+| secondary_amine | 724 | 18% |
+| phenol | 462 | 11% |
+| pyridine | 428 | 11% |
+| ether | 291 | 7% |
+| halide | 268 | 7% |
+| thioether | 261 | 6% |
+| sulfonate | 203 | 5% |
+| phosphonate | 181 | 4% |
+| thiol | 119 | 3% |
+| imine | 109 | 3% |
+| phosphate | 99 | 2% |
+| ester | 92 | 2% |
+| ketone | 90 | 2% |
+| oxime | 48 | 1% |
+| aldehyde | 44 | 1% |
+| nitrile | 39 | 1% |
+| thiazole | 10 | 0% |
+| imidazole | 8 | 0% |
+| pyrazole | 8 | 0% |
+| carboxylate | 1 | 0% |
+
+---
+
+### Step 15: `build_system_catalog`
+**Args:**
+```json
+{
+  "metal_id": "metal_26"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 20 pair(s), 83 species *(ultra-compact)*
+
+### Equation legend
+
+| beta_def_id | equation | note |
+|-------------|----------|------|
+| beta_def_107 | [M(H-1L)] + [H] <=> [ML] |  |
+| beta_def_339 | [ML2(s,beta)] <=> [M] + [L]^2 | solid |
+| beta_def_345 | [ML2(s,gamma)] <=> [M] + [L]^2 | solid |
+| beta_def_374 | [M]^2 + [L]^2 <=> [M2(H-1L)2] + [H]^2 |  |
+| beta_def_502 | [M]^2 + [L] <=> [M2L] |  |
+| beta_def_519 | [M]^2 + [L]^2 <=> [M2L2] |  |
+| beta_def_674 | [M]^4 + [L]^4 <=> [M4L4] |  |
+| beta_def_732 | [M] + [H2L] <=> [MH2L] |  |
+| beta_def_739 | [MHL] + [H] <=> [MH2L] |  |
+| beta_def_779 | [M] + [HL] <=> [MHL] |  |
+| beta_def_788 | [ML] + [H] <=> [MHL] |  |
+| beta_def_812 | [M] + [L] <=> [ML] |  |
+| beta_def_840 | [M] + [L]^2 <=> [ML2] |  |
+| beta_def_872 | [M] + [L]^3 <=> [ML3] |  |
+| beta_def_894 | [M] + [L]^4 <=> [ML4] |  |
+| beta_def_966 | [M(OH)L] + [H] <=> [ML] + [H2O] |  |
+
+*(all species aqueous unless noted)*
+
+**1. Cd^[2+] + Hydrogen thiocyanate (Thiocyanic acid)** (metal_26 + ligand_10092) — ligand_def_HxL: HL | 51 ent, 4 sp, 51 vlms (vlm_172405…vlm_172455)
+   - species: beta_def_812(15) beta_def_840(16) beta_def_872(13) beta_def_894(7)
+   - eq:7 nets T:19~30°C I:-0.15~3.15M max 4n/6e
+**2. Cd^[2+] + Bromide ion** (metal_26 + ligand_10168) — ligand_def_HxL: *** | 49 ent, 4 sp, 49 vlms (vlm_178102…vlm_178150)
+   - species: beta_def_812(14) beta_def_840(14) beta_def_872(12) beta_def_894(9)
+   - eq:8 nets T:19~30°C I:-0.05~4.15M max 4n/6e
+**3. Cd^[2+] + Ammonia** (metal_26 + ligand_10103) — ligand_def_HxL: L | 49 ent, 4 sp, 49 vlms (vlm_173415…vlm_173463)
+   - species: beta_def_812(13) beta_def_840(12) beta_def_872(12) beta_def_894(12)
+   - eq:5 nets T:19~30°C I:-0.15~3.15M max 4n/6e
+**4. Cd^[2+] + Hydrogen cyanide (Hydrocyanic acid)** (metal_26 + ligand_10090) — ligand_def_HxL: HL | 44 ent, 4 sp, 44 vlms (vlm_172010…vlm_172053)
+   - species: beta_def_812(11) beta_def_840(11) beta_def_872(11) beta_def_894(11)
+   - eq:5 nets T:5~45°C I:-0.15~3.15M max 4n/6e
+**5. Cd^[2+] + Iodide ion** (metal_26 + ligand_10171) — ligand_def_HxL: *** | 40 ent, 4 sp, 40 vlms (vlm_178489…vlm_178528)
+   - species: beta_def_812(12) beta_def_840(9) beta_def_872(9) beta_def_894(10)
+   - eq:7 nets T:19~30°C I:-0.15~4.15M max 4n/6e
+**6. Cd^[2+] + Ethanoic acid (Acetic acid)** (metal_26 + ligand_8465) — ligand_def_HxL: HL | 40 ent, 3 sp, 40 vlms (vlm_144851…vlm_144890)
+   - species: beta_def_812(16) beta_def_840(13) beta_def_872(11)
+   - eq:6 nets T:19~30°C I:-0.15~3.15M max 3n/3e
+**7. Cd^[2+] + 1,3-Diazole (Imidazole)** (metal_26 + ligand_7795) — ligand_def_HxL: L | 33 ent, 5 sp, 33 vlms (vlm_133984…vlm_134016)
+   - species: beta_def_812(9) beta_def_840(9) beta_def_872(8) beta_def_894(6) beta_def_966(1)
+   - eq:7 nets T:19~41°C I:-0.15~3.15M max 5n/7e
+**8. Cd^[2+] + Thiocarbamide (Thiourea)** (metal_26 + ligand_10004) — ligand_def_HxL: L | 32 ent, 4 sp, 32 vlms (vlm_169498…vlm_169529)
+   - species: beta_def_812(9) beta_def_840(9) beta_def_872(7) beta_def_894(7)
+   - eq:5 nets T:19~30°C I:-0.05~3.15M max 4n/6e
+**9. Cd^[2+] + Aminoacetic acid (Glycine)** (metal_26 + ligand_5760) — ligand_def_HxL: HL | 32 ent, 3 sp, 32 vlms (vlm_93961…vlm_93992)
+   - species: beta_def_812(11) beta_def_840(11) beta_def_872(10)
+   - eq:7 nets T:5~45°C I:-0.15~1.15M max 3n/3e
+**10. Cd^[2+] + Chloride ion** (metal_26 + ligand_10163) — ligand_def_HxL: *** | 30 ent, 3 sp, 30 vlms (vlm_177542…vlm_177571)
+   - species: beta_def_812(11) beta_def_840(10) beta_def_872(9)
+   - eq:7 nets T:19~30°C I:-0.15~4.15M max 3n/3e
+**11. Cd^[2+] + Ethylenediamine** (metal_26 + ligand_7029) — ligand_def_HxL: L | 29 ent, 3 sp, 29 vlms (vlm_122544…vlm_122572)
+   - species: beta_def_812(10) beta_def_840(10) beta_def_872(9)
+   - eq:6 nets T:19~30°C I:-0.15~3.15M max 3n/3e
+**12. Cd^[2+] + Hydroxide ion** (metal_26 + ligand_10076) — ligand_def_HxL: *** | 23 ent, 8 sp, 23 vlms (vlm_170962…vlm_170984)
+   - species: beta_def_339(4) beta_def_345(1) beta_def_502(4) beta_def_674(4) beta_def_812(5) beta_def_840(2) beta_def_872(1) beta_def_894(2)
+   - eq:3 nets T:19~30°C I:-0.05~3.15M max 8n/28e
+**13. Cd^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)** (metal_26 + ligand_6277) — ligand_def_HxL: H4L | 23 ent, 4 sp, 23 vlms (vlm_108725…vlm_108747)
+   - species: beta_def_739(1) beta_def_788(5) beta_def_812(14) beta_def_966(3)
+   - eq:5 nets T:19~30°C I:-0.15~3.15M max 4n/5e
+**14. Cd^[2+] + 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid)** (metal_26 + ligand_9058) — ligand_def_HxL: H3L | 22 ent, 6 sp, 22 vlms (vlm_157765…vlm_157786)
+   - species: beta_def_107(3) beta_def_374(1) beta_def_732(2) beta_def_779(5) beta_def_812(6) beta_def_840(5)
+   - eq:4 nets T:19~30°C I:-0.05~2.15M max 5n/10e
+**15. Cd^[2+] + Thiosemicarbazide** (metal_26 + ligand_10025) — ligand_def_HxL: L | 18 ent, 3 sp, 18 vlms (vlm_169870…vlm_169887)
+   - species: beta_def_812(7) beta_def_840(7) beta_def_872(4)
+   - eq:3 nets T:19~30°C I:-0.05~1.15M max 3n/3e
+**16. Cd^[2+] + Hydrogen thiosulfate (Thiosulfuric acid)** (metal_26 + ligand_10149) — ligand_def_HxL: H2L | 17 ent, 5 sp, 17 vlms (vlm_176296…vlm_176312)
+   - species: beta_def_519(1) beta_def_812(8) beta_def_840(5) beta_def_872(2) beta_def_894(1)
+   - eq:4 nets T:19~35°C I:-0.05~3.15M max 5n/10e
+**17. Cd^[2+] + 4-(2-Aminoethyl)imidazole (Histamine)** (metal_26 + ligand_7849) — ligand_def_HxL: L | 17 ent, 5 sp, 17 vlms (vlm_134701…vlm_134717)
+   - species: beta_def_788(3) beta_def_812(5) beta_def_840(5) beta_def_872(3) beta_def_966(1)
+   - eq:3 nets T:19~41°C I:-0.15~0.3M max 4n/4e
+**18. Cd^[2+] + Hydrogen azide (Hydrazoic acid)** (metal_26 + ligand_10106) — ligand_def_HxL: HL | 16 ent, 4 sp, 16 vlms (vlm_173681…vlm_173696)
+   - species: beta_def_812(4) beta_def_840(4) beta_def_872(4) beta_def_894(4)
+   - eq:2 nets T:16.5~31.5°C I:1.775~3.225M max 4n/6e
+**19. Cd^[2+] + Selenocyanate ion** (metal_26 + ligand_10093) — ligand_def_HxL: L | 15 ent, 4 sp, 15 vlms (vlm_172583…vlm_172597)
+   - species: beta_def_812(6) beta_def_840(3) beta_def_872(3) beta_def_894(3)
+   - eq:2 nets T:19~30°C I:-0.05~1.15M max 4n/6e
+**20. Cd^[2+] + 2-(Methylaminomethyl)pyridine** (metal_26 + ligand_8112) — ligand_def_HxL: L | 15 ent, 3 sp, 15 vlms (vlm_137742…vlm_137756)
+   - species: beta_def_812(7) beta_def_840(7) beta_def_872(1)
+   - eq:3 nets T:19~30°C I:-0.15~0.65M max 3n/3e
+
+---
+
+### Step 16: `build_system_catalog`
+**Args:**
+```json
+{
+  "metal_id": "metal_71"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 20 pair(s), 92 species *(ultra-compact)*
+
+### Equation legend
+
+| beta_def_id | equation | note |
+|-------------|----------|------|
+| beta_def_194 | [M] + [HL]^2 <=> [M(HL)2] |  |
+| beta_def_204 | [MHL2] + [H] <=> [M(HL)2] |  |
+| beta_def_288 | [H]^2 + [ML(s,black)] <=> [M] + [H2L] | solid |
+| beta_def_292 | [H]^2 + [ML(s,red)] <=> [M] + [H2L] | solid |
+| beta_def_334 | [ML2(s)] <=> [M] + [L]^2 | solid |
+| beta_def_348 | [MO(s,red)] + [H2O] <=> [M] + [OH]^2 | solid |
+| beta_def_438 | [M2(OH)5L] + [H]^2 <=> [M2(OH)3L] + [H2O]^2 |  |
+| beta_def_502 | [M]^2 + [L] <=> [M2L] |  |
+| beta_def_540 | [M]^2 + [L]^3 <=> [M2L3] |  |
+| beta_def_571 | [M]^2 + [L] + [H2O] <=> [M2(OH)L] + [H] |  |
+| beta_def_575 | [M2(OH)3L] + [H]^2 <=> [M2(OH)L] + [H2O]^2 |  |
+| beta_def_620 | [H]^4 + [M3O2L(s)] <=> [M]^3 + [L] + [H2O]^2 | solid |
+| beta_def_645 | [M]^3 + [L]^3 <=> [M3L3] |  |
+| beta_def_713 | [MCl2] + [L] <=> [MClL] + [Cl] |  |
+| beta_def_739 | [MHL] + [H] <=> [MH2L] |  |
+| beta_def_751 | [MH2L] + [H] <=> [MH3L] |  |
+| beta_def_779 | [M] + [HL] <=> [MHL] |  |
+| beta_def_788 | [ML] + [H] <=> [MHL] |  |
+| beta_def_792 | [ML2] + [H] <=> [MHL2] |  |
+| beta_def_812 | [M] + [L] <=> [ML] |  |
+| beta_def_840 | [M] + [L]^2 <=> [ML2] |  |
+| beta_def_845 | [MCl2] + [L]^2 <=> [ML2] + [Cl]^2 |  |
+| beta_def_872 | [M] + [L]^3 <=> [ML3] |  |
+| beta_def_894 | [M] + [L]^4 <=> [ML4] |  |
+| beta_def_966 | [M(OH)L] + [H] <=> [ML] + [H2O] |  |
+| beta_def_978 | [M] + [L] + [OH] <=> [M(OH)L] |  |
+
+*(all species aqueous unless noted)*
+
+**1. Hg^[2+] + Chloride ion** (metal_71 + ligand_10163) — ligand_def_HxL: *** | 38 ent, 5 sp, 38 vlms (vlm_177572…vlm_177609)
+   - species: beta_def_812(8) beta_def_840(8) beta_def_872(9) beta_def_894(9) beta_def_966(4)
+   - eq:5 nets T:19~30°C I:-0.05~3.15M max 5n/7e
+**2. Hg^[2+] + Hydrogen cyanide (Hydrocyanic acid)** (metal_71 + ligand_10090) — ligand_def_HxL: HL | 37 ent, 5 sp, 37 vlms (vlm_172054…vlm_172090)
+   - species: beta_def_812(8) beta_def_840(10) beta_def_872(9) beta_def_894(9) beta_def_978(1)
+   - eq:6 nets T:5~45°C I:-0.15~2.15M max 4n/6e
+**3. Hg^[2+] + Hydroxide ion** (metal_71 + ligand_10076) — ligand_def_HxL: *** | 29 ent, 6 sp, 29 vlms (vlm_170985…vlm_171013)
+   - species: beta_def_348(4) beta_def_502(4) beta_def_645(2) beta_def_812(8) beta_def_840(10) beta_def_872(1)
+   - eq:6 nets T:19~30°C I:-0.15~3.15M max 6n/15e
+**4. Hg^[2+] + Bromide ion** (metal_71 + ligand_10168) — ligand_def_HxL: *** | 28 ent, 5 sp, 28 vlms (vlm_178151…vlm_178178)
+   - species: beta_def_812(8) beta_def_840(6) beta_def_872(6) beta_def_894(6) beta_def_966(2)
+   - eq:2 nets T:16.5~31.5°C I:0.275~3.225M max 5n/7e
+**5. Hg^[2+] + Thiocarbamide (Thiourea)** (metal_71 + ligand_10004) — ligand_def_HxL: L | 27 ent, 5 sp, 27 vlms (vlm_169530…vlm_169556)
+   - species: beta_def_540(3) beta_def_812(3) beta_def_840(7) beta_def_872(7) beta_def_894(7)
+   - eq:3 nets T:19~30°C I:-0.05~1.15M max 5n/10e
+**6. Hg^[2+] + Hydrogen thiocyanate (Thiocyanic acid)** (metal_71 + ligand_10092) — ligand_def_HxL: HL | 20 ent, 6 sp, 20 vlms (vlm_172456…vlm_172475)
+   - species: beta_def_334(1) beta_def_812(6) beta_def_840(4) beta_def_872(3) beta_def_894(3) beta_def_966(3)
+   - eq:2 nets T:19~30°C I:-0.05~1.15M max 6n/11e
+**7. Hg^[2+] + Iodide ion** (metal_71 + ligand_10171) — ligand_def_HxL: *** | 16 ent, 6 sp, 16 vlms (vlm_178529…vlm_178544)
+   - species: beta_def_334(3) beta_def_812(4) beta_def_840(3) beta_def_872(1) beta_def_894(4) beta_def_966(1)
+   - eq:1 nets T:16.5~31.5°C I:0.275~0.725M max 6n/11e
+**8. Hg^[2+] + Ethylenediamine** (metal_71 + ligand_7029) — ligand_def_HxL: L | 13 ent, 3 sp, 13 vlms (vlm_122573…vlm_122585)
+   - species: beta_def_792(3) beta_def_812(5) beta_def_840(5)
+   - eq:3 nets T:19~30°C I:-0.05~3.15M max 3n/2e
+**9. Hg^[2+] + Ammonia** (metal_71 + ligand_10103) — ligand_def_HxL: L | 12 ent, 4 sp, 12 vlms (vlm_173464…vlm_173475)
+   - species: beta_def_812(1) beta_def_840(4) beta_def_872(3) beta_def_894(4)
+   - eq:3 nets T:19~30°C I:-0.05~2.15M max 4n/6e
+**10. Hg^[2+] + 2,2'-Thiodiethanol (beta-Thiodiglycol)** (metal_71 + ligand_9697) — ligand_def_HxL: *** | 12 ent, 4 sp, 12 vlms (vlm_167724…vlm_167735)
+   - species: beta_def_812(3) beta_def_840(3) beta_def_872(3) beta_def_894(3)
+   - eq:1 nets T:16.5~31.5°C I:0.275~0.725M max 4n/6e
+**11. Hg^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)** (metal_71 + ligand_6277) — ligand_def_HxL: H4L | 11 ent, 4 sp, 11 vlms (vlm_108748…vlm_108758)
+   - species: beta_def_739(1) beta_def_788(4) beta_def_812(5) beta_def_966(1)
+   - eq:3 nets T:19~30°C I:-0.05~1.15M max 3n/3e
+**12. Hg^[2+] + Hydrogen azide (Hydrazoic acid)** (metal_71 + ligand_10106) — ligand_def_HxL: HL | 10 ent, 2 sp, 10 vlms (vlm_173697…vlm_173706)
+   - species: beta_def_812(5) beta_def_840(5)
+   - eq:3 nets T:19~30°C I:-0.15~1.15M max 2n/1e
+**13. Hg^[2+] + Hydrogen carbonate (Carbonic acid)** (metal_71 + ligand_10096) — ligand_def_HxL: H2L | 10 ent, 5 sp, 10 vlms (vlm_172918…vlm_172927)
+   - species: beta_def_620(3) beta_def_779(2) beta_def_812(2) beta_def_840(1) beta_def_966(2)
+   - eq:3 nets T:19~30°C I:-0.05~3.15M max 5n/8e
+**14. Hg^[2+] + 1,3-Diazole (Imidazole)** (metal_71 + ligand_7795) — ligand_def_HxL: L | 10 ent, 3 sp, 10 vlms (vlm_134017…vlm_134026)
+   - species: beta_def_812(3) beta_def_840(4) beta_def_966(3)
+   - eq:2 nets T:19~30°C I:-0.05~3.15M max 3n/2e
+**15. Hg^[2+] + Methylamine** (metal_71 + ligand_6797) — ligand_def_HxL: L | 10 ent, 6 sp, 10 vlms (vlm_119991…vlm_120000)
+   - species: beta_def_713(3) beta_def_812(1) beta_def_840(1) beta_def_845(3) beta_def_872(1) beta_def_894(1)
+   - eq:2 nets T:19~30°C I:-0.05~0.65M max 4n/6e
+**16. Hg^[2+] + Thiosemicarbazide** (metal_71 + ligand_10025) — ligand_def_HxL: L | 9 ent, 3 sp, 9 vlms (vlm_169888…vlm_169896)
+   - species: beta_def_840(3) beta_def_872(3) beta_def_894(3)
+   - eq:2 nets T:19~30°C I:-0.05~0.85M max 2n/1e
+**17. Hg^[2+] + Selenocarbamide (Selenourea)** (metal_71 + ligand_10022) — ligand_def_HxL: L | 9 ent, 3 sp, 9 vlms (vlm_169776…vlm_169784)
+   - species: beta_def_840(3) beta_def_872(3) beta_def_894(3)
+   - eq:1 nets T:20~30°C I:-0.05~0.25M max 3n/3e
+**18. Hg^[2+] + Hydrogen sulfide (Hydrosulfuric acid)** (metal_71 + ligand_10144) — ligand_def_HxL: H2L | 8 ent, 5 sp, 8 vlms (vlm_175475…vlm_175482)
+   - species: beta_def_194(1) beta_def_204(1) beta_def_288(4) beta_def_292(1) beta_def_792(1)
+   - eq:2 nets T:15~30°C I:-0.05~1.15M max 4n/5e
+**19. Hg^[2+] + rac-3,6-Dioxaoctane-1,2,4,5,7,8-hexacarboxylic acid (TDS)** (metal_71 + ligand_9096) — ligand_def_HxL: H6L | 8 ent, 8 sp, 8 vlms (vlm_158606…vlm_158613)
+   - species: beta_def_438(1) beta_def_571(1) beta_def_575(1) beta_def_739(1) beta_def_751(1) beta_def_788(1) beta_def_812(1) beta_def_966(1)
+   - eq:1 nets T:20~30°C I:-0.05~0.25M max 8n/24e
+**20. Hg^[2+] + Pyridine (Azine)** (metal_71 + ligand_7890) — ligand_def_HxL: L | 8 ent, 4 sp, 8 vlms (vlm_135327…vlm_135334)
+   - species: beta_def_812(3) beta_def_840(3) beta_def_872(1) beta_def_894(1)
+   - eq:1 nets T:16.5~31.5°C I:0.275~0.725M max 4n/6e
+
+---
+
+### Step 17: `build_system_catalog`
+**Args:**
+```json
+{
+  "metal_id": "metal_125"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 20 pair(s), 126 species *(ultra-compact)*
+
+### Equation legend
+
+| beta_def_id | equation | note |
+|-------------|----------|------|
+| beta_def_194 | [M] + [HL]^2 <=> [M(HL)2] |  |
+| beta_def_204 | [MHL2] + [H] <=> [M(HL)2] |  |
+| beta_def_208 | [M] + [HL]^3 <=> [M(HL)3] |  |
+| beta_def_317 | [ML(s,cerussite)] <=> [M] + [L] | solid |
+| beta_def_328 | [(M2OL2)0.5(s)] + [H2O]^0.5 <=> [M] + [L] + [OH] | solid |
+| beta_def_334 | [ML2(s)] <=> [M] + [L]^2 | solid |
+| beta_def_348 | [MO(s,red)] + [H2O] <=> [M] + [OH]^2 | solid |
+| beta_def_349 | [MO(s,yellow)] + [H2O] <=> [M] + [OH]^2 | solid |
+| beta_def_363 | [H]^8 + [M10(OH)6OL6(s)] <=> [M]^10 + [L]^6 + [H2O]^7 | solid |
+| beta_def_433 | [M2(OH)L2] + [OH] <=> [M2(OH)2L2] |  |
+| beta_def_473 | [M2HL] + [H] <=> [M2H2L] |  |
+| beta_def_483 | [M2H2L] + [H] <=> [M2H3L] |  |
+| beta_def_486 | [M2H3L] + [H] <=> [M2H4L] |  |
+| beta_def_493 | [M2L] + [H] <=> [M2HL] |  |
+| beta_def_502 | [M]^2 + [L] <=> [M2L] |  |
+| beta_def_515 | [M2(OH)L] + [H] <=> [M2L] + [H2O] |  |
+| beta_def_519 | [M]^2 + [L]^2 <=> [M2L2] |  |
+| beta_def_574 | [M2(OH)2L] + [H] <=> [M2(OH)L] + [H2O] |  |
+| beta_def_584 | [M2L2] + [OH] <=> [M2(OH)L2] |  |
+| beta_def_596 | [M3(OH)3L] + [H] <=> [M3(OH)2L] + [H2O] |  |
+| beta_def_616 | [M3(OH)2L2(s)] <=> [M]^3 + [OH]^2 + [L]^2 | solid |
+| beta_def_635 | [M3L] + [H] <=> [M3HL] |  |
+| beta_def_638 | [M]^3 + [L] <=> [M3L] |  |
+| beta_def_640 | [M3(OH)L] + [H] <=> [M3L] + [H2O] |  |
+| beta_def_649 | [M]^3 + [L]^4 <=> [M3L4] |  |
+| beta_def_656 | [M3(OH)2L] + [H] <=> [M3OHL] + [H2O] |  |
+| beta_def_674 | [M]^4 + [L]^4 <=> [M4L4] |  |
+| beta_def_706 | [M]^6 + [L]^8 <=> [M6L8] |  |
+| beta_def_732 | [M] + [H2L] <=> [MH2L] |  |
+| beta_def_739 | [MHL] + [H] <=> [MH2L] |  |
+| beta_def_744 | [MHL3] + [H] <=> [MH2L3] |  |
+| beta_def_779 | [M] + [HL] <=> [MHL] |  |
+| beta_def_788 | [ML] + [H] <=> [MHL] |  |
+| beta_def_792 | [ML2] + [H] <=> [MHL2] |  |
+| beta_def_797 | [M] + [H] + [L]^2 <=> [MHL2] |  |
+| beta_def_803 | [ML3] + [H] <=> [MHL3] |  |
+| beta_def_812 | [M] + [L] <=> [ML] |  |
+| beta_def_840 | [M] + [L]^2 <=> [ML2] |  |
+| beta_def_872 | [M] + [L]^3 <=> [ML3] |  |
+| beta_def_894 | [M] + [L]^4 <=> [ML4] |  |
+| beta_def_966 | [M(OH)L] + [H] <=> [ML] + [H2O] |  |
+| beta_def_978 | [M] + [L] + [OH] <=> [M(OH)L] |  |
+| beta_def_984 | [M(OH)L2] + [H] <=> [ML2] + [H2O] |  |
+
+*(all species aqueous unless noted)*
+
+**1. Pb^[2+] + Bromide ion** (metal_125 + ligand_10168) — ligand_def_HxL: *** | 45 ent, 5 sp, 45 vlms (vlm_178198…vlm_178242)
+   - species: beta_def_334(8) beta_def_812(11) beta_def_840(10) beta_def_872(9) beta_def_894(7)
+   - eq:9 nets T:19~30°C I:-0.15~4.15M max 5n/10e
+**2. Pb^[2+] + Hydroxide ion** (metal_125 + ligand_10076) — ligand_def_HxL: *** | 34 ent, 10 sp, 34 vlms (vlm_171068…vlm_171101)
+   - species: beta_def_328(1) beta_def_348(1) beta_def_349(1) beta_def_502(2) beta_def_649(5) beta_def_674(7) beta_def_706(5) beta_def_812(5) beta_def_840(3) beta_def_872(4)
+   - eq:6 nets T:19~30°C I:-0.15~5.15M max 10n/45e
+**3. Pb^[2+] + Chloride ion** (metal_125 + ligand_10163) — ligand_def_HxL: *** | 32 ent, 4 sp, 32 vlms (vlm_177638…vlm_177669)
+   - species: beta_def_334(2) beta_def_812(10) beta_def_840(10) beta_def_872(10)
+   - eq:8 nets T:19~30°C I:-0.15~4.15M max 4n/6e
+**4. Pb^[2+] + Iodide ion** (metal_125 + ligand_10171) — ligand_def_HxL: *** | 28 ent, 5 sp, 28 vlms (vlm_178552…vlm_178579)
+   - species: beta_def_334(4) beta_def_812(6) beta_def_840(6) beta_def_872(6) beta_def_894(6)
+   - eq:6 nets T:19~30°C I:-0.05~4.15M max 5n/10e
+**5. Pb^[2+] + Thiocarbamide (Thiourea)** (metal_125 + ligand_10004) — ligand_def_HxL: L | 28 ent, 4 sp, 28 vlms (vlm_169581…vlm_169608)
+   - species: beta_def_812(7) beta_def_840(7) beta_def_872(7) beta_def_894(7)
+   - eq:5 nets T:19~30°C I:-0.05~3.15M max 4n/6e
+**6. Pb^[2+] + Aminoacetic acid (Glycine)** (metal_125 + ligand_5760) — ligand_def_HxL: HL | 25 ent, 8 sp, 25 vlms (vlm_94001…vlm_94025)
+   - species: beta_def_194(2) beta_def_204(1) beta_def_208(1) beta_def_779(5) beta_def_792(1) beta_def_812(8) beta_def_840(4) beta_def_966(3)
+   - eq:4 nets T:19~30°C I:-0.05~3.15M max 6n/11e
+**7. Pb^[2+] + Nitrate ion** (metal_125 + ligand_10109) — ligand_def_HxL: *** | 23 ent, 4 sp, 23 vlms (vlm_174057…vlm_174079)
+   - species: beta_def_812(9) beta_def_840(7) beta_def_872(4) beta_def_894(3)
+   - eq:5 nets T:19~30°C I:-0.05~3.15M max 4n/6e
+**8. Pb^[2+] + Ethanoic acid (Acetic acid)** (metal_125 + ligand_8465) — ligand_def_HxL: HL | 20 ent, 3 sp, 20 vlms (vlm_144913…vlm_144932)
+   - species: beta_def_812(8) beta_def_840(7) beta_def_872(5)
+   - eq:6 nets T:19~35°C I:-0.15~3.15M max 3n/3e
+**9. Pb^[2+] + Butanedioic acid (Succinic acid)** (metal_125 + ligand_8907) — ligand_def_HxL: H2L | 16 ent, 8 sp, 16 vlms (vlm_153489…vlm_153504)
+   - species: beta_def_194(2) beta_def_744(1) beta_def_779(2) beta_def_792(2) beta_def_803(2) beta_def_812(3) beta_def_840(2) beta_def_872(2)
+   - eq:3 nets T:19~30°C I:-0.05~3.15M max 8n/15e
+**10. Pb^[2+] + L-2-Amino-3-mercaptopropanoic acid (Cysteine)** (metal_125 + ligand_5856) — ligand_def_HxL: H2L | 16 ent, 5 sp, 16 vlms (vlm_97478…vlm_97493)
+   - species: beta_def_779(4) beta_def_797(3) beta_def_812(6) beta_def_840(2) beta_def_984(1)
+   - eq:4 nets T:19~30°C I:-0.05~3.15M max 5n/8e
+**11. Pb^[2+] + L-5-Glutamyl-L-cysteinylglycine (Glutathione)** (metal_125 + ligand_6592) — ligand_def_HxL: H3L | 14 ent, 6 sp, 14 vlms (vlm_116692…vlm_116705)
+   - species: beta_def_204(3) beta_def_739(3) beta_def_788(3) beta_def_812(3) beta_def_840(1) beta_def_984(1)
+   - eq:1 nets T:16.5~31.5°C I:2.775~3.225M max 6n/9e
+**12. Pb^[2+] + Hydrogen carbonate (Carbonic acid)** (metal_125 + ligand_10096) — ligand_def_HxL: H2L | 13 ent, 9 sp, 13 vlms (vlm_172928…vlm_172940)
+   - species: beta_def_317(4) beta_def_363(1) beta_def_502(1) beta_def_616(1) beta_def_638(1) beta_def_779(1) beta_def_812(1) beta_def_840(2) beta_def_978(1)
+   - eq:6 nets T:19~30°C I:-0.15~3.15M max 5n/10e
+**13. Pb^[2+] + N-Ethylthiourea** (metal_125 + ligand_10006) — ligand_def_HxL: L | 13 ent, 4 sp, 13 vlms (vlm_169663…vlm_169675)
+   - species: beta_def_812(4) beta_def_840(3) beta_def_872(3) beta_def_894(3)
+   - eq:2 nets T:19~30°C I:-0.05~1.15M max 4n/6e
+**14. Pb^[2+] + D-2-Amino-3-mercapto-3-methylbutanoic acid (Penicillamine)** (metal_125 + ligand_5857) — ligand_def_HxL: H2L | 13 ent, 7 sp, 13 vlms (vlm_97622…vlm_97634)
+   - species: beta_def_204(1) beta_def_779(3) beta_def_792(2) beta_def_812(3) beta_def_840(2) beta_def_966(1) beta_def_984(1)
+   - eq:3 nets T:19~41°C I:-0.05~3.15M max 6n/8e
+**15. Pb^[2+] + 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid)** (metal_125 + ligand_9058) — ligand_def_HxL: H3L | 12 ent, 8 sp, 12 vlms (vlm_157788…vlm_157799)
+   - species: beta_def_433(1) beta_def_519(1) beta_def_584(1) beta_def_732(2) beta_def_779(2) beta_def_792(1) beta_def_812(2) beta_def_840(2)
+   - eq:2 nets T:16.5~31.5°C I:0.775~2.225M max 8n/13e
+**16. Pb^[2+] + D-2-Hydroxypropanoic acid (Lactic acid)** (metal_125 + ligand_8641) — ligand_def_HxL: HL | 12 ent, 3 sp, 12 vlms (vlm_147786…vlm_147797)
+   - species: beta_def_812(6) beta_def_840(5) beta_def_872(1)
+   - eq:4 nets T:19~30°C I:-0.05~3.15M max 3n/3e
+**17. Pb^[2+] + 1,4,7,10,13,16,19,22,25,28,31,34-Dodecaazacyclohexatriacontane ([36]aneN12)** (metal_125 + ligand_7541) — ligand_def_HxL: L | 12 ent, 12 sp, 12 vlms (vlm_130878…vlm_130889)
+   - species: beta_def_473(1) beta_def_483(1) beta_def_486(1) beta_def_493(1) beta_def_502(1) beta_def_515(1) beta_def_574(1) beta_def_596(1) beta_def_635(1) beta_def_638(1) beta_def_640(1) beta_def_656(1)
+   - eq:1 nets T:20~30°C I:-0.05~0.25M max 12n/50e
+**18. Pb^[2+] + Hydrogen nitrite (Nitrous acid)** (metal_125 + ligand_10108) — ligand_def_HxL: HL | 11 ent, 3 sp, 11 vlms (vlm_173824…vlm_173834)
+   - species: beta_def_812(6) beta_def_840(3) beta_def_872(2)
+   - eq:8 nets T:15~35°C I:-0.15~4.15M max 3n/3e
+**19. Pb^[2+] + Propanedioic acid (Malonic acid)** (metal_125 + ligand_8873) — ligand_def_HxL: H2L | 11 ent, 7 sp, 11 vlms (vlm_152381…vlm_152391)
+   - species: beta_def_194(1) beta_def_779(1) beta_def_792(1) beta_def_803(1) beta_def_812(4) beta_def_840(2) beta_def_872(1)
+   - eq:2 nets T:19~30°C I:-0.05~1.15M max 7n/13e
+**20. Pb^[2+] + 1,4,7,10,13,16,19,22,25,28,31-Undecaazacyclotritriacontane ([33]aneN11)** (metal_125 + ligand_7540) — ligand_def_HxL: L | 11 ent, 11 sp, 11 vlms (vlm_130831…vlm_130841)
+   - species: beta_def_473(1) beta_def_483(1) beta_def_486(1) beta_def_493(1) beta_def_502(1) beta_def_515(1) beta_def_574(1) beta_def_635(1) beta_def_638(1) beta_def_640(1) beta_def_656(1)
+   - eq:1 nets T:20~30°C I:-0.05~0.25M max 11n/41e
+
+---
+
+### Step 19: `search_stability`
+**Args:**
+```json
+{
+  "where": "(c.metal_id = metal_26 AND c.ligand_id = ligand_10092 AND c.beta_definition_id = beta_def_812 AND (s.temperature_c BETWEEN 24 AND 26))",
+  "order_by": "s.ionic_strength_mol_l ASC",
+  "limit": 5
+}
+```
+
+[summary]
+## search_stability — 5 row(s)
+
+### `Cd^[2+]` + Hydrogen thiocyanate (Thiocyanic acid) — 5 measurement(s)
+metal_id: metal_26 | ligand_id: ligand_10092
+ligand_HxL_def: HL | ligand_SMILES: N=C=S
+
+| vlm_id | ref_eq_map | beta_def | type | value | T°C | I(M) | equation | non_aqueous_phases | HxL_involved | pKa_bracket_involved |
+|--------|------------|----------|------|-------|-----|------|----------|--------------------|--------------|-------------|
+| vlm_172411 | ref_eq_map_27899 | beta_def_812 | logK | 1.93 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (-1.1, L, +inf) |
+| vlm_172412 | *** | beta_def_812 | ΔH | -13 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (-1.1, L, +inf) |
+| vlm_172416 | *** | beta_def_812 | ΔS | -6.7 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (-1.1, L, +inf) |
+| vlm_172405 | ref_eq_map_27894 | beta_def_812 | logK | 1.68 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (-1.1, L, +inf) |
+| vlm_172406 | ref_eq_map_27896 | beta_def_812 | logK | 1.35 | 25 | 0.5 | `[M] + [L] <=> [ML]` | *** | [L] | (-1.1, L, +inf) |
+
+---
+
+### Step 20: `search_stability`
+**Args:**
+```json
+{
+  "where": "(c.metal_id = metal_71 AND c.ligand_id = ligand_10092 AND c.beta_definition_id = beta_def_812 AND (s.temperature_c BETWEEN 24 AND 26))",
+  "order_by": "s.ionic_strength_mol_l ASC",
+  "limit": 5
+}
+```
+
+[summary]
+## search_stability — 5 row(s)
+
+### `Hg^[2+]` + Hydrogen thiocyanate (Thiocyanic acid) — 5 measurement(s)
+metal_id: metal_71 | ligand_id: ligand_10092
+ligand_HxL_def: HL | ligand_SMILES: N=C=S
+
+| vlm_id | ref_eq_map | beta_def | type | value | T°C | I(M) | equation | non_aqueous_phases | HxL_involved | pKa_bracket_involved |
+|--------|------------|----------|------|-------|-----|------|----------|--------------------|--------------|-------------|
+| vlm_172457 | ref_eq_map_27901 | beta_def_812 | logK | 9.64 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (-1.1, L, +inf) |
+| vlm_172458 | *** | beta_def_812 | ΔH | -49 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (-1.1, L, +inf) |
+| vlm_172460 | *** | beta_def_812 | ΔS | 20.1 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (-1.1, L, +inf) |
+| vlm_172456 | ref_eq_map_27902 | beta_def_812 | logK | 9.08 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (-1.1, L, +inf) |
+| vlm_172459 | *** | beta_def_812 | ΔH | -50.2 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (-1.1, L, +inf) |
+
+---
+
+### Step 21: `search_stability`
+**Args:**
+```json
+{
+  "where": "(c.metal_id = metal_125 AND c.ligand_id = ligand_10092 AND c.beta_definition_id = beta_def_812 AND (s.temperature_c BETWEEN 24 AND 26))",
+  "order_by": "s.ionic_strength_mol_l ASC",
+  "limit": 5
+}
+```
+
+[summary]
+## search_stability — 5 row(s)
+
+### `Pb^[2+]` + Hydrogen thiocyanate (Thiocyanic acid) — 5 measurement(s)
+metal_id: metal_125 | ligand_id: ligand_10092
+ligand_HxL_def: HL | ligand_SMILES: N=C=S
+
+| vlm_id | ref_eq_map | beta_def | type | value | T°C | I(M) | equation | non_aqueous_phases | HxL_involved | pKa_bracket_involved |
+|--------|------------|----------|------|-------|-----|------|----------|--------------------|--------------|-------------|
+| vlm_172487 | *** | beta_def_812 | ΔH | -1.3 | 25 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (-1.1, L, +inf) |
+| vlm_172483 | ref_eq_map_27909 | beta_def_812 | logK | 0.49 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (-1.1, L, +inf) |
+| vlm_172484 | ref_eq_map_27907 | beta_def_812 | logK | 0.54 | 25 | 2 | `[M] + [L] <=> [ML]` | *** | [L] | (-1.1, L, +inf) |
+| vlm_172488 | *** | beta_def_812 | ΔS | -25.1 | 25 | 2 | `[M] + [L] <=> [ML]` | *** | [L] | (-1.1, L, +inf) |
+| vlm_172485 | ref_eq_map_27906 | beta_def_812 | logK | 0.78 | 25 | 3 | `[M] + [L] <=> [ML]` | *** | [L] | (-1.1, L, +inf) |
+
+---

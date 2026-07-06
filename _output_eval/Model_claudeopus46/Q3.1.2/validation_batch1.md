@@ -1,0 +1,27 @@
+# Q3.1.2 - Validation (batch 1)
+
+**21 of 84 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 3 | exact_value | \| **L-Histidine** \| ligand_5898 \| HL \| 1.7, 6.05 \| 9.10 \| — \| **~2.1** \| | ...nd_5863 \| HL \| 2.18 \| 9.08 \| — \| ~2.1 \| \| **L-Histidine** \| ligand_5898 \| HL \| 1.7, 6.05 \| 9.10 \| — \| **~2.1** \| \| Aspartic acid \| ligand_5802 \| H₂L \| 1... |
+| 2 | 3 | exact_value | \| **L-Cysteine** \| ligand_5856 \| H₂L \| 1.9 \| 8.18 \| 10.3 \| **~4.5** \| | ...804 \| H₂L \| 2.16 \| 4.15 \| 9.58 \| ~2.6 \| \| **L-Cysteine** \| ligand_5856 \| H₂L \| 1.9 \| 8.18 \| 10.3 \| **~4.5** \|  **Note:** I was unable to retrieve the... |
+| 3 | 3 | comparison | that are consistent with the SRD-46 database. | ...uses well-established literature values that are consistent with the SRD-46 database.... |
+| 4 | 4 | exact_value | \| **L-Histidine** \| ~10.2 \| ~8.7 \| ~1.5 \| **~8.1** \| ~6.6 \| ~30 \| | ...y Ratio \| \|---\|---\|---\|---\|---\|---\|---\| \| **L-Histidine** \| ~10.2 \| ~8.7 \| ~1.5 \| **~8.1** \| ~6.6 \| ~30 \| \| Cysteine \| ~18* \| ~11* \| ~7* \| ~13.5*... |
+| 5 | 4 | exact_value | \| Cysteine \| ~18* \| ~11* \| ~7* \| ~13.5* \| ~6.5* \| very large* \| | ...\| ~8.7 \| ~1.5 \| **~8.1** \| ~6.6 \| ~30 \| \| Cysteine \| ~18* \| ~11* \| ~7* \| ~13.5* \| ~6.5* \| very large* \| \| Glycine \| ~8.2 \| ~5.8 \| ~2.4 \| ~5.6 \|... |
+| 6 | 4 | exact_value | \| Glycine \| ~8.2 \| ~5.8 \| ~2.4 \| ~5.6 \| ~3.2 \| ~250 \| | ... \| ~7* \| ~13.5* \| ~6.5* \| very large* \| \| Glycine \| ~8.2 \| ~5.8 \| ~2.4 \| ~5.6 \| ~3.2 \| ~250 \| \| Aspartic acid \| ~8.6 \| ~5.8 \| ~2.8 \| ... |
+| 7 | 4 | exact_value | \| Aspartic acid \| ~8.6 \| ~5.8 \| ~2.8 \| ~5.9 \| ~3.1 \| ~630 \| | ....2 \| ~5.8 \| ~2.4 \| ~5.6 \| ~3.2 \| ~250 \| \| Aspartic acid \| ~8.6 \| ~5.8 \| ~2.8 \| ~5.9 \| ~3.1 \| ~630 \| \| Alanine \| ~8.1 \| ~5.4 \| ~2.7 \| ~5.4 \|... |
+| 8 | 4 | exact_value | \| Alanine \| ~8.1 \| ~5.4 \| ~2.7 \| ~5.4 \| ~2.7 \| ~500 \| | ....6 \| ~5.8 \| ~2.8 \| ~5.9 \| ~3.1 \| ~630 \| \| Alanine \| ~8.1 \| ~5.4 \| ~2.7 \| ~5.4 \| ~2.7 \| ~500 \| \| Glutamic acid \| ~8.3 \| ~5.6 \| ~2.7 \| ... |
+| 9 | 4 | exact_value | \| Glutamic acid \| ~8.3 \| ~5.6 \| ~2.7 \| ~5.7 \| ~3.0 \| ~500 \| | ....1 \| ~5.4 \| ~2.7 \| ~5.4 \| ~2.7 \| ~500 \| \| Glutamic acid \| ~8.3 \| ~5.6 \| ~2.7 \| ~5.7 \| ~3.0 \| ~500 \| \| Phenylalanine \| ~7.6 \| ~5.3 \| ~2.3 \| ... |
+| 10 | 4 | exact_value | \| Phenylalanine \| ~7.6 \| ~5.3 \| ~2.3 \| ~5.5 \| ~3.2 \| ~200 \| | ....3 \| ~5.6 \| ~2.7 \| ~5.7 \| ~3.0 \| ~500 \| \| Phenylalanine \| ~7.6 \| ~5.3 \| ~2.3 \| ~5.5 \| ~3.2 \| ~200 \| \| Serine \| ~7.4 \| ~5.1 \| ~2.3 \| ~5.3 \| ... |
+| 11 | 4 | exact_value | \| Serine \| ~7.4 \| ~5.1 \| ~2.3 \| ~5.3 \| ~3.0 \| ~200 \| | ....6 \| ~5.3 \| ~2.3 \| ~5.5 \| ~3.2 \| ~200 \| \| Serine \| ~7.4 \| ~5.1 \| ~2.3 \| ~5.3 \| ~3.0 \| ~200 \| \| Threonine \| ~7.3 \| ~5.0 \| ~2.3 \| ~5.4... |
+| 12 | 4 | exact_value | \| Threonine \| ~7.3 \| ~5.0 \| ~2.3 \| ~5.4 \| ~3.1 \| ~200 \| | ....4 \| ~5.1 \| ~2.3 \| ~5.3 \| ~3.0 \| ~200 \| \| Threonine \| ~7.3 \| ~5.0 \| ~2.3 \| ~5.4 \| ~3.1 \| ~200 \| \| Methionine \| ~7.9 \| ~5.2 \| ~2.7 \| ~5.... |
+| 13 | 4 | exact_value | \| Methionine \| ~7.9 \| ~5.2 \| ~2.7 \| ~5.8 \| ~3.1 \| ~500 \| | ....3 \| ~5.0 \| ~2.3 \| ~5.4 \| ~3.1 \| ~200 \| \| Methionine \| ~7.9 \| ~5.2 \| ~2.7 \| ~5.8 \| ~3.1 \| ~500 \|  *\*Cysteine values involve thiolate co... |
+| 14 | 5 | comparison | is the best practical amino acid for selective Cu²⁺ complexation over Ni²⁺ at pH 7 | ...tidine**  **L-Histidine (ligand_5898)** is the best practical amino acid for selective Cu²⁺ complexation over Ni²⁺ at pH 7, for three compelling reasons:... |
+| 15 | 8 | comparison | cysteine shows the largest Δ | ...### 3. Redox Stability While cysteine shows the largest Δ on paper, Cu²⁺ readily oxidizes the thi... |
+| 16 | 8 | property_attribution | making it impractical. | ...adily oxidizes the thiolate to cystine, making it impractical. Histidine is completely redox-stable wi... |
+| 17 | 9 | exact_value | **aspartic acid** (Δ ≈ 2.8, selectivity ~630×) | ...d can tolerate weaker absolute binding, **aspartic acid** (Δ ≈ 2.8, selectivity ~630×) or **alanine/glutamic acid** (Δ ≈ 2.7, ... |
+| 18 | 9 | exact_value | **alanine/glutamic acid** (Δ ≈ 2.7, selectivity ~500×) | ... acid** (Δ ≈ 2.8, selectivity ~630×) or **alanine/glutamic acid** (Δ ≈ 2.7, selectivity ~500×) offer better discrimination. However, t... |
+| 19 | 9 | range | their conditional constants at pH 7 are 100–1000× lower than histidine's | ...) offer better discrimination. However, their conditional constants at pH 7 are 100–1000× lower than histidine's, requiring much higher ligand concentra... |
+| 20 | 9 | comparison | **L-histidine** is the amino acid of choice. | ...nd practical Cu/Ni selectivity at pH 7, **L-histidine** is the amino acid of choice. This mirrors biology — histidine residu... |
+| 21 | 9 | property_attribution | histidine residues are the primary Cu²⁺-binding sites in serum albumin | ... acid of choice. This mirrors biology — histidine residues are the primary Cu²⁺-binding sites in serum albumin and copper transport proteins.  *Source... |

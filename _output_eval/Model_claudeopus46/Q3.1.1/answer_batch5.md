@@ -1,0 +1,57 @@
+Here are the results from the NIST SRD-46 database for Pb²⁺ stability constants, ranked by affinity.
+
+---
+
+## Highest-Affinity Ligands for Pb²⁺ (NIST SRD-46)
+
+All values are log β (or log K for 1:1 complexes) at **25 °C** in aqueous solution.
+
+| Rank | Ligand | log β (ML) | I (mol/L) | Clinically Used? |
+|------|--------|-----------|-----------|------------------|
+| 1 | Pentaaza-phenanthrolinacyclopentadecaphane (macrocycle) | 24.4 | 0.1 | ❌ No (research) |
+| 2 | Tetraaza-phenanthrolinacyclotetradecaphane (macrocycle) | 22.1 | 0.1 | ❌ No (research) |
+| 3 | **EDTA** (Ethylenedinitrilotetraacetic acid) | **18.04** | 0.1 | ✅ **Yes** |
+| 4 | CyDTA (trans-Cyclohexylenedinitrilotetraacetic acid) | 18.0 | 0.1 | ❌ No |
+| 5 | PhDTA (1,2-Phenylenedinitrilotetraacetic acid) | 17.6 | 1.0 | ❌ No |
+| 6 | **DTPA** (Diethylenetrinitrilopentaacetic acid) | **17.1** | 0.1 | ✅ **Yes** |
+| 7 | EGTA (Ethylenebis(oxyethylenenitrilo)tetraacetic acid) | 16.8 | 0.1 | ❌ No (research) |
+| 8 | TMDTA (Trimethylenedinitrilotetraacetic acid) | 16.2 | 0.1 | ❌ No |
+| 9 | EEDTA (Oxybis(ethylenenitrilo)tetraacetic acid) | 15.9 | 0.1 | ❌ No |
+| 10 | TEDTA (Thiobis(ethylenenitrilo)tetraacetic acid) | 15.7 | 0.1 | ❌ No |
+| 11 | Triaza-phenanthrolinacyclotridecaphane (macrocycle) | 15.3 | 0.1 | ❌ No |
+| 12 | TeDTA (Tetramethylenedinitrilotetraacetic acid) | 14.7 | 0.1 | ❌ No |
+| 13 | **HEDTA** (N-(2-Hydroxyethyl)ethylenedinitrilotriacetic acid) | **14.2** | 0.1 | ✅ **Yes** |
+| 14 | NTA (Nitrilotriacetic acid) | 11.39 | 0.1 | ❌ No |
+
+## Clinically Relevant Chelators Found in the Database
+
+From the database, three ligands with high Pb²⁺ affinity have clinical relevance:
+
+1. **EDTA (log β = 18.04)** — Administered as **CaNa₂EDTA (edetate calcium disodium)**, this is the classic IV chelator for severe lead poisoning. The calcium form is used to prevent dangerous hypocalcemia. It remains the most widely used parenteral chelator for acute lead encephalopathy.
+
+2. **DTPA (log β = 17.1)** — Primarily approved for chelation of actinides (Pu, Am, Cm) as **Ca-DTPA/Zn-DTPA**, but has been investigated for heavy metal chelation including lead.
+
+3. **HEDTA (log β = 14.2)** — Has been explored in chelation contexts but is far less common clinically than EDTA.
+
+## Notable Absences from the Database
+
+Several clinically important lead chelators were **not found** among the top Pb²⁺ binders in this search, likely because they are catalogued under different names, involve thiol chemistry with fewer comparable thermodynamic measurements, or simply have lower log β values:
+
+| Chelator | Clinical Use | Notes |
+|----------|-------------|-------|
+| **DMSA (Succimer)** | Oral chelator, first-line for children | Dithiol; may be listed as meso-2,3-dimercaptosuccinic acid |
+| **DMPS (Unithiol)** | Used in Europe for lead/mercury | 2,3-Dimercapto-1-propanesulfonic acid |
+| **D-Penicillamine** | Oral, second-line | β,β-Dimethylcysteine |
+| **BAL (Dimercaprol)** | IM injection, severe cases | 2,3-Dimercaptopropanol |
+
+These thiol-based chelators work by a different mechanism — they exploit Pb²⁺'s affinity for soft sulfur donors — and their clinical utility depends on factors beyond raw log β, including oral bioavailability, tissue penetration, and toxicity profile.
+
+## Chemistry Insight
+
+The dominance of **aminopolycarboxylate** ligands (EDTA, DTPA, CyDTA) reflects Pb²⁺'s classification as a borderline Lewis acid that strongly favors oxygen and nitrogen donors arranged in chelate rings. The macrocyclic aza-phenanthroline ligands show even higher log β values (22–24) due to the **macrocyclic effect** — preorganization of the donor atoms into a cavity that fits the Pb²⁺ ion — but their poor water solubility and slow complexation kinetics make them impractical for clinical use. In practice, EDTA's combination of high thermodynamic affinity (log β ≈ 18), fast kinetics, and decades of clinical experience makes it the gold standard for parenteral lead chelation therapy, while oral agents like DMSA are preferred for outpatient management of moderate lead exposure.
+
+> ⚠️ **Medical disclaimer:** Chelation therapy should only be administered under medical supervision. This data is from NIST SRD-46 and is provided for scientific reference only.
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes)*
+
+---

@@ -1,0 +1,34 @@
+Here’s what I can establish from the NIST SRD‑46 data we already retrieved, and how to do the calculation:
+
+What the SRD‑46 database shows for Cu2+–glycine
+- System: Cu2+ (metal_41) with glycine (ligand_5760).
+- Two relevant overall formation-constant definitions with entries:
+  - β1 (beta_def_812): [ML]/[M][L] — 15 entries.
+  - β2 (beta_def_840): [ML2]/[M][L]^2 — 15 entries.
+- All are aqueous measurements under a variety of temperatures and ionic strengths.
+
+How to estimate β2 from stepwise constants
+- Definitions:
+  - K1 (stepwise) = [ML]/[M][L] (this equals β1 in SRD‑46’s conventions).
+  - K2 (stepwise) = [ML2]/[ML][L].
+  - Therefore, β2 (overall) = K1 × K2.
+- In logarithmic form (base‑10): log β2 = log K1 + log K2.
+- Comparison protocol (to ensure apples‑to‑apples):
+  1) Select K1 and K2 measured at the same temperature, ionic strength, solvent, and medium.
+  2) Compute β2(calc) = K1 × K2 (or log β2(calc) = log K1 + log K2).
+  3) Compare β2(calc) directly to the reported β2 for the same conditions (beta_def_840) and, ideally, the same study.
+
+Current limitation and next step
+- I confirmed the Cu2+–glycine dataset contains both β1 and β2 entries (15 each), but due to a time-budget block I couldn’t fetch the individual numeric values (K1/log K1, K2/log K2, β2/log β2) needed to perform the numerical calculation and side-by-side comparison.
+- If you’d like, I can retrieve one matched set (same paper/conditions, e.g., ~25 °C and low ionic strength) and report:
+  - log K1 and log K2,
+  - log β2(calc) = log K1 + log K2,
+  - the directly reported log β2,
+  - and the difference, including conditions and citation.
+
+Chemistry insight (qualitative)
+- For Cu2+ with amino acids like glycine, stepwise K2 is typically smaller than K1 due to statistical and steric factors, yet the overall β2 (K1×K2) remains large. Agreement between β2(calc) and β2(reported) is generally good when conditions are matched; discrepancies often trace to different ionic strengths or media (e.g., NaClO4 vs. KNO3).
+
+Source: NIST Standard Reference Database 46 (SRD‑46), Cu2+–glycine system catalog (beta_def_812 and beta_def_840 entries).
+
+---

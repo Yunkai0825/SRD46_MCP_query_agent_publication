@@ -1,0 +1,67 @@
+Using the SRD-46 data now in hand, my **best prediction is methionine** as the **proteinogenic amino acid not yet represented with Zn²⁺ stability constants in the retrieved SRD-46 Zn–amino-acid set** that would most likely form the **most stable Zn complex**.
+
+## What SRD-46 shows
+
+### 1) Proteinogenic amino acids with Zn²⁺ data already present in the retrieved amino-acid set
+| Ligand | ligand_id | Zn²⁺ data present in retrieved `search_stability`? | Notes |
+|---|---:|---|---|
+| Glycine | ligand_5760 | Yes | simple α-amino acid benchmark |
+| Cysteine | ligand_5856 | Yes via Zn catalog summary | thiol/thiolate benchmark |
+| Histidine | ligand_5898 | Yes via Zn catalog summary | imidazole benchmark |
+| Alanine | ligand_5761 | Yes via Zn catalog summary | simple α-amino acid benchmark |
+| Penicillamine | ligand_5857 | Yes | non-proteinogenic sulfur benchmark |
+
+### 2) Proteinogenic amino acids with pKa data visible in SRD-46 but **not appearing in the retrieved Zn²⁺ amino-acid stability result**
+| Ligand | ligand_id | pKa pattern from SRD-46 | Zn²⁺ found in retrieved amino-acid stability result? |
+|---|---:|---|---|
+| Serine | ligand_5828 | 2.16, 9.05 | No |
+| Threonine | ligand_5829 | 2.20, 8.94 | No |
+| Aspartic acid | ligand_5802 | 1.95, 3.71, 9.66 | No |
+| Glutamic acid | ligand_5804 | 2.16, 4.15, 9.58 | No |
+| Tyrosine | ligand_5819 | 2.24, 9.04, 10.1 | No |
+| **Methionine** | not numerically resolved in the returned pKa excerpt | sulfur-containing amino acid in the queried target set | No |
+
+## Why methionine is the strongest prediction
+
+### 3) Zn²⁺ benchmarks from studied amino-acid classes in SRD-46
+| Studied class | Example ligands in SRD-46 Zn set | Interpretation |
+|---|---|---|
+| Simple N,O amino acids | Glycine, alanine | modest baseline Zn binding |
+| Imidazole-containing amino acids | Histidine | stronger Zn binding because Zn²⁺ likes N donors |
+| Thiol-containing amino acids | Cysteine, penicillamine | strongest amino-acid-type Zn binding because sulfur is especially favorable |
+
+The SRD-46 Zn catalog summary explicitly supports this trend:
+
+| Donor motif | Expected Zn²⁺ strength |
+|---|---|
+| thiolate-containing | highest |
+| imidazole-containing | next |
+| ordinary N,O amino acids | lower |
+
+### 4) Why methionine outranks the other unstudied candidates
+| Candidate | Side-chain donor situation | Expected Zn²⁺ consequence |
+|---|---|---|
+| **Methionine** | thioether sulfur | best chance among unstudied standard amino acids to gain extra stabilization beyond α-N/COO⁻ binding |
+| Asp/Glu | extra carboxylate O donors | stronger than glycine-like ligands in some cases, but less specifically favored than sulfur for Zn²⁺ |
+| Ser/Thr | alcohol O | weak donor unless deprotonated |
+| Tyr | phenol O, pKa ≈ 10.1 | potentially useful only at relatively high pH; less available near neutral pH |
+| Aliphatic amino acids | no extra donor | should resemble glycine/alanine-type moderate binding |
+
+So the reasoning is:
+
+| Step | Data-based inference |
+|---|---|
+| 1 | Zn²⁺ already shows strong affinity for sulfur-containing amino acids in SRD-46 (cysteine, penicillamine). |
+| 2 | Among standard amino acids not seen in the retrieved Zn set, methionine is the one with the most Zn-favorable extra donor atom. |
+| 3 | Methionine’s thioether sulfur is weaker than cysteine’s thiolate sulfur, but still more promising than hydroxyl, phenol, or purely aliphatic side chains. |
+
+## Final prediction
+| Predicted strongest unstudied proteinogenic amino acid for Zn²⁺ | Confidence | Reason |
+|---|---|---|
+| **Methionine** | Moderate | It is the best unstudied standard amino acid analog to the sulfur-favored Zn²⁺ binding seen for cysteine/penicillamine in SRD-46, and it should outperform O-only or simple aliphatic amino acids. |
+
+In short: **SRD-46 suggests Zn²⁺ stability rises sharply when an amino acid offers a stronger side-chain donor than the default amino/carboxylate pair.** Since **histidine and cysteine are already studied**, **methionine** is the most plausible **unstudied** standard amino acid to give the most stable Zn complex.
+
+**Source:** NIST SRD-46.
+
+---

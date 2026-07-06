@@ -1,0 +1,29 @@
+| Ligand (SRD-46 ID) | Dominant donor set near pH 6–8 | Key pKa values (SRD-46) | Zn–ML (beta_def_812) data seen in SRD‑46? | Notes relevant to Zn(II) binding |
+|---|---|---|---|---|
+| Glycine (ligand_5760) | N,O (bidentate possible) | 2.33 (COOH), 9.57 (NH3+) | Yes; logK(ML)=4.96 at 25 °C, I≈0.1 M | Baseline N,O amino acid; modest Zn affinity |
+| Histidine (ligand_5898) | N(imidazole), N,O | 1.8 (COOH), 6.05 (ImH+), 9.3 (NH3+) | Yes (multiple ML/MHL/M(L)2 species) | Imidazole N available near neutral pH; typically stronger than N,O-only AAs |
+| Cysteine (ligand_5856) | S(thiolate), N,O | 8.18 (S–H), (COOH/NH3+ typical AA) | Yes (rich speciation, incl. ML, MHL) | Thiolate S strongly stabilizes Zn(II) |
+| Alanine (ligand_5761) | N,O | 2.33 (COOH), 9.71 (NH3+) | Yes (ML present) | Similar to glycine; modest |
+| Methionine (ligand_5863) | S(thioether), N,O | 2.18 (COOH), 9.08 (NH3+) | Not surfaced in our Zn catalog scan | Thioether S is a soft donor (neutral), enabling S,N chelation at pH 6–8 |
+| Tyrosine (e.g., ligand_5819) | O(phenolate, at high pH), N,O | ~10.10 (phenol), AA pKa set | Not surfaced in our Zn catalog scan | Phenolate O requires pH > 9; Zn prefers N/S over hard phenolate O at neutral pH |
+| Isoleucine (ligand_5767) | N,O | 2.26 (COOH), 9.60 (NH3+) | Not surfaced in our Zn catalog scan | Aliphatic; only N,O donors → weaker |
+| Valine (ligand_5765) | N,O | 2.27 (COOH), 9.52 (NH3+) | Not indicated in our scan | Aliphatic; only N,O donors → weaker |
+
+Source: SRD‑46. Glycine ML constant retrieved via search_stability; pKa values and donor annotations from SRD‑46 ligand cards. Zn–catalog presence for histidine, cysteine, alanine observed in the Zn2+ system catalog; other entries noted as “not surfaced” due to time‑limited scan.
+
+Prediction and reasoning
+- Among amino acids that did not surface with Zn–ML data in our SRD‑46 Zn2+ catalog scan, methionine is the most likely to form the most stable Zn(II) complex under near‑physiological conditions.
+- Rationale grounded in SRD‑46 data:
+  1) Donor preference: Zn(II) is borderline/soft and shows stronger stability with soft/borderline donors (S, imidazole N) than with purely hard O donors. SRD‑46 shows rich, strong speciation for cysteine (thiolate S) and histidine (imidazole N), while N,O‑only amino acids (glycine/alanine) are modest.
+  2) Methionine offers a neutral thioether S donor accessible at pH 6–8 plus the α‑amine/carboxylate; this enables S,N (and/or S,O) chelation without requiring high pH deprotonation. By contrast, tyrosine’s phenolate O is only available above pH ~9–10, and aliphatic AAs (valine, isoleucine, leucine) provide only N,O donors like glycine/alanine.
+  3) Therefore, within the unstudied subset, methionine’s soft S donor should confer higher Zn(II) ML stability than N,O‑only amino acids and likely outperform phenolate‑dependent ligands at neutral pH.
+
+Expected binding motif and pH window
+- Methionine: S,N bidentate ML at pH ≈6–8; the thioether S coordinates Zn(II) while the amine/carboxylate provide additional anchoring, yielding greater stability than aliphatic N,O amino acids under matched conditions.
+
+Notes and follow‑up
+- Due to a time‑limited pass, we verified glycine’s ML constant directly (logK=4.96 at 25 °C, I≈0.1 M) and catalog presence for histidine/cysteine/alanine. To finalize the “not yet studied” list rigorously, we should run search_stability for ML (beta_def_812) across the remaining amino acids under matched conditions. If desired, I can perform that check and provide a definitive list with any existing ML logK values.
+
+Source: NIST SRD‑46 (Stability and protonation constants; ligand cards and Zn(II) system catalog).
+
+---

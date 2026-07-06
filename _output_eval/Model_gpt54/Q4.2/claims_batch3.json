@@ -1,0 +1,658 @@
+{
+  "cache_format": 5,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q4.2\\Q4.2_result_batch3.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Based on SRD-46, **Hg²⁺ appears to prefer sulfur-donor ligands over nitrogen-donor ligands, and both over the oxygen-donor example available here**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 16,
+            "text": "Based on SRD-46,",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 19,
+            "end": 90,
+            "text": "Hg²⁺ appears to prefer sulfur-donor ligands over nitrogen-donor ligands",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 92,
+            "end": 130,
+            "text": "and both over the oxygen-donor example",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_71"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_71 | Hg^[2+] | Hg | 2 | ✓ | [Hg+2] | InChI=1S/Hg/q+2 | beta_totN_68 | ligand_totN_310 | vlm_totN_1097",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_71 | Hg^[2+] | Hg | 2 | ✓ | [Hg+2] | InChI=1S/Hg/q+2 | beta_totN_68 | ligand_totN_310 | vlm_totN_1097 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 20 row(s)\n### logK — 7 metal-ligand pair(s)\n| metal_71 | Hg^[2+] | ... |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_10004",
+              "ligand_10092",
+              "ligand_10144",
+              "ligand_7029",
+              "ligand_10103",
+              "ligand_7795",
+              "ligand_7890"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "HSAB principle: Hg2+ (soft acid) typically binds sulfur-donor ligands more strongly than nitrogen donors. Provided rows list S- and N-donor systems but no comparable numeric logK values here.",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "5. Hg^[2+] + Thiocarbamide (Thiourea) (metal_71 + ligand_10004) — ... species: beta_def_540(3) beta_def_812(3) beta_def_840(7) ..."
+              },
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "8. Hg^[2+] + Ethylenediamine (metal_71 + ligand_7029) — ... species: beta_def_792(3) beta_def_812(5) beta_def_840(5)"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "### logK — 7 metal-ligand pair(s)\n| metal_71 | Hg^[2+] | ligand_10004 | Thiocarbamide (Thiourea) | ... |\n| metal_71 | Hg^[2+] | ligand_7029 | Ethylenediamine | ... |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_10096",
+              "ligand_10004",
+              "ligand_7029"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "HSAB: Hg2+ generally binds O-donor ligands weaker than N and S donors. The output lists an O-donor example (hydrogen carbonate) but provides no comparable logK values to demonstrate ordering here.",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "### logK — 7 metal-ligand pair(s)\n| metal_71 | Hg^[2+] | ligand_10096 | Hydrogen carbonate (Carboni… | H2L | O=C(O)O | ... |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "### logK — 7 metal-ligand pair(s)\n| metal_71 | Hg^[2+] | ligand_10004 | Thiocarbamide (Thiourea) | L | NC(N)=S | ... |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "### logK — 7 metal-ligand pair(s)\n| metal_71 | Hg^[2+] | ligand_7029 | Ethylenediamine | L | NCCN | ... |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "I don’t yet have the individual log K numbers from the returned rows—only the summary showing which Hg²⁺–ligand systems have measured **logK** values for the 1:1 reaction (**β812: M + L ⇌ ML**). To support the hypothesis with the required **specific log K values**, I need to pull the actual measurement rows for representative S-, N-, and O-donor ligands.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 68,
+            "text": "I don’t yet have the individual log K numbers from the returned rows",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 69,
+            "end": 149,
+            "text": "only the summary showing which Hg²⁺–ligand systems have measured **logK** values",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 150,
+            "end": 170,
+            "text": "for the 1:1 reaction",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 171,
+            "end": 193,
+            "text": "(**β812: M + L ⇌ ML**)",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 195,
+            "end": 308,
+            "text": "To support the hypothesis with the required **specific log K values**, I need to pull the actual measurement rows",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 313,
+            "end": 355,
+            "text": "representative S-, N-, and O-donor ligands",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "### logK — 7 metal-ligand pair(s)\n| metal_id | metal_name | ligand_id | ligand_name | ligand_HxL_def | ligand_SMILES | vlm_counts | beta_counts | T°C_range | I(M)_range | non_aqueous_phases | ref_eq_m",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "### logK — 7 metal-ligand pair(s)\n| metal_id | metal_name | ligand_id | ligand_name | ligand_HxL_def | ligand_SMILES | vlm_counts | beta_counts | T°C_range | I(M)_range | non_aqueous_phases | ref_eq_map_counts |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "| metal_71 | Hg^[2+] | ligand_7029 | Ethylenediamine | L | NCCN | 3 | 1 | 25 | 0.1~3 | *** | 3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_71"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "### logK — 7 metal-ligand pair(s)\n| metal_71 | Hg^[2+] | ligand_7029 | Ethylenediamine | L | NCCN | 3 | 1 | 25 | 0.1~3 | *** | 3 |",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "### logK — 7 metal-ligand pair(s)"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "| metal_71 | Hg^[2+] | ligand_7029 | Ethylenediamine | L | NCCN | 3 | 1 | 25 | 0.1~3 | *** | 3 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "| metal_71 | Hg^[2+] | ligand_10096 | Hydrogen carbonate (Carboni… | H2L | O=C(O)O | 2 | 1 | 25 | 0.5~3 | *** | 2 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "beta_def_812"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| beta_def_812 | [M] + [L] <=> [ML] |",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_812 | [M] + [L] <=> [ML] |  |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "**8. Hg^[2+] + Ethylenediamine** ... - species: beta_def_792(3) beta_def_812(5) beta_def_840(5)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_812 | [M] + [L] <=> [ML]",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_812 | [M] + [L] <=> [ML] |  |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_10004",
+              "ligand_7029",
+              "ligand_10096"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Examples present: Thiourea (S-donor), Ethylenediamine (N-donor), Hydrogen carbonate (O-donor) appear in the logK summary rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "| metal_71 | Hg^[2+] | ligand_10004 | Thiocarbamide (Thiourea) | L | NC(N)=S | 1 | 1 | 25 | 0.5 | *** | 1 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "| metal_71 | Hg^[2+] | ligand_7029 | Ethylenediamine | L | NCCN | 3 | 1 | 25 | 0.1~3 | *** | 3 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "| metal_71 | Hg^[2+] | ligand_10096 | Hydrogen carbonate (Carboni… | H2L | O=C(O)O | 2 | 1 | 25 | 0.5~3 | *** | 2 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "So the working hypothesis is:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 29,
+            "text": "So the working hypothesis is:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "| Donor class | Representative ligands found for Hg²⁺ in SRD-46 | Likely preference |\n|---|---|---|\n| S-donor | Thiourea; 2,2'-thiodiethanol | Highest |\n| N-donor | Ammonia; ethylenediamine; imidazole; pyridine | Intermediate |\n| O-donor | Hydrogen carbonate | Lowest |",
+        "claims": [
+          {
+            "start": 100,
+            "end": 152,
+            "text": "| S-donor | Thiourea; 2,2'-thiodiethanol | Highest |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 153,
+            "end": 227,
+            "text": "| N-donor | Ammonia; ethylenediamine; imidazole; pyridine | Intermediate |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 228,
+            "end": 269,
+            "text": "| O-donor | Hydrogen carbonate | Lowest |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_10004",
+              "ligand_9697"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "5. Hg^[2+] + Thiocarbamide (Thiourea) (metal_71 + ligand_10004)",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "5. Hg^[2+] + Thiocarbamide (Thiourea) (metal_71 + ligand_10004) — ligand_def_HxL: L | 27 ent, 5 sp, 27 vlms (vlm_169530…vlm_169556)"
+              },
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "10. Hg^[2+] + 2,2'-Thiodiethanol (beta-Thiodiglycol) (metal_71 + ligand_9697) — ligand_def_HxL: *** | 12 ent, 4 sp, 12 vlms (vlm_167724…vlm_167735)"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_10103",
+              "ligand_7029",
+              "ligand_7795",
+              "ligand_7890"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "9. Hg^[2+] + Ammonia (metal_71 + ligand_10103)",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "9. Hg^[2+] + Ammonia (metal_71 + ligand_10103) — ligand_def_HxL: L | 12 ent, 4 sp, 12 vlms (vlm_173464…vlm_173475)"
+              },
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "8. Hg^[2+] + Ethylenediamine (metal_71 + ligand_7029) — ligand_def_HxL: L | 13 ent, 3 sp, 13 vlms (vlm_122573…vlm_122585)"
+              },
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "14. Hg^[2+] + 1,3-Diazole (Imidazole) (metal_71 + ligand_7795) — ligand_def_HxL: L | 10 ent, 3 sp, 10 vlms (vlm_134017…vlm_134026)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_10096"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "13. Hg^[2+] + Hydrogen carbonate (Carbonic acid) (metal_71 + ligand_10096)",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "13. Hg^[2+] + Hydrogen carbonate (Carbonic acid) (metal_71 + ligand_10096) — ligand_def_HxL: H2L | 10 ent, 5 sp, 10 vlms (vlm_172918…vlm_172927)"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "logK — 7 metal-ligand pair(s) | metal_71 | Hg^[2+] | ligand_10096 | Hydrogen carbonate (Carboni… | H2L | O=C(O)O | 2 | 1 | 25 | 0.5~3 | *** | 2 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "This trend is chemically plausible because **Hg²⁺ is a soft Lewis acid**, so it typically binds more strongly to **soft sulfur donors** than to harder oxygen donors, with nitrogen often intermediate.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 42,
+            "text": "This trend is chemically plausible because",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 43,
+            "end": 72,
+            "text": "**Hg²⁺ is a soft Lewis acid**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 77,
+            "end": 164,
+            "text": "it typically binds more strongly to **soft sulfur donors** than to harder oxygen donors",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 166,
+            "end": 199,
+            "text": "with nitrogen often intermediate.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "HSAB theory: Hg2+ is considered a soft Lewis acid; this property isn’t annotated in the SRD-46 rows provided.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "HSAB predicts soft acids (Hg2+) bind more strongly to soft S-donors than hard O-donors; the tool results here do not provide direct comparative logK values.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "By HSAB, N-donors are of intermediate hardness, often giving intermediate binding to Hg2+; not directly quantified in the provided tool rows.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "However, to meet your request strictly, I still need the **actual numeric log K values** from SRD-46 for those systems.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 39,
+            "text": "However, to meet your request strictly,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 40,
+            "end": 88,
+            "text": "I still need the **actual numeric log K values**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 89,
+            "end": 100,
+            "text": "from SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 101,
+            "end": 119,
+            "text": "for those systems.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Presence of database query results in this run supports SRD-46 provenance (e.g., search_stability outputs).",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 20 row(s)\n\n### logK — 7 metal-ligand pair(s)\n| metal_71 | Hg^[2+] | ligand_7029 | Ethylenediamine | L | NCCN | 3 | 1 | 25 | 0.1~3 | *** | 3 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "## build_system_catalog — 20 pair(s), 92 species *(ultra-compact)*\n**8. Hg^[2+] + Ethylenediamine** (metal_71 + ligand_7029) — ... 13 vlms (vlm_122573…vlm_122585)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+Iron and copper can be compared in SRD-46, but the database is clearly much richer for **Cu(II)** than for the iron/copper oxidation states collectively resolved so far.
+
+### Resolved metal entries in SRD-46
+
+| Metal ID | SRD name | Symbol | Charge |
+|---|---|---:|---:|
+| metal_42 | Cu^[+] | Cu | 1 |
+| metal_41 | Cu^[2+] | Cu | 2 |
+| metal_61 | Fe^[3+] | Fe | 3 |
+| metal_62 | Fe^[2+] | Fe | 2 |
+
+### What the current SRD-46 catalog shows
+Using `build_system_catalog` on `metal_41`, `metal_42`, `metal_61`, and `metal_62`, the returned compact catalog contained:
+
+| Scope queried | Pair count | Species count | Dominant visible coverage |
+|---|---:|---:|---|
+| Cu(I), Cu(II), Fe(II), Fe(III) together | 20 | 102 | All 20 displayed pairs were Cu(II)-ligand systems |
+
+### Top visible Cu(II) systems from the returned catalog
+
+| Metal | Ligand | Entries | Species | Notes |
+|---|---|---:|---:|---|
+| Cu(II) | Histidine | 50 | 8 | broad protonated/hydrolyzed speciation |
+| Cu(II) | Ammonia | 49 | 4 | classic ammine series |
+| Cu(II) | Imidazole | 42 | 7 | strong N-donor coverage |
+| Cu(II) | N,N'-Dimethylethylenediamine | 39 | 5 | chelating amine system |
+| Cu(II) | Acetic acid | 37 | 3 | simple O-donor ligand |
+| Cu(II) | Diglycine | 36 | 6 | peptide-like coordination |
+| Cu(II) | Hydroxide | 34 | 9 | extensive hydrolysis/polynuclear chemistry |
+| Cu(II) | Ethylenediamine | 34 | 2 | ML / ML2 series |
+| Cu(II) | 2,2'-Bipyridyl | 33 | 6 | aromatic N-donor |
+| Cu(II) | Glycine | 30 | 2 | common bioinorganic benchmark |
+
+### Short comparison
+
+| Aspect | Copper | Iron |
+|---|---|---|
+| Resolved oxidation states | Cu(I), Cu(II), Cu(III) present in metal table; Cu(I) and Cu(II) targeted here | Fe(II), Fe(III) present |
+| Visible catalog coverage in current results | Very strong for Cu(II) | No iron pairs surfaced in the first 20 catalog rows |
+| Ligand diversity in visible results | High: amines, amino acids, imidazoles, hydroxide, polypyridyls | Not yet demonstrated from current retrieved rows |
+
+### Interpretation
+Based on the retrieved SRD-46 results, **copper—especially Cu(II)—has much deeper immediately visible stability-constant coverage than iron** in this query path. The Cu(II) records also span a chemically broad ligand set and many stoichiometries (`ML`, `ML2`, `ML3`, `ML4`, hydroxo and polynuclear species), which is very typical of Cu(II)’s rich coordination chemistry.
+
+If you want, I can continue and make this into a **true iron vs copper numeric comparison** by pulling:
+
+| Next comparison option | What I would retrieve |
+|---|---|
+| Coverage comparison | counts of Fe(II)/Fe(III) vs Cu(I)/Cu(II) systems and measurements |
+| Shared-ligand comparison | matched ligands like glycine, histidine, imidazole, EDTA/IDA if present |
+| Matched stability constants | side-by-side `log β` values under similar temperature and ionic strength |
+
+Source: NIST SRD-46.
+
+---

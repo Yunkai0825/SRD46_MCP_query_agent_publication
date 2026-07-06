@@ -1,0 +1,71 @@
+# Stability Constants for the Copper(II)–Glycine System
+
+**Source:** NIST SRD-46 | **Metal:** Cu²⁺ (metal_41) | **Ligand:** Glycine / Aminoacetic acid (ligand_5760, HxL definition: HL)
+
+The database reports **30 measurements** covering two stepwise/overall equilibria, with log K values, enthalpies (ΔH), and entropies (ΔS) across a range of temperatures and ionic strengths.
+
+---
+
+## Log K Values
+
+### ML: Cu²⁺ + L⁻ ⇌ CuL⁺ (β₁)
+
+| T (°C) | I (mol/L) | log K₁ |
+|---------|-----------|--------|
+| 10 | 0 | 8.80 |
+| 25 | 0 | **8.56** |
+| 25 | 0.1 | 8.19 |
+| 25 | 0.5 | 8.10 |
+| 25 | 1.0 | 8.20 |
+| 25 | 2.0 | 8.38 |
+| 25 | 2.5 | 8.34 |
+| 37 | 0.15 | 7.99 |
+| 40 | 0 | 8.37 |
+
+### ML₂: Cu²⁺ + 2 L⁻ ⇌ CuL₂ (β₂)
+
+| T (°C) | I (mol/L) | log β₂ |
+|---------|-----------|--------|
+| 10 | 0 | 16.30 |
+| 25 | 0 | **15.70** |
+| 25 | 0.1 | 15.10 |
+| 25 | 0.5 | 15.00 |
+| 25 | 1.0 | 15.10 |
+| 25 | 2.0 | 15.40 |
+| 25 | 2.5 | 15.40 |
+| 37 | 0.15 | 14.69 |
+| 40 | 0 | 15.30 |
+
+---
+
+## Thermodynamic Parameters (ΔH and ΔS)
+
+### ML Formation
+
+| T (°C) | I (mol/L) | ΔH (kJ/mol) | ΔS (J/mol·K) |
+|---------|-----------|-------------|---------------|
+| 10 | 0 | −26.8 | — |
+| 25 | 0 | −25.1 | 79.5 |
+| 25 | 0.1 | −25.1 | 72.4 |
+| 40 | 0 | −23.4 | — |
+
+### ML₂ Formation
+
+| T (°C) | I (mol/L) | ΔH (kJ/mol) | ΔS (J/mol·K) |
+|---------|-----------|-------------|---------------|
+| 10 | 0 | −56.5 | — |
+| 25 | 0 | −54.4 | 118.0 |
+| 25 | 0.1 | −54.4 | 106.7 |
+| 40 | 0 | −52.3 | — |
+
+---
+
+## Key Observations
+
+- **Reference values at 25 °C, I → 0:** log K₁ = 8.56 and log β₂ = 15.70, giving a stepwise log K₂ ≈ 7.14. The modest drop from K₁ to K₂ reflects the statistical and steric cost of binding a second glycinate, but the bis-complex CuL₂ is still very stable — consistent with the well-known square-planar preference of Cu(II) for amino acid chelates.
+
+- **Ionic-strength dependence:** Both constants decrease from I = 0 to I ≈ 0.5 M, then slightly recover at higher I, a pattern typical of activity-coefficient corrections in electrolyte solutions.
+
+- **Temperature trend:** The negative ΔH values (exothermic binding) and positive ΔS values indicate that complex formation is both enthalpically and entropically favourable — the entropy gain arising from desolvation of the metal ion and ligand upon chelation.
+
+---

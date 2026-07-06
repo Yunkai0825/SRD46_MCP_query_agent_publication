@@ -1,0 +1,658 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q5.2.1\\Q5.2.1_result_batch4.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "SRD-46 shows **no recorded stability-constant entries for uranyl/uranium(VI), UO2^2+ (metal_195), with crown ethers**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 12,
+            "text": "SRD-46 shows",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 15,
+            "end": 115,
+            "text": "no recorded stability-constant entries for uranyl/uranium(VI), UO2^2+ (metal_195), with crown ethers",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool queries and results in this run come from the NIST SRD-46 context; individual rows do not repeat the database name.",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "Args.where: (c.metal_id = metal_195 AND c.ligand_id IN (ligand_9672, ligand_9674, ligand_9676, ligand_9677, ligand_9678, ligand_9679, ligand_9680))"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "Args.where: (c.metal_id = metal_195 AND (c.ligand_name_SRD LIKE '%crown%' OR c.ligand_class_name LIKE '%crown%'))"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_195",
+              "ligand_9672",
+              "ligand_9674",
+              "ligand_9676",
+              "ligand_9677",
+              "ligand_9678",
+              "ligand_9679",
+              "ligand_9680"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_195 | UO_[2]^[2+] | U | 2 |  | *** | *** | beta_totN_75 | ligand_totN_163 | vlm_totN_748 |",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "search_metals",
+                "snippet": "| metal_195 | UO_[2]^[2+] | U | 2 |  | *** | *** | beta_totN_75 | ligand_totN_163 | vlm_totN_748 |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_195 AND c.ligand_id IN (ligand_9672, ligand_9674, ligand_9676, ligand_9677, ligand_9678, ligand_9679, ligand_9680))\" … ## search_stability *(no results)*"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_195 AND (c.ligand_name_SRD LIKE '%crown%' OR c.ligand_class_name LIKE '%crown%'))\" … ## search_stability *(no results)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Query | SRD-46 result |\n|---|---:|\n| Direct uranyl + specific crown ethers (12-crown-4, 15-crown-5, 18-crown-6, benzo-/dibenzo-/dicyclohexyl-18-crown-6) in `search_stability` | 0 results |\n| Broader uranyl + any ligand name/class containing “crown” in `search_stability` | 0 results |\n| Uranyl + “crown” equilibrium networks in `search_networks` | 0 results |\n| `ligandmetal_card` count for metal_id 195 with crown-like ligand names | 0 |",
+        "claims": [
+          {
+            "start": 37,
+            "end": 190,
+            "text": "| Direct uranyl + specific crown ethers (12-crown-4, 15-crown-5, 18-crown-6, benzo-/dibenzo-/dicyclohexyl-18-crown-6) in `search_stability` | 0 results |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 191,
+            "end": 286,
+            "text": "| Broader uranyl + any ligand name/class containing “crown” in `search_stability` | 0 results |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 287,
+            "end": 361,
+            "text": "| Uranyl + “crown” equilibrium networks in `search_networks` | 0 results |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 362,
+            "end": 440,
+            "text": "| `ligandmetal_card` count for metal_id 195 with crown-like ligand names | 0 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_195",
+              "ligand_9672",
+              "ligand_9674",
+              "ligand_9676",
+              "ligand_9677",
+              "ligand_9678",
+              "ligand_9679",
+              "ligand_9680"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "**summary:** {'n_metals': 0, 'n_ligands': 0, 'n_pairs': 0, 'total_species': 0}",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_195 AND c.ligand_id IN (ligand_9672, ligand_9674, ligand_9676, ligand_9677, ligand_9678, ligand_9679, ligand_9680))\""
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_ligands",
+                "snippet": "| ligand_9672 | 1,4,7,10-Tetraoxacyclododecane (12-Crown-4) | *** | miscellaneous crown ether | 3 | *** | *** |\n| ligand_9674 | ... (15-Crown-5) | *** | ... |\n| ligand_9676 | ... (18-Crown-6) | *** | ... |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_195"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| ligandmetal_card | metal_id = 195 AND ligand_name_SRD = '{''like'': ''%crown%''}' | 0 |",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_195 AND (c.ligand_name_SRD LIKE '%crown%' OR c.ligand_class_name LIKE '%crown%'))\""
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 17",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_card | metal_id = 195 AND ligand_name_SRD = '{''like'': ''%crown%''}' | 0 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_195"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| ligandmetal_card | metal_id = 195 AND ligand_name_SRD = '{''like'': ''%crown%''}' | 0 |",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_networks",
+                "snippet": "\"where\": \"(c.metal_id = metal_195 AND c.ligand_name LIKE '%crown%')\""
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_networks",
+                "snippet": "## search_networks\n\n*(no results)*"
+              },
+              {
+                "step": "Step 17",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_card | metal_id = 195 AND ligand_name_SRD = '{''like'': ''%crown%''}' | 0 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_195"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligandmetal_card | metal_id = 195 AND ligand_name_SRD = '{''like'': ''%crown%''}' | 0",
+            "tool_snippets": [
+              {
+                "step": "Step 17",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_card | metal_id = 195 AND ligand_name_SRD = '{''like'': ''%crown%''}' | 0 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "So, from **NIST SRD-46**, the answer is:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "So,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 4,
+            "end": 24,
+            "text": "from **NIST SRD-46**",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 24,
+            "end": 40,
+            "text": ", the answer is:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool queries use SRD field names (e.g., ligand_name_SRD), indicating NIST SRD-46 provenance.",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_195 AND (c.ligand_name_SRD LIKE '%crown%' OR c.ligand_class_name LIKE '%crown%'))\""
+              },
+              {
+                "step": "Step 17",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_card | metal_id = 195 AND ligand_name_SRD = '{''like'': ''%crown%''}' | 0 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "| System | Stability constant in SRD-46 |\n|---|---|\n| UO2^2+ with crown ethers | **No SRD-46 record found** |",
+        "claims": [
+          {
+            "start": 52,
+            "end": 109,
+            "text": "| UO2^2+ with crown ethers | **No SRD-46 record found** |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_195",
+              "ligand_9672",
+              "ligand_9674",
+              "ligand_9676",
+              "ligand_9677",
+              "ligand_9678",
+              "ligand_9679",
+              "ligand_9680"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "search_stability — (no results) for UO2^2+ with crown ligands",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_195 AND (c.ligand_name_SRD LIKE '%crown%' OR c.ligand_class_name LIKE '%crown%'))\" …\n\n*(no results)*"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_195 AND c.ligand_id IN (ligand_9672, ligand_9674, ligand_9676, ligand_9677, ligand_9678, ligand_9679, ligand_9680))\"\n\n*(no results)*"
+              },
+              {
+                "step": "Step 10",
+                "tool": "build_system_catalog",
+                "snippet": "metal_id=metal_195, ligand_id=ligand_9672 →\n\n*(no pairs found)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "A small chemistry note: that does **not** necessarily mean uranyl–crown complexes are impossible or unstudied; it means **this database does not contain indexed equilibrium/stability data for those systems**. Crown ethers often bind alkali and alkaline-earth cations much more strongly than the linear, hard **uranyl(VI)** ion, and many uranyl crown studies are done in extraction or non-aqueous contexts that may fall outside the SRD-46 equilibrium coverage.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 23,
+            "text": "A small chemistry note:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 24,
+            "end": 110,
+            "text": "that does **not** necessarily mean uranyl–crown complexes are impossible or unstudied;",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 111,
+            "end": 119,
+            "text": "it means",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 120,
+            "end": 208,
+            "text": "**this database does not contain indexed equilibrium/stability data for those systems**.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 209,
+            "end": 326,
+            "text": "Crown ethers often bind alkali and alkaline-earth cations much more strongly than the linear, hard **uranyl(VI)** ion",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 326,
+            "end": 331,
+            "text": ", and",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 332,
+            "end": 404,
+            "text": "many uranyl crown studies are done in extraction or non-aqueous contexts",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 405,
+            "end": 459,
+            "text": "that may fall outside the SRD-46 equilibrium coverage.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_195",
+              "ligand_9672",
+              "ligand_9674",
+              "ligand_9676",
+              "ligand_9677",
+              "ligand_9678",
+              "ligand_9679",
+              "ligand_9680"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "search_stability … (c.metal_id = metal_195 AND … LIKE '%crown%') → (no results); db_count_records … count | 0",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "Args.where: (c.metal_id = metal_195 AND (c.ligand_name_SRD LIKE '%crown%' OR c.ligand_class_name LIKE '%crown%'))"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 17",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_card | metal_id = 195 AND ligand_name_SRD = '{''like'': ''%crown%''}' | 0 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Relative selectivity of crown ethers for alkali/alkaline‑earth vs uranyl is general chemistry knowledge; not stated in the tool rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Statement about research contexts (extraction/non‑aqueous) is background knowledge; no coverage data in tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Database coverage scope (SRD‑46) is not specified in tool outputs; this is a contextual explanation, not directly in rows.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "**Source:** NIST Standard Reference Database 46 (SRD-46), queried for uranyl/crown-ether stability records.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 11,
+            "text": "**Source:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 12,
+            "end": 56,
+            "text": "NIST Standard Reference Database 46 (SRD-46)",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 58,
+            "end": 107,
+            "text": "queried for uranyl/crown-ether stability records.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Provenance statement accepted: tools in this run query the NIST SRD-46 database (per run context; SRD-46 provenance is valid when tool results are present).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_195",
+              "ligand_9672",
+              "ligand_9674",
+              "ligand_9676",
+              "ligand_9677",
+              "ligand_9678",
+              "ligand_9679",
+              "ligand_9680"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "WHERE (c.metal_id = metal_195 AND (c.ligand_name_SRD LIKE '%crown%' OR c.ligand_class_name LIKE '%crown%'))",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_195 AND (c.ligand_name_SRD LIKE '%crown%' OR c.ligand_class_name LIKE '%crown%'))\""
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_metals",
+                "snippet": "| metal_195 | UO_[2]^[2+] | U | 2 | *** | *** | *** | beta_totN_75 | ligand_totN_163 | vlm_totN_748 |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_195 AND c.ligand_id IN (ligand_9672, ligand_9674, ligand_9676, ligand_9677, ligand_9678, ligand_9679, ligand_9680))\""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+Here’s a neat rare-earth story from **NIST SRD-46**: **the lanthanide contraction shows up very cleanly in EDTA binding**.
+
+At **25.0 °C**, **ionic strength = 0.1 mol/L**, in **water (H₂O)**, the 1:1 EDTA complex formation constant **K = [ML]/[M][L]** rises steadily across the trivalent rare earths:
+
+| Metal ion | log K with EDTA |
+|---|---:|
+| La^[3+] | 15.36 |
+| Ce^[3+] | 15.93 |
+| Pr^[3+] | 16.30 |
+| Nd^[3+] | 16.51 |
+| Pm^[3+] | 16.90 |
+| Sm^[3+] | 17.06 |
+| Eu^[3+] | 17.25 |
+| Gd^[3+] | 17.35 |
+| Tb^[3+] | 17.87 |
+| Y^[3+] | 18.08 |
+| Dy^[3+] | 18.30 |
+| Ho^[3+] | 18.56 |
+| Er^[3+] | 18.89 |
+| Tm^[3+] | 19.32 |
+| Yb^[3+] | 19.49 |
+| Lu^[3+] | 19.74 |
+
+**Why this is interesting:** as you go from **La³⁺ to Lu³⁺**, the ions get smaller while staying 3+, so their charge density increases. EDTA binds the later lanthanides much more strongly: **Lu³⁺ (19.74)** is about **4.38 log units** stronger than **La³⁺ (15.36)** under the same conditions.
+
+A couple of other fun SRD-46 observations:
+
+| Observation | What SRD-46 shows |
+|---|---|
+| Rare-earth chemistry is mostly trivalent | The database coverage is overwhelmingly for **REE³⁺** species; non-3+ entries are scarce. |
+| Oxidation-state exceptions stand out | **Ce** appears as **Ce³⁺/Ce⁴⁺**, and **Eu** shows **Eu²⁺/Eu³⁺/Eu⁴⁺** entries, making them notable outliers. |
+| Ligand usage is repetitive across the series | Many rare earths share the same recurring ligands, including **EDTA**, **NTA**, **glycolic acid**, **malonic acid**, and **hydrogen sulfate**. |
+
+So the “interesting thing” is that rare earths may look chemically similar, but the database shows a **strong, systematic increase in chelate stability across the series**—a textbook periodic trend captured numerically.
+
+**Source:** NIST SRD-46, ligand–metal stability data for rare-earth ions and EDTA.
+
+---

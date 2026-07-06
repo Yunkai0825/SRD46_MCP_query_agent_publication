@@ -1,0 +1,1022 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt5\\Q5.1.5\\Q5.1.5_result_batch4.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Short answer: yes—EDTA is widely used because it forms very stable 1:1 complexes with many divalent and trivalent metal ions. In SRD-46 it is linked to hundreds of measured metal–ligand entries, and its chelation strength is strongly pH‑dependent.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 18,
+            "text": "Short answer: yes—",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 18,
+            "end": 37,
+            "text": "EDTA is widely used",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "text": "because",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 46,
+            "end": 125,
+            "text": "it forms very stable 1:1 complexes with many divalent and trivalent metal ions.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 126,
+            "end": 193,
+            "text": "In SRD-46 it is linked to hundreds of measured metal–ligand entries",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 199,
+            "end": 247,
+            "text": "its chelation strength is strongly pH‑dependent.",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_6277"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "SRD-46 does not record ‘usage in practice’; EDTA entry exists but ‘widely used’ is general knowledge.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_6277"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "No EDTA ML stability rows were retrieved here; the statement about stable 1:1 complexes is general chemistry knowledge.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_6277"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ligand_6277 … (EDTA) … vlm_count | 596 — which is “hundreds” of entries.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_6277",
+              "vlm_108224",
+              "vlm_108254",
+              "vlm_108272"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "vlm_108224: pKa 9.52 … M_bind_totN_below 7 … above 70 — indicates much greater metal binding above this pH.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108224 | ligand_6277 | … | pKa | 9.52 | … | M_bind_totN_below | M_bind_totN_above |\n| … | … | L→HL | M_tot_7 | M_tot_70 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108254 | ligand_6277 | … | 6.13 | … | HL→H2L | M_tot_1 | M_tot_7 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108272 | ligand_6277 | … | 2.69 | … | H2L→H3L | M_tot_2 | M_tot_1 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "Evidence from SRD‑46",
+        "claims": [
+          {
+            "start": 0,
+            "end": 20,
+            "text": "Evidence from SRD‑46",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "- Breadth of coverage (indicating robust, widely studied complexation):\n  \n  | Ligand (SRD-46 ID) | Name | VLM entries (count) |\n  |---|---|---|\n  | ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | 596 |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 71,
+            "text": "- Breadth of coverage (indicating robust, widely studied complexation):",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 147,
+            "end": 211,
+            "text": "| ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | 596 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_6277"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 |",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "- Aqueous protonation (25 °C, I ≈ 0.1 M), which frames conditional chelation strength (more deprotonated = stronger complexing):",
+        "claims": [
+          {
+            "start": 2,
+            "end": 21,
+            "text": "Aqueous protonation",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 23,
+            "end": 28,
+            "text": "25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 30,
+            "end": 39,
+            "text": "I ≈ 0.1 M",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 42,
+            "end": 85,
+            "text": "which frames conditional chelation strength",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 87,
+            "end": 126,
+            "text": "more deprotonated = stronger complexing",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "ligand_6277",
+              "vlm_108224",
+              "vlm_108254",
+              "vlm_108272",
+              "vlm_108282",
+              "vlm_108289"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| vlm_108254 | ... | pKa | 6.13 | 25 | 0.1 | HL→H2L | ...",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108254 | ligand_6277 | Ethylenedinitrilotetraacetic acid … | H4L | ... | 6.13 | 25 | 0.1 | HL→H2L | ..."
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108224 | ligand_6277 | ... | pKa | 9.52 | 25 | 0.1 | L→HL | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_108224"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_108224 | ... | pKa | 9.52 | T°C 25 | I(M) 0.1 | L→HL |",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108224 | ligand_6277 | Ethylenedinitrilotetraacetic acid … | H4L | ... | 9.52 | 25 | 0.1 | L→HL | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_108272"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_108272 | ... | pKa | 2.69 | T°C 25 | I(M) 0.1 | H2L→H3L |",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108272 | ligand_6277 | Ethylenedinitrilotetraacetic acid … | H4L | ... | 2.69 | 25 | 0.1 | H2L→H3L | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Conceptual statement: the database lists pKa values but does not explicitly state how protonation frames conditional chelation strength.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "pKa entries for EDTA list protonation steps (e.g., HL→H2L, L→HL) with T°C 25 and I(M) 0.1, but no explicit chelation-strength statement."
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General chemistry principle: increased deprotonation usually enhances metal complexing; not stated directly in the database rows provided.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108254 | ... | pKa | 6.13 | 25 | 0.1 | HL→H2L | ... (protonation steps shown; no direct stability vs. protonation comparison)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "| pKa | Protonation step (from → to) | T (°C) | I (M) |\n  |---|---|---|---|\n  | −1.5 | H4L → H5L | 25 | 0.1 |\n  | 2.00 | H3L → H4L | 25 | 0.1 |\n  | 2.69 | H2L → H3L | 25 | 0.1 |\n  | 6.13 | HL → H2L | 25 | 0.1 |\n  | 9.52 | L → HL | 25 | 0.1 |",
+        "claims": [
+          {
+            "start": 78,
+            "end": 109,
+            "text": "| −1.5 | H4L → H5L | 25 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 112,
+            "end": 143,
+            "text": "| 2.00 | H3L → H4L | 25 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 146,
+            "end": 177,
+            "text": "| 2.69 | H2L → H3L | 25 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 180,
+            "end": 210,
+            "text": "| 6.13 | HL → H2L | 25 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 213,
+            "end": 241,
+            "text": "| 9.52 | L → HL | 25 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "ligand_6277",
+              "vlm_108289"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_108289 | ligand_6277 | ... | -1.5 | 25 | 0.1 | H4L→H5L",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108289 | ligand_6277 | ... | -1.5 | 25 | 0.1 | H4L→H5L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_6277",
+              "vlm_108282"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_108282 | ligand_6277 | ... | 2 | 25 | 0.1 | H3L→H4L",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108282 | ligand_6277 | ... | 2 | 25 | 0.1 | H3L→H4L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_6277",
+              "vlm_108272"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_108272 | ligand_6277 | ... | 2.69 | 25 | 0.1 | H2L→H3L",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108272 | ligand_6277 | ... | 2.69 | 25 | 0.1 | H2L→H3L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_6277",
+              "vlm_108254"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_108254 | ligand_6277 | ... | 6.13 | 25 | 0.1 | HL→H2L",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108254 | ligand_6277 | ... | 6.13 | 25 | 0.1 | HL→H2L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_6277",
+              "vlm_108224"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_108224 | ligand_6277 | ... | 9.52 | 25 | 0.1 | L→HL",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108224 | ligand_6277 | ... | 9.52 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "What this means\n- As pH increases, EDTA loses protons and approaches its highly chelating Y4− form; conditional stability constants for metal–EDTA complexes are therefore largest in moderately basic solutions.\n- The extensive number of metal–EDTA measurements in SRD‑46 reflects its effectiveness across many common metals (e.g., alkaline earths and first‑row transition metals), although exact stability varies by metal and oxidation state.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 15,
+            "text": "What this means",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 18,
+            "end": 53,
+            "text": "As pH increases, EDTA loses protons",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 58,
+            "end": 98,
+            "text": "approaches its highly chelating Y4− form",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 100,
+            "end": 209,
+            "text": "conditional stability constants for metal–EDTA complexes are therefore largest in moderately basic solutions.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 212,
+            "end": 269,
+            "text": "The extensive number of metal–EDTA measurements in SRD‑46",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 270,
+            "end": 322,
+            "text": "reflects its effectiveness across many common metals",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 323,
+            "end": 378,
+            "text": "(e.g., alkaline earths and first‑row transition metals)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 389,
+            "end": 441,
+            "text": "exact stability varies by metal and oxidation state.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_6277",
+              "vlm_108224",
+              "vlm_108254"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "pKa brackets for EDTA: (-inf, H5L, -1.5, H4L, 2, H3L, 2.69, H2L, 6.13, HL, 9.52, L, +inf)",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 | ... | (-inf, H5L, -1.5, H4L, 2, H3L, 2.69, H2L, 6.13, HL, 9.52, L, +inf)"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "vlm_108224 | ligand_6277 | ... | pKa 9.52 | 25 | 0.1 | L→HL | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_6277",
+              "vlm_108224"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "EDTA pKa series includes fully deprotonated L state (Y4−): ... 6.13, HL, 9.52, L, +inf",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | ... | (-inf, H5L, -1.5, H4L, 2, H3L, 2.69, H2L, 6.13, HL, 9.52, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "No EDTA stability-constant rows were returned here; this pH-dependence of conditional K is general speciation behavior consistent with EDTA deprotonation (see pKa 6.13, 9.52).",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "vlm_108254 | ... | pKa 6.13 | ... | HL→H2L ... ; vlm_108224 | ... | pKa 9.52 | ... | L→HL ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_6277"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 |",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "EDTA is broadly effective for many metals; this run did not return metal-specific constants. High vlm_count (596) indicates many measurements but not effectiveness per se.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | ... | 596 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General knowledge: EDTA complexes alkaline earths and first‑row transition metals. No metal-specific rows were retrieved in this run to list examples.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General chelation principle: stability varies with metal and oxidation state. No metal–EDTA stability rows were returned here to demonstrate this directly.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "If you’d like, I can pull matched‑condition (25 °C, defined ionic strength) formation constants for specific metals (e.g., Ca2+, Cu2+, Fe3+, Pb2+, Zn2+) to quantify “how good” EDTA is in each case.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 43,
+            "text": "If you’d like, I can pull matched‑condition",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 45,
+            "end": 50,
+            "text": "25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 52,
+            "end": 74,
+            "text": "defined ionic strength",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 76,
+            "end": 115,
+            "text": "formation constants for specific metals",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 123,
+            "end": 151,
+            "text": "Ca2+, Cu2+, Fe3+, Pb2+, Zn2+",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 153,
+            "end": 197,
+            "text": "to quantify “how good” EDTA is in each case.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_108224"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_108224 | ... | pKa | 9.52 | T°C 25 | I(M) 0.1 | L→HL |",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108224 | ligand_6277 | Ethylenedinitrilotetraacetic acid … | H4L | ... | 9.52 | 25 | 0.1 | L→HL | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_108224"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "I(M) 0.1 is explicitly reported (defined ionic strength).",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108224 | ... | pKa 9.52 | T°C 25 | I(M) 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "No tool output lists metals or EDTA stability rows here; cannot verify Ca2+, Cu2+, Fe3+, Pb2+, Zn2+ from provided results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Using formation constants to gauge chelation strength is standard chemistry; not explicitly stated in the database rows.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 7,
+        "text": "Source: NIST Standard Reference Database 46 (SRD‑46), ligand_6277 entry and associated pKa data.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 7,
+            "text": "Source:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 8,
+            "end": 52,
+            "text": "NIST Standard Reference Database 46 (SRD‑46)",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 54,
+            "end": 71,
+            "text": "ligand_6277 entry",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 76,
+            "end": 95,
+            "text": "associated pKa data",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Per run context, tool results are from NIST SRD‑46; presence of database query outputs (e.g., search_ligands) validates the source citation.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands — 5 result(s)\n| ligand_id | ligand_name | ... |\n| ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_6277"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 | … |",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 | `O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CC(=O)O` | (-inf, H5L, -1.5, H4L, 2, H3L, 2.69, H2L, 6.13, HL, 9.52, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_6277",
+              "vlm_108289",
+              "vlm_108282",
+              "vlm_108272",
+              "vlm_108254",
+              "vlm_108224"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "pKa rows for ligand_6277 at 25 °C, I=0.1: −1.5; 2; 2.69; 6.13; 9.52 (vlm_108289, 108282, 108272, 108254, 108224).",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108289 | ligand_6277 | … | pKa | -1.5 | 25 | 0.1 | H4L→H5L |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108282 | ligand_6277 | … | pKa | 2 | 25 | 0.1 | H3L→H4L |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_108272 | ligand_6277 | … | pKa | 2.69 | 25 | 0.1 | H2L→H3L |\n| vlm_108254 | … | pKa | 6.13 | 25 | 0.1 |\n| vlm_108224 | … | pKa | 9.52 | 25 | 0.1 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 8,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

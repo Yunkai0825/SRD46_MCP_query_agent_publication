@@ -1,0 +1,741 @@
+# Q5.1.5 — Tool Results (batch 2)
+
+### Step 2: `search_ligands`
+**Args:**
+```json
+{
+  "name": "EDTA"
+}
+```
+
+[summary]
+## search_ligands — 5 result(s)
+
+**stats:** 5 SQL matches · showing 5 · limit 25
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_6118 | 6,11,18,23-Tetraoxo-1,4,7,10,13,16,19,… (24edtaen) | *** | Aza macrocycles with car… | 15 | *** | (-inf, H4L, 3.3, H3L, 4.18, H2L, 7.26, HL, 7.78, L, +inf) |
+| ligand_6275 | N-(2-Hydroxyethyl)ethylenedinitrilotriace… (HEDTA) | H3L | EDTA and derivatives | 237 | `O=C(O)CN(CCO)CCN(CC(=O)O)CC(=O)O` | (-inf, H3L, 2.62, H2L, 5.38, HL, 9.7, L, +inf) |
+| ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 | `O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CC(=O)O` | (-inf, H5L, -1.5, H4L, 2, H3L, 2.69, H2L, 6.13, HL, 9.52, L, +inf) |
+| ligand_6335 | Oxybis(ethylenenitrilo)tetraacetic acid (EEDTA) | H4L | EDTA and derivatives | 124 | `O=C(O)CN(CCOCCN(CC(=O)O)CC(=O)O)CC(=O)O` | (-inf, H4L, -1.8, H3L, 2.76, H2L, 8.75, HL, 9.39, L, +inf) |
+| ligand_6348 | Thiobis(ethylenenitrilo)tetraacetic acid (TEDTA) | H4L | EDTA and derivatives | 101 | `O=C(O)CN(CCSCCN(CC(=O)O)CC(=O)O)CC(=O)O` | (-inf, H4L, 2, H3L, 2.68, H2L, 8.37, HL, 9.31, L, +inf) |
+
+### Functional groups across all SQL matches (4 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 4 | 100% |
+| tertiary_amine | 4 | 100% |
+| ether | 1 | 25% |
+| hydroxyl | 1 | 25% |
+| thioether | 1 | 25% |
+
+---
+
+### Step 3: `search_metals`
+**Args:**
+```json
+{
+  "name": "Calcium, Magnesium, Copper, Zinc, Iron, Nickel, Cobalt, Lead, Aluminum"
+}
+```
+
+[summary]
+## search_metals
+
+*(no results)*
+
+---
+
+### Step 4: `search_metals`
+**Args:**
+```json
+{
+  "symbol": "Ca"
+}
+```
+
+[summary]
+## search_metals — 1 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_25 | Ca^[2+] | Ca | 2 | ✓ | [Ca+2] | InChI=1S/Ca/q+2 | beta_totN_68 | ligand_totN_644 | vlm_totN_1761 |
+
+---
+
+### Step 5: `search_metals`
+**Args:**
+```json
+{
+  "symbol": "Cu"
+}
+```
+
+[summary]
+## search_metals — 3 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_41 | Cu^[2+] | Cu | 2 | ✓ | [Cu+2] | InChI=1S/Cu/q+2 | beta_totN_264 | ligand_totN_1951 | vlm_totN_8963 |
+| metal_42 | Cu^[+] | Cu | 1 | ✓ | [Cu+] | InChI=1S/Cu/q+1 | beta_totN_32 | ligand_totN_117 | vlm_totN_285 |
+| metal_43 | Cu^[3+] | Cu | 3 | ✓ | [Cu+3] | InChI=1S/Cu/q+3 | beta_totN_4 | ligand_totN_8 | vlm_totN_10 |
+
+---
+
+### Step 6: `search_metals`
+**Args:**
+```json
+{
+  "symbol": "Zn"
+}
+```
+
+[summary]
+## search_metals — 1 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_208 | Zn^[2+] | Zn | 2 | ✓ | [Zn+2] | InChI=1S/Zn/q+2 | beta_totN_122 | ligand_totN_1169 | vlm_totN_4095 |
+
+---
+
+### Step 7: `search_metals`
+**Args:**
+```json
+{
+  "symbol": "Fe"
+}
+```
+
+[summary]
+## search_metals — 2 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_61 | Fe^[3+] | Fe | 3 | ✓ | [Fe+3] | InChI=1S/Fe/q+3 | beta_totN_128 | ligand_totN_406 | vlm_totN_1473 |
+| metal_62 | Fe^[2+] | Fe | 2 | ✓ | [Fe+2] | InChI=1S/Fe/q+2 | beta_totN_57 | ligand_totN_217 | vlm_totN_667 |
+
+---
+
+### Step 8: `search_metals`
+**Args:**
+```json
+{
+  "symbol": "Ni"
+}
+```
+
+[summary]
+## search_metals — 2 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_112 | Ni^[2+] | Ni | 2 | ✓ | [Ni+2] | InChI=1S/Ni/q+2 | beta_totN_149 | ligand_totN_1369 | vlm_totN_5325 |
+| metal_113 | Ni^[3+] | Ni | 3 | ✓ | [Ni+3] | InChI=1S/Ni/q+3 | beta_totN_5 | ligand_totN_4 | vlm_totN_7 |
+
+---
+
+### Step 9: `search_metals`
+**Args:**
+```json
+{
+  "symbol": "Mg"
+}
+```
+
+[summary]
+## search_metals — 1 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_92 | Mg^[2+] | Mg | 2 | ✓ | [Mg+2] | InChI=1S/Mg/q+2 | beta_totN_53 | ligand_totN_508 | vlm_totN_1422 |
+
+---
+
+### Step 10: `search_metals`
+**Args:**
+```json
+{
+  "symbol": "Co"
+}
+```
+
+[summary]
+## search_metals — 3 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_33 | Co^[2+] | Co | 2 | ✓ | [Co+2] | InChI=1S/Co/q+2 | beta_totN_92 | ligand_totN_977 | vlm_totN_2977 |
+| metal_34 | Co^[3+] | Co | 3 | ✓ | [Co+3] | InChI=1S/Co/q+3 | beta_totN_20 | ligand_totN_19 | vlm_totN_55 |
+| metal_181 | TcO^[2+] | Tc | 2 |  | *** | *** | beta_totN_2 | ligand_totN_1 | vlm_totN_2 |
+
+---
+
+### Step 11: `search_metals`
+**Args:**
+```json
+{
+  "symbol": "Pb"
+}
+```
+
+[summary]
+## search_metals — 11 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_16 | Bu_[3]Pb^[+] | B | 1 |  | *** | *** | beta_totN_2 | ligand_totN_1 | vlm_totN_2 |
+| metal_46 | Et_[2]Pb^[2+] | E2Pb | 2 |  | *** | *** | beta_totN_2 | ligand_totN_3 | vlm_totN_5 |
+| metal_49 | Et_[3]Pb^[+] | E3Pb | 1 |  | *** | *** | beta_totN_2 | ligand_totN_3 | vlm_totN_5 |
+| metal_84 | Me_[2]Pb^[2+] | M2Pb | 2 |  | *** | *** | beta_totN_5 | ligand_totN_4 | vlm_totN_9 |
+| metal_87 | Me_[3]Pb^[+] | M3Pb | 1 |  | *** | *** | beta_totN_7 | ligand_totN_23 | vlm_totN_33 |
+| metal_125 | Pb^[2+] | Pb | 2 | ✓ | [Pb+2] | InChI=1S/Pb/q+2 | beta_totN_80 | ligand_totN_470 | vlm_totN_1585 |
+| metal_126 | Pb^[4+] | Pb | 4 | ✓ | [Pb+4] | InChI=1S/Pb/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_129 | Ph_[2]Pb^[2+] | Ph2Pb | 2 |  | *** | *** | beta_totN_2 | ligand_totN_1 | vlm_totN_2 |
+| metal_130 | Ph_[3]Pb^[+] | Ph3Pb | 1 |  | *** | *** | beta_totN_1 | ligand_totN_2 | vlm_totN_2 |
+| metal_140 | Pr_[2]Pb^[2+] | Pr | 2 |  | *** | *** | beta_totN_2 | ligand_totN_3 | vlm_totN_5 |
+| metal_142 | Pr_[3]Pb^[+] | Pr | 1 |  | *** | *** | beta_totN_2 | ligand_totN_1 | vlm_totN_2 |
+
+---
+
+### Step 12: `search_metals`
+**Args:**
+```json
+{
+  "symbol": "Al"
+}
+```
+
+[summary]
+## search_metals — 1 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_5 | Al^[3+] | Al | 3 | ✓ | [Al+3] | InChI=1S/Al/q+3 | beta_totN_108 | ligand_totN_187 | vlm_totN_792 |
+
+---
+
+### Step 13: `search_pka_values`
+**Args:**
+```json
+{
+  "where": "lc.ligand_id = ligand_6277",
+  "order_by": "p.pKa DESC",
+  "limit": 20
+}
+```
+
+[PHASE ERROR] Tool 'search_pka_values' is not available yet. Complete PHASE 1 first: call build_system_catalog, then call 0_plan_search_strategy.
+
+---
+
+### Step 14: `search_stability`
+**Args:**
+```json
+{
+  "where": "c.ligand_id = ligand_6277 AND c.metal_id = metal_25",
+  "order_by": "s.constant_value DESC",
+  "limit": 10
+}
+```
+
+[PHASE ERROR] Tool 'search_stability' is not available yet. Complete PHASE 1 first: call build_system_catalog, then call 0_plan_search_strategy.
+
+---
+
+### Step 15: `search_stability`
+**Args:**
+```json
+{
+  "where": "c.ligand_id = ligand_6277 AND c.metal_id = metal_41",
+  "order_by": "s.constant_value DESC",
+  "limit": 10
+}
+```
+
+[PHASE ERROR] Tool 'search_stability' is not available yet. Complete PHASE 1 first: call build_system_catalog, then call 0_plan_search_strategy.
+
+---
+
+### Step 16: `search_stability`
+**Args:**
+```json
+{
+  "where": "c.ligand_id = ligand_6277 AND c.metal_id = metal_208",
+  "order_by": "s.constant_value DESC",
+  "limit": 10
+}
+```
+
+[PHASE ERROR] Tool 'search_stability' is not available yet. Complete PHASE 1 first: call build_system_catalog, then call 0_plan_search_strategy.
+
+---
+
+### Step 17: `search_stability`
+**Args:**
+```json
+{
+  "where": "c.ligand_id = ligand_6277 AND c.metal_id = metal_61",
+  "order_by": "s.constant_value DESC",
+  "limit": 10
+}
+```
+
+[PHASE ERROR] Tool 'search_stability' is not available yet. Complete PHASE 1 first: call build_system_catalog, then call 0_plan_search_strategy.
+
+---
+
+### Step 18: `search_stability`
+**Args:**
+```json
+{
+  "where": "c.ligand_id = ligand_6277 AND c.metal_id = metal_62",
+  "order_by": "s.constant_value DESC",
+  "limit": 10
+}
+```
+
+[PHASE ERROR] Tool 'search_stability' is not available yet. Complete PHASE 1 first: call build_system_catalog, then call 0_plan_search_strategy.
+
+---
+
+### Step 19: `search_stability`
+**Args:**
+```json
+{
+  "where": "c.ligand_id = ligand_6277 AND c.metal_id = metal_112",
+  "order_by": "s.constant_value DESC",
+  "limit": 10
+}
+```
+
+[PHASE ERROR] Tool 'search_stability' is not available yet. Complete PHASE 1 first: call build_system_catalog, then call 0_plan_search_strategy.
+
+---
+
+### Step 20: `search_stability`
+**Args:**
+```json
+{
+  "where": "c.ligand_id = ligand_6277 AND c.metal_id = metal_92",
+  "order_by": "s.constant_value DESC",
+  "limit": 10
+}
+```
+
+[PHASE ERROR] Tool 'search_stability' is not available yet. Complete PHASE 1 first: call build_system_catalog, then call 0_plan_search_strategy.
+
+---
+
+### Step 21: `search_stability`
+**Args:**
+```json
+{
+  "where": "c.ligand_id = ligand_6277 AND c.metal_id = metal_33",
+  "order_by": "s.constant_value DESC",
+  "limit": 10
+}
+```
+
+[PHASE ERROR] Tool 'search_stability' is not available yet. Complete PHASE 1 first: call build_system_catalog, then call 0_plan_search_strategy.
+
+---
+
+### Step 22: `search_stability`
+**Args:**
+```json
+{
+  "where": "c.ligand_id = ligand_6277 AND c.metal_id = metal_125",
+  "order_by": "s.constant_value DESC",
+  "limit": 10
+}
+```
+
+[PHASE ERROR] Tool 'search_stability' is not available yet. Complete PHASE 1 first: call build_system_catalog, then call 0_plan_search_strategy.
+
+---
+
+### Step 23: `search_stability`
+**Args:**
+```json
+{
+  "where": "c.ligand_id = ligand_6277 AND c.metal_id = metal_5",
+  "order_by": "s.constant_value DESC",
+  "limit": 10
+}
+```
+
+[PHASE ERROR] Tool 'search_stability' is not available yet. Complete PHASE 1 first: call build_system_catalog, then call 0_plan_search_strategy.
+
+---
+
+### Step 24: `build_system_catalog`
+**Args:**
+```json
+{
+  "ligand_id": "ligand_6277",
+  "metal_id": "metal_25"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 1 pair(s), 2 species
+
+### Ca^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)
+**metal_id:** metal_25 | **ligand_id:** ligand_6277 | **ligand_def_HxL:** H4L  
+**entries:** 18 | **species:** 2 | **vlm_count:** 18
+
+| beta_definition_id | beta_definition_name | equation_str | phases | n_entries |
+|--------------------|----------------------|--------------|--------|----------|
+| beta_def_788 | [MHL]/[ML][H] | [ML] + [H] <=> [MHL] | [MHL](aqueous), [ML](aqueous), [H](aqueous) | 2 |
+| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 16 |
+
+**vlm_ids:** vlm_108344, vlm_108345, vlm_108346, vlm_108347, vlm_108348, … vlm_108359, vlm_108360, vlm_108361 (18 listed)
+
+**equilibrium_maps:** 6 preset reference network(s) *(clustered around room temperature & low ionic strength)*
+
+| network_id | nodes | edges | T range | I range |
+|------------|-------|-------|---------|---------|
+| ref_eq_net_4938 | 2 | 1 | 20~30 °C | -0.05~0.25 M |
+| ref_eq_net_4939 | 1 | 0 | 31~41 °C | 0~0.3 M |
+| ref_eq_net_4940 | 2 | 1 | 19~29 °C | -0.05~0.25 M |
+| ref_eq_net_4941 | 1 | 0 | 31~41 °C | 0~0.3 M |
+| ref_eq_net_4942 | 1 | 0 | 19~29 °C | 0.35~0.65 M |
+| ref_eq_net_4943 | 1 | 0 | 19~29 °C | 0.85~1.15 M |
+
+---
+
+### Step 25: `build_system_catalog`
+**Args:**
+```json
+{
+  "ligand_id": "ligand_6277",
+  "metal_id": "metal_41"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 1 pair(s), 4 species
+
+### Cu^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)
+**metal_id:** metal_41 | **ligand_id:** ligand_6277 | **ligand_def_HxL:** H4L  
+**entries:** 20 | **species:** 4 | **vlm_count:** 20
+
+| beta_definition_id | beta_definition_name | equation_str | phases | n_entries |
+|--------------------|----------------------|--------------|--------|----------|
+| beta_def_739 | [MH<sub>2</sub>L]/[MHL][H] | [MHL] + [H] <=> [MH2L] | [MH2L](aqueous), [MHL](aqueous), [H](aqueous) | 2 |
+| beta_def_788 | [MHL]/[ML][H] | [ML] + [H] <=> [MHL] | [MHL](aqueous), [ML](aqueous), [H](aqueous) | 4 |
+| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 8 |
+| beta_def_966 | [ML]/[M(OH)L][H] | [M(OH)L] + [H] <=> [ML] + [H2O] | [ML](aqueous), [H2O](aqueous), [M(OH)L](aqueous), [H](aqueous) | 6 |
+
+**vlm_ids:** vlm_108604, vlm_108605, vlm_108606, vlm_108607, vlm_108608, … vlm_108621, vlm_108622, vlm_108623 (20 listed)
+
+**equilibrium_maps:** 2 preset reference network(s) *(clustered around room temperature & low ionic strength)*
+
+| network_id | nodes | edges | T range | I range |
+|------------|-------|-------|---------|---------|
+| ref_eq_net_5025 | 4 | 5 | 20~30 °C | -0.05~0.25 M |
+| ref_eq_net_5026 | 3 | 3 | 19~29 °C | 0.85~1.15 M |
+
+---
+
+### Step 26: `build_system_catalog`
+**Args:**
+```json
+{
+  "ligand_id": "ligand_6277",
+  "metal_id": "metal_208"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 1 pair(s), 4 species
+
+### Zn^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)
+**metal_id:** metal_208 | **ligand_id:** ligand_6277 | **ligand_def_HxL:** H4L  
+**entries:** 18 | **species:** 4 | **vlm_count:** 18
+
+| beta_definition_id | beta_definition_name | equation_str | phases | n_entries |
+|--------------------|----------------------|--------------|--------|----------|
+| beta_def_739 | [MH<sub>2</sub>L]/[MHL][H] | [MHL] + [H] <=> [MH2L] | [MH2L](aqueous), [MHL](aqueous), [H](aqueous) | 1 |
+| beta_def_788 | [MHL]/[ML][H] | [ML] + [H] <=> [MHL] | [MHL](aqueous), [ML](aqueous), [H](aqueous) | 5 |
+| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 6 |
+| beta_def_966 | [ML]/[M(OH)L][H] | [M(OH)L] + [H] <=> [ML] + [H2O] | [ML](aqueous), [H2O](aqueous), [M(OH)L](aqueous), [H](aqueous) | 6 |
+
+**vlm_ids:** vlm_108707, vlm_108708, vlm_108709, vlm_108710, vlm_108711, … vlm_108722, vlm_108723, vlm_108724 (18 listed)
+
+**equilibrium_maps:** 5 preset reference network(s) *(clustered around room temperature & low ionic strength)*
+
+| network_id | nodes | edges | T range | I range |
+|------------|-------|-------|---------|---------|
+| ref_eq_net_5056 | 3 | 3 | 20~30 °C | -0.05~0.25 M |
+| ref_eq_net_5057 | 4 | 5 | 19~29 °C | 0.85~1.15 M |
+| ref_eq_net_5058 | 1 | 0 | 19~29 °C | 0.35~0.65 M |
+| ref_eq_net_5059 | 1 | 0 | 19~29 °C | -0.15~0.15 M |
+| ref_eq_net_5060 | 1 | 0 | 19~29 °C | 2.85~3.15 M |
+
+---
+
+### Step 27: `build_system_catalog`
+**Args:**
+```json
+{
+  "ligand_id": "ligand_6277",
+  "metal_id": "metal_61"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 1 pair(s), 4 species
+
+### Fe^[3+] + Ethylenedinitrilotetraacetic acid (EDTA)
+**metal_id:** metal_61 | **ligand_id:** ligand_6277 | **ligand_def_HxL:** H4L  
+**entries:** 14 | **species:** 4 | **vlm_count:** 14
+
+| beta_definition_id | beta_definition_name | equation_str | phases | n_entries |
+|--------------------|----------------------|--------------|--------|----------|
+| beta_def_427 | [M<sub>2</sub>(OH)<sub>2</sub>L<sub>2</… | [M(OH)L]^2 <=> [M2(OH)2L2] | [M2(OH)2L2](aqueous), [M(OH)L](aqueous) | 3 |
+| beta_def_788 | [MHL]/[ML][H] | [ML] + [H] <=> [MHL] | [MHL](aqueous), [ML](aqueous), [H](aqueous) | 3 |
+| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 4 |
+| beta_def_966 | [ML]/[M(OH)L][H] | [M(OH)L] + [H] <=> [ML] + [H2O] | [ML](aqueous), [H2O](aqueous), [M(OH)L](aqueous), [H](aqueous) | 4 |
+
+**vlm_ids:** vlm_108639, vlm_108640, vlm_108641, vlm_108642, vlm_108643, … vlm_108650, vlm_108651, vlm_108652 (14 listed)
+
+**equilibrium_maps:** 2 preset reference network(s) *(clustered around room temperature & low ionic strength)*
+
+| network_id | nodes | edges | T range | I range |
+|------------|-------|-------|---------|---------|
+| ref_eq_net_5034 | 3 | 3 | 20~30 °C | -0.05~0.25 M |
+| ref_eq_net_5035 | 3 | 2 | 19~29 °C | 0.85~1.15 M |
+
+---
+
+### Step 28: `build_system_catalog`
+**Args:**
+```json
+{
+  "ligand_id": "ligand_6277",
+  "metal_id": "metal_62"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 1 pair(s), 2 species
+
+### Fe^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)
+**metal_id:** metal_62 | **ligand_id:** ligand_6277 | **ligand_def_HxL:** H4L  
+**entries:** 6 | **species:** 2 | **vlm_count:** 6
+
+| beta_definition_id | beta_definition_name | equation_str | phases | n_entries |
+|--------------------|----------------------|--------------|--------|----------|
+| beta_def_786 | [MHL]/[M][HL] | [M] + [HL] <=> [MHL] | [MHL](aqueous), [M](aqueous), [HL](aqueous) | 3 |
+| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 3 |
+
+**vlm_ids:** vlm_108566, vlm_108567, vlm_108568, vlm_108569, vlm_108570, vlm_108571
+
+**equilibrium_maps:** 1 preset reference network(s) *(clustered around room temperature & low ionic strength)*
+
+| network_id | nodes | edges | T range | I range |
+|------------|-------|-------|---------|---------|
+| ref_eq_net_5020 | 2 | 1 | 20~30 °C | -0.05~0.25 M |
+
+---
+
+### Step 29: `build_system_catalog`
+**Args:**
+```json
+{
+  "ligand_id": "ligand_6277",
+  "metal_id": "metal_112"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 1 pair(s), 4 species
+
+### Ni^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)
+**metal_id:** metal_112 | **ligand_id:** ligand_6277 | **ligand_def_HxL:** H4L  
+**entries:** 19 | **species:** 4 | **vlm_count:** 19
+
+| beta_definition_id | beta_definition_name | equation_str | phases | n_entries |
+|--------------------|----------------------|--------------|--------|----------|
+| beta_def_739 | [MH<sub>2</sub>L]/[MHL][H] | [MHL] + [H] <=> [MH2L] | [MH2L](aqueous), [MHL](aqueous), [H](aqueous) | 1 |
+| beta_def_788 | [MHL]/[ML][H] | [ML] + [H] <=> [MHL] | [MHL](aqueous), [ML](aqueous), [H](aqueous) | 4 |
+| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 8 |
+| beta_def_966 | [ML]/[M(OH)L][H] | [M(OH)L] + [H] <=> [ML] + [H2O] | [ML](aqueous), [H2O](aqueous), [M(OH)L](aqueous), [H](aqueous) | 6 |
+
+**vlm_ids:** vlm_108585, vlm_108586, vlm_108587, vlm_108588, vlm_108589, … vlm_108601, vlm_108602, vlm_108603 (19 listed)
+
+**equilibrium_maps:** 2 preset reference network(s) *(clustered around room temperature & low ionic strength)*
+
+| network_id | nodes | edges | T range | I range |
+|------------|-------|-------|---------|---------|
+| ref_eq_net_5023 | 3 | 3 | 20~30 °C | -0.05~0.25 M |
+| ref_eq_net_5024 | 3 | 3 | 19~29 °C | 0.85~1.15 M |
+
+---
+
+### Step 30: `build_system_catalog`
+**Args:**
+```json
+{
+  "ligand_id": "ligand_6277",
+  "metal_id": "metal_92"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 1 pair(s), 2 species
+
+### Mg^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)
+**metal_id:** metal_92 | **ligand_id:** ligand_6277 | **ligand_def_HxL:** H4L  
+**entries:** 18 | **species:** 2 | **vlm_count:** 18
+
+| beta_definition_id | beta_definition_name | equation_str | phases | n_entries |
+|--------------------|----------------------|--------------|--------|----------|
+| beta_def_788 | [MHL]/[ML][H] | [ML] + [H] <=> [MHL] | [MHL](aqueous), [ML](aqueous), [H](aqueous) | 2 |
+| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 16 |
+
+**vlm_ids:** vlm_108326, vlm_108327, vlm_108328, vlm_108329, vlm_108330, … vlm_108341, vlm_108342, vlm_108343 (18 listed)
+
+**equilibrium_maps:** 6 preset reference network(s) *(clustered around room temperature & low ionic strength)*
+
+| network_id | nodes | edges | T range | I range |
+|------------|-------|-------|---------|---------|
+| ref_eq_net_4932 | 2 | 1 | 20~30 °C | -0.05~0.25 M |
+| ref_eq_net_4933 | 1 | 0 | 31~41 °C | 0~0.3 M |
+| ref_eq_net_4934 | 2 | 1 | 19~29 °C | -0.05~0.25 M |
+| ref_eq_net_4935 | 1 | 0 | 31~41 °C | 0~0.3 M |
+| ref_eq_net_4936 | 1 | 0 | 19~29 °C | 0.35~0.65 M |
+| ref_eq_net_4937 | 1 | 0 | 19~29 °C | 0.85~1.15 M |
+
+---
+
+### Step 31: `build_system_catalog`
+**Args:**
+```json
+{
+  "ligand_id": "ligand_6277",
+  "metal_id": "metal_33"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 1 pair(s), 3 species
+
+### Co^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)
+**metal_id:** metal_33 | **ligand_id:** ligand_6277 | **ligand_def_HxL:** H4L  
+**entries:** 13 | **species:** 3 | **vlm_count:** 13
+
+| beta_definition_id | beta_definition_name | equation_str | phases | n_entries |
+|--------------------|----------------------|--------------|--------|----------|
+| beta_def_739 | [MH<sub>2</sub>L]/[MHL][H] | [MHL] + [H] <=> [MH2L] | [MH2L](aqueous), [MHL](aqueous), [H](aqueous) | 1 |
+| beta_def_788 | [MHL]/[ML][H] | [ML] + [H] <=> [MHL] | [MHL](aqueous), [ML](aqueous), [H](aqueous) | 4 |
+| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 8 |
+
+**vlm_ids:** vlm_108572, vlm_108573, vlm_108574, vlm_108575, vlm_108576, … vlm_108582, vlm_108583, vlm_108584 (13 listed)
+
+**equilibrium_maps:** 2 preset reference network(s) *(clustered around room temperature & low ionic strength)*
+
+| network_id | nodes | edges | T range | I range |
+|------------|-------|-------|---------|---------|
+| ref_eq_net_5021 | 2 | 1 | 20~30 °C | -0.05~0.25 M |
+| ref_eq_net_5022 | 2 | 1 | 19~29 °C | 0.85~1.15 M |
+
+---
+
+### Step 32: `build_system_catalog`
+**Args:**
+```json
+{
+  "ligand_id": "ligand_6277",
+  "metal_id": "metal_125"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 1 pair(s), 4 species
+
+### Pb^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)
+**metal_id:** metal_125 | **ligand_id:** ligand_6277 | **ligand_def_HxL:** H4L  
+**entries:** 8 | **species:** 4 | **vlm_count:** 8
+
+| beta_definition_id | beta_definition_name | equation_str | phases | n_entries |
+|--------------------|----------------------|--------------|--------|----------|
+| beta_def_739 | [MH<sub>2</sub>L]/[MHL][H] | [MHL] + [H] <=> [MH2L] | [MH2L](aqueous), [MHL](aqueous), [H](aqueous) | 1 |
+| beta_def_751 | [MH<sub>3</sub>L]/[MH<sub>2</sub>L][H] | [MH2L] + [H] <=> [MH3L] | [MH3L](aqueous), [MH2L](aqueous), [H](aqueous) | 1 |
+| beta_def_788 | [MHL]/[ML][H] | [ML] + [H] <=> [MHL] | [MHL](aqueous), [ML](aqueous), [H](aqueous) | 3 |
+| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 3 |
+
+**vlm_ids:** vlm_108762, vlm_108763, vlm_108764, vlm_108765, vlm_108766, vlm_108767, vlm_108768, vlm_108769
+
+**equilibrium_maps:** 3 preset reference network(s) *(clustered around room temperature & low ionic strength)*
+
+| network_id | nodes | edges | T range | I range |
+|------------|-------|-------|---------|---------|
+| ref_eq_net_5070 | 2 | 1 | 20~30 °C | -0.05~0.25 M |
+| ref_eq_net_5071 | 3 | 3 | 19~29 °C | 0.85~1.15 M |
+| ref_eq_net_5072 | 1 | 0 | 19~29 °C | 2.85~3.15 M |
+
+---
+
+### Step 33: `build_system_catalog`
+**Args:**
+```json
+{
+  "ligand_id": "ligand_6277",
+  "metal_id": "metal_5"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 1 pair(s), 4 species
+
+### Al^[3+] + Ethylenedinitrilotetraacetic acid (EDTA)
+**metal_id:** metal_5 | **ligand_id:** ligand_6277 | **ligand_def_HxL:** H4L  
+**entries:** 13 | **species:** 4 | **vlm_count:** 13
+
+| beta_definition_id | beta_definition_name | equation_str | phases | n_entries |
+|--------------------|----------------------|--------------|--------|----------|
+| beta_def_238 | [M(OH)L]/[M(OH)<sub>2</sub>L][H] | [M(OH)2L] + [H] <=> [M(OH)L] + [H2O] | [M(OH)L](aqueous), [H2O](aqueous), [M(OH)2L](aqueous), [H](aqueous) | 2 |
+| beta_def_788 | [MHL]/[ML][H] | [ML] + [H] <=> [MHL] | [MHL](aqueous), [ML](aqueous), [H](aqueous) | 4 |
+| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 3 |
+| beta_def_966 | [ML]/[M(OH)L][H] | [M(OH)L] + [H] <=> [ML] + [H2O] | [ML](aqueous), [H2O](aqueous), [M(OH)L](aqueous), [H](aqueous) | 4 |
+
+**vlm_ids:** vlm_108770, vlm_108771, vlm_108772, vlm_108773, vlm_108774, … vlm_108780, vlm_108781, vlm_108782 (13 listed)
+
+**equilibrium_maps:** 3 preset reference network(s) *(clustered around room temperature & low ionic strength)*
+
+| network_id | nodes | edges | T range | I range |
+|------------|-------|-------|---------|---------|
+| ref_eq_net_5073 | 4 | 5 | 20~30 °C | -0.05~0.25 M |
+| ref_eq_net_5074 | 2 | 1 | 19~29 °C | 0.35~0.65 M |
+| ref_eq_net_5075 | 1 | 0 | 19~29 °C | 0.85~1.15 M |
+
+---
+
+### Step 34: `search_stability`
+**Args:**
+```json
+{
+  "where": "c.ligand_id = ligand_6277 AND c.beta_definition_id = beta_def_812 AND s.temperature_c BETWEEN 20 AND 30 AND s.ionic_strength_mol_l BETWEEN 0 AND 0.2",
+  "order_by": "s.constant_value DESC",
+  "limit": 50
+}
+```
+
+[PHASE ERROR] Tool 'search_stability' is not available yet. You must call 0_plan_search_strategy first (PHASE 2) before using the execution tools.
+
+---

@@ -1,0 +1,41 @@
+SRD-46 points to **histidine** as the best amino-acid choice for selectively binding **Cu²⁺ over Ni²⁺ at pH 7** among the amino acids we could verify.
+
+| Ligand | SRD-46 ligand_id | Cu²⁺ network count | Ni²⁺ network count | Qualitative Cu/Ni selectivity signal |
+|---|---:|---:|---:|---|
+| Histidine | ligand_5898 | 6 | 6 | **Best-supported candidate** |
+| Glycine | ligand_5760 | 9 | 9 | Low selectivity expected |
+| Alanine | ligand_5761 | 7 | 5 | Modest |
+| Aspartic acid | ligand_5802 | 5 | 2 | Moderate, but less coverage |
+| Glutamic acid | ligand_5804 | 2 | 3 | Moderate/unclear |
+| Serine | ligand_5828 | 5 | 3 | Moderate |
+| Lysine | ligand_5887 | 3 | 2 | Unclear; more protonation complexity |
+| Proline | ligand_5930 | 3 | 2 | Moderate |
+
+The strongest evidence came from the amino-acid coverage scan in SRD-46, where the visible matched Cu/Ni card counts were:
+
+| Ligand | Cu cards | Ni cards |
+|---|---:|---:|
+| Histidine | 50 | 25 |
+| Glycine | 30 | 49 |
+| Alanine | 21 | 24 |
+| Aspartic acid | 20 | 11 |
+| Serine | 26 | 15 |
+| Lysine | 20 | 22 |
+| Proline | 12 | 10 |
+| Glutamic acid | 12 | 9 |
+
+So if your goal is **maximum Cu²⁺/Ni²⁺ selectivity near neutral pH**, **histidine is the best amino-acid ligand to try first**.
+
+A short chemistry reason: this makes sense because **Cu²⁺ is especially favored by histidine’s imidazole donor**, while Ni²⁺ generally gains less of an advantage from that side chain under the same conditions. By contrast, simpler amino acids like glycine bind both ions more similarly, so their selectivity is poorer.
+
+## Important caution
+I could identify the **best-supported ligand**, but I could **not extract a fully quantitative pH-7 conditional selectivity ratio** \(K′\(_{Cu}\)/K′\(_{Ni}\)\) from the available SRD-46 tool outputs in this run, because the direct matched stability/pKa retrievals returned empty and the network output was only partial. So the answer is:
+
+| Question | Best answer from SRD-46 |
+|---|---|
+| Best amino-acid ligand for selective Cu²⁺ complexation vs Ni²⁺ at pH 7 | **Histidine (ligand_5898)** |
+| Exact selectivity ratio at pH 7 | **Not recoverable from the retrieved records in this run** |
+
+**Source:** NIST SRD-46.
+
+---

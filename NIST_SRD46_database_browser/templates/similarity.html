@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Similarity — SRD-46{% endblock %}
+
+{% block content %}
+<h3 class="mb-3"><i class="bi bi-intersect"></i> Ligand Similarity</h3>
+
+<form class="row g-2 mb-3" method="get">
+  <div class="col-md-4">
+    <input class="form-control form-control-sm" name="q" placeholder="Ligand name…"
+           value="{{ q }}">
+  </div>
+  <div class="col-md-2">
+    <input class="form-control form-control-sm" name="ligand_id" placeholder="Ligand ID"
+           value="{{ ligand_id }}">
+  </div>
+  <div class="col-md-2">
+    <input class="form-control form-control-sm" name="top_k" placeholder="Top K (default 20)"
+           value="{{ top_k }}" type="number" min="1" max="100">
+  </div>
+  <div class="col-auto">
+    <button class="btn btn-sm btn-primary" type="submit">Search</button>
+    {% if has_search %}<a class="btn btn-sm btn-outline-secondary" href="{{ url_for('sim.sim_search') }}">Clear</a>{% endif %}
+  </div>
+</form>
+
+{% if has_search %}
+{% if ligand_name %}
+<p class="text-muted small">Top {{ results|length }} similar ligands to <strong>{{ ligand_name }}</strong></p>
+{% endif %}
+
+{% if results %}
+<div class="data-scroll">
+  <table class="table table-sm table-hover data-table">
+    <thead>
+      <tr><th>#</th><th>Ligand</th><th>Formula</th><th>Tanimoto (Morgan)</th><th>Tanimoto (MACCS)</th></tr>
+    </thead>
+    <tbody>
+    {% for r in results %}
+      <tr>
+        <td class="row-num">{{ loop.index }}</td>
+        <td><a href="{{ url_for('ligands.ligand_detail', ligand_id=r.ligand_id) }}">{{ r.ligand_name_SRD }}</a></td>
+        <td class="formula">{{ r.formula or '' }}</td>
+        <td>
+          <div class="sim-bar-bg">
+            <div class="sim-bar-fill" style="width: {{ (r.tanimoto_morgan * 100)|round(1) }}%"></div>
+          </div>
+          <span class="sim-score">{{ "%.3f"|format(r.tanimoto_morgan) }}</span>
+        </td>
+        <td>
+          <div class="sim-bar-bg">
+            <div class="sim-bar-fill" style="width: {{ (r.tanimoto_maccs * 100)|round(1) }}%"></div>
+          </div>
+          <span class="sim-score">{{ "%.3f"|format(r.tanimoto_maccs) }}</span>
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<div class="alert alert-info">No similarity data found for this ligand.</div>
+{% endif %}
+
+{% else %}
+<div class="alert alert-secondary">Enter a ligand name or ID to find structurally similar ligands.</div>
+{% endif %}
+{% endblock %}

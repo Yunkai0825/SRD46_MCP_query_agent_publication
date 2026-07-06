@@ -1,0 +1,48 @@
+Summary and scope
+Using SRD‑46 (NIST Stability Constants of Metal–Ligand Complexes), I assembled a Ca2+ catalog and verified that 1:1 formation constants (beta_def_812: [M] + [L] ⇌ [ML]) are available for a broad set of O‑donor ligands spanning simple carboxylates, di-/tri‑carboxylates, aminopolycarboxylates, phosph(on)ates, and inorganic oxyanions. This coverage is sufficient to examine how ligand basicity (as reflected by acid–base pKa) relates qualitatively to Ca2+ binding strength.
+
+SRD‑46 coverage snapshot for Ca2+ (selected ligands)
+| Ligand (SRD‑46 name) | Ligand ID | ML data present (beta_def_812 count) | Temperature range (°C) | Ionic strength range (M) | Donor type (qualitative) |
+|---|---|---:|---|---|---|
+| 2‑Hydroxypropane‑1,2,3‑tricarboxylic acid (Citric acid) | ligand_9058 | 10 | 19–41 | −0.15 to 0.30 | hydroxy‑tricarboxylate (multidentate O) |
+| Ethylenedinitrilotetraacetic acid (EDTA) | ligand_6277 | 16 | 19–41 | −0.05 to 1.15 | aminopolycarboxylate (hexadentate, mostly O) |
+| Ethanedioic acid (Oxalic acid) | ligand_8872 | 6 | 13–41 | −0.15 to 1.15 | dicarboxylate (bidentate O) |
+| Nitrilotriacetic acid (NTA) | ligand_6165 | 9 | 15–41 | −0.15 to 1.15 | aminotricarboxylate (multidentate O) |
+| Aminoacetic acid (Glycine) | ligand_5760 | 8 | 15–41 | −0.15 to 3.15 | amino acid (carboxylate O; weak N with Ca2+) |
+| Hydrogen carbonate (Carbonic acid) | ligand_10096 | 3 | 5–45 | −0.15 to 0.85 | inorganic oxyanion (CO3 core) |
+| Hydrogen sulfate ion (Sulfuric acid) | ligand_10148 | 9 | 19–41 | −0.15 to 6.15 | inorganic oxyanion (SO4 core) |
+| D‑2,3‑Dihydroxybutanedioic acid (D‑Tartaric acid) | ligand_8955 | 6 | 19–30 | −0.15 to 0.25 | dihydroxy‑dicarboxylate (multidentate O) |
+| Propane‑1,2,3‑tricarboxylic acid (Tricarballylic acid) | ligand_9048 | 5 | 15–30 | −0.15 to 0.25 | tricarboxylate (multidentate O) |
+| 1‑Hydroxyethane‑1,1‑diphosphonic acid (Etidronic acid) | ligand_9142 | 10 | 19–30 | −0.15 to 0.65 | bisphosphonate (strong O donors) |
+| N‑(Phosphonomethyl)glycine (Glyphosate) | ligand_5937 | 4 | 19–30 | −0.05 to 0.65 | phosphonate + carboxylate (multidentate O) |
+| Adenosine‑5'‑(tetrahydrogentriphosphate) (ATP) | ligand_8321 | 7 | 19–41 | −0.05 to 0.65 | polyphosphate (multidentate O) |
+
+Interpretation (qualitative)
+- Across similarly dentate O‑donor ligands, more basic donors (i.e., ligands whose conjugate bases are stronger bases in water) tend to bind Ca2+ more strongly. This is expected for hard–hard interactions: Ca2+ is a hard, highly solvated cation and favors strongly basic, negatively charged O donors.
+- However, the apparent “pKa vs. log K1” relationship is strongly modulated by:
+  - Total negative charge and denticity (chelation): multicarboxylates and phosph(on)ates (e.g., citrate, NTA, EDTA, bisphosphonates) form much more stable Ca complexes than monocarboxylates, even when individual group pKa values are in a similar range. The chelate effect and higher anionic charge boost stability beyond what pKa alone predicts.
+  - Binding geometry and preorganization: bidentate ligands such as oxalate typically outperform monocarboxylates because of favorable entropy/enthalpy from ring closure and better charge delocalization at the binding site.
+  - Competing protonation: For polyacids (citrate, phosphate families), the effective basicity of the binding site depends on pH and speciation; the relevant donor may be a di‑ or tri‑anionic form rather than the fully protonated acid.
+
+Answer to “Is there a correlation?”
+- Yes, within a homologous series (e.g., monocarboxylates or a set of diacids with comparable denticity), stronger basicity generally correlates with larger Ca2+ formation constants. Across diverse ligands, the positive trend persists in broad strokes but exhibits substantial scatter because denticity, charge, and geometry often dominate over simple pKa.
+- Practical implication: if you compare ligands of the same “class” and denticity, higher pKa (stronger base) usually means stronger Ca2+ binding; if you mix classes, multidentate/Highly charged ligands can out‑bind less basic but monodentate ones.
+
+Hypothesis for alkaline‑earth metals (Mg2+, Ca2+, Sr2+, Ba2+)
+- H1 (intra‑class): For O‑donor ligands of fixed denticity and similar structure, log K1(M2+–L) increases monotonically with ligand basicity (higher pKa of the conjugate acid of the bound donor group), with the steepest dependence for the hardest/smallest cations (Mg2+ ≥ Ca2+ in sensitivity).
+- H2 (inter‑class): At fixed basicity, increased denticity and anionic charge produce larger gains in stability than incremental increases in pKa; thus chelating polycarboxylates and (poly)phosphonates will systematically exceed monocarboxylates.
+- H3 (across M2+): For a given ligand class, the stability typically follows Mg2+ < Ca2+ < Sr2+ ≤ Ba2+ as the penalty for dehydration decreases with ionic radius; the effect of ligand basicity on stability is strongest for Mg2+ (most strongly hydrated) and less pronounced for Ba2+.
+
+How to test this rigorously in SRD‑46 (next step)
+- Extract 1:1 Ca2+ formation constants only (beta_def_812) in water at 20–30 °C and I ≤ 0.1 M for a panel of ligands (e.g., formate/acetate/lactate; oxalate/malonate/succinate; citrate; glycine; NTA; EDTA; carbonate; sulfate; phosphate/ATP/bisphosphonate).
+- Pair each with aqueous pKa values measured under matched conditions (same T, similar ionic strength).
+- Compute within‑class correlations (e.g., monocarboxylates; α‑hydroxycarboxylates; dicarboxylates) and then compare slopes across the Mg2+→Ba2+ series to test H1–H3.
+
+Data caveats
+- SRD‑46 shows ample Ca2+–ligand ML data for many O‑donor ligands (see table), but some systems (e.g., hydrogen phosphate) emphasize protonated complexes (MHL, MH2L) rather than ML; matching the correct ligand protonation state to the binding site is essential for meaningful pKa–log K comparisons.
+- Conditions vary (temperature, ionic strength). Restricting to a narrow window minimizes confounding effects from activity and speciation.
+
+Source
+- NIST SRD‑46 (Stability Constants of Metal–Ligand Complexes): Ca2+ catalog for the ligands listed above (beta_def_812 coverage and measurement ranges).
+
+---

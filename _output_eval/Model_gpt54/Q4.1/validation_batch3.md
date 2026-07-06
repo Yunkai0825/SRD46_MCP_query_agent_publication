@@ -1,0 +1,12 @@
+# Q4.1 - Validation (batch 3)
+
+**6 of 47 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 3 | exact_value | \| DMF \| neutral amide O donor \| ~0 to 1 \| ~1 to 2.5 \| low–moderate \| Carbonyl O is a better hard donor than ether O or nitrile N, but neutrality keeps binding far below carboxylates \| | ...Rationale \| \|---\|---\|---:\|---:\|---\|---\| \| DMF \| neutral amide O donor \| ~0 to 1 \| ~1 to 2.5 \| low–moderate \| Carbonyl O is a better hard donor than ether O or nitrile N, but neutrality keeps binding far below carboxylates \| \| Acetonitrile \| neutral nitrile N dono... |
+| 2 | 3 | exact_value | \| Acetonitrile \| neutral nitrile N donor \| ~0 or weaker \| ~0.5 to 1.5 \| low \| Fe is not expected to bind MeCN strongly in water; Fe(III) especially prefers hard O donors over nitrile N \| | ... keeps binding far below carboxylates \| \| Acetonitrile \| neutral nitrile N donor \| ~0 or weaker \| ~0.5 to 1.5 \| low \| Fe is not expected to bind MeCN strongly in water; Fe(III) especially prefers hard O donors over nitrile N \| \| THF \| neutral ether O donor \| ~0 or w... |
+| 3 | 3 | exact_value | \| THF \| neutral ether O donor \| ~0 or weaker \| ~0.5 to 1.5 \| low \| Ether O is weakly donating and neutral; expected to be among the weakest of the set \| | ... prefers hard O donors over nitrile N \| \| THF \| neutral ether O donor \| ~0 or weaker \| ~0.5 to 1.5 \| low \| Ether O is weakly donating and neutral; expected to be among the weakest of the set \| \| Ethylene glycol \| neutral bidentate O... |
+| 4 | 3 | exact_value | \| Ethylene glycol \| neutral bidentate O,O donor \| ~0.5 to 1.5 \| ~1.5 to 3 \| moderate \| Chelation helps, but neutral EG should remain weaker than glycolate (Fe(II) 1.33; Fe(III) 2.9) and much weaker than diglycolate \| | ...ed to be among the weakest of the set \| \| Ethylene glycol \| neutral bidentate O,O donor \| ~0.5 to 1.5 \| ~1.5 to 3 \| moderate \| Chelation helps, but neutral EG should remain weaker than glycolate (Fe(II) 1.33; Fe(III) 2.9) and much weaker than diglycolate \|... |
+| 5 | 4 | comparison | \| Fe(II) \| ethylene glycol > DMF > THF ≈ acetonitrile \| | ...l \| Expected affinity order \| \|---\|---\| \| Fe(II) \| ethylene glycol > DMF > THF ≈ acetonitrile \| \| Fe(III) \| ethylene glycol ≳ DMF > THF... |
+| 6 | 4 | comparison | \| Fe(III) \| ethylene glycol ≳ DMF > THF ≈ acetonitrile \| | ...ene glycol > DMF > THF ≈ acetonitrile \| \| Fe(III) \| ethylene glycol ≳ DMF > THF ≈ acetonitrile \|... |

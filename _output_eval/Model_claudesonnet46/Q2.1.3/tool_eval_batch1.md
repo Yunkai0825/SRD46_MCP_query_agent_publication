@@ -1,0 +1,258 @@
+# Q2.1.3 — Tool Results (batch 1)
+
+### Step 2: `search_ligands`
+**Args:**
+```json
+{
+  "name": "glycine",
+  "limit": 5
+}
+```
+
+[summary]
+## search_ligands — 5 result(s)
+
+**stats:** 170 SQL matches · showing 5 · limit 5
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | 428 | `NCC(=O)O` | (-inf, H2L, 2.33, HL, 9.57, L, +inf) |
+| ligand_5776 | DL-Aminophenylacetic acid (Phenylglycine) | HL | Amino Acids | 12 | `NC(C(=O)O)c1ccccc1` | (-inf, H2L, -1.9, HL, 8.92, L, +inf) |
+| ligand_5786 | DL-Amino-4-sulfophenylacet… (4-Sulfophenylglycine) | H2L | Amino Acids | 12 | `NC(C(=O)O)c1ccc(S(=O)(=O)O)cc1` | (-inf, H2L, -1.8, HL, 8.66, L, +inf) |
+| ligand_5838 | DL-Amino-4-Methoxyphenyl… (4-Methoxyphenylglycine) | HL | Amino Acids | 12 | `COc1ccc(C(N)C(=O)O)cc1` | (-inf, H2L, 2, HL, 9.07, L, +inf) |
+| ligand_5925 | N-Methylglycine (Sarcosine) | HL | Amino Acids | 39 | `CNCC(=O)O` | (-inf, H2L, 2.18, HL, 9.98, L, +inf) |
+
+### Functional groups across all SQL matches (129 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 114 | 88% |
+| amide | 96 | 74% |
+| primary_amine | 78 | 60% |
+| aromatic_ring | 26 | 20% |
+| hydroxyl | 25 | 19% |
+| secondary_amine | 22 | 17% |
+| tertiary_amine | 14 | 11% |
+| ester | 9 | 7% |
+| thiol | 9 | 7% |
+| phenol | 7 | 5% |
+| imine | 5 | 4% |
+| phosphonate | 3 | 2% |
+| thioether | 3 | 2% |
+| phosphate | 2 | 2% |
+| pyridine | 2 | 2% |
+| sulfonate | 2 | 2% |
+| ether | 1 | 1% |
+
+---
+
+### Step 3: `search_ligands`
+**Args:**
+```json
+{
+  "name": "alanine",
+  "limit": 5
+}
+```
+
+[summary]
+## search_ligands — 5 result(s)
+
+**stats:** 130 SQL matches · showing 5 · limit 5
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | Amino Acids | 159 | `C[C@H](N)C(=O)O` | (-inf, H2L, 2.33, HL, 9.71, L, +inf) |
+| ligand_5777 | L-2-Amino-3-phenylpropanoic acid (Phenylalanine) | HL | Amino Acids | 138 | `N[C@@H](Cc1ccccc1)C(=O)O` | (-inf, H2L, 2.18, HL, 9.09, L, +inf) |
+| ligand_5778 | DL-2-Amino-3-chloropropanoic ac… (3-Chloroalanine) | HL | Amino Acids | 10 | `N[C@@H](CCl)C(=O)O` | (-inf, H2L, 2, HL, 8.18, L, +inf) |
+| ligand_5780 | DL-2-Amino-3-(2-fluorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 6 | `N[C@@H](Cc1ccccc1F)C(=O)O` | (-inf, H2L, 2.12, HL, 9.01, L, +inf) |
+| ligand_5781 | DL-2-Amino-3-(3-fluorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 6 | `N[C@@H](Cc1cccc(F)c1)C(=O)O` | (-inf, H2L, 2.1, HL, 8.98, L, +inf) |
+
+### Functional groups across all SQL matches (106 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 96 | 91% |
+| primary_amine | 93 | 88% |
+| amide | 81 | 76% |
+| aromatic_ring | 43 | 41% |
+| hydroxyl | 9 | 8% |
+| secondary_amine | 8 | 8% |
+| ester | 7 | 7% |
+| halide | 7 | 7% |
+| phenol | 5 | 5% |
+| thioether | 3 | 3% |
+| pyridine | 2 | 2% |
+| thiol | 2 | 2% |
+| ether | 1 | 1% |
+| tertiary_amine | 1 | 1% |
+
+---
+
+### Step 4: `search_pka_values`
+**Args:**
+```json
+{
+  "where": "lc.ligand_id = 'ligand_5760'",
+  "order_by": "p.temperature_c ASC, p.ionic_strength_mol_l ASC",
+  "limit": 30
+}
+```
+
+[PHASE ERROR] Tool 'search_pka_values' is not available yet. Complete PHASE 1 first: call build_system_catalog, search_metals, then call 0_plan_search_strategy.
+
+---
+
+### Step 5: `search_pka_values`
+**Args:**
+```json
+{
+  "where": "lc.ligand_id = 'ligand_5761'",
+  "order_by": "p.temperature_c ASC, p.ionic_strength_mol_l ASC",
+  "limit": 30
+}
+```
+
+[PHASE ERROR] Tool 'search_pka_values' is not available yet. Complete PHASE 1 first: call build_system_catalog, search_metals, then call 0_plan_search_strategy.
+
+---
+
+### Step 6: `build_system_catalog`
+**Args:**
+```json
+{
+  "ligand_id": "ligand_5760"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 20 pair(s), 67 species *(ultra-compact)*
+
+### Equation legend
+
+| beta_def_id | equation | note |
+|-------------|----------|------|
+| beta_def_32 | [HL] + [H] <=> [H2L] |  |
+| beta_def_79 | [L] + [H] <=> [HL] |  |
+| beta_def_194 | [M] + [HL]^2 <=> [M(HL)2] |  |
+| beta_def_204 | [MHL2] + [H] <=> [M(HL)2] |  |
+| beta_def_208 | [M] + [HL]^3 <=> [M(HL)3] |  |
+| beta_def_238 | [M(OH)2L] + [H] <=> [M(OH)L] + [H2O] |  |
+| beta_def_427 | [M(OH)L]^2 <=> [M2(OH)2L2] |  |
+| beta_def_713 | [MCl2] + [L] <=> [MClL] + [Cl] |  |
+| beta_def_779 | [M] + [HL] <=> [MHL] |  |
+| beta_def_792 | [ML2] + [H] <=> [MHL2] |  |
+| beta_def_812 | [M] + [L] <=> [ML] |  |
+| beta_def_840 | [M] + [L]^2 <=> [ML2] |  |
+| beta_def_845 | [MCl2] + [L]^2 <=> [ML2] + [Cl]^2 |  |
+| beta_def_872 | [M] + [L]^3 <=> [ML3] |  |
+| beta_def_966 | [M(OH)L] + [H] <=> [ML] + [H2O] |  |
+| beta_def_984 | [M(OH)L2] + [H] <=> [ML2] + [H2O] |  |
+
+*(all species aqueous)*
+
+**1. Ni^[2+] + Aminoacetic acid (Glycine)** (metal_112 + ligand_5760) — ligand_def_HxL: HL | 49 ent, 3 sp, 49 vlms (vlm_93798…vlm_93846)
+   - species: beta_def_812(17) beta_def_840(17) beta_def_872(15)
+   - eq:9 nets T:5~45°C I:-0.15~3.15M max 3n/3e
+**2. H^[+] + Aminoacetic acid (Glycine)** (metal_68 + ligand_5760) — ligand_def_HxL: HL | 48 ent, 2 sp, 48 vlms (vlm_93606…vlm_93653)
+   - species: beta_def_32(27) beta_def_79(21)
+   - eq:15 nets T:5~45°C I:-0.15~3.15M max 2n/1e
+**3. Zn^[2+] + Aminoacetic acid (Glycine)** (metal_208 + ligand_5760) — ligand_def_HxL: HL | 37 ent, 4 sp, 37 vlms (vlm_93924…vlm_93960)
+   - species: beta_def_812(12) beta_def_840(13) beta_def_872(11) beta_def_966(1)
+   - eq:7 nets T:5~45°C I:-0.15~1.15M max 4n/4e
+**4. Co^[2+] + Aminoacetic acid (Glycine)** (metal_33 + ligand_5760) — ligand_def_HxL: HL | 37 ent, 4 sp, 37 vlms (vlm_93761…vlm_93797)
+   - species: beta_def_812(12) beta_def_840(12) beta_def_872(12) beta_def_966(1)
+   - eq:7 nets T:5~45°C I:-0.15~1.15M max 4n/4e
+**5. Cd^[2+] + Aminoacetic acid (Glycine)** (metal_26 + ligand_5760) — ligand_def_HxL: HL | 32 ent, 3 sp, 32 vlms (vlm_93961…vlm_93992)
+   - species: beta_def_812(11) beta_def_840(11) beta_def_872(10)
+   - eq:7 nets T:5~45°C I:-0.15~1.15M max 3n/3e
+**6. Cu^[2+] + Aminoacetic acid (Glycine)** (metal_41 + ligand_5760) — ligand_def_HxL: HL | 30 ent, 2 sp, 30 vlms (vlm_93847…vlm_93876)
+   - species: beta_def_812(15) beta_def_840(15)
+   - eq:9 nets T:5~45°C I:-0.15~2.65M max 2n/1e
+**7. Pb^[2+] + Aminoacetic acid (Glycine)** (metal_125 + ligand_5760) — ligand_def_HxL: HL | 25 ent, 8 sp, 25 vlms (vlm_94001…vlm_94025)
+   - species: beta_def_194(2) beta_def_204(1) beta_def_208(1) beta_def_779(5) beta_def_792(1) beta_def_812(8) beta_def_840(4) beta_def_966(3)
+   - eq:4 nets T:19~30°C I:-0.05~3.15M max 6n/11e
+**8. Mn^[2+] + Aminoacetic acid (Glycine)** (metal_94 + ligand_5760) — ligand_def_HxL: HL | 14 ent, 2 sp, 14 vlms (vlm_93733…vlm_93746)
+   - species: beta_def_812(11) beta_def_840(3)
+   - eq:6 nets T:5~45°C I:-0.15~0.65M max 2n/1e
+**9. Fe^[2+] + Aminoacetic acid (Glycine)** (metal_62 + ligand_5760) — ligand_def_HxL: HL | 14 ent, 3 sp, 14 vlms (vlm_93747…vlm_93760)
+   - species: beta_def_812(11) beta_def_840(2) beta_def_872(1)
+   - eq:7 nets T:5~45°C I:-0.15~3.15M max 3n/3e
+**10. Ag^[+] + Aminoacetic acid (Glycine)** (metal_2 + ligand_5760) — ligand_def_HxL: HL | 14 ent, 4 sp, 14 vlms (vlm_93900…vlm_93913)
+   - species: beta_def_779(1) beta_def_812(6) beta_def_840(6) beta_def_966(1)
+   - eq:4 nets T:19~30°C I:-0.15~3.15M max 4n/4e
+**11. VO^[2+] + Aminoacetic acid (Glycine)** (metal_201 + ligand_5760) — ligand_def_HxL: HL | 13 ent, 9 sp, 13 vlms (vlm_93886…vlm_93898)
+   - species: beta_def_194(3) beta_def_238(1) beta_def_427(1) beta_def_779(3) beta_def_792(1) beta_def_812(1) beta_def_840(1) beta_def_966(1) beta_def_984(1)
+   - eq:1 nets T:16.5~31.5°C I:0.775~1.225M max 9n/17e
+**12. Ca^[2+] + Aminoacetic acid (Glycine)** (metal_25 + ligand_5760) — ligand_def_HxL: HL | 12 ent, 2 sp, 12 vlms (vlm_93666…vlm_93677)
+   - species: beta_def_779(4) beta_def_812(8)
+   - eq:6 nets T:15~41°C I:-0.15~3.15M max 2n/1e
+**13. Th^[4+] + Aminoacetic acid (Glycine)** (metal_185 + ligand_5760) — ligand_def_HxL: HL | 9 ent, 3 sp, 9 vlms (vlm_93712…vlm_93720)
+   - species: beta_def_194(3) beta_def_208(3) beta_def_779(3)
+   - eq:1 nets T:16.5~31.5°C I:0.775~1.225M max 3n/3e
+**14. Mg^[2+] + Aminoacetic acid (Glycine)** (metal_92 + ligand_5760) — ligand_def_HxL: HL | 9 ent, 3 sp, 9 vlms (vlm_93657…vlm_93665)
+   - species: beta_def_779(1) beta_def_812(7) beta_def_840(1)
+   - eq:5 nets T:15~30°C I:-0.15~3.15M max 2n/1e
+**15. Hg^[2+] + Aminoacetic acid (Glycine)** (metal_71 + ligand_5760) — ligand_def_HxL: HL | 8 ent, 4 sp, 8 vlms (vlm_93993…vlm_94000)
+   - species: beta_def_713(3) beta_def_812(1) beta_def_840(1) beta_def_845(3)
+   - eq:2 nets T:15~30°C I:-0.05~0.65M max 2n/1e
+**16. UO_[2]^[2+] + Aminoacetic acid (Glycine)** (metal_195 + ligand_5760) — ligand_def_HxL: HL | 7 ent, 2 sp, 7 vlms (vlm_93724…vlm_93730)
+   - species: beta_def_194(3) beta_def_779(4)
+   - eq:2 nets T:19~30°C I:-0.05~1.15M max 2n/1e
+**17. Fe^[3+] + Aminoacetic acid (Glycine)** (metal_61 + ligand_5760) — ligand_def_HxL: HL | 6 ent, 3 sp, 6 vlms (vlm_93880…vlm_93885)
+   - species: beta_def_194(1) beta_def_779(3) beta_def_812(2)
+   - eq:3 nets T:16.5~31.5°C I:0.275~3.225M max 3n/3e
+**18. Eu^[3+] + Aminoacetic acid (Glycine)** (metal_58 + ligand_5760) — ligand_def_HxL: HL | 4 ent, 2 sp, 4 vlms (vlm_93694…vlm_93697)
+   - species: beta_def_779(3) beta_def_812(1)
+   - eq:2 nets T:19~30°C I:-0.05~2.15M max 1n/0e
+**19. Ti^[3+] + Aminoacetic acid (Glycine)** (metal_187 + ligand_5760) — ligand_def_HxL: HL | 3 ent, 3 sp, 3 vlms (vlm_93877, vlm_93878, vlm_93879)
+   - species: beta_def_779(1) beta_def_812(1) beta_def_966(1)
+   - eq:1 nets T:16.5~31.5°C I:0.775~1.225M max 3n/2e
+**20. Pm^[3+] + Aminoacetic acid (Glycine)** (metal_137 + ligand_5760) — ligand_def_HxL: HL | 3 ent, 1 sp, 3 vlms (vlm_93690, vlm_93691, vlm_93692)
+   - species: beta_def_779(3)
+   - eq:1 nets T:12.5~27.5°C I:1.775~2.225M max 1n/0e
+
+---
+
+### Step 8: `search_metals`
+**Args:**
+```json
+{
+  "symbol": "H",
+  "limit": 3
+}
+```
+
+[summary]
+## search_metals — 3 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_20 | BuHg^[+] | B | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_23 | BuNH_[3]^[+] | B | 1 |  | *** | *** | beta_totN_1 | ligand_totN_2 | vlm_totN_2 |
+| metal_24 | C(NH_[2])_[3]^[+] | C | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+
+---
+
+### Step 9: `search_metals`
+**Args:**
+```json
+{
+  "name": "H",
+  "limit": 5
+}
+```
+
+[summary]
+## search_metals — 5 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_20 | BuHg^[+] | B | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_23 | BuNH_[3]^[+] | B | 1 |  | *** | *** | beta_totN_1 | ligand_totN_2 | vlm_totN_2 |
+| metal_24 | C(NH_[2])_[3]^[+] | C | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_45 | Et_[2]NH_[2]^[+] | E2NH2 | 1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_48 | Et_[3]NH^[+] | E3NH | 1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+
+---

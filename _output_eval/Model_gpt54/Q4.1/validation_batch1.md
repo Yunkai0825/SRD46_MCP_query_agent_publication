@@ -1,0 +1,18 @@
+# Q4.1 - Validation (batch 1)
+
+**12 of 55 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 1 | exact_value | \| DMF \| neutral O-donor amide \| 0 to 1 \| 1 to 3 \| low \| Carbonyl O can bind, but neutral amides are weak in water; Fe(III) should exceed Fe(II) because of higher charge density \| | ...Rationale \| \|---\|---\|---:\|---:\|---\|---\| \| DMF \| neutral O-donor amide \| 0 to 1 \| 1 to 3 \| low \| Carbonyl O can bind, but neutral amides are weak in water; Fe(III) should exceed Fe(II) because of higher charge density \| \| Acetonitrile \| neutral N-donor nitril... |
+| 2 | 1 | exact_value | \| Acetonitrile \| neutral N-donor nitrile \| ≤0 to 0.5 \| 0 to 1.5 \| low \| Nitriles are weak donors to hydrated Fe ions; aqueous competition from water is strong \| | ...(II) because of higher charge density \| \| Acetonitrile \| neutral N-donor nitrile \| ≤0 to 0.5 \| 0 to 1.5 \| low \| Nitriles are weak donors to hydrated Fe ions; aqueous competition from water is strong \| \| THF \| neutral ether O-donor \| ≤0 \| 0 ... |
+| 3 | 1 | exact_value | \| THF \| neutral ether O-donor \| ≤0 \| 0 to 1 \| very low \| THF is a weak ether donor and especially poor competitor against hydration in water \| | ...eous competition from water is strong \| \| THF \| neutral ether O-donor \| ≤0 \| 0 to 1 \| very low \| THF is a weak ether donor and especially poor competitor against hydration in water \| \| Ethylene glycol (neutral) \| neutral O... |
+| 4 | 1 | exact_value | \| Ethylene glycol (neutral) \| neutral O,O donor diol \| 0.5 to 2 \| 1 to 4 \| medium-low \| Bidentate chelation helps relative to DMF/THF/MeCN, but neutral glycol is still much weaker than deprotonated glycolate/diolate forms \| | ...competitor against hydration in water \| \| Ethylene glycol (neutral) \| neutral O,O donor diol \| 0.5 to 2 \| 1 to 4 \| medium-low \| Bidentate chelation helps relative to DMF/THF/MeCN, but neutral glycol is still much weaker than deprotonated glycolate/diolate forms \|... |
+| 5 | 2 | comparison | \| 1 \| ethylene glycol \| strongest of the four \| | ...ected relative strength \| \|---\|---\|---\| \| 1 \| ethylene glycol \| strongest of the four \| \| 2 \| DMF \| weak \| \| 3 \| acetonitrile \|... |
+| 6 | 2 | comparison | \| 2 \| DMF \| weak \| | ...hylene glycol \| strongest of the four \| \| 2 \| DMF \| weak \| \| 3 \| acetonitrile \| very weak \| \| 4 \| ... |
+| 7 | 2 | comparison | \| 3 \| acetonitrile \| very weak \| | ...ongest of the four \| \| 2 \| DMF \| weak \| \| 3 \| acetonitrile \| very weak \| \| 4 \| THF \| weakest or tied weakest \|  ... |
+| 8 | 2 | comparison | \| 4 \| THF \| weakest or tied weakest \| | ...weak \| \| 3 \| acetonitrile \| very weak \| \| 4 \| THF \| weakest or tied weakest \|  For **Fe(III)**: \| Rank \| Ligand \| Exp... |
+| 9 | 2 | comparison | \| 1 \| ethylene glycol \| strongest, especially if partial deprotonation becomes possible \| | ...ected relative strength \| \|---\|---\|---\| \| 1 \| ethylene glycol \| strongest, especially if partial deprotonation becomes possible \| \| 2 \| DMF \| weak-moderate \| \| 3 \| aceto... |
+| 10 | 2 | comparison | \| 2 \| DMF \| weak-moderate \| | ...artial deprotonation becomes possible \| \| 2 \| DMF \| weak-moderate \| \| 3 \| acetonitrile \| weak \| \| 4 \| THF \|... |
+| 11 | 2 | comparison | \| 3 \| acetonitrile \| weak \| | ... possible \| \| 2 \| DMF \| weak-moderate \| \| 3 \| acetonitrile \| weak \| \| 4 \| THF \| very weak \|... |
+| 12 | 2 | comparison | \| 4 \| THF \| very weak \| | ...-moderate \| \| 3 \| acetonitrile \| weak \| \| 4 \| THF \| very weak \|... |

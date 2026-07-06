@@ -1,0 +1,40 @@
+Based on all the data retrieved, here is the complete answer:
+
+---
+
+## Ni²⁺–EDTA Equilibrium Networks in SRD-46
+
+### Number of Distinct Networks
+
+There are **2 distinct equilibrium networks** for the Ni²⁺–EDTA system (`metal_112` + `ligand_6277`):
+
+| Network ID | Nodes | Edges | T Range (°C) | I Range (M) | Species Covered |
+|---|---|---|---|---|---|
+| `ref_eq_net_5023` | 3 | 3 | 20–30 | −0.05–0.25 | `beta_def_812`, `beta_def_788`, `beta_def_966` |
+| `ref_eq_net_5024` | 3 | 3 | 19–29 | 0.85–1.15 | `beta_def_739`, `beta_def_788`, `beta_def_966` |
+
+Both networks are **tied at 3 nodes each**. `ref_eq_net_5023` is the primary reference network (lower ionic strength, closer to standard conditions) and is treated here as the "largest" (or most canonical).
+
+---
+
+### Largest Network: `ref_eq_net_5023` — All VLM Nodes
+
+The three nodes in `ref_eq_net_5023` correspond to one VLM measurement per equilibrium species, covering the following reactions and log K values at ~25 °C, I ≈ 0.1 M:
+
+| VLM Node | β-Definition | Reaction | log K |
+|---|---|---|---|
+| `vlm_108585` | `beta_def_812` | [M] + [L] ⇌ [ML] | **18.4** |
+| *(node for beta_def_788)* | `beta_def_788` | [ML] + [H] ⇌ [MHL] | **3.1** |
+| *(node for beta_def_966)* | `beta_def_966` | [M(OH)L] + [H] ⇌ [ML] + H₂O | **−11.9** |
+
+> **Note:** The tool confirmed `vlm_108585` is the node for `beta_def_812` in `ref_eq_net_5023`. The VLM IDs for the `beta_def_788` and `beta_def_966` nodes were not returned explicitly by the available tools in this session. To retrieve them, one could use `inspect_card` on any VLM from those beta definitions filtered to this network.
+
+---
+
+### Chemistry Insight
+
+The dominant equilibrium is the 1:1 Ni²⁺–EDTA complex (log K = 18.4), one of the highest stability constants among divalent transition metals with EDTA, reflecting EDTA's hexadentate coordination that perfectly satisfies Ni²⁺'s octahedral geometry. The two satellite equilibria capture protonation of the complex (MHL, log K = 3.1) and the hydroxo species (M(OH)L, log K = −11.9), which become relevant at high and low pH respectively. The second network (`ref_eq_net_5024`) covers the same species at higher ionic strength (~1 M), useful for industrial or saline-media applications.
+
+*Source: NIST SRD-46 (Standard Reference Database 46)*
+
+---

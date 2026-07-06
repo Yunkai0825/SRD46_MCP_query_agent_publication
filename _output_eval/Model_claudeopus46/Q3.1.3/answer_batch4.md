@@ -1,0 +1,60 @@
+## Zn²⁺–Histidine Equilibria: ~2005 Citation & Reported Constants
+
+### Citation Found (NIST SRD-46)
+
+> **Sóvágó, I.; Ősz, K.** *Dalton Trans.*, 3841 (2006).
+> *(SRD-46 shortcut: **05SoO**)*
+
+This is the study from around 2005 linked to the Zn²⁺–L-histidine equilibrium data in the NIST SRD-46 database. The shortcut "05SoO" indicates it was likely submitted in 2005 and published in 2006.
+
+---
+
+### Reported Stability Constants
+
+All constants are for the system **Zn²⁺ + L-Histidine** (ligand convention: HL; L = fully deprotonated histidinate).
+
+#### Formation Constants (log K / log β)
+
+| Species / Equilibrium | log K | T (°C) | I (mol/L) |
+|---|---|---|---|
+| M + L ⇌ ML | 6.51 | 25 | 0.1 |
+| M + L ⇌ ML | 6.48 | 25 | 0.5 |
+| M + L ⇌ ML | 6.58 | 25 | 1.0 |
+| M + L ⇌ ML | 7.07 | 25 | 3.0 |
+| M + L ⇌ ML | 6.35 | 37 | 0.15 |
+| M + 2L ⇌ ML₂ | 12.04 | 25 | 0.1 |
+| M + 2L ⇌ ML₂ | 11.91 | 25 | 0.5 |
+| M + 2L ⇌ ML₂ | 12.29 | 25 | 1.0 |
+| M + 2L ⇌ ML₂ | 12.74 | 25 | 3.0 |
+| M + 2L ⇌ ML₂ | 11.67 | 37 | 0.15 |
+
+#### Protonation Equilibria of Complexes
+
+| Equilibrium | log K | T (°C) | I (mol/L) |
+|---|---|---|---|
+| ML + H ⇌ MHL | 4.86 | 25 | 0.1 |
+| ML + H ⇌ MHL | 4.61 | 37 | 0.15 |
+| ML₂ + H ⇌ MHL₂ | 5.80 | 25 | 0.1 |
+| ML₂ + H ⇌ MHL₂ | 5.50 | 37 | 0.15 |
+| MHL₂ + H ⇌ M(HL)₂ | 5.67 | 25 | 0.1 |
+| M(OH)L₂ + H ⇌ ML₂ + H₂O | 9.95 | 25 | 0.5 |
+
+#### Thermodynamic Parameters (25 °C)
+
+| Equilibrium | ΔH (kJ/mol) | ΔS (J/mol·K) | I (mol/L) |
+|---|---|---|---|
+| M + L ⇌ ML | −20.1 | 57.3 | 0.1 |
+| M + L ⇌ ML | −23.0 | — | 3.0 |
+| M + 2L ⇌ ML₂ | −47.3 | −67.4 | 0.1 |
+| M + 2L ⇌ ML₂ | −49.4 | 58.2 | 3.0 |
+| ML + H ⇌ MHL | −27.6 | 0.4 | 0.1 |
+
+---
+
+### Chemistry Insight
+
+The log K₁ ≈ 6.5 and log β₂ ≈ 12.0 values reflect histidine's effectiveness as a chelator for Zn²⁺, consistent with its role in zinc-finger proteins and metalloenzyme active sites where histidine imidazole nitrogen is a key donor. The modest step-down from K₁ to K₂ (log K₂ ≈ 5.5) indicates the second histidine binds nearly as strongly as the first, consistent with Zn²⁺'s preference for tetrahedral four-coordinate geometry. The negative ΔH values confirm enthalpically driven complex formation, as expected for Zn²⁺–N/O bond formation.
+
+*Source: NIST Standard Reference Database 46 (SRD-46)*
+
+---

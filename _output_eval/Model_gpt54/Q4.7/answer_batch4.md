@@ -1,0 +1,30 @@
+Using SRD-46 data, the ligands with usable Co²⁺/Co³⁺ overlap are limited, but four informative cases do appear: **ammonia, ethylenediamine, NTA, and EDTA**. The strongest apples-to-apples comparisons are where the same written equilibrium is available for both oxidation states; where exact matching is incomplete, the network data still show the same qualitative trend: **Co³⁺ complexes are much more stable than Co²⁺ complexes**.
+
+| Ligand | Comparable species / note | Co²⁺ logK or logβ | Co³⁺ logK or logβ | Approx. Co³⁺ − Co²⁺ difference | Interpretation |
+|---|---|---:|---:|---:|---|
+| Ammonia | cumulative ammine series from network summaries | ML: 2.08; ML2: 3.50; ML3: 4.43; ML4: 5.07; ML5: 5.13 | hydroxo/ammine network values 5.33–7.99; overall ML6 = 34.36–35.21 | many log units larger for Co³⁺ | Very strong oxidation-state effect even for monodentate N donor |
+| Ethylenediamine | cumulative en complexes from network summaries | ML = 5.5 to ML3 = 13.4 | ML3 = 48.69; step ML2→ML3 = 13.99 | enormous, especially for tris-chelate Co³⁺ | Classic strong-field chelate effect for Co³⁺ |
+| NTA | exact ML not directly matched in retrieved rows; network summary provides best comparison | ML in network range about 10.38–14.33 | hydrolyzed Co³⁺ forms: 6.84, 9.66; earlier targeted summary indicated ML about 15–17 | roughly ~5–6 log units for ML in matched literature subset | Co³⁺ still favored, but less dramatically than pure polyamines |
+| EDTA | exact same beta definition available: [M] + [L] ⇌ [ML] | 16.45 (network range 3.0–16.45, with ML at beta_def_812) | 41.4 | **~25 log units** | Huge stabilization of Co³⁺ in a multidentate cage |
+
+A few clear patterns emerge from these SRD-46 values:
+
+| Trend | Evidence from retrieved data | Chemical meaning |
+|---|---|---|
+| Co³⁺ >> Co²⁺ for N-donor ligands | ammonia and especially ethylenediamine | Higher charge plus much larger ligand-field stabilization for low-spin d⁶ Co³⁺ |
+| Gap grows with chelation / denticity | en and EDTA show much larger differences than simple monodentate cases | Preorganization and chelate effect amplify the intrinsic Co³⁺ preference |
+| O-donor-rich aminocarboxylates still favor Co³⁺, but comparison is less clean | NTA, EDTA | Mixed N/O donor sets reduce how directly they model pure polyamines |
+
+### Prediction for a new polydentate amine ligand
+A **new polydentate amine** should bind **Co³⁺ far more strongly than Co²⁺**, likely by **many log units**, and the gap should increase as the ligand becomes more **multidentate, preorganized, and octahedrally enveloping**. In crystal-field terms, **Co³⁺ (low-spin d⁶)** gains a large octahedral LFSE and strongly rewards strong-field amine coordination, whereas **Co²⁺ (usually high-spin d⁷)** gains much less LFSE and remains more labile.
+
+| Oxidation state | Expected behavior with a new polydentate amine |
+|---|---|
+| Co²⁺ | Complexes should form, but be relatively more labile and only moderately stable unless the ligand is strongly preorganized |
+| Co³⁺ | Complexes should be exceptionally stable and kinetically inert, especially for hexadentate or near-octahedral amine frameworks |
+
+So the practical prediction is: **if your new ligand is a classic polyamine chelator, expect it to show a strong thermodynamic and kinetic preference for Co³⁺ over Co²⁺, potentially by an EDTA-like or en-like margin rather than a small incremental one.**
+
+*Source: NIST SRD-46 Stability Constants Database.*
+
+---

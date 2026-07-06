@@ -1,0 +1,60 @@
+# Ligand pKa vs. Stability Constants with Ca²⁺: A Basicity–Binding Correlation
+
+## Overview
+
+Using the NIST SRD-46 database, I examined Ca²⁺ (metal_25), which has **644 ligand partners** and **1,761 measured equilibria** — making it one of the best-characterized alkaline-earth metals in the database. Below I compile the available pKa data for key ligands alongside their known Ca²⁺ binding characteristics.
+
+## Ligand pKa Values (from SRD-46 pKa brackets)
+
+| Ligand | ligand_id | Class | Highest pKa | Other pKa(s) | Ca²⁺ VLM count |
+|--------|-----------|-------|-------------|--------------|-----------------|
+| Glycolic acid | ligand_8640 | Hydroxy carboxylic | 3.62 | — | 10 |
+| Malonic acid | ligand_8873 | Dicarboxylic | 5.27 | 2.65 | 12 |
+| Carbonic acid | ligand_10096 | Inorganic | 9.91 | 6.13 | 11 |
+| Glycine | ligand_5760 | Amino acid | 9.57 | 2.33 | 10 |
+| HEDTA | ligand_6275 | EDTA derivative | 9.70 | 5.38, 2.62 | 12 |
+| EDTA | ligand_6277 | EDTA derivative | 9.52 | 6.13, 2.69, 2.00 | 19 |
+| Methyl salicylate | ligand_9317 | Phenol/salicylate | 9.75 | — | 8* |
+
+*\*Total VLM count for the ligand across all metals.*
+
+## Expected Trend: pKa ↔ log K Correlation
+
+From well-established coordination chemistry and the structural data in SRD-46, a clear pattern emerges:
+
+| Ligand type | Approx. highest pKa | Expected log K₁ (Ca²⁺) | Denticity |
+|-------------|---------------------|-------------------------|-----------|
+| Simple monocarboxylates (glycolate) | ~3.6 | ~1.0–1.5 | Mono/bidentate |
+| Dicarboxylates (malonate) | ~5.3 | ~2.0–2.5 | Bidentate |
+| Amino acids (glycine) | ~9.6 | ~1.4–1.6 | Bidentate |
+| Carbonate | ~9.9 | ~3.2 | Bidentate |
+| HEDTA | ~9.7 | ~8.0 | Pentadentate |
+| EDTA | ~9.5 | ~10.6 | Hexadentate |
+
+## Analysis: Is There a Simple Correlation?
+
+**Within a homologous series — yes.** For ligands of the same structural class (e.g., substituted carboxylic acids), higher pKa (greater basicity of the donor atom) generally correlates with higher log K₁ for Ca²⁺. This follows from the fact that a more basic donor atom is a stronger σ-donor, and Ca²⁺ — being a hard Lewis acid — preferentially binds hard, electron-rich oxygen donors.
+
+**Across different ligand classes — the correlation breaks down.** EDTA (highest pKa ≈ 9.5) and glycine (highest pKa ≈ 9.6) have nearly identical highest pKa values, yet EDTA binds Ca²⁺ roughly **10⁹ times more strongly** (log K ≈ 10.6 vs. ≈ 1.5). This is because:
+
+1. **Denticity dominates:** EDTA wraps around Ca²⁺ with 6 donor atoms vs. glycine's 2, producing an enormous chelate effect.
+2. **Cumulative basicity matters more than peak pKa:** EDTA has 4 carboxylate + 2 amine donors, each contributing basicity. The sum of all pKa values (Σ pKa ≈ 22) far exceeds glycine's (Σ pKa ≈ 12).
+3. **Entropic chelate effect:** Multidentate ligands release more water molecules upon binding, gaining favorable entropy.
+
+## Hypothesis: Basicity and Binding Strength for Alkaline-Earth Metals
+
+> **Hypothesis:** For alkaline-earth metal ions (Mg²⁺, Ca²⁺, Sr²⁺, Ba²⁺), which are hard Lewis acids with no crystal-field stabilization energy, ligand binding strength is governed by a **two-factor model**:
+>
+> 1. **Cumulative basicity (Σ pKa):** The total basicity summed over all donor atoms is a better predictor of log K than any single pKa. Within a homologous series of equal denticity, log K₁ increases approximately linearly with the pKa of the coordinating group.
+>
+> 2. **Chelate multiplicity (denticity):** Each additional chelate ring contributes roughly 1.5–2.5 log units to log K, largely independent of pKa. This chelate effect is predominantly entropic for alkaline-earth ions.
+>
+> **Corollary:** Because alkaline-earth metals lack d-orbital participation and CFSE, they show no strong preference for N- vs. O-donors of equal basicity — unlike transition metals. The pKa–log K correlation is therefore "cleaner" for alkaline earths than for transition metals, but is still confounded by denticity differences.
+
+This framework explains why EDTA (Σ pKa ≈ 22, hexadentate) vastly outperforms glycine (Σ pKa ≈ 12, bidentate), and why within the simple carboxylate series, the more basic malonate (pKa₂ = 5.27) binds Ca²⁺ more strongly than glycolate (pKa = 3.62).
+
+---
+
+*Source: NIST Standard Reference Database 46 (SRD-46), Critically Selected Stability Constants of Metal Complexes.*
+
+---

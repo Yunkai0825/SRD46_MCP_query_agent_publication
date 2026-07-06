@@ -1,0 +1,38 @@
+Short answer up front: I could not retrieve the stability-constant rows within the time budget, so I cannot name specific metal–ligand exceptions from SRD‑46 yet. I did confirm and resolve the six divalent first‑row ions needed to test the Irving–Williams series in SRD‑46 and prepared targeted queries, but the actual constants did not return in time. I outline the exact method I will use to flag violations and the most plausible mechanistic reasons for any that turn up.
+
+What I resolved in SRD‑46
+- Target metals (Irving–Williams series): Mn2+ < Fe2+ < Co2+ < Ni2+ < Cu2+ > Zn2+.
+- SRD‑46 IDs for these ions (confirmed via search_metals):
+| Metal (aq) | SRD‑46 ID | Charge |
+|------------|-----------|--------|
+| Mn2+ | metal_94 | +2 |
+| Fe2+ | metal_62 | +2 |
+| Co2+ | metal_33 | +2 |
+| Ni2+ | metal_112 | +2 |
+| Cu2+ | metal_41 | +2 |
+| Zn2+ | metal_208 | +2 |
+
+How I will test for true violations (replicable in SRD‑46)
+- Pull overall formation constants (β) for the same ligand across these six metals with strict comparability:
+  - Same stoichiometry group analyzed separately (e.g., M:L = 1:1 vs 1:2).
+  - Same ligand protonation state (L, HL−, etc.).
+  - Same medium (water), 20–30 °C, low ionic strength (≤ 0.2 M), no added organic cosolvent.
+- For each ligand, order log β and check against Mn < Fe < Co < Ni < Cu > Zn. Flag any inversions (e.g., Ni > Cu or Zn ≥ Cu) only when conditions are matched.
+- I prepared two queries to retrieve such rows for common benchmark ligands (EDTA, glycine, citrate, oxalate, ethylenediamine, ammonia; and bidentate aromatics like 1,10‑phenanthroline, 2,2′‑bipyridine), filtered to water and 20–30 °C with low ionic strength and selected stoichiometries. Those queries did not complete before the time limit, so no numeric tables are included here.
+
+What to expect and why exceptions can occur
+When I rerun the pull, any apparent Irving–Williams violations I find will be scrutinized for these commonly responsible factors:
+- Ligand‑enforced geometry: Some ligands strongly prefer tetrahedral coordination (often favoring Zn2+) or disfavor the Jahn–Teller–stabilized distorted octahedral geometry of Cu2+. This can depress Cu2+ stability relative to Ni2+ or Zn2+ in specific stoichiometries.
+- Donor type and covalency: Soft S‑donors (thiolates, thioethers) can alter the trend compared with hard O/N donors. Shifts in covalency may enhance Ni2+ or Zn2+ more than Cu2+ for particular ligands.
+- Speciation mismatches: Comparing constants for different ligand protonation states (L2− vs HL−) or different stoichiometries (ML vs ML2) can manufacture “violations” that disappear under matched conditions.
+- Medium and activity effects: Higher ionic strength or specific electrolytes can reorder near‑degenerate log β values (especially Ni2+ vs Zn2+).
+- Redox and hydrolysis: Fe2+ oxidation or competing hydroxo/polynuclear species (particularly near neutral pH) can distort apparent formation constants.
+- Kinetic/conditional constants: Some reports are conditional or kinetic; careful filtering to thermodynamic β at defined I and T is needed to avoid spurious inversions.
+
+Next step to complete your request
+- I will re‑run the targeted SRD‑46 stability searches for the six metals above and the initial ligand set (EDTA, glycine, citrate, oxalate, ethylenediamine, ammonia, 1,10‑phenanthroline, 2,2′‑bipyridine, imidazole, histidine) under the filters listed.
+- I will then return, for each ligand and stoichiometry, a table of matched log β at 20–30 °C in water (I ≤ 0.2 M), highlight any violations of Mn < Fe < Co < Ni < Cu > Zn, and annotate each with the most plausible cause from the list above.
+
+If you prefer, I can start with a smaller subset (e.g., EDTA, glycine, citrate, oxalate) to deliver results faster. Source for all constants and IDs: NIST SRD‑46 (Stability Constants of Metal Complexes).
+
+---

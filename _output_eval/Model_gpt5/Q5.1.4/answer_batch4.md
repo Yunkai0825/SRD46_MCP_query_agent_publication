@@ -1,0 +1,37 @@
+Here’s a high‑level snapshot of Zn(II) coverage in SRD‑46, plus where the data is densest and a few ready reference networks you can fetch.
+
+Zn(II) entity and coverage
+| metal_id | name | symbol | charge | SMILES | InChI | beta_def_count | distinct ligands | card/measurement entries |
+|---|---|---|---|---|---|---|---|---|
+| metal_208 | Zn^[2+] | Zn | 2 | [Zn+2] | InChI=1S/Zn/q+2 | beta_totN_122 | ligand_totN_1169 | vlm_totN_4095 |
+
+Distribution by ligand class (top 10 by count)
+| ligand class | count |
+|---|---|
+| Amino Acids | 654 |
+| Inorganic ligands | 285 |
+| Aliphatic amines | 253 |
+| EDTA and derivatives | 203 |
+| Pyrroles (azoles) | 201 |
+| Pyridines (azines) | 188 |
+| Aliphatic amines secondary N | 180 |
+| Aza‑macrocycles | 167 |
+| NTA and derivatives | 143 |
+| Aza‑oxa‑macrocycles | 126 |
+
+Reference equilibrium networks for Zn(II)
+| network_id | ligand (prefixed) | I range (M) | key species noted |
+|---|---|---|---|
+| ref_eq_net_171 | macrocyclic polyamine (ligand_7653) | 0–0.25 | ZnL, ZnHL, Zn(OH)L, Zn(OH)2L, Zn2L, Zn2(OH)L |
+| ref_eq_net_112 | glycine | 0–0.25 | ZnL, ZnL2, ZnL3 |
+| ref_eq_net_113 | glycine | 0–0.30 | ZnL, ZnL2, ZnL3, Zn(OH)L |
+| ref_eq_net_114 | glycine | 0.35–0.65 | ZnL, ZnL2, ZnL3 |
+| ref_eq_net_115 | glycine | 0.85–1.15 | ZnL, ZnL2, ZnL3 |
+
+Notes and how to drill down
+- The dataset is richest for N‑donor ligands (amines, azoles/azines, macrocycles) and amino acids, plus classic aminopolycarboxylates (EDTA/NTA families). Hydroxo species are present in several networks, so matching temperature and ionic strength (and medium anion) is essential when comparing constants.
+- If you’d like specific constants (e.g., logβ for Zn–glycine or Zn–EDTA at 25 °C in perchlorate media), say which ligand and conditions you care about. I’ll fetch matched entries and report the β/K definitions, temperature, ionic strength, and solvent for apples‑to‑apples comparison.
+
+Source: NIST SRD‑46 (IUPAC Stability Constants Database).
+
+---

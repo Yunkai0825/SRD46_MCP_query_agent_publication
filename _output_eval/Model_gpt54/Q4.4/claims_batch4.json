@@ -1,0 +1,2217 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q4.4\\Q4.4_result_batch4.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "SRD-46 supports **methionine** as the best prediction for the **most stable Zn²⁺ complex among canonical amino acids that appear not to have Zn²⁺ stability data in the retrieved set**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 15,
+            "text": "SRD-46 supports",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 16,
+            "end": 116,
+            "text": "**methionine** as the best prediction for the **most stable Zn²⁺ complex among canonical amino acids",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 117,
+            "end": 181,
+            "text": "that appear not to have Zn²⁺ stability data in the retrieved set",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_208"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "## build_system_catalog — 20 pair(s), 94 species *(ultra-compact)*",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "## build_system_catalog — 20 pair(s), 94 species *(ultra-compact)*\n**1. Zn^[2+] + Aminoacetic acid (Glycine)** (metal_208 + ligand_5760)…"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_metals",
+                "snippet": "| metal_208 | Zn^[2+] | Zn | 2 | ✓ | [Zn+2] | InChI=1S/Zn/q+2 | beta_totN_122 | ligand_totN_1169 | vlm_totN_4095 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "search_ligands — (no results) for name: \"methionine, lysine, arginine, proline, tryptophan\"",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "search_ligands (methionine, lysine, arginine, proline, tryptophan) → (no results); retrieved Zn²⁺ logK set lists other amino acids only.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "Args: {\"name\": \"methionine, lysine, arginine, proline, tryptophan\", \"ligand_class\": \"amino acid\"} → *(no results)*"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "### logK — 11 metal-ligand pair(s)\n| metal_208 | Zn^[2+] | ligand_5760 | Aminoacetic acid (Glycine) |\n| metal_208 | Zn^[2+] | ligand_5761 | L-2-Aminopropanoic acid (Alanine) |\n| metal_208 | Zn^[2+] | ligand_5856 | L-2-Amino-3-mercaptopropanoic acid (Cysteine) |\n| metal_208 | Zn^[2+] | ligand_5898 | "
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "## 1) What amino acids already have Zn²⁺ stability data in SRD-46?\n\nFrom the Zn²⁺ (`metal_208`) stability search over canonical amino-acid ligands, these ligands had retrieved Zn²⁺ records:\n\n| Ligand | Ligand ID | Zn²⁺ stability data retrieved? | Notes |\n|---|---:|---:|---|\n| Glycine | ligand_5760 | Yes | N,O donor |\n| Alanine | ligand_5761 | Yes | N,O donor |\n| Aspartic acid | ligand_5802 | Yes | extra carboxylate |\n| Glutamic acid | ligand_5804 | Yes | extra carboxylate |\n| Tyrosine | ligand_5819 | Yes | phenol side chain |\n| Serine | ligand_5828 | Yes | hydroxyl side chain |\n| Threonine | ligand_5829 | Yes | hydroxyl side chain |\n| Asparagine | ligand_5843 | Yes | amide side chain |\n| Glutamine | ligand_5844 | Yes | amide side chain |\n| Cysteine | ligand_5856 | Yes | thiol/thiolate S donor |\n| Histidine | ligand_5898 | Yes | imidazole N donor |\n\nSo the “not yet studied” pool is most plausibly among the missing canonical residues such as **methionine, valine, leucine, isoleucine, phenylalanine, proline, lysine, arginine, tryptophan**, etc., at least within the data retrieved here.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 66,
+            "text": "## 1) What amino acids already have Zn²⁺ stability data in SRD-46?",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 77,
+            "end": 95,
+            "text": "Zn²⁺ (`metal_208`)",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 113,
+            "end": 146,
+            "text": "over canonical amino-acid ligands",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 148,
+            "end": 189,
+            "text": "these ligands had retrieved Zn²⁺ records:",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 275,
+            "end": 318,
+            "text": "| Glycine | ligand_5760 | Yes | N,O donor |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 319,
+            "end": 362,
+            "text": "| Alanine | ligand_5761 | Yes | N,O donor |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 363,
+            "end": 420,
+            "text": "| Aspartic acid | ligand_5802 | Yes | extra carboxylate |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 421,
+            "end": 478,
+            "text": "| Glutamic acid | ligand_5804 | Yes | extra carboxylate |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 479,
+            "end": 531,
+            "text": "| Tyrosine | ligand_5819 | Yes | phenol side chain |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 532,
+            "end": 584,
+            "text": "| Serine | ligand_5828 | Yes | hydroxyl side chain |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 585,
+            "end": 640,
+            "text": "| Threonine | ligand_5829 | Yes | hydroxyl side chain |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 641,
+            "end": 694,
+            "text": "| Asparagine | ligand_5843 | Yes | amide side chain |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 695,
+            "end": 747,
+            "text": "| Glutamine | ligand_5844 | Yes | amide side chain |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 748,
+            "end": 805,
+            "text": "| Cysteine | ligand_5856 | Yes | thiol/thiolate S donor |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 806,
+            "end": 859,
+            "text": "| Histidine | ligand_5898 | Yes | imidazole N donor |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 861,
+            "end": 908,
+            "text": "So the “not yet studied” pool is most plausibly",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 909,
+            "end": 1051,
+            "text": "among the missing canonical residues such as **methionine, valine, leucine, isoleucine, phenylalanine, proline, lysine, arginine, tryptophan**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1053,
+            "end": 1099,
+            "text": "etc., at least within the data retrieved here.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_208"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_208 | Zn^[2+] | Zn | 2 | ✓ | [Zn+2]",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_metals",
+                "snippet": "| metal_208 | Zn^[2+] | Zn | 2 | ✓ | [Zn+2] | InChI=1S/Zn/q+2 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | 428 |",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | 428 | `NCC(=O)O` | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5760",
+              "ligand_5761",
+              "ligand_5802",
+              "ligand_5804",
+              "ligand_5819",
+              "ligand_5828",
+              "ligand_5829",
+              "ligand_5843",
+              "ligand_5844",
+              "ligand_5856",
+              "ligand_5898"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "logK — 11 metal-ligand pair(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 22 | 4 | 10~40 | 0~1 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5761 | L-2-Aminopropanoic acid (Al… | HL | C[C@H](N)C(=O)O | 15 | 4 | 25~37 | 0~1 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5898 | L-2-Amino-3-(4-imidazolyl)p… | HL | N[C@@H](Cc1c[nH]cn1)C(=O)O | 18 | 6 | 25~37 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5760"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_208 | Zn^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 22 | 4 | 10~40 | 0~1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 22 | 4 | 10~40 | 0~1 | *** | 7 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5761"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_208 | Zn^[2+] | ligand_5761 | L-2-Aminopropanoic acid (Al… | HL | C[C@H](N)C(=O)O | 15 | 4 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5761 | L-2-Aminopropanoic acid (Al… | HL | C[C@H](N)C(=O)O | 15 | 4 | 25~37 | 0~1 | *** | 5 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5802"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_208 | Zn^[2+] | ligand_5802 | L-Aminobutanedioic acid (As… | H2L | N[C@@H](CC(=O)O)C(=O)O | 8 | 3 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5802 | L-Aminobutanedioic acid (As… | H2L | N[C@@H](CC(=O)O)C(=O)O | 8 | 3 | 25~37 | 0.1~1 | *** | 4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5804"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_208 | Zn^[2+] | ligand_5804 | L-2-Aminopentanedioic acid … | H2L | ... | 5 | 2 | 25~37 | 0.15~1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5804 | L-2-Aminopentanedioic acid … | H2L | N[C@@H](CCC(=O)O)C(=O)O | 5 | 2 | 25~37 | 0.15~1 | *** | 3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5819"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_208 | Zn^[2+] | ligand_5819 | L-2-Amino-3-(4-hydroxypheny… | H2L | ... | 5 | 5 | 25 | 0.1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5819 | L-2-Amino-3-(4-hydroxypheny… | H2L | N[C@@H](Cc1ccc(O)cc1)C(=O)O | 5 | 5 | 25 | 0.1 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5828"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_208 | Zn^[2+] | ligand_5828 | L-2-Amino-3-hydroxypropanoi… | HL | N[C@@H](CO)C(=O)O | 8 | 3 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5828 | L-2-Amino-3-hydroxypropanoi… | HL | N[C@@H](CO)C(=O)O | 8 | 3 | 25~37 | 0.1~3 | *** | 3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5829"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_208 | Zn^[2+] | ligand_5829 | L-2-Amino-3-hydroxybutanoic… | HL | ... | 5 | 3 | 25~37 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5829 | L-2-Amino-3-hydroxybutanoic… | HL | C[C@@H](O)[C@H](N)C(=O)O | 5 | 3 | 25~37 | 0.1~0.15 | *** | 2 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5843"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_208 | Zn^[2+] | ligand_5843 | L-2-Aminobutanedioic acid 4… | HL | NC(=O)C[C@H](N)C(=O)O | 6 | 3 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5843 | L-2-Aminobutanedioic acid 4… | HL | NC(=O)C[C@H](N)C(=O)O | 6 | 3 | 20~37 | 0.1~3 | *** | 3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5844"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_208 | Zn^[2+] | ligand_5844 | L-2-Aminopentanedioic acid … | HL | ... | 5 | 3 | 25~37 | 0.15~3 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5844 | L-2-Aminopentanedioic acid … | HL | NC(=O)CC[C@H](N)C(=O)O | 5 | 3 | 25~37 | 0.15~3 | *** | 2 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5856"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_208 | Zn^[2+] | ligand_5856 | L-2-Amino-3-mercaptopropano… | H2L | N[C@@H](CS)C(=O)O | 23 | 8 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5856 | L-2-Amino-3-mercaptopropano… | H2L | N[C@@H](CS)C(=O)O | 23 | 8 | 20~37 | 0.1~3 | *** | 4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5898"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_208 | Zn^[2+] | ligand_5898 | L-2-Amino-3-(4-imidazolyl)p… | HL | ... | 18 | 6 | 25~37 | 0.1~3 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5898 | L-2-Amino-3-(4-imidazolyl)p… | HL | N[C@@H](Cc1c[nH]cn1)C(=O)O | 18 | 6 | 25~37 | 0.1~3 | *** | 6 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No tool output confirms absence of Zn²⁺ records for methionine, valine, leucine, isoleucine, phenylalanine, proline, lysine, arginine, tryptophan.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5765 | L-2-Amino-3-methylbutanoic acid (Valine) | HL | Amino Acids | 81 | ..."
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5777 | L-2-Amino-3-phenylpropanoic acid (Phenylalanine) | HL | Amino Acids | 138 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 17,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "## 2) What do the studied Zn²⁺ amino-acid systems imply?\n\nThe retrieved Zn²⁺ dataset shows a clear donor-type trend:\n\n| Ligand | Donor character | Zn²⁺ dataset richness |\n|---|---|---|\n| Glycine | simple N,O | moderate |\n| Alanine | simple N,O | moderate |\n| Aspartic acid / Glutamic acid | harder O-rich | present, but not unusually rich |\n| Serine / Threonine / Tyrosine | OH/phenol side chains | present, limited |\n| Asparagine / Glutamine | amide side chains | present, limited |\n| Histidine | imidazole N + N,O | strong/chemically favorable |\n| Cysteine | thiolate S + N,O | richest/most favorable-looking among canonical amino acids retrieved |\n\nThis is chemically consistent with Zn²⁺ favoring **borderline-soft donor atoms**, especially **S** and good **N** donors, more than purely hard O-donor side chains.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 56,
+            "text": "## 2) What do the studied Zn²⁺ amino-acid systems imply?",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 58,
+            "end": 116,
+            "text": "The retrieved Zn²⁺ dataset shows a clear donor-type trend:",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 185,
+            "end": 220,
+            "text": "| Glycine | simple N,O | moderate |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 221,
+            "end": 256,
+            "text": "| Alanine | simple N,O | moderate |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 257,
+            "end": 340,
+            "text": "| Aspartic acid / Glutamic acid | harder O-rich | present, but not unusually rich |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 341,
+            "end": 417,
+            "text": "| Serine / Threonine / Tyrosine | OH/phenol side chains | present, limited |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 418,
+            "end": 483,
+            "text": "| Asparagine / Glutamine | amide side chains | present, limited |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 484,
+            "end": 547,
+            "text": "| Histidine | imidazole N + N,O | strong/chemically favorable |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 548,
+            "end": 650,
+            "text": "| Cysteine | thiolate S + N,O | richest/most favorable-looking among canonical amino acids retrieved |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 652,
+            "end": 733,
+            "text": "This is chemically consistent with Zn²⁺ favoring **borderline-soft donor atoms**,",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 734,
+            "end": 773,
+            "text": "especially **S** and good **N** donors,",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 774,
+            "end": 816,
+            "text": "more than purely hard O-donor side chains.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5760",
+              "ligand_5761",
+              "ligand_5802",
+              "ligand_5804",
+              "ligand_5819",
+              "ligand_5828",
+              "ligand_5829",
+              "ligand_5843",
+              "ligand_5844",
+              "ligand_5856",
+              "ligand_5898"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_208 | Zn^[2+] | ligand_5856 | L-2-Amino-3-mercaptopropano… | H2L | N[C@@H](CS)C(=O)O | 23 | 8 | 20~37 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5856 | L-2-Amino-3-mercaptopropano… | H2L | N[C@@H](CS)C(=O)O | 23 | 8 | 20~37 | 0.1~3 | *** | 4 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5802 | L-Aminobutanedioic acid (As… | H2L | N[C@@H](CC(=O)O)C(=O)O | 8 | 3 | 25~37 | 0.1~1 | *** | 4 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5898 | L-2-Amino-3-(4-imidazolyl)p… | HL | N[C@@H](Cc1c[nH]cn1)C(=O)O | 18 | 6 | 25~37 | 0.1~3 | *** | 6 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5760"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "(metal_208 + ligand_5760) — ligand_def_HxL: HL | 37 ent, 4 sp, 37 vlms",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "**1. Zn^[2+] + Aminoacetic acid (Glycine)** (metal_208 + ligand_5760) — ligand_def_HxL: HL | 37 ent, 4 sp, 37 vlms"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | 428 | `NCC(=O)O` | (-inf, H2L, 2.33, HL, 9.57, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5761"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "(metal_208 + ligand_5761) — ligand_def_HxL: HL | 19 ent, 4 sp, 19 vlms",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "**14. Zn^[2+] + L-2-Aminopropanoic acid (Alanine)** (metal_208 + ligand_5761) — ligand_def_HxL: HL | 19 ent, 4 sp, 19 vlms"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5761 | L-2-Aminopropanoic acid (Al… | HL | C[C@H](N)C(=O)O | 15 | 4 | 25~37 | 0~1 | *** | 5 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5802",
+              "ligand_5804"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_208 | Zn^[2+] | ligand_5802 | L-Aminobutanedioic acid (As… | … | 8 | 3 | 25~37 | 0.1~1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5802 | L-Aminobutanedioic acid (As… | H2L | N[C@@H](CC(=O)O)C(=O)O | 8 | 3 | 25~37 | 0.1~1 | *** | 4 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5804 | L-2-Aminopentanedioic acid … | H2L | N[C@@H](CCC(=O)O)C(=O)O | 5 | 2 | 25~37 | 0.15~1 | *** | 3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5828",
+              "ligand_5829",
+              "ligand_5819"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_208 | Zn^[2+] | ligand_5828 | L-2-Amino-3-hydroxypropanoi… | … | 8 | 3 | 25~37 | 0.1~3 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5828 | L-2-Amino-3-hydroxypropanoi… | HL | N[C@@H](CO)C(=O)O | 8 | 3 | 25~37 | 0.1~3 | *** | 3 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5829 | L-2-Amino-3-hydroxybutanoic… | HL | C[C@@H](O)[C@H](N)C(=O)O | 5 | 3 | 25~37 | 0.1~0.15 | *** | 2 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5819 | L-2-Amino-3-(4-hydroxypheny… | H2L | N[C@@H](Cc1ccc(O)cc1)C(=O)O | 5 | 5 | 25 | 0.1 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5843",
+              "ligand_5844"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_208 | Zn^[2+] | ligand_5843 | L-2-Aminobutanedioic acid 4… | … | 6 | 3 | 20~37 | 0.1~3 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5843 | L-2-Aminobutanedioic acid 4… | HL | NC(=O)C[C@H](N)C(=O)O | 6 | 3 | 20~37 | 0.1~3 | *** | 3 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5844 | L-2-Aminopentanedioic acid … | HL | NC(=O)CC[C@H](N)C(=O)O | 5 | 3 | 25~37 | 0.15~3 | *** | 2 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5898"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "(metal_208 + ligand_5898) — ligand_def_HxL: HL | 29 ent, 6 sp, 29 vlms",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "**6. Zn^[2+] + L-2-Amino-3-(4-imidazolyl)propanoic acid (Histidine)** (metal_208 + ligand_5898) — ligand_def_HxL: HL | 29 ent, 6 sp, 29 vlms"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5898 | L-2-Amino-3-(4-imidazolyl)p… | HL | N[C@@H](Cc1c[nH]cn1)C(=O)O | 18 | 6 | 25~37 | 0.1~3 | *** | 6 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5856"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| ligand_5856 | L-2-Amino-3-mercaptopropano… | H2L | N[C@@H](CS)C(=O)O | 23 | 8 | 20~37 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5856 | L-2-Amino-3-mercaptopropano… | H2L | N[C@@H](CS)C(=O)O | 23 | 8 | 20~37 | 0.1~3 | *** | 4 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 22 | 4 | 10~40 | 0~1 | *** | 7 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5898 | L-2-Amino-3-(4-imidazolyl)p… | HL | N[C@@H](Cc1c[nH]cn1)C(=O)O | 18 | 6 | 25~37 | 0.1~3 | *** | 6 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "HSAB preference (Zn2+ borderline-soft) is general chemistry; not an explicit SRD-46 table row.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5856 | L-2-Amino-3-mercaptopropano… | H2L | N[C@@H](CS)C(=O)O | 23 | 8 | 20~37 | 0.1~3 | *** | 4 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5898 | L-2-Amino-3-(4-imidazolyl)p… | HL | N[C@@H](Cc1c[nH]cn1)C(=O)O | 18 | 6 | 25~37 | 0.1~3 | *** | 6 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Emphasis on S and good N donors is HSAB-based; the database lists systems but not donor preference statements.",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "**8. Zn^[2+] + L-2-Amino-3-mercaptopropanoic acid (Cysteine)** (metal_208 + ligand_5856) — ligand_def_HxL: H2L | 23 ent, 8 sp, 23 vlms"
+              },
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "**6. Zn^[2+] + L-2-Amino-3-(4-imidazolyl)propanoic acid (Histidine)** (metal_208 + ligand_5898) — ligand_def_HxL: HL | 29 ent, 6 sp, 29 vlms"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5802",
+              "ligand_5804",
+              "ligand_5898",
+              "ligand_5856"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_208 | Zn^[2+] | ligand_5804 | L-2-Aminopentanedioic acid … | … | 5 | 2 | 25~37 | 0.15~1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5802 | L-Aminobutanedioic acid (As… | H2L | N[C@@H](CC(=O)O)C(=O)O | 8 | 3 | 25~37 | 0.1~1 | *** | 4 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5898 | L-2-Amino-3-(4-imidazolyl)p… | HL | N[C@@H](Cc1c[nH]cn1)C(=O)O | 18 | 6 | 25~37 | 0.1~3 | *** | 6 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5856 | L-2-Amino-3-mercaptopropano… | H2L | N[C@@H](CS)C(=O)O | 23 | 8 | 20~37 | 0.1~3 | *** | 4 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "## 3) What do the pKa data say about donor availability?\n\nRepresentative pKa values from SRD-46 at 25 °C, I = 0.1 M:\n\n| Ligand | Key pKa values retrieved | Interpretation |\n|---|---|---|\n| Glycine | 9.57 | mostly α-NH3⁺ deprotonation in upper range; no special side-chain donor |\n| Alanine | 9.71 | similar to glycine |\n| Aspartic acid | 1.95, 3.71, 9.66 | extra carboxylate available, but O-donor dominated |\n| Glutamic acid | 2.16, 4.15, 9.58 | similar O-donor behavior |\n| Histidine | 6.05, 9.10 | imidazole donor becomes important near neutral pH |\n| Cysteine | 8.18, 10.3 (plus low-pKa protonation entry) | thiol/thiolate chemistry strongly relevant for Zn²⁺ |\n| Tyrosine | 9.04, 10.1 | phenol only deprotonates at relatively high pH |\n| Serine / Threonine | ~2.2 and ~9 | side-chain alcohol is weak donor |\n| Asparagine / Glutamine | ~2.2 and ~8.7–9.0 | side-chain amides are weak neutral donors |\n\nThe key pattern is that **histidine** and especially **cysteine** have side-chain donor groups that can materially strengthen Zn²⁺ binding, whereas hydroxy, amide, and aliphatic side chains do not.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 56,
+            "text": "## 3) What do the pKa data say about donor availability?",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 58,
+            "end": 83,
+            "text": "Representative pKa values",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 84,
+            "end": 95,
+            "text": "from SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 99,
+            "end": 104,
+            "text": "25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 106,
+            "end": 115,
+            "text": "I = 0.1 M",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 187,
+            "end": 279,
+            "text": "| Glycine | 9.57 | mostly α-NH3⁺ deprotonation in upper range; no special side-chain donor |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 280,
+            "end": 319,
+            "text": "| Alanine | 9.71 | similar to glycine |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 320,
+            "end": 409,
+            "text": "| Aspartic acid | 1.95, 3.71, 9.66 | extra carboxylate available, but O-donor dominated |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 410,
+            "end": 473,
+            "text": "| Glutamic acid | 2.16, 4.15, 9.58 | similar O-donor behavior |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 474,
+            "end": 552,
+            "text": "| Histidine | 6.05, 9.10 | imidazole donor becomes important near neutral pH |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 553,
+            "end": 665,
+            "text": "| Cysteine | 8.18, 10.3 (plus low-pKa protonation entry) | thiol/thiolate chemistry strongly relevant for Zn²⁺ |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 666,
+            "end": 740,
+            "text": "| Tyrosine | 9.04, 10.1 | phenol only deprotonates at relatively high pH |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 741,
+            "end": 812,
+            "text": "| Serine / Threonine | ~2.2 and ~9 | side-chain alcohol is weak donor |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 813,
+            "end": 903,
+            "text": "| Asparagine / Glutamine | ~2.2 and ~8.7–9.0 | side-chain amides are weak neutral donors |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 905,
+            "end": 928,
+            "text": "The key pattern is that",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 929,
+            "end": 1043,
+            "text": "**histidine** and especially **cysteine** have side-chain donor groups that can materially strengthen Zn²⁺ binding",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1053,
+            "end": 1102,
+            "text": "hydroxy, amide, and aliphatic side chains do not.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_208"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Source: NIST Standard Reference Database 46 (SRD-46). Tool results in this run are from SRD-46.",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "## search_pka_values — 27 row(s)\n(where: ligand_id IN (...))  | columns include pKa, T°C, I(M) for amino acids (SRD-46 context)."
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "vlm_93606",
+              "ligand_5760"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Aminoacetic acid (Glycine) | pKa 9.57 | T°C 25 | I(M) 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93606 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 9.57 | 25 | 0.1 | L→HL |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_94058 | ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | C[C@H](N)C(=O)O | 9.71 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "vlm_93606",
+              "ligand_5760"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Aminoacetic acid (Glycine) | pKa 9.57 | T°C 25 | I(M) 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93606 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 9.57 | 25 | 0.1 | L→HL |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_95739 | ligand_5804 | L-2-Aminopentanedioic acid (Glutam…) | H2L | … | 9.58 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "vlm_93606",
+              "ligand_5760"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Glycine | pKa 9.57 | T°C 25 | I(M) 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_93606 | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 9.57 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "vlm_94058",
+              "ligand_5761"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Alanine | pKa 9.71 | T°C 25 | I(M) 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_94058 | ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | C[C@H](N)C(=O)O | 9.71 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "vlm_95563",
+              "vlm_95550",
+              "vlm_95537",
+              "ligand_5802"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Aspartic acid | pKa 1.95; 3.71; 9.66 at 25 °C, I=0.1 M",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_95563 | ligand_5802 | … (Aspartic …) | H2L | … | 1.95 | 25 | 0.1 | H2L→H3L |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_95550 | ligand_5802 | … (Aspartic …) | H2L | … | 3.71 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_95537 | ligand_5802 | … (Aspartic …) | H2L | … | 9.66 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "vlm_95761",
+              "vlm_95750",
+              "vlm_95739",
+              "ligand_5804"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Glutamic acid | pKa 2.16; 4.15; 9.58 at 25 °C, I=0.1 M",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_95761 | ligand_5804 | … (Glutam…) | H2L | … | 2.16 | 25 | 0.1 | H2L→H3L |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_95750 | ligand_5804 | … (Glutam…) | H2L | … | 4.15 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_95739 | ligand_5804 | … (Glutam…) | H2L | … | 9.58 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "vlm_98723",
+              "vlm_98706",
+              "ligand_5898"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Histidine | pKa 6.05; 9.1 at 25 °C, I=0.1 M",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_98723 | ligand_5898 | … (Histidine) | HL | … | 6.05 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_98706 | ligand_5898 | … (Histidine) | HL | … | 9.1 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "vlm_97384",
+              "vlm_97371",
+              "vlm_97397",
+              "ligand_5856"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Cysteine | pKa 8.18; 10.3; and low-pKa entry -1.9 at 25 °C, I=0.1 M",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_97384 | ligand_5856 | … (Cysteine) | H2L | … | 8.18 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_97371 | ligand_5856 | … (Cysteine) | H2L | … | 10.3 | 25 | 0.1 | L→HL |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_97397 | ligand_5856 | … (Cysteine) | H2L | … | -1.9 | 25 | 0.1 | H2L→H3L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "vlm_96234",
+              "vlm_96227",
+              "ligand_5819"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Tyrosine | pKa 9.04; 10.1 at 25 °C, I=0.1 M",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_96234 | ligand_5819 | … (Tyrosine) | H2L | … | 9.04 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_96227 | ligand_5819 | … (Tyrosine) | H2L | … | 10.1 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "vlm_96511",
+              "vlm_96498",
+              "ligand_5828",
+              "vlm_96687",
+              "vlm_96674",
+              "ligand_5829"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Serine: 2.16; 9.05. Threonine: 2.2; 8.94 (≈2.2 and ≈9 at 25 °C, I=0.1 M)",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_96511 | ligand_5828 | … (Serine) | HL | … | 2.16 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_96498 | ligand_5828 | … (Serine) | HL | … | 9.05 | 25 | 0.1 | L→HL |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_96687 | ligand_5829 | … (Threonine) | HL | … | 2.2 | 25 | 0.1 | HL→H2L |  … | vlm_96674 | … | 8.94 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "vlm_97048",
+              "vlm_97039",
+              "ligand_5843",
+              "vlm_97179",
+              "vlm_97170",
+              "ligand_5844"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Asparagine: 2.16; 8.73. Glutamine: 2.19; 9.0 (≈2.2 and ≈8.7–9.0 at 25 °C, I=0.1 M)",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_97048 | ligand_5843 | … (Asparagine) | HL | … | 2.16 | 25 | 0.1 | HL→H2L |  … | vlm_97039 | … | 8.73 | 25 | 0.1 | L→HL |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_97179 | ligand_5844 | … (Glutamine) | HL | … | 2.19 | 25 | 0.1 | HL→H2L |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_97170 | ligand_5844 | … (Glutamine) | HL | … | 9 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [
+              "ligand_5898",
+              "ligand_5856",
+              "metal_208"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Domain reasoning: SRD-46 lists histidine (pKa 6.05) and cysteine (pKa 8.18/10.3), but it does not directly state binding is ‘materially strengthened’.",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "Histidine | 6.05; 9.1 | 25 °C | I 0.1"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "Cysteine | 8.18; 10.3 | 25 °C | I 0.1"
+              },
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "Zn^[2+] + L-2-Amino-3-(4-imidazolyl)propanoic acid (Histidine) … Zn^[2+] + L-2-Amino-3-mercaptopropanoic acid (Cysteine)"
+              }
+            ]
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [
+              "ligand_5828",
+              "ligand_5829",
+              "ligand_5843",
+              "ligand_5844"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Domain reasoning: SRD-46 provides pKa for hydroxy (Ser/Thr) and amide (Asn/Gln) side chains, but does not directly assert weak Zn(II) binding from these groups.",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "Serine | 2.16; 9.05 | 25 °C | I 0.1; Threonine | 2.2; 8.94 | 25 °C | I 0.1"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "Asparagine | 2.16; 8.73 | 25 °C | I 0.1; Glutamine | 2.19; 9.0 | 25 °C | I 0.1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "## 4) Why methionine is the best unstudied prediction\n\nAmong canonical amino acids apparently lacking Zn²⁺ data in the retrieved set, **methionine** is the most plausible strongest binder because it is the only common missing residue with a **sulfur-containing side chain**.\n\n| Unstudied candidate type | Expected Zn²⁺ affinity |\n|---|---|\n| Valine / Leucine / Isoleucine / Phenylalanine | mostly simple α-amino acid behavior; no strong extra donor |\n| Proline | N,O chelation possible, but no especially strong side-chain donor |\n| Lysine / Arginine | side chains are strongly protonated in water; poor Zn donor advantage near neutral pH |\n| Tryptophan | indole is not a strong coordinating donor in water |\n| **Methionine** | adds a **thioether sulfur**, which should enhance Zn²⁺ affinity over O/N-only amino acids |\n\nThe strongest evidence chain from SRD-46 is:\n\n| Observation from retrieved data | Implication |\n|---|---|\n| Glycine/alanine are ordinary Zn²⁺ binders | simple N,O donors are baseline |\n| Histidine is stronger-looking because of imidazole N | extra side-chain donor matters a lot |\n| Cysteine is the standout sulfur-containing canonical ligand with rich Zn²⁺ complexation | sulfur donors are especially favorable for Zn²⁺ |\n| Methionine is the obvious missing canonical sulfur amino acid | likely strongest among the unstudied residues |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 53,
+            "text": "## 4) Why methionine is the best unstudied prediction",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 55,
+            "end": 133,
+            "text": "Among canonical amino acids apparently lacking Zn²⁺ data in the retrieved set,",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 134,
+            "end": 187,
+            "text": "**methionine** is the most plausible strongest binder",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 188,
+            "end": 195,
+            "text": "because",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 196,
+            "end": 273,
+            "text": "it is the only common missing residue with a **sulfur-containing side chain**",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 340,
+            "end": 450,
+            "text": "| Valine / Leucine / Isoleucine / Phenylalanine | mostly simple α-amino acid behavior; no strong extra donor |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 451,
+            "end": 530,
+            "text": "| Proline | N,O chelation possible, but no especially strong side-chain donor |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 531,
+            "end": 640,
+            "text": "| Lysine / Arginine | side chains are strongly protonated in water; poor Zn donor advantage near neutral pH |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 641,
+            "end": 708,
+            "text": "| Tryptophan | indole is not a strong coordinating donor in water |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 709,
+            "end": 819,
+            "text": "| **Methionine** | adds a **thioether sulfur**, which should enhance Zn²⁺ affinity over O/N-only amino acids |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 821,
+            "end": 865,
+            "text": "The strongest evidence chain from SRD-46 is:",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 927,
+            "end": 1005,
+            "text": "| Glycine/alanine are ordinary Zn²⁺ binders | simple N,O donors are baseline |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1006,
+            "end": 1101,
+            "text": "| Histidine is stronger-looking because of imidazole N | extra side-chain donor matters a lot |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1102,
+            "end": 1243,
+            "text": "| Cysteine is the standout sulfur-containing canonical ligand with rich Zn²⁺ complexation | sulfur donors are especially favorable for Zn²⁺ |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1244,
+            "end": 1357,
+            "text": "| Methionine is the obvious missing canonical sulfur amino acid | likely strongest among the unstudied residues |",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "search_ligands — (no results)",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "\"name\": \"methionine, lysine, arginine, proline, tryptophan\", \"ligand_class\": \"amino acid\""
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5856",
+              "ligand_5898"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "No direct methionine rows were retrieved; sulfur donors (e.g., cysteine) are known to bind Zn(II) strongly; thus Met is a plausible strongest among missing AAs.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "logK — 11 metal-ligand pair(s)\n| metal_208 | Zn^[2+] | ligand_5856 | L-2-Amino-3-mercaptopropano… | … | 23 | 8 | … |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_5856"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Among canonical residues, only Met (thioether) and Cys (thiol) have S side chains; Cys is present, Met was not retrieved here.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5856 | L-2-Amino-3-mercaptopropanoic acid (Cysteine) | H2L | Amino Acids | 134 | `N[C@@H](CS)C(=O)O` | …"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_5765",
+              "ligand_5766",
+              "ligand_5767",
+              "ligand_5777"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Hydrophobic side chains (Val/Leu/Ile/Phe) lack strong donor atoms; thus behave like simple α-amino acids in aqueous Zn(II) binding.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5765 | L-2-Amino-3-methylbutanoic acid (Valine) | HL | Amino Acids | …\n| ligand_5766 | … (Leucine) | HL | …\n| ligand_5767 | … (Isoleucine) | HL | …\n| ligand_5777 | … (Phenylalanine) | HL | …"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Proline can N,O chelate but lacks a particularly strong side-chain donor toward Zn(II) in water.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Lys and Arg side chains are protonated in water near neutral pH, making them poor donors to Zn(II).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Tryptophan’s indole is a weak donor to Zn(II) in aqueous solution.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Thioether sulfur (as in methionine) is typically a better Zn(II) donor than O/N-only side chains in water.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "Functional groups (294 SMILES): … thioether | 26 | 9% … thiol | 11 | 4%"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5760",
+              "ligand_5898",
+              "ligand_5856"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "search_stability — 176 row(s) with Zn(II) + amino acids (e.g., glycine, histidine, cysteine) underpin the evidence chain.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "### logK — 11 metal-ligand pair(s)\n| metal_208 | Zn^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | … | 22 | 4 | …"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5898 | L-… (Histidine) | … | 18 | 6 | …"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5856 | L-… (Cysteine) | … | 23 | 8 | …"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5760",
+              "ligand_5761"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Glycine/alanine appear among Zn(II) complexes and serve as simple N,O donor baselines.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | … | 22 | 4 | …"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5761 | L-2-Aminopropanoic acid (Alanine) | … | 15 | 4 | …"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5898"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Histidine complexes of Zn(II) are present, consistent with stronger binding via imidazole N.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5898 | L-… (Histidine) | … | 18 | 6 | …"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5856"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Cysteine shows rich Zn(II) complexation (many logK entries), consistent with favorable sulfur donors.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_208 | Zn^[2+] | ligand_5856 | L-2-Amino-3-mercaptopropano… (Cysteine) | … | 23 | 8 | …"
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Met (sulfur thioether) was not retrieved here; Cys (sulfur thiol) is present; thus Met is the obvious missing canonical sulfur AA.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5856 | L-2-Amino-3-mercaptopropanoic acid (Cysteine) | H2L | Amino Acids | 134 | …"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "## 5) Final prediction\n\n| Predicted amino acid | Why |\n|---|---|\n| **Methionine** | It is the strongest plausible **unstudied canonical amino acid** because the retrieved Zn²⁺ trend favors side-chain donor atoms beyond simple N,O chelation, and sulfur-containing amino acids are the most favorable class in the observed dataset. Methionine’s thioether sulfur should give it an advantage over aliphatic, hydroxy, amide, aromatic, or strongly protonated basic side chains. |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 22,
+            "text": "## 5) Final prediction",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 65,
+            "end": 472,
+            "text": "| **Methionine** | It is the strongest plausible **unstudied canonical amino acid** because the retrieved Zn²⁺ trend favors side-chain donor atoms beyond simple N,O chelation, and sulfur-containing amino acids are the most favorable class in the observed dataset. Methionine’s thioether sulfur should give it an advantage over aliphatic, hydroxy, amide, aromatic, or strongly protonated basic side chains. |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No methionine entries were found (search_ligands returned no results). No tool data ranks sulfur-containing amino acids as the 'most favorable' class.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "logK — 11 metal-ligand pair(s)\n| metal_208 | Zn^[2+] | ligand_5856 | L-2-Amino-3-mercaptopropano… | H2L | N[C@@H](CS)C(=O)O | 23 | 8 | 20~37 | 0.1~3 | *** | 4 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "## Bottom line\n\n**Prediction: methionine**.\n\nThe reasoning is that SRD-46 shows Zn²⁺ complexes become notably stronger when amino acids offer **side-chain donor groups**, with **histidine (imidazole N)** and especially **cysteine (sulfur)** standing out over simple amino acids. Among the apparently unstudied canonical amino acids, **methionine is the best sulfur-containing candidate**, so it is the most likely to form the most stable Zn²⁺ complex.\n\n*Source: NIST SRD-46 retrieved Zn²⁺ stability and ligand pKa records.*",
+        "claims": [
+          {
+            "start": 0,
+            "end": 14,
+            "text": "## Bottom line",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 16,
+            "end": 43,
+            "text": "**Prediction: methionine**.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 45,
+            "end": 66,
+            "text": "The reasoning is that",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 67,
+            "end": 169,
+            "text": "SRD-46 shows Zn²⁺ complexes become notably stronger when amino acids offer **side-chain donor groups**",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 171,
+            "end": 278,
+            "text": "with **histidine (imidazole N)** and especially **cysteine (sulfur)** standing out over simple amino acids.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 279,
+            "end": 332,
+            "text": "Among the apparently unstudied canonical amino acids,",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 333,
+            "end": 387,
+            "text": "**methionine is the best sulfur-containing candidate**",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 389,
+            "end": 451,
+            "text": "so it is the most likely to form the most stable Zn²⁺ complex.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 453,
+            "end": 523,
+            "text": "*Source: NIST SRD-46 retrieved Zn²⁺ stability and ligand pKa records.*",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No comparative Zn–amino-acid logK values are shown in provided outputs, so a ‘notably stronger’ trend cannot be verified here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Tool results do not provide comparative strength data to show His/Cys ‘standing out’ over simple amino acids.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Querying canonical names (methionine, lysine, arginine, proline, tryptophan) in amino acids returned no ligands.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "Args: {\"name\": \"methionine, lysine, arginine, proline, tryptophan\", \"ligand_class\": \"amino acid\", \"limit\": 20}\n\n## search_ligands\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Domain knowledge: of canonical sulfur AAs, cysteine (thiol) is studied; methionine (thioether) is the other and absent in SRD-46 results here, making it the sulfur candidate among unstudied.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "Args: {\"name\": \"methionine, lysine, arginine, proline, tryptophan\", \"ligand_class\": \"amino acid\", \"limit\": 20}\n\n## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5856 | L-2-Amino-3-mercaptopropanoic acid (Cysteine) | H2L | Amino Acids | 134 | `N[C@@H](CS)C(=O)O` | (-inf, H3L, -1.9, H2L, 8.18, HL, 10.3, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Chemical reasoning: thioether S donors often bind Zn(II) well; but SRD-46 shows no methionine logK rows here, so this is a hypothesis, not verified numerically.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "Args: {\"name\": \"methionine, lysine, arginine, proline, tryptophan\", \"ligand_class\": \"amino acid\", \"limit\": 20}\n\n## search_ligands\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_5856",
+              "vlm_97446",
+              "vlm_97371"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "SRD-46 tool results include Zn2+ stability (search_stability) and ligand pKa (search_pka_values) records for amino acids.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 176 row(s)\n### logK — 11 metal-ligand pair(s)\n| metal_208 | Zn^[2+] | ligand_5856 | L-2-Amino-3-mercaptopropano… | H2L | N[C@@H](CS)C(=O)O | 23 | 8 | 20~37 | 0.1~3 | *** | 4 |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "**8. Zn^[2+] + L-2-Amino-3-mercaptopropanoic acid (Cysteine)** (metal_208 + ligand_5856) … 23 vlms (vlm_97446…vlm_97468)"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_pka_values",
+                "snippet": "## search_pka_values — 27 row(s)\n| vlm_97371 | ligand_5856 | L-2-Amino-3-mercaptopropanoic acid… | H2L | … | pKa | 10.3 | 25 | 0.1 | L→HL |"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

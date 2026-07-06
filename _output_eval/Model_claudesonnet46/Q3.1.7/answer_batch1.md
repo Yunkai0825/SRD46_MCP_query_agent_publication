@@ -1,0 +1,51 @@
+## Co(II) + 2,2'-Bipyridyl: SRD-46 Data Summary
+
+Yes — SRD-46 contains well-documented data for the **cobalt(II) / 2,2'-bipyridyl** system. Here is a complete breakdown:
+
+---
+
+### Measurement Count
+
+| Measurement Type | Count |
+|---|---|
+| **log K** (stability constants) | **6** |
+| ΔH (enthalpy) | 6 |
+| ΔS (entropy) | 6 |
+| **Total VLM entries** | **18** |
+
+The **6 independent log K measurements** cover three stoichiometries (ML, ML₂, ML₃) at two ionic strength conditions each (I = 0.1 M and I = 1.0 M), all at 25 °C. These are drawn from **two independent reference networks** (net_14999 and net_15000).
+
+---
+
+### log K (log β) Values — Overall Formation Constants
+
+| Species | Equation | I (M) | T (°C) | log β |
+|---|---|---|---|---|
+| Co(bipy)²⁺ (ML) | M + L ⇌ ML | 0.1 | 25 | **5.80** |
+| Co(bipy)²⁺ (ML) | M + L ⇌ ML | 1.0 | 25 | **5.81** |
+| Co(bipy)₂²⁺ (ML₂) | M + 2L ⇌ ML₂ | 0.1 | 25 | **11.30** |
+| Co(bipy)₂²⁺ (ML₂) | M + 2L ⇌ ML₂ | 1.0 | 25 | **11.30** |
+| Co(bipy)₃²⁺ (ML₃) | M + 3L ⇌ ML₃ | 0.1 | 25 | **16.00** |
+| Co(bipy)₃²⁺ (ML₃) | M + 3L ⇌ ML₃ | 1.0 | 25 | **16.20** |
+
+> **log β range: 5.80 → 16.20** (overall formation constants, 25 °C)
+
+---
+
+### Thermodynamic Data (25 °C, I = 0.1 M)
+
+| Species | ΔH (kJ/mol) | ΔS (J/mol·K) |
+|---|---|---|
+| Co(bipy)²⁺ (ML) | −34.3 | −4.2 |
+| Co(bipy)₂²⁺ (ML₂) | −63.6 | +2.9 |
+| Co(bipy)₃²⁺ (ML₃) | −89.1 | +7.1 |
+
+---
+
+### Chemistry Insight
+
+The stepwise log K values (derived from consecutive β differences) are approximately **5.8, 5.5, and 4.7**, showing a modest but expected decrease with each successive ligand addition due to steric crowding around the Co²⁺ center. The highly negative ΔH values confirm that binding is **enthalpically driven**, while the slightly positive ΔS for ML₂ and ML₃ reflects the chelate effect — release of water molecules from the coordination sphere. The tris-chelate complex Co(bipy)₃²⁺ with log β ≈ 16 is notably stable for a d⁷ ion, consistent with the strong π-backbonding character of 2,2'-bipyridyl.
+
+*Source: NIST SRD-46 (metal_33 / ligand_8156)*
+
+---

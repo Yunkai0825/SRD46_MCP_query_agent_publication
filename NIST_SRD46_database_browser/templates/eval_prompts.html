@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Prompt Catalog — SRD-46 Browser{% endblock %}
+
+{% block content %}
+<h2 class="mb-3">
+  <i class="bi bi-clipboard-check"></i>
+  Evaluation Runs
+</h2>
+
+<ul class="nav nav-tabs mb-3">
+  <li class="nav-item">
+    <a class="nav-link active"
+       href="{{ url_for('evaluation.prompt_catalog') }}">
+      <i class="bi bi-card-text"></i> Prompts
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link"
+       href="{{ url_for('evaluation.eval_index') }}">
+      <i class="bi bi-list-check"></i> Test-set runs
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link"
+       href="{{ url_for('evaluation.freeform_index') }}">
+      <i class="bi bi-chat-square-text"></i> Freeform queries
+    </a>
+  </li>
+</ul>
+
+<!-- Filter -->
+<form method="get" class="row g-2 mb-3">
+  <div class="col-auto">
+    <input type="text" name="q" class="form-control form-control-sm"
+           placeholder="Prompt ID or text…" value="{{ filter_q }}">
+  </div>
+  <div class="col-auto">
+    <button class="btn btn-sm btn-primary" type="submit">Filter</button>
+    <a href="{{ url_for('evaluation.prompt_catalog') }}" class="btn btn-sm btn-outline-secondary">Reset</a>
+  </div>
+</form>
+
+{% if entries %}
+<div class="table-responsive">
+  <table class="table table-sm table-striped align-middle">
+    <thead class="table-dark">
+      <tr>
+        <th>#</th>
+        <th>Prompt ID</th>
+        <th>Section</th>
+        <th>Prompt</th>
+        <th>Runs</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for e in entries %}
+      <tr>
+        <td class="text-muted">{{ loop.index }}</td>
+        <td><strong>{{ e.question_id }}</strong></td>
+        <td>
+          <span class="badge bg-secondary" title="{{ e.section_title }}">{{ e.section }}</span>
+          <span class="small text-muted">{{ e.section_title }}</span>
+        </td>
+        <td>{{ e.prompt }}</td>
+        <td>
+          <a href="{{ url_for('evaluation.eval_index', q=e.question_id) }}"
+             class="btn btn-sm btn-outline-primary">View runs</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<div class="alert alert-secondary">No prompts found in TEST_PROMPTS.md.</div>
+{% endif %}
+{% endblock %}

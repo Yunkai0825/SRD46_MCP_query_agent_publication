@@ -1,0 +1,12 @@
+Here are matched-condition overall formation constants (log β11 = log K for [ML]/[M][L]) for Fe3+ with EDTA and NTA from NIST SRD‑46:
+
+| Conditions | Fe3+–EDTA (log β11) | Fe3+–NTA (log β11) |
+|---|---:|---:|
+| 25 °C, I = 0.10 M (aqueous) | 25.10 (vlm_108639) | 15.90 (vlm_105553) |
+| 25 °C, I = 1.0 M (aqueous) | 23.80 (vlm_108640) | 14.78 (vlm_105554) |
+
+Conclusion: EDTA forms the more stable Fe3+ complex. At 25 °C and I = 0.10 M, the Fe3+–EDTA complex is ~9.2 log units more stable than Fe3+–NTA (≈1.6×10^9 times). EDTA’s higher denticity (hexadentate) compared with NTA (tridentate) provides a stronger chelate effect, consistent with these much larger stability constants; increasing ionic strength modestly lowers the apparent log β for both ligands.
+
+Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).
+
+---

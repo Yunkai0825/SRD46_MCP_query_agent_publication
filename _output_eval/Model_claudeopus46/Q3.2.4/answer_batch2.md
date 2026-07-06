@@ -1,0 +1,123 @@
+# Survey of Fe(II) and Fe(III) Ligand Systems in NIST SRD-46
+
+## Database Coverage
+
+| Property | Fe(III) — `metal_61` | Fe(II) — `metal_62` |
+|----------|---------------------|---------------------|
+| Total ligands | 406 | 217 |
+| Total VLM measurements | 1,473 | 667 |
+| Beta definitions | 128 | 57 |
+
+Fe(III) has roughly **twice** the data coverage of Fe(II), reflecting its greater importance in environmental, biological, and industrial chemistry.
+
+---
+
+## Ligand Class Distribution
+
+| Ligand Class | Fe(III) count (%) | Fe(II) count (%) | Dominant donor set |
+|---|---|---|---|
+| **Inorganic ligands** (F⁻, OH⁻, SCN⁻, CN⁻, etc.) | 198 (13.4%) | 75 (11.2%) | O, N, S, halides |
+| **Catechols** | 140 (9.5%) | 15 (2.3%) | O,O (phenolate) |
+| **Hydroxamic acids** | 124 (8.4%) | 9 (1.4%) | O,O (hydroxamate) |
+| **Amino acids** | 116 (7.9%) | 101 (15.1%) | N,O (amino, carboxylate) |
+| **EDTA & derivatives** | 106 (7.2%) | 78 (11.7%) | N,O (aminocarboxylate) |
+| **Aliphatic amines** | 102 (6.9%) | 9 (1.4%) | N (amine) |
+| **Phenols / salicylic acids** | 99 (6.7%) | — | O (phenolate) |
+| **Phenanthrolines** | 11 (0.8%) | 33 (5.0%) | N,N (aromatic) |
+| **Bipyridines** | — | 30 (4.5%) | N,N (aromatic) |
+| **NTA & derivatives** | 45 (3.1%) | 29 (4.4%) | N,O (aminocarboxylate) |
+| **Pyridines (azines)** | 49 (3.3%) | 28 (4.2%) | N (aromatic) |
+| **Aza-macrocycles ± COOH** | 57 (3.9%) | 34 (5.1%) | N (macro) ± O |
+| **Aminophosphorus acids** | 33 (2.2%) | 31 (4.7%) | N,O,P |
+| **Tripyridines** | — | 15 (2.3%) | N,N,N (aromatic) |
+
+---
+
+## Key Stability Constant Trends
+
+### Representative log K₁ / log β values (25 °C, I ≈ 0.1 M)
+
+From the retrieved data, the following ordering emerges for **Fe(III)**:
+
+| Ligand class (example) | Approx. log β range | Notes |
+|---|---|---|
+| Siderophore-type tris-catechols (e.g., enterobactin analogs) | 40–49 | Hexadentate O,O donors; preorganized |
+| Hydroxamic acid chelators (desferrioxamine-type) | 25–35 | Hexadentate O,O; siderophore design |
+| EDTA | ~25 | Hexadentate N₂O₄ |
+| NTA | ~16 | Tetradentate N₁O₃ |
+| Catechol (monodentate pair) | 15–20 (β₃) | Bidentate O,O per unit |
+| Citrate | ~12 | Tridentate O,O,O |
+| Simple phenols | 6–10 | Monodentate O |
+| Fluoride | ~6 | Hard halide |
+
+For **Fe(II)**:
+
+| Ligand class (example) | Approx. log β range | Notes |
+|---|---|---|
+| 1,10-Phenanthroline (β₃) | ~21 | Tris-bidentate N,N; strong-field |
+| 2,2′-Bipyridyl (β₃) | ~17 | Tris-bidentate N,N |
+| Terpyridine (β₂) | ~15–17 | Tridentate N,N,N |
+| EDTA | ~14 | Hexadentate N₂O₄ |
+| Polyamine chelators (trien, tetren) | 10–15 | Multidentate N |
+| DTPA | ~16 | Octadentate N₃O₅ |
+| Amino acids (glycine, histidine) | 4–10 | Bidentate N,O |
+| Simple carboxylates | 1–3 | Monodentate O |
+
+---
+
+## Thermodynamic Reasoning
+
+### 1. Hard/Soft Acid–Base (HSAB) Theory — The Dominant Factor
+
+**Fe(III)** (d⁵, high charge density) is a **hard Lewis acid**. It shows overwhelming preference for **hard O-donor ligands**: catecholates, hydroxamates, phenolates, carboxylates, and fluoride dominate its chemistry. This is strikingly visible in the database: catechols (9.5%), hydroxamic acids (8.4%), and phenols/salicylates (6.7%) are heavily represented for Fe(III) but nearly absent for Fe(II).
+
+**Fe(II)** (d⁶, lower charge density) is a **borderline Lewis acid**. It strongly favors **N-donor ligands**, especially aromatic N-heterocycles: phenanthrolines (5.0%), bipyridines (4.5%), and tripyridines (2.3%) are prominent for Fe(II) but negligible for Fe(III). The iconic deep-red [Fe(phen)₃]²⁺ complex (log β₃ ≈ 21) has no Fe(III) counterpart of comparable stability.
+
+### 2. Chelate Effect and Preorganization
+
+The enormous stability of siderophore-type ligands with Fe(III) (log β up to ~49 for tris-catechol hexadentate chelators) exemplifies the **chelate effect** amplified by **preorganization**. Connecting three catechol units on a rigid scaffold:
+- Eliminates translational entropy loss (one ligand replaces six donor atoms)
+- Pre-positions donors for octahedral coordination
+- Yields an additional 10–15 log units beyond what three free catechol units provide
+
+Similarly, EDTA's hexadentate chelation gives log K(Fe³⁺) ≈ 25 vs. log K ≈ 12 for citrate (tridentate) — roughly doubling denticity more than doubles log K.
+
+### 3. Crystal-Field / Ligand-Field Stabilization
+
+**Fe(II)** is d⁶ and gains enormous **ligand-field stabilization energy (LFSE)** with strong-field ligands that enforce a low-spin t₂g⁶ configuration. This explains why:
+- Phenanthroline and bipyridyl (strong π-acceptor N-donors) give exceptionally high log β values for Fe(II) — the LFSE bonus is ~2.4 Dq beyond the high-spin value
+- CN⁻ forms the extraordinarily stable [Fe(CN)₆]⁴⁻ (log β₆ ≈ 35–37)
+- These same ligands offer Fe(III) (d⁵) **zero LFSE** in either spin state, so the Fe(III) complexes are far weaker
+
+**Fe(III)** is d⁵ (high-spin): it has **zero LFSE** regardless of field strength. Its stability is driven purely by electrostatics and covalency, not crystal-field effects — hence the dominance of hard electrostatic (O-donor) interactions.
+
+### 4. Notable Edge Cases and Anomalies
+
+| Observation | Explanation |
+|---|---|
+| **EDTA binds both metals strongly** (log K ≈ 25 for Fe³⁺, ~14 for Fe²⁺) | Mixed N₂O₄ donor set satisfies both hard (O) and borderline (N) character; hexadentate chelate effect dominates |
+| **Amino acids appear prominently for both** | Glycinate-type N,O donors bridge the hard/borderline divide; biological relevance drives extensive study |
+| **Catechols dominate Fe(III) but are sparse for Fe(II)** | Catecholate dianion is a very hard donor; Fe(II) also risks oxidation to Fe(III) in catechol systems |
+| **Hydroxamic acids are almost exclusive to Fe(III)** | O,O-donor hydroxamate is hard; nature exploits this in siderophores (desferrioxamine B: log K ≈ 30.6) |
+| **CN⁻ is exceptional for Fe(II)** | Despite being a C-donor (soft), CN⁻ is a superb π-acceptor that maximizes LFSE for d⁶ Fe(II); the kinetic inertness of low-spin d⁶ further stabilizes the complex |
+| **SCN⁻ binds Fe(III) through N (hard end)** | Ambidentate SCN⁻ selects its N-terminus for hard Fe(III), consistent with HSAB |
+
+### 5. Summary Trend
+
+```
+Fe(III) stability ordering by donor class:
+  O,O-siderophores >> O,O-catechols ≈ O,O-hydroxamates > N,O-aminocarboxylates 
+  > O-carboxylates > O-phenolates > F⁻ >> N-amines
+
+Fe(II) stability ordering by donor class:
+  N,N-phenanthrolines ≈ CN⁻ > N,N-bipyridyls > N,O-aminocarboxylates 
+  > N-polyamines > N,O-amino acids > O-carboxylates
+```
+
+The crossover is clear: **Fe(III) is an O-donor metal; Fe(II) is an N-donor metal.** The chelate effect and preorganization amplify stability within each class, while crystal-field stabilization provides Fe(II) with a unique bonus for strong-field (especially π-acceptor) nitrogen ligands that Fe(III) cannot access.
+
+---
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes). All log β/log K values are for aqueous solution, 20–25 °C, I ≈ 0.1 M unless otherwise noted.*
+
+---

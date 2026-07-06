@@ -1,0 +1,45 @@
+Now I have a complete picture. Let me summarize the findings.
+
+## Result
+
+**No stability constant data exists in the NIST SRD-46 database for the Pu(IV) – aspirin (acetylsalicylic acid) system.**
+
+### What was searched
+
+| Entity | SRD-46 ID | Status |
+|--------|-----------|--------|
+| Pu⁴⁺ | metal_149 | Present — 11 ligand partners, 36 measurements |
+| Acetylsalicylic acid (Aspirin) | ligand_10913 | Present but "Ligands not selected" — **0 measurements** |
+| 2-Acetoxybenzoic acid (Acetylsalicylic acid) | ligand_8701 | Present — 5 measurements, but **none with Pu(IV)** |
+
+### Aspirin's known metal partners (ligand_8701)
+
+| Metal | # Measurements |
+|-------|---------------|
+| Cu²⁺ | 2 |
+| Mg²⁺ | 1 |
+| H⁺ | 1 |
+| Ca²⁺ | 1 |
+
+### Pu(IV)'s known ligand partners (metal_149)
+
+| Ligand | # Measurements |
+|--------|---------------|
+| Nitrate ion | 9 |
+| Hydroxide ion | 5 |
+| Hydrofluoric acid | 4 |
+| Hydrogen sulfate ion | 4 |
+| Acetylacetone | 4 |
+| *(+ 6 more ligands)* | |
+
+### Closest analog: Salicylic acid
+
+Salicylic acid (ligand_9257, aspirin's hydrolysis product) has 227 VLM entries overall, but **no Pu(IV) data** was found for it either.
+
+### Chemistry context
+
+The absence of Pu(IV)–aspirin data is not surprising. Aspirin (pKₐ ≈ 3.45) is a weak monodentate carboxylate that hydrolyses readily in aqueous solution to salicylate and acetate. Pu⁴⁺ is an extremely hard, highly charged cation that undergoes strong hydrolysis itself, so its studied ligand set in SRD-46 is dominated by hard inorganic donors (F⁻, OH⁻, NO₃⁻, SO₄²⁻) and strong chelators like acetylacetone. A Pu(IV)–aspirin stability constant has apparently not been critically evaluated for inclusion in this database.
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).*
+
+---

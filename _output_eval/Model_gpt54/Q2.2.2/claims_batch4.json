@@ -1,0 +1,647 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q2.2.2\\Q2.2.2_result_batch4.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Using a direct SRD-46 aggregation of **distinct ligands per metal ion** from `ligandmetal_card`, the metal ion with the largest number of different ligands studied is **H⁺**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 71,
+            "text": "Using a direct SRD-46 aggregation of **distinct ligands per metal ion**",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 72,
+            "end": 96,
+            "text": "from `ligandmetal_card`,",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 97,
+            "end": 174,
+            "text": "the metal ion with the largest number of different ligands studied is **H⁺**.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "COUNT(DISTINCT ligand_id) AS ligand_count FROM ligandmetal_card GROUP BY metal_id, metal_name_SRD",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count FROM ligandmetal_card GROUP BY metal_id, metal_name_SRD ORDER BY ligand_count DESC LIMIT 5"
+              },
+              {
+                "step": "Step 4",
+                "tool": "get_table_schema",
+                "snippet": "| 2 | metal_id | INTEGER | True | False |\n| 3 | ligand_id | INTEGER | True | False |\n| 8 | metal_name_SRD | TEXT | False | False |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "FROM ligandmetal_card",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count FROM ligandmetal_card GROUP BY metal_id, metal_name_SRD ORDER BY ligand_count DESC LIMIT 5"
+              },
+              {
+                "step": "Step 4",
+                "tool": "get_table_schema",
+                "snippet": "## get_table_schema - 17 column(s)\n| cid | name | type | notnull | pk |\n... | 2 | metal_id | INTEGER | True | False |\n| 3 | ligand_id | INTEGER | True | False | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_68"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_68 | H^[+] | 4081 |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_id | metal_name_SRD | ligand_count |\n|----------|----------------|--------------|\n| metal_68 | H^[+] | 4081 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "ORDER BY ligand_count DESC LIMIT 5"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_68 | H^[+] | H | 1 | ✓ | [H+] | InChI=1S/p+1 | beta_totN_82 | ligand_totN_4081 | vlm_totN_20720 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Rank | Metal ion | metal_id | Different ligands studied |\n|---|---|---:|---:|\n| 1 | H⁺ | metal_68 | 4081 |\n| 2 | Cu²⁺ | metal_41 | 1951 |\n| 3 | Ni²⁺ | metal_112 | 1369 |\n| 4 | Zn²⁺ | metal_208 | 1169 |\n| 5 | Co²⁺ | metal_33 | 977 |",
+        "claims": [
+          {
+            "start": 80,
+            "end": 108,
+            "text": "| 1 | H⁺ | metal_68 | 4081 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 109,
+            "end": 139,
+            "text": "| 2 | Cu²⁺ | metal_41 | 1951 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 140,
+            "end": 171,
+            "text": "| 3 | Ni²⁺ | metal_112 | 1369 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 172,
+            "end": 203,
+            "text": "| 4 | Zn²⁺ | metal_208 | 1169 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 204,
+            "end": 233,
+            "text": "| 5 | Co²⁺ | metal_33 | 977 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_68"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_68 | H^[+] | H | 1 | ✓ | [H+] | InChI=1S/p+1 | beta_totN_82 | ligand_totN_4081 |",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_68 | H^[+] | H | 1 | ✓ | [H+] | InChI=1S/p+1 | beta_totN_82 | ligand_totN_4081 | vlm_totN_20720 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_id | metal_name_SRD | ligand_count |\n| metal_68 | H^[+] | 4081 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count FROM ligandmetal_card GROUP BY metal_id, metal_name_SRD ORDER BY ligand_count DESC LIMIT 5"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_41 | Cu^[2+] | 1951",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_id | metal_name_SRD | ligand_count |\n| metal_41 | Cu^[2+] | 1951 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count ... ORDER BY ligand_count DESC LIMIT 5"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_112"
+            ],
+            "support_class": "unsupported",
+            "evidence_snippet": "Rank value '3' is not printed in any tool result; only a sorted list shows Ni^[2+] (metal_112) with 1369, but the numeral 3 (rank) is not present verbatim in the outputs.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_id | metal_name_SRD | ligand_count |\n| metal_112 | Ni^[2+] | 1369 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count FROM ligandmetal_card GROUP BY metal_id, metal_name_SRD ORDER BY ligand_count DESC LIMIT 5"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_208"
+            ],
+            "support_class": "unsupported",
+            "evidence_snippet": "Rank value '4' is not printed in any tool result; only a sorted list shows Zn^[2+] (metal_208) with 1169, but the numeral 4 (rank) is not present verbatim in the outputs.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_id | metal_name_SRD | ligand_count |\n| metal_208 | Zn^[2+] | 1169 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count FROM ligandmetal_card GROUP BY metal_id, metal_name_SRD ORDER BY ligand_count DESC LIMIT 5"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_33"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_33 | Co^[2+] | 977",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_id | metal_name_SRD | ligand_count |\n| metal_33 | Co^[2+] | 977 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count ... ORDER BY ligand_count DESC LIMIT 5"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "If you want the answer **excluding protonation chemistry** (i.e., excluding H⁺), then the top metal ion is **Cu²⁺** with **1951** different ligands studied.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 85,
+            "text": "If you want the answer **excluding protonation chemistry** (i.e., excluding H⁺), then",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 86,
+            "end": 115,
+            "text": "the top metal ion is **Cu²⁺**",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 121,
+            "end": 155,
+            "text": "**1951** different ligands studied",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Step 7 (excludes H+): top row → | metal_41 | Cu^[2+] | 1951 |",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count FROM ligandmetal_card WHERE metal_id <> 68 GROUP BY metal_id, metal_name_SRD ORDER BY ligand_count DESC LIMIT 5"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_id | metal_name_SRD | ligand_count |\n| metal_41 | Cu^[2+] | 1951 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_41"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Cu^[2+] ligand_count = 1951 (excludes H+): | metal_41 | Cu^[2+] | 1951 |",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_id | metal_name_SRD | ligand_count |\n| metal_41 | Cu^[2+] | 1951 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "| Rank excluding H⁺ | Metal ion | metal_id | Different ligands studied |\n|---|---|---:|---:|\n| 1 | Cu²⁺ | metal_41 | 1951 |\n| 2 | Ni²⁺ | metal_112 | 1369 |\n| 3 | Zn²⁺ | metal_208 | 1169 |\n| 4 | Co²⁺ | metal_33 | 977 |\n| 5 | Cd²⁺ | metal_26 | 818 |",
+        "claims": [
+          {
+            "start": 93,
+            "end": 123,
+            "text": "| 1 | Cu²⁺ | metal_41 | 1951 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 124,
+            "end": 155,
+            "text": "| 2 | Ni²⁺ | metal_112 | 1369 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 156,
+            "end": 187,
+            "text": "| 3 | Zn²⁺ | metal_208 | 1169 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 188,
+            "end": 217,
+            "text": "| 4 | Co²⁺ | metal_33 | 977 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 218,
+            "end": 247,
+            "text": "| 5 | Cd²⁺ | metal_26 | 818 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_41"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_41 | Cu^[2+] | 1951 |",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_id | metal_name_SRD | ligand_count |\n| metal_41 | Cu^[2+] | 1951 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count FROM ligandmetal_card WHERE metal_id <> 68 GROUP BY metal_id, metal_name_SRD ORDER BY ligand_count DESC LIMIT 5"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_112"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_112 | Ni^[2+] | 1369",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_id | metal_name_SRD | ligand_count |\n| metal_112 | Ni^[2+] | 1369 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count FROM ligandmetal_card WHERE metal_id <> 68 GROUP BY metal_id, metal_name_SRD ORDER BY ligand_count DESC LIMIT 5"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_208"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_41 | Cu^[2+] | 1951 |\n| metal_112 | Ni^[2+] | 1369 |\n| metal_208 | Zn^[2+] | 1169 |",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_id | metal_name_SRD | ligand_count |\n| metal_41 | Cu^[2+] | 1951 |\n| metal_112 | Ni^[2+] | 1369 |\n| metal_208 | Zn^[2+] | 1169 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count FROM ligandmetal_card WHERE metal_id <> 68 GROUP BY metal_id, metal_name_SRD ORDER BY ligand_count DESC LIMIT 5"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_33"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_41 | Cu^[2+] | 1951 |\n| metal_112 | Ni^[2+] | 1369 |\n| metal_208 | Zn^[2+] | 1169 |\n| metal_33 | Co^[2+] | 977 |",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_id | metal_name_SRD | ligand_count |\n| metal_41 | Cu^[2+] | 1951 |\n| metal_112 | Ni^[2+] | 1369 |\n| metal_208 | Zn^[2+] | 1169 |\n| metal_33 | Co^[2+] | 977 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count FROM ligandmetal_card WHERE metal_id <> 68 GROUP BY metal_id, metal_name_SRD ORDER BY ligand_count DESC LIMIT 5"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_26"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_26 | Cd^[2+] | 818",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_id | metal_name_SRD | ligand_count |\n| metal_26 | Cd^[2+] | 818 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count FROM ligandmetal_card WHERE metal_id <> 68 GROUP BY metal_id, metal_name_SRD ORDER BY ligand_count DESC LIMIT 5"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "This was computed as `COUNT(DISTINCT ligand_id)` grouped by `metal_id`, so repeated measurements under different conditions do not inflate the totals. Source: **NIST SRD-46**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 70,
+            "text": "This was computed as `COUNT(DISTINCT ligand_id)` grouped by `metal_id`",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 75,
+            "end": 150,
+            "text": "repeated measurements under different conditions do not inflate the totals.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 151,
+            "end": 175,
+            "text": "Source: **NIST SRD-46**.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count ... GROUP BY metal_id, metal_name_SRD",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count FROM ligandmetal_card GROUP BY metal_id, metal_name_SRD"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count FROM ligandmetal_card WHERE metal_id <> 68 GROUP BY metal_id, metal_name_SRD"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "COUNT(DISTINCT ligand_id) ... GROUP BY metal_id",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count FROM ligandmetal_card GROUP BY metal_id, metal_name_SRD"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "SELECT metal_id, metal_name_SRD ... FROM ligandmetal_card",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT metal_id, metal_name_SRD, COUNT(DISTINCT ligand_id) AS ligand_count FROM ligandmetal_card ..."
+              },
+              {
+                "step": "Step 4",
+                "tool": "get_table_schema",
+                "snippet": "columns include: metal_name_SRD, ligand_name_SRD (table: ligandmetal_card)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

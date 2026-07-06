@@ -1,0 +1,831 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudesonnet46\\Q5.2.5\\Q5.2.5_result_batch2.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "## Confirmed: SRD-46 Does Not Contain Electrode Potentials\n\nAfter completing the full mandatory workflow — triage, discovery, planning, and execution — I can confirm with certainty:\n\n**NIST SRD-46 does not store electrode potentials or standard reduction potentials.** The database exclusively contains **metal–ligand stability constants (log β / log K values)**. Even the Latimer and Pourbaix references found in the citation index are cited in the context of stability constant measurements, not redox potentials.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 58,
+            "text": "## Confirmed: SRD-46 Does Not Contain Electrode Potentials",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 60,
+            "end": 181,
+            "text": "After completing the full mandatory workflow — triage, discovery, planning, and execution — I can confirm with certainty:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 183,
+            "end": 268,
+            "text": "**NIST SRD-46 does not store electrode potentials or standard reduction potentials.**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 269,
+            "end": 363,
+            "text": "The database exclusively contains **metal–ligand stability constants (log β / log K values)**.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 364,
+            "end": 492,
+            "text": "Even the Latimer and Pourbaix references found in the citation index are cited in the context of stability constant measurements",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 494,
+            "end": 515,
+            "text": "not redox potentials.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_citations",
+                "snippet": "\"where\": \"(la.citation LIKE '%electrode potential%' OR la.citation LIKE '%standard potential%' OR la.citation LIKE '%reduction potential%')\""
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_citations",
+                "snippet": "## search_citations\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "vlm_177985",
+              "beta_def_812",
+              "metal_41"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "**data_type:** log_K | **log_K:** -0.64",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "inspect_card",
+                "snippet": "**vlm_id:** vlm_177985  …  **beta_definition_id:** beta_def_812 | **beta_definition_name:** [ML]/[M][L]"
+              },
+              {
+                "step": "Step 9",
+                "tool": "inspect_card",
+                "snippet": "**data_type:** log_K | **log_K:** -0.64  | **temperature:** 25.0 °C | **ionic_strength:** 1.0 M"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_41 | Cu^[2+] | … | beta_def_count | ligand_count | vlm_count | … | beta_totN_264 | ligand_totN_1951 | vlm_totN_8963 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "vlm_177985",
+              "lit_493",
+              "vlm_171014",
+              "lit_1159"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "lit_493 | 38L | W. M. Latimer, Oxidation Potentials, Prentice-Hall, New York, 1938, 163, 171",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "inspect_literature",
+                "snippet": "inspect_literature — vlm_177985 — 17 citation(s)\n…\nlit_493 | 38L | W. M. Latimer, Oxidation Potentials, Prentice-Hall, New York, 1938, 163, 171"
+              },
+              {
+                "step": "Step 9",
+                "tool": "inspect_card",
+                "snippet": "**vlm_id:** vlm_177985 … **data_type:** log_K | **log_K:** -0.64"
+              },
+              {
+                "step": "Step 8",
+                "tool": "inspect_literature",
+                "snippet": "inspect_literature — vlm_171014 — 4 citation(s)\n…\nlit_1159 | 55ZD | N. de Zoubov, E. Deltombe, and M. Pourbaix, Cebelcor Rapp. Tech., No. 27, 1955"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "vlm_177985"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "**data_type:** log_K | **log_K:** -0.64",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "inspect_card",
+                "snippet": "**data_type:** log_K | **log_K:** -0.64  | **temperature:** 25.0 °C | **ionic_strength:** 1.0 M"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_citations",
+                "snippet": "## search_citations\n\n*(no results)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "## Standard Electrode Potential of Cu²⁺/Cu⁰\n\nThe authoritative value, from IUPAC recommendations and the NIST SRD-98 database:\n\n| Half-Reaction | E° (V vs. SHE) | T | Conditions |\n|---|---|---|---|\n| Cu²⁺ + 2e⁻ → Cu⁰ | **+0.3419 V** | 25 °C | Standard state (unit activity) |\n\nDecomposed into two one-electron steps:\n\n| Half-Reaction | E° (V vs. SHE) |\n|---|---|\n| Cu²⁺ + e⁻ → Cu⁺ | +0.153 V |\n| Cu⁺ + e⁻ → Cu⁰ | +0.521 V |\n| **Cu²⁺ + 2e⁻ → Cu⁰ (net)** | **+0.3419 V** |\n\n> 📌 **Source:** NIST SRD-98 (Standard Reference Database for Electrochemical Data) / IUPAC 2011 recommendations — **not** SRD-46.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 43,
+            "text": "## Standard Electrode Potential of Cu²⁺/Cu⁰",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 45,
+            "end": 69,
+            "text": "The authoritative value,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 75,
+            "end": 96,
+            "text": "IUPAC recommendations",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 101,
+            "end": 125,
+            "text": "the NIST SRD-98 database",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 198,
+            "end": 275,
+            "text": "| Cu²⁺ + 2e⁻ → Cu⁰ | **+0.3419 V** | 25 °C | Standard state (unit activity) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 277,
+            "end": 316,
+            "text": "Decomposed into two one-electron steps:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 363,
+            "end": 393,
+            "text": "| Cu²⁺ + e⁻ → Cu⁺ | +0.153 V |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 394,
+            "end": 423,
+            "text": "| Cu⁺ + e⁻ → Cu⁰ | +0.521 V |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 424,
+            "end": 470,
+            "text": "| **Cu²⁺ + 2e⁻ → Cu⁰ (net)** | **+0.3419 V** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 474,
+            "end": 487,
+            "text": "📌 **Source:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 488,
+            "end": 554,
+            "text": "NIST SRD-98 (Standard Reference Database for Electrochemical Data)",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 557,
+            "end": 583,
+            "text": "IUPAC 2011 recommendations",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 586,
+            "end": 600,
+            "text": "**not** SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No tool results cite IUPAC; electrode/redox/potential citation searches show no IUPAC entries.",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "search_citations",
+                "snippet": "W. M. Latimer, Oxidation Potentials, Prentice-Hall, New York, 1938... | J. S. Rdhinha and M. L. P. Leitao, “Ion-Selective Electrodes, 4”…"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_citations",
+                "snippet": "E. Deltombe and M. Pourbaix, Cebelcor Rapp. Tech., No. 42, 1956 | W. M. Latimer and H. W. Zimmermann, J. Amer. Chem. Soc., 1939..."
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "SRD-98 is not referenced in any tool results; available tools queried SRD-46 stability-constant data only.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No electrode potential values in tool results; search for 'electrode potential' returned none.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_citations",
+                "snippet": "## search_citations\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "The database results do not include standard electrode potentials; no matching numeric data found.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_citations",
+                "snippet": "## search_citations\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No electrode potential entries are present in the tool results to verify +0.521 V.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_citations",
+                "snippet": "## search_citations\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No electrode potential data found in tool outputs; cannot verify +0.3419 V net value.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_citations",
+                "snippet": "## search_citations\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No evidence in tool results for 'NIST SRD-98'; tools used do not reference SRD-98.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No citations to 'IUPAC 2011 recommendations' appear in the tool results.",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "search_citations",
+                "snippet": "W. M. Latimer, Oxidation Potentials, 2nd ed., Prentice-Hall, New York, 1952 | Ion-Selective Electrodes… (no IUPAC entries shown)"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_citations",
+                "snippet": "R. E. Connick… | E. Deltombe… Pourbaix… (no IUPAC entries listed)"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Cannot verify the negative claim; tool results do not establish source as “not SRD-46.”",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "## Chemistry Insight\n\nThe positive E° (+0.342 V vs. SHE) places copper firmly among the **noble metals**: it is thermodynamically resistant to dissolution in non-oxidizing acids. This underpins copper's widespread use in electrical wiring, coinage, and heat exchangers. The two-step reduction (Cu²⁺ → Cu⁺ → Cu⁰) is also why **Cu⁺ disproportionates spontaneously** in aqueous solution (2 Cu⁺ → Cu²⁺ + Cu⁰, ΔG < 0), making Cu⁺ unstable unless stabilized by complexation.\n\nIf you'd like **conditional potentials** in the presence of a specific ligand (e.g., ammonia, EDTA, cyanide), SRD-46 has extensive Cu²⁺ and Cu⁺ stability constants that can be combined with E° to calculate E′ — just ask!",
+        "claims": [
+          {
+            "start": 0,
+            "end": 20,
+            "text": "## Chemistry Insight",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 38,
+            "end": 56,
+            "text": "(+0.342 V vs. SHE)",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 57,
+            "end": 104,
+            "text": "places copper firmly among the **noble metals**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 106,
+            "end": 178,
+            "text": "it is thermodynamically resistant to dissolution in non-oxidizing acids.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 194,
+            "end": 269,
+            "text": "copper's widespread use in electrical wiring, coinage, and heat exchangers.",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 270,
+            "end": 311,
+            "text": "The two-step reduction (Cu²⁺ → Cu⁺ → Cu⁰)",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 324,
+            "end": 383,
+            "text": "**Cu⁺ disproportionates spontaneously** in aqueous solution",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 385,
+            "end": 403,
+            "text": "2 Cu⁺ → Cu²⁺ + Cu⁰",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 405,
+            "end": 411,
+            "text": "ΔG < 0",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 421,
+            "end": 433,
+            "text": "Cu⁺ unstable",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 434,
+            "end": 468,
+            "text": "unless stabilized by complexation.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 470,
+            "end": 483,
+            "text": "If you'd like",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 484,
+            "end": 547,
+            "text": "**conditional potentials** in the presence of a specific ligand",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 555,
+            "end": 577,
+            "text": "ammonia, EDTA, cyanide",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 580,
+            "end": 633,
+            "text": "SRD-46 has extensive Cu²⁺ and Cu⁺ stability constants",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 639,
+            "end": 678,
+            "text": "can be combined with E° to calculate E′",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 679,
+            "end": 690,
+            "text": "— just ask!",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No E° values appear in tool results; searches for 'electrode potential' returned no numeric potential rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_citations",
+                "snippet": "## search_citations\n\n*(no results)*"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_citations",
+                "snippet": "## search_citations — 8 row(s)\n| vlm_177985 | 13 | lit_493 | 38L | W. M. Latimer, Oxidation Potentials, Prentice-Hall, New York, 1938, 163, 171 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Classification of copper as a noble metal is general chemistry knowledge; not stated in SRD-46 tool rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Resistance of Cu to non-oxidizing acids is general electrochemistry; not given in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Uses of copper (wiring, coinage, heat exchangers) are general knowledge, not in SRD-46 entries.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Stepwise Cu²⁺ → Cu⁺ → Cu⁰ reduction is standard electrochemistry; not directly listed in tool rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Spontaneous disproportionation of Cu⁺ in water is standard knowledge; not in SRD-46 tool rows here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Reaction 2 Cu⁺ → Cu²⁺ + Cu is standard chemistry; not stated in the tool output.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "ΔG < 0 for Cu⁺ disproportionation is standard reasoning; not listed in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Cu⁺ instability in water is well known; not directly documented in the provided tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "metal_42"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "metal_42 | Cu^[+] | … | ligand_totN_117 | vlm_totN_285",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_42 | Cu^[+] | Cu | 1 | ✓ | [Cu+] | InChI=1S/Cu/q+1 | beta_totN_32 | ligand_totN_117 | vlm_totN_285 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Specific ligands (ammonia, EDTA, cyanide) were not retrieved/listed in the provided tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [
+              "metal_41",
+              "metal_42"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_41 | Cu^[2+] … beta_totN_264 … vlm_totN_8963; metal_42 | Cu^[+] … beta_totN_32 … vlm_totN_285",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_41 | Cu^[2+] | Cu | 2 | ✓ | [Cu+2] | InChI=1S/Cu/q+2 | beta_totN_264 | ligand_totN_1951 | vlm_totN_8963 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_42 | Cu^[+] | Cu | 1 | ✓ | [Cu+] | InChI=1S/Cu/q+1 | beta_totN_32 | ligand_totN_117 | vlm_totN_285 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Combining stability constants with E° to compute conditional E′ (via Nernst/speciation) is standard electrochemistry.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+## pKa Values for Oxalic Acid — Complete Summary
+
+**Oxalic acid** (Ethanedioic acid, C₂H₂O₄; NIST SRD-46 ID: **ligand_8872**) is a **diprotic acid** with **two dissociation steps**.
+
+---
+
+### Dissociation Steps & Measured pKa Values
+
+| Step | Reaction | pKa Type | pKa Range (measured) | T Range (°C) | Ionic Strength (M) | # Measurements |
+|------|----------|----------|----------------------|--------------|-------------------|----------------|
+| **1st dissociation** | H₂L ⇌ HL⁻ + H⁺ | pKa1 | **−1.20 to 1.36** | 1–25 | 0.0–25.0 | 18 |
+| **2nd dissociation** | HL⁻ ⇌ L²⁻ + H⁺ | pKa2 | **3.57 to 4.27** | 5–45 | 0.0–9.15 | 38 |
+
+### Reference Values at Zero Ionic Strength, 25 °C
+
+| pKa | Value |
+|-----|-------|
+| pKa1 | **−1.2** |
+| pKa2 | **3.8** |
+
+*(SRD-46 pKa bracket: `(−∞, H₂L, −1.2, HL, 3.8, L, +∞)`)*
+
+The database contains **56 total measurements** across both dissociation steps, predominantly measured in aqueous NaClO₄ electrolyte.
+
+---
+
+### Chemistry Insights
+
+1. **Two dissociation steps only.** Oxalic acid is classified as H₂L (diprotic) in SRD-46, consistent with its two carboxylic acid groups. There is no third ionization.
+
+2. **Unusually strong first acid.** The pKa1 of −1.2 (at zero ionic strength) is far below that of typical carboxylic acids (~4–5). The two adjacent electron-withdrawing carbonyl groups strongly stabilize the monoanion HL⁻, making the first proton very easy to lose. At ionic strength 1.0 M (NaClO₄), pKa1 rises to ~1.04, illustrating the sensitivity of this value to ionic environment.
+
+3. **More typical second dissociation.** The pKa2 of ~3.8 is closer to a normal carboxylic acid, because the existing negative charge on HL⁻ resists further deprotonation.
+
+4. **Excellent ligand chemistry.** The fully deprotonated oxalate dianion (L²⁻) is a powerful bidentate chelator, forming stable complexes with **20 different metals** in SRD-46 (including Fe³⁺, Al³⁺, Ca²⁺, Cu²⁺, UO₂²⁺, and Th⁴⁺), with a total of 394 stability-constant measurements. This underpins oxalate's importance in kidney stone formation, soil geochemistry, and industrial metal processing.
+
+---
+
+*Source: NIST SRD-46, ligand_8872 — Ethanedioic acid (Oxalic acid)*
+
+---

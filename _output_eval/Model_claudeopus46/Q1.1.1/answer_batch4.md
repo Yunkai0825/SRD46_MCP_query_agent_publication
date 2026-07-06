@@ -1,0 +1,65 @@
+## Stability Constants for the Copper(II)–Glycine System
+
+**Source:** NIST Standard Reference Database 46 (SRD-46)
+
+The Cu²⁺–glycine system (metal_41 + ligand_5760) has **30 measurements** covering two cumulative equilibria:
+
+- **β₁:** Cu²⁺ + L⁻ ⇌ CuL⁺ (log β₁)
+- **β₂:** Cu²⁺ + 2 L⁻ ⇌ CuL₂ (log β₂)
+
+where L⁻ = glycinate anion (glycine defined as HL, pKₐ values: H₂L⁺ 2.33, HL 9.57).
+
+---
+
+### log K Values (Cumulative Formation Constants)
+
+#### β₁: [ML]/[M][L]
+
+| T (°C) | I (mol/L) | log K |
+|---------|-----------|-------|
+| 10 | 0 | 8.80 |
+| 25 | 0 | 8.56 |
+| 25 | 0.1 | 8.19 |
+| 25 | 0.5 | 8.10 |
+| 25 | 1.0 | 8.20 |
+| 25 | 2.0 | 8.38 |
+| 25 | 2.5 | 8.34 |
+| 37 | 0.15 | 7.99 |
+| 40 | 0 | 8.37 |
+
+#### β₂: [ML₂]/[M][L]²
+
+| T (°C) | I (mol/L) | log K |
+|---------|-----------|-------|
+| 10 | 0 | 16.30 |
+| 25 | 0 | 15.70 |
+| 25 | 0.1 | 15.10 |
+| 25 | 0.5 | 15.00 |
+| 25 | 1.0 | 15.10 |
+| 25 | 2.0 | 15.40 |
+| 25 | 2.5 | 15.40 |
+| 37 | 0.15 | 14.69 |
+| 40 | 0 | 15.30 |
+
+---
+
+### Thermodynamic Parameters (at I = 0)
+
+| Species | T (°C) | ΔH (kJ/mol) | ΔS (J/mol·K) |
+|---------|--------|-------------|---------------|
+| CuL (β₁) | 10 | −26.8 | — |
+| CuL (β₁) | 25 | −25.1 | 79.5 |
+| CuL (β₁) | 40 | −23.4 | — |
+| CuL (β₁) | 25, I=0.1 | −25.1 | 72.4 |
+| CuL₂ (β₂) | 10 | −56.5 | — |
+| CuL₂ (β₂) | 25 | −54.4 | 118.0 |
+| CuL₂ (β₂) | 40 | −52.3 | — |
+| CuL₂ (β₂) | 25, I=0.1 | −54.4 | 106.7 |
+
+---
+
+### Chemistry Insights
+
+The **benchmark values at 25 °C, I = 0** are **log β₁ = 8.56** and **log β₂ = 15.70**, giving a stepwise log K₂ ≈ 7.14. The modest drop from K₁ to K₂ reflects the statistical effect and slight steric crowding as a second glycinate coordinates, but Cu²⁺ readily forms the bis-complex CuL₂ — consistent with its preference for square-planar/tetragonal geometry. The large positive ΔS values indicate significant desolvation of both Cu²⁺(aq) and glycinate upon chelation, a hallmark of the chelate effect with this bidentate (N,O) amino acid ligand. The slight decrease in log K with increasing temperature (exothermic reaction) is consistent with the negative ΔH values reported.
+
+---

@@ -1,0 +1,51 @@
+## Zn²⁺–EDTA Stability Constant vs. Ionic Strength — Extrapolation to I = 0
+
+### Raw Data from NIST SRD-46
+
+All values are for the equilibrium **[ML]/[M][L]** (beta_def_812: M + L ⇌ ML) in aqueous solution.
+
+| vlm_id | T (°C) | I (mol/L) | log K | Reaction Type | Electrolyte |
+|--------|--------|-----------|-------|---------------|-------------|
+| vlm_108712 | 25 | **0.0** | **16.50** | Thermodynamic | — |
+| vlm_108713 | 20 | 0.1 | 16.44 | Concentration | KNO₃ |
+| vlm_108714 | 25 | 0.1 | 16.26 | Concentration | KNO₃ |
+| vlm_108715 | 25 | 0.5 | 16.44 | Concentration | KNO₃ |
+| vlm_108716 | 25 | 1.0 | 16.70 | Concentration | KNO₃ |
+| vlm_108717 | 25 | 3.0 | 17.20 | Concentration | KNO₃ |
+
+### Extrapolation to I = 0
+
+Filtering to **25 °C** concentration-based values (vlm_108714 through vlm_108717) to keep temperature consistent:
+
+| I (mol/L) | √I | log K (conc.) |
+|-----------|-----|---------------|
+| 0.1 | 0.316 | 16.26 |
+| 0.5 | 0.707 | 16.44 |
+| 1.0 | 1.000 | 16.70 |
+| 3.0 | 1.732 | 17.20 |
+
+The concentration-based log K **increases** with ionic strength — a characteristic pattern for highly charged reactants (Zn²⁺ + L⁴⁻) where activity coefficient corrections dominate the apparent constant.
+
+A simple **linear fit** of log K vs. √I across these four points gives:
+
+- Slope ≈ (17.20 − 16.26) / (1.732 − 0.316) ≈ **0.66 per √I unit**
+- Intercept (√I → 0) ≈ 16.26 − 0.66 × 0.316 ≈ **16.05**
+
+A least-squares fit yields an extrapolated value of approximately **log K ≈ 16.0–16.1** at I = 0.
+
+### Comparison with the Database I = 0 Value
+
+| Source | log K at I = 0 |
+|--------|----------------|
+| **Database thermodynamic value** (vlm_108712) | **16.50** |
+| **Linear extrapolation** from concentration constants | **~16.05** |
+
+The extrapolated value is about **0.4–0.5 log units lower** than the database thermodynamic value.
+
+### Chemistry Insight
+
+The discrepancy is expected and instructive. A simple linear extrapolation in √I is a rough approximation — the Debye–Hückel framework predicts a more complex, non-linear dependence, especially for a reaction involving a 2+ cation and a 4− anion (net charge product z₊z₋ = −8). The concentration-based constants at finite I already absorb activity coefficient effects differently than the true thermodynamic constant. Additionally, the data at higher ionic strengths (I = 1–3 M) are well beyond the validity range of simple Debye–Hückel theory, pulling the linear fit away from the true I = 0 intercept. A proper extrapolation using **specific ion interaction theory (SIT)** or **Pitzer equations** would likely converge much closer to the database value of **log K = 16.50**.
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).*
+
+---

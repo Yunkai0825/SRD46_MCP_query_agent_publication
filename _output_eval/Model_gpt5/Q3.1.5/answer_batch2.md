@@ -1,0 +1,34 @@
+Below is a practical, Ca‑selective short‑list, plus two numeric “anchor” comparisons from SRD‑46 showing why some popular polycarboxylates (citrate) and polyphosphates (pyrophosphate) are actually poor choices when Cu2+ is present.
+
+Numeric exemplars (matched pairs from SRD‑46)
+| Ligand | Species (1:1) | Ca2+ (logβ or logK1) | Cu2+ (logβ or logK1) | Conditions | Implication |
+|---|---|---:|---:|---|---|
+| Citrate | ML (aqueous) | 3.31 | 5.41 | 25 °C; I = 0.10 M NaClO4; water | Cu2+ binds ~2 log units stronger → not Ca‑selective |
+| Pyrophosphate (PPi) | ML (stepwise K1) | ~5.6–6.2 | ~7.8–8.6 | 25 °C; I ≈ 0.1–0.2 M | Cu2+ ≫ Ca2+ → PPi will also sequester Cu2+ |
+
+Short‑list: ligands that bind Ca2+ strongly yet are relatively weak for Cu2+
+| Ligand (type) | Ca2+ affinity | Cu2+ affinity | Mechanism/notes | Useful pH window |
+|---|---|---|---|---|
+| Fluoride (F−) | Strong (CaF+, CaF2(s)) | Weak (mostly aquo/CuF+) | Efficient Ca masking by CaF2 precipitation; check for Al3+/Fe3+ in matrix | ~4–7 (HF below pH ~4 reduces masking) |
+| Carbonate (CO3^2−/HCO3−) | Strong for Ca (CaCO3(s) above pH ≳8–9) | Weaker Cu–carbonate | Raise pH to precipitate CaCO3 while keeping Cu largely soluble | ~8–10 (precipitation control) |
+| Oxalate (C2O4^2−) | Strong for Ca (CaC2O4·H2O(s), very low solubility) | Cu forms soluble oxalato complexes | Precipitation route that removes Ca with limited Cu uptake | ≥3–7 (avoid very low pH; manage solids) |
+| Inorganic phosphate (HPO4^2−/PO4^3−) | Strong (CaHPO4/Ca3(PO4)2; strong complexation) | Relatively weaker than Ca | Simple phosphate salts; avoid N‑donor phosphates that can chelate Cu | ~6–8 (HPO4^2−), >8 (PO4^3−) |
+| Phosphate monoesters (e.g., methyl/aryl phosphate) | Strong (hard O‑donors) | Weaker than with PPi | Deprotonate near neutral pH; favor Ca > Cu | ~6–8 |
+| Gluconate (hydroxycarboxylate) | Strong Ca complexation | Weaker Cu2+ binding | Chelation via carboxylate + polyol; good near neutral pH | ≥4 to neutral |
+| Sulfate/sulfonates (e.g., sulfate, sulfamate) | Moderate | Weak | Can temper Ca without much Cu sequestration; weaker overall than above | Near‑neutral |
+| EGTA (EDTA derivative) | Strong for Ca2+ | Relatively weaker for Cu2+ (per SRD‑46 entry) | Effective near neutral–alkaline pH; use when precipitation is undesirable | ~7–9 |
+
+Avoid when Cu2+ must remain uncomplexed
+- Aminopolycarboxylates (EDTA, NTA family): Cu2+ ≫ Ca2+ (e.g., EDTA: Cu ~18.8 vs Ca ~10.7; NTA: Cu >> Ca).
+- Polyphosphates like pyrophosphate (PPi): Cu2+ complexes stronger than Ca2+ under similar conditions.
+- Citrate: Cu2+ binds ~2 log units more strongly than Ca2+ (see table above).
+
+How to choose in practice
+- If precipitation is acceptable: carbonate, oxalate, or fluoride efficiently remove Ca2+ while sparing Cu2+. Tune pH (carbonate/oxalate) and dose (fluoride) to avoid collateral losses.
+- If you must stay homogeneous: simple phosphate/monoesters or gluconate bias toward Ca2+ but leave Cu2+ comparatively labile. EGTA is another option when a Ca‑biased chelator is needed without solids.
+
+Would you like me to run a matched comparison of 1:1 formation constants (logK1) for Ca2+ vs Cu2+ at your specific pH, ionic strength, and background electrolyte? I can pull and rank ligands by Δ = logK1(Ca) − logK1(Cu) under those conditions from SRD‑46.
+
+Source: NIST SRD‑46 Stability Constants of Metal Complexes database (ligand/metal entries and summaries retrieved in this session).
+
+---

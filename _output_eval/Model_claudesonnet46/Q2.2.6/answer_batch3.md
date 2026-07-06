@@ -1,0 +1,38 @@
+## Final Answer
+
+Here are the confirmed results queried directly from the NIST SRD-46 database:
+
+| Metric | Value |
+|---|---|
+| **Total metals in database** | 200 |
+| **Metals with < 5 VLM measurements** | **84** |
+| **Fraction** | **84 / 200 = 42.0%** |
+
+---
+
+### Breakdown by VLM Count
+
+| VLM Count | # of Metals | Representative Examples |
+|---|---|---|
+| 0 | 50 | Ag³⁺, Am⁴⁺, Cr⁴⁺, Ir³⁺, Ir⁴⁺, Mn⁴⁺, Pb⁴⁺, In⁺, No²⁺ |
+| 1 | 12 | CrO₄²⁻, Ge²⁺, Md³⁺, Np³⁺, Re²⁺, UO₂⁺ |
+| 2 | 16 | Eu²⁺, OsO₃, OsO₄, Ru³⁺, TcO²⁺, Mo₂O₇²⁻ |
+| 3 | 3 | Fm³⁺, EtNH₃⁺, Te⁶⁺ |
+| 4 | 3 | MeB(OH)₂, m-NO₂PhB(OH)₂, Pa⁵⁺ |
+| **Total < 5** | **84** | — |
+
+---
+
+### Chemistry Insight
+
+Nearly **42% of all catalogued metals** have fewer than 5 VLM measurements — a striking data sparsity that reflects real experimental constraints:
+
+1. **Unstable oxidation states** (Cr⁴⁺, Mn⁴⁺, Pb⁴⁺, Ir³⁺/⁴⁺) are too reactive or short-lived in aqueous solution to permit systematic equilibrium measurements.
+2. **Radioactive transactinides** (Md³⁺, Fm³⁺, No²⁺) are only available in sub-microgram quantities, making classical potentiometric or calorimetric studies impractical.
+3. **Exotic organometallic cations** (Bu₄N⁺, Ph₄As⁺, OsO₄) have minimal coordination chemistry in aqueous media and are rarely studied as central metal ions.
+
+The remaining **116 metals (58%)** carry the vast majority of the database's VLM measurements, with a handful of workhorse metals — Cu²⁺ (~8,963 VLMs), H⁺ (~20,720), Ni²⁺ (~5,325), Co²⁺ (~2,977), Cd²⁺ (~2,828) — dominating the dataset.
+
+*Source: NIST SRD-46, `metal_card` LEFT JOIN `vlm` tables, 200 total metal entries.*
+
+---

@@ -1,0 +1,582 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q5.2.3\\Q5.2.3_result_batch1.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "SRD-46 does **not show any stability-constant entries at 200 °C** in the broad searches I ran, and it also does **not expose pressure as a searchable indexed field** in the stability tools I checked.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 65,
+            "text": "SRD-46 does **not show any stability-constant entries at 200 °C**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 66,
+            "end": 98,
+            "text": "in the broad searches I ran, and",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 99,
+            "end": 165,
+            "text": "it also does **not expose pressure as a searchable indexed field**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 166,
+            "end": 199,
+            "text": "in the stability tools I checked.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "\"where\": \"(s.temperature_c BETWEEN 180 AND 220)\",\n  \"limit\": 200\n}\n\n## search_stability\n\n*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(s.temperature_c BETWEEN 180 AND 220)\",\n  \"order_by\": \"s.temperature_c ASC\",\n  \"limit\": 200\n}\n\n## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(s.temperature_c BETWEEN 195 AND 205)\",\n  \"order_by\": \"s.temperature_c ASC\",\n  \"limit\": 100\n}\n\n## search_stability\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Tool results do not show stability table schema/fields; no evidence about a 'pressure' search field.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "get_table_schema",
+                "snippet": "Error - Table 'ligandmetal_stability_measured' not found. Available tables: eq_collection_unassigned, …"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(s.temperature_c BETWEEN 195 AND 205)\" (temperature shown; no info on pressure field)."
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Query | Result |\n|---|---|\n| Stability records with 195–205 °C | No results |\n| Stability records with 180–220 °C | No results |\n| Pressure-filter capability in searched stability interface | Not available / not evident from accessible schema |",
+        "claims": [
+          {
+            "start": 29,
+            "end": 79,
+            "text": "| Stability records with 195–205 °C | No results |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 80,
+            "end": 130,
+            "text": "| Stability records with 180–220 °C | No results |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 131,
+            "end": 246,
+            "text": "| Pressure-filter capability in searched stability interface | Not available / not evident from accessible schema |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(s.temperature_c BETWEEN 195 AND 205)\", \"order_by\": \"s.temperature_c ASC\", \"limit\": 100"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(s.temperature_c BETWEEN 180 AND 220)\", \"order_by\": \"s.temperature_c ASC\", \"limit\": 200"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Error - Table 'ligandmetal_stability_measured' not found. Available tables: eq_collection_unassigned, eq_edge, eq_edge_species, ...",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "get_table_schema",
+                "snippet": "Error - Table 'ligandmetal_stability_measured' not found.\nAvailable tables: eq_collection_unassigned, eq_edge, eq_edge_species, eq_export_metadata, eq_map, eq_map_collection, eq_map_stray, eq_network, eq_network_species, eq_node, eq_node_species, sqlite_sequence"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(s.temperature_c BETWEEN 195 AND 205)\""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "So, from the SRD-46 data I could retrieve, there are **no indexed stability constants available at 200 °C and 50 bar**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "So,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 4,
+            "end": 42,
+            "text": "from the SRD-46 data I could retrieve,",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 43,
+            "end": 52,
+            "text": "there are",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 53,
+            "end": 118,
+            "text": "**no indexed stability constants available at 200 °C and 50 bar**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 118,
+            "end": 119,
+            "text": ".",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "## search_stability\n\n*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "search_stability",
+                "snippet": "**Args where**: (s.temperature_c BETWEEN 195 AND 205)\n## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_citations",
+                "snippet": "## search_citations — 5 row(s)\n| example_vlm_id | vlm_count | lit_id | shortcut | citation |\n| vlm_93606 | 445 | lit_130 | 23Ba | N. Bjerrum, Z. Phys. Chem., 1923, 104, 147 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "*(no results)* for s.temperature_c BETWEEN 195 AND 205",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "search_stability",
+                "snippet": "**Args:** {\"where\": \"(s.temperature_c BETWEEN 195 AND 205)\", \"order_by\": \"s.temperature_c ASC\", \"limit\": 100}\n## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "**Args:** {\"where\": \"(s.temperature_c BETWEEN 180 AND 220)\", \"order_by\": \"s.temperature_c ASC\", \"limit\": 200}\n## search_stability\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "A couple of caveats:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 20,
+            "text": "A couple of caveats:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "| Caveat | Meaning |\n|---|---|\n| Pressure is rarely indexed in SRD-46 search fields | Even if a paper measured at elevated pressure, that detail may only appear in the original article text, not as a searchable database field |\n| No hits at 180–220 °C | This suggests the database likely has little or no high-temperature stability-constant coverage in that range, at least through the standard stability search |",
+        "claims": [
+          {
+            "start": 31,
+            "end": 227,
+            "text": "| Pressure is rarely indexed in SRD-46 search fields | Even if a paper measured at elevated pressure, that detail may only appear in the original article text, not as a searchable database field |",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 228,
+            "end": 413,
+            "text": "| No hits at 180–220 °C | This suggests the database likely has little or no high-temperature stability-constant coverage in that range, at least through the standard stability search |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Cannot verify from provided tool outputs: no schema/results shown for pressure fields, so we cannot confirm that pressure is rarely indexed in SRD-46 search fields.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "search_stability where: (s.temperature_c BETWEEN 180 AND 220) → (no results)",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "Args: {\"where\":\"(s.temperature_c BETWEEN 180 AND 220)\",\"order_by\":\"s.temperature_c ASC\",\"limit\":200} … ## search_stability … *(no results)*"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_stability",
+                "snippet": "Args: {\"where\":\"(s.temperature_c BETWEEN 195 AND 205)\",\"order_by\":\"s.temperature_c ASC\",\"limit\":100} … ## search_stability … *(no results)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "If you want, I can next do one of these:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 40,
+            "text": "If you want, I can next do one of these:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "| Option | What I would search |\n|---|---|\n| Specific system | e.g., Fe–Cl, Cu–NH3, UO2–carbonate, etc., and check whether any high-T constants exist |\n| Near-200 °C survey by metal class | hydrolysis/halide/carbonate systems often have the best high-temperature coverage |\n| Literature-focused hunt | search for papers in SRD-46 that might mention **50 bar** even if the pressure is not indexed in the equilibrium tables |",
+        "claims": [
+          {
+            "start": 43,
+            "end": 151,
+            "text": "| Specific system | e.g., Fe–Cl, Cu–NH3, UO2–carbonate, etc., and check whether any high-T constants exist |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 152,
+            "end": 273,
+            "text": "| Near-200 °C survey by metal class | hydrolysis/halide/carbonate systems often have the best high-temperature coverage |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 274,
+            "end": 423,
+            "text": "| Literature-focused hunt | search for papers in SRD-46 that might mention **50 bar** even if the pressure is not indexed in the equilibrium tables |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Guidance/examples (Fe–Cl, Cu–NH3, UO2–carbonate) rather than a factual claim; no specific system rows or high‑T constants were retrieved in the provided tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General domain observation about which systems have better high‑T coverage; the provided tool results do not enumerate or compare high‑T coverage by system.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Instructional suggestion to search SRD‑46 for papers mentioning 50 bar; no pressure metadata or 50 bar values appear in the provided tool results.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 7,
+        "text": "Source: NIST SRD-46.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 7,
+            "text": "Source:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 8,
+            "end": 19,
+            "text": "NIST SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool results are present from this run, validating the provenance claim to SRD-46.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_citations",
+                "snippet": "## search_citations — 5 row(s)\n| example_vlm_id | vlm_count | lit_id | shortcut | citation |\n| vlm_93606 | 445 | lit_130 | 23Ba | N. Bjerrum, Z. Phys. Chem., 1923, 104, 147 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n*(no results)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 8,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

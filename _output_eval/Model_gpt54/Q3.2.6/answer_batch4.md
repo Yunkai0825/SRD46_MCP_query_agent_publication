@@ -1,0 +1,67 @@
+Using the SRD-46 values:
+
+| Quantity | Value |
+|---|---:|
+| pKa1 of malonic acid | 2.83 |
+| pKa2 of malonic acid | 5.69 |
+| intrinsic Cu²⁺ + malonate²⁻ ⇌ CuL log K | 3.33 |
+| pH | 4.00 |
+
+First compute the fraction of free ligand present as fully deprotonated malonate, \(L^{2-}\), at pH 4:
+
+\[
+\alpha_{L^{2-}}=\frac{K_{a1}K_{a2}}{[H^+]^2+[H^+]K_{a1}+K_{a1}K_{a2}}
+\]
+
+with
+
+\[
+K_{a1}=10^{-2.83}=1.48\times 10^{-3}
+\]
+\[
+K_{a2}=10^{-5.69}=2.04\times 10^{-6}
+\]
+\[
+[H^+]=10^{-4}
+\]
+
+This gives:
+
+\[
+\alpha_{L^{2-}} \approx 0.022
+\]
+
+So only about 2.2% of uncomplexed malonic acid is present as the dianion that binds Cu²⁺ in the intrinsic equilibrium.
+
+Now convert the intrinsic stability constant to the conditional one:
+
+\[
+K' = K \,\alpha_{L^{2-}}
+\]
+
+Since
+
+\[
+\log K = 3.33 \Rightarrow K = 10^{3.33} \approx 2.14\times 10^3
+\]
+
+then
+
+\[
+K' \approx (2.14\times 10^3)(0.022) \approx 47
+\]
+
+and therefore
+
+| Constant | Value |
+|---|---:|
+| \(K'\) at pH 4 | \(\approx 4.7\times 10^{1}\) |
+| \(\log K'\) at pH 4 | \(\approx 1.67\) |
+
+So the **conditional stability constant at pH 4 is approximately \(\log K' \approx 1.67\)**.
+
+The key idea is that the reported Cu–malonate log \(K\) uses **malonate\(^{2-}\)** as the binding form, but at pH 4 most ligand is still protonated as \(HL^-\). That proton competition lowers the effective Cu²⁺ binding by about **1.66 log units** relative to the intrinsic value.
+
+*Source: NIST SRD-46 (malonic acid pKa values and Cu²⁺–malonate stability constant).*
+
+---

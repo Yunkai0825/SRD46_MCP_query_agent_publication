@@ -1,0 +1,817 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q3.1.4\\Q3.1.4_result_batch4.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "SRD-46 shows **no Fe(II) stability records at all in the retrieved iron data**, and **74 distinct ligands** with **Fe(III)** logK data. So the number of ligands studied with **both Fe(II) and Fe(III)** is:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 78,
+            "text": "SRD-46 shows **no Fe(II) stability records at all in the retrieved iron data**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 84,
+            "end": 134,
+            "text": "**74 distinct ligands** with **Fe(III)** logK data",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 136,
+            "end": 205,
+            "text": "So the number of ligands studied with **both Fe(II) and Fe(III)** is:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_62",
+              "metal_61"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "metal_61 | Fe^[3+] | ligand_6165 | Nitrilotriacetic acid (NTA)",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id IN (metal_61, metal_62))\""
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "logK — 74 metal-ligand pair(s)\n| metal_id | metal_name | ... |\n| metal_61 | Fe^[3+] | ligand_6165 | Nitrilotriacetic acid (NTA) | ..."
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_id | metal_name_SRD | symbol_pure | charge |\n| metal_62 | Fe^[2+] | Fe | 2 |\n| metal_61 | Fe^[3+] | Fe | 3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "logK — 74 metal-ligand pair(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "logK — 74 metal-ligand pair(s)"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_id | metal_name | ligand_id | ligand_name |\n| metal_61 | Fe^[3+] | ligand_6165 | Nitrilotriacetic acid (NTA) | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Metric | Count |\n|---|---:|\n| Distinct ligands with Fe(III) logK data | 74 |\n| Distinct ligands with Fe(II) logK data | 0 |\n| Distinct ligands studied with both Fe(II) and Fe(III) | 0 |",
+        "claims": [
+          {
+            "start": 30,
+            "end": 78,
+            "text": "| Distinct ligands with Fe(III) logK data | 74 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 79,
+            "end": 125,
+            "text": "| Distinct ligands with Fe(II) logK data | 0 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 126,
+            "end": 187,
+            "text": "| Distinct ligands studied with both Fe(II) and Fe(III) | 0 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_61"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "logK — 74 metal-ligand pair(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "### logK — 74 metal-ligand pair(s)"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | ... |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "where: (c.metal_id IN (metal_61, metal_62))",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id IN (metal_61, metal_62))\""
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "All listed logK rows show metal_61 (Fe^[3+]); no metal_62 entries appear."
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "### logK — 74 metal-ligand pair(s)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "where: (c.metal_id IN (metal_61, metal_62))",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id IN (metal_61, metal_62))\""
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "All logK pairs listed are for metal_61 (Fe^[3+]); no metal_62 rows listed, so no ligand has both."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "Because the overlap is **zero**, SRD-46 does **not support a direct Fe²⁺ vs Fe³⁺ comparison** for any ligand in this dataset slice, so I cannot say from SRD-46 that Fe³⁺ is “consistently” more stable for ligands studied with both oxidation states.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 7,
+            "text": "Because",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 8,
+            "end": 31,
+            "text": "the overlap is **zero**",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 31,
+            "end": 32,
+            "text": ",",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 33,
+            "end": 130,
+            "text": "SRD-46 does **not support a direct Fe²⁺ vs Fe³⁺ comparison** for any ligand in this dataset slice",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 130,
+            "end": 134,
+            "text": ", so",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 135,
+            "end": 246,
+            "text": "I cannot say from SRD-46 that Fe³⁺ is “consistently” more stable for ligands studied with both oxidation states",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 246,
+            "end": 247,
+            "text": ".",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "\"where\": \"(c.metal_id IN (metal_61, metal_62))\" … results list only Fe^[3+] (metal_61) rows; no Fe^[2+] rows appear.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id IN (metal_61, metal_62))\", \"order_by\": \"c.metal_id, c.ligand_id\""
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | O=C(O)CN(CC(=O)O)CC(=O)O | 14 | 8 | 20~25 | 0.1~1 | *** | 4 |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_62 | Fe^[2+] | Fe | 2 |\n| metal_61 | Fe^[3+] | Fe | 3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Query including Fe^[2+] and Fe^[3+] returned only Fe^[3+] rows ⇒ no direct Fe²⁺ vs Fe³⁺ comparisons in this slice.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id IN (metal_61, metal_62))\""
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "### logK — 74 metal-ligand pair(s)\n| metal_61 | Fe^[3+] | ligand_6165 | Nitrilotriacetic acid (NTA) | … |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_stability",
+                "snippet": "### ΔH — 1 metal-ligand pair(s)\n| metal_61 | Fe^[3+] | ligand_6165 | Nitrilotriacetic acid (NTA) | … |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Only Fe^[3+] (metal_61) data retrieved; no Fe^[2+] (metal_62) rows, so no ligands with both states to assess “consistent” stability.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id IN (metal_61, metal_62))\""
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 6 | 3 | 25 | 0.5~3 | *** | 3 |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_62 | Fe^[2+] | Fe | 2 |\n| metal_61 | Fe^[3+] | Fe | 3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "| Conclusion | Result |\n|---|---|\n| Are there ligands studied with both Fe(II) and Fe(III)? | No, none found |\n| Can we test whether Fe³⁺ complexes are consistently more stable for the overlap set? | No, because there is no overlap set |",
+        "claims": [
+          {
+            "start": 34,
+            "end": 110,
+            "text": "| Are there ligands studied with both Fe(II) and Fe(III)? | No, none found |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 111,
+            "end": 237,
+            "text": "| Can we test whether Fe³⁺ complexes are consistently more stable for the overlap set? | No, because there is no overlap set |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "(where: (c.metal_id IN (metal_61, metal_62))) → returned rows list only 'metal_61 | Fe^[3+]' (e.g., 'metal_61 | Fe^[3+] | ligand_6165 | Nitrilotriacetic acid'); no metal_62 rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id IN (metal_61, metal_62))\""
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | ... |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_62 | Fe^[2+] | Fe | 2 |\n| metal_61 | Fe^[3+] | Fe | 3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Step 10 filtered for (metal_61, metal_62) returns only Fe^[3+] rows and none for Fe^[2+]; thus no ligand has both, so an overlap set to test does not exist.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id IN (metal_61, metal_62))\""
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| metal_61 | Fe^[3+] | ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | ... |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "A chemistry note: Fe³⁺ often does form stronger complexes than Fe²⁺ with oxygen-donor ligands, but that is a **general chemical trend**, not something this SRD-46 query can verify here because **Fe(II) entries were absent** in the stability search results.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 17,
+            "text": "A chemistry note:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 18,
+            "end": 93,
+            "text": "Fe³⁺ often does form stronger complexes than Fe²⁺ with oxygen-donor ligands",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 99,
+            "end": 135,
+            "text": "that is a **general chemical trend**",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 137,
+            "end": 184,
+            "text": "not something this SRD-46 query can verify here",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 193,
+            "end": 255,
+            "text": "**Fe(II) entries were absent** in the stability search results",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General HSAB concept: Fe(III), a harder acid, often forms stronger complexes with O-donor ligands than Fe(II); this comparison is not provided in the SRD-46 rows here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "This is a general chemical trend; not a specific database row value.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_62",
+              "metal_61"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Step 10 where: \"(c.metal_id IN (metal_61, metal_62))\"; results list rows with \"metal_61 | Fe^[3+]\"; metal_62 does not appear among returned stability pairs.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Args: {\"where\": \"(c.metal_id IN (metal_61, metal_62))\", \"order_by\": \"c.metal_id, c.ligand_id\", \"limit\": 2000}"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "logK — 74 metal-ligand pair(s)\n| metal_id | metal_name |\n| metal_61 | Fe^[3+] |\n... (all listed rows show metal_61; no metal_62 rows returned)"
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_id | metal_name_SRD | symbol_pure | charge |\n| metal_62 | Fe^[2+] | Fe | 2 |\n| metal_61 | Fe^[3+] | Fe | 3 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "**Source:** NIST SRD-46, using `metal_card` and `search_stability` results for `metal_61 = Fe^[3+]` and `metal_62 = Fe^[2+]`.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 11,
+            "text": "**Source:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 12,
+            "end": 23,
+            "text": "NIST SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 23,
+            "end": 24,
+            "text": ",",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 25,
+            "end": 74,
+            "text": "using `metal_card` and `search_stability` results",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 75,
+            "end": 78,
+            "text": "for",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 79,
+            "end": 99,
+            "text": "`metal_61 = Fe^[3+]`",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 104,
+            "end": 124,
+            "text": "`metal_62 = Fe^[2+]`",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 124,
+            "end": 125,
+            "text": ".",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Step 8: `execute_srd46_sql`",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT metal_id, metal_name_SRD, symbol_pure, charge FROM metal_card WHERE primary_metal = 'Fe' OR symbol_pure = 'Fe'"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 200 row(s)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "sql_query: \"SELECT ... FROM metal_card ...\"",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT metal_id, metal_name_SRD, symbol_pure, charge FROM metal_card WHERE primary_metal = 'Fe' OR symbol_pure = 'Fe'"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 200 row(s)"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_61"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_61 | Fe^[3+] | Fe | 3",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_61 | Fe^[3+] | Fe | 3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_62"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_62 | Fe^[2+] | Fe | 2",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| metal_62 | Fe^[2+] | Fe | 2 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1606 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt5\\Q3.1.2\\Q3.1.2_result_batch1.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Short answer: Cysteine will give you the strongest selectivity for Cu2+ over Ni2+ at pH 7 among the standard amino acids. Histidine is the next‑best; O‑donor amino acids (aspartate, glutamate, glycine, serine, tyrosine) show much smaller Cu/Ni discrimination.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 13,
+            "text": "Short answer:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 14,
+            "end": 121,
+            "text": "Cysteine will give you the strongest selectivity for Cu2+ over Ni2+ at pH 7 among the standard amino acids.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 122,
+            "end": 149,
+            "text": "Histidine is the next‑best;",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 171,
+            "end": 218,
+            "text": "aspartate, glutamate, glycine, serine, tyrosine",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "ligand_5856"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "No Cu/Ni–cysteine logK rows at pH~7 found; claim reflects HSAB/Irving–Williams trends. Entities present: Cu2+ metal_41; Ni2+ metal_112; cysteine ligand_5856.",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_metals",
+                "snippet": "| metal_41 | Cu^[2+] | Cu | 2 | ✓ | [Cu+2] | InChI=1S/Cu/q+2 |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5856 | L-2-Amino-3-mercaptopropanoic acid (Cysteine) | H2L | Amino Acids | 134 | `N[C@@H](CS)C(=O)O` | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "ligand_5898"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "No Cu/Ni–histidine selectivity rows at pH~7 found; ‘next‑best’ ranking is domain knowledge (Cu2+ binds imidazole > Ni2+). Entities: Cu2+ metal_41; Ni2+ metal_112; histidine ligand_5898.",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_metals",
+                "snippet": "| metal_112 | Ni^[2+] | Ni | 2 | ✓ | [Ni+2] | InChI=1S/Ni/q+2 |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5898 | L-2-Amino-3-(4-imidazolyl)propanoic a… (Histidine) | HL | Amino Acids | 250 | `N[C@@H](Cc1c[nH]cn1)C(=O)O` | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_5802",
+              "ligand_5804",
+              "ligand_5760",
+              "ligand_5828",
+              "ligand_5819"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids\nligand_5802 | L-Aminobutanedioic acid (Aspartic acid) | H2L",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5804 | L-2-Aminopentanedioic acid (Glutamic acid) | H2L | Amino Acids | 94 | `N[C@@H](CCC(=O)O)C(=O)O` | ..."
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5828 | L-2-Amino-3-hydroxypropanoic acid (Serine) | HL | Amino Acids | 139 | `N[C@@H](CO)C(=O)O` | ..."
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5819 | L-2-Amino-3-(4-hydroxyphenyl)propanoic… (Tyrosine) | H2L | Amino Acids | 107 | `N[C@@H](Cc1ccc(O)cc1)C(=O)O` | ..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "Why this follows from SRD‑46 data we’ve already resolved\n- SRD‑46 contains measured formation constants for both Cu2+ and Ni2+ with cysteine, histidine, glycine, aspartate, glutamate, serine, tyrosine, and methionine (ligand IDs below), enabling a direct Cu/Ni comparison.\n- pKa data at 25 °C, I ≈ 0.1 M (water) show that, at pH 7, cysteine has a non‑negligible fraction of thiolate (RS−) available (thiol pKa ≈ 8.18), and Cu2+ strongly stabilizes S‑donor complexes relative to Ni2+. Histidine’s imidazole (pKa ≈ 6.05) is largely neutral at pH 7 and coordinates well to Cu2+, again more than to Ni2+. O‑donor ligands (Asp/Glu/Gly) are nearly fully deprotonated carboxylates at pH 7, but these give less Cu/Ni contrast.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 56,
+            "text": "Why this follows from SRD‑46 data we’ve already resolved",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 59,
+            "end": 216,
+            "text": "SRD‑46 contains measured formation constants for both Cu2+ and Ni2+ with cysteine, histidine, glycine, aspartate, glutamate, serine, tyrosine, and methionine",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 217,
+            "end": 235,
+            "text": "(ligand IDs below)",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 237,
+            "end": 272,
+            "text": "enabling a direct Cu/Ni comparison.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 275,
+            "end": 322,
+            "text": "pKa data at 25 °C, I ≈ 0.1 M (water) show that,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 323,
+            "end": 398,
+            "text": "at pH 7, cysteine has a non‑negligible fraction of thiolate (RS−) available",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 400,
+            "end": 416,
+            "text": "thiol pKa ≈ 8.18",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 423,
+            "end": 483,
+            "text": "Cu2+ strongly stabilizes S‑donor complexes relative to Ni2+.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 484,
+            "end": 545,
+            "text": "Histidine’s imidazole (pKa ≈ 6.05) is largely neutral at pH 7",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 550,
+            "end": 575,
+            "text": "coordinates well to Cu2+,",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 576,
+            "end": 600,
+            "text": "again more than to Ni2+.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 601,
+            "end": 681,
+            "text": "O‑donor ligands (Asp/Glu/Gly) are nearly fully deprotonated carboxylates at pH 7",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 683,
+            "end": 718,
+            "text": "but these give less Cu/Ni contrast.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No direct stability rows for both Cu2+ and Ni2+ with all listed ligands in tool output; search_stability returned no results.",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 11",
+                "tool": "build_system_catalog",
+                "snippet": "Cu^[2+] + ... (Histidine) ... entries: 50 | species: 8 | ... beta_def_812 [ML]/[M][L] ... n_entries: 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Reasoning: if SRD-46 contains constants for both Cu2+ and Ni2+ with the same ligand set, a direct comparison is possible.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_5856",
+              "vlm_97384"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Cysteine pKa ladder includes (8.18, vlm_97384) at 25 °C, I=0.1 M; at pH 7, pH<pKa by ~1.18 → non-negligible RS− by Henderson–Hasselbalch.",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5856 | ... (Cysteine) | … (8.18, vlm_97384); … | 25 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "ligand_5856",
+              "vlm_97384"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Cysteine: … (8.18, vlm_97384) … T=25 °C, I=0.1 M (water).",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5856 | L-2-Amino-3-mercaptopropanoic acid (Cysteine) | … (8.18, vlm_97384) … | 25 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General HSAB/coordination-chemistry trend (Cu2+ > Ni2+ with thiolates). No comparative SRD-46 logK rows in tool output to cite.",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "ligand_5898",
+              "vlm_98723"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Histidine pKa ladder shows imidazole pKa (6.05, vlm_98723) at 25 °C, I=0.1 M; thus largely neutral at pH 7.",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5898 | … (Histidine) | … (6.05, vlm_98723) … | 25 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Widely accepted coordination trend (imidazole binds Cu2+ well). Tool output lacks Cu–histidine logK values to quantify.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "build_system_catalog",
+                "snippet": "Cu^[2+] + Histidine … entries: 50 … beta_def_812 [ML]/[M][L] … n_entries: 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General trend: Cu2+ often binds imidazole more strongly than Ni2+. No Ni–histidine logK rows present in tool output.",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "ligand_5760",
+              "vlm_93627",
+              "ligand_5802",
+              "vlm_95563",
+              "vlm_95550",
+              "ligand_5804",
+              "vlm_95761",
+              "vlm_95750"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Carboxyl pKa values at 25 °C, I≈0.1 M: Gly 2.33; Asp 1.95 & 3.71; Glu 2.16 & 4.15 → carboxylates deprotonated at pH 7.",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5760 | Glycine | … (2.33, vlm_93627) … | 25 | 0.1"
+              },
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5802 | Aspartic acid | … (1.95, vlm_95563); (3.71, vlm_95550) … | 25 | 0.1"
+              },
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5804 | Glutamic acid | … (2.16, vlm_95761); (4.15, vlm_95750) … | 25 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Qualitative trend: O-donor carboxylates show smaller Cu/Ni differences. No comparative Cu vs Ni logK rows in tool output.",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "Key pKa values from SRD‑46 (25 °C, I ≈ 0.1 M, water)\n| Ligand (ID) | Relevant pKa values (SRD‑46) | Donor available near pH 7 |\n|-------------|-------------------------------|---------------------------|\n| Cysteine (ligand_5856) | 8.18 (thiol), 10.3 (amine), carboxyl ~2 | Some RS− present; Cu2+ strongly favors S |\n| Histidine (ligand_5898) | 6.05 (imidazolium/imidazole), ~9.1 (amine), carboxyl ~2 | Imidazole N donor largely available |\n| Glycine (ligand_5760) | 2.33 (carboxyl), 9.57 (amine) | O− and partially free amine |\n| Aspartic acid (ligand_5802) | 1.95, 3.71 (carboxyls), 9.66 (amine) | Dicarboxylate O donors |\n| Glutamic acid (ligand_5804) | 2.16, 4.15 (carboxyls), 9.58 (amine) | Dicarboxylate O donors |\n| Serine (ligand_5828) | 2.16 (carboxyl), 9.05 (amine) | O−; ROH mostly neutral |\n| Tyrosine (ligand_5819) | 2.24 (carboxyl), 9.04 (amine), 10.1 (phenol) | O−; phenol mostly neutral |\n| Methionine (ligand_5863) | 2.18 (carboxyl), 9.08 (amine) | Thioether S is weakly donating compared to RS− |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 14,
+            "text": "Key pKa values",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 15,
+            "end": 26,
+            "text": "from SRD‑46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 28,
+            "end": 33,
+            "text": "25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 35,
+            "end": 44,
+            "text": "I ≈ 0.1 M",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 46,
+            "end": 51,
+            "text": "water",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 204,
+            "end": 315,
+            "text": "| Cysteine (ligand_5856) | 8.18 (thiol), 10.3 (amine), carboxyl ~2 | Some RS− present; Cu2+ strongly favors S |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 316,
+            "end": 439,
+            "text": "| Histidine (ligand_5898) | 6.05 (imidazolium/imidazole), ~9.1 (amine), carboxyl ~2 | Imidazole N donor largely available |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 440,
+            "end": 527,
+            "text": "| Glycine (ligand_5760) | 2.33 (carboxyl), 9.57 (amine) | O− and partially free amine |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 528,
+            "end": 623,
+            "text": "| Aspartic acid (ligand_5802) | 1.95, 3.71 (carboxyls), 9.66 (amine) | Dicarboxylate O donors |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 624,
+            "end": 719,
+            "text": "| Glutamic acid (ligand_5804) | 2.16, 4.15 (carboxyls), 9.58 (amine) | Dicarboxylate O donors |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 720,
+            "end": 801,
+            "text": "| Serine (ligand_5828) | 2.16 (carboxyl), 9.05 (amine) | O−; ROH mostly neutral |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 802,
+            "end": 903,
+            "text": "| Tyrosine (ligand_5819) | 2.24 (carboxyl), 9.04 (amine), 10.1 (phenol) | O−; phenol mostly neutral |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 904,
+            "end": 1013,
+            "text": "| Methionine (ligand_5863) | 2.18 (carboxyl), 9.08 (amine) | Thioether S is weakly donating compared to RS− |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool outputs (e.g., ligand pKa ladders) are from this run’s SRD-46 context; e.g., glycine shows 2.33 and 9.57.",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5760 | Aminoacetic acid (Glycine) | … | pH_ladder | −∞; H2L … (2.33, vlm_93627); HL … (9.57, vlm_93606); L … | T°C_range 25 | I(M)_range 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "T°C_range 25",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5760 … pH_ladder … (2.33, vlm_93627); … (9.57, vlm_93606) … | T°C_range 25 | I(M)_range 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "I(M)_range 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5802 … pH_ladder … (1.95, vlm_95563); (3.71, vlm_95550); (9.66, vlm_95537) | T°C_range 25 | I(M)_range 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Filter allowed water: (p.solvent_name LIKE '%water%' OR p.solvent_name IS NULL); solvent not shown in rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "Args.where: … AND (p.solvent_name LIKE '%water%' OR p.solvent_name IS NULL))"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_5856",
+              "vlm_97384",
+              "vlm_97371"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Cysteine pH ladder shows (8.18, vlm_97384) and (10.3, vlm_97371). A carboxyl pKa near 2 is not explicitly listed for cysteine in these rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "| ligand_5856 | L-2-Amino-3-mercaptopropanoic acid (Cysteine) | … | −∞; H3L … (-1.9, vlm_97397); H2L … (8.18, vlm_97384); HL … (10.3, vlm_97371); … | 25 | 0.1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "ligand_5898",
+              "vlm_98723",
+              "vlm_98706"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Histidine pH ladder shows (6.05, vlm_98723) and (9.1, vlm_98706). A carboxyl pKa near 2 is not explicitly listed for histidine in these rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "| ligand_5898 | … (Histidine) | … (-1.7, vlm_98740); … (6.05, vlm_98723); … (9.1, vlm_98706); … | 25 | 0.1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "ligand_5760",
+              "vlm_93627",
+              "vlm_93606"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Glycine: … (2.33, vlm_93627); … (9.57, vlm_93606)",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5760 | Aminoacetic acid (Glycine) | … pH_ladder | −∞; H2L … (2.33, vlm_93627); HL … (9.57, vlm_93606); … | T°C_range 25 | I(M)_range 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "ligand_5802",
+              "vlm_95563",
+              "vlm_95550",
+              "vlm_95537"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Aspartic acid: … (1.95, vlm_95563); (3.71, vlm_95550); (9.66, vlm_95537)",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5802 | … (Aspartic acid) | … pH_ladder | −∞; H3L … (1.95, vlm_95563); H2L … (3.71, vlm_95550); HL … (9.66, vlm_95537); … | T°C_range 25 | I(M)_range 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "ligand_5804",
+              "vlm_95761",
+              "vlm_95750",
+              "vlm_95739"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Glutamic acid: … (2.16, vlm_95761); (4.15, vlm_95750); (9.58, vlm_95739)",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5804 | … (Glutamic acid) | … pH_ladder | −∞; H3L … (2.16, vlm_95761); H2L … (4.15, vlm_95750); HL … (9.58, vlm_95739); … | T°C_range 25 | I(M)_range 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "ligand_5828",
+              "vlm_96511",
+              "vlm_96498"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Serine: … (2.16, vlm_96511); … (9.05, vlm_96498)",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5828 | … (Serine) | … pH_ladder | −∞; H2L … (2.16, vlm_96511); HL … (9.05, vlm_96498); … | T°C_range 25 | I(M)_range 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "ligand_5819",
+              "vlm_96241",
+              "vlm_96234",
+              "vlm_96227"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Tyrosine: … (2.24, vlm_96241); … (9.04, vlm_96234); … (10.1, vlm_96227)",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5819 | … (Tyrosine) | … pH_ladder | −∞; H3L … (2.24, vlm_96241); H2L … (9.04, vlm_96234); HL … (10.1, vlm_96227); … | T°C_range 25 | I(M)_range 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "ligand_5863",
+              "vlm_97809",
+              "vlm_97802"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Methionine: … (2.18, vlm_97809); … (9.08, vlm_97802)",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5863 | … (Methionine) | … pH_ladder | −∞; H2L … (2.18, vlm_97809); HL … (9.08, vlm_97802); … | T°C_range 25 | I(M)_range 0.1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "How we would compute an actual selectivity ratio from SRD‑46\n- For each ligand, we would pull matched Cu2+ and Ni2+ 1:1 formation constants (ML or MHL) in water near 25 °C and low ionic strength, convert them to conditional stability at pH 7 using the ligand’s α fractions from the pKa set above, and then compute Δ = logβcond(Cu) − logβcond(Ni) (or the ratio βcond(Cu)/βcond(Ni)). The database supports this for the ligands listed (e.g., cysteine ligand_5856, histidine ligand_5898, glycine ligand_5760, aspartate ligand_5802, glutamate ligand_5804, etc.).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 60,
+            "text": "How we would compute an actual selectivity ratio from SRD‑46",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 63,
+            "end": 139,
+            "text": "For each ligand, we would pull matched Cu2+ and Ni2+ 1:1 formation constants",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 140,
+            "end": 151,
+            "text": "(ML or MHL)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 152,
+            "end": 194,
+            "text": "in water near 25 °C and low ionic strength",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 196,
+            "end": 241,
+            "text": "convert them to conditional stability at pH 7",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 242,
+            "end": 295,
+            "text": "using the ligand’s α fractions from the pKa set above",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 314,
+            "end": 345,
+            "text": "Δ = logβcond(Cu) − logβcond(Ni)",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 346,
+            "end": 381,
+            "text": "(or the ratio βcond(Cu)/βcond(Ni)).",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 382,
+            "end": 431,
+            "text": "The database supports this for the ligands listed",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 432,
+            "end": 557,
+            "text": "(e.g., cysteine ligand_5856, histidine ligand_5898, glycine ligand_5760, aspartate ligand_5802, glutamate ligand_5804, etc.).",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "beta_def_812",
+              "beta_def_788"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "beta_def_812 | [ML]/[M][L] and beta_def_788 | [MHL]/[ML][H] appear for Cu2+–histidine; Ni2+ (metal_112) is present in SRD‑46.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_788 | [MHL]/[ML][H] | [ML] + [H] <=> [MHL] ... | 7\nbeta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] ... | 8"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_metals",
+                "snippet": "metal_41 | Cu^[2+] | Cu | 2 | … | beta_totN_264 | ligand_totN_1951 | vlm_totN_8963"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_metals",
+                "snippet": "metal_112 | Ni^[2+] | Ni | 2 | … | beta_totN_149 | ligand_totN_1369 | vlm_totN_5325"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "beta_def_812",
+              "beta_def_788"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_812 | [ML]/[M][L] …; beta_def_788 | [MHL]/[ML][H] …",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_788 | [MHL]/[ML][H] | [ML] + [H] <=> [MHL] … | 7\nbeta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] … | 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_5760",
+              "ligand_5802",
+              "ligand_5804",
+              "ligand_5856",
+              "ligand_5898"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| ligand_5898 | L-2-Amino-3-(4-imidazolyl)propanoic acid (Histidine) | HL | … | −∞; … | 25 | 0.1 | *** |",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "| ligand_5898 | L-2-Amino-3-(4-imidazolyl)propanoic acid (Histidine) | HL | C6H9N3O2 | … | −∞; … | 25 | 0.1 | *** |"
+              },
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "| ligand_5760 | Aminoacetic acid (Glycine) | HL | C2H5N1O2 | … | −∞; … | 25 | 0.1 | *** |"
+              },
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "Args.where: … AND (p.temperature_c BETWEEN 20 AND 30 OR p.temperature_c IS NULL) AND (p.ionic_strength_mol_l IS NULL OR p.ionic_strength_mol_l <= 0.2) AND (p.solvent_name LIKE '%water%' OR p.solvent_name IS NULL)"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Converting intrinsic β to conditional β at a fixed pH is a standard speciation calculation; not directly stated in database rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_5760",
+              "ligand_5856",
+              "ligand_5898",
+              "ligand_5802",
+              "ligand_5804"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Ligand pKa sets are present (e.g., Gly: 2.33, 9.57; Cys: -1.9, 8.18, 10.3; His: -1.7, 6.05, 9.1) enabling α-fraction calculations.",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5760 | Aminoacetic acid (Glycine) | … (2.33, vlm_93627); … (9.57, vlm_93606) | 25 | 0.1"
+              },
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5856 | … (Cysteine) | … (-1.9, vlm_97397); … (8.18, vlm_97384); … (10.3, vlm_97371) | 25 | 0.1"
+              },
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5898 | … (Histidine) | … (-1.7, vlm_98740); … (6.05, vlm_98723); … (9.1, vlm_98706) | 25 | 0.1"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Δ = logβcond(Cu) − logβcond(Ni) is a standard identity for log of a ratio; not a database-stated value.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "βcond(Cu)/βcond(Ni) is the ratio corresponding to the difference of logβ values; not a database-stated value.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "ligand_5760",
+              "ligand_5856",
+              "ligand_5898",
+              "ligand_5802",
+              "ligand_5804",
+              "beta_def_812",
+              "beta_def_788"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Ni2+ present with many entries: metal_112 … vlm_totN_5325; Cu–histidine shows 1:1 constants (ML, MHL); pKa sets for listed ligands at 25 °C, I=0.1.",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_metals",
+                "snippet": "metal_112 | Ni^[2+] | Ni | 2 | … | ligand_totN_1369 | vlm_totN_5325"
+              },
+              {
+                "step": "Step 11",
+                "tool": "build_system_catalog",
+                "snippet": "Cu^[2+] + Histidine … beta_def_812 [ML]/[M][L] …; beta_def_788 [MHL]/[ML][H] … entries: 50"
+              },
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5760 (Glycine) … 25 | 0.1; ligand_5802 (Aspartic acid) … 25 | 0.1; ligand_5804 (Glutamic acid) … 25 | 0.1; ligand_5856 (Cysteine) …; ligand_5898 (Histidine) …"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "ligand_5856",
+              "ligand_5898",
+              "ligand_5760",
+              "ligand_5802",
+              "ligand_5804"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_5856 | … (Cysteine) …; ligand_5898 | … (Histidine) …; ligand_5760 | … (Glycine) …",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "ligand_5856 | L-2-Amino-3-mercaptopropanoic acid (Cysteine) | H2L | Amino Acids | …"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "ligand_5898 | L-2-Amino-3-(4-imidazolyl)propanoic a… (Histidine) | HL | Amino Acids | …"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | …"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "Practical guidance\n- If your goal is maximum Cu2+ uptake over Ni2+ at pH 7, choose cysteine. Maintain mildly reducing conditions (to suppress cystine formation) and operate around pH 7–7.5 to increase RS− availability while avoiding Cu(OH)2 precipitation.\n- For a less redox‑sensitive option, histidine is a strong runner‑up and typically shows appreciable Cu > Ni discrimination at neutral pH.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 18,
+            "text": "Practical guidance",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 21,
+            "end": 75,
+            "text": "If your goal is maximum Cu2+ uptake over Ni2+ at pH 7,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 76,
+            "end": 92,
+            "text": "choose cysteine.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 93,
+            "end": 128,
+            "text": "Maintain mildly reducing conditions",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 130,
+            "end": 159,
+            "text": "to suppress cystine formation",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 180,
+            "end": 188,
+            "text": "pH 7–7.5",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 189,
+            "end": 217,
+            "text": "to increase RS− availability",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 224,
+            "end": 255,
+            "text": "avoiding Cu(OH)2 precipitation.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 258,
+            "end": 292,
+            "text": "For a less redox‑sensitive option,",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 293,
+            "end": 324,
+            "text": "histidine is a strong runner‑up",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 329,
+            "end": 394,
+            "text": "typically shows appreciable Cu > Ni discrimination at neutral pH.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_5856",
+              "ligand_5890"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "ligand_5890 | L-3,3'-Dithiobis(2-aminopropanoic acid) (Cystine) …; ligand_5856 | … (Cysteine) …",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "ligand_5856 | L-2-Amino-3-mercaptopropanoic acid (Cysteine) | H2L | … | N[C@@H](CS)C(=O)O | (-inf, H3L, -1.9, H2L, 8.18, HL, 10.3, L, +inf)"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "ligand_5890 | L-3,3'-Dithiobis(2-aminopropanoic acid) (Cystine) | H2L | … | NC(CSSC[C@H](N)C(=O)O)C(=O)O | (-inf, H2L, 8.03, HL, 8.8, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No tool results provide or specify a recommended pH range of 7–7.5.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "ligand_5856",
+              "vlm_97384"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Cysteine pKa ladder includes (8.18, vlm_97384), consistent with thiol deprotonation near pH≈8.",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_pka_ligands",
+                "snippet": "ligand_5856 | … (Cysteine) | … | −∞; H3L … (-1.9, vlm_97397); H2L … (8.18, vlm_97384); HL … (10.3, vlm_97371); L … | 25 | 0.1"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "ligand_5856 | L-2-Amino-3-mercaptopropanoic acid (Cysteine) | … | N[C@@H](CS)C(=O)O | (-inf, H3L, -1.9, H2L, 8.18, HL, 10.3, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Cu(OH)2 precipitation boundaries are not provided in the SRD-46 tool output; this is general solubility knowledge.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "ligand_5898",
+              "ligand_5856"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Histidine SMILES lacks sulfur: N[C@@H](Cc1c[nH]cn1)C(=O)O; cysteine contains S: N[C@@H](CS)C(=O)O.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "ligand_5898 | … (Histidine) | HL | … | N[C@@H](Cc1c[nH]cn1)C(=O)O | (-inf, H3L, -1.7, H2L, 6.05, HL, 9.1, L, +inf)"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "ligand_5856 | … (Cysteine) | … | N[C@@H](CS)C(=O)O | (-inf, H3L, -1.9, H2L, 8.18, HL, 10.3, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Subjective ranking (“strong runner‑up”); no comparative constants or performance data in the provided tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "ligand_5898"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General Irving–Williams trend: Cu(II) complexes > Ni(II) in stability; explicit Cu/Ni–histidine constants not shown in tool rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "search_metals",
+                "snippet": "metal_41 | Cu^[2+] | Cu | 2 | … | beta_totN_264 …"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_metals",
+                "snippet": "metal_112 | Ni^[2+] | Ni | 2 | … | beta_totN_149 …"
+              },
+              {
+                "step": "Step 11",
+                "tool": "build_system_catalog",
+                "snippet": "Cu^[2+] + … (Histidine) — metal_id: metal_41 | ligand_id: ligand_5898 | entries: 50 | species: 8"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "If you’d like, I can compute the exact pH‑7 selectivity numbers (Δlogβ and β ratios) from SRD‑46 for your preferred temperature and ionic strength (e.g., 25 °C, I = 0.1 M NaNO3), and include the literature citations for the specific constants used.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 84,
+            "text": "If you’d like, I can compute the exact pH‑7 selectivity numbers (Δlogβ and β ratios)",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 85,
+            "end": 96,
+            "text": "from SRD‑46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 97,
+            "end": 248,
+            "text": "for your preferred temperature and ionic strength (e.g., 25 °C, I = 0.1 M NaNO3), and include the literature citations for the specific constants used.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool outputs (e.g., search_metals, search_ligands) are from the NIST SRD‑46 context for this run; the SRD‑46 name is not printed inside the rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "search_metals",
+                "snippet": "## search_metals — 3 result(s)\n| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |\n| metal_41 | Cu^[2+] | Cu | 2 | ✓ | [Cu+2] | InChI=1S/Cu/q+2 | beta_totN_264 | ligand_totN_1951 | vlm_totN_8963 |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands — 429 result(s)\n| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count |\n| ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | 428 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "Source: NIST Standard Reference Database 46 (SRD‑46): NIST Critical Stability Constants of Metal Complexes.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 7,
+            "text": "Source:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 8,
+            "end": 52,
+            "text": "NIST Standard Reference Database 46 (SRD‑46)",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 54,
+            "end": 107,
+            "text": "NIST Critical Stability Constants of Metal Complexes.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "## search_metals — 3 result(s) | metal_id | metal_name | symbol | charge | … | metal_41 | Cu^[2+] | …",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "search_metals",
+                "snippet": "## search_metals — 3 result(s)\n| metal_id | metal_name | symbol | charge | … |\n| metal_41 | Cu^[2+] | Cu | 2 | ✓ | … | beta_totN_264 | … |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands — 429 result(s)\n| ligand_id | ligand_name | HxL_def | ligand_class | … |\n| ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | … |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "build_system_catalog",
+                "snippet": "## build_system_catalog — 1 pair(s), 8 species\nCu^[2+] + L-2-Amino-3-(4-imidazolyl)propanoic acid (Histidine)\nmetal_id: metal_41 | ligand_id: ligand_5898 | entries: 50"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "## build_system_catalog — 1 pair(s), 8 species | Cu^[2+] + … (Histidine) | entries: 50 | species: 8",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "build_system_catalog",
+                "snippet": "## build_system_catalog — 1 pair(s), 8 species\nCu^[2+] + L-2-Amino-3-(4-imidazolyl)propanoic acid (Histidine)\nmetal_id: metal_41 | ligand_id: ligand_5898 | entries: 50"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_ligands",
+                "snippet": "| ligand_5898 | L-2-Amino-3-(4-imidazolyl)propanoic acid (Histidine) | HL | Amino Acids | 250 | `N[C@@H](Cc1c[nH]cn1)C(=O)O` | …"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_metals",
+                "snippet": "| metal_41 | Cu^[2+] | Cu | 2 | ✓ | [Cu+2] | InChI=1S/Cu/q+2 | beta_totN_264 | ligand_totN_1951 | vlm_totN_8963 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 7,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

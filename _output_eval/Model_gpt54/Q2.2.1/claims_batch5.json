@@ -1,0 +1,280 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q2.2.1\\Q2.2.1_result_batch5.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Using SRD-46 stability-constant measurement records:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 52,
+            "text": "Using SRD-46 stability-constant measurement records:",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "| ligandmetal_stability_measured | (all) | 79063 |",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | (all) | 79063 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | temperature_c = 25 | 67237 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Metric | Count |\n|---|---:|\n| Total stability-constant measurements | 79,063 |\n| Measurements at 25 °C | 67,237 |",
+        "claims": [
+          {
+            "start": 30,
+            "end": 80,
+            "text": "| Total stability-constant measurements | 79,063 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 81,
+            "end": 115,
+            "text": "| Measurements at 25 °C | 67,237 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "| Calculation | Value |\n|---|---:|\n| 67,237 / 79,063 × 100 | 85.04% |",
+        "claims": [
+          {
+            "start": 35,
+            "end": 69,
+            "text": "| 67,237 / 79,063 × 100 | 85.04% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| ligandmetal_stability_measured | (all) | 79063 |\n| ligandmetal_stability_measured | temperature_c = 25 | 67237 |",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | (all) | 79063 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | temperature_c = 25 | 67237 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "So, **about 85.0%** of stability-constant measurements in the database were conducted at **25 °C**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "So,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 4,
+            "end": 99,
+            "text": "**about 85.0%** of stability-constant measurements in the database were conducted at **25 °C**.",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "ligandmetal_stability_measured | (all) | 79063 ; temperature_c = 25 | 67237",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | (all) | 79063 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | temperature_c = 25 | 67237 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "_Source: NIST SRD-46 (`ligandmetal_stability_measured` counts)._",
+        "claims": [
+          {
+            "start": 0,
+            "end": 20,
+            "text": "_Source: NIST SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 21,
+            "end": 63,
+            "text": "(`ligandmetal_stability_measured` counts).",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| ligandmetal_stability_measured | (all) | 79063 |",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | (all) | 79063 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | temperature_c = 25 | 67237 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "| ligandmetal_stability_measured | (all) | 79063 |",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | (all) | 79063 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | temperature_c = 25 | 67237 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

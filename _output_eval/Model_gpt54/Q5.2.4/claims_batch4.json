@@ -1,0 +1,506 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q5.2.4\\Q5.2.4_result_batch4.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "SRD-46 does **not show a stability constant for Pu(IV) with aspirin**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 70,
+            "text": "SRD-46 does **not show a stability constant for Pu(IV) with aspirin**.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_149"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "search_stability: where (c.metal_id = metal_149 AND ... '%aspirin%' ... '%acetylsalic%' ... '%acetoxybenzo%' ... '%ASA%') → (no results)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "Args.where: (c.metal_id = metal_149 AND (c.ligand_name_SRD LIKE '%aspirin%' OR c.ligand_name_SRD LIKE '%acetylsalic%' OR c.ligand_name_SRD LIKE '%acetoxybenzo%' OR c.ligand_name_SRD LIKE '%ASA%'))\n\n## search_stability\n*(no results)*"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "Args: {\"name\": \"aspirin, acetylsalicylic acid, acetylsalicylate\", \"limit\": 20}\n\n## search_ligands\n*(no results)*"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_citations",
+                "snippet": "Args.where: (la.citation LIKE '%plutonium%' AND (la.citation LIKE '%aspirin%' OR la.citation LIKE '%acetylsalic%' OR la.citation LIKE '%salicyl%'))\n\n## search_citations\n*(no results)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Query | Result |\n|---|---|\n| Pu(IV) metal entry | Found as `metal_149` |\n| Ligand search for aspirin / acetylsalicylic acid / acetylsalicylate | No ligand records found |\n| Pu(IV) system catalog | Aspirin and salicylate not present |\n| Targeted stability search for Pu(IV) + aspirin synonyms | No results |\n| Citation search for plutonium + aspirin / acetylsalicylate / salicylate | No results |",
+        "claims": [
+          {
+            "start": 29,
+            "end": 74,
+            "text": "| Pu(IV) metal entry | Found as `metal_149` |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 75,
+            "end": 172,
+            "text": "| Ligand search for aspirin / acetylsalicylic acid / acetylsalicylate | No ligand records found |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 173,
+            "end": 235,
+            "text": "| Pu(IV) system catalog | Aspirin and salicylate not present |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 236,
+            "end": 308,
+            "text": "| Targeted stability search for Pu(IV) + aspirin synonyms | No results |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 309,
+            "end": 397,
+            "text": "| Citation search for plutonium + aspirin / acetylsalicylate / salicylate | No results |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_149"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_149 | Pu^[4+] | Pu | 4 | ✓ | [Pu+4] | InChI=1S/Pu/q+4",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_149 | Pu^[4+] | Pu | 4 | ✓ | [Pu+4] | InChI=1S/Pu/q+4 | beta_totN_6 | ligand_totN_11 | vlm_totN_36 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "## search_ligands\n*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "build_system_catalog — 11 pair(s), 19 species (no entries show aspirin/salicylate)",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "## build_system_catalog — 11 pair(s), 19 species *(compact)*"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "### Pu^[4+] + Nitrate ion\n**metal_id:** metal_149 | **ligand_id:** ligand_10109"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "### Pu^[4+] + Pentane-2,4-dione (Acetylacetone)\n**metal_id:** metal_149 | **ligand_id:** ligand_9526"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "## search_stability\n\n*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "## search_citations\n\n*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "search_citations",
+                "snippet": "## search_citations\n\n*(no results)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "So, within **NIST SRD-46**, there is **no curated Pu(IV)–aspirin stability constant** available.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "So,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 4,
+            "end": 26,
+            "text": "within **NIST SRD-46**",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 28,
+            "end": 96,
+            "text": "there is **no curated Pu(IV)–aspirin stability constant** available.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "search_metals — 4 result(s) | metal_149 | Pu^[4+] | ...",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "## search_metals — 4 result(s)\n| metal_id | metal_name | ... |\n| metal_149 | Pu^[4+] | Pu | 4 | ✓ | [Pu+4] | ... |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_149"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "## search_stability\n*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_149 AND (c.ligand_name_SRD LIKE '%aspirin%' OR c.ligand_name_SRD LIKE '%acetylsalic%' OR c.ligand_name_SRD LIKE '%acetoxybenzo%' OR c.ligand_name_SRD LIKE '%ASA%'))\""
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n*(no results)*"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n*(no results)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "A small chemistry note: this absence is plausible because aspirin often hydrolyzes to salicylate in aqueous systems, and actinide(IV) complexation data in older compilations are much more commonly reported for ligands like nitrate, fluoride, oxalate, and DTPA than for pharmaceutical carboxylates.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 23,
+            "text": "A small chemistry note:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 24,
+            "end": 57,
+            "text": "this absence is plausible because",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 58,
+            "end": 115,
+            "text": "aspirin often hydrolyzes to salicylate in aqueous systems",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 117,
+            "end": 120,
+            "text": "and",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 121,
+            "end": 296,
+            "text": "actinide(IV) complexation data in older compilations are much more commonly reported for ligands like nitrate, fluoride, oxalate, and DTPA than for pharmaceutical carboxylates",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Aspirin (acetylsalicylic acid) hydrolysis to salicylic acid in water is standard organic chemistry; SRD-46 tool results here do not contain general hydrolysis reactions.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_149",
+              "ligand_10109",
+              "ligand_10162",
+              "ligand_8872",
+              "ligand_6356"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "## search_stability\n\n*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "### Pu^[4+] + Nitrate ion\n**metal_id:** metal_149 | **ligand_id:** ligand_10109\n**entries:** 9 | **species:** 3 | **vlm_count:** 9"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "### Pu^[4+] + Hydrogen fluoride (Hydrofluoric acid)\n**metal_id:** metal_149 | **ligand_id:** ligand_10162\n**entries:** 4 | **species:** 1 | **vlm_count:** 4"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "### Pu^[4+] + Ethanedioic acid (Oxalic acid)\n**metal_id:** metal_149 | **ligand_id:** ligand_8872\n**entries:** 2 | **species:** 2 | **vlm_count:** 2"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "### Pu^[4+] + Diethylenetrinitrilopentaacetic acid (DTPA)\n**metal_id:** metal_149 | **ligand_id:** ligand_6356\n**entries:** 1 | **species:** 1 | **vlm_count:** 1"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "**Source:** NIST Standard Reference Database 46 (SRD-46).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 11,
+            "text": "**Source:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 12,
+            "end": 57,
+            "text": "NIST Standard Reference Database 46 (SRD-46).",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool results are from SRD-46 context; provenance to NIST SRD-46 is valid though not verbatim in rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_149 AND (c.ligand_name_SRD LIKE '%aspirin%' OR c.ligand_name_SRD LIKE '%acetylsalic%' OR c.ligand_name_SRD LIKE '%acetoxybenzo%' OR c.ligand_name_SRD LIKE '%ASA%'))\""
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_149 | Pu^[4+] | Pu | 4 | ✓ | [Pu+4] | InChI=1S/Pu/q+4 | beta_totN_6 | ligand_totN_11 | vlm_totN_36 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Pu^[4+] + Nitrate ion — **metal_id:** metal_149 | **ligand_id:** ligand_10109 | **entries:** 9 | **species:** 3 | **vlm_count:** 9"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

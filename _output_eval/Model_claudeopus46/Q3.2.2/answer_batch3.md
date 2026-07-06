@@ -1,0 +1,71 @@
+# Ni²⁺–Ethylenediamine: Stability Constants vs. Ionic Strength
+
+## Data at 25 °C in KNO₃ (aqueous)
+
+The SRD-46 database contains log K (overall β) values for three successive Ni(en)ₙ²⁺ complexes across a wide ionic strength range. The 37 °C / NaCl point is listed separately.
+
+### Ni(en)²⁺ — log β₁ = log [ML]/[M][L]
+
+| I (mol/L) | Electrolyte | T (°C) | log β₁ |
+|-----------|-------------|--------|--------|
+| 0.0       | — (extrap.) | 25     | **7.90** |
+| 0.1       | KNO₃        | 25     | 7.52   |
+| 0.5       | KNO₃        | 25     | 7.35   |
+| 1.0       | KNO₃        | 25     | 7.28   |
+| 2.0       | KNO₃        | 25     | 6.98   |
+| 3.0       | KNO₃        | 25     | 7.08   |
+| 0.15      | NaCl        | 37     | 7.51   |
+
+### Ni(en)₂²⁺ — log β₂ = log [ML₂]/[M][L]²
+
+| I (mol/L) | Electrolyte | T (°C) | log β₂ |
+|-----------|-------------|--------|--------|
+| 0.0       | — (extrap.) | 25     | **14.53** |
+| 0.1       | KNO₃        | 25     | 13.86  |
+| 0.5       | KNO₃        | 25     | 13.54  |
+| 1.0       | KNO₃        | 25     | 13.36  |
+| 3.0       | KNO₃        | 25     | 13.04  |
+| 0.15      | NaCl        | 37     | 13.83  |
+
+### Ni(en)₃²⁺ — log β₃ = log [ML₃]/[M][L]³
+
+| I (mol/L) | Electrolyte | T (°C) | log β₃ |
+|-----------|-------------|--------|--------|
+| 0.0       | — (extrap.) | 25     | **19.18** |
+| 0.1       | KNO₃        | 25     | 18.33  |
+| 0.5       | KNO₃        | 25     | 17.88  |
+| 1.0       | KNO₃        | 25     | 17.61  |
+| 3.0       | KNO₃        | 25     | 17.12  |
+| 0.15      | NaCl        | 37     | 18.24  |
+
+> **Note:** The I = 2.0 M entries for β₂ and β₃ returned anomalous negative values (−14.77 and −19.70) in the raw database, which are likely sign-convention artifacts or data-entry issues. They have been omitted from the tables above. The monotonic trend from surrounding points is unaffected.
+
+---
+
+## Trend Analysis
+
+**Yes, there is a clear and consistent trend:** For all three complexes, **log β decreases as ionic strength increases** from 0 to ~3 M.
+
+| Species | log β at I = 0 | log β at I = 3 M | Δ(log β) |
+|---------|---------------|------------------|----------|
+| Ni(en)²⁺   | 7.90  | 7.08  | −0.82 |
+| Ni(en)₂²⁺  | 14.53 | 13.04 | −1.49 |
+| Ni(en)₃²⁺  | 19.18 | 17.12 | −2.06 |
+
+### Key Observations
+
+1. **The decrease scales with stoichiometry.** The higher the ligand-to-metal ratio, the larger the total drop in log β. This is expected because each additional neutral ethylenediamine ligand in the equilibrium expression introduces another activity coefficient term, and these corrections accumulate.
+
+2. **The steepest drop occurs between I = 0 and I ≈ 0.5 M**, after which the decline becomes more gradual. This is classic Debye–Hückel behavior: at low ionic strength the activity coefficients of the Ni²⁺ ion change rapidly with added electrolyte, while at higher I the specific-ion interaction (SIT) regime dominates and changes become more moderate.
+
+3. **A slight upturn at I = 3 M for β₁** (6.98 at I = 2 M → 7.08 at I = 3 M) hints at medium effects where concentrated KNO₃ begins to alter water activity and promote ion pairing, partially offsetting the electrostatic screening trend. This non-monotonic behavior at very high ionic strength is well-known in concentrated electrolyte solutions.
+
+4. **Electrolyte and temperature matter.** The single data point at I = 0.15 M in NaCl at 37 °C (log β₁ = 7.51) is comparable to the KNO₃/25 °C value at I = 0.1 M (7.52), but direct comparison is complicated by both the different background electrolyte and the higher temperature. Rigorous ionic-strength trend analysis should be done within a single medium.
+
+### Physical Interpretation
+
+The decrease in apparent stability constants with increasing ionic strength reflects enhanced electrostatic screening of the Ni²⁺ cation by the background electrolyte. As more inert ions surround the metal center, the effective charge–charge and charge–dipole interactions that stabilize the Ni–en bond are weakened, lowering the measured formation constant. Since ethylenediamine is a neutral ligand, the dominant effect is on the activity coefficient of the divalent Ni²⁺ ion itself, which decreases substantially as I rises.
+
+**Source:** NIST Standard Reference Database 46 (SRD-46).
+
+---

@@ -1,0 +1,31 @@
+SRD-46 contains **30 measured stepwise protonation constants (reported as logK, equivalent here to pKa for the three H⁺ association steps)** for citric acid (`ligand_9058`), spanning the three dissociation steps of **H₃L ⇌ H₂L + H⁺**, **H₂L ⇌ HL + H⁺**, and **HL ⇌ L + H⁺**.
+
+The direct pKa tool returns these bracket values for citric acid:
+
+| Step | Equilibrium | pKa |
+|---|---|---:|
+| pKa1 | H₃L ⇌ H₂L + H⁺ | 2.9 |
+| pKa2 | H₂L ⇌ HL + H⁺ | 4.35 |
+| pKa3 | HL ⇌ L + H⁺ | 5.65 |
+
+SRD-46 also shows the **measured ranges** across the underlying protonation-constant records:
+
+| Step | Protonation form in SRD-46 | beta_def_id | logK / pKa measurements (count) | Measured pKa range | Temperature range (°C) | Ionic strength range (M) |
+|---|---|---|---:|---:|---:|---:|
+| pKa1 | H₂L + H⁺ ⇌ H₃L | beta_def_53 | 8 | 2.78–3.128 | 18–37 | 0–3 |
+| pKa2 | HL + H⁺ ⇌ H₂L | beta_def_32 | 8 | 4.07–4.761 | 18–37 | 0–3 |
+| pKa3 | L + H⁺ ⇌ HL | beta_def_79 | 14 | 5.08–6.396 | 18–37 | 0–3 |
+
+The pKa-search view itself exposed these representative measured entries:
+
+| vlm_id | Step | pKa | Temperature (°C) | Ionic strength (M) | Bracket transition |
+|---|---|---:|---:|---:|---|
+| vlm_157473 | pKa1 | 2.9 | 25 | 0.1 | H₂L → H₃L |
+| vlm_157459 | pKa2 | 4.35 | 25 | 0.1 | HL → H₂L |
+| vlm_157439 | pKa3 | 5.65 | 25 | 0.1 | L → HL |
+
+A small chemistry note: citric acid behaves as a **triprotic carboxylic acid**, so the three pKa values are expected. The spread in measured values across SRD-46 likely reflects different **temperature and ionic strength conditions**, which is common for polyprotic acids.
+
+**Source:** NIST SRD-46.
+
+---

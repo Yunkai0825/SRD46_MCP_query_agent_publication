@@ -1,0 +1,872 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudesonnet46\\Q2.2.6\\Q2.2.6_result_batch2.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "## Results\n\nHere are the confirmed numbers from a direct SQL query against the SRD-46 equilibrium database:\n\n| Metric | Count | Fraction of All Metals |\n|---|---|---|\n| **Total metals in SRD-46** | 230 | 100% |\n| Metals with **0** VLM measurements | 74 | 32.2% |\n| Metals with **1–4** VLM measurements | 40 | 17.4% |\n| **Metals with < 5 VLM measurements** | **114** | **49.6%** |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 10,
+            "text": "## Results",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 12,
+            "end": 42,
+            "text": "Here are the confirmed numbers",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 43,
+            "end": 107,
+            "text": "from a direct SQL query against the SRD-46 equilibrium database:",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 167,
+            "end": 210,
+            "text": "| **Total metals in SRD-46** | 230 | 100% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 211,
+            "end": 262,
+            "text": "| Metals with **0** VLM measurements | 74 | 32.2% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 263,
+            "end": 316,
+            "text": "| Metals with **1–4** VLM measurements | 40 | 17.4% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 317,
+            "end": 379,
+            "text": "| **Metals with < 5 VLM measurements** | **114** | **49.6%** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "SELECT COUNT(*) AS total_metals, SUM(CASE WHEN vlm_count < 5 THEN 1 ELSE 0 END) AS metals_lt5, SUM(CASE WHEN vlm_count = 0 THEN 1 ELSE 0 END) AS metals_zero",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "Args.sql_query: SELECT COUNT(*) AS total_metals, SUM(CASE WHEN vlm_count < 5 THEN 1 ELSE 0 END) AS metals_lt5, SUM(CASE WHEN vlm_count = 0 THEN 1 ELSE 0 END) AS metals_zero FROM (SELECT mc.metal_id..."
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total_metals | metals_lt5 | metals_zero |\n| 230 | 114 | 74 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_card | (all) | 230 |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_count_records",
+                "snippet": "| metal_card | (all) | 230 |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total_metals | metals_lt5 | metals_zero |\n| 230 | 114 | 74 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| total_metals | metals_lt5 | metals_zero |\n| 230 | 114 | 74 |",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total_metals | metals_lt5 | metals_zero |\n| 230 | 114 | 74 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Counts to derive 1–4 bin: metals_lt5=114 and metals_zero=74 (114−74=40)",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total_metals | metals_lt5 | metals_zero |\n| 230 | 114 | 74 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| total_metals | metals_lt5 | metals_zero |\n| 230 | 114 | 74 |",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total_metals | metals_lt5 | metals_zero |\n| 230 | 114 | 74 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "### Answer\n\n**114 out of 230 metals (~49.6%) have fewer than 5 VLM measurements.** Nearly half the database's metal entries are data-sparse.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 10,
+            "text": "### Answer",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 14,
+            "end": 80,
+            "text": "114 out of 230 metals (~49.6%) have fewer than 5 VLM measurements.",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 83,
+            "end": 140,
+            "text": "Nearly half the database's metal entries are data-sparse.",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "total_metals | metals_lt5 | metals_zero\n| 230 | 114 | 74 |",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total_metals | metals_lt5 | metals_zero |\n| 230 | 114 | 74 |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT COUNT(*) AS total_metals, SUM(CASE WHEN vlm_count < 5 THEN 1 ELSE 0 END) AS metals_lt5 ..."
+              },
+              {
+                "step": "Step 6",
+                "tool": "db_count_records",
+                "snippet": "| metal_card | (all) | 230 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "total_metals | metals_lt5 | metals_zero\n| 230 | 114 | 74 |",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total_metals | metals_lt5 | metals_zero |\n| 230 | 114 | 74 |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "SUM(CASE WHEN vlm_count < 5 THEN 1 ELSE 0 END) AS metals_lt5"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "### Chemistry Insight\n\n- **74 metals (32%)** have *zero* VLM measurements — these include noble gases (He, Ne, Ar…), superheavy elements (Rf, Db, Sg…), and highly unstable high-oxidation-state ions (Ag³⁺, Mn⁴⁺, Pt⁴⁺) that are either chemically inert toward ligand complexation or too short-lived to study in solution.\n- The remaining 40 metals with 1–4 measurements represent real but poorly characterized systems — exotic organometallics (Et₃Sn⁺, Ph₃Pb⁺), rare actinides (Md³⁺, Pa⁵⁺), and unusual oxo-cations (TcO²⁺, Re⁵⁺).\n- In contrast, the data-rich metals (Cu²⁺, Ni²⁺, Co²⁺, Zn²⁺, Cd²⁺, Pb²⁺) each have thousands of VLMs, reflecting decades of intensive study in analytical, biological, and environmental chemistry.\n\n*Source: NIST SRD-46 — Critically Selected Stability Constants of Metal Complexes*",
+        "claims": [
+          {
+            "start": 0,
+            "end": 21,
+            "text": "### Chemistry Insight",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 25,
+            "end": 73,
+            "text": "**74 metals (32%)** have *zero* VLM measurements",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 90,
+            "end": 115,
+            "text": "noble gases (He, Ne, Ar…)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 117,
+            "end": 150,
+            "text": "superheavy elements (Rf, Db, Sg…)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 156,
+            "end": 197,
+            "text": "highly unstable high-oxidation-state ions",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 199,
+            "end": 215,
+            "text": "Ag³⁺, Mn⁴⁺, Pt⁴⁺",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 233,
+            "end": 276,
+            "text": "chemically inert toward ligand complexation",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 280,
+            "end": 316,
+            "text": "too short-lived to study in solution",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 334,
+            "end": 343,
+            "text": "40 metals",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 349,
+            "end": 365,
+            "text": "1–4 measurements",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 366,
+            "end": 413,
+            "text": "represent real but poorly characterized systems",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 416,
+            "end": 438,
+            "text": "exotic organometallics",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 440,
+            "end": 454,
+            "text": "Et₃Sn⁺, Ph₃Pb⁺",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 457,
+            "end": 471,
+            "text": "rare actinides",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 473,
+            "end": 483,
+            "text": "Md³⁺, Pa⁵⁺",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 490,
+            "end": 509,
+            "text": "unusual oxo-cations",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 511,
+            "end": 522,
+            "text": "TcO²⁺, Re⁵⁺",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 527,
+            "end": 539,
+            "text": "In contrast,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 544,
+            "end": 560,
+            "text": "data-rich metals",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 562,
+            "end": 596,
+            "text": "Cu²⁺, Ni²⁺, Co²⁺, Zn²⁺, Cd²⁺, Pb²⁺",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 598,
+            "end": 625,
+            "text": "each have thousands of VLMs",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 627,
+            "end": 719,
+            "text": "reflecting decades of intensive study in analytical, biological, and environmental chemistry",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 723,
+            "end": 803,
+            "text": "Source: NIST SRD-46 — Critically Selected Stability Constants of Metal Complexes",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| total_metals | metals_lt5 | metals_zero |\n| 230 | 114 | 74 |",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total_metals | metals_lt5 | metals_zero |\n|--------------|------------|-------------|\n| 230 | 114 | 74 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_212",
+              "metal_215",
+              "metal_218"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_212 | He | He | 0 | ✓ | [He] | ... | vlm_totN_0",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_212 | He | He | 0 | ✓ | [He] | InChI=1S/He | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_215 | Ne | Ne | 0 | ✓ | [Ne] | InChI=1S/Ne | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_218 | Ar | Ar | 0 | ✓ | [Ar] | InChI=1S/Ar | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_225",
+              "metal_226",
+              "metal_227"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_225 | Rf | Rf | 0 | ✓ | [Rf] | ... | vlm_totN_0",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_225 | Rf | Rf | 0 | ✓ | [Rf] | InChI=1S/Rf | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_226 | Db | Db | 0 | ✓ | [Db] | InChI=1S/Db | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_227 | Sg | Sg | 0 | ✓ | [Sg] | InChI=1S/Sg | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Stability/instability of high-oxidation-state ions is not annotated in the tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_4",
+              "metal_96",
+              "metal_147"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_4 | Ag^[3+] | Ag | 3 | ✓ | [Ag+3] | ... | vlm_totN_0",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_4 | Ag^[3+] | Ag | 3 | ✓ | [Ag+3] | InChI=1S/Ag/q+3 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_96 | Mn^[4+] | Mn | 4 | ✓ | [Mn+4] | InChI=1S/Mn/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_147 | Pt^[4+] | Pt | 4 | ✓ | [Pt+4] | InChI=1S/Pt/q+4 | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Chemical inertness toward ligand complexation is not a field in the database; not stated in tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Short half-lives are not reported in the tool outputs; this is background nuclear chemistry, not in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| total_metals | metals_lt5 | metals_zero |\n| 230 | 114 | 74 |",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total_metals | metals_lt5 | metals_zero |\n|--------------|------------|-------------|\n| 230 | 114 | 74 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "SUM(CASE WHEN vlm_count < 5 THEN 1 ...); SUM(CASE WHEN vlm_count = 0 THEN 1 ...)",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: SELECT COUNT(*) AS total_metals, SUM(CASE WHEN vlm_count < 5 THEN 1 ELSE 0 END) AS metals_lt5, SUM(CASE WHEN vlm_count = 0 THEN 1 ELSE 0 END) AS metals_zero FROM (...)"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Characterization of systems as 'poorly characterized' is interpretive and not in the database fields.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "The descriptor 'exotic organometallics' is interpretive; not a database attribute.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "metal_50",
+              "metal_130"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_50 | Et_[3]Sn^[+] | E3Sn | 1 | ... | vlm_totN_1",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_50 | Et_[3]Sn^[+] | E3Sn | 1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_130 | Ph_[3]Pb^[+] | Ph3Pb | 1 |  | *** | *** | beta_totN_1 | ligand_totN_2 | vlm_totN_2 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Rarity of actinides is background context; not a database field in the tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [
+              "metal_91",
+              "metal_124"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_91 | Md^[3+] | Md | 3 | ✓ | [Md+3] | ... | vlm_totN_1",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_91 | Md^[3+] | Md | 3 | ✓ | [Md+3] | InChI=1S/Md/q+3 | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_124 | Pa^[5+] | Pa | 5 | ✓ | [Pa+5] | InChI=1S/Pa/q+5 | beta_totN_2 | ligand_totN_1 | vlm_totN_4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "‘Unusual oxo-cations’ is a chemical classification; not present as a field in tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [
+              "metal_181",
+              "metal_157"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_181 | TcO^[2+] | Tc | 2 | ... | vlm_totN_2",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_181 | TcO^[2+] | Tc | 2 |  | *** | *** | beta_totN_2 | ligand_totN_1 | vlm_totN_2 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_157 | Re^[5+] | Re | 5 | ✓ | [Re+5] | InChI=1S/Re/q+5 | beta_totN_2 | ligand_totN_2 | vlm_totN_2 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 17,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 18,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "‘Data-rich metals’ is a qualitative label and not a database field; requires interpretation beyond tool rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 19,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "metal_33",
+              "metal_208",
+              "metal_26",
+              "metal_125"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_41 | Cu^[2+] | ... | vlm_totN_8963",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_41 | Cu^[2+] | Cu | 2 | ✓ | [Cu+2] | InChI=1S/Cu/q+2 | beta_totN_264 | ligand_totN_1951 | vlm_totN_8963 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_112 | Ni^[2+] | Ni | 2 | ✓ | [Ni+2] | InChI=1S/Ni/q+2 | beta_totN_149 | ligand_totN_1369 | vlm_totN_5325 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_33 | Co^[2+] | Co | 2 | ✓ | [Co+2] | InChI=1S/Co/q+2 | beta_totN_92 | ligand_totN_977 | vlm_totN_2977 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 20,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "metal_33",
+              "metal_208",
+              "metal_26",
+              "metal_125"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| Co^[2+] ... vlm_totN_2977 | Pb^[2+] ... vlm_totN_1585 | Cd^[2+] ... vlm_totN_2828 |",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_33 | Co^[2+] | Co | 2 | ✓ | [Co+2] | InChI=1S/Co/q+2 | beta_totN_92 | ligand_totN_977 | vlm_totN_2977 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_125 | Pb^[2+] | Pb | 2 | ✓ | [Pb+2] | InChI=1S/Pb/q+2 | beta_totN_80 | ligand_totN_470 | vlm_totN_1585 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_26 | Cd^[2+] | Cd | 2 | ✓ | [Cd+2] | InChI=1S/Cd/q+2 | beta_totN_95 | ligand_totN_818 | vlm_totN_2828 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 21,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Attribution of causes ('decades of intensive study') is interpretive narrative, not contained in tool rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 22,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Tool used: execute_srd46_sql — queries the NIST SRD-46 database for this run.",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "execute_srd46_sql",
+                "snippet": "**Args:** {\"sql_query\": \"SELECT COUNT(*) AS total_metals, ...\", \"attach_equilibrium\": true}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

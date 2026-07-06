@@ -1,0 +1,86 @@
+I now have all the data needed. Let me compute and present the full answer.
+
+---
+
+## Cu²⁺–Malonate Conditional Stability Constant at pH 4
+
+All data from **NIST SRD-46**, at 25 °C, *I* = 0.1 M (KNO₃ or similar).
+
+---
+
+### Step 1 — Retrieve the Thermodynamic Constants
+
+#### Malonic acid pKa values (ligand_8873, 25 °C, I = 0.1 M)
+
+| Deprotonation step | Reaction | pKa |
+|---|---|---|
+| pKa₁ | H₂L → HL⁻ + H⁺ | **2.65** |
+| pKa₂ | HL⁻ → L²⁻ + H⁺ | **5.27** |
+
+#### Cu²⁺–malonate stability constant (beta_def_812, 25 °C, I = 0.1 M)
+
+| Reaction | log K₁ |
+|---|---|
+| Cu²⁺ + L²⁻ ⇌ CuL | **5.04** |
+
+---
+
+### Step 2 — Compute the α-Fraction of L²⁻ at pH 4
+
+For a diprotic acid H₂L, the fraction present as the fully deprotonated form L²⁻ is:
+
+$$\alpha_{L^{2-}} = \frac{K_{a1} \cdot K_{a2}}{[\text{H}^+]^2 + K_{a1}[\text{H}^+] + K_{a1} K_{a2}}$$
+
+At pH 4: [H⁺] = 10⁻⁴ M
+
+Convert pKa values to Ka:
+- Ka₁ = 10⁻²·⁶⁵ = **2.24 × 10⁻³**
+- Ka₂ = 10⁻⁵·²⁷ = **5.37 × 10⁻⁶**
+
+Numerator:
+$$K_{a1} \cdot K_{a2} = (2.24 \times 10^{-3})(5.37 \times 10^{-6}) = 1.20 \times 10^{-8}$$
+
+Denominator terms:
+| Term | Value |
+|---|---|
+| [H⁺]² | (10⁻⁴)² = 1.00 × 10⁻⁸ |
+| Ka₁·[H⁺] | (2.24 × 10⁻³)(10⁻⁴) = 2.24 × 10⁻⁷ |
+| Ka₁·Ka₂ | 1.20 × 10⁻⁸ |
+| **Sum (denominator)** | **≈ 2.46 × 10⁻⁷** |
+
+$$\alpha_{L^{2-}} = \frac{1.20 \times 10^{-8}}{2.46 \times 10^{-7}} = 0.0488 \approx 4.88\%$$
+
+$$\log \alpha_{L^{2-}} = \log(0.0488) = -1.31$$
+
+---
+
+### Step 3 — Compute the Conditional Stability Constant
+
+The conditional stability constant K′ accounts for the fact that at pH 4, most malonate exists as HL⁻, not L²⁻:
+
+$$K' = K_1 \cdot \alpha_{L^{2-}}$$
+
+$$\log K' = \log K_1 + \log \alpha_{L^{2-}} = 5.04 + (-1.31) = \boxed{3.73}$$
+
+---
+
+### Summary Table
+
+| Quantity | Value |
+|---|---|
+| log K₁ (Cu²⁺ + L²⁻ ⇌ CuL, 25°C, I=0.1 M) | 5.04 |
+| pKa₁ (H₂L → HL⁻) | 2.65 |
+| pKa₂ (HL⁻ → L²⁻) | 5.27 |
+| α(L²⁻) at pH 4 | 0.049 (≈ 4.9%) |
+| log α(L²⁻) | −1.31 |
+| **log K′ (conditional, pH 4)** | **3.73** |
+
+---
+
+### Chemical Interpretation
+
+At pH 4, malonic acid sits between its two pKa values (2.65 and 5.27), so the dominant species is the **monoprotonated HL⁻** form — only ~5% exists as the fully deprotonated L²⁻ that binds Cu²⁺ strongly. This reduces the effective binding strength by about 1.3 log units. The conditional log K′ ≈ **3.7** still represents moderately strong complexation, meaning Cu²⁺–malonate complexes are significant even at mildly acidic pH, but compete poorly with protons compared to near-neutral conditions (pH 6–7) where log K′ approaches the thermodynamic value of 5.0. This pH sensitivity is why malonate is a much weaker Cu²⁺ chelator in acidic soils or industrial acid baths than in near-neutral biological fluids.
+
+> **Source:** NIST SRD-46 (vlm_152316 for log K₁; vlm_151949 and vlm_151918 for pKa₁ and pKa₂).
+
+---

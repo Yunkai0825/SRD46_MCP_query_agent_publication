@@ -1,0 +1,69 @@
+# Zinc–L-Histidine Equilibria: SRD-46 Summary
+
+## System Identification
+
+| Entity | SRD-46 ID | Notes |
+|--------|-----------|-------|
+| Zn²⁺ | metal_208 | 4,095 VLM entries total |
+| L-Histidine | ligand_5898 | 250 VLM entries; HxL def: HL |
+
+---
+
+## Stability Constants Reported in SRD-46
+
+The database contains **29 measurements** across six complex species for the binary Zn²⁺ + L-histidine system.
+
+### log K Values
+
+| Species | Reaction | log K | T (°C) | I (mol/L) |
+|---------|----------|-------|--------|-----------|
+| ZnL | Zn + L ⇌ ZnL | 6.51 | 25 | 0.1 |
+| ZnL | Zn + L ⇌ ZnL | 6.48 | 25 | 0.5 |
+| ZnL | Zn + L ⇌ ZnL | 6.58 | 25 | 1.0 |
+| ZnL | Zn + L ⇌ ZnL | 7.07 | 25 | 3.0 |
+| ZnL | Zn + L ⇌ ZnL | 6.35 | 37 | 0.15 |
+| ZnL₂ | Zn + 2L ⇌ ZnL₂ | 12.04 | 25 | 0.1 |
+| ZnL₂ | Zn + 2L ⇌ ZnL₂ | 11.91 | 25 | 0.5 |
+| ZnL₂ | Zn + 2L ⇌ ZnL₂ | 12.29 | 25 | 1.0 |
+| ZnL₂ | Zn + 2L ⇌ ZnL₂ | 12.74 | 25 | 3.0 |
+| ZnL₂ | Zn + 2L ⇌ ZnL₂ | 11.67 | 37 | 0.15 |
+| ZnHL | ZnL + H ⇌ ZnHL | 4.86 | 25 | 0.1 |
+| ZnHL | ZnL + H ⇌ ZnHL | 4.61 | 37 | 0.15 |
+| ZnHL₂ | ZnL₂ + H ⇌ ZnHL₂ | 5.80 | 25 | 0.1 |
+| ZnHL₂ | ZnL₂ + H ⇌ ZnHL₂ | 5.50 | 37 | 0.15 |
+| Zn(HL)₂ | ZnHL₂ + H ⇌ Zn(HL)₂ | 5.67 | 25 | 0.1 |
+| Zn(OH)L₂ | ZnL₂ + H ⇌ Zn(OH)L₂ + H₂O | 9.95 | 25 | 0.5 |
+
+### Thermodynamic Data (25°C)
+
+| Reaction | I (mol/L) | ΔH (kJ/mol) | ΔS (J/mol·K) |
+|----------|-----------|-------------|--------------|
+| Zn + L ⇌ ZnL | 0.1 | −20.1 | +57.3 |
+| Zn + L ⇌ ZnL | 3.0 | −23.0 | +58.2 |
+| Zn + 2L ⇌ ZnL₂ | 0.1 | −47.3 | −67.4 |
+| Zn + 2L ⇌ ZnL₂ | 0.1 | 0.0 | +72.0 |
+| Zn + 2L ⇌ ZnL₂ | 3.0 | −49.4 | — |
+| ZnL + H ⇌ ZnHL | 0.1 | −27.6 | +0.4 |
+
+---
+
+## Regarding the ~2005 Citation
+
+**The SRD-46 database does not contain a ~2005 publication for the binary Zn²⁺ + L-histidine system.** All citations indexed for this system span **1949–1994**, with the most recent being:
+
+> J. Wang, E. Collange, D. J. Aymes, M. R. Paris, and R. Fournaise, *Bull. Soc. Chim. France*, **1994**, 131, 1. (shortcut: `94WC`)
+
+This means your colleague's ~2005 paper either:
+1. **Postdates the SRD-46 data cutoff** for this particular system and was not incorporated into this edition.
+2. **Studied a ternary or mixed-ligand system** (e.g., Zn–histidine–nucleotide or Zn–histidine–peptide), which would be indexed under a different ligand combination.
+3. **Focused on a related ligand** (e.g., histamine, histidinate peptides) catalogued separately.
+
+---
+
+## Chemistry Insight
+
+The Zn²⁺–histidine system is biologically significant because histidine is the primary metal-binding residue in zinc metalloenzymes and zinc finger proteins. The log β₂ ≈ 12.0 at physiological-like conditions (37°C, I = 0.15 M) reflects strong but reversible binding, consistent with Zn²⁺'s role as a Lewis acid that coordinates through histidine's imidazole nitrogen, amino group, and carboxylate. The slight increase in log K with ionic strength (6.51 → 7.07 from I = 0.1 to 3.0 M) is a classic activity-coefficient effect for a 2+/1− electrostatic interaction.
+
+*Source: NIST SRD-46 (Critically Selected Stability Constants of Metal Complexes)*
+
+---

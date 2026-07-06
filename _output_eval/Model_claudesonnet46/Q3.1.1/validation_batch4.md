@@ -1,0 +1,33 @@
+# Q3.1.1 - Validation (batch 4)
+
+**27 of 76 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 1 | counting | **470 ligands** | ...**Pb²⁺ (metal_125)** as having data for **470 ligands** and **1,585 stability measurements** — ... |
+| 2 | 1 | counting | **1,585 stability measurements** | ... as having data for **470 ligands** and **1,585 stability measurements** — the richest Pb²⁺ dataset in the datab... |
+| 3 | 1 | property_attribution | ΔS / log β | ...p-ranked ligands by stability constant (ΔS / log β, ordered descending) include the follow... |
+| 4 | 1 | listing | \| 3 \| **DTPA** (Diethylenetrinitrilopentaacetic acid) \| ligand_6356 \| H₅L \| ✅ Clinical (Ca-DTPA for heavy metals) \| | ...) \| ligand_6301 \| H₄L \| Research only \| \| 3 \| **DTPA** (Diethylenetrinitrilopentaacetic acid) \| ligand_6356 \| H₅L \| ✅ Clinical (Ca-DTPA for heavy metals) \| \| 4 \| **EDTA** (Ethylenedinitrilotetraa... |
+| 5 | 1 | listing | \| 4 \| **EDTA** (Ethylenedinitrilotetraacetic acid) \| ligand_6277 \| H₄L \| ✅ Clinical (CaNa₂EDTA for Pb poisoning) \| | ...✅ Clinical (Ca-DTPA for heavy metals) \| \| 4 \| **EDTA** (Ethylenedinitrilotetraacetic acid) \| ligand_6277 \| H₄L \| ✅ Clinical (CaNa₂EDTA for Pb poisoning) \| \| 5 \| **TTHA** (Trimethylenedinitrilote... |
+| 6 | 1 | listing | \| 5 \| **TTHA** (Trimethylenedinitrilotetraacetic acid) \| ligand_6311 \| H₄L \| Research only \| | ...Clinical (CaNa₂EDTA for Pb poisoning) \| \| 5 \| **TTHA** (Trimethylenedinitrilotetraacetic acid) \| ligand_6311 \| H₄L \| Research only \| \| 6 \| **NTA** (Nitrilotriacetic acid) \|... |
+| 7 | 1 | listing | \| 6 \| **NTA** (Nitrilotriacetic acid) \| ligand_6165 \| H₃L \| Not clinical (nephrotoxic) \| | ...) \| ligand_6311 \| H₄L \| Research only \| \| 6 \| **NTA** (Nitrilotriacetic acid) \| ligand_6165 \| H₃L \| Not clinical (nephrotoxic) \| \| 7 \| **HEDTA** (N-(2-Hydroxyethyl)ethy... |
+| 8 | 1 | listing | \| 7 \| **HEDTA** (N-(2-Hydroxyethyl)ethylenediaminetriacetic acid) \| ligand_6275 \| H₃L \| Limited clinical \| | ...65 \| H₃L \| Not clinical (nephrotoxic) \| \| 7 \| **HEDTA** (N-(2-Hydroxyethyl)ethylenediaminetriacetic acid) \| ligand_6275 \| H₃L \| Limited clinical \| \| 8 \| **Pyrophosphate** \| ligand_10114 ... |
+| 9 | 1 | listing | \| 8 \| **Pyrophosphate** \| ligand_10114 \| H₄L \| Not chelation therapy \| | ... ligand_6275 \| H₃L \| Limited clinical \| \| 8 \| **Pyrophosphate** \| ligand_10114 \| H₄L \| Not chelation therapy \| \| 9 \| **Thiobis-EDTA analog** (thioethe... |
+| 10 | 1 | listing | \| 9 \| **Thiobis-EDTA analog** (thioether-linked) \| ligand_6348 \| H₄L \| Research only \| | ...d_10114 \| H₄L \| Not chelation therapy \| \| 9 \| **Thiobis-EDTA analog** (thioether-linked) \| ligand_6348 \| H₄L \| Research only \| \| 10 \| **Phenylene-EDTA** (1,2-phenylen... |
+| 11 | 1 | listing | \| 10 \| **Phenylene-EDTA** (1,2-phenylenediamine backbone) \| ligand_6751 \| H₄L \| Research only \| | ...) \| ligand_6348 \| H₄L \| Research only \| \| 10 \| **Phenylene-EDTA** (1,2-phenylenediamine backbone) \| ligand_6751 \| H₄L \| Research only \|  > ⚠️ **Note:** The database compressio... |
+| 12 | 1 | existence_absence | The database compression during this session prevented retrieval of the exact numeric log β values. | ...\| H₄L \| Research only \|  > ⚠️ **Note:** The database compression during this session prevented retrieval of the exact numeric log β values. The ranking above reflects the descendi... |
+| 13 | 1 | listing | `ligandmetal_stability_measured` | ...ecise values, a direct SQL query on the `ligandmetal_stability_measured` table is recommended.... |
+| 14 | 2 | exact_value | \| **DMSA (Succimer)** \| Not returned in top 30 \| ✅ FDA-approved \| Oral agent; first-line for children; softer thiol donor \| | ...g (BLL > 45 µg/dL); IV administration \| \| **DMSA (Succimer)** \| Not returned in top 30 \| ✅ FDA-approved \| Oral agent; first-line for children; softer thiol donor \| \| **DTPA** \| ligand_6356 \| ✅ FDA-approv... |
+| 15 | 2 | exact_value | \| **BAL (Dimercaprol)** \| Not in top 30 \| ✅ Historical clinical \| Combined with EDTA for encephalopathy; thiol-based \| | ...ransuranic metals; also active vs. Pb \| \| **BAL (Dimercaprol)** \| Not in top 30 \| ✅ Historical clinical \| Combined with EDTA for encephalopathy; thiol-based \| \| **D-Penicillamine** \| Not in top 30 \|... |
+| 16 | 2 | exact_value | \| **D-Penicillamine** \| Not in top 30 \| ⚠️ Second-line \| Oral; less efficacious than DMSA for Pb \| | ... EDTA for encephalopathy; thiol-based \| \| **D-Penicillamine** \| Not in top 30 \| ⚠️ Second-line \| Oral; less efficacious than DMSA for Pb \|... |
+| 17 | 3 | comparison | **Aminopolycarboxylates dominate** the top of the affinity ranking for Pb²⁺. | ...### Chemistry Insights  1. **Aminopolycarboxylates dominate** the top of the affinity ranking for Pb²⁺. EDTA and DTPA are the workhorses becaus... |
+| 18 | 3 | comparison | **CDTA outperforms EDTA** for many metals including Pb²⁺ | ...hese ligands' mixed N/O donor sets.  2. **CDTA outperforms EDTA** for many metals including Pb²⁺ due to the rigid cyclohexane backbone p... |
+| 19 | 4 | property_attribution | CaNa₂EDTA (IV) | ...ol: - **Severe/symptomatic poisoning:** CaNa₂EDTA (IV) ± BAL (IM) for encephalopathy - **Moder... |
+| 20 | 4 | property_attribution | BAL (IM) | ...mptomatic poisoning:** CaNa₂EDTA (IV) ± BAL (IM) for encephalopathy - **Moderate poisoni... |
+| 21 | 4 | property_attribution | for encephalopathy | ... poisoning:** CaNa₂EDTA (IV) ± BAL (IM) for encephalopathy - **Moderate poisoning (BLL 25–70 µg/dL... |
+| 22 | 4 | range | BLL 25–70 µg/dL | ... encephalopathy - **Moderate poisoning (BLL 25–70 µg/dL):** Oral DMSA (succimer) — best safety/... |
+| 23 | 4 | property_attribution | Oral DMSA | ...Moderate poisoning (BLL 25–70 µg/dL):** Oral DMSA (succimer) — best safety/efficacy balan... |
+| 24 | 4 | comparison | best safety/efficacy balance | ... 25–70 µg/dL):** Oral DMSA (succimer) — best safety/efficacy balance - **Research/experimental:** CDTA and D... |
+| 25 | 4 | comparison | show higher thermodynamic affinity | ...*Research/experimental:** CDTA and DTPA show higher thermodynamic affinity but lack clinical approval for Pb speci... |
+| 26 | 4 | existence_absence | lack clinical approval for Pb specifically | ... show higher thermodynamic affinity but lack clinical approval for Pb specifically  *Source: NIST SRD-46 Critically Select... |
+| 27 | 4 | counting | 470 ligands surveyed. | ...l Complexes Database, metal_125 (Pb²⁺), 470 ligands surveyed.*... |

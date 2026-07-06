@@ -1,0 +1,1426 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q4.1\\Q4.1_result_batch3.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "SRD-46 does **not contain direct stability constants** for the four requested solvent ligands with Fe(II) or Fe(III):\n\n| Ligand | Fe(II) direct SRD-46 hit | Fe(III) direct SRD-46 hit |\n|---|---:|---:|\n| DMF | none found | none found |\n| Acetonitrile | none found | none found |\n| THF | none found | none found |\n| Ethylene glycol | none found as neutral ligand | none found as neutral ligand |\n\nWhat the database **does** contain are nearby **Fe–O donor analogs**, especially for glycolate/diglycolate, which are useful as **upper-bound comparators** because they are **anionic** and therefore bind much more strongly than the neutral solvents you asked about.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 117,
+            "text": "SRD-46 does **not contain direct stability constants** for the four requested solvent ligands with Fe(II) or Fe(III):",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 201,
+            "end": 234,
+            "text": "| DMF | none found | none found |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 235,
+            "end": 277,
+            "text": "| Acetonitrile | none found | none found |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 278,
+            "end": 311,
+            "text": "| THF | none found | none found |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 312,
+            "end": 393,
+            "text": "| Ethylene glycol | none found as neutral ligand | none found as neutral ligand |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 395,
+            "end": 463,
+            "text": "What the database **does** contain are nearby **Fe–O donor analogs**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 465,
+            "end": 501,
+            "text": "especially for glycolate/diglycolate",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 503,
+            "end": 550,
+            "text": "which are useful as **upper-bound comparators**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 551,
+            "end": 579,
+            "text": "because they are **anionic**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 580,
+            "end": 660,
+            "text": "and therefore bind much more strongly than the neutral solvents you asked about.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "search_ligands — (no results) for names incl. DMF, acetonitrile, THF, ethylene glycol; search_stability WHERE includes those names but returned only glycolate/diglycolate entries.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "\"name\": \"N,N-dimethylformamide, dimethylformamide, DMF, acetonitrile, ethanenitrile, MeCN, tetrahydrofuran, oxacyclopentane, THF, ethylene glycol, ethane-1,2-diol, 1,2-ethanediol, glycol\" … *(no results)*"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"((c.metal_id = metal_62 OR c.metal_id = metal_61) AND (c.ligand_name_SRD LIKE '%dimethylformamide%' OR ... '%acetonitrile%' ... '%tetrahydrofuran%' ... '%ethylene glycol%' ...))\""
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Hydroxyacetic acid (Glycolic acid) — 4 measurement(s) … Fe^[3+] + Oxydiacetic acid (Diglycolic acid) — 1 measurement(s) … Fe^[2+] + Hydroxyacetic acid … Fe^[2+] + Oxydiacetic acid …"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "DMF searched by name (incl. \"dimethylformamide\", \"DMF\") returned no ligands: *(no results)*; no DMF rows in Fe(II)/Fe(III) stability results.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "\"name\": \"N,N-dimethylformamide, dimethylformamide, DMF, …\" … ## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"… LIKE '%dimethylformamide%' OR c.ligand_name_SRD LIKE '%formamide%' … (c.metal_id = metal_62 OR c.metal_id = metal_61) …\""
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Returned pairs list shows Glycolic acid, Oxydiacetic acid, etc.; no entries for dimethylformamide/DMF with Fe^[2+]/Fe^[3+]."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Acetonitrile (\"acetonitrile\", \"ethanenitrile\") searched; no ligands found; Fe(II)/Fe(III) stability search included nitriles but returned none for acetonitrile.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "\"name\": \"…, acetonitrile, ethanenitrile, MeCN, …\" … ## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"… c.ligand_name_SRD LIKE '%acetonitrile%' OR c.ligand_name_SRD LIKE '%ethanenitrile%' … (c.metal_id = metal_62 OR c.metal_id = metal_61) …\""
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"… LIKE '%nitrile%' …\" — results list shows no acetonitrile entries for Fe; only other ligands returned."
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "THF (\"tetrahydrofuran\", \"oxacyclopentane\") searched; no ligand hits; Fe(II)/Fe(III) stability search included ethers but none for THF.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "\"name\": \"…, tetrahydrofuran, oxacyclopentane, THF, …\" … ## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"… c.ligand_name_SRD LIKE '%tetrahydrofuran%' OR c.ligand_name_SRD LIKE '%oxacyclopentane%' … (c.metal_id = metal_62 OR c.metal_id = metal_61) …\""
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"… LIKE '%ether%' …\" — returned pairs do not include tetrahydrofuran/THF with Fe."
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Ethylene glycol names (\"ethylene glycol\", \"ethane-1,2-diol\", \"1,2-ethanediol\") yielded no ligand hits; Fe stability search included diols but none for ethylene glycol.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "\"name\": \"…, ethylene glycol, ethane-1,2-diol, 1,2-ethanediol, glycol\" … ## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"… LIKE '%ethylene glycol%' OR … '%ethane-1,2-diol%' OR … '%ethanediol%' OR … '%glycol%' …\""
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Returned entries include Hydroxyacetic acid (Glycolic acid) and Oxydiacetic acid (Diglycolic acid), not ethylene glycol."
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_8640",
+              "ligand_8974",
+              "vlm_147409",
+              "vlm_155690",
+              "vlm_147386",
+              "vlm_155667"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Fe + glycolate/diglycolate data exist: Fe^[3+]+Hydroxyacetic acid logK 2.9; Fe^[3+]+Oxydiacetic acid logK 5.04; Fe^[2+]+Hydroxyacetic acid logK 1.33; Fe^[2+]+Oxydiacetic acid logK 2.56.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Hydroxyacetic acid (Glycolic acid) — vlm_147409 … logK 2.9 … equation `[M] + [L] <=> [ML]` … HxL_involved [L]"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Oxydiacetic acid (Diglycolic acid) — vlm_155690 … logK 5.04 … equation `[M] + [L] <=> [ML]` … HxL_involved [L]"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[2+] + Hydroxyacetic acid (Glycolic acid) — vlm_147386 … logK 1.33 … ; Fe^[2+] + Oxydiacetic acid — vlm_155667 … logK 2.56"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "ligand_8640",
+              "ligand_8974",
+              "vlm_147409",
+              "vlm_155690",
+              "vlm_147386",
+              "vlm_155667"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Rows explicitly for glycolate (Hydroxyacetic acid) and diglycolate (Oxydiacetic acid) with Fe: logK 2.9, 1.33, 5.04, 2.56.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Hydroxyacetic acid (Glycolic acid) — vlm_147409 … logK 2.9 …"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[2+] + Hydroxyacetic acid (Glycolic acid) — vlm_147386 … logK 1.33 …"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Oxydiacetic acid (Diglycolic acid) — vlm_155690 … logK 5.04 … ; Fe^[2+] + Oxydiacetic acid — vlm_155667 … logK 2.56"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "The database does not label entries as “upper-bound comparators.” This is interpretive guidance, not a database field.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "vlm_147409",
+              "vlm_155690"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "HxL_involved shows [L] for glycolate/diglycolate entries, indicating the deprotonated (anionic) ligand form participates.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "vlm_147409 … HxL_involved | [L] … `[M] + [L] <=> [ML]` (Fe^[3+] + Hydroxyacetic acid)"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "vlm_155690 … HxL_involved | [L] … `[M] + [L] <=> [ML]` (Fe^[3+] + Oxydiacetic acid)"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Relative binding strength vs. neutral solvents is not reported in SRD-46 output here; it follows general coordination chemistry (anionic > neutral donors for Fe).",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "## Closest SRD-46 analogs retrieved\n\n| Metal | Analog ligand | Donor type | Conditions | Reported constant |\n|---|---|---|---|---|\n| Fe(III) | Hydroxyacetic acid (glycolate family) | O,O / hydroxy-carboxylate | 25 °C, I = 1 M | logK₁([FeL]) = 2.9 |\n| Fe(II) | Hydroxyacetic acid (glycolate family) | O,O / hydroxy-carboxylate | 25 °C, I = 1 M | logK₁ = 1.33 |\n| Fe(III) | Oxydiacetic acid (diglycolate) | multidentate O donor | 25 °C, I = 0.5 M | logK₁ = 5.04 |\n| Fe(II) | Oxydiacetic acid (diglycolate) | multidentate O donor | 25 °C, I = 0.1 M | logK₁ = 2.56 |\n| Fe(II) | Oxydiacetic acid protonated complex | multidentate O donor | 25 °C, I = 0.1 M | logK([MHL]) = 0.64 |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 35,
+            "text": "## Closest SRD-46 analogs retrieved",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 131,
+            "end": 248,
+            "text": "| Fe(III) | Hydroxyacetic acid (glycolate family) | O,O / hydroxy-carboxylate | 25 °C, I = 1 M | logK₁([FeL]) = 2.9 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 249,
+            "end": 359,
+            "text": "| Fe(II) | Hydroxyacetic acid (glycolate family) | O,O / hydroxy-carboxylate | 25 °C, I = 1 M | logK₁ = 1.33 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 360,
+            "end": 461,
+            "text": "| Fe(III) | Oxydiacetic acid (diglycolate) | multidentate O donor | 25 °C, I = 0.5 M | logK₁ = 5.04 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 462,
+            "end": 562,
+            "text": "| Fe(II) | Oxydiacetic acid (diglycolate) | multidentate O donor | 25 °C, I = 0.1 M | logK₁ = 2.56 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 563,
+            "end": 674,
+            "text": "| Fe(II) | Oxydiacetic acid protonated complex | multidentate O donor | 25 °C, I = 0.1 M | logK([MHL]) = 0.64 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_8640",
+              "vlm_147409",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_147409 | beta_def_812 | logK | 2.9 | 25 | 1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Hydroxyacetic acid (Glycolic acid) — 4 measurement(s)\nvlm_147409 | ... | beta_def_812 | logK | 2.9 | 25 | 1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_62",
+              "ligand_8640",
+              "vlm_147386",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_147386 | beta_def_812 | logK | 1.33 | 25 | 1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[2+] + Hydroxyacetic acid (Glycolic acid)\nvlm_147386 | ... | beta_def_812 | logK | 1.33 | 25 | 1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_8974",
+              "vlm_155690",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_155690 | beta_def_812 | logK | 5.04 | 25 | 0.5 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Oxydiacetic acid (Diglycolic acid)\nvlm_155690 | ... | beta_def_812 | logK | 5.04 | 25 | 0.5 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_62",
+              "ligand_8974",
+              "vlm_155667",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_155667 | beta_def_812 | logK | 2.56 | 25 | 0.1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[2+] + Oxydiacetic acid (Diglycolic acid)\nvlm_155667 | ... | beta_def_812 | logK | 2.56 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_62",
+              "ligand_8974",
+              "vlm_155668",
+              "beta_def_779"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_155668 | beta_def_779 | logK | 0.64 | 25 | 0.1 | `[M] + [HL] <=> [MHL]`",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[2+] + Oxydiacetic acid (Diglycolic acid)\nvlm_155668 | ... | beta_def_779 | logK | 0.64 | 25 | 0.1 | `[M] + [HL] <=> [MHL]`"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "## Interpretation\n\nThe SRD-46 analogs support three robust conclusions:\n\n| Observation from SRD-46 | Implication for your targets |\n|---|---|\n| Fe(III) binds O-donor ligands much more strongly than Fe(II) | Expect Fe(III) > Fe(II) for DMF, THF, and ethylene glycol |\n| Chelation increases binding strongly | Ethylene glycol should bind more strongly than monodentate neutral solvents, but still much weaker than glycolate/diglycolate |\n| Anionic O-donor ligands already give only modest Fe(II) logK values (1.3–2.6) | Neutral solvents should be substantially weaker, especially for Fe(II) |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 17,
+            "text": "## Interpretation",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 19,
+            "end": 71,
+            "text": "The SRD-46 analogs support three robust conclusions:",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 142,
+            "end": 266,
+            "text": "| Fe(III) binds O-donor ligands much more strongly than Fe(II) | Expect Fe(III) > Fe(II) for DMF, THF, and ethylene glycol |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 267,
+            "end": 435,
+            "text": "| Chelation increases binding strongly | Ethylene glycol should bind more strongly than monodentate neutral solvents, but still much weaker than glycolate/diglycolate |",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 436,
+            "end": 590,
+            "text": "| Anionic O-donor ligands already give only modest Fe(II) logK values (1.3–2.6) | Neutral solvents should be substantially weaker, especially for Fe(II) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Narrative count ('three conclusions') is not a database field; tool results do not enumerate such counts.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_8640",
+              "ligand_8974",
+              "beta_def_812",
+              "vlm_147409",
+              "vlm_147386",
+              "vlm_155690",
+              "vlm_155667"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| vlm_147409 | ref_eq_map_18185 | beta_def_812 | logK | 2.9 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (3.62, L, +inf) |",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_147409 | ref_eq_map_18185 | beta_def_812 | logK | 2.9 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (3.62, L, +inf) |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_147386 | ref_eq_map_18174 | beta_def_812 | logK | 1.33 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (3.62, L, +inf) |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_155690 | ref_eq_map_21371 | beta_def_812 | logK | 5.04 | 25 | 0.5 | `[M] + [L] <=> [ML]` | *** | [L] | (3.94, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_8640",
+              "ligand_8974",
+              "beta_def_812",
+              "vlm_155690",
+              "vlm_147409",
+              "vlm_155667",
+              "vlm_147386"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| vlm_155690 | ref_eq_map_21371 | beta_def_812 | logK | 5.04 | 25 | 0.5 | `[M] + [L] <=> [ML]` | *** | [L] | (3.94, L, +inf) |",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_155690 | ref_eq_map_21371 | beta_def_812 | logK | 5.04 | 25 | 0.5 | `[M] + [L] <=> [ML]` | *** | [L] | (3.94, L, +inf) |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_147409 | ref_eq_map_18185 | beta_def_812 | logK | 2.9 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (3.62, L, +inf) |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_155667 | ref_eq_map_21364 | beta_def_812 | logK | 2.56 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (3.94, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_62",
+              "ligand_8640",
+              "ligand_8974",
+              "beta_def_812",
+              "vlm_147386",
+              "vlm_155667"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_155667 | ref_eq_map_21364 | beta_def_812 | logK | 2.56 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (3.94, L, +inf) |",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_147386 | ref_eq_map_18174 | beta_def_812 | logK | 1.33 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (3.62, L, +inf) |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_155667 | ref_eq_map_21364 | beta_def_812 | logK | 2.56 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (3.94, L, +inf) |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "## Reasoned estimates for the requested systems\n\nThese are **not SRD-46 values**; they are **chemically reasoned estimates bounded by the analog data above**.\n\n| Ligand | Likely donor character | Fe(II) estimated logβ₁ | Fe(III) estimated logβ₁ | Confidence | Rationale |\n|---|---|---:|---:|---|---|\n| DMF | neutral amide O donor | ~0 to 1 | ~1 to 2.5 | low–moderate | Carbonyl O is a better hard donor than ether O or nitrile N, but neutrality keeps binding far below carboxylates |\n| Acetonitrile | neutral nitrile N donor | ~0 or weaker | ~0.5 to 1.5 | low | Fe is not expected to bind MeCN strongly in water; Fe(III) especially prefers hard O donors over nitrile N |\n| THF | neutral ether O donor | ~0 or weaker | ~0.5 to 1.5 | low | Ether O is weakly donating and neutral; expected to be among the weakest of the set |\n| Ethylene glycol | neutral bidentate O,O donor | ~0.5 to 1.5 | ~1.5 to 3 | moderate | Chelation helps, but neutral EG should remain weaker than glycolate (Fe(II) 1.33; Fe(III) 2.9) and much weaker than diglycolate |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 47,
+            "text": "## Reasoned estimates for the requested systems",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 49,
+            "end": 80,
+            "text": "These are **not SRD-46 values**",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 82,
+            "end": 157,
+            "text": "they are **chemically reasoned estimates bounded by the analog data above**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 300,
+            "end": 483,
+            "text": "| DMF | neutral amide O donor | ~0 to 1 | ~1 to 2.5 | low–moderate | Carbonyl O is a better hard donor than ether O or nitrile N, but neutrality keeps binding far below carboxylates |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 484,
+            "end": 670,
+            "text": "| Acetonitrile | neutral nitrile N donor | ~0 or weaker | ~0.5 to 1.5 | low | Fe is not expected to bind MeCN strongly in water; Fe(III) especially prefers hard O donors over nitrile N |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 671,
+            "end": 823,
+            "text": "| THF | neutral ether O donor | ~0 or weaker | ~0.5 to 1.5 | low | Ether O is weakly donating and neutral; expected to be among the weakest of the set |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 824,
+            "end": 1040,
+            "text": "| Ethylene glycol | neutral bidentate O,O donor | ~0.5 to 1.5 | ~1.5 to 3 | moderate | Chelation helps, but neutral EG should remain weaker than glycolate (Fe(II) 1.33; Fe(III) 2.9) and much weaker than diglycolate |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Provenance disclaimer about the author’s estimates; this cannot be directly verified by database rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_147386 | ref_eq_map_18174 | beta_def_812 | logK | 1.33 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (3.62, L, +inf) |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_147409 | ref_eq_map_18185 | beta_def_812 | logK | 2.9 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (3.62, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_147409 | ref_eq_map_18185 | beta_def_812 | logK | 2.9 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (3.62, L, +inf) |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_147386 | ref_eq_map_18174 | beta_def_812 | logK | 1.33 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (3.62, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_147409 | ref_eq_map_18185 | beta_def_812 | logK | 2.9 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (3.62, L, +inf) |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_147386 | ref_eq_map_18174 | beta_def_812 | logK | 1.33 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (3.62, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "vlm_147386",
+              "vlm_147409",
+              "vlm_155667",
+              "vlm_155690"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "| vlm_147386 | ... | logK | 1.33 | 25 | 1 | `[M] + [L] <=> [ML]` |",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_147386 | ref_eq_map_18174 | beta_def_812 | logK | 1.33 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (3.62, L, +inf) |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_147409 | ref_eq_map_18185 | beta_def_812 | logK | 2.9 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (3.62, L, +inf) |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_155690 | ref_eq_map_21371 | beta_def_812 | logK | 5.04 | 25 | 0.5 | `[M] + [L] <=> [ML]` | *** | [L] | (3.94, L, +inf) |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "## Best overall ranking\n\n| Metal | Expected affinity order |\n|---|---|\n| Fe(II) | ethylene glycol > DMF > THF ≈ acetonitrile |\n| Fe(III) | ethylene glycol ≳ DMF > THF ≈ acetonitrile |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 23,
+            "text": "## Best overall ranking",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 71,
+            "end": 126,
+            "text": "| Fe(II) | ethylene glycol > DMF > THF ≈ acetonitrile |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 127,
+            "end": 183,
+            "text": "| Fe(III) | ethylene glycol ≳ DMF > THF ≈ acetonitrile |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "SRD-46 results did not return Fe(II) with DMF, acetonitrile, THF, or ethylene glycol; ordering given as domain reasoning (HSAB, chelate effect).",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n*(no results)*"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"((c.metal_id = metal_62 OR c.metal_id = metal_61) AND (c.ligand_name_SRD LIKE '%nitrile%' OR c.ligand_name_SRD LIKE '%amide%' OR c.ligand_name_SRD LIKE '%ether%' OR c.ligand_name_SRD LIKE '%diol%' OR c.ligand_name_SRD LIKE '%glycol%'))\""
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "No SRD-46 rows found for Fe(III) with DMF, acetonitrile, THF, or ethylene glycol; ranking reflects general ligand donor strength trends, not database values here.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"((c.metal_id = metal_62 OR c.metal_id = metal_61) AND (c.ligand_name_SRD LIKE '%dimethylformamide%' OR ... '%acetonitrile%' ... '%tetrahydrofuran%' ... '%ethylene glycol%' ...))\""
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Hydroxyacetic acid (Glycolic acid) — vlm_147409 logK 2.9 (25 °C, I=1); no entries for DMF/MeCN/THF/ethylene glycol returned by this query."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "## Practical reading of these estimates\n\n| System class | Likely behavior in aqueous solution |\n|---|---|\n| Fe(II) + DMF / MeCN / THF | very weak complexation; mostly solvation rather than strongly defined discrete ML species |\n| Fe(III) + DMF / MeCN / THF | somewhat stronger than Fe(II), but still weak compared with hydrolysis and anionic ligands |\n| Fe(II)/Fe(III) + ethylene glycol | the most plausible of the four to show measurable inner-sphere association because of chelation, but still weaker than glycolate-type ligands |\n\nA useful chemical insight is that the **absence of direct SRD-46 entries itself is consistent with weak binding**: these are common solvents/neutral donors, and for iron in water their effects are often dominated by bulk solvation, hydrolysis competition, and medium effects rather than well-characterized discrete stability constants. Among your targets, **ethylene glycol is the only one for which chelation plausibly pushes complexation into a modest measurable range**, while **DMF, MeCN, and THF are likely quite weak ligands for Fe²⁺ and only modest for Fe³⁺**.\n\n**Source:** NIST SRD-46, using Fe(II)/Fe(III) catalog coverage and analog stability data for glycolate and oxydiacetate/diglycolate.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 39,
+            "text": "## Practical reading of these estimates",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 106,
+            "end": 227,
+            "text": "| Fe(II) + DMF / MeCN / THF | very weak complexation; mostly solvation rather than strongly defined discrete ML species |",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 228,
+            "end": 351,
+            "text": "| Fe(III) + DMF / MeCN / THF | somewhat stronger than Fe(II), but still weak compared with hydrolysis and anionic ligands |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 352,
+            "end": 532,
+            "text": "| Fe(II)/Fe(III) + ethylene glycol | the most plausible of the four to show measurable inner-sphere association because of chelation, but still weaker than glycolate-type ligands |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 534,
+            "end": 571,
+            "text": "A useful chemical insight is that the",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 574,
+            "end": 645,
+            "text": "absence of direct SRD-46 entries itself is consistent with weak binding",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 649,
+            "end": 690,
+            "text": "these are common solvents/neutral donors,",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 695,
+            "end": 869,
+            "text": "for iron in water their effects are often dominated by bulk solvation, hydrolysis competition, and medium effects rather than well-characterized discrete stability constants.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 870,
+            "end": 889,
+            "text": "Among your targets,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 892,
+            "end": 1004,
+            "text": "ethylene glycol is the only one for which chelation plausibly pushes complexation into a modest measurable range",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1008,
+            "end": 1013,
+            "text": "while",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1016,
+            "end": 1073,
+            "text": "DMF, MeCN, and THF are likely quite weak ligands for Fe²⁺",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1074,
+            "end": 1098,
+            "text": "and only modest for Fe³⁺",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1103,
+            "end": 1126,
+            "text": "**Source:** NIST SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1128,
+            "end": 1165,
+            "text": "using Fe(II)/Fe(III) catalog coverage",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1170,
+            "end": 1235,
+            "text": "analog stability data for glycolate and oxydiacetate/diglycolate.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "search_ligands: (no results) for DMF/MeCN/THF with Fe — consistent with lack of measured ML constants.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "name: \"N,N-dimethylformamide, dimethylformamide, DMF, acetonitrile, ethanenitrile, MeCN, tetrahydrofuran, oxacyclopentane, THF, ethylene glycol, ethane-1,2-diol, 1,2-ethanediol, glycol\" → (no results)"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "name: \"dimethylformamide, DMF, acetonitrile, tetrahydrofuran, THF, ethylene glycol\" → (no results)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] + Hydroxide ion — 38 ent, 8 sp, 38 vlms; and no SRD-46 DMF/MeCN/THF rows found.",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "**2. Fe^[3+] + Hydroxide ion** (metal_61 + ligand_10076) — 38 ent, 8 sp, 38 vlms (vlm_170791…vlm_170828)"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "name includes \"DMF, acetonitrile, THF\" → (no results)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_8640",
+              "vlm_147409",
+              "vlm_147386",
+              "ligand_8974",
+              "vlm_155690",
+              "vlm_155667"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] + Hydroxyacetic acid: vlm_147409 logK 2.9; Fe^[2+] + Hydroxyacetic acid: vlm_147386 logK 1.33; Diglycolic acid: vlm_155690 logK 5.04.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Hydroxyacetic acid (Glycolic acid) | vlm_147409 | beta_def_812 | logK | 2.9 | 25 | 1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[2+] + Hydroxyacetic acid (Glycolic acid) | vlm_147386 | beta_def_812 | logK | 1.33 | 25 | 1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Oxydiacetic acid (Diglycolic acid) | vlm_155690 | beta_def_812 | logK | 5.04 | 25 | 0.5 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "No SRD-46 entries found for DMF, acetonitrile, THF, ethylene glycol with Fe(II)/(III) in searches.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "name: \"...DMF, acetonitrile, ... THF, ethylene glycol, ...\" → (no results)"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "name: \"dimethylformamide, DMF, acetonitrile, tetrahydrofuran, THF, ethylene glycol\" → (no results)"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Common-knowledge chemistry: DMF, MeCN, THF are common solvents and neutral donors; SRD-46 does not encode this descriptor.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Fe^[3+] + Hydroxide ion system present (38 entries) while DMF/MeCN/THF show no rows, indicating hydrolysis competition dominates.",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Hydroxide ion — 38 ent, 8 sp, 38 vlms; species include beta_def_812, 840, 894..."
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "query for DMF, acetonitrile, THF, ethylene glycol → (no results)"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "ligand_8640",
+              "vlm_147409",
+              "ligand_8974",
+              "vlm_155690"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Analog data: Glycolate (vlm_147409 logK 2.9) and diglycolate (vlm_155690 logK 5.04) show measurable binding; no SRD-46 rows for ethylene glycol.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Hydroxyacetic acid (Glycolic acid) | vlm_147409 | logK | 2.9 | 25 | 1"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Oxydiacetic acid (Diglycolic acid) | vlm_155690 | logK | 5.04 | 25 | 0.5"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "name includes \"ethylene glycol, ethane-1,2-diol, 1,2-ethanediol\" → (no results)"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "No SRD-46 rows for Fe^[2+] with DMF/MeCN/THF found in searches; consistent with very weak binding in water.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "query includes \"DMF, acetonitrile, THF\" → (no results)"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "No SRD-46 rows for Fe^[3+] with DMF/MeCN/THF; other anionic ligands present, suggesting only modest solvent binding.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_ligands",
+                "snippet": "query includes \"DMF, acetonitrile, THF\" → (no results)"
+              },
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "Fe^[3+] + Ethanoic acid (Acetic acid) — 16 ent ... species include beta_def_812, 840..."
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Provenance: Tool results in this run are from NIST Standard Reference Database 46 (SRD-46).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "search_metals shows Fe^[3+] (metal_61) and Fe^[2+] (metal_62) with catalog counts.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_metals",
+                "snippet": "| metal_61 | Fe^[3+] | Fe | 3 | ✓ | ... | beta_totN_128 | ligand_totN_406 | vlm_totN_1473 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_metals",
+                "snippet": "| metal_62 | Fe^[2+] | Fe | 2 | ✓ | ... | beta_totN_57 | ligand_totN_217 | vlm_totN_667 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "ligand_8640",
+              "ligand_8974",
+              "vlm_147409",
+              "vlm_147386",
+              "vlm_155690",
+              "vlm_155667"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+]+Glycolic acid: vlm_147409 logK 2.9; Fe^[2+]+Glycolic: vlm_147386 1.33; Fe^[3+]+Diglycolic: vlm_155690 5.04; Fe^[2+]+Diglycolic: vlm_155667 2.56.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Hydroxyacetic acid (Glycolic acid) — vlm_147409 — logK 2.9 — 25 — I 1 — `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[2+] + Hydroxyacetic acid (Glycolic acid) — vlm_147386 — logK 1.33 — 25 — I 1 — `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Oxydiacetic acid (Diglycolic acid) — vlm_155690 — logK 5.04 — 25 — I 0.5 — `[M] + [L] <=> [ML]`"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

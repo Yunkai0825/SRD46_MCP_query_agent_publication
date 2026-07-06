@@ -1,0 +1,23 @@
+Based on the SRD-46 database, here are all the measured pKa values for **citric acid** (2-Hydroxypropane-1,2,3-tricarboxylic acid, `ligand_9058`):
+
+---
+
+## Citric Acid — Measured pKa Values
+
+| Step | Equilibrium | pKa | Temperature (°C) | Ionic Strength (M) |
+|------|-------------|-----|-------------------|--------------------|
+| pKa₁ | H₂L⁻ → H₃L (H₂L + H⁺ ⇌ H₃L) | **2.90** | 25 | 0.10 |
+| pKa₂ | HL²⁻ → H₂L⁻ (HL + H⁺ ⇌ H₂L) | **4.35** | 25 | 0.10 |
+| pKa₃ | L³⁻ → HL²⁻ (L + H⁺ ⇌ HL) | **5.65** | 25 | 0.10 |
+
+> **Source:** NIST SRD-46 (VLM IDs: vlm_157473, vlm_157459, vlm_157439)
+
+---
+
+### Chemistry Insight
+
+Citric acid (H₃L) is a **triprotic weak acid** with three carboxylate groups (and one hydroxyl group). The three pKa values are well-separated, reflecting the successive deprotonation of each –COOH group. The relatively low pKa₁ (~2.90) is due to the electron-withdrawing effect of the adjacent hydroxyl and two other carboxylate groups, making the first proton quite acidic. The spacing between pKa₂ (4.35) and pKa₃ (5.65) reflects the increasing difficulty of removing a proton from an already more negatively charged species.
+
+These values are reported at **25°C and I = 0.10 M**, which are standard reference conditions. The SRD-46 catalog also contains 48 total VLM entries for the H⁺/citrate system across a range of temperatures (13–41°C) and ionic strengths (up to 3.15 M), suggesting that condition-dependent measurements exist beyond these three canonical values — a follow-up query filtering by temperature and ionic strength could reveal the full spread.
+
+---

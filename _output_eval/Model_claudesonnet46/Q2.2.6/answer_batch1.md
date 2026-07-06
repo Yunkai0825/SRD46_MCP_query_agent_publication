@@ -1,0 +1,20 @@
+## Results: Metals with Fewer Than 5 VLM Measurements
+
+Based on a direct query joining all 230 metals in SRD-46 against the equilibrium node table:
+
+| Metric | Value |
+|--------|-------|
+| **Total metals in database** | 230 |
+| **Metals with < 5 VLM measurements** | **114** |
+| **Fraction** | **114 / 230 = 0.496** |
+| **Percentage** | **≈ 49.6%** |
+
+---
+
+### Chemistry Insight
+
+Nearly **half of all metal entries in SRD-46 have fewer than 5 VLM (Value-Linked Measurement) records**, which reflects a well-known asymmetry in coordination chemistry literature: a handful of metals (e.g., Cu²⁺, Fe³⁺, Ni²⁺, Zn²⁺, Co²⁺) dominate the experimental record with hundreds or thousands of measurements, while many rarer oxidation states, heavy metals, and radioactive species (e.g., transuranic ions, exotic oxidation states) remain poorly characterized. This data sparsity has real-world implications — thermodynamic modeling of nuclear waste processing, environmental remediation, and industrial separations often relies on extrapolated or estimated constants for these data-poor metals.
+
+*Source: NIST SRD-46 database, queried via direct SQL aggregation across `metal_card` (230 entries) and `eq_node` tables.*
+
+---

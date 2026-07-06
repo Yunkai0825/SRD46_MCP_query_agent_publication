@@ -1,0 +1,2286 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q5.1.1\\Q5.1.1_result_batch1.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "SRD-46 shows **two main inorganic mercury entries** with complexation data:\n\n| Mercury form | SRD-46 ID | Coverage |\n|---|---:|---:|\n| Hg²⁺ | `metal_71` | 68 β definitions, 310 ligands, 1097 VLM entries |\n| Hg⁺ | `metal_72` | 12 β definitions, 31 ligands, 83 VLM entries |\n\nSo the database is **much richer for Hg(II)** than for Hg(I). Hg(I) chemistry is present, but it is relatively sparse in SRD-46 compared with Hg(II). Source: **NIST SRD-46**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 12,
+            "text": "SRD-46 shows",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 13,
+            "end": 51,
+            "text": "**two main inorganic mercury entries**",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 52,
+            "end": 74,
+            "text": "with complexation data",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 133,
+            "end": 204,
+            "text": "| Hg²⁺ | `metal_71` | 68 β definitions, 310 ligands, 1097 VLM entries |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 205,
+            "end": 272,
+            "text": "| Hg⁺ | `metal_72` | 12 β definitions, 31 ligands, 83 VLM entries |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 274,
+            "end": 335,
+            "text": "So the database is **much richer for Hg(II)** than for Hg(I).",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 336,
+            "end": 362,
+            "text": "Hg(I) chemistry is present",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 368,
+            "end": 423,
+            "text": "it is relatively sparse in SRD-46 compared with Hg(II).",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 424,
+            "end": 448,
+            "text": "Source: **NIST SRD-46**.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "WHERE uses SRD fields, e.g., \"c.ligand_name_SRD\" (SRD-46 context for this run)",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "search_stability",
+                "snippet": "Args.where: (c.metal_id = metal_71 AND c.ligand_name_SRD IN ('chloride','bromide','iodide','ammonia','cyanide','thiocyanate','thiosulfate','thiourea','EDTA') AND s.solvent_name LIKE '%water%')"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_71",
+              "metal_72"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Two simple ions for Hg: metal_71 (Hg^[2+]) and metal_72 (Hg^[+]) with simple_ion ✓",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "metal_71 | Hg^[2+] | Hg | 2 | ✓ | [Hg+2] | InChI=1S/Hg/q+2 | beta_totN_68 | ligand_totN_310 | vlm_totN_1097"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "metal_72 | Hg^[+] | Hg | 1 | ✓ | [Hg+] | InChI=1S/Hg/q+1 | beta_totN_12 | ligand_totN_31 | vlm_totN_83"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_71",
+              "metal_72"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Both Hg^[2+] and Hg^[+] have logK entries (complexation constants).",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_71 | Hg^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 4 | 4 | 20~25 | 0~0.5 | *** | 2"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "metal_72 | Hg^[+] | ligand_10076 | Hydroxide ion | *** | *** | 4 | 3 | 25 | 0.5~3 | *** | 2"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_71",
+              "metal_72"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Hg^[2+]: beta_totN_68, ligand_totN_310, vlm_totN_1097 vs Hg^[+]: beta_totN_12, ligand_totN_31, vlm_totN_83",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "metal_71 | Hg^[2+] | ... | beta_totN_68 | ligand_totN_310 | vlm_totN_1097"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "metal_72 | Hg^[+] | ... | beta_totN_12 | ligand_totN_31 | vlm_totN_83"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_72"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Hg^[+] has multiple stability entries (e.g., hydroxide, phosphates, carboxylates).",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "logK — 12 metal-ligand pair(s) ... metal_72 | Hg^[+] | ligand_10076 | Hydroxide ion | *** | *** | 4 | 3 | 25 | 0.5~3 | *** | 2"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "metal_72 | Hg^[+] | ligand_8465 | Ethanoic acid (Acetic acid) | HL | CC(=O)O | 1 | 1 | 25 | 3 | *** | 1"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_71",
+              "metal_72"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Counts: Hg^[2+] (68 β defs, 310 ligands, 1097 VLM) >> Hg^[+] (12, 31, 83)",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "metal_71 | Hg^[2+] | ... | beta_totN_68 | ligand_totN_310 | vlm_totN_1097"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "metal_72 | Hg^[+] | ... | beta_totN_12 | ligand_totN_31 | vlm_totN_83"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Use of SRD-specific fields (e.g., ligand_name_SRD) indicates NIST SRD-46 provenance.",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "search_stability",
+                "snippet": "Args.where: (c.metal_id = metal_71 AND c.ligand_name_SRD IN ('chloride','bromide',...) AND s.solvent_name LIKE '%water%')"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "## What kinds of mercury complexes show up?\nFor **Hg²⁺**, the retrieved network and stability data show a lot of emphasis on:\n- **amino-acid / amino-carboxylate ligands**\n- **macrocyclic ligands**\n- equilibrium maps with multiple stoichiometries and protonation states\n\nFor **Hg⁺**, the retrieved systems are fewer and skew toward:\n- **hydroxide**\n- **oxo/phosphate-type ligands**\n- **simple carboxylates**\n- a few specialized macrocycles",
+        "claims": [
+          {
+            "start": 0,
+            "end": 43,
+            "text": "## What kinds of mercury complexes show up?",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 44,
+            "end": 57,
+            "text": "For **Hg²⁺**,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 58,
+            "end": 170,
+            "text": "the retrieved network and stability data show a lot of emphasis on:\n- **amino-acid / amino-carboxylate ligands**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 171,
+            "end": 196,
+            "text": "- **macrocyclic ligands**",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 197,
+            "end": 268,
+            "text": "- equilibrium maps with multiple stoichiometries and protonation states",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 270,
+            "end": 282,
+            "text": "For **Hg⁺**,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 283,
+            "end": 314,
+            "text": "the retrieved systems are fewer",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 319,
+            "end": 347,
+            "text": "skew toward:\n- **hydroxide**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 348,
+            "end": 380,
+            "text": "- **oxo/phosphate-type ligands**",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 381,
+            "end": 406,
+            "text": "- **simple carboxylates**",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 407,
+            "end": 438,
+            "text": "- a few specialized macrocycles",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5760",
+              "ligand_5788",
+              "ligand_5790",
+              "ligand_5792",
+              "ligand_5793",
+              "ligand_5794",
+              "ligand_5795",
+              "ligand_5852"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "metal_71 | Hg^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_71 | Hg^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 4 | 4 | 20~25 | 0~0.5 | *** | 2"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_71 | Hg^[2+] | ligand_5788 | 3-Aminopropanoic acid (beta…) | HL | NCCC(=O)O | 1 | 1 | 25 | 0.5 | *** | 1"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "Hg^[2+] | metal_71 | 3-Aminopropanoic acid (beta-Alanine) | ligand_5788 | HL | 16.5~31.5 | 0.275~0.725 | 1 | 1"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_7655"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_71 | Hg^[2+] | ligand_7655 | 13,16,21,24-Tetramethyl-4,7… | L",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_71 | Hg^[2+] | ligand_7655 | 13,16,21,24-Tetramethyl-4,7… | L | CN1CCN(C)CCN2CCOCCOCCN(CC1)CCN(C)CCN(C)CC2 | 2 | 2 | 25 | 0.1 | *** | 1"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "Hg^[2+] | metal_71 | 13,16,21,24-Tetramethyl-4,7-dioxa-1,10,… | ligand_7655 | L | 20~30 | -0.05~0.25 | 1 | 2"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5760",
+              "ligand_7655",
+              "beta_def_713",
+              "beta_def_845",
+              "beta_def_788",
+              "beta_def_812"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "max_beta_def_ids | beta_def_788; beta_def_812",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "Global max-node network: Hg^[2+] + Aminoacetic acid (Glycine)\n| beta_def | equation | type | value |\n| beta_def_713 | ... | logK | 3.42 |\n| beta_def_845 | ... | logK | 6.03 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "13,16,21,24-Tetramethyl-4,7-dioxa-1,10,… | ligand_7655 | max_beta_def_ids | beta_def_788; beta_def_812 | max_type | logK"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_71",
+              "metal_72"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | … | vlm_totN_83",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "metal_71 | Hg^[2+] | Hg | 2 | ✓ | [Hg+2] | InChI=1S/Hg/q+2 | beta_totN_68 | ligand_totN_310 | vlm_totN_1097"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "metal_72 | Hg^[+] | Hg | 1 | ✓ | [Hg+] | InChI=1S/Hg/q+1 | beta_totN_12 | ligand_totN_31 | vlm_totN_83"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_10076"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_10076 | Hydroxide ion | *** | *** | 4 | 3 | 25 | 0.5~3 | *** | 2",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "metal_72 | Hg^[+] | ligand_10076 | Hydroxide ion | *** | *** | 4 | 3 | 25 | 0.5~3 | *** | 2"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_10114",
+              "ligand_10117"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_10114 | Hydrogen diphosphate (Pyrop…) | H4L",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "metal_72 | Hg^[+] | ligand_10114 | Hydrogen diphosphate (Pyrop…) | H4L | O=P(O)(O)OP(=O)(O)O | 2 | 2 | 27 | 0.7 | *** | 1"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "metal_72 | Hg^[+] | ligand_10117 | Hydrogen triphosphate (Trip…) | H5L | O=P(O)(O)OP(=O)(O)OP(=O)(O)O | 2 | 2 | 27 | 0.7 | *** | 1"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_8465",
+              "ligand_8467",
+              "ligand_8464",
+              "ligand_8640",
+              "ligand_8872",
+              "ligand_8907"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_8465 | Ethanoic acid (Acetic acid) | HL | CC(=O)O",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "metal_72 | Hg^[+] | ligand_8465 | Ethanoic acid (Acetic acid) | HL | CC(=O)O | 1 | 1 | 25 | 3 | *** | 1"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "metal_72 | Hg^[+] | ligand_8467 | Propanoic acid (Propionic a…) | HL | CCC(=O)O | 1 | 1 | 25 | 3 | *** | 1"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "metal_72 | Hg^[+] | ligand_8464 | Methanoic acid (Formic acid) | HL | O=CO | 1 | 1 | 25 | 3 | *** | 1"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_9677"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_9677 | cis-syn-cis-2,5,8,15,18,21-… | *** | *** | 2 | 2 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "ΔS — metal_72 | Hg^[+] | ligand_9677 | cis-syn-cis-2,5,8,15,18,21-… | *** | *** | 2 | 2 | 25 | 0.1 | *** | 0"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "ΔH — metal_72 | Hg^[+] | ligand_9677 | cis-syn-cis-2,5,8,15,18,21-… | *** | *** | 1 | 1 | 25 | 0.1 | *** | 0"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "## Representative Hg²⁺ systems found\nFrom the retrieved Hg²⁺ stability entries:\n\n| Ligand | Ligand ID | Constant type present | T (°C) | I (M) | Notes |\n|---|---:|---|---:|---:|---|\n| Aminoacetic acid (glycine) | `ligand_5760` | logK, ΔH, ΔS | 20–25 | 0–0.5 | 4 VLM, 4 β definitions |\n| 3-Aminopropanoic acid (β-alanine) | `ligand_5788` | logK | 25 | 0.5 | 1 VLM |\n| cis-2-Aminocyclopentane-1-carboxylic acid | `ligand_5790` | logK | 25 | 0.5 | 1 VLM |\n| cis-2-Aminocyclohexane-1-carboxylic acid | `ligand_5792` | logK | 25 | 0.5 | 1 VLM |\n| trans-2-Aminocyclohexane-1-carboxylic acid | `ligand_5793` | logK | 25 | 0.5 | 1 VLM |\n| cis-2-Amino-4-cyclohexene-1-carboxylic acid | `ligand_5794` | logK | 25 | 0.5 | 1 VLM |\n| trans-2-Amino-4-cyclohexene-1-carboxylic acid | `ligand_5795` | logK | 25 | 0.5 | 1 VLM |\n| L-2-Amino-5-ureidopentanoic acid (citrulline) | `ligand_5852` | logK | 25 | 0.1 | 2 VLM |\n| Tetramethyl macrocycle | `ligand_7655` | logK | 25 | 0.1 | 2 VLM |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 36,
+            "text": "## Representative Hg²⁺ systems found",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 37,
+            "end": 79,
+            "text": "From the retrieved Hg²⁺ stability entries:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 182,
+            "end": 284,
+            "text": "| Aminoacetic acid (glycine) | `ligand_5760` | logK, ΔH, ΔS | 20–25 | 0–0.5 | 4 VLM, 4 β definitions |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 285,
+            "end": 364,
+            "text": "| 3-Aminopropanoic acid (β-alanine) | `ligand_5788` | logK | 25 | 0.5 | 1 VLM |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 365,
+            "end": 452,
+            "text": "| cis-2-Aminocyclopentane-1-carboxylic acid | `ligand_5790` | logK | 25 | 0.5 | 1 VLM |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 453,
+            "end": 539,
+            "text": "| cis-2-Aminocyclohexane-1-carboxylic acid | `ligand_5792` | logK | 25 | 0.5 | 1 VLM |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 540,
+            "end": 628,
+            "text": "| trans-2-Aminocyclohexane-1-carboxylic acid | `ligand_5793` | logK | 25 | 0.5 | 1 VLM |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 629,
+            "end": 718,
+            "text": "| cis-2-Amino-4-cyclohexene-1-carboxylic acid | `ligand_5794` | logK | 25 | 0.5 | 1 VLM |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 719,
+            "end": 810,
+            "text": "| trans-2-Amino-4-cyclohexene-1-carboxylic acid | `ligand_5795` | logK | 25 | 0.5 | 1 VLM |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 811,
+            "end": 902,
+            "text": "| L-2-Amino-5-ureidopentanoic acid (citrulline) | `ligand_5852` | logK | 25 | 0.1 | 2 VLM |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 903,
+            "end": 971,
+            "text": "| Tetramethyl macrocycle | `ligand_7655` | logK | 25 | 0.1 | 2 VLM |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5760",
+              "beta_def_713",
+              "beta_def_845"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_71 | Hg^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 4 | 4 | 20~25 | 0~0.5",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "logK — metal_71 | Hg^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 4 | 4 | 20~25 | 0~0.5 | *** | 2"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "ΔS — metal_71 | Hg^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 2 | 2 | 25 | 0.1 | *** | 0"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "ΔH — metal_71 | Hg^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 2 | 2 | 25 | 0 | *** | 0"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5788",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_71 | Hg^[2+] | ligand_5788 | 3-Aminopropanoic acid (beta… | HL | NCCC(=O)O | 1 | 1 | 25 | 0.5",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "logK — metal_71 | Hg^[2+] | ligand_5788 | 3-Aminopropanoic acid (beta… | HL | NCCC(=O)O | 1 | 1 | 25 | 0.5 | *** | 1"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | 3-Aminopropanoic acid (beta-Alanine) | ligand_5788 | ref_eq_net_476 | 1 | 0 | … | … | 1 | beta_def_812 | logK | 11.31 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5790",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_71 | Hg^[2+] | ligand_5790 | cis-2-Aminocyclopentane-1-c… | HL | N[C@H]1CCC[C@H]1C(=O)O | 1 | 1 | 25 | 0.5",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "logK — metal_71 | Hg^[2+] | ligand_5790 | cis-2-Aminocyclopentane-1-c… | HL | N[C@H]1CCC[C@H]1C(=O)O | 1 | 1 | 25 | 0.5 | *** | 1"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | cis-2-Aminocyclopentane-1-carboxylic ac… | ligand_5790 | ref_eq_net_489 | … | beta_def_812 | logK | 11.17 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5792",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_71 | Hg^[2+] | ligand_5792 | cis-2-Aminocyclohexane-1-ca… | HL | N[C@H]1CCCC[C@H]1C(=O)O | 1 | 1 | 25 | 0.5",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "logK — metal_71 | Hg^[2+] | ligand_5792 | cis-2-Aminocyclohexane-1-ca… | HL | N[C@H]1CCCC[C@H]1C(=O)O | 1 | 1 | 25 | 0.5 | *** | 1"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | cis-2-Aminocyclohexane-1-carboxylic acid | ligand_5792 | ref_eq_net_496 | … | beta_def_812 | logK | 11.46 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5793",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_71 | Hg^[2+] | ligand_5793 | trans-2-Aminocyclohexane-1-… | HL | N[C@@H]1CCCC[C@H]1C(=O)O | 1 | 1 | 25 | 0.5",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "logK — metal_71 | Hg^[2+] | ligand_5793 | trans-2-Aminocyclohexane-1-… | HL | N[C@@H]1CCCC[C@H]1C(=O)O | 1 | 1 | 25 | 0.5 | *** | 1"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | trans-2-Aminocyclohexane-1-carboxylic a… | ligand_5793 | ref_eq_net_501 | … | beta_def_812 | logK | 11.29 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5794",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_71 | Hg^[2+] | ligand_5794 | cis-2-Amino-4-cyclohexene-1… | HL | N[C@H]1CC=CC[C@H]1C(=O)O | 1 | 1 | 25 | 0.5",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "logK — metal_71 | Hg^[2+] | ligand_5794 | cis-2-Amino-4-cyclohexene-1… | HL | N[C@H]1CC=CC[C@H]1C(=O)O | 1 | 1 | 25 | 0.5 | *** | 1"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | cis-2-Amino-4-cyclohexene-1-carboxylic … | ligand_5794 | ref_eq_net_506 | … | beta_def_812 | logK | 15.9 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5795",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_71 | Hg^[2+] | ligand_5795 | trans-2-Amino-4-cyclohexene… | HL | N[C@@H]1CC=CC[C@H]1C(=O)O | 1 | 1 | 25 | 0.5",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "logK — metal_71 | Hg^[2+] | ligand_5795 | trans-2-Amino-4-cyclohexene… | HL | N[C@@H]1CC=CC[C@H]1C(=O)O | 1 | 1 | 25 | 0.5 | *** | 1"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | trans-2-Amino-4-cyclohexene-1-carboxyli… | ligand_5795 | ref_eq_net_510 | … | beta_def_812 | logK | 25.18 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5852",
+              "beta_def_840",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_71 | Hg^[2+] | ligand_5852 | L-2-Amino-5-ureidopentanoic… | HL | NC(=O)NCCC[C@H](N)C(=O)O | 2 | 2 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "logK — metal_71 | Hg^[2+] | ligand_5852 | L-2-Amino-5-ureidopentanoic… | HL | NC(=O)NCCC[C@H](N)C(=O)O | 2 | 2 | 25 | 0.1 | *** | 1"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | L-2-Amino-5-ureidopentanoic acid (Citru… | ligand_5852 | ref_eq_net_983 | … | beta_def_840; beta_def_812 | logK | -10.95~-6.02 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_7655",
+              "beta_def_788",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_71 | Hg^[2+] | ligand_7655 | 13,16,21,24-Tetramethyl-4,7… | L | CN1CCN(C)CCN2CCOCCOCCN(CC1)… | 2 | 2 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "logK — metal_71 | Hg^[2+] | ligand_7655 | 13,16,21,24-Tetramethyl-4,7… | L | CN1CCN(C)CCN2CCOCCOCCN(CC1)CCN(C)CCN(C)CC2 | 2 | 2 | 25 | 0.1 | *** | 1"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | 13,16,21,24-Tetramethyl-4,7-dioxa-1,10,… | ligand_7655 | ref_eq_net_189 | … | beta_def_788; beta_def_812 | logK | 4.2~26.1 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "## Representative Hg²⁺ logK values actually retrieved\nThe equilibrium-network output gave explicit Hg²⁺ logK ranges for several systems:\n\n| Ligand | Network / definition context | Retrieved logK range |\n|---|---|---:|\n| Glycine | chloride-containing and ML₂-related network | 3.42–6.03 |\n| Tetramethyl macrocycle (`ligand_7655`) | ML / MHL network | 4.2–26.1 |\n| Citrulline | ML / ML₂ network | -10.95 to -6.02 |\n| β-Alanine | single-node ML | 11.31 |\n| cis-2-Aminocyclopentane-1-carboxylic acid | single-node ML | 11.17 |\n| cis-2-Aminocyclohexane-1-carboxylic acid | single-node ML | 11.46 |\n| trans-2-Aminocyclohexane-1-carboxylic acid | single-node ML | 11.29 |\n| cis-2-Amino-4-cyclohexene-1-carboxylic acid | single-node ML | 15.9 |\n| trans-2-Amino-4-cyclohexene-1-carboxylic acid | single-node ML | 25.18 |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 53,
+            "text": "## Representative Hg²⁺ logK values actually retrieved",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 54,
+            "end": 136,
+            "text": "The equilibrium-network output gave explicit Hg²⁺ logK ranges for several systems:",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 218,
+            "end": 287,
+            "text": "| Glycine | chloride-containing and ML₂-related network | 3.42–6.03 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 288,
+            "end": 360,
+            "text": "| Tetramethyl macrocycle (`ligand_7655`) | ML / MHL network | 4.2–26.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 361,
+            "end": 412,
+            "text": "| Citrulline | ML / ML₂ network | -10.95 to -6.02 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 413,
+            "end": 451,
+            "text": "| β-Alanine | single-node ML | 11.31 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 452,
+            "end": 522,
+            "text": "| cis-2-Aminocyclopentane-1-carboxylic acid | single-node ML | 11.17 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 523,
+            "end": 592,
+            "text": "| cis-2-Aminocyclohexane-1-carboxylic acid | single-node ML | 11.46 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 593,
+            "end": 664,
+            "text": "| trans-2-Aminocyclohexane-1-carboxylic acid | single-node ML | 11.29 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 665,
+            "end": 736,
+            "text": "| cis-2-Amino-4-cyclohexene-1-carboxylic acid | single-node ML | 15.9 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 737,
+            "end": 811,
+            "text": "| trans-2-Amino-4-cyclohexene-1-carboxylic acid | single-node ML | 25.18 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5760",
+              "ligand_7655",
+              "ligand_5852"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Glycine) ... logK | 3.42~6.03 | 13,16,21,24-Tetramethyl-... logK | 4.2~26.1 | ... (Citru…) ... logK | -10.95~-6.02",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | Aminoacetic acid (Glycine) | ligand_5760 | ref_eq_net_126 | ... | max_beta_def_ids | ... | max_type | max_values |\n| ... | ... | ... | ... | ... | ... | beta_def_713; beta_def_845 | logK | 3.42~6.03 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | 13,16,21,24-Tetramethyl-4,7-dioxa-1,10,… | ligand_7655 | ref_eq_net_189 | ... | beta_def_788; beta_def_812 | logK | 4.2~26.1 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | L-2-Amino-5-ureidopentanoic acid (Citru… | ligand_5852 | ref_eq_net_983 | ... | beta_def_840; beta_def_812 | logK | -10.95~-6.02 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5760",
+              "beta_def_713",
+              "beta_def_845"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Aminoacetic acid (Glycine) ... max_beta_def_ids | beta_def_713; beta_def_845 | logK | 3.42~6.03",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | Aminoacetic acid (Glycine) | ligand_5760 | ref_eq_net_126 | ... | beta_def_713; beta_def_845 | logK | 3.42~6.03 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "Global max-node network ...\n| beta_def_713 | ``[MCl2] + [L] <=> [MClL] + [Cl]`` | logK | 3.42 |\n| beta_def_845 | ``[MCl2] + [L]^2 <=> [ML2] + [Cl]^2`` | logK | 6.03 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_7655",
+              "beta_def_788",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "13,16,21,24-Tetramethyl-4,7-dioxa-1,10,… ... max_beta_def_ids | beta_def_788; beta_def_812 | logK | 4.2~26.1",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | 13,16,21,24-Tetramethyl-4,7-dioxa-1,10,… | ligand_7655 | ref_eq_net_189 | ... | beta_def_788; beta_def_812 | logK | 4.2~26.1 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "Beta-definition legend\n| beta_def_812 | ``[M] + [L] <=> [ML]`` |\n| beta_def_788 | ``[ML] + [H] <=> [MHL]`` |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5852",
+              "beta_def_840",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "L-2-Amino-5-ureidopentanoic acid (Citru…) ... max_beta_def_ids | beta_def_840; beta_def_812 | logK | -10.95~-6.02",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | L-2-Amino-5-ureidopentanoic acid (Citru…) | ligand_5852 | ref_eq_net_983 | ... | beta_def_840; beta_def_812 | logK | -10.95~-6.02 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "Beta-definition legend\n| beta_def_840 | ``[M] + [L]^2 <=> [ML2]`` |\n| beta_def_812 | ``[M] + [L] <=> [ML]`` |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5788",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "3-Aminopropanoic acid (beta-Alanine) ... max_beta_def_ids | beta_def_812 | logK | 11.31",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | 3-Aminopropanoic acid (beta-Alanine) | ligand_5788 | ref_eq_net_476 | ... | beta_def_812 | logK | 11.31 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5790",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "cis-2-Aminocyclopentane-1-carboxylic ac… ... max_beta_def_ids | beta_def_812 | logK | 11.17",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | cis-2-Aminocyclopentane-1-carboxylic ac… | ligand_5790 | ref_eq_net_489 | ... | beta_def_812 | logK | 11.17 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5792",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "cis-2-Aminocyclohexane-1-carboxylic acid ... max_beta_def_ids | beta_def_812 | logK | 11.46",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | cis-2-Aminocyclohexane-1-carboxylic acid | ligand_5792 | ref_eq_net_496 | ... | beta_def_812 | logK | 11.46 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5793",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "trans-2-Aminocyclohexane-1-carboxylic a… ... max_beta_def_ids | beta_def_812 | logK | 11.29",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | trans-2-Aminocyclohexane-1-carboxylic a… | ligand_5793 | ref_eq_net_501 | ... | beta_def_812 | logK | 11.29 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5794",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "cis-2-Amino-4-cyclohexene-1-carboxylic … ... max_beta_def_ids | beta_def_812 | logK | 15.9",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | cis-2-Amino-4-cyclohexene-1-carboxylic … | ligand_5794 | ref_eq_net_506 | ... | beta_def_812 | logK | 15.9 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5795",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "trans-2-Amino-4-cyclohexene-1-carboxyli… ... max_beta_def_ids | beta_def_812 | logK | 25.18",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | trans-2-Amino-4-cyclohexene-1-carboxyli… | ligand_5795 | ref_eq_net_510 | ... | beta_def_812 | logK | 25.18 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "## Representative Hg⁺ systems found\nFrom the retrieved Hg⁺ stability search:\n\n| Ligand | Ligand ID | Constant type present | T (°C) | I (M) |\n|---|---:|---|---:|---:|\n| Hydroxide ion | `ligand_10076` | logK | 25 | 0.5–3 |\n| Hydrogen diphosphate (pyrophosphate-related entry) | `ligand_10114` | logK | 27 | 0.7 |\n| Hydrogen triphosphate | `ligand_10117` | logK | 27 | 0.7 |\n| Propane-2,2-dicarboxylic acid | `ligand_8887` | logK | 27 | 0.7 |\n| Butanedioic acid (succinic acid) | `ligand_8907` | logK | 27 | 2.5 |\n| Ethanedioic acid (oxalic acid) | `ligand_8872` | logK | 27 | 2.5 |\n| Propanoic acid | `ligand_8467` | logK | 25 | 3 |\n| Ethanoic acid (acetic acid) | `ligand_8465` | logK | 25 | 3 |\n| Hydroxyacetic acid (glycolic acid) | `ligand_8640` | logK | 25 | 3 |\n| Methanoic acid (formic acid) | `ligand_8464` | logK | 25 | 3 |\n| Methoxyacetic acid | `ligand_8721` | logK | 25 | 3 |\n| 3-Methoxypropanoic acid | `ligand_8724` | logK | 25 | 3 |\n\nThere are also **ΔH** and **ΔS** entries for:\n- hydrazoic acid / azide-related ligand (`ligand_10106`)\n- a specialized macrocycle (`ligand_9677`)",
+        "claims": [
+          {
+            "start": 0,
+            "end": 35,
+            "text": "## Representative Hg⁺ systems found",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 36,
+            "end": 76,
+            "text": "From the retrieved Hg⁺ stability search:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 167,
+            "end": 221,
+            "text": "| Hydroxide ion | `ligand_10076` | logK | 25 | 0.5–3 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 222,
+            "end": 311,
+            "text": "| Hydrogen diphosphate (pyrophosphate-related entry) | `ligand_10114` | logK | 27 | 0.7 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 312,
+            "end": 372,
+            "text": "| Hydrogen triphosphate | `ligand_10117` | logK | 27 | 0.7 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 373,
+            "end": 440,
+            "text": "| Propane-2,2-dicarboxylic acid | `ligand_8887` | logK | 27 | 0.7 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 441,
+            "end": 511,
+            "text": "| Butanedioic acid (succinic acid) | `ligand_8907` | logK | 27 | 2.5 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 512,
+            "end": 580,
+            "text": "| Ethanedioic acid (oxalic acid) | `ligand_8872` | logK | 27 | 2.5 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 581,
+            "end": 631,
+            "text": "| Propanoic acid | `ligand_8467` | logK | 25 | 3 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 632,
+            "end": 695,
+            "text": "| Ethanoic acid (acetic acid) | `ligand_8465` | logK | 25 | 3 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 696,
+            "end": 766,
+            "text": "| Hydroxyacetic acid (glycolic acid) | `ligand_8640` | logK | 25 | 3 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 767,
+            "end": 831,
+            "text": "| Methanoic acid (formic acid) | `ligand_8464` | logK | 25 | 3 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 832,
+            "end": 886,
+            "text": "| Methoxyacetic acid | `ligand_8721` | logK | 25 | 3 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 887,
+            "end": 946,
+            "text": "| 3-Methoxypropanoic acid | `ligand_8724` | logK | 25 | 3 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 948,
+            "end": 993,
+            "text": "There are also **ΔH** and **ΔS** entries for:",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 994,
+            "end": 1050,
+            "text": "- hydrazoic acid / azide-related ligand (`ligand_10106`)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1051,
+            "end": 1093,
+            "text": "- a specialized macrocycle (`ligand_9677`)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_10076"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_10076 | Hydroxide ion | *** | *** | 4 | 3 | 25 | 0.5~3 | *** | 2",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "logK — 12 metal-ligand pair(s)\n| metal_72 | Hg^[+] | ligand_10076 | Hydroxide ion | *** | *** | 4 | 3 | 25 | 0.5~3 | *** | 2 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_10114"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_10114 | Hydrogen diphosphate (Pyrop… | H4L | O=P(O)(O)OP(=O)(O)O | 2 | 2 | 27 | 0.7",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_10114 | Hydrogen diphosphate (Pyrop… | H4L | O=P(O)(O)OP(=O)(O)O | 2 | 2 | 27 | 0.7 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_10117"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_10117 | Hydrogen triphosphate (Trip… | H5L | O=P(O)(O)OP(=O)(O)OP(=O)(O)O | 2 | 2 | 27 | 0.7",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_10117 | Hydrogen triphosphate (Trip… | H5L | O=P(O)(O)OP(=O)(O)OP(=O)(O)O | 2 | 2 | 27 | 0.7 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_8887"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_8887 | Propane-2,2-dicarboxylic ac… | H2L | CC(C)(C(=O)O)C(=O)O | 2 | 2 | 27 | 0.7",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_8887 | Propane-2,2-dicarboxylic ac… | H2L | CC(C)(C(=O)O)C(=O)O | 2 | 2 | 27 | 0.7 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_8907"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_8907 | Butanedioic acid (Succinic … | H2L | O=C(O)CCC(=O)O | 2 | 2 | 27 | 2.5",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_8907 | Butanedioic acid (Succinic … | H2L | O=C(O)CCC(=O)O | 2 | 2 | 27 | 2.5 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_8872"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_8872 | Ethanedioic acid (Oxalic ac… | H2L | O=C(O)C(=O)O | 2 | 2 | 27 | 2.5",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_8872 | Ethanedioic acid (Oxalic ac… | H2L | O=C(O)C(=O)O | 2 | 2 | 27 | 2.5 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_8467"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_8467 | Propanoic acid (Propionic a… | HL | CCC(=O)O | 1 | 1 | 25 | 3",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_8467 | Propanoic acid (Propionic a… | HL | CCC(=O)O | 1 | 1 | 25 | 3 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_8465"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_8465 | Ethanoic acid (Acetic acid) | HL | CC(=O)O | 1 | 1 | 25 | 3",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_8465 | Ethanoic acid (Acetic acid) | HL | CC(=O)O | 1 | 1 | 25 | 3 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_8640"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_8640 | Hydroxyacetic acid (Glycoli… | HL | O=C(O)CO | 1 | 1 | 25 | 3",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_8640 | Hydroxyacetic acid (Glycoli… | HL | O=C(O)CO | 1 | 1 | 25 | 3 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_8464"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_8464 | Methanoic acid (Formic acid) | HL | O=CO | 1 | 1 | 25 | 3",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_8464 | Methanoic acid (Formic acid) | HL | O=CO | 1 | 1 | 25 | 3 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_8721"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_8721 | Methoxyacetic acid | HL | COCC(=O)O | 1 | 1 | 25 | 3",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_8721 | Methoxyacetic acid | HL | COCC(=O)O | 1 | 1 | 25 | 3 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_8724"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_8724 | 3-Methoxypropanoic acid | HL | COCCC(=O)O | 1 | 1 | 25 | 3",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_8724 | 3-Methoxypropanoic acid | HL | COCCC(=O)O | 1 | 1 | 25 | 3 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [
+              "metal_72"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ΔS — 2 metal-ligand pair(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "### ΔS — 2 metal-ligand pair(s)"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "### ΔH — 2 metal-ligand pair(s)"
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_10106"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_10106 | Hydrogen azide (Hydrazoic a… | HL | [N-]=[N+]=N | 1 | 1 | 25 | 0 | solid | 0",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "ΔS — 2 metal-ligand pair(s)\n| metal_72 | Hg^[+] | ligand_10106 | Hydrogen azide (Hydrazoic a… | HL | [N-]=[N+]=N | 1 | 1 | 25 | 0 | solid | 0 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "ΔH — 2 metal-ligand pair(s)\n| metal_72 | Hg^[+] | ligand_10106 | Hydrogen azide (Hydrazoic a… | HL | [N-]=[N+]=N | 1 | 1 | 25 | 0 | solid | 0 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_9677"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_72 | Hg^[+] | ligand_9677 | cis-syn-cis-2,5,8,15,18,21-… | *** | *** | 2 | 2 | 25 | 0.1 | *** | 0",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "ΔS — 2 metal-ligand pair(s)\n| metal_72 | Hg^[+] | ligand_9677 | cis-syn-cis-2,5,8,15,18,21-… | *** | *** | 2 | 2 | 25 | 0.1 | *** | 0 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "ΔH — 2 metal-ligand pair(s)\n| metal_72 | Hg^[+] | ligand_9677 | cis-syn-cis-2,5,8,15,18,21-… | *** | *** | 1 | 1 | 25 | 0.1 | *** | 0 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "## Broad takeaways\n| Observation | What SRD-46 data suggests |\n|---|---|\n| Hg²⁺ is far better characterized than Hg⁺ | Much larger ligand and measurement coverage for `metal_71` |\n| Hg²⁺ shows very variable stability | Retrieved logK values span from strongly unfavorable cases (citrulline network) to very high values for certain constrained chelators/macrocycles |\n| Ligand structure matters a lot | Closely related amino-carboxylates can differ substantially in Hg²⁺ logK |\n| Hg⁺ data are narrower and often at higher ionic strength | Many Hg⁺ measurements were retrieved at I = 0.7–3 M, often with simpler oxy-donor ligands |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 18,
+            "text": "## Broad takeaways",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 73,
+            "end": 179,
+            "text": "| Hg²⁺ is far better characterized than Hg⁺ | Much larger ligand and measurement coverage for `metal_71` |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 180,
+            "end": 366,
+            "text": "| Hg²⁺ shows very variable stability | Retrieved logK values span from strongly unfavorable cases (citrulline network) to very high values for certain constrained chelators/macrocycles |",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 367,
+            "end": 476,
+            "text": "| Ligand structure matters a lot | Closely related amino-carboxylates can differ substantially in Hg²⁺ logK |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 477,
+            "end": 629,
+            "text": "| Hg⁺ data are narrower and often at higher ionic strength | Many Hg⁺ measurements were retrieved at I = 0.7–3 M, often with simpler oxy-donor ligands |",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_71",
+              "metal_72"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "metal_71 … ligand_totN_310 | vlm_totN_1097",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_71 | Hg^[2+] | Hg | 2 | ✓ | [Hg+2] | InChI=1S/Hg/q+2 | beta_totN_68 | ligand_totN_310 | vlm_totN_1097 |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_72 | Hg^[+] | Hg | 1 | ✓ | [Hg+] | InChI=1S/Hg/q+1 | beta_totN_12 | ligand_totN_31 | vlm_totN_83 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5852",
+              "ligand_7655",
+              "beta_def_840",
+              "beta_def_812"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ligand_5852 … logK | -10.95~-6.02; ligand_7655 … logK | 4.2~26.1",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | L-2-Amino-5-ureidopentanoic acid (Citru… | ligand_5852 | ref_eq_net_983 | … | beta_def_840; beta_def_812 | logK | -10.95~-6.02 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | 13,16,21,24-Tetramethyl-4,7-dioxa-1,10,… | ligand_7655 | ref_eq_net_189 | … | beta_def_788; beta_def_812 | logK | 4.2~26.1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_5792",
+              "ligand_5794",
+              "ligand_5795",
+              "beta_def_812"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ligand_5792 … logK | 11.46; ligand_5795 … logK | 25.18",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | cis-2-Aminocyclohexane-1-carboxylic acid | ligand_5792 | … | beta_def_812 | logK | 11.46 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | trans-2-Amino-4-cyclohexene-1-carboxyli… | ligand_5795 | … | beta_def_812 | logK | 25.18 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | cis-2-Amino-4-cyclohexene-1-carboxylic … | ligand_5794 | … | beta_def_812 | logK | 15.9 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_10114",
+              "ligand_8907",
+              "ligand_8465",
+              "ligand_8640"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Hg^[+] logK entries at I(M) = 0.7, 2.5, 3 (e.g., diphosphate 0.7; succinic 2.5; acetic 3; glycolic 3)",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_10114 | … | vlm_counts 2 | … | T°C_range 27 | I(M)_range 0.7 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_8907 | Butanedioic acid (Succinic … | … | T°C_range 27 | I(M)_range 2.5 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_8465 | Ethanoic acid (Acetic acid) | … | T°C_range 25 | I(M)_range 3 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "## Chemistry insight\nMercury is a **soft Lewis acid**, so in general its strongest complexes are often expected with **soft donor atoms**, especially sulfur donors. In the subset we retrieved here, the strongest explicit Hg²⁺ values were associated with certain **preorganized/macrocyclic or conformationally constrained ligands**, while Hg⁺ coverage was more limited and often focused on simpler oxygen-donor systems. That said, this particular pass did **not successfully retrieve the classic halide/cyanide/sulfur-ligand series**, so I’d avoid overgeneralizing beyond the records above.\n\nIf you want, I can next pull a more focused table for any one of these:\n| Option | What I can fetch |\n|---|---|\n| **Hg(II) with halides** | chloride / bromide / iodide constants |\n| **Hg(II) with sulfur ligands** | thiourea, cysteine, thiosulfate, thiocyanate |\n| **Hg(I) complexes** | a cleaner summary of all Hg⁺ logK systems |\n| **Biological ligands** | glycine, cysteine, glutathione, amino acids |\n| **Strong chelators** | EDTA, cyanide, macrocycles |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 20,
+            "text": "## Chemistry insight",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 21,
+            "end": 54,
+            "text": "Mercury is a **soft Lewis acid**,",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 55,
+            "end": 137,
+            "text": "so in general its strongest complexes are often expected with **soft donor atoms**",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 139,
+            "end": 164,
+            "text": "especially sulfur donors.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 165,
+            "end": 331,
+            "text": "In the subset we retrieved here, the strongest explicit Hg²⁺ values were associated with certain **preorganized/macrocyclic or conformationally constrained ligands**,",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 338,
+            "end": 367,
+            "text": "Hg⁺ coverage was more limited",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 372,
+            "end": 418,
+            "text": "often focused on simpler oxygen-donor systems.",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 419,
+            "end": 429,
+            "text": "That said,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 430,
+            "end": 533,
+            "text": "this particular pass did **not successfully retrieve the classic halide/cyanide/sulfur-ligand series**,",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 534,
+            "end": 589,
+            "text": "so I’d avoid overgeneralizing beyond the records above.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 591,
+            "end": 662,
+            "text": "If you want, I can next pull a more focused table for any one of these:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 703,
+            "end": 770,
+            "text": "| **Hg(II) with halides** | chloride / bromide / iodide constants |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 771,
+            "end": 852,
+            "text": "| **Hg(II) with sulfur ligands** | thiourea, cysteine, thiosulfate, thiocyanate |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 853,
+            "end": 920,
+            "text": "| **Hg(I) complexes** | a cleaner summary of all Hg⁺ logK systems |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 921,
+            "end": 993,
+            "text": "| **Biological ligands** | glycine, cysteine, glutathione, amino acids |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 994,
+            "end": 1047,
+            "text": "| **Strong chelators** | EDTA, cyanide, macrocycles |",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "HSAB principle: Hg(II) is generally classified as a soft Lewis acid; this property is not encoded as a row in SRD‑46.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General HSAB reasoning: soft acids preferentially bind soft bases; not a direct database row.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "HSAB: soft acid Hg(II) shows strong affinity for sulfur donors; not explicitly stated in the database rows here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_71",
+              "ligand_7655",
+              "ligand_5795"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "…Tetramethyl-4,7-dioxa-1,10,… | ligand_7655 | … | logK | 4.2~26.1; trans-2-Amino-4-cyclohexene-1-carboxyli… | ligand_5795 | … | logK | 25.18",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | 13,16,21,24-Tetramethyl-4,7-dioxa-1,10,… | ligand_7655 | ref_eq_net_189 | … | logK | 4.2~26.1 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_networks",
+                "snippet": "| `Hg^[2+]` | metal_71 | trans-2-Amino-4-cyclohexene-1-carboxyli… | ligand_5795 | ref_eq_net_510 | … | logK | 25.18 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_71",
+              "metal_72"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_71 | Hg^[2+] … beta_totN_68 … ligand_totN_310 … vlm_totN_1097; metal_72 | Hg^[+] … beta_totN_12 … ligand_totN_31 … vlm_totN_83",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_71 | Hg^[2+] | Hg | 2 | ✓ | … | beta_totN_68 | ligand_totN_310 | vlm_totN_1097 |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "| metal_72 | Hg^[+] | Hg | 1 | ✓ | … | beta_totN_12 | ligand_totN_31 | vlm_totN_83 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_72",
+              "ligand_8465",
+              "ligand_8907",
+              "ligand_10114"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Hg^[+] rows include carboxylates/phosphates: Ethanoic acid, Succinic acid, Hydrogen diphosphate, etc.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_8465 | Ethanoic acid (Acetic acid) | HL | CC(=O)O | 1 | 1 | 25 | 3 | *** | 1 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_8907 | Butanedioic acid (Succinic … | H2L | O=C(O)CCC(=O)O | 2 | 2 | 27 | 2.5 | *** | 1 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| metal_72 | Hg^[+] | ligand_10114 | Hydrogen diphosphate (Pyrop… | H4L | O=P(O)(O)OP(=O)(O)O | 2 | 2 | 27 | 0.7 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "metal_71"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "search_stability where Hg^[2+] AND ligand IN ('chloride','bromide','iodide','cyanide','thiocyanate','thiosulfate','thiourea','EDTA') → (no results)",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "search_stability",
+                "snippet": "Args.where: (c.metal_id = metal_71 AND c.ligand_name_SRD IN ('chloride','bromide','iodide','ammonia','cyanide','thiocyanate','thiosulfate','thiourea','EDTA') AND s.solvent_name LIKE '%water%')"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_stability",
+                "snippet": "Result: (no results)"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Menu/listing of potential fetches; not a factual claim to verify here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Menu/listing of potential fetches; not a factual claim to verify here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Offer to summarize; not a database-backed factual statement.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Menu/listing of potential fetches; not a factual claim to verify here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Menu/listing of potential fetches; not a factual claim to verify here.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

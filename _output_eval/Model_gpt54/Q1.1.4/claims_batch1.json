@@ -1,0 +1,887 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q1.1.4\\Q1.1.4_result_batch1.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "SRD-46 has **two Ag⁺–ammonia aqueous complex formation constants** available, corresponding to **Ag(NH3)+** and **Ag(NH3)2+**. The database reports them as **logK** for the reactions shown below, with measurements at **25 °C** over a range of ionic strengths and media.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 76,
+            "text": "SRD-46 has **two Ag⁺–ammonia aqueous complex formation constants** available",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 78,
+            "end": 125,
+            "text": "corresponding to **Ag(NH3)+** and **Ag(NH3)2+**",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 127,
+            "end": 164,
+            "text": "The database reports them as **logK**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 165,
+            "end": 194,
+            "text": "for the reactions shown below",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 196,
+            "end": 226,
+            "text": "with measurements at **25 °C**",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 227,
+            "end": 269,
+            "text": "over a range of ionic strengths and media.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_2",
+              "ligand_10103",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "species: 2 … | beta_def_812 … [M] + [L] <=> [ML] … | beta_def_840 … [M] + [L]^2 <=> [ML2] (all aqueous)",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "entries: 47 | species: 2 | vlm_count: 47"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 22 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_840 | [ML2]/[M][L]<sup>2</sup> | [M] + [L]^2 <=> [ML2] | [ML2](aqueous), [M](aqueous), [L](aqueous) | 25 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_2",
+              "ligand_10103",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Ag^[+] + Ammonia — 47 measurement(s); equations: [M]+[L]<=>[ML] and [M]+[L]^2<=>[ML2]",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "Ag^[+] + Ammonia — 47 measurement(s)\nmetal_id: metal_2 | ligand_id: ligand_10103"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_812 | … | [M] + [L] <=> [ML] | … |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_840 | … | [M] + [L]^2 <=> [ML2] | … |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| logK | 29 | 2 | 25 | 0~5 | *** | 16 |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L]^2 <=> [ML2]` | logK | 16 | 16 diff ref_eq_map | 7.14~8.18 | 25 | 0~5 | beta_def_840 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L] <=> [ML]` | logK | 13 | 13 diff ref_eq_map | 3.2~3.8 | 25 | 0~5 | beta_def_812 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "Summary stats … | logK | 29 | 2 | 25 | 0~5 | *** | 16 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "… | logK | … | 25 | 0~5 | … (for both ML and ML2)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L] <=> [ML]` | logK | 13 | … | 3.2~3.8 | 25 | 0~5 | beta_def_812 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L]^2 <=> [ML2]` | logK | 16 | … | 7.14~8.18 | 25 | 0~5 | beta_def_840 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Ionic strength range is shown (I(M)_range 0~5), but media details are not present in the tool results.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L] <=> [ML]` | logK | … | 25 | 0~5 | beta_def_812 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L]^2 <=> [ML2]` | logK | … | 25 | 0~5 | beta_def_840 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Reaction | Species | Constant type | No. of measurements | logK range | Temperature range | Ionic strength range |\n|---|---|---:|---:|---:|---:|---:|\n| [M] + [L] <=> [ML] | Ag(NH3)+ | logK | 13 | 3.2–3.8 | 25 °C | 0–5 M |\n| [M] + [L]^2 <=> [ML2] | Ag(NH3)2+ | logK | 16 | 7.14–8.18 | 25 °C | 0–5 M |",
+        "claims": [
+          {
+            "start": 152,
+            "end": 223,
+            "text": "| [M] + [L] <=> [ML] | Ag(NH3)+ | logK | 13 | 3.2–3.8 | 25 °C | 0–5 M |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 224,
+            "end": 301,
+            "text": "| [M] + [L]^2 <=> [ML2] | Ag(NH3)2+ | logK | 16 | 7.14–8.18 | 25 °C | 0–5 M |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_2",
+              "ligand_10103",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "`[M] + [L] <=> [ML]` | logK | 13 | 13 diff ref_eq_map | 3.2~3.8 | 25 | 0~5 | beta_def_812",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L] <=> [ML]` | logK | 13 | 13 diff ref_eq_map | 3.2~3.8 | 25 | 0~5 | beta_def_812 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aq), [M](aq), [L](aq) | 22"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_2",
+              "ligand_10103",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "`[M] + [L]^2 <=> [ML2]` | logK | 16 | 16 diff ref_eq_map | 7.14~8.18 | 25 | 0~5 | beta_def_840",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L]^2 <=> [ML2]` | logK | 16 | 16 diff ref_eq_map | 7.14~8.18 | 25 | 0~5 | beta_def_840 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2] | [ML2](aq), [M](aq), [L](aq) | 25"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "SRD-46 also contains associated **thermodynamic data** for the same two complexes:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 54,
+            "text": "SRD-46 also contains associated **thermodynamic data**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 68,
+            "end": 81,
+            "text": "two complexes",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_2",
+              "ligand_10103",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "[M] + [L] <=> [ML] | ΔH | 5 | ... | 25 | 0~3 | beta_def_812 ... ; [M] + [L]^2 <=> [ML2] | ΔS | 4 | ... | 25 | 0~3 | beta_def_840",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "`Ag^[+]` + Ammonia — 47 measurement(s) metal_id: metal_2 | ligand_id: ligand_10103"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "[M] + [L] <=> [ML] | ΔH | 5 | *** | -25.9~-20.5 | 25 | 0~3 | beta_def_812 | *** | [L] | ..."
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "[M] + [L]^2 <=> [ML2] | ΔS | 4 | *** | -55.6~-46.4 | 25 | 0~3 | beta_def_840 | *** | [L] | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Ag^[+] + Ammonia ... entries: 47 | species: 2 ... | beta_def_812 ... | beta_def_840 ...",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Ag^[+] + Ammonia ... entries: 47 | species: 2 | vlm_count: 47"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | ... | 22\nbeta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2] | ... | 25"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "| Reaction | Constant type | No. of measurements | Value range | Temperature | Ionic strength range |\n|---|---|---:|---:|---:|---:|\n| [M] + [L] <=> [ML] | ΔH | 5 | -25.9 to -20.5 | 25 °C | 0–3 M |\n| [M] + [L] <=> [ML] | ΔS | 4 | -12.1 to -5.4 | 25 °C | 0–3 M |\n| [M] + [L]^2 <=> [ML2] | ΔH | 5 | -61.9 to -56.1 | 25 °C | 0–3 M |\n| [M] + [L]^2 <=> [ML2] | ΔS | 4 | -55.6 to -46.4 | 25 °C | 0–3 M |",
+        "claims": [
+          {
+            "start": 132,
+            "end": 196,
+            "text": "| [M] + [L] <=> [ML] | ΔH | 5 | -25.9 to -20.5 | 25 °C | 0–3 M |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 197,
+            "end": 260,
+            "text": "| [M] + [L] <=> [ML] | ΔS | 4 | -12.1 to -5.4 | 25 °C | 0–3 M |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 261,
+            "end": 328,
+            "text": "| [M] + [L]^2 <=> [ML2] | ΔH | 5 | -61.9 to -56.1 | 25 °C | 0–3 M |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 329,
+            "end": 396,
+            "text": "| [M] + [L]^2 <=> [ML2] | ΔS | 4 | -55.6 to -46.4 | 25 °C | 0–3 M |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "`[M] + [L] <=> [ML]` | ΔH | 5 | *** | -25.9~-20.5 | 25 | 0~3 | beta_def_812",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L] <=> [ML]` | ΔH | 5 | *** | -25.9~-20.5 | 25 | 0~3 | beta_def_812 | *** | [L] | (9.26, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "`[M] + [L] <=> [ML]` | ΔS | 4 | *** | -12.1~-5.4 | 25 | 0~3 | beta_def_812",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L] <=> [ML]` | ΔS | 4 | *** | -12.1~-5.4 | 25 | 0~3 | beta_def_812 | *** | [L] | (9.26, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "`[M] + [L]^2 <=> [ML2]` | ΔH | 5 | *** | -61.9~-56.1 | 25 | 0~3 | beta_def_840",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L]^2 <=> [ML2]` | ΔH | 5 | *** | -61.9~-56.1 | 25 | 0~3 | beta_def_840 | *** | [L] | (9.26, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "`[M] + [L]^2 <=> [ML2]` | ΔS | 4 | *** | -55.6~-46.4 | 25 | 0~3 | beta_def_840",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L]^2 <=> [ML2]` | ΔS | 4 | *** | -55.6~-46.4 | 25 | 0~3 | beta_def_840 | *** | [L] | (9.26, L, +inf) |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "A couple of chemistry notes: the much larger constant for **Ag(NH3)2+** is consistent with silver(I)’s strong affinity for soft donor ligands like ammonia and its common **linear two-coordinate** ammine complex. The spread in reported logK values likely reflects **ionic strength and medium effects**, so individual measurements should be compared only at matched conditions.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 28,
+            "text": "A couple of chemistry notes:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 29,
+            "end": 71,
+            "text": "the much larger constant for **Ag(NH3)2+**",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 72,
+            "end": 141,
+            "text": "is consistent with silver(I)’s strong affinity for soft donor ligands",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 142,
+            "end": 154,
+            "text": "like ammonia",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 159,
+            "end": 210,
+            "text": "its common **linear two-coordinate** ammine complex",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 212,
+            "end": 300,
+            "text": "The spread in reported logK values likely reflects **ionic strength and medium effects**",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 302,
+            "end": 375,
+            "text": "so individual measurements should be compared only at matched conditions.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_2",
+              "ligand_10103",
+              "beta_def_840",
+              "beta_def_812"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "[M] + [L]^2 <=> [ML2] | logK | 16 | 16 diff ref_eq_map | 7.14~8.18 | 25 | 0~5 | beta_def_840 ; [M] + [L] <=> [ML] | logK | 13 | 13 diff ref_eq_map | 3.2~3.8 | 25 | 0~5 | beta_def_812",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "[M] + [L]^2 <=> [ML2] | logK | 16 | 16 diff ref_eq_map | 7.14~8.18 | 25 | 0~5 | beta_def_840"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "[M] + [L] <=> [ML] | logK | 13 | 13 diff ref_eq_map | 3.2~3.8 | 25 | 0~5 | beta_def_812"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "SRD-46 tool results do not classify ligands by HSAB (soft/hard) or state Ag(I) has “strong affinity for soft donors.”",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_10103 | Ammonia | L",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "| ligand_id | ligand_name | HxL_def | ... |\n| ligand_10103 | Ammonia | L | Inorganic ligands | 447 | `N` | ..."
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "Ag^[+] + Ammonia\nmetal_id: metal_2 | ligand_id: ligand_10103 | entries: 47"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Complex geometry/coordination (e.g., linear two-coordinate) is not reported in SRD-46 tool outputs; this is general inorganic chemistry knowledge.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_2",
+              "ligand_10103",
+              "beta_def_840",
+              "beta_def_812"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "[ML2] logK 7.14~8.18 | 25 | 0~5 and [ML] logK 3.2~3.8 | 25 | 0~5 indicate variation with ionic strength; multiple ref_eq_map entries present.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "[M] + [L]^2 <=> [ML2] | logK | 16 | 16 diff ref_eq_map | 7.14~8.18 | 25 | 0~5 | beta_def_840"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_stability",
+                "snippet": "[M] + [L] <=> [ML] | logK | 13 | 13 diff ref_eq_map | 3.2~3.8 | 25 | 0~5 | beta_def_812"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "equilibrium_maps: 16 preset reference network(s) ... I range | 0.35~0.65 M ... 4.85~5.15 M"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "**Source:** NIST SRD-46, Ag⁺ (`metal_2`) with ammonia (`ligand_10103`), beta definitions `beta_def_812` and `beta_def_840`.",
+        "claims": [
+          {
+            "start": 2,
+            "end": 9,
+            "text": "Source:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 12,
+            "end": 23,
+            "text": "NIST SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 25,
+            "end": 40,
+            "text": "Ag⁺ (`metal_2`)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 41,
+            "end": 45,
+            "text": "with",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 46,
+            "end": 70,
+            "text": "ammonia (`ligand_10103`)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 72,
+            "end": 88,
+            "text": "beta definitions",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 90,
+            "end": 102,
+            "text": "beta_def_812",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 109,
+            "end": 121,
+            "text": "beta_def_840",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Provenance claim: this run’s tool outputs come from NIST SRD-46 context, though 'SRD-46' is not echoed in row text.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "## search_metals — 3 result(s)"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands — 1 result(s)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_2"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_2 | Ag^[+] | Ag | 1 | ✓ | [Ag+] | InChI=1S/Ag/q+1",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_2 | Ag^[+] | Ag | 1 | ✓ | [Ag+] | InChI=1S/Ag/q+1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_10103 | Ammonia | L | Inorganic ligands | 447 | `N`",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "| ligand_10103 | Ammonia | L | Inorganic ligands | 447 | `N` | (-inf, HL, 9.26, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aq), [M](aq), [L](aq) | 22",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 22 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_840 | [ML2]/[M][L]^2 | [M] + [L]^2 <=> [ML2] | [ML2](aq), [M](aq), [L](aq) | 25",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_840 | [ML<sub>2</sub>]/[M][L]<sup>2</sup> | [M] + [L]^2 <=> [ML2] | [ML2](aqueous), [M](aqueous), [L](aqueous) | 25 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

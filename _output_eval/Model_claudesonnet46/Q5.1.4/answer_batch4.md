@@ -1,0 +1,99 @@
+Here is a comprehensive overview of the **Zinc(II)** data available in NIST SRD-46:
+
+---
+
+## 🔬 Zinc(II) — SRD-46 Data Overview
+
+### 📊 Top-Level Coverage
+
+| Property | Value |
+|---|---|
+| Metal entity | Zn²⁺ (`metal_208`) |
+| Charge | +2 |
+| Distinct ligand partners | **1,169** |
+| Stability constant definitions | **122** beta-definition types |
+| Total VLM measurements | **4,095** |
+
+Zinc is one of the most data-rich metals in SRD-46, reflecting its enormous importance in bioinorganic chemistry, environmental geochemistry, and industrial applications.
+
+---
+
+### 🏆 Top Ligands by Measurement Count (at 25 °C)
+
+| Ligand | Ligand ID | # Measurements |
+|---|---|---|
+| Glycine (aminoacetic acid) | ligand_5760 | 37 |
+| Ethylenediamine | ligand_7029 | 36 |
+| Hydroxide ion (hydrolysis) | ligand_10076 | 33 |
+| Hydrocyanic acid (CN⁻) | ligand_10090 | 30 |
+| Imidazole | ligand_7795 | 30 |
+| Histidine | ligand_5898 | 29 |
+| Thiocyanate | ligand_10092 | 24 |
+| Cysteine | ligand_5856 | 23 |
+| Ammonia | ligand_10103 | 21 |
+| NTP (nitrilotris-methylenephosphonic acid) | ligand_8412 | 21 |
+| Iminodiacetic acid (IDA) | ligand_6127 | 20 |
+| Citric acid | ligand_9058 | 19 |
+| 1,10-Phenanthroline | ligand_8191 | 19 |
+| Alanine | ligand_5761 | 19 |
+| 2,2′-Bipyridyl | ligand_8156 | 18 |
+
+---
+
+### ⚗️ Reaction Types & Stoichiometries Covered
+
+The database covers a rich variety of equilibrium types for Zn²⁺, including:
+
+| Reaction Class | Example |
+|---|---|
+| Simple 1:1 complexation | Zn²⁺ + L ⇌ [ZnL] |
+| 1:2 and 1:3 complexes | Zn²⁺ + 2L ⇌ [ZnL₂] |
+| Protonated complexes | [ZnHL]⁺ |
+| Hydroxo-mixed complexes | [Zn(OH)L] |
+| Polynuclear species | [Zn₂L], [Zn₃L₄] |
+| Solid-phase solubility | ZnL₂(s) ⇌ Zn²⁺ + 2L⁻ |
+| Hydrolysis | Zn²⁺ + OH⁻ ⇌ ZnOH⁺, Zn(OH)₂ |
+| Oxide dissolution | ZnO(s) + H₂O ⇌ Zn²⁺ + 2OH⁻ |
+
+---
+
+### 🧪 Representative Ligand Classes at 25 °C, I = 0.1 M
+
+| Ligand Class | Examples |
+|---|---|
+| **Amino acids** | Glycine, Alanine, Histidine, Cysteine |
+| **Polyamines** | Ethylenediamine, Imidazole |
+| **Aminopolycarboxylates** | NTA, EDTA, DTPA, CDTA, macrocyclic variants |
+| **Phosphonates** | NTP (nitrilotris-methylenephosphonic acid) |
+| **Polyphosphates** | Triphosphate |
+| **Aromatic N-donors** | 1,10-Phenanthroline, 2,2′-Bipyridyl |
+| **Inorganic ligands** | OH⁻, CN⁻, SCN⁻, NH₃ |
+| **Carboxylates** | Citrate, IDA, NTA |
+| **Macrocycles** | Tetraazacyclododecane & pentadecane derivatives |
+| **Crown ethers** | Diaza-crown ether acetates |
+
+---
+
+### 🧠 Chemistry Insights
+
+1. **Bioinorganic relevance**: The dominance of glycine, histidine, cysteine, and imidazole in the dataset reflects Zn²⁺'s central role in metalloenzymes (carbonic anhydrase, carboxypeptidase, zinc-finger proteins), where these amino acid side chains are the primary coordination donors.
+
+2. **Hydrolysis matters**: With 33 measurements for hydroxide, Zn²⁺ hydrolysis is well-characterized. ZnOH⁺ and polynuclear hydroxo species become significant above pH ~8, which is critical for environmental speciation modeling.
+
+3. **Aminopolycarboxylate breadth**: The large collection of EDTA-like ligands (NTA, DTPA, CDTA, macrocyclic tetraazaacetates) reflects Zn²⁺'s use as a benchmark metal for chelation therapy and industrial sequestrant research.
+
+---
+
+### 🔍 Want to Dig Deeper?
+
+You can ask me about:
+- **Specific log β values** for any Zn²⁺–ligand pair (e.g., Zn–EDTA, Zn–glycine)
+- **pKa values** of the ligands
+- **Hydrolysis constants** for Zn²⁺
+- **Network diagrams** showing mixed-ligand or polynuclear species
+- **Literature citations** for specific systems
+- **Comparison** of Zn²⁺ vs. Cu²⁺ or Ni²⁺ for a given ligand
+
+*Source: NIST SRD-46 Critically Selected Stability Constants of Metal Complexes*
+
+---

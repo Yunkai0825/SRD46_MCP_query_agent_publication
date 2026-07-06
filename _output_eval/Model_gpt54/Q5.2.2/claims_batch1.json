@@ -1,0 +1,873 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q5.2.2\\Q5.2.2_result_batch1.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "I checked SRD-46 for protein ligands and related records.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 16,
+            "text": "I checked SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 17,
+            "end": 57,
+            "text": "for protein ligands and related records.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "search_citations — 5 row(s) | vlm_94058 | 176 | lit_642 | 43Eaa | J. T. Edsall in \"Proteins, Amino Acids and Peptides\", E. J. Cohn and J. T. Edsa…",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_citations",
+                "snippet": "## search_citations — 5 row(s)\n| vlm_94058 | 176 | lit_642 | 43Eaa | J. T. Edsall in \"Proteins, Amino Acids and Peptides\", E. J. Cohn and J. T. Edsa… |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.ligand_name_SRD LIKE '%transferrin%' ... OR c.ligand_name_SRD LIKE '%protein%' OR c.ligand_name_SRD LIKE '%polypeptide%')\", \"limit\": 20"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_pka_ligands",
+                "snippet": "\"where\": \"(lc.ligand_name_SRD LIKE '%transferrin%' ... OR lc.ligand_name_SRD LIKE '%protein%' OR lc.ligand_name_SRD LIKE '%polypeptide%')\", \"limit\": 20"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Check performed | Result |\n|---|---:|\n| Ligand search for transferrin / lactoferrin / albumin / metallothionein / apotransferrin / HSA / BSA | 0 hits |\n| Stability records with protein-related ligand names | 0 hits |\n| Equilibrium-network records with protein-related ligand names | 0 hits |\n| pKa ligand records with protein-related ligand names | 0 hits |\n| Citation search with protein-related text | 5 citation hits, but not evidence of protein-ligand cards |",
+        "claims": [
+          {
+            "start": 40,
+            "end": 153,
+            "text": "| Ligand search for transferrin / lactoferrin / albumin / metallothionein / apotransferrin / HSA / BSA | 0 hits |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 154,
+            "end": 218,
+            "text": "| Stability records with protein-related ligand names | 0 hits |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 219,
+            "end": 293,
+            "text": "| Equilibrium-network records with protein-related ligand names | 0 hits |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 294,
+            "end": 359,
+            "text": "| pKa ligand records with protein-related ligand names | 0 hits |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 360,
+            "end": 465,
+            "text": "| Citation search with protein-related text | 5 citation hits, but not evidence of protein-ligand cards |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "search_ligands returned \"(no results)\" for the protein-related names → implies 0 hits.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "\"name\": \"transferrin, lactoferrin, albumin, metallothionein, apotransferrin, HSA, BSA\""
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "search_stability returned \"(no results)\" for protein-related ligand names → implies 0 hits.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.ligand_name_SRD LIKE '%transferrin%' ... OR c.ligand_name_SRD LIKE '%protein%' OR c.ligand_name_SRD LIKE '%polypeptide%')\""
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "search_networks returned \"(no results)\" for protein-related ligand names → implies 0 hits.",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "search_networks",
+                "snippet": "## search_networks\n\n*(no results)*"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_networks",
+                "snippet": "\"where\": \"(c.ligand_name LIKE '%transferrin%' ... OR c.ligand_name LIKE '%protein%' OR c.ligand_name LIKE '%polypeptide%')\""
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "search_pka_ligands returned \"(no results)\" for protein-related ligand names → implies 0 hits.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_pka_ligands",
+                "snippet": "## search_pka_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_pka_ligands",
+                "snippet": "\"where\": \"(lc.ligand_name_SRD LIKE '%transferrin%' ... OR lc.ligand_name_SRD LIKE '%protein%' OR lc.ligand_name_SRD LIKE '%polypeptide%')\""
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "lit_642",
+              "lit_1716",
+              "lit_7985",
+              "lit_12764",
+              "lit_14729"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "## search_citations — 5 row(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_citations",
+                "snippet": "## search_citations — 5 row(s)"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_citations",
+                "snippet": "| vlm_94058 | 176 | lit_642 | 43Eaa | J. T. Edsall in \"Proteins, Amino Acids and Peptides\", E. J. Cohn and J. T. Edsa… |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "So, based on the SRD-46 searches I ran, I do **not** find direct metal–protein binding entries for **transferrin** or similar proteins in the database’s ligand/stability/network/pKa records.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "So,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 4,
+            "end": 39,
+            "text": "based on the SRD-46 searches I ran,",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 40,
+            "end": 190,
+            "text": "I do **not** find direct metal–protein binding entries for **transferrin** or similar proteins in the database’s ligand/stability/network/pKa records.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "search_ligands / search_stability / search_networks / search_pka_ligands were executed (tool results present).",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "**Args:** {\"name\":\"transferrin, lactoferrin, albumin, metallothionein, apotransferrin, HSA, BSA\",\"limit\":20} … ## search_ligands\n*(no results)*"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "**Args:** {\"where\":\"(c.ligand_name_SRD LIKE '%transferrin%' OR … '%polypeptide%')\",\"limit\":20} … ## search_stability\n*(no results)*"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_pka_ligands",
+                "snippet": "**Args:** {\"where\":\"(lc.ligand_name_SRD LIKE '%transferrin%' OR … '%polypeptide%')\",\"limit\":20} … ## search_pka_ligands\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "No results in ligand, stability, network, or pKa searches: search_ligands — (no results); search_stability — (no results); search_networks — (no results); search_pka_ligands — (no results)",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n*(no results)*"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "**Args:** {\"where\":\"(c.ligand_name_SRD LIKE '%transferrin%' OR c.ligand_name_SRD LIKE '%apotransferrin%' OR … '%polypeptide%')\"} … ## search_stability\n*(no results)*"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_networks",
+                "snippet": "## search_networks\n*(no results)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "The only partial signal was in literature text:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 47,
+            "text": "The only partial signal was in literature text:",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "vlm_94058",
+              "lit_642",
+              "vlm_99994",
+              "lit_1716"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "## search_citations — 5 row(s) ; other searches: *(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_citations",
+                "snippet": "## search_citations — 5 row(s)\n| example_vlm_id | vlm_count | lit_id | shortcut | citation |\n| vlm_94058 | 176 | lit_642 | 43Eaa | J. T. Edsall in \"Proteins, Amino Acids and Peptides\", E. J. Cohn and J. T. Edsa… |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "| shortcut | citation snippet | note |\n|---|---|---|\n| 43Eaa | J. T. Edsall in *“Proteins, Amino Acids and Peptides”* ... | protein term appears in citation text |\n| 80OO | T. Ohsaka, N. Oyama, and H. Matsuda ... | returned by broad text search, not clearly a protein-binding record |\n| 72ESM | ... *“Symposium on M...”* | broad match only |\n| 83HOO | K. Hayashi, T. Ohsawa ... | broad match only |\n| 88CCI | R. Cali, V. Cucinotta ... | broad match only |",
+        "claims": [
+          {
+            "start": 53,
+            "end": 163,
+            "text": "| 43Eaa | J. T. Edsall in *“Proteins, Amino Acids and Peptides”* ... | protein term appears in citation text |",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 164,
+            "end": 284,
+            "text": "| 80OO | T. Ohsaka, N. Oyama, and H. Matsuda ... | returned by broad text search, not clearly a protein-binding record |",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 285,
+            "end": 341,
+            "text": "| 72ESM | ... *“Symposium on M...”* | broad match only |",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 342,
+            "end": 398,
+            "text": "| 83HOO | K. Hayashi, T. Ohsawa ... | broad match only |",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 399,
+            "end": 455,
+            "text": "| 88CCI | R. Cali, V. Cucinotta ... | broad match only |",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "vlm_94058"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "43Eaa | J. T. Edsall in \"Proteins, Amino Acids and Peptides\", E. J. Cohn and J. T. Edsa…",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_citations",
+                "snippet": "| vlm_94058 | 176 | lit_642 | 43Eaa | J. T. Edsall in \"Proteins, Amino Acids and Peptides\", E. J. Cohn and J. T. Edsa… |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_99994"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "80OO | T. Ohsaka, N. Oyama, and H. Matsuda, Bull. Chem. Soc. Japan, 1980, 53, 3601",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_citations",
+                "snippet": "| vlm_99994 | 100 | lit_1716 | 80OO | T. Ohsaka, N. Oyama, and H. Matsuda, Bull. Chem. Soc. Japan, 1980, 53, 3601 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_182810"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "72ESM | G. Eisenman, G. Szabo, S. G. A. McLaughlin, and S. M. Ciane, in \"Symposium on M…",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_citations",
+                "snippet": "| vlm_182810 | 6 | lit_7985 | 72ESM | G. Eisenman, G. Szabo, S. G. A. McLaughlin, and S. M. Ciane, in \"Symposium on M… |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "vlm_138105"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "83HOO | K. Hayashi, T. Ohsawa, K. Okamoto, J. Hidaka, and H. Einaga, J. Coord. Chem., 1…",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_citations",
+                "snippet": "| vlm_138105 | 22 | lit_12764 | 83HOO | K. Hayashi, T. Ohsawa, K. Okamoto, J. Hidaka, and H. Einaga, J. Coord. Chem., 1… |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "vlm_115076"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "88CCI | R. Cali, V. Cucinotta, G. Impellizzeri, M. C. Mangeri, and E. Rizzarelli, Int. …",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_citations",
+                "snippet": "| vlm_115076 | 24 | lit_14729 | 88CCI | R. Cali, V. Cucinotta, G. Impellizzeri, M. C. Mangeri, and E. Rizzarelli, Int. … |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "That means SRD-46 may contain some papers whose citations mention proteins, but I found **no actual curated transferrin/protein ligand cards or stability constants** from the name-based searches.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 10,
+            "text": "That means",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 11,
+            "end": 74,
+            "text": "SRD-46 may contain some papers whose citations mention proteins",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 76,
+            "end": 79,
+            "text": "but",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 80,
+            "end": 165,
+            "text": "I found **no actual curated transferrin/protein ligand cards or stability constants**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 166,
+            "end": 195,
+            "text": "from the name-based searches.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_94058",
+              "lit_642"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "search_citations — J. T. Edsall in \"Proteins, Amino Acids and Peptides\", E. J. Cohn and J. T. Edsa…",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_citations",
+                "snippet": "| vlm_94058 | 176 | lit_642 | 43Eaa | J. T. Edsall in \"Proteins, Amino Acids and Peptides\", E. J. Cohn and J. T. Edsa… |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_citations",
+                "snippet": "## search_citations — 5 row(s)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "No results returned: Step 2 search_ligands (no results); Step 4 search_stability (no results); Step 5 search_networks (no results); Step 6 search_pka_ligands (no results).",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_networks",
+                "snippet": "## search_networks\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "| Bottom line | Conclusion |\n|---|---|\n| Transferrin in SRD-46 ligand/stability data | Not found |\n| General metal–protein binding coverage in SRD-46 | Not evident from these searches |\n| Confidence | Moderate, because multiple SRD-46 domains were checked and all direct entity searches were empty |",
+        "claims": [
+          {
+            "start": 39,
+            "end": 98,
+            "text": "| Transferrin in SRD-46 ligand/stability data | Not found |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 99,
+            "end": 185,
+            "text": "| General metal–protein binding coverage in SRD-46 | Not evident from these searches |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 186,
+            "end": 299,
+            "text": "| Confidence | Moderate, because multiple SRD-46 domains were checked and all direct entity searches were empty |",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "search_ligands — (no results); search_stability — (no results)",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "search_stability, search_networks, search_pka_ligands — (no results)",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_networks",
+                "snippet": "## search_networks\n\n*(no results)*"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_pka_ligands",
+                "snippet": "## search_pka_ligands\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Multiple domains checked; direct entity searches empty: ligands, stability, networks, pKa — (no results)",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_networks",
+                "snippet": "## search_networks\n\n*(no results)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 7,
+        "text": "SRD-46 appears to focus much more on defined small-molecule ligands and simpler coordination systems than on whole proteins. If you want, I can next check for **smaller biomolecular models** instead, such as **amino acids, peptides, siderophores, or Fe(III)-citrate / Fe(III)-NTA systems** that are often used as proxies for protein metal binding.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 124,
+            "text": "SRD-46 appears to focus much more on defined small-molecule ligands and simpler coordination systems than on whole proteins.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 125,
+            "end": 207,
+            "text": "If you want, I can next check for **smaller biomolecular models** instead, such as",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 208,
+            "end": 289,
+            "text": "**amino acids, peptides, siderophores, or Fe(III)-citrate / Fe(III)-NTA systems**",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 290,
+            "end": 347,
+            "text": "that are often used as proxies for protein metal binding.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "searches for protein keywords returned *(no results)*, suggesting SRD-46 lacks whole-protein entries",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "Args name: \"transferrin, lactoferrin, albumin, metallothionein, apotransferrin, HSA, BSA\" → *(no results)*"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "Args where: (c.ligand_name_SRD LIKE '%transferrin%' ... OR c.ligand_name_SRD LIKE '%polypeptide%') → *(no results)*"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_networks",
+                "snippet": "Args where: (c.ligand_name LIKE '%transferrin%' ... OR c.ligand_name LIKE '%polypeptide%') → *(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "A list of example targets (amino acids, peptides, siderophores, Fe(III)-citrate/NTA) is not a verifiable data claim here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Common bioinorganic practice: small ligands (amino acids, peptides, siderophores, Fe(III)-citrate/NTA) are used as protein-binding proxies; not a specific SRD-46 row.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 8,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

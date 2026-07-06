@@ -1,0 +1,84 @@
+Using SRD-46, copper and iron differ strongly both in **data coverage** and in **binding behavior**.
+
+## Coverage in SRD-46
+
+| Metal ion | SRD-46 metal ID | Ligand partners | Measurements |
+|---|---:|---:|---:|
+| Cu²⁺ | metal_41 | ~1951 | ~8963 |
+| Cu⁺ | metal_42 | 117 | 285 |
+| Fe³⁺ | metal_61 | 406 | 1473 |
+| Fe²⁺ | metal_62 | 217 | 667 |
+
+Cu²⁺ is by far the most broadly represented of these four ions in SRD-46; Cu⁺ is the sparsest. Fe³⁺ has broader coverage than Fe²⁺.
+
+## Shared-ligand comparison at 25 °C
+
+I found overlapping 25 °C systems for **ammonia, glycine, citrate, and chloride**. Below I compare the available **logK / logβ ranges** reported in SRD-46.
+
+### Ammonia
+
+| Metal ion | Equation / summary | logK range | Ionic strength range (M) | Notes |
+|---|---|---:|---:|---|
+| Fe²⁺ | ammonia systems present | reported, values not expanded in summary | 0–6 | 24 measurements, 4 β definitions |
+| Cu²⁺ | ammonia systems present | reported, values not expanded in summary | 0–3 | 17 measurements, 4 β definitions |
+| Cu⁺ | ammonia systems present | reported, values not expanded in summary | 0.5–2 | 2 measurements, 1 β definition |
+| Fe³⁺ | no ammonia result in retrieved set | — | — | not in the retrieved 25 °C overlap set |
+
+### Glycine
+
+| Metal ion | Presence at 25 °C | logK data in retrieved set | Ionic strength range (M) |
+|---|---|---|---:|
+| Cu²⁺ | yes | yes | 0–2.5 |
+| Fe²⁺ | yes | yes | 0–3 |
+| Fe³⁺ | yes | yes | 0.5–3 |
+| Cu⁺ | yes | yes | 0.1 |
+
+The summary confirms all four ions have glycine data at 25 °C, but the returned view did not expand the individual logK values.
+
+### Citrate
+
+| Metal ion | Presence at 25 °C | logK data in retrieved set | Ionic strength range (M) |
+|---|---|---|---:|
+| Cu²⁺ | yes | yes | 0.1 |
+| Fe²⁺ | yes | yes | 0.1–3 |
+| Fe³⁺ | yes | yes | 0.1–1 |
+| Cu⁺ | no retrieved citrate result | — | — |
+
+Again, the overlap is good for Cu²⁺ / Fe²⁺ / Fe³⁺, but Cu⁺ citrate did not appear in the retrieved 25 °C set.
+
+### Chloride
+
+For chloride, the summary included explicit values:
+
+| Metal ion | Reaction | logK range | T (°C) | Ionic strength range (M) |
+|---|---|---:|---:|---:|
+| Cu²⁺ | M + L ⇌ ML | -0.20 to 0.27 | 25 | 0–6 |
+| Cu⁺ | M + L ⇌ ML | 2.7 to 3.1 | 25 | 0–5 |
+| Cu⁺ | M + 2L ⇌ ML₂ | 5.42 to 6.06 | 20–25 | 0–5 |
+| Fe³⁺ | M + L ⇌ ML | 0.63 to 1.48 | 25 | 0–4 |
+| Fe³⁺ | M + 2L ⇌ ML₂ | 0.75 to 2.13 | 25 | 0–1 |
+| Fe²⁺ | M + L ⇌ ML | -0.2 | 25 | 0 |
+
+## What this says chemically
+
+| Comparison | SRD-46-based interpretation |
+|---|---|
+| Cu²⁺ vs Fe²⁺ | Cu²⁺ has much broader complexation coverage and is heavily represented with N-donor ligands like histidine, ammonia, and imidazole. |
+| Fe³⁺ vs Fe²⁺ | Fe³⁺ generally shows stronger interaction with hard O-donor ligands and hydrolyzing environments; SRD-46 also shows fewer ligands than Cu²⁺ but more than Fe²⁺. |
+| Cu⁺ vs Cu²⁺ | Cu⁺ is much less represented overall and shows strong halide chemistry; chloride data are notably stronger for Cu⁺ than for Cu²⁺. |
+| Iron vs copper overall | Copper, especially Cu²⁺, has broader and denser coordination data in SRD-46, while iron splits more sharply by oxidation state: Fe³⁺ behaves quite differently from Fe²⁺. |
+
+## Bottom line
+
+| Summary point | Conclusion |
+|---|---|
+| Database coverage | **Copper(II) is much more extensively represented than iron(II), iron(III), or copper(I).** |
+| Oxidation-state dependence | **Iron changes behavior strongly between Fe²⁺ and Fe³⁺; copper changes strongly between Cu⁺ and Cu²⁺.** |
+| Shared-ligand trend | **Cu⁺ stands out for chloride binding; Fe³⁺ binds chloride more strongly than Fe²⁺; Cu²⁺ chloride binding is weak.** |
+| Practical comparison | **For biologically relevant N/O donor ligands, Cu²⁺ is the richest comparison point; for hard O-donor chemistry, Fe³⁺ is especially important.** |
+
+Source: **NIST SRD-46**.
+
+If you want, I can next make this more concrete by giving a **side-by-side table of iron vs copper for one ligand family only** — for example **ammonia**, **glycine**, or **citrate**.
+
+---

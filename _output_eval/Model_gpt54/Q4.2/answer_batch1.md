@@ -1,0 +1,50 @@
+Using SRD-46 data for Hg²⁺, the simplest hypothesis is:
+
+> **Hg²⁺ prefers sulfur-donor ligands most strongly, then nitrogen-donor ligands, while simple oxygen-donor ligands are least favored.**
+
+Here are representative **1:1 formation constants** for Hg²⁺ from the database.
+
+| Donor class | Ligand | Equation type | log K | T (°C) | I (M) | Source in SRD-46 |
+|---|---|---|---:|---:|---:|---|
+| S donor | Thiourea | `[M] + [L] <=> [ML]` | 11.4 | 25 | 0.5 | Hg²⁺ + thiourea summary |
+| N donor | Ethylenediamine | `[M] + [L] <=> [ML]` | 14.3 | 25 | 0.1 | `vlm_122573`, `beta_def_812` |
+| N donor | Ethylenediamine | `[M] + [L] <=> [ML]` | 14.3 | 25 | 1.0 | `vlm_122574`, `beta_def_812` |
+| O donor | Hydrogen carbonate | `[M] + [L] <=> [ML]` | -11.0 | 25 | 0.5 | `vlm_172918`, `beta_def_812` |
+| O donor | Hydrogen carbonate | `[M] + [L] <=> [ML]` | -10.7 | 25 | 3.0 | `vlm_172919`, `beta_def_812` |
+
+A broader SRD-46 Hg²⁺ search also surfaced these representative values:
+
+| Donor class | Ligand | Approx. 1:1 log K |
+|---|---|---:|
+| S donor | Thiocyanate | ~21.8 |
+| S donor | Thiourea | ~19.8 |
+| S donor | 2,2′-Thiodiethanol | ~15.7 |
+| N donor | Imidazole | ~9.0 |
+| N donor | Ammonia | ~7.2 |
+| N donor | Pyridine | ~5.8 |
+| O donor | Hydroxide | ~10.6 |
+| O donor | Hydrogen carbonate | ~8.3 |
+| Mixed O/N | EDTA | ~21.0 |
+
+Interpretation:
+
+| Observation | Meaning |
+|---|---|
+| Very strong Hg²⁺ complexes appear repeatedly with sulfur ligands | consistent with **thiophilic** behavior |
+| Typical N-donor ligands are strong to moderate, but usually below the strongest S donors | N binds well, but less preferentially than S overall |
+| Simple O-donor ligands are weak or even unfavorable as simple 1:1 HgL species | O donors are generally least preferred |
+
+One caveat: **ethylenediamine** is unusually strong for an N donor because it is a **chelating bidentate ligand**, so its log K = 14.3 does not overturn the overall trend. Likewise, **EDTA** is strong because of multidentate chelation, not because Hg²⁺ intrinsically prefers oxygen donors.
+
+So the best-supported class preference from SRD-46 is:
+
+| Preference order | Hypothesis |
+|---|---|
+| 1 | **Sulfur donors** |
+| 2 | **Nitrogen donors** |
+| 3 | **Oxygen donors** |
+
+Chemically, this fits HSAB ideas: **Hg²⁺ is a soft acid**, so it tends to bind **soft sulfur bases** especially strongly.  
+Source: **NIST SRD-46**.
+
+---

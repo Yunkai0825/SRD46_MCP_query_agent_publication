@@ -1,0 +1,86 @@
+Here's a comprehensive overview of **zinc (Zn²⁺)** data in the **NIST SRD-46** database:
+
+---
+
+## Zinc(II) — Overview in SRD-46
+
+| Property | Value |
+|---|---|
+| **Entity ID** | `metal_208` |
+| **Ion** | Zn²⁺ |
+| **SMILES** | `[Zn+2]` |
+| **Total ligand partners** | **1,169** |
+| **Total measurements (VLM records)** | **4,095** |
+| **Beta definitions (equilibrium types)** | **122** |
+
+Zinc is one of the most extensively studied metals in SRD-46, reflecting its enormous importance in bioinorganic chemistry, environmental science, and industrial applications.
+
+---
+
+### Top Ligand Partners (by measurement count)
+
+| Ligand | Ligand ID | # Measurements |
+|--------|-----------|----------------|
+| Glycine (Aminoacetic acid) | `ligand_5760` | 37 |
+| Ethylenediamine | `ligand_7029` | 36 |
+| Hydroxide ion (OH⁻) | `ligand_10076` | 33 |
+| Hydrocyanic acid (HCN) | `ligand_10090` | 30 |
+| Imidazole | `ligand_7795` | 30 |
+
+---
+
+### Ligand Class Distribution (top 15 classes)
+
+| Ligand Class | # Records | % of Total |
+|---|---|---|
+| Amino Acids | 654 | 16.0% |
+| Inorganic ligands | 285 | 7.0% |
+| Aliphatic amines | 253 | 6.2% |
+| EDTA and derivatives | 203 | 5.0% |
+| Pyrroles (azoles) | 201 | 4.9% |
+| Pyridines (azines) | 188 | 4.6% |
+| Aliphatic amines (secondary N) | 180 | 4.4% |
+| Aza-macrocycles | 167 | 4.1% |
+| NTA and derivatives | 143 | 3.5% |
+| Aza-oxa-macrocycles | 126 | 3.1% |
+| Carboxylic diacids | 122 | 3.0% |
+| Aminophosphorus acids | 113 | 2.8% |
+| Peptides | 109 | 2.7% |
+| Naphthols | 109 | 2.7% |
+| Aza macrocycles with carboxylic acids | 106 | 2.6% |
+
+---
+
+### Functional Group Profile (across 1,140 parseable ligand SMILES)
+
+| Functional Group | # Ligands | % |
+|---|---|---|
+| Carboxyl | 523 | 46% |
+| Aromatic ring | 478 | 42% |
+| Hydroxyl | 361 | 32% |
+| Tertiary amine | 310 | 27% |
+| Primary amine | 282 | 25% |
+| Secondary amine | 231 | 20% |
+| Pyridine | 153 | 13% |
+| Amide | 143 | 13% |
+| Ether | 132 | 12% |
+| Phenol | 97 | 9% |
+| Thioether | 72 | 6% |
+| Phosphate / Phosphonate | ~98 | ~9% |
+| Thiol | 30 | 3% |
+
+---
+
+### Chemistry Insights
+
+Zn²⁺ is a **borderline Lewis acid** (Irving–Williams series), which explains the remarkable diversity of its ligand partners — it binds effectively to both nitrogen and oxygen donors. The dominance of **amino acids** (16%) and **nitrogen-heterocycle** classes (azoles, pyridines, macrocycles) reflects zinc's critical role in metalloenzymes (e.g., carbonic anhydrase, zinc fingers) where histidine (imidazole) and cysteine (thiol) coordination is key. The strong representation of **EDTA/NTA derivatives** and **macrocycles** highlights zinc's importance in chelation therapy and analytical chemistry.
+
+With **1,169 ligand partners** and **4,095 measurements** spanning **122 different equilibrium definitions**, zinc is among the most data-rich metals in SRD-46 — ideal for systematic comparisons of stability constants across ligand families.
+
+---
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes)*
+
+Would you like me to dive deeper into any specific aspect — such as stability constants for particular ligands, hydrolysis data, pKₐ values, or comparisons with other metals?
+
+---

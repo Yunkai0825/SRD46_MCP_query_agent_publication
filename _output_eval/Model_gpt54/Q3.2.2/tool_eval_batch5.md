@@ -1,0 +1,189 @@
+# Q3.2.2 — Tool Results (batch 5)
+
+### Step 2: `search_metals`
+**Args:**
+```json
+{
+  "name": "Nickel(II)",
+  "limit": 10
+}
+```
+
+[summary]
+## search_metals — 2 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_112 | Ni^[2+] | Ni | 2 | ✓ | [Ni+2] | InChI=1S/Ni/q+2 | beta_totN_149 | ligand_totN_1369 | vlm_totN_5325 |
+| metal_113 | Ni^[3+] | Ni | 3 | ✓ | [Ni+3] | InChI=1S/Ni/q+3 | beta_totN_5 | ligand_totN_4 | vlm_totN_7 |
+
+---
+
+### Step 3: `search_ligands`
+**Args:**
+```json
+{
+  "name": "ethylenediamine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 10 result(s)
+
+**stats:** 105 SQL matches · showing 10 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5948 | N-(2-Aminoethyl)glycine (Ethylenediamine m… (EDMA) | HL | Amino Acids | 30 | `NCCNCC(=O)O` | (-inf, H3L, -1.9, H2L, 6.67, HL, 9.84, L, +inf) |
+| ligand_6253 | N-(2-Aminoeth… (Ethylenediamine-N,N-diacetic acid) | H2L | NTA and derivatives | 39 | `NCCN(CC(=O)O)CC(=O)O` | (-inf, H2L, 5.53, HL, 10.87, L, +inf) |
+| ligand_7029 | Ethylenediamine | L | Aliphatic amines | 310 | `NCCN` | (-inf, H2L, 7.11, HL, 9.92, L, +inf) |
+| ligand_7030 | DL-Methylethylenediamine (1,2-Propylenediami… (pn) | L | Aliphatic amines | 86 | `CC(N)CN` | (-inf, H2L, 6.85, HL, 9.81, L, +inf) |
+| ligand_7031 | DL-Ethylethylenediamine (1,2-Butylenediamine) | L | Aliphatic amines | 19 | `CCC(N)CN` | (-inf, H2L, 6.65, HL, 9.66, L, +inf) |
+| ligand_7032 | DL-(2-Methyl-2-propyl)et… (t-Butylethylenediamine) | L | Aliphatic amines | 2 | `CC(C)(C)C(N)CN` | (-inf, H2L, 6.26, HL, 9.78, L, +inf) |
+| ligand_7033 | 1,1-Dimethylethylenediamine | L | Aliphatic amines | 37 | `CC(C)(N)CN` | (-inf, H2L, 6.46, HL, 9.75, L, +inf) |
+| ligand_7034 | DL-1,2-Dimethylethylened… (DL-2,3-Butylenediamine) | L | Aliphatic amines | 46 | `CC(N)C(C)N` | (-inf, H2L, 6.6, HL, 9.7, L, +inf) |
+| ligand_7035 | meso-1,2-Dimethylethyl… (meso-2,3-Butylenediamine) | L | Aliphatic amines | 53 | `C[C@H](N)[C@@H](C)N` | (-inf, H2L, 6.63, HL, 9.76, L, +inf) |
+| ligand_7036 | 1,1,2,2-Tetramethylethylenediamine | L | Aliphatic amines | 15 | `CC(C)(N)C(C)(C)N` | (-inf, H2L, 6.35, HL, 9.93, L, +inf) |
+
+### Functional groups across all SQL matches (85 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| primary_amine | 58 | 68% |
+| secondary_amine | 43 | 51% |
+| tertiary_amine | 23 | 27% |
+| hydroxyl | 14 | 16% |
+| aromatic_ring | 13 | 15% |
+| amide | 7 | 8% |
+| phosphonate | 4 | 5% |
+| thioether | 4 | 5% |
+| phenol | 3 | 4% |
+| pyridine | 3 | 4% |
+| carboxyl | 2 | 2% |
+| sulfonate | 1 | 1% |
+| thiol | 1 | 1% |
+
+---
+
+### Step 4: `build_system_catalog`
+**Args:**
+```json
+{
+  "metal_id": "metal_112",
+  "ligand_id": "ligand_7029"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 1 pair(s), 3 species
+
+### Ni^[2+] + Ethylenediamine
+**metal_id:** metal_112 | **ligand_id:** ligand_7029 | **ligand_def_HxL:** L  
+**entries:** 45 | **species:** 3 | **vlm_count:** 45
+
+| beta_definition_id | beta_definition_name | equation_str | phases | n_entries |
+|--------------------|----------------------|--------------|--------|----------|
+| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aqueous), [M](aqueous), [L](aqueous) | 15 |
+| beta_def_840 | [ML<sub>2</sub>]/[M][L]<sup>2</sup> | [M] + [L]^2 <=> [ML2] | [ML2](aqueous), [M](aqueous), [L](aqueous) | 15 |
+| beta_def_872 | [ML<sub>3</sub>]/[M][L]<sup>3</sup> | [M] + [L]^3 <=> [ML3] | [ML3](aqueous), [M](aqueous), [L](aqueous) | 15 |
+
+**vlm_ids:** vlm_122365, vlm_122366, vlm_122367, vlm_122368, vlm_122369, … vlm_122407, vlm_122408, vlm_122409 (45 listed)
+
+**equilibrium_maps:** 7 preset reference network(s) *(clustered around room temperature & low ionic strength)*
+
+| network_id | nodes | edges | T range | I range |
+|------------|-------|-------|---------|---------|
+| ref_eq_net_9591 | 3 | 3 | 20~30 °C | -0.05~0.25 M |
+| ref_eq_net_9592 | 3 | 3 | 31~41 °C | 0~0.3 M |
+| ref_eq_net_9593 | 3 | 3 | 19~29 °C | 0.35~0.65 M |
+| ref_eq_net_9594 | 3 | 3 | 19~29 °C | 0.85~1.15 M |
+| ref_eq_net_9595 | 3 | 3 | 19~29 °C | 1.85~2.15 M |
+| ref_eq_net_9596 | 3 | 3 | 19~29 °C | 2.85~3.15 M |
+| ref_eq_net_9597 | 3 | 3 | 19~29 °C | -0.15~0.15 M |
+
+---
+
+### Step 6: `search_stability`
+**Args:**
+```json
+{
+  "where": "(c.metal_id = metal_112 AND c.ligand_id = ligand_7029 AND s.ionic_strength_mol_l IS NOT NULL AND s.temperature_c >= 24 AND s.temperature_c <= 26)",
+  "order_by": "c.beta_definition_name ASC, s.ionic_strength_mol_l ASC",
+  "limit": 100
+}
+```
+
+[summary]
+## search_stability — 42 row(s)
+
+### `Ni^[2+]` + Ethylenediamine — 42 measurement(s)
+metal_id: metal_112 | ligand_id: ligand_7029
+ligand_HxL_def: L | ligand_SMILES: NCCN
+
+| equation | type | vlm_counts | ref_eq_map | value_range | T°C_range | I(M)_range | beta_defs | non_aqueous_phases | HxL_involved | pKa_bracket_involved |
+|----------|------|------------|------------|-------------|-----------|------------|-----------|--------------------|--------------|-------------|
+| `[M] + [L]^2 <=> [ML2]` | logK | 6 | 6 diff ref_eq_map | -14.77~14.53 | 25 | 0~3 | beta_def_840 | *** | [L] | (9.92, L, +inf) |
+| `[M] + [L]^2 <=> [ML2]` | ΔH | 4 | *** | -76.6~0 | 25 | 0.1~3 | beta_def_840 | *** | [L] | (9.92, L, +inf) |
+| `[M] + [L]^2 <=> [ML2]` | ΔS | 4 | *** | 0~10 | 25 | 0.1~3 | beta_def_840 | *** | [L] | (9.92, L, +inf) |
+| `[M] + [L]^3 <=> [ML3]` | logK | 6 | 6 diff ref_eq_map | -19.7~19.18 | 25 | 0~3 | beta_def_872 | *** | [L] | (9.92, L, +inf) |
+| `[M] + [L]^3 <=> [ML3]` | ΔH | 4 | *** | -117.6~0 | 25 | 0.1~3 | beta_def_872 | *** | [L] | (9.92, L, +inf) |
+| `[M] + [L]^3 <=> [ML3]` | ΔS | 4 | *** | -58.2~0 | 25 | 0.1~3 | beta_def_872 | *** | [L] | (9.92, L, +inf) |
+| `[M] + [L] <=> [ML]` | logK | 6 | 6 diff ref_eq_map | 7.3~7.9 | 25 | 0~3 | beta_def_812 | *** | [L] | (9.92, L, +inf) |
+| `[M] + [L] <=> [ML]` | ΔH | 4 | *** | -37.7~0 | 25 | 0.1~3 | beta_def_812 | *** | [L] | (9.92, L, +inf) |
+| `[M] + [L] <=> [ML]` | ΔS | 4 | *** | 0~18.4 | 25 | 0.1~3 | beta_def_812 | *** | [L] | (9.92, L, +inf) |
+
+Summary stats
+| type | vlm_counts | beta_counts | T°C_range | I(M)_range | non_aqueous_phases | ref_eq_map_counts |
+|------|------------|-------------|-----------|------------|--------------------|-------------------|
+| logK | 18 | 3 | 25 | 0~3 | *** | 6 |
+| ΔH | 12 | 3 | 25 | 0.1~3 | *** | 0 |
+| ΔS | 12 | 3 | 25 | 0.1~3 | *** | 0 |
+
+---
+
+### Step 7: `search_networks`
+**Args:**
+```json
+{
+  "where": "(c.metal_id = metal_112 AND c.ligand_id = ligand_7029)",
+  "order_by": "m.condition_ionic_min ASC",
+  "limit": 20
+}
+```
+
+[summary]
+## search_networks — 21 row(s)
+
+> **Reference equilibrium networks** — each network is built around room-temperature (≈20–25 °C) and low ionic-strength (≈0 M) anchor conditions.
+
+### `Ni^[2+]` + Ethylenediamine — 7 network(s)
+metal_id: metal_112 | ligand_id: ligand_7029 | ligand_def_HxL: L | ligand_SMILES: NCCN
+
+| beta_def | equation |
+|----------|----------|
+| beta_def_872 | ``[M] + [L]^3 <=> [ML3]`` |
+| beta_def_840 | ``[M] + [L]^2 <=> [ML2]`` |
+| beta_def_812 | ``[M] + [L] <=> [ML]`` |
+
+| network_id | node_counts | edge_counts | T_range | I_range | vlm_counts | beta_def_ids | type | values |
+|------------|-------------|-------------|---------|---------|------------|--------------|------|--------|
+| ref_eq_net_9597 | 3 | 3 | 19~29 | -0.15~0.15 | 3 | beta_def_812; beta_def_840; beta_def_872 | logK | 7.32~17.61 |
+| ref_eq_net_9591 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | beta_def_812; beta_def_840; beta_def_872 | logK | 7.3~17.51 |
+| ref_eq_net_9592 | 3 | 3 | 31~41 | 0~0.3 | 3 | beta_def_872; beta_def_812; beta_def_840 | logK | -16.45~12.79 |
+| ref_eq_net_9593 | 3 | 3 | 19~29 | 0.35~0.65 | 3 | beta_def_812; beta_def_840; beta_def_872 | logK | 7.45~18.05 |
+| ref_eq_net_9594 | 3 | 3 | 19~29 | 0.85~1.15 | 3 | beta_def_812; beta_def_840; beta_def_872 | logK | 7.56~18.29 |
+| ref_eq_net_9595 | 3 | 3 | 19~29 | 1.85~2.15 | 3 | beta_def_872; beta_def_840; beta_def_812 | logK | -19.7~7.9 |
+| ref_eq_net_9596 | 3 | 3 | 19~29 | 2.85~3.15 | 3 | beta_def_812; beta_def_840; beta_def_872 | logK | 7.87~19.18 |
+
+#### Reference-state network: ref_eq_net_9597 (3 nodes)
+> First network — reference conditions (T 19~29 °C, I -0.15~0.15 M).
+
+| beta_def | equation | type | value |
+|----------|----------|------|-------|
+| beta_def_812 | ``[M] + [L] <=> [ML]`` | logK | 7.32 |
+| beta_def_840 | ``[M] + [L]^2 <=> [ML2]`` | logK | 13.5 |
+| beta_def_872 | ``[M] + [L]^3 <=> [ML3]`` | logK | 17.61 |
+
+---

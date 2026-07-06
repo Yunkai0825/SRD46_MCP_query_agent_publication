@@ -1,0 +1,657 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q2.2.6\\Q2.2.6_result_batch1.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Using a direct SRD-46 SQL count derived from `metal_card` LEFT JOIN `eq_node` on `metal_id`:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 31,
+            "text": "Using a direct SRD-46 SQL count",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 32,
+            "end": 91,
+            "text": "derived from `metal_card` LEFT JOIN `eq_node` on `metal_id`",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 91,
+            "end": 92,
+            "text": ":",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "SELECT COUNT(*) AS total ... FROM (SELECT m.metal_id, COUNT(DISTINCT n.vlm_id) AS vlm_cnt FROM metal_card AS m LEFT JOIN eq_node AS n ON m.metal_id = n.metal_id)",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: SELECT COUNT(*) AS total, SUM(CASE WHEN vlm_cnt < 5 THEN 1 ELSE 0 END) AS under5 ... FROM (SELECT m.metal_id, COUNT(DISTINCT n.vlm_id) AS vlm_cnt FROM metal_card AS m LEFT JOIN eq_node AS n ON m.metal_id = n.metal_id ...)"
+              },
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "execute_srd46_sql - 1 row(s)\n| total | under5 | fraction |\n| 230 | 114 | 0.4956521739130435 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "FROM metal_card AS m LEFT JOIN eq_node AS n ON m.metal_id = n.metal_id",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: ... FROM (SELECT m.metal_id, COUNT(DISTINCT n.vlm_id) AS vlm_cnt FROM metal_card AS m LEFT JOIN eq_node AS n ON m.metal_id = n.metal_id GROUP BY m.metal_id) pm"
+              },
+              {
+                "step": "Step 7",
+                "tool": "get_table_schema",
+                "snippet": "eq_node columns: ... | 4 | metal_id | INTEGER | True | False | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| metric | value |\n|---|---:|\n| Total metals | 230 |\n| Metals with fewer than 5 total VLM measurements | 114 |\n| Fraction of all metals | 0.4956521739 |\n| Percentage | 49.6% |",
+        "claims": [
+          {
+            "start": 30,
+            "end": 52,
+            "text": "| Total metals | 230 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 53,
+            "end": 110,
+            "text": "| Metals with fewer than 5 total VLM measurements | 114 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 111,
+            "end": 152,
+            "text": "| Fraction of all metals | 0.4956521739 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 153,
+            "end": 175,
+            "text": "| Percentage | 49.6% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "| total | under5 | fraction |\n| 230 | 114 | 0.4956521739130435 |",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total | under5 | fraction |\n| 230 | 114 | 0.4956521739130435 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "## search_metals — 230 result(s)"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "\"SUM(CASE WHEN vlm_cnt < 5 THEN 1 ELSE 0 END) AS under5\" ... \"| under5 | 114 |\"",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "\"sql_query\": \"SELECT COUNT(*) AS total, SUM(CASE WHEN vlm_cnt < 5 THEN 1 ELSE 0 END) AS under5, 1.0 * SUM(CASE WHEN vlm_cnt < 5 THEN 1 ELSE 0 END) / COUNT(*) AS fraction FROM (SELECT m.metal_id, COUNT(DISTINCT n.vlm_id) AS vlm_cnt FROM metal_card AS m LEFT JOIN eq_node AS n ON m.metal_id = n.metal_i"
+              },
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total | under5 | fraction |\n| 230 | 114 | 0.4956521739130435 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "| total | under5 | fraction |\n| 230 | 114 | 0.4956521739130435 |",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total | under5 | fraction |\n| 230 | 114 | 0.4956521739130435 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "fraction = 0.4956521739130435 (from results)",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total | under5 | fraction |\n| 230 | 114 | 0.4956521739130435 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "So, **114 metals** in the database have **fewer than 5 VLM measurements total**, which is **114/230 = 0.4957**, or **about 49.6%** of all metals.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "So,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 4,
+            "end": 79,
+            "text": "**114 metals** in the database have **fewer than 5 VLM measurements total**",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 81,
+            "end": 89,
+            "text": "which is",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 90,
+            "end": 110,
+            "text": "**114/230 = 0.4957**",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 112,
+            "end": 114,
+            "text": "or",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 115,
+            "end": 144,
+            "text": "**about 49.6%** of all metals",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "| total | under5 | fraction |\n| 230 | 114 | 0.4956521739130435 |",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT COUNT(*) AS total, SUM(CASE WHEN vlm_cnt < 5 THEN 1 ELSE 0 END) AS under5, 1.0 * SUM(CASE WHEN vlm_cnt < 5 THEN 1 ELSE 0 END) / COUNT(*) AS fraction FROM (SELECT m.metal_id, COUNT(DISTINCT n.vlm_id) AS vlm_cnt ...)"
+              },
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total | under5 | fraction |\n| 230 | 114 | 0.4956521739130435 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "| total | under5 | fraction |\n| 230 | 114 | 0.4956521739130435 |",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total | under5 | fraction |\n| 230 | 114 | 0.4956521739130435 |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT COUNT(*) AS total, SUM(CASE WHEN vlm_cnt < 5 THEN 1 ELSE 0 END) AS under5 ... AS fraction ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "fraction = 0.4956521739130435 (≈49.6%)",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total | under5 | fraction |\n| 230 | 114 | 0.4956521739130435 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "This was computed by counting **distinct `vlm_id` values per metal** from the equilibrium data, using a **LEFT JOIN** so metals with zero measurements were included.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 20,
+            "text": "This was computed by",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 21,
+            "end": 68,
+            "text": "counting **distinct `vlm_id` values per metal**",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 69,
+            "end": 94,
+            "text": "from the equilibrium data",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 96,
+            "end": 117,
+            "text": "using a **LEFT JOIN**",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 118,
+            "end": 164,
+            "text": "so metals with zero measurements were included",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "COUNT(DISTINCT n.vlm_id) AS vlm_cnt FROM metal_card AS m LEFT JOIN eq_node AS n ON m.metal_id = n.metal_id GROUP BY m.metal_id",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT COUNT(*) AS total ... FROM (SELECT m.metal_id, COUNT(DISTINCT n.vlm_id) AS vlm_cnt FROM metal_card AS m LEFT JOIN eq_node AS n ON m.metal_id = n.metal_id GROUP BY m.metal_id) pm"
+              },
+              {
+                "step": "Step 7",
+                "tool": "get_table_schema",
+                "snippet": "eq_node ... | 2 | vlm_id | INTEGER | True | False | 4 | metal_id | INTEGER | True | False |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "\"attach_equilibrium\": true",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "\"attach_equilibrium\": true"
+              },
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "FROM (SELECT m.metal_id, COUNT(DISTINCT n.vlm_id) AS vlm_cnt FROM metal_card AS m LEFT JOIN eq_node AS n ON m.metal_id = n.metal_id ..."
+              },
+              {
+                "step": "Step 7",
+                "tool": "get_table_schema",
+                "snippet": "database: equilibrium ... table: eq_node ... columns include vlm_id, metal_id"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "LEFT JOIN eq_node AS n ON m.metal_id = n.metal_id",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT ... FROM (SELECT m.metal_id, COUNT(DISTINCT n.vlm_id) AS vlm_cnt FROM metal_card AS m LEFT JOIN eq_node AS n ON m.metal_id = n.metal_id GROUP BY m.metal_id) pm"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "LEFT JOIN eq_node AS n ON m.metal_id = n.metal_id",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "LEFT JOIN eq_node AS n ON m.metal_id = n.metal_id"
+              },
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "| total | under5 | fraction |\n| 230 | 114 | 0.4956521739130435 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "## search_metals — 230 result(s)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "**Source:** NIST SRD-46 (`metal_card` and `eq_node` via `execute_srd46_sql`).",
+        "claims": [
+          {
+            "start": 2,
+            "end": 9,
+            "text": "Source:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 12,
+            "end": 23,
+            "text": "NIST SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 26,
+            "end": 36,
+            "text": "metal_card",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 43,
+            "end": 50,
+            "text": "eq_node",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 57,
+            "end": 74,
+            "text": "execute_srd46_sql",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "1 | metal_name_SRD | TEXT",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "get_table_schema",
+                "snippet": "## get_table_schema - 16 column(s)\n| cid | name | type |\n| 1 | metal_name_SRD | TEXT |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "## execute_srd46_sql - 1 row(s)\n| total | under5 | fraction |\n| 230 | 114 | 0.4956521739130435 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "\"table_name\": \"metal_card\"",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "get_table_schema",
+                "snippet": "{\n  \"table_name\": \"metal_card\",\n  \"database\": \"cards\"\n}"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "\"table_name\": \"eq_node\"",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "get_table_schema",
+                "snippet": "{\n  \"table_name\": \"eq_node\",\n  \"database\": \"equilibrium\"\n}"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "## execute_srd46_sql - 1 row(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "execute_srd46_sql",
+                "snippet": "## execute_srd46_sql - 1 row(s)\n| total | under5 | fraction |\n| 230 | 114 | 0.4956521739130435 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+# Q3.1.1 - Validation (batch 5)
+
+**33 of 83 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 0 | property_attribution | ranked by affinity | ... database for Pb²⁺ stability constants, ranked by affinity.  ---... |
+| 2 | 1 | exact_value | \| 1 \| Pentaaza-phenanthrolinacyclopentadecaphane (macrocycle) \| 24.4 \| 0.1 \| ❌ No (research) \| | ...-------\|-----------\|------------------\| \| 1 \| Pentaaza-phenanthrolinacyclopentadecaphane (macrocycle) \| 24.4 \| 0.1 \| ❌ No (research) \| \| 2 \| Tetraaza-phenanthrolinacyclotetra... |
+| 3 | 1 | exact_value | \| 2 \| Tetraaza-phenanthrolinacyclotetradecaphane (macrocycle) \| 22.1 \| 0.1 \| ❌ No (research) \| | ...cycle) \| 24.4 \| 0.1 \| ❌ No (research) \| \| 2 \| Tetraaza-phenanthrolinacyclotetradecaphane (macrocycle) \| 22.1 \| 0.1 \| ❌ No (research) \| \| 3 \| **EDTA** (Ethylenedinitrilotetraa... |
+| 4 | 1 | exact_value | \| 3 \| **EDTA** (Ethylenedinitrilotetraacetic acid) \| **18.04** \| 0.1 \| ✅ **Yes** \| | ...cycle) \| 22.1 \| 0.1 \| ❌ No (research) \| \| 3 \| **EDTA** (Ethylenedinitrilotetraacetic acid) \| **18.04** \| 0.1 \| ✅ **Yes** \| \| 4 \| CyDTA (trans-Cyclohexylenedinitri... |
+| 5 | 1 | exact_value | \| 4 \| CyDTA (trans-Cyclohexylenedinitrilotetraacetic acid) \| 18.0 \| 0.1 \| ❌ No \| | ...c acid) \| **18.04** \| 0.1 \| ✅ **Yes** \| \| 4 \| CyDTA (trans-Cyclohexylenedinitrilotetraacetic acid) \| 18.0 \| 0.1 \| ❌ No \| \| 5 \| PhDTA (1,2-Phenylenedinitrilotetr... |
+| 6 | 1 | exact_value | \| 5 \| PhDTA (1,2-Phenylenedinitrilotetraacetic acid) \| 17.6 \| 1.0 \| ❌ No \| | ...tetraacetic acid) \| 18.0 \| 0.1 \| ❌ No \| \| 5 \| PhDTA (1,2-Phenylenedinitrilotetraacetic acid) \| 17.6 \| 1.0 \| ❌ No \| \| 6 \| **DTPA** (Diethylenetrinitrilopen... |
+| 7 | 1 | exact_value | \| 6 \| **DTPA** (Diethylenetrinitrilopentaacetic acid) \| **17.1** \| 0.1 \| ✅ **Yes** \| | ...tetraacetic acid) \| 17.6 \| 1.0 \| ❌ No \| \| 6 \| **DTPA** (Diethylenetrinitrilopentaacetic acid) \| **17.1** \| 0.1 \| ✅ **Yes** \| \| 7 \| EGTA (Ethylenebis(oxyethylenenitr... |
+| 8 | 1 | exact_value | \| 7 \| EGTA (Ethylenebis(oxyethylenenitrilo)tetraacetic acid) \| 16.8 \| 0.1 \| ❌ No (research) \| | ...ic acid) \| **17.1** \| 0.1 \| ✅ **Yes** \| \| 7 \| EGTA (Ethylenebis(oxyethylenenitrilo)tetraacetic acid) \| 16.8 \| 0.1 \| ❌ No (research) \| \| 8 \| TMDTA (Trimethylenedinitrilotetra... |
+| 9 | 1 | exact_value | \| 8 \| TMDTA (Trimethylenedinitrilotetraacetic acid) \| 16.2 \| 0.1 \| ❌ No \| | ... acid) \| 16.8 \| 0.1 \| ❌ No (research) \| \| 8 \| TMDTA (Trimethylenedinitrilotetraacetic acid) \| 16.2 \| 0.1 \| ❌ No \| \| 9 \| EEDTA (Oxybis(ethylenenitrilo)tet... |
+| 10 | 1 | exact_value | \| 9 \| EEDTA (Oxybis(ethylenenitrilo)tetraacetic acid) \| 15.9 \| 0.1 \| ❌ No \| | ...tetraacetic acid) \| 16.2 \| 0.1 \| ❌ No \| \| 9 \| EEDTA (Oxybis(ethylenenitrilo)tetraacetic acid) \| 15.9 \| 0.1 \| ❌ No \| \| 10 \| TEDTA (Thiobis(ethylenenitrilo)t... |
+| 11 | 1 | exact_value | \| 10 \| TEDTA (Thiobis(ethylenenitrilo)tetraacetic acid) \| 15.7 \| 0.1 \| ❌ No \| | ...tetraacetic acid) \| 15.9 \| 0.1 \| ❌ No \| \| 10 \| TEDTA (Thiobis(ethylenenitrilo)tetraacetic acid) \| 15.7 \| 0.1 \| ❌ No \| \| 11 \| Triaza-phenanthrolinacyclotridec... |
+| 12 | 1 | exact_value | \| 11 \| Triaza-phenanthrolinacyclotridecaphane (macrocycle) \| 15.3 \| 0.1 \| ❌ No \| | ...tetraacetic acid) \| 15.7 \| 0.1 \| ❌ No \| \| 11 \| Triaza-phenanthrolinacyclotridecaphane (macrocycle) \| 15.3 \| 0.1 \| ❌ No \| \| 12 \| TeDTA (Tetramethylenedinitrilote... |
+| 13 | 1 | exact_value | \| 12 \| TeDTA (Tetramethylenedinitrilotetraacetic acid) \| 14.7 \| 0.1 \| ❌ No \| | ...hane (macrocycle) \| 15.3 \| 0.1 \| ❌ No \| \| 12 \| TeDTA (Tetramethylenedinitrilotetraacetic acid) \| 14.7 \| 0.1 \| ❌ No \| \| 13 \| **HEDTA** (N-(2-Hydroxyethyl)eth... |
+| 14 | 1 | exact_value | \| 13 \| **HEDTA** (N-(2-Hydroxyethyl)ethylenedinitrilotriacetic acid) \| **14.2** \| 0.1 \| ✅ **Yes** \| | ...tetraacetic acid) \| 14.7 \| 0.1 \| ❌ No \| \| 13 \| **HEDTA** (N-(2-Hydroxyethyl)ethylenedinitrilotriacetic acid) \| **14.2** \| 0.1 \| ✅ **Yes** \| \| 14 \| NTA (Nitrilotriacetic acid) \| 11... |
+| 15 | 1 | exact_value | \| 14 \| NTA (Nitrilotriacetic acid) \| 11.39 \| 0.1 \| ❌ No \| | ...ic acid) \| **14.2** \| 0.1 \| ✅ **Yes** \| \| 14 \| NTA (Nitrilotriacetic acid) \| 11.39 \| 0.1 \| ❌ No \|... |
+| 16 | 2 | exact_value | log β = 18.04 | ...ty have clinical relevance:  1. **EDTA (log β = 18.04)** — Administered as **CaNa₂EDTA (edeta... |
+| 17 | 2 | exact_value | log β = 17.1 | ... acute lead encephalopathy.  2. **DTPA (log β = 17.1)** — Primarily approved for chelation o... |
+| 18 | 2 | exact_value | log β = 14.2 | ... chelation including lead.  3. **HEDTA (log β = 14.2)** — Has been explored in chelation con... |
+| 19 | 3 | existence_absence | Several clinically important lead chelators were **not found** among the top Pb²⁺ binders in this search | ...## Notable Absences from the Database  Several clinically important lead chelators were **not found** among the top Pb²⁺ binders in this search, likely because they are catalogued und... |
+| 20 | 3 | comparison | with fewer comparable thermodynamic measurements | ...ifferent names, involve thiol chemistry with fewer comparable thermodynamic measurements, or simply have lower log β values:  \| ... |
+| 21 | 3 | comparison | have lower log β values | ...e thermodynamic measurements, or simply have lower log β values:  \| Chelator \| Clinical Use \| Notes \| \|... |
+| 22 | 4 | comparison | The dominance of **aminopolycarboxylate** ligands | ...## Chemistry Insight  The dominance of **aminopolycarboxylate** ligands (EDTA, DTPA, CyDTA) reflects Pb²⁺'s cla... |
+| 23 | 4 | comparison | show even higher log β values | ... macrocyclic aza-phenanthroline ligands show even higher log β values (22–24) due to the **macrocyclic effect... |
+| 24 | 4 | range | (22–24) | ...e ligands show even higher log β values (22–24) due to the **macrocyclic effect** — pre... |
+| 25 | 4 | property_attribution | poor water solubility | ...vity that fits the Pb²⁺ ion — but their poor water solubility and slow complexation kinetics make the... |
+| 26 | 4 | property_attribution | slow complexation kinetics | ...n — but their poor water solubility and slow complexation kinetics make them impractical for clinical use.... |
+| 27 | 4 | property_attribution | make them impractical for clinical use. | ...lubility and slow complexation kinetics make them impractical for clinical use. In practice, EDTA's combination of high... |
+| 28 | 4 | exact_value | (log β ≈ 18) | ...bination of high thermodynamic affinity (log β ≈ 18), fast kinetics, and decades of clinical... |
+| 29 | 4 | property_attribution | fast kinetics | ...gh thermodynamic affinity (log β ≈ 18), fast kinetics, and decades of clinical experience mak... |
+| 30 | 4 | property_attribution | decades of clinical experience | ...finity (log β ≈ 18), fast kinetics, and decades of clinical experience makes it the gold standard for parenter... |
+| 31 | 4 | property_attribution | makes it the gold standard for parenteral lead chelation therapy | ...ics, and decades of clinical experience makes it the gold standard for parenteral lead chelation therapy, while oral agents like DMSA are prefer... |
+| 32 | 4 | listing | DMSA | ...elation therapy, while oral agents like DMSA are preferred for outpatient management... |
+| 33 | 4 | property_attribution | are preferred for outpatient management of moderate lead exposure. | ...on therapy, while oral agents like DMSA are preferred for outpatient management of moderate lead exposure.  > ⚠️ **Medical disclaimer:** Chelation... |

@@ -1,0 +1,36 @@
+SRD-46 confirms the **relevant comparison framework** but, from the records retrieved here, I do **not yet have the actual matched log K values** for Cu²⁺/Ni²⁺/Zn²⁺ with **NH₃** and **ethylenediamine (en)**. So I can give a **qualified conclusion**, not a numeric table of Δ values.
+
+## What the retrieved SRD-46 evidence supports
+
+| Metal | NH₃ comparison species | en comparison species | Interpretation from retrieved SRD-46 context |
+|---|---|---|---|
+| Cu²⁺ | M(NH₃), M(NH₃)₂ | M(en), M(en)₂ | Speciation is complex; Jahn–Teller distortion and hydrolysis can strongly affect apparent stability comparisons. |
+| Ni²⁺ | M(NH₃), M(NH₃)₂ | M(en), M(en)₂ (and broader en series) | Often the cleanest donor-matched comparison; octahedral series are more regular. |
+| Zn²⁺ | M(NH₃), M(NH₃)₂ | M(en), M(en)₂ | More labile and coordination-number-flexible; apparent chelate gains may be less uniform. |
+
+
+ to your question
+
+| Question | Conclusion |
+|---|---|
+| Is the chelate effect magnitude, Δ = log K_en − 2·log K_NH₃, consistent across Cu²⁺, Ni²⁺, and Zn²⁺? | **No—SRD-46 context indicates it should vary across metals rather than be constant.** |
+| Why might it vary? | Because the observed “chelate advantage” depends not only on entropy, but also on **metal-specific geometry, ligand-field stabilization, Jahn–Teller effects, hydrolysis, and coordination-number preferences**. |
+
+## Hypothesis for the differences
+
+| Metal | Plausible hypothesis |
+|---|---|
+| Cu²⁺ | The apparent chelate effect may be unusually large or at least complicated because Cu²⁺ is strongly affected by **Jahn–Teller distortion** and by competing hydrolyzed/speciated forms; en may better stabilize favorable donor arrangements than two separate NH₃ ligands. |
+| Ni²⁺ | Ni²⁺ is likely the **best baseline** for a “classical” chelate-effect comparison because its coordination chemistry is relatively regular; the Δ value may reflect a cleaner combination of entropic gain plus favorable octahedral binding. |
+| Zn²⁺ | Zn²⁺ may show a different, possibly less sharply defined Δ because it is **more labile**, has **little/no ligand-field stabilization**, and can shift coordination geometry more readily than Ni²⁺ or Cu²⁺. |
+
+## Bottom line
+
+| Overall conclusion | Statement |
+|---|---|
+| Chelate-effect trend | **It varies across Cu²⁺, Ni²⁺, and Zn²⁺; it is not expected to be universal.** |
+| Best chemical rationale | The “extra stability” of en over two NH₃ ligands is metal-dependent because each ion differs in **electronic structure and preferred coordination geometry**, so the chelate effect is not purely entropic in practice. |
+
+If you want, I can continue and try to extract the **actual SRD-46 log β values** for **M(en)** and **M(NH₃)₂** so I can produce a **numeric comparison table** for Cu²⁺, Ni²⁺, and Zn²⁺.
+
+---

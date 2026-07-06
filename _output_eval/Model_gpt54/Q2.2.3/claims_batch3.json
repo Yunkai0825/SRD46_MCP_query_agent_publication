@@ -1,0 +1,1224 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q2.2.3\\Q2.2.3_result_batch3.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Yes. SRD-46 contains ligands with **more than 6 reported pKa steps**. Using a database-wide grouping of `ligand_pka_measured` by ligand and counting distinct non-micro pKa steps, I found **33 ligands** meeting that criterion.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 4,
+            "text": "Yes.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 5,
+            "end": 69,
+            "text": "SRD-46 contains ligands with **more than 6 reported pKa steps**.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 70,
+            "end": 178,
+            "text": "Using a database-wide grouping of `ligand_pka_measured` by ligand and counting distinct non-micro pKa steps,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 179,
+            "end": 225,
+            "text": "I found **33 ligands** meeting that criterion.",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_7541",
+              "ligand_6366",
+              "ligand_9171"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7541 | ... | distinct_pka_steps 11 | ... ; ligand_6366 | ... | 8 | ... ; ligand_9171 | ... | 8 | ...",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "HAVING COUNT(DISTINCT CASE WHEN p.pKa_type IS NULL OR LOWER(p.pKa_type) NOT LIKE '%micro%' THEN ... END) > 6"
+              },
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "| ligand_7541 | 1,4,7,10,13,16,19,22,25,28,31,34-Dodecaazacyclohexatriacontane ([36]aneN12) | 11 | 11 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "| ligand_6366 | Triethylenetetranitrilohexaacetic acid (TTHA) | 8 | 8 |\n| ligand_9171 | myo-Inositol-hexa(dihydrogenphosphate) (Phytic acid) | 8 | 8 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "execute_srd46_sql - 33 row(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "## execute_srd46_sql - 33 row(s)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Ligand ID | Ligand name (SRD) | Distinct pKa steps | Total pKa records |\n|---|---|---:|---:|\n| ligand_7541 | 1,4,7,10,13,16,19,22,25,28,31,34-Dodecaazacyclohexatriacontane ([36]aneN12) | 11 | 11 |\n| ligand_7540 | 1,4,7,10,13,16,19,22,25,28,31-Undecaazacyclotritriacontane ([33]aneN11) | 11 | 11 |\n| ligand_7539 | 1,4,7,10,13,16,19,22,25,28-Decaazacyclotriacontane ([30]aneN10) | 10 | 10 |\n| ligand_7253 | 2,5,8,11,14,17,20,23,26,29-Decaazatriacontane (Me2nonaen) | 10 | 10 |\n| ligand_6368 | Pentaethylenehexanitrilooctaacetic acid (PHOA) | 10 | 10 |\n| ligand_7538 | 1,4,7,10,13,16,19,22,25-Nonaazacycloheptacosane ([27]aneN9) | 9 | 9 |\n| ligand_7252 | 2,5,8,11,14,17,20,23,26-Nonaazaheptacosane (Me2octaen) | 9 | 9 |\n| ligand_6367 | Tetraethylenepentanitriloheptaacetic acid (TPHA) | 9 | 9 |\n| ligand_7254 | 1,3-Bis(2,5,8,11-tetraazaundecyl)benzene (MXTRIEN) | 8 | 8 |\n| ligand_7534 | 1,4,7,10,13,16,19,22-Octaazacyclotetracosane ([24]aneN8) | 8 | 8 |\n| ligand_7535 | 1,5,9,13,17,21,25,32-Octaazacyclodotriacontane ([32]aneN8) | 8 | 8 |\n| ligand_7543 | 1,5,9,13,17,21,28,32-Octaazabicyclo[11.11.11]pentatriacontane | 8 | 8 |\n| ligand_7251 | 2,5,8,11,14,17,20,23-Octaazatetracosane (Me2heptaen) | 8 | 8 |\n| ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | 8 | 8 |\n| ligand_8433 | Diethylenetrinitrilopentakis(methylenephosphonic acid) (DTPP) | 8 | 8 |\n| ligand_6047 | N,N''-Bis(3-hydroxy-6-methyl-2-pyridinylmethyl)diethylenetrinitrilotriacetic ac... | 8 | 8 |\n| ligand_6041 | N,N'-Bis(3-hydroxy-5-phosphomethyl-2-methyl-4-pyridylmethyl)ethylenedinitrilodi... | 8 | 8 |\n| ligand_8431 | Oxybis[ethylenenitrilobis(methylenephosphonic acid)] | 8 | 8 |\n| ligand_6366 | Triethylenetetranitrilohexaacetic acid (TTHA) | 8 | 8 |\n| ligand_9171 | myo-Inositol-hexa(dihydrogenphosphate) (Phytic acid) | 8 | 8 |\n| ligand_8432 | (2-Hydroxytrimethylene)dinitrilotetrakis(methylenephosphonic acid) | 7 | 7 |\n| ligand_7649 | 1,4,16,19-Tetraoxa-7,10,13,22,25,28,31-heptaazacyclotritriacotane ([33]aneN7O4) | 7 | 7 |\n| ligand_7530 | 1,4,7,10,13,16,19-Heptaazacycloheneicosane ([21]aneN7) | 7 | 7 |\n| ligand_8403 | 1,4,7,10-Tetraazacyclododecane-1,4,7,10-tetrakis(methylenephosphonic acid) (DOT... | 7 | 7 |\n| ligand_7422 | 1,4,7-Tris(3-hydroxy-6-methyl-2-pyridylmethyl)-1,4,7-triazacyclononane | 7 | 7 |",
+        "claims": [
+          {
+            "start": 95,
+            "end": 198,
+            "text": "| ligand_7541 | 1,4,7,10,13,16,19,22,25,28,31,34-Dodecaazacyclohexatriacontane ([36]aneN12) | 11 | 11 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 199,
+            "end": 298,
+            "text": "| ligand_7540 | 1,4,7,10,13,16,19,22,25,28,31-Undecaazacyclotritriacontane ([33]aneN11) | 11 | 11 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 299,
+            "end": 390,
+            "text": "| ligand_7539 | 1,4,7,10,13,16,19,22,25,28-Decaazacyclotriacontane ([30]aneN10) | 10 | 10 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 391,
+            "end": 476,
+            "text": "| ligand_7253 | 2,5,8,11,14,17,20,23,26,29-Decaazatriacontane (Me2nonaen) | 10 | 10 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 477,
+            "end": 551,
+            "text": "| ligand_6368 | Pentaethylenehexanitrilooctaacetic acid (PHOA) | 10 | 10 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 552,
+            "end": 637,
+            "text": "| ligand_7538 | 1,4,7,10,13,16,19,22,25-Nonaazacycloheptacosane ([27]aneN9) | 9 | 9 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 638,
+            "end": 718,
+            "text": "| ligand_7252 | 2,5,8,11,14,17,20,23,26-Nonaazaheptacosane (Me2octaen) | 9 | 9 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 719,
+            "end": 793,
+            "text": "| ligand_6367 | Tetraethylenepentanitriloheptaacetic acid (TPHA) | 9 | 9 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 794,
+            "end": 870,
+            "text": "| ligand_7254 | 1,3-Bis(2,5,8,11-tetraazaundecyl)benzene (MXTRIEN) | 8 | 8 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 871,
+            "end": 953,
+            "text": "| ligand_7534 | 1,4,7,10,13,16,19,22-Octaazacyclotetracosane ([24]aneN8) | 8 | 8 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 954,
+            "end": 1038,
+            "text": "| ligand_7535 | 1,5,9,13,17,21,25,32-Octaazacyclodotriacontane ([32]aneN8) | 8 | 8 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1039,
+            "end": 1126,
+            "text": "| ligand_7543 | 1,5,9,13,17,21,28,32-Octaazabicyclo[11.11.11]pentatriacontane | 8 | 8 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1127,
+            "end": 1205,
+            "text": "| ligand_7251 | 2,5,8,11,14,17,20,23-Octaazatetracosane (Me2heptaen) | 8 | 8 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1206,
+            "end": 1275,
+            "text": "| ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | 8 | 8 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1276,
+            "end": 1363,
+            "text": "| ligand_8433 | Diethylenetrinitrilopentakis(methylenephosphonic acid) (DTPP) | 8 | 8 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1364,
+            "end": 1472,
+            "text": "| ligand_6047 | N,N''-Bis(3-hydroxy-6-methyl-2-pyridinylmethyl)diethylenetrinitrilotriacetic ac... | 8 | 8 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1473,
+            "end": 1581,
+            "text": "| ligand_6041 | N,N'-Bis(3-hydroxy-5-phosphomethyl-2-methyl-4-pyridylmethyl)ethylenedinitrilodi... | 8 | 8 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1582,
+            "end": 1660,
+            "text": "| ligand_8431 | Oxybis[ethylenenitrilobis(methylenephosphonic acid)] | 8 | 8 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1661,
+            "end": 1732,
+            "text": "| ligand_6366 | Triethylenetetranitrilohexaacetic acid (TTHA) | 8 | 8 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1733,
+            "end": 1811,
+            "text": "| ligand_9171 | myo-Inositol-hexa(dihydrogenphosphate) (Phytic acid) | 8 | 8 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1812,
+            "end": 1904,
+            "text": "| ligand_8432 | (2-Hydroxytrimethylene)dinitrilotetrakis(methylenephosphonic acid) | 7 | 7 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1905,
+            "end": 2010,
+            "text": "| ligand_7649 | 1,4,16,19-Tetraoxa-7,10,13,22,25,28,31-heptaazacyclotritriacotane ([33]aneN7O4) | 7 | 7 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 2011,
+            "end": 2091,
+            "text": "| ligand_7530 | 1,4,7,10,13,16,19-Heptaazacycloheneicosane ([21]aneN7) | 7 | 7 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 2092,
+            "end": 2200,
+            "text": "| ligand_8403 | 1,4,7,10-Tetraazacyclododecane-1,4,7,10-tetrakis(methylenephosphonic acid) (DOT... | 7 | 7 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 2201,
+            "end": 2297,
+            "text": "| ligand_7422 | 1,4,7-Tris(3-hydroxy-6-methyl-2-pyridylmethyl)-1,4,7-triazacyclononane | 7 | 7 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "ligand_7541"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7541 | 1,4,7,10,13,16,19,22,25,28,31,34-Dodecaazacyclohexatriacontane ([36]aneN12) | 11 | 11",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7541 | 1,4,7,10,13,16,19,22,25,28,31,34-Dodecaazacyclohexatriacontane ([36]aneN12) | 11 | 11"
+              },
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT lc.ligand_id, lc.ligand_name_SRD, ... AS distinct_pka_steps, COUNT(*) AS total_pka_records FROM ligand_pka_measured p JOIN ligand_card lc ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_7540"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7540 | 1,4,7,10,13,16,19,22,25,28,31-Undecaazacyclotritriacontane ([33]aneN11) | 11 | 11",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7540 | 1,4,7,10,13,16,19,22,25,28,31-Undecaazacyclotritriacontane ([33]aneN11) | 11 | 11"
+              },
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT lc.ligand_id, lc.ligand_name_SRD, ... AS distinct_pka_steps, COUNT(*) AS total_pka_records ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_7539"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7539 | 1,4,7,10,13,16,19,22,25,28-Decaazacyclotriacontane ([30]aneN10) | 10 | 10",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7539 | 1,4,7,10,13,16,19,22,25,28-Decaazacyclotriacontane ([30]aneN10) | 10 | 10"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_7253"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7253 | 2,5,8,11,14,17,20,23,26,29-Decaazatriacontane (Me2nonaen) | 10 | 10",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7253 | 2,5,8,11,14,17,20,23,26,29-Decaazatriacontane (Me2nonaen) | 10 | 10"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_6368"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6368 | Pentaethylenehexanitrilooctaacetic acid (PHOA) | 10 | 10",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_6368 | Pentaethylenehexanitrilooctaacetic acid (PHOA) | 10 | 10"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_7538"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7538 | 1,4,7,10,13,16,19,22,25-Nonaazacycloheptacosane ([27]aneN9) | 9 | 9",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7538 | 1,4,7,10,13,16,19,22,25-Nonaazacycloheptacosane ([27]aneN9) | 9 | 9"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "ligand_7252"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7252 | 2,5,8,11,14,17,20,23,26-Nonaazaheptacosane (Me2octaen) | 9 | 9",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7252 | 2,5,8,11,14,17,20,23,26-Nonaazaheptacosane (Me2octaen) | 9 | 9"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "ligand_6367"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6367 | Tetraethylenepentanitriloheptaacetic acid (TPHA) | 9 | 9",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_6367 | Tetraethylenepentanitriloheptaacetic acid (TPHA) | 9 | 9"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "ligand_7254"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7254 | 1,3-Bis(2,5,8,11-tetraazaundecyl)benzene (MXTRIEN) | 8 | 8",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7254 | 1,3-Bis(2,5,8,11-tetraazaundecyl)benzene (MXTRIEN) | 8 | 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "ligand_7534"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7534 | 1,4,7,10,13,16,19,22-Octaazacyclotetracosane ([24]aneN8) | 8 | 8",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7534 | 1,4,7,10,13,16,19,22-Octaazacyclotetracosane ([24]aneN8) | 8 | 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "ligand_7535"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7535 | 1,5,9,13,17,21,25,32-Octaazacyclodotriacontane ([32]aneN8) | 8 | 8",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7535 | 1,5,9,13,17,21,25,32-Octaazacyclodotriacontane ([32]aneN8) | 8 | 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "ligand_7543"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7543 | 1,5,9,13,17,21,28,32-Octaazabicyclo[11.11.11]pentatriacontane | 8 | 8",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7543 | 1,5,9,13,17,21,28,32-Octaazabicyclo[11.11.11]pentatriacontane | 8 | 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "ligand_7251"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7251 | 2,5,8,11,14,17,20,23-Octaazatetracosane (Me2heptaen) | 8 | 8",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7251 | 2,5,8,11,14,17,20,23-Octaazatetracosane (Me2heptaen) | 8 | 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "ligand_6356"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | 8 | 8",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | 8 | 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [
+              "ligand_8433"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_8433 | Diethylenetrinitrilopentakis(methylenephosphonic acid) (DTPP) | 8 | 8",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_8433 | Diethylenetrinitrilopentakis(methylenephosphonic acid) (DTPP) | 8 | 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [
+              "ligand_6047"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6047 | N,N''-Bis(3-hydroxy-6-methyl-2-pyridinylmethyl)diethylenetrinitrilotriacetic ac... | 8 | 8",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_6047 | N,N''-Bis(3-hydroxy-6-methyl-2-pyridinylmethyl)diethylenetrinitrilotriacetic ac... | 8 | 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [
+              "ligand_6041"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6041 | N,N'-Bis(3-hydroxy-5-phosphomethyl-2-methyl-4-pyridylmethyl)ethylenedinitrilodi... | 8 | 8",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_6041 | N,N'-Bis(3-hydroxy-5-phosphomethyl-2-methyl-4-pyridylmethyl)ethylenedinitrilodi... | 8 | 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 17,
+            "canonical_ids": [
+              "ligand_8431"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_8431 | Oxybis[ethylenenitrilobis(methylenephosphonic acid)] | 8 | 8",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_8431 | Oxybis[ethylenenitrilobis(methylenephosphonic acid)] | 8 | 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 18,
+            "canonical_ids": [
+              "ligand_6366"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6366 | Triethylenetetranitrilohexaacetic acid (TTHA) | 8 | 8",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_6366 | Triethylenetetranitrilohexaacetic acid (TTHA) | 8 | 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 19,
+            "canonical_ids": [
+              "ligand_9171"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_9171 | myo-Inositol-hexa(dihydrogenphosphate) (Phytic acid) | 8 | 8",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_9171 | myo-Inositol-hexa(dihydrogenphosphate) (Phytic acid) | 8 | 8"
+              }
+            ]
+          },
+          {
+            "claim_index": 20,
+            "canonical_ids": [
+              "ligand_8432"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_8432 | (2-Hydroxytrimethylene)dinitrilotetrakis(methylenephosphonic acid) | 7 | 7",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_8432 | (2-Hydroxytrimethylene)dinitrilotetrakis(methylenephosphonic acid) | 7 | 7"
+              }
+            ]
+          },
+          {
+            "claim_index": 21,
+            "canonical_ids": [
+              "ligand_7649"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7649 | 1,4,16,19-Tetraoxa-7,10,13,22,25,28,31-heptaazacyclotritriacotane ([33]aneN7O4) | 7 | 7",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7649 | 1,4,16,19-Tetraoxa-7,10,13,22,25,28,31-heptaazacyclotritriacotane ([33]aneN7O4) | 7 | 7"
+              }
+            ]
+          },
+          {
+            "claim_index": 22,
+            "canonical_ids": [
+              "ligand_7530"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7530 | 1,4,7,10,13,16,19-Heptaazacycloheneicosane ([21]aneN7) | 7 | 7",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7530 | 1,4,7,10,13,16,19-Heptaazacycloheneicosane ([21]aneN7) | 7 | 7"
+              }
+            ]
+          },
+          {
+            "claim_index": 23,
+            "canonical_ids": [
+              "ligand_8403"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_8403 | 1,4,7,10-Tetraazacyclododecane-1,4,7,10-tetrakis(methylenephosphonic acid) (DOT... | 7 | 7",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_8403 | 1,4,7,10-Tetraazacyclododecane-1,4,7,10-tetrakis(methylenephosphonic acid) (DOT... | 7 | 7"
+              }
+            ]
+          },
+          {
+            "claim_index": 24,
+            "canonical_ids": [
+              "ligand_7422"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7422 | 1,4,7-Tris(3-hydroxy-6-methyl-2-pyridylmethyl)-1,4,7-triazacyclononane | 7 | 7",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7422 | 1,4,7-Tris(3-hydroxy-6-methyl-2-pyridylmethyl)-1,4,7-triazacyclononane | 7 | 7"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "| Summary | Value |\n|---|---:|\n| Total ligands with >6 pKa steps | 33 |\n| Maximum found | 11 |",
+        "claims": [
+          {
+            "start": 31,
+            "end": 71,
+            "text": "| Total ligands with >6 pKa steps | 33 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 72,
+            "end": 94,
+            "text": "| Maximum found | 11 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "execute_srd46_sql - 33 row(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "## execute_srd46_sql - 33 row(s)"
+              },
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "HAVING COUNT(DISTINCT CASE WHEN p.pKa_type IS NULL OR LOWER(p.pKa_type) NOT LIKE '%micro%' THEN COALESCE(p.bracket_from_state, '') || '->' || COALESCE(p.bracket_to_state, '') END) > 6"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_7541",
+              "ligand_7540"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_7541 | 1,4,7,10,13,16,19,22,25,28,31,34-Dodecaazacyclohexatriacontane ([36]aneN12) | 11 | 11",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "| ligand_id | ligand_name_SRD | distinct_pka_steps | total_pka_records |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ligand_7541 | 1,4,7,10,13,16,19,22,25,28,31,34-Dodecaazacyclohexatriacontane ([36]aneN12) | 11 | 11"
+              },
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "ORDER BY distinct_pka_steps DESC, total_pka_records DESC, lc.ligand_name_SRD ASC"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "A clear chemistry pattern is that these are mostly **highly polybasic/polyacidic ligands**—large polyamines, aminopolycarboxylates, and phosphonates—so having many sequential protonation/deprotonation steps is expected. Well-known examples in the list include **DTPA, TTHA, DOTA-phosphonate derivatives, and phytic acid**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 33,
+            "text": "A clear chemistry pattern is that",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 34,
+            "end": 90,
+            "text": "these are mostly **highly polybasic/polyacidic ligands**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 91,
+            "end": 148,
+            "text": "large polyamines, aminopolycarboxylates, and phosphonates",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 149,
+            "end": 219,
+            "text": "so having many sequential protonation/deprotonation steps is expected.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 220,
+            "end": 259,
+            "text": "Well-known examples in the list include",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 260,
+            "end": 321,
+            "text": "**DTPA, TTHA, DOTA-phosphonate derivatives, and phytic acid**",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_6356",
+              "ligand_6366",
+              "ligand_9171",
+              "ligand_8403"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | 8 | 8 |",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "| ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | 8 | 8 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "| ligand_6366 | Triethylenetetranitrilohexaacetic acid (TTHA) | 8 | 8 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "| ligand_9171 | myo-Inositol-hexa(dihydrogenphosphate) (Phytic acid) | 8 | 8 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_7539",
+              "ligand_6366",
+              "ligand_8433",
+              "ligand_8403"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| ligand_7539 | ...Decaazacyclotriacontane ([30]aneN10) | 10 | 10 |",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "| ligand_7539 | 1,4,7,10,13,16,19,22,25,28-Decaazacyclotriacontane ([30]aneN10) | 10 | 10 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "| ligand_6366 | Triethylenetetranitrilohexaacetic acid (TTHA) | 8 | 8 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "| ligand_8433 | Diethylenetrinitrilopentakis(methylenephosphonic acid) (DTPP) | 8 | 8 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_7541",
+              "ligand_6356"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "| ligand_7541 | ...Dodecaazacyclohexatriacontane ([36]aneN12) | 11 | 11 |",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "| ligand_7541 | 1,4,7,10,13,16,19,22,25,28,31,34-Dodecaazacyclohexatriacontane ([36]aneN12) | 11 | 11 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "| ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | 8 | 8 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_6356",
+              "ligand_6366",
+              "ligand_8403",
+              "ligand_9171"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| ligand_9171 | myo-Inositol-hexa(dihydrogenphosphate) (Phytic acid) | 8 | 8 |",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "| ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | 8 | 8 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "| ligand_6366 | Triethylenetetranitrilohexaacetic acid (TTHA) | 8 | 8 |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "| ligand_8403 | 1,4,7,10-Tetraazacyclododecane-1,4,7,10-tetrakis(methylenephosphonic acid) (DOT... | 7 | 7 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "If you want, I can do one more pass and return the **full 33-ligand table** instead of the truncated tool output shown above.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 50,
+            "text": "If you want, I can do one more pass and return the",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 51,
+            "end": 75,
+            "text": "**full 33-ligand table**",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 76,
+            "end": 90,
+            "text": "instead of the",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 91,
+            "end": 112,
+            "text": "truncated tool output",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "execute_srd46_sql - 33 row(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "## execute_srd46_sql - 33 row(s)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "... 8 more row(s) omitted",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "... 8 more row(s) omitted"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "*Source: NIST SRD-46*",
+        "claims": [
+          {
+            "start": 0,
+            "end": 1,
+            "text": "*",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 1,
+            "end": 20,
+            "text": "Source: NIST SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "### Step 9: `execute_srd46_sql`",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "execute_srd46_sql",
+                "snippet": "### Step 9: `execute_srd46_sql`"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

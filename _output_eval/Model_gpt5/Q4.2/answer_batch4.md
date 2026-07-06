@@ -1,0 +1,23 @@
+Hypothesis: Hg²⁺ shows a pronounced preference for sulfur-donor ligands (thiolates) over nitrogen- and oxygen-donor ligands under comparable aqueous conditions.
+
+Evidence (stepwise 1:1 formation, β1 = K1, ~25 °C, low ionic strength):
+
+| Donor class | Ligand (ID) | Reaction (β_def) | log K1 | T (°C) | I (M) | vlm_id |
+|---|---|---|---:|---:|---:|---|
+| S (thiolate) | Glutathione, GSH (ligand_6592) | [M] + [L] ⇌ [ML] (beta_def_812) | 26.0 | 25 | 0.1 | vlm_116684 |
+| S (thiolate) | Cysteine (ligand_5856) | [M] + [L] ⇌ [ML] (beta_def_812) | 14.4 | 25 | 0.1 | vlm_97477 |
+| N (amine, chelating) | Ethylenediamine, en (ligand_7029) | [M] + [L] ⇌ [ML] (beta_def_812) | 14.3 | 25 | 0.1 | vlm_122573 |
+| O (oxide) | Hydroxide (ligand_10076) | [M] + [L] ⇌ [ML] (beta_def_812) | 10.6 | 25 | 0.0 | vlm_170988 |
+
+Interpretation:
+- The very large K1 for Hg²⁺–glutathione (log K ≈ 26) and the high value for Hg²⁺–cysteine (log K ≈ 14.4) indicate exceptionally strong Hg–S bonding. These thiolate donors outperform representative N‑donor (ethylenediamine, log K ≈ 14.3) and O‑donor (hydroxide, log K ≈ 10.6) ligands under similar conditions.
+- Although ethylenediamine binds Hg²⁺ strongly (chelate effect), thiolates—especially biological thiols like glutathione—are typically stronger, consistent with HSAB expectations (Hg²⁺ is a soft Lewis acid preferring soft S donors).
+- Practically, this strong Hg–S affinity underlies the high sequestration of Hg²⁺ by protein cysteine residues and the efficacy of thiol-based chelators; O‑donors are generally weaker competitors at comparable pH/ionic strength.
+
+Notes and scope:
+- All values above are 1:1 (β1) to keep comparisons fair across donor classes.
+- We excluded halides and cyanide to focus on S/N/O donors. Some N‑donors (e.g., ammonia, pyridine/imidazole) did not return β1 entries within the strict filter (25 ± ~5 °C and I ≤ 0.2 M) in this pass; ethylenediamine is shown as a representative N‑donor.
+
+Source: NIST Standard Reference Database 46 (SRD‑46), vlm IDs as listed.
+
+---

@@ -1,0 +1,669 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q2.1.1\\Q2.1.1_result_batch5.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Fe³⁺ forms the more stable 1:1 complex with **EDTA** than with **NTA** in SRD-46.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 70,
+            "text": "Fe³⁺ forms the more stable 1:1 complex with **EDTA** than with **NTA**",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 71,
+            "end": 80,
+            "text": "in SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6277",
+              "ligand_6165",
+              "beta_def_812",
+              "vlm_108640",
+              "vlm_105554"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "EDTA: vlm_108640 logK 23.8 at 25 °C, I=1; NTA: vlm_105554 logK 14.78 at 25 °C, I=1; equation: [M] + [L] <=> [ML]",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| vlm_108640 | ref_eq_map_5029 | beta_def_812 | logK | 23.8 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.52, L, +inf) |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| vlm_105554 | ref_eq_map_3755 | beta_def_812 | logK | 14.78 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.46, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_108639",
+              "vlm_105553"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Per task rules, tool outputs in this run are from NIST SRD-46; e.g., search_stability rows shown here are sourced from SRD-46.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "search_stability — 4 row(s) … Fe^[3+] + Ethylenedinitrilotetraacetic acid (EDTA) … vlm_108639 … logK 25.1 … 25 … 0.1"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "search_stability — 4 row(s) … Fe^[3+] + Nitrilotriacetic acid (NTA) … vlm_105553 … logK 15.9 … 25 … 0.1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Ligand | Ligand ID | log K for Fe³⁺ + L ⇌ FeL | T (°C) | I (M) | Notes |\n|---|---:|---:|---:|---:|---|\n| EDTA | ligand_6277 | 25.1 | 25 | 0.1 | `[ML]/[M][L]` |\n| NTA | ligand_6165 | 15.9 | 25 | 0.1 | `[ML]/[M][L]` |",
+        "claims": [
+          {
+            "start": 105,
+            "end": 161,
+            "text": "| EDTA | ligand_6277 | 25.1 | 25 | 0.1 | `[ML]/[M][L]` |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 162,
+            "end": 217,
+            "text": "| NTA | ligand_6165 | 15.9 | 25 | 0.1 | `[ML]/[M][L]` |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6277",
+              "beta_def_812",
+              "vlm_108639"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_108639 | ... | beta_def_812 | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| vlm_108639 | ref_eq_map_5028 | beta_def_812 | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 | ..."
+              },
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "| beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aq), [M](aq), [L](aq) | 4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6165",
+              "beta_def_812",
+              "vlm_105553"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_105553 | ... | beta_def_812 | logK | 15.9 | 25 | 0.1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| vlm_105553 | ref_eq_map_3754 | beta_def_812 | logK | 15.9 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | NTA and derivatives | 534 | ..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "For completeness, SRD-46 also lists values at **I = 1.0 M**:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 17,
+            "text": "For completeness,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 18,
+            "end": 60,
+            "text": "SRD-46 also lists values at **I = 1.0 M**:",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_108640",
+              "vlm_105554"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_108640 | ref_eq_map_5029 | beta_def_812 | logK | 23.8 | 25 | 1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| vlm_108640 | ref_eq_map_5029 | beta_def_812 | logK | 23.8 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.52, L, +inf) |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| vlm_105554 | ref_eq_map_3755 | beta_def_812 | logK | 14.78 | 25 | 1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.46, L, +inf) |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "| Ligand | log K | T (°C) | I (M) |\n|---|---:|---:|---:|\n| EDTA | 23.8 | 25 | 1.0 |\n| NTA | 14.78 | 25 | 1.0 |",
+        "claims": [
+          {
+            "start": 57,
+            "end": 83,
+            "text": "| EDTA | 23.8 | 25 | 1.0 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 84,
+            "end": 110,
+            "text": "| NTA | 14.78 | 25 | 1.0 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6277",
+              "beta_def_812",
+              "vlm_108640"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_108640 | ref_eq_map_5029 | beta_def_812 | logK | 23.8 | 25 | 1 | `[M] + [L] <=> [ML]` |",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Ethylenedinitrilotetraacetic acid (EDTA) — 4 measurement(s)"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| vlm_108640 | ref_eq_map_5029 | beta_def_812 | logK | 23.8 | 25 | 1 | `[M] + [L] <=> [ML]` |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6165",
+              "beta_def_812",
+              "vlm_105554"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_105554 | ref_eq_map_3755 | beta_def_812 | logK | 14.78 | 25 | 1 | `[M] + [L] <=> [ML]` |",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "`Fe^[3+]` + Nitrilotriacetic acid (NTA) — 4 measurement(s)"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| vlm_105554 | ref_eq_map_3755 | beta_def_812 | logK | 14.78 | 25 | 1 | `[M] + [L] <=> [ML]` |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "So, side by side at matched conditions (**25 °C, 0.1 M**), **EDTA binds Fe³⁺ much more strongly than NTA**. The difference is about **9.2 log units**, meaning the Fe³⁺–EDTA complex is enormously more stable under those conditions.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 40,
+            "text": "So, side by side at matched conditions (",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 42,
+            "end": 47,
+            "text": "25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 49,
+            "end": 54,
+            "text": "0.1 M",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 61,
+            "end": 104,
+            "text": "EDTA binds Fe³⁺ much more strongly than NTA",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 108,
+            "end": 131,
+            "text": "The difference is about",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 134,
+            "end": 147,
+            "text": "9.2 log units",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 151,
+            "end": 158,
+            "text": "meaning",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 159,
+            "end": 229,
+            "text": "the Fe³⁺–EDTA complex is enormously more stable under those conditions",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_108639",
+              "vlm_105553"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_108639 logK 25.1 T°C 25 I(M) 0.1; vlm_105553 logK 15.9 T°C 25 I(M) 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| vlm_108639 | ... | beta_def_812 | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| vlm_105553 | ... | beta_def_812 | logK | 15.9 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_108639",
+              "vlm_105553"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "I(M) 0.1 appears for both rows at 25 °C: vlm_108639 and vlm_105553",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| vlm_108639 | ... | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| vlm_105553 | ... | logK | 15.9 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_6277",
+              "ligand_6165",
+              "vlm_108639",
+              "vlm_105553"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "EDTA: logK 25.1 (25 °C, I 0.1) vs NTA: logK 15.9 (25 °C, I 0.1)",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + EDTA: | vlm_108639 | ... | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + NTA: | vlm_105553 | ... | logK | 15.9 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "vlm_108639",
+              "vlm_105553"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Values used for difference: 25.1 (EDTA) and 15.9 (NTA) at 25 °C, I 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "| vlm_108639 | ... | logK | 25.1 | 25 | 0.1 |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "| vlm_105553 | ... | logK | 15.9 | 25 | 0.1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "vlm_108639",
+              "vlm_105553"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "EDTA logK 25.1 vs NTA logK 15.9 at 25 °C, I 0.1; a ~9 log unit gap implies much greater stability.",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + EDTA: | vlm_108639 | ... | logK | 25.1 | 25 | 0.1 |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + NTA: | vlm_105553 | ... | logK | 15.9 | 25 | 0.1 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "*Source: NIST SRD-46, Fe³⁺ stability data for `[ML]/[M][L]` with EDTA (ligand_6277) and NTA (ligand_6165).*",
+        "claims": [
+          {
+            "start": 1,
+            "end": 20,
+            "text": "Source: NIST SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 22,
+            "end": 59,
+            "text": "Fe³⁺ stability data for `[ML]/[M][L]`",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 65,
+            "end": 83,
+            "text": "EDTA (ligand_6277)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 88,
+            "end": 105,
+            "text": "NTA (ligand_6165)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Provenance claim about SRD-46; the raw tool outputs do not include a field/string for the database name. Source is established by run context, not by a specific row.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_61",
+              "beta_def_812",
+              "vlm_108639",
+              "vlm_105553"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+] + Ethylenedinitrilotetraacetic acid (EDTA) — 4 measurement(s) ... | beta_def_812 | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Ethylenedinitrilotetraacetic acid (EDTA) — 4 measurement(s)\nmetal_id: metal_61 | ligand_id: ligand_6277\n| vlm_108639 | ... | beta_def_812 | logK | 25.1 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 12",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Nitrilotriacetic acid (NTA) — 4 measurement(s)\nmetal_id: metal_61 | ligand_id: ligand_6165\n| vlm_105553 | ... | beta_def_812 | logK | 15.9 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_6277"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 | `O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CC(=O)O` | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_6165"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6165 | Nitrilotriacetic acid (NTA) | H3L",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6165 | Nitrilotriacetic acid (NTA) | H3L | NTA and derivatives | 534 | `O=C(O)CN(CC(=O)O)CC(=O)O` | ..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

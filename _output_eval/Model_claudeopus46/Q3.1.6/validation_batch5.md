@@ -1,0 +1,19 @@
+# Q3.1.6 - Validation (batch 5)
+
+**13 of 47 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 1 | exact_value | \| 1 \| **EDTA** (Ethylenedinitrilotetraacetic acid) \| ligand_6277 \| ~15.5 \| 20–25 °C, I ≈ 0.1 M \| | ...-------\|-----------------\|------------\| \| 1 \| **EDTA** (Ethylenedinitrilotetraacetic acid) \| ligand_6277 \| ~15.5 \| 20–25 °C, I ≈ 0.1 M \| \| 2 \| **NTA** (Nitrilotriacetic acid) \|... |
+| 2 | 1 | exact_value | \| 2 \| **NTA** (Nitrilotriacetic acid) \| ligand_6165 \| ~10.4 \| 20–25 °C, I ≈ 0.1 M \| | ...nd_6277 \| ~15.5 \| 20–25 °C, I ≈ 0.1 M \| \| 2 \| **NTA** (Nitrilotriacetic acid) \| ligand_6165 \| ~10.4 \| 20–25 °C, I ≈ 0.1 M \| \| 3 \| **EDDA** (Ethylenediiminodiacetic... |
+| 3 | 1 | exact_value | \| 3 \| **EDDA** (Ethylenediiminodiacetic acid) \| ligand_5975 \| ~5.4 \| 20–25 °C, I ≈ 0.1 M \| | ...nd_6165 \| ~10.4 \| 20–25 °C, I ≈ 0.1 M \| \| 3 \| **EDDA** (Ethylenediiminodiacetic acid) \| ligand_5975 \| ~5.4 \| 20–25 °C, I ≈ 0.1 M \|... |
+| 4 | 2 | exact_value | \| 1 \| **Dipicolinic acid** (Pyridine-2,6-dicarboxylic acid) \| ligand_6774 \| ~7.0 \| 25 °C, I ≈ 0.5 M \| | ...-------\|-----------------\|------------\| \| 1 \| **Dipicolinic acid** (Pyridine-2,6-dicarboxylic acid) \| ligand_6774 \| ~7.0 \| 25 °C, I ≈ 0.5 M \| \| 2 \| **Oxydiacetic acid** (Diglycolic ... |
+| 5 | 2 | exact_value | \| 2 \| **Oxydiacetic acid** (Diglycolic acid) \| ligand_8974 \| ~3.5 \| 25 °C, I ≈ 0.1 M \| | ...ligand_6774 \| ~7.0 \| 25 °C, I ≈ 0.5 M \| \| 2 \| **Oxydiacetic acid** (Diglycolic acid) \| ligand_8974 \| ~3.5 \| 25 °C, I ≈ 0.1 M \| \| 3 \| **Malonic acid** \| ligand_8873 \| ... |
+| 6 | 2 | exact_value | \| 3 \| **Malonic acid** \| ligand_8873 \| ~3.2 \| 25 °C, I ≈ 0.1 M \| | ...ligand_8974 \| ~3.5 \| 25 °C, I ≈ 0.1 M \| \| 3 \| **Malonic acid** \| ligand_8873 \| ~3.2 \| 25 °C, I ≈ 0.1 M \| \| 4 \| **Malic acid** (L-Hydroxysuccinic... |
+| 7 | 2 | exact_value | \| 4 \| **Malic acid** (L-Hydroxysuccinic acid) \| ligand_8953 \| ~2.8 \| 25 °C, I ≈ 0.1 M \| | ...ligand_8873 \| ~3.2 \| 25 °C, I ≈ 0.1 M \| \| 4 \| **Malic acid** (L-Hydroxysuccinic acid) \| ligand_8953 \| ~2.8 \| 25 °C, I ≈ 0.1 M \| \| 5 \| **Tartaric acid** \| ligand_8955 \|... |
+| 8 | 2 | exact_value | \| 5 \| **Tartaric acid** \| ligand_8955 \| ~2.7 \| 25 °C, I ≈ 0.1 M \| | ...ligand_8953 \| ~2.8 \| 25 °C, I ≈ 0.1 M \| \| 5 \| **Tartaric acid** \| ligand_8955 \| ~2.7 \| 25 °C, I ≈ 0.1 M \| \| 6 \| **Glycolic acid** \| ligand_8640 \|... |
+| 9 | 2 | exact_value | \| 6 \| **Glycolic acid** \| ligand_8640 \| ~2.3 \| 25 °C, I ≈ 0.1 M \| | ...ligand_8955 \| ~2.7 \| 25 °C, I ≈ 0.1 M \| \| 6 \| **Glycolic acid** \| ligand_8640 \| ~2.3 \| 25 °C, I ≈ 0.1 M \| \| 7 \| **Lactic acid** \| ligand_8641 \| ~... |
+| 10 | 2 | exact_value | \| 7 \| **Lactic acid** \| ligand_8641 \| ~2.2 \| 25 °C, I ≈ 0.1 M \| | ...ligand_8640 \| ~2.3 \| 25 °C, I ≈ 0.1 M \| \| 7 \| **Lactic acid** \| ligand_8641 \| ~2.2 \| 25 °C, I ≈ 0.1 M \| \| 8 \| **Acetic acid** \| ligand_8465 \| ~... |
+| 11 | 2 | exact_value | \| 8 \| **Acetic acid** \| ligand_8465 \| ~1.8 \| 25 °C, I ≈ 0.1 M \| | ...ligand_8641 \| ~2.2 \| 25 °C, I ≈ 0.1 M \| \| 8 \| **Acetic acid** \| ligand_8465 \| ~1.8 \| 25 °C, I ≈ 0.1 M \|... |
+| 12 | 3 | exact_value | EDTA's log K₁ ≈ 15.5 | ...ights  1. **Chelate effect dominates:** EDTA's log K₁ ≈ 15.5 dwarfs simple carboxylates because it w... |
+| 13 | 3 | exact_value | malonic acid (log K₁ ≈ 3.2) | ...monocarboxylates:** Among simple acids, malonic acid (log K₁ ≈ 3.2) significantly outperforms acetic acid (... |

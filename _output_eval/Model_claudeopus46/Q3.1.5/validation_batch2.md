@@ -1,0 +1,20 @@
+# Q3.1.5 - Validation (batch 2)
+
+**14 of 64 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 1 | existence_absence | there is essentially **no ligand** in the NIST SRD-46 database where log β₁(Ca²⁺) > log β₁(Cu²⁺) for solution-phase 1:1 complexes. | ...n Ca²⁺ with the same ligand. This means there is essentially **no ligand** in the NIST SRD-46 database where log β₁(Ca²⁺) > log β₁(Cu²⁺) for solution-phase 1:1 complexes. However, practical Ca²⁺ masking exploit... |
+| 2 | 2 | counting | 644 ligands | ...SRD-46 catalog data for Ca²⁺ (metal_25, 644 ligands) and Cu²⁺ (metal_41, 1951 ligands), her... |
+| 3 | 2 | counting | 1951 ligands | ...al_25, 644 ligands) and Cu²⁺ (metal_41, 1951 ligands), here are the best approaches:... |
+| 4 | 3 | exact_value | \| **Fluoride** (HF) \| ligand_10162 \| Forms **CaF₂** (very insoluble) \| CuF₂ is moderately soluble; weak solution complexes \| CaF₂ precipitation removes Ca²⁺; Cu²⁺ stays in solution \| | ...---\|-------------------\|--------------\| \| **Fluoride** (HF) \| ligand_10162 \| Forms **CaF₂** (very insoluble) \| CuF₂ is moderately soluble; weak solution complexes \| CaF₂ precipitation removes Ca²⁺; Cu²⁺ stays in solution \| \| **Sulfate** (H₂SO₄) \| ligand_10148 \| ... |
+| 5 | 3 | exact_value | \| **Oxalate** (oxalic acid) \| ligand_8872 \| Forms **CaC₂O₄·H₂O**; SRD-46 lists solid hydrates (beta_def_307, 327) \| Cu²⁺-oxalate solution complexes exist but are moderate \| Calcium oxalate is extremely insoluble \| | ... Gypsum precipitation at high [SO₄²⁻] \| \| **Oxalate** (oxalic acid) \| ligand_8872 \| Forms **CaC₂O₄·H₂O**; SRD-46 lists solid hydrates (beta_def_307, 327) \| Cu²⁺-oxalate solution complexes exist but are moderate \| Calcium oxalate is extremely insoluble \| \| **Carbonate** (H₂CO₃) \| ligand_10096 ... |
+| 6 | 5 | exact_value | \| **EDTA** \| ligand_6277 \| ~8 log units (Cu²⁺ ≫ Ca²⁺) \| | ...\|-------------------------------------\| \| **EDTA** \| ligand_6277 \| ~8 log units (Cu²⁺ ≫ Ca²⁺) \| \| **DTPA** \| ligand_6356 \| ~10 log unit... |
+| 7 | 5 | exact_value | \| **DTPA** \| ligand_6356 \| ~10 log units \| | ...and_6277 \| ~8 log units (Cu²⁺ ≫ Ca²⁺) \| \| **DTPA** \| ligand_6356 \| ~10 log units \| \| **NTA** \| ligand_6165 \| ~6 log units ... |
+| 8 | 5 | exact_value | \| **NTA** \| ligand_6165 \| ~6 log units \| | ...*DTPA** \| ligand_6356 \| ~10 log units \| \| **NTA** \| ligand_6165 \| ~6 log units \| \| **Citric acid** \| ligand_9058 \| ~3–4 ... |
+| 9 | 5 | exact_value | \| **Citric acid** \| ligand_9058 \| ~3–4 log units \| | ... **NTA** \| ligand_6165 \| ~6 log units \| \| **Citric acid** \| ligand_9058 \| ~3–4 log units \|  These aminopolycarboxylates contain **... |
+| 10 | 6 | comparison | Best choice: Fluoride or oxalate precipitation | ...erference in trace Cu²⁺ analysis:  1. **Best choice: Fluoride or oxalate precipitation** — add excess NaF or Na₂C₂O₄ to precip... |
+| 11 | 6 | domain_reasoning | Cu²⁺ remains in solution. | ...te Ca²⁺ as CaF₂ or CaC₂O₄, then filter. Cu²⁺ remains in solution.  2. **If precipitation is undesirable: ... |
+| 12 | 6 | comparison | is the best solution-phase option. | ...Gluconic acid** — this polyhydroxy acid is the best solution-phase option. Its multiple hard O-donor hydroxyl grou... |
+| 13 | 6 | property_attribution | Gluconate is widely used in industrial formulations for exactly this reason. | ... N-donor sites that would attract Cu²⁺. Gluconate is widely used in industrial formulations for exactly this reason.  3. **Phosphate** can also work but ris... |
+| 14 | 7 | trend | Ligands composed **exclusively of oxygen donors** — especially anionic ones like fluoride, sulfate, and polyhydroxy acids — minimize the Cu²⁺/Ca²⁺ selectivity gap | ...zation from N-donors and softer donors. Ligands composed **exclusively of oxygen donors** — especially anionic ones like fluoride, sulfate, and polyhydroxy acids — minimize the Cu²⁺/Ca²⁺ selectivity gap and are therefore the best candidates f... |

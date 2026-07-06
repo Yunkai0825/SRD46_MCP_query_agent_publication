@@ -1,0 +1,1764 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q5.1.3\\Q5.1.3_result_batch1.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Using SRD-46, copper and iron differ strongly both in **data coverage** and in **binding behavior**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 12,
+            "text": "Using SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 14,
+            "end": 100,
+            "text": "copper and iron differ strongly both in **data coverage** and in **binding behavior**.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "## execute_srd46_sql - 5 row(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT metal_id, metal_name_SRD, symbol_pure, charge, charge_str, primary_metal, is_simple_ion FROM metal_card WHERE symbol_pure IN ('Fe','Cu') OR primary_metal IN ('Fe','Cu') ORDER BY symbol_pure, charge;"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41",
+              "metal_42",
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Partners: 1951 ligand(s), 8963 measurement(s) total",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "inspect_card",
+                "snippet": "## inspect_card — Metal | metal_41\n\nName: Cu^[2+]\n...\nPartners: 1951 ligand(s), 8963 measurement(s) total"
+              },
+              {
+                "step": "Step 10",
+                "tool": "inspect_card",
+                "snippet": "## inspect_card — Metal | metal_61\n\nName: Fe^[3+]\n...\nPartners: 406 ligand(s), 1473 measurement(s) total"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "### `Cu^[2+]` + Chloride ion — 19 measurement(s)\n... | `[M] + [L] <=> [ML]` | logK | 9 | 9 diff ref_eq_map | -0.2~0.27 | 25 | 0~6 | beta_def_812 | *** | [L] |  |\n---\n### `Fe^[3+]` + Chloride ion — 13 measurement(s)\n... | `[M] + [L] <=> [ML]` | logK | 7 | 7 diff ref_eq_map | 0.63~1.48 | 25 | 0~4 | be"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "## Coverage in SRD-46\n\n| Metal ion | SRD-46 metal ID | Ligand partners | Measurements |\n|---|---:|---:|---:|\n| Cu²⁺ | metal_41 | ~1951 | ~8963 |\n| Cu⁺ | metal_42 | 117 | 285 |\n| Fe³⁺ | metal_61 | 406 | 1473 |\n| Fe²⁺ | metal_62 | 217 | 667 |\n\nCu²⁺ is by far the most broadly represented of these four ions in SRD-46; Cu⁺ is the sparsest. Fe³⁺ has broader coverage than Fe²⁺.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 21,
+            "text": "## Coverage in SRD-46",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 109,
+            "end": 144,
+            "text": "| Cu²⁺ | metal_41 | ~1951 | ~8963 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 145,
+            "end": 175,
+            "text": "| Cu⁺ | metal_42 | 117 | 285 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 176,
+            "end": 208,
+            "text": "| Fe³⁺ | metal_61 | 406 | 1473 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 209,
+            "end": 240,
+            "text": "| Fe²⁺ | metal_62 | 217 | 667 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 242,
+            "end": 314,
+            "text": "Cu²⁺ is by far the most broadly represented of these four ions in SRD-46",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 316,
+            "end": 336,
+            "text": "Cu⁺ is the sparsest.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 337,
+            "end": 373,
+            "text": "Fe³⁺ has broader coverage than Fe²⁺.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Partners: 1951 ligand(s), 8963 measurement(s) total",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "inspect_card",
+                "snippet": "## inspect_card — Metal | metal_41\n**Name:** Cu^[2+]\n...\n**Partners:** 1951 ligand(s), 8963 measurement(s) total"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "metal_41 | Cu^[2+] | Cu | 2 | 2+ | Cu | 1"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_42"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Partners: 117 ligand(s), 285 measurement(s) total",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "inspect_card",
+                "snippet": "## inspect_card — Metal | metal_42\n**Name:** Cu^[+]\n...\n**Partners:** 117 ligand(s), 285 measurement(s) total"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "metal_42 | Cu^[+] | Cu | 1 | + | Cu | 1"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Partners: 406 ligand(s), 1473 measurement(s) total",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "inspect_card",
+                "snippet": "## inspect_card — Metal | metal_61\n**Name:** Fe^[3+]\n...\n**Partners:** 406 ligand(s), 1473 measurement(s) total"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "metal_61 | Fe^[3+] | Fe | 3 | 3+ | Fe | 1"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_62"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Partners: 217 ligand(s), 667 measurement(s) total",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "inspect_card",
+                "snippet": "## inspect_card — Metal | metal_62\n**Name:** Fe^[2+]\n...\n**Partners:** 217 ligand(s), 667 measurement(s) total"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "metal_62 | Fe^[2+] | Fe | 2 | 2+ | Fe | 1"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_41",
+              "metal_42",
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Partners: 1951 ligand(s), 8963 measurement(s) total",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "inspect_card",
+                "snippet": "## inspect_card — Metal | metal_41\n**Name:** Cu^[2+]\n...\n**Partners:** 1951 ligand(s), 8963 measurement(s) total"
+              },
+              {
+                "step": "Step 10",
+                "tool": "inspect_card",
+                "snippet": "## inspect_card — Metal | metal_61\n**Name:** Fe^[3+]\n...\n**Partners:** 406 ligand(s), 1473 measurement(s) total"
+              },
+              {
+                "step": "Step 12",
+                "tool": "inspect_card",
+                "snippet": "## inspect_card — Metal | metal_42\n**Name:** Cu^[+]\n...\n**Partners:** 117 ligand(s), 285 measurement(s) total"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_41",
+              "metal_42",
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Partners: 117 ligand(s), 285 measurement(s) total",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "inspect_card",
+                "snippet": "## inspect_card — Metal | metal_42\n**Name:** Cu^[+]\n...\n**Partners:** 117 ligand(s), 285 measurement(s) total"
+              },
+              {
+                "step": "Step 11",
+                "tool": "inspect_card",
+                "snippet": "## inspect_card — Metal | metal_62\n**Name:** Fe^[2+]\n...\n**Partners:** 217 ligand(s), 667 measurement(s) total"
+              },
+              {
+                "step": "Step 10",
+                "tool": "inspect_card",
+                "snippet": "## inspect_card — Metal | metal_61\n**Name:** Fe^[3+]\n...\n**Partners:** 406 ligand(s), 1473 measurement(s) total"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Partners: 406 ligand(s), 1473 measurement(s) total",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "inspect_card",
+                "snippet": "## inspect_card — Metal | metal_61\n**Name:** Fe^[3+]\n...\n**Partners:** 406 ligand(s), 1473 measurement(s) total"
+              },
+              {
+                "step": "Step 11",
+                "tool": "inspect_card",
+                "snippet": "## inspect_card — Metal | metal_62\n**Name:** Fe^[2+]\n...\n**Partners:** 217 ligand(s), 667 measurement(s) total"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "## Shared-ligand comparison at 25 °C\n\nI found overlapping 25 °C systems for **ammonia, glycine, citrate, and chloride**. Below I compare the available **logK / logβ ranges** reported in SRD-46.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 36,
+            "text": "## Shared-ligand comparison at 25 °C",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 38,
+            "end": 71,
+            "text": "I found overlapping 25 °C systems",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 76,
+            "end": 119,
+            "text": "**ammonia, glycine, citrate, and chloride**",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 121,
+            "end": 136,
+            "text": "Below I compare",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 137,
+            "end": 173,
+            "text": "the available **logK / logβ ranges**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 174,
+            "end": 192,
+            "text": "reported in SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_62",
+              "metal_41",
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_62 | Fe^[2+] | ligand_10103 | Ammonia | L | N | 24 | 4 | 25 | 0~6\nmetal_41 | Cu^[2+] | ligand_10103 | Ammonia | L | N | 17 | 4 | 25 | 0~3",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_62 | Fe^[2+] | ligand_10103 | Ammonia | L | N | 24 | 4 | 25 | 0~6 | *** | 6 |"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "| metal_41 | Cu^[2+] | ligand_10103 | Ammonia | L | N | 17 | 4 | 25 | 0~3 | *** | 5 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_10103",
+              "ligand_5760",
+              "ligand_9058",
+              "ligand_10163"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| ligand_10163 | Chloride ion | 14 |\n| ligand_10103 | Ammonia | 6 |",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "inspect_card",
+                "snippet": "| ligand_10163 | Chloride ion | 14 |\n| ligand_10103 | Ammonia | 6 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "inspect_card",
+                "snippet": "| ligand_5760 | Aminoacetic acid (Glycine) | 14 |\n| ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid) | 11 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_10163",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "[M] + [L] <=> [ML] | logK | 9 | 9 diff ref_eq_map | -0.2~0.27 | 25 | 0~6 | beta_def_812",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L] <=> [ML]` | logK | 9 | 9 diff ref_eq_map | -0.2~0.27 | 25 | 0~6 | beta_def_812 | *** | [L] |  |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "### `Cu^[2+]` + Chloride ion — 19 measurement(s)\nmetal_id: metal_41 | ligand_id: ligand_10163"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "## execute_srd46_sql - 5 row(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "\"sql_query\": \"SELECT metal_id, metal_name_SRD, symbol_pure, charge, charge_str, primary_metal, is_simple_ion FROM metal_card ...\""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "### Ammonia\n\n| Metal ion | Equation / summary | logK range | Ionic strength range (M) | Notes |\n|---|---|---:|---:|---|\n| Fe²⁺ | ammonia systems present | reported, values not expanded in summary | 0–6 | 24 measurements, 4 β definitions |\n| Cu²⁺ | ammonia systems present | reported, values not expanded in summary | 0–3 | 17 measurements, 4 β definitions |\n| Cu⁺ | ammonia systems present | reported, values not expanded in summary | 0.5–2 | 2 measurements, 1 β definition |\n| Fe³⁺ | no ammonia result in retrieved set | — | — | not in the retrieved 25 °C overlap set |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 11,
+            "text": "### Ammonia",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 120,
+            "end": 238,
+            "text": "| Fe²⁺ | ammonia systems present | reported, values not expanded in summary | 0–6 | 24 measurements, 4 β definitions |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 239,
+            "end": 357,
+            "text": "| Cu²⁺ | ammonia systems present | reported, values not expanded in summary | 0–3 | 17 measurements, 4 β definitions |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 358,
+            "end": 475,
+            "text": "| Cu⁺ | ammonia systems present | reported, values not expanded in summary | 0.5–2 | 2 measurements, 1 β definition |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 476,
+            "end": 570,
+            "text": "| Fe³⁺ | no ammonia result in retrieved set | — | — | not in the retrieved 25 °C overlap set |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_62",
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_62 | Fe^[2+] | ligand_10103 | Ammonia | vlm_counts 24 | beta_counts 4 | 25 | I(M)_range 0~6",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_62 | Fe^[2+] | ligand_10103 | Ammonia | L | N | 24 | 4 | 25 | 0~6 | *** | 6"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_41 | Cu^[2+] | ligand_10103 | Ammonia | vlm_counts 17 | beta_counts 4 | 25 | I(M)_range 0~3",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_41 | Cu^[2+] | ligand_10103 | Ammonia | L | N | 17 | 4 | 25 | 0~3 | *** | 5"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_42",
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_42 | Cu^[+] | ligand_10103 | Ammonia | vlm_counts 2 | beta_counts 1 | 25 | I(M)_range 0.5~2",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_42 | Cu^[+] | ligand_10103 | Ammonia | L | N | 2 | 1 | 25 | 0.5~2 | *** | 2"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Fe^[3+] (metal_61) appears with ligand_5760 and ligand_9058; no Fe^[3+]+Ammonia row listed in Step 13 at 25 °C.",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_61 | Fe^[3+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 6 | 3 | 25 | 0.5~3 | *** | 3"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_61 | Fe^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 5 | 3 | 25 | 0.1~1 | *** | 3"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "logK — 10 metal-ligand pair(s) … includes Fe^[2+]+Ammonia, Cu^[2+]+Ammonia, Cu^[+]+Ammonia; no Fe^[3+]+Ammonia entry."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "### Glycine\n\n| Metal ion | Presence at 25 °C | logK data in retrieved set | Ionic strength range (M) |\n|---|---|---|---:|\n| Cu²⁺ | yes | yes | 0–2.5 |\n| Fe²⁺ | yes | yes | 0–3 |\n| Fe³⁺ | yes | yes | 0.5–3 |\n| Cu⁺ | yes | yes | 0.1 |\n\nThe summary confirms all four ions have glycine data at 25 °C, but the returned view did not expand the individual logK values.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 11,
+            "text": "### Glycine",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 122,
+            "end": 150,
+            "text": "| Cu²⁺ | yes | yes | 0–2.5 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 151,
+            "end": 177,
+            "text": "| Fe²⁺ | yes | yes | 0–3 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 178,
+            "end": 206,
+            "text": "| Fe³⁺ | yes | yes | 0.5–3 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 207,
+            "end": 232,
+            "text": "| Cu⁺ | yes | yes | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 234,
+            "end": 254,
+            "text": "The summary confirms",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 255,
+            "end": 268,
+            "text": "all four ions",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 269,
+            "end": 295,
+            "text": "have glycine data at 25 °C",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 295,
+            "end": 300,
+            "text": ", but",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 301,
+            "end": 360,
+            "text": "the returned view did not expand the individual logK values",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_5760"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_41 | Cu^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 12 | 2 | 25 | 0~2.5 | *** | 6",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_41 | Cu^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 12 | 2 | 25 | 0~2.5 | *** | 6"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_62",
+              "ligand_5760"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_62 | Fe^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 7 | 3 | 25 | 0~3 | *** | 4",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_62 | Fe^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 7 | 3 | 25 | 0~3 | *** | 4"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_5760"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_61 | Fe^[3+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 6 | 3 | 25 | 0.5~3 | *** | 3",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_61 | Fe^[3+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 6 | 3 | 25 | 0.5~3 | *** | 3"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_42",
+              "ligand_5760"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_42 | Cu^[+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 1 | 1 | 25 | 0.1 | *** | 1",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_42 | Cu^[+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 1 | 1 | 25 | 0.1 | *** | 1"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_41",
+              "metal_62",
+              "metal_61",
+              "metal_42",
+              "ligand_5760"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Glycine (ligand_5760) appears with Cu2+, Fe2+, Fe3+, and Cu+ at 25 °C in the logK list (see tool snippets).",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_41 | Cu^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | ... | 25 | 0~2.5 | ..."
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_62 | Fe^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | ... | 25 | 0~3 | ..."
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_61 | Fe^[3+] | ligand_5760 | Aminoacetic acid (Glycine) | ... | 25 | 0.5~3 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_41",
+              "metal_62",
+              "metal_61",
+              "metal_42",
+              "ligand_5760"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Rows at 25 °C exist for glycine with Cu2+, Fe2+, Fe3+, and Cu+ in the logK summary.",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_42 | Cu^[+] | ligand_5760 | Aminoacetic acid (Glycine) | ... | 25 | 0.1 | ..."
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_41 | Cu^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | ... | 25 | 0~2.5 | ..."
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_62 | Fe^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | ... | 25 | 0~3 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "| metal_id | metal_name | ligand_id | ligand_name | ... | vlm_counts | beta_counts | T°C_range | I(M)_range | ... | (no per-measurement logK values listed)",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "### logK — 10 metal-ligand pair(s)\n| metal_id | metal_name | ligand_id | ligand_name | ligand_HxL_def | ligand_SMILES | vlm_counts | beta_counts | T°C_range | I(M)_range | non_aqueous_phases | ref_eq_map_counts |"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_41 | Cu^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | HL | NCC(=O)O | 12 | 2 | 25 | 0~2.5 | *** | 6"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "### Citrate\n\n| Metal ion | Presence at 25 °C | logK data in retrieved set | Ionic strength range (M) |\n|---|---|---|---:|\n| Cu²⁺ | yes | yes | 0.1 |\n| Fe²⁺ | yes | yes | 0.1–3 |\n| Fe³⁺ | yes | yes | 0.1–1 |\n| Cu⁺ | no retrieved citrate result | — | — |\n\nAgain, the overlap is good for Cu²⁺ / Fe²⁺ / Fe³⁺, but Cu⁺ citrate did not appear in the retrieved 25 °C set.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 11,
+            "text": "### Citrate",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 122,
+            "end": 148,
+            "text": "| Cu²⁺ | yes | yes | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 149,
+            "end": 177,
+            "text": "| Fe²⁺ | yes | yes | 0.1–3 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 178,
+            "end": 206,
+            "text": "| Fe³⁺ | yes | yes | 0.1–1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 207,
+            "end": 252,
+            "text": "| Cu⁺ | no retrieved citrate result | — | — |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 254,
+            "end": 260,
+            "text": "Again,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 261,
+            "end": 303,
+            "text": "the overlap is good for Cu²⁺ / Fe²⁺ / Fe³⁺",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 305,
+            "end": 363,
+            "text": "but Cu⁺ citrate did not appear in the retrieved 25 °C set.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "### Chloride\n\nFor chloride, the summary included explicit values:\n\n| Metal ion | Reaction | logK range | T (°C) | Ionic strength range (M) |\n|---|---|---:|---:|---:|\n| Cu²⁺ | M + L ⇌ ML | -0.20 to 0.27 | 25 | 0–6 |\n| Cu⁺ | M + L ⇌ ML | 2.7 to 3.1 | 25 | 0–5 |\n| Cu⁺ | M + 2L ⇌ ML₂ | 5.42 to 6.06 | 20–25 | 0–5 |\n| Fe³⁺ | M + L ⇌ ML | 0.63 to 1.48 | 25 | 0–4 |\n| Fe³⁺ | M + 2L ⇌ ML₂ | 0.75 to 2.13 | 25 | 0–1 |\n| Fe²⁺ | M + L ⇌ ML | -0.2 | 25 | 0 |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 12,
+            "text": "### Chloride",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 14,
+            "end": 65,
+            "text": "For chloride, the summary included explicit values:",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 166,
+            "end": 214,
+            "text": "| Cu²⁺ | M + L ⇌ ML | -0.20 to 0.27 | 25 | 0–6 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 215,
+            "end": 259,
+            "text": "| Cu⁺ | M + L ⇌ ML | 2.7 to 3.1 | 25 | 0–5 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 260,
+            "end": 311,
+            "text": "| Cu⁺ | M + 2L ⇌ ML₂ | 5.42 to 6.06 | 20–25 | 0–5 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 312,
+            "end": 359,
+            "text": "| Fe³⁺ | M + L ⇌ ML | 0.63 to 1.48 | 25 | 0–4 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 360,
+            "end": 409,
+            "text": "| Fe³⁺ | M + 2L ⇌ ML₂ | 0.75 to 2.13 | 25 | 0–1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 410,
+            "end": 447,
+            "text": "| Fe²⁺ | M + L ⇌ ML | -0.2 | 25 | 0 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_10163"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Cu^[2+] + Chloride ion — … | `[M] + [L] <=> [ML]` | logK | … | -0.2~0.27 | 25 | 0~6 | …; Fe^[3+] + Chloride ion — … | 0.63~1.48 | 25 | 0~4 | …",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "### `Cu^[2+]` + Chloride ion — 19 measurement(s)\nmetal_id: metal_41 | ligand_id: ligand_10163\n| `[M] + [L] <=> [ML]` | logK | 9 | 9 diff ref_eq_map | -0.2~0.27 | 25 | 0~6 | beta_def_812 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "### `Fe^[3+]` + Chloride ion — 13 measurement(s)\nmetal_id: metal_61 | ligand_id: ligand_10163\n| `[M] + [L] <=> [ML]` | logK | 7 | 7 diff ref_eq_map | 0.63~1.48 | 25 | 0~4 | beta_def_812 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_10163",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| `[M] + [L] <=> [ML]` | logK | … | -0.2~0.27 | 25 | 0~6 | beta_def_812 |",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "### `Cu^[2+]` + Chloride ion — 19 measurement(s)\nmetal_id: metal_41 | ligand_id: ligand_10163\n| `[M] + [L] <=> [ML]` | logK | 9 | 9 diff ref_eq_map | -0.2~0.27 | 25 | 0~6 | beta_def_812 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_42",
+              "ligand_10163",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| `[M] + [L] <=> [ML]` | logK | … | 2.7~3.1 | 25 | 0~5 | beta_def_812 |",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "### `Cu^[+]` + Chloride ion — 14 measurement(s)\nmetal_id: metal_42 | ligand_id: ligand_10163\n| `[M] + [L] <=> [ML]` | logK | 2 | ref_eq_map_29750; ref_eq_map_29751 | 2.7~3.1 | 25 | 0~5 | beta_def_812 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_42",
+              "ligand_10163",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| `[M] + [L]^2 <=> [ML2]` | logK | … | 5.42~6.06 | 20~25 | 0~5 | beta_def_840 |",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "### `Cu^[+]` + Chloride ion — 14 measurement(s)\nmetal_id: metal_42 | ligand_id: ligand_10163\n| `[M] + [L]^2 <=> [ML2]` | logK | 4 | 4 diff ref_eq_map | 5.42~6.06 | 20~25 | 0~5 | beta_def_840 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_10163",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| `[M] + [L] <=> [ML]` | logK | … | 0.63~1.48 | 25 | 0~4 | beta_def_812 |",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "### `Fe^[3+]` + Chloride ion — 13 measurement(s)\nmetal_id: metal_61 | ligand_id: ligand_10163\n| `[M] + [L] <=> [ML]` | logK | 7 | 7 diff ref_eq_map | 0.63~1.48 | 25 | 0~4 | beta_def_812 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_61",
+              "ligand_10163",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| `[M] + [L]^2 <=> [ML2]` | logK | … | 0.75~2.13 | 25 | 0~1 | beta_def_840 |",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "### `Fe^[3+]` + Chloride ion — 13 measurement(s)\nmetal_id: metal_61 | ligand_id: ligand_10163\n| `[M] + [L]^2 <=> [ML2]` | logK | 2 | ref_eq_map_29736; ref_eq_map_29737 | 0.75~2.13 | 25 | 0~1 | beta_def_840 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_62",
+              "ligand_10163",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| `[M] + [L] <=> [ML]` | logK | 1 | … | -0.2 | 25 | 0 | beta_def_812 |",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "### `Fe^[2+]` + Chloride ion — 2 measurement(s)\nmetal_id: metal_62 | ligand_id: ligand_10163\n| `[M] + [L] <=> [ML]` | logK | 1 | ref_eq_map_29714 | -0.2 | 25 | 0 | beta_def_812 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 7,
+        "text": "## What this says chemically\n\n| Comparison | SRD-46-based interpretation |\n|---|---|\n| Cu²⁺ vs Fe²⁺ | Cu²⁺ has much broader complexation coverage and is heavily represented with N-donor ligands like histidine, ammonia, and imidazole. |\n| Fe³⁺ vs Fe²⁺ | Fe³⁺ generally shows stronger interaction with hard O-donor ligands and hydrolyzing environments; SRD-46 also shows fewer ligands than Cu²⁺ but more than Fe²⁺. |\n| Cu⁺ vs Cu²⁺ | Cu⁺ is much less represented overall and shows strong halide chemistry; chloride data are notably stronger for Cu⁺ than for Cu²⁺. |\n| Iron vs copper overall | Copper, especially Cu²⁺, has broader and denser coordination data in SRD-46, while iron splits more sharply by oxidation state: Fe³⁺ behaves quite differently from Fe²⁺. |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 28,
+            "text": "## What this says chemically",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 85,
+            "end": 235,
+            "text": "| Cu²⁺ vs Fe²⁺ | Cu²⁺ has much broader complexation coverage and is heavily represented with N-donor ligands like histidine, ammonia, and imidazole. |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 236,
+            "end": 414,
+            "text": "| Fe³⁺ vs Fe²⁺ | Fe³⁺ generally shows stronger interaction with hard O-donor ligands and hydrolyzing environments; SRD-46 also shows fewer ligands than Cu²⁺ but more than Fe²⁺. |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 415,
+            "end": 562,
+            "text": "| Cu⁺ vs Cu²⁺ | Cu⁺ is much less represented overall and shows strong halide chemistry; chloride data are notably stronger for Cu⁺ than for Cu²⁺. |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 563,
+            "end": 761,
+            "text": "| Iron vs copper overall | Copper, especially Cu²⁺, has broader and denser coordination data in SRD-46, while iron splits more sharply by oxidation state: Fe³⁺ behaves quite differently from Fe²⁺. |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41",
+              "metal_62",
+              "ligand_5898",
+              "ligand_10103",
+              "ligand_7795"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Partners: 1951 ligand(s), 8963 measurement(s) total",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "inspect_card",
+                "snippet": "Partners: 1951 ligand(s), 8963 measurement(s) total"
+              },
+              {
+                "step": "Step 8",
+                "tool": "inspect_card",
+                "snippet": "| ligand_5898 | L-2-Amino-3-(4-imidazolyl)propanoic acid (Histidine) | 50 |\n| ligand_10103 | Ammonia | 49 |\n| ligand_7795 | 1,3-Diazole (Imidazole) | 42 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "inspect_card",
+                "snippet": "Fe^[2+] … Partners: 217 ligand(s), 667 measurement(s) total"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "metal_41"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Fe^[3+] … Partners: 406 ligand(s), 1473 measurement(s) total",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "inspect_card",
+                "snippet": "Partners: 406 ligand(s), 1473 measurement(s) total"
+              },
+              {
+                "step": "Step 10",
+                "tool": "inspect_card",
+                "snippet": "| ligand_10076 | Hydroxide ion | 38 | … | ligand_8465 | Ethanoic acid (Acetic acid) | 16 |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "inspect_card",
+                "snippet": "Fe^[2+] … Partners: 217 ligand(s), 667 measurement(s) total"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_42",
+              "metal_41",
+              "ligand_10163",
+              "beta_def_812",
+              "beta_def_840",
+              "beta_def_888",
+              "beta_def_548",
+              "beta_def_311"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "[M] + [L] <=> [ML] | logK | 2 | … | 2.7~3.1 | 25 | 0~5 | beta_def_812",
+            "tool_snippets": [
+              {
+                "step": "Step 12",
+                "tool": "inspect_card",
+                "snippet": "Cu^[+] … Partners: 117 ligand(s), 285 measurement(s) total"
+              },
+              {
+                "step": "Step 12",
+                "tool": "inspect_card",
+                "snippet": "| ligand_10163 | Chloride ion | 14 |\n| ligand_10171 | Iodide ion | 8 |\n| ligand_10168 | Bromide ion | 7 |"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "Cu^[+] + Chloride ion … `[M] + [L] <=> [ML]` | logK | 2 | … | 2.7~3.1 | 25 | 0~5 | beta_def_812 …; Cu^[2+] + Chloride … | logK | 9 | … | -0.2~0.27 | 25 | 0~6 | beta_def_812"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_41",
+              "metal_42",
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Cu^[2+] … Partners: 1951 ligand(s), 8963 measurement(s) total",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "inspect_card",
+                "snippet": "Cu^[2+] … Partners: 1951 ligand(s), 8963 measurement(s) total"
+              },
+              {
+                "step": "Step 10",
+                "tool": "inspect_card",
+                "snippet": "Fe^[3+] … Partners: 406 ligand(s), 1473 measurement(s) total"
+              },
+              {
+                "step": "Step 11",
+                "tool": "inspect_card",
+                "snippet": "Fe^[2+] … Partners: 217 ligand(s), 667 measurement(s) total"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 8,
+        "text": "## Bottom line\n\n| Summary point | Conclusion |\n|---|---|\n| Database coverage | **Copper(II) is much more extensively represented than iron(II), iron(III), or copper(I).** |\n| Oxidation-state dependence | **Iron changes behavior strongly between Fe²⁺ and Fe³⁺; copper changes strongly between Cu⁺ and Cu²⁺.** |\n| Shared-ligand trend | **Cu⁺ stands out for chloride binding; Fe³⁺ binds chloride more strongly than Fe²⁺; Cu²⁺ chloride binding is weak.** |\n| Practical comparison | **For biologically relevant N/O donor ligands, Cu²⁺ is the richest comparison point; for hard O-donor chemistry, Fe³⁺ is especially important.** |\n\nSource: **NIST SRD-46**.\n\nIf you want, I can next make this more concrete by giving a **side-by-side table of iron vs copper for one ligand family only** — for example **ammonia**, **glycine**, or **citrate**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 14,
+            "text": "## Bottom line",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 57,
+            "end": 172,
+            "text": "| Database coverage | **Copper(II) is much more extensively represented than iron(II), iron(III), or copper(I).** |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 173,
+            "end": 309,
+            "text": "| Oxidation-state dependence | **Iron changes behavior strongly between Fe²⁺ and Fe³⁺; copper changes strongly between Cu⁺ and Cu²⁺.** |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 310,
+            "end": 452,
+            "text": "| Shared-ligand trend | **Cu⁺ stands out for chloride binding; Fe³⁺ binds chloride more strongly than Fe²⁺; Cu²⁺ chloride binding is weak.** |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 453,
+            "end": 624,
+            "text": "| Practical comparison | **For biologically relevant N/O donor ligands, Cu²⁺ is the richest comparison point; for hard O-donor chemistry, Fe³⁺ is especially important.** |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 626,
+            "end": 650,
+            "text": "Source: **NIST SRD-46**.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 652,
+            "end": 781,
+            "text": "If you want, I can next make this more concrete by giving a **side-by-side table of iron vs copper for one ligand family only** —",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 782,
+            "end": 835,
+            "text": "for example **ammonia**, **glycine**, or **citrate**.",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41",
+              "metal_61",
+              "metal_62",
+              "metal_42"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "metal_41 (Cu2+): Partners: 1951 ligand(s), 8963 measurement(s); metal_61 (Fe3+): 406, 1473; metal_62 (Fe2+): 217, 667; metal_42 (Cu+): 117, 285",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "inspect_card",
+                "snippet": "Metal | metal_41 — Name: Cu^[2+] … Partners: 1951 ligand(s), 8963 measurement(s) total"
+              },
+              {
+                "step": "Step 10",
+                "tool": "inspect_card",
+                "snippet": "Metal | metal_61 — Name: Fe^[3+] … Partners: 406 ligand(s), 1473 measurement(s) total"
+              },
+              {
+                "step": "Step 12",
+                "tool": "inspect_card",
+                "snippet": "Metal | metal_42 — Name: Cu^[+] … Partners: 117 ligand(s), 285 measurement(s) total"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62",
+              "metal_42",
+              "metal_41",
+              "ligand_10163"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Fe^[2+] + Chloride ion — [M]+[L]<=>[ML] | logK | value_range: -0.2 | 25 | 0 | beta_def_812",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "Cu^[+] + Chloride ion — [M] + [L] <=> [ML] | logK | 2 | … | value_range: 2.7~3.1 | 25 | 0~5 | beta_def_812"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "Cu^[2+] + Chloride ion — [M] + [L] <=> [ML] | logK | 9 | … | value_range: -0.2~0.27 | 25 | 0~6 | beta_def_812"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Chloride ion — [M] + [L] <=> [ML] | logK | 7 | … | value_range: 0.63~1.48 | 25 | 0~4 | beta_def_812"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_42",
+              "metal_61",
+              "metal_62",
+              "metal_41",
+              "ligand_10163",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Fe^[2+] + Chloride ion — [M] + [L] <=> [ML] | logK | value_range: -0.2 | 25 | 0 | beta_def_812",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "Cu^[+] + Chloride ion — [M] + [L] <=> [ML] | logK | value_range: 2.7~3.1 | 25 | 0~5 | beta_def_812; [M] + [L]^2 <=> [ML2] | logK | 5.42~6.06 | … | beta_def_840"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "Fe^[3+] + Chloride ion — [M] + [L] <=> [ML] | logK | value_range: 0.63~1.48 | 25 | 0~4 | beta_def_812"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "Cu^[2+] + Chloride ion — [M] + [L] <=> [ML] | logK | value_range: -0.2~0.27 | 25 | 0~6 | beta_def_812"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_41",
+              "metal_61"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Cu^[2+] partners: carboxyl 47%, primary_amine 35%, hydroxyl 32% …; Fe^[3+] partners: hydroxyl 72%, carboxyl 45%, phenol 29%",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "inspect_card",
+                "snippet": "metal_41 — Functional groups … carboxyl 875 (47%), primary_amine 640 (35%), hydroxyl 585 (32%), amide 487 (26%) …"
+              },
+              {
+                "step": "Step 10",
+                "tool": "inspect_card",
+                "snippet": "metal_61 — Functional groups … hydroxyl 264 (72%), carboxyl 166 (45%), phenol 106 (29%), tertiary_amine 91 (25%) …"
+              },
+              {
+                "step": "Step 8",
+                "tool": "inspect_card",
+                "snippet": "metal_41 — Partners: 1951 ligand(s), 8963 measurement(s) total"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "execute_srd46_sql — SELECT … FROM metal_card … WHERE symbol_pure IN ('Fe','Cu') …",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: SELECT metal_id, metal_name_SRD, symbol_pure, charge … FROM metal_card WHERE symbol_pure IN ('Fe','Cu') …"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "ligand_10103",
+              "ligand_5760",
+              "ligand_9058"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Ammonia; Aminoacetic acid (Glycine); 2‑Hydroxypropane‑1,2,3‑tricarboxylic acid (Citric acid) all appear in 25 °C searches.",
+            "tool_snippets": [
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_41 | Cu^[2+] | ligand_10103 | Ammonia | … T°C_range 25 | I(M)_range 0~3"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_41 | Cu^[2+] | ligand_5760 | Aminoacetic acid (Glycine) | … T°C_range 25 | I(M)_range 0~2.5"
+              },
+              {
+                "step": "Step 13",
+                "tool": "search_stability",
+                "snippet": "metal_61 | Fe^[3+] | ligand_9058 | 2‑Hydroxypropane‑1,2,3‑tricarboxylic acid | … T°C_range 25 | I(M)_range 0.1~1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

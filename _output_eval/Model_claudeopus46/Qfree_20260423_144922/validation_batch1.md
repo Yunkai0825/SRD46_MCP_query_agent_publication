@@ -1,0 +1,25 @@
+# Qfree_20260423_144922 - Validation (batch 1)
+
+**19 of 169 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 1 | range | pH < 5 | ...for electrodeposition 3. **Is active at pH < 5** → ligand must be at least partially d... |
+| 2 | 1 | range | pH 3–5 | ...olution** → moderate acidity preferred (pH 3–5)... |
+| 3 | 2 | exact_value | \| **Catechol** \| 9.26, 13.3 \| ❌ Fully protonated (H₂L) \| **20.0** (I=0.1) \| **7.9** (I=0.1) \| **12.1** \| Extremely strong but inactive at pH < 5 \| | ... Phenolate not deprotonated at pH < 5 \| \| **Catechol** \| 9.26, 13.3 \| ❌ Fully protonated (H₂L) \| **20.0** (I=0.1) \| **7.9** (I=0.1) \| **12.1** \| Extremely strong but inactive at pH < 5 \| \| **NTA** \| 1.1, 1.65, 9.73 \| ⚠️ H₂L⁻ f... |
+| 4 | 2 | exact_value | \| **NTA** \| 1.1, 1.65, 9.73 \| ⚠️ H₂L⁻ form only \| **15.87** (I=0.1) \| **8.84** (I=0.1) \| **7.0** \| Strong but also binds Fe²⁺ significantly \| | ...tremely strong but inactive at pH < 5 \| \| **NTA** \| 1.1, 1.65, 9.73 \| ⚠️ H₂L⁻ form only \| **15.87** (I=0.1) \| **8.84** (I=0.1) \| **7.0** \| Strong but also binds Fe²⁺ significantly \| \| **Pyrophosphate** \| 0.8, 2.2, 6.6, 8.... |
+| 5 | 2 | exact_value | \| **Pyrophosphate** \| 0.8, 2.2, 6.6, 8.93 \| ⚠️ H₂L²⁻ form \| **10.4** (I=0.1) \| **5.8** (I=0.1) \| **4.6** \| Moderate; precipitates Fe³⁺ at higher pH \| | ...ong but also binds Fe²⁺ significantly \| \| **Pyrophosphate** \| 0.8, 2.2, 6.6, 8.93 \| ⚠️ H₂L²⁻ form \| **10.4** (I=0.1) \| **5.8** (I=0.1) \| **4.6** \| Moderate; precipitates Fe³⁺ at higher pH \| \| **Thiocyanate (SCN⁻)** \| −1.1 \| ✅ Ful... |
+| 6 | 3 | comparison | effective binding reduced by several log units | ... pH < 5; only carboxylate arms active → effective binding reduced by several log units  Ligands that **are genuinely active** ... |
+| 7 | 4 | exact_value | \| **Sulfosalicylic acid** \| Fe(II)-salicylate conditional constant −6.8 → log K₁(ML/ML) ≈ 6–7 using pKₐ correction; but salicylate binds through carboxylate + phenolate, and phenolate is protonated at pH < 5, so **effective Fe(II) binding ≈ 1–2** \| ~1–2 (conditional, pH < 5) \| | ...-------------\|------------------------\| \| **Sulfosalicylic acid** \| Fe(II)-salicylate conditional constant −6.8 → log K₁(ML/ML) ≈ 6–7 using pKₐ correction; but salicylate binds through carboxylate + phenolate, and phenolate is protonated at pH < 5, so **effective Fe(II) binding ≈ 1–2** \| ~1–2 (conditional, pH < 5) \| \| **Fluoride** (Fe²⁺) \| Direct data: lo... |
+| 8 | 5 | property_attribution | with 2 active carboxylates + hydroxyl group | ... - At pH 4: citrate exists as H₂L⁻/HL²⁻ with 2 active carboxylates + hydroxyl group - Fe³⁺ forms very stable [Fe(cit)]⁰ com... |
+| 9 | 5 | range | 0.1–0.5 M Fe²⁺ | ...te — at typical plating concentrations (0.1–0.5 M Fe²⁺), only a small fraction is complexed - ... |
+| 10 | 6 | property_attribution | limited to specialized applications | ... - **Caution**: HF toxicity; corrosive; limited to specialized applications... |
+| 11 | 8 | range | Selectivity Δ > 10 log units | ...boxylate/sulfonate active at pH 3–5 - **Selectivity Δ > 10 log units** — the highest among practical candida... |
+| 12 | 8 | comparison | the highest among practical candidates | ...–5 - **Selectivity Δ > 10 log units** — the highest among practical candidates - Used as Fe(III) indicator in analytic... |
+| 13 | 10 | exact_value | \| **1,10-Phenanthroline / 2,2'-Bipyridyl** \| Binds Fe²⁺ almost as strongly as Fe³⁺ (Δ < 1); would sequester Fe²⁺ \| | ...\| Ligand \| Reason \| \|--------\|--------\| \| **1,10-Phenanthroline / 2,2'-Bipyridyl** \| Binds Fe²⁺ almost as strongly as Fe³⁺ (Δ < 1); would sequester Fe²⁺ \| \| **EDTA / NTA** \| Very strong Fe²⁺ bin... |
+| 14 | 10 | exact_value | \| **EDTA / NTA** \| Very strong Fe²⁺ binding (log K₁ = 14.3 / 8.84); would deplete free Fe²⁺ \| | ...as Fe³⁺ (Δ < 1); would sequester Fe²⁺ \| \| **EDTA / NTA** \| Very strong Fe²⁺ binding (log K₁ = 14.3 / 8.84); would deplete free Fe²⁺ \| \| **Catechol** \| Inactive at pH < 5 (pK... |
+| 15 | 10 | exact_value | \| **Catechol** \| Inactive at pH < 5 (pKₐ = 9.26); also binds Fe²⁺ strongly (log K₁ = 7.9) \| | ...14.3 / 8.84); would deplete free Fe²⁺ \| \| **Catechol** \| Inactive at pH < 5 (pKₐ = 9.26); also binds Fe²⁺ strongly (log K₁ = 7.9) \| \| **Acetohydroxamic acid** \| pKₐ = 9.29... |
+| 16 | 11 | range | pH 3–5 | ...ed ligand** for Fe electrodeposition at pH 3–5. It offers:  - The **largest practical ... |
+| 17 | 11 | comparison | largest practical selectivity | ...position at pH 3–5. It offers:  - The **largest practical selectivity** (Δlog K₁ ≈ 6.9) among ligands that ar... |
+| 18 | 11 | range | Δ > 10 | ...no binding) or **sulfosalicylic acid** (Δ > 10) are alternatives, though with practica... |
+| 19 | 11 | property_attribution | SSA cost | ...ith practical limitations (HF toxicity; SSA cost).  *All stability constants from NIST S... |

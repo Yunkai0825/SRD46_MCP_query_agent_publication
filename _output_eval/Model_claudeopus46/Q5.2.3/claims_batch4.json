@@ -1,0 +1,950 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudeopus46\\Q5.2.3\\Q5.2.3_result_batch4.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Thank you for your question. Unfortunately, **the NIST SRD-46 database does not contain stability constant data at 200 °C and 50 bar pressure**. Here's why:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 28,
+            "text": "Thank you for your question.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 29,
+            "end": 43,
+            "text": "Unfortunately,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 44,
+            "end": 143,
+            "text": "**the NIST SRD-46 database does not contain stability constant data at 200 °C and 50 bar pressure**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 145,
+            "end": 156,
+            "text": "Here's why:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "db_count_records: ligandmetal_stability_measured | temperature_c = 200 | count 0",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | temperature_c = 200 | 0 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*  (where: s.temperature_c >= 150)"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*  (where: s.temperature_c >= 100)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "### Temperature Limitation\n\nThe database overwhelmingly covers near-ambient temperatures. Here is the temperature distribution of all ~79,000 stability constant measurements:\n\n| Temperature (°C) | Measurements | % of Total |\n|-------------------|-------------|------------|\n| 25 | 67,237 | 85.0% |\n| 20 | 6,845 | 8.7% |\n| 37 | 1,699 | 2.2% |\n| 30 | 919 | 1.2% |\n| Other (0–50) | ~2,300 | 2.9% |\n| **75 (maximum)** | **21** | **0.03%** |\n\nThe **highest temperature** recorded in SRD-46 is **75 °C** (for protonation and Mg²⁺ complexation of ADP). There are **zero measurements** at or above 100 °C, let alone 200 °C.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 26,
+            "text": "### Temperature Limitation",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 28,
+            "end": 89,
+            "text": "The database overwhelmingly covers near-ambient temperatures.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 90,
+            "end": 129,
+            "text": "Here is the temperature distribution of",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 130,
+            "end": 173,
+            "text": "all ~79,000 stability constant measurements",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 274,
+            "end": 297,
+            "text": "| 25 | 67,237 | 85.0% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 298,
+            "end": 319,
+            "text": "| 20 | 6,845 | 8.7% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 320,
+            "end": 341,
+            "text": "| 37 | 1,699 | 2.2% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 342,
+            "end": 361,
+            "text": "| 30 | 919 | 1.2% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 362,
+            "end": 394,
+            "text": "| Other (0–50) | ~2,300 | 2.9% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 395,
+            "end": 436,
+            "text": "| **75 (maximum)** | **21** | **0.03%** |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 438,
+            "end": 497,
+            "text": "The **highest temperature** recorded in SRD-46 is **75 °C**",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 498,
+            "end": 544,
+            "text": "(for protonation and Mg²⁺ complexation of ADP)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 546,
+            "end": 596,
+            "text": "There are **zero measurements** at or above 100 °C",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 598,
+            "end": 614,
+            "text": "let alone 200 °C",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "25.0 | 67237 | 85.04%; 20.0 | 6845 | 8.66%; 37.0 | 1699 | 2.15%",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "25.0 | 67237 | 85.04%"
+              },
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "20.0 | 6845 | 8.66%"
+              },
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "37.0 | 1699 | 2.15%"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "total_rows: 79063",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "## db_distribution - ligandmetal_stability_measured by temperature_c\n\ntotal_rows: 79063"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| 25.0 | 67237 | 85.04% |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "| 25.0 | 67237 | 85.04% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| 20.0 | 6845 | 8.66% |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "| 20.0 | 6845 | 8.66% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| 37.0 | 1699 | 2.15% |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "| 37.0 | 1699 | 2.15% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "30.0 | 919 | 1.16%",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "30.0 | 919 | 1.16%"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "35.0 | 488 | 0.62%; 18.0 | 482 | 0.61%; 10.0 | 334 | 0.42%",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "35.0 | 488 | 0.62%"
+              },
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "18.0 | 482 | 0.61%"
+              },
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "10.0 | 334 | 0.42%"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "75.0 | 21 | 0.03%",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "75.0 | 21 | 0.03%"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_stability",
+                "snippet": "| vlm_141293 | ref_eq_map_15988 | beta_def_812 | logK | 4.89 | 75 | 0 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "vlm_141259",
+              "vlm_141293"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_141259 | ... | 7.44 | 75 | 0 | ... ; *(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "search_stability",
+                "snippet": "| vlm_141259 | ref_eq_map_15976 | beta_def_79 | logK | 7.44 | 75 | 0 | `[L] + [H] <=> [HL]`"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_stability",
+                "snippet": "| vlm_141293 | ref_eq_map_15988 | beta_def_812 | logK | 4.89 | 75 | 0 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "metal_68",
+              "metal_92",
+              "ligand_8318",
+              "vlm_141259",
+              "vlm_141293"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "`H^[+]` + Adenosine-5'-(trihydrogendiphosphate) (ADP) — 9 measurement(s) ... `Mg^[2+]` + ... (ADP) — 1 measurement(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "search_stability",
+                "snippet": "`H^[+]` + Adenosine-5'-(trihydrogendiphosphate) (ADP) — 9 measurement(s)\nmetal_id: metal_68 | ligand_id: ligand_8318"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_stability",
+                "snippet": "`Mg^[2+]` + Adenosine-5'-(trihydrogendiphosphate) (ADP) — 1 measurement(s)\nmetal_id: metal_92 | ligand_id: ligand_8318"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_stability",
+                "snippet": "| vlm_141259 | ... | 7.44 | 75 | 0 | ... ; | vlm_141293 | ... | 4.89 | 75 | 0 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "search_stability (s.temperature_c >= 100): *(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_stability",
+                "snippet": "## search_stability\n\n*(no results)*"
+              },
+              {
+                "step": "Step 3",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | temperature_c = 200 | 0 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "### Pressure Limitation\n\nThe database schema **does not include a pressure field** at all. SRD-46 records temperature, ionic strength, solvent, and electrolyte composition — but not pressure. This is typical for aqueous-phase stability constant compilations, which assume standard atmospheric pressure (~1 bar).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 23,
+            "text": "### Pressure Limitation",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 25,
+            "end": 82,
+            "text": "The database schema **does not include a pressure field**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 83,
+            "end": 90,
+            "text": "at all.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 91,
+            "end": 171,
+            "text": "SRD-46 records temperature, ionic strength, solvent, and electrolyte composition",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 192,
+            "end": 257,
+            "text": "This is typical for aqueous-phase stability constant compilations",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 259,
+            "end": 301,
+            "text": "which assume standard atmospheric pressure",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 302,
+            "end": 310,
+            "text": "(~1 bar)",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| 4 | temperature_c | REAL | False | False |\n| 5 | ionic_strength_mol_l | REAL | False | False |\n| 7 | solvent_name | TEXT | False | False |\n| 8 | electrolyte_composition | TEXT | False | False |",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "get_table_schema",
+                "snippet": "## get_table_schema - 25 column(s)\n| 4 | temperature_c | REAL | False | False |\n| 5 | ionic_strength_mol_l | REAL | False | False |\n| 6 | solvent_id | INTEGER | False | False |\n| 7 | solvent_name | TEXT | False | False |\n| 8 | electrolyte_composition | TEXT | False | False |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| 4 | temperature_c | REAL | False | False |\n| 5 | ionic_strength_mol_l | REAL | False | False |\n| 7 | solvent_name | TEXT | False | False |\n| 8 | electrolyte_composition | TEXT | False | False |",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "get_table_schema",
+                "snippet": "## get_table_schema - 25 column(s)\n| 4 | temperature_c | REAL | False | False |\n| 5 | ionic_strength_mol_l | REAL | False | False |\n| 7 | solvent_name | TEXT | False | False |\n| 8 | electrolyte_composition | TEXT | False | False |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "## db_distribution - ligandmetal_stability_measured by temperature_c\n**total_rows:** 79063\n| value | count | pct |\n| 25.0 | 67237 | 85.04% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Typical practice for aqueous stability-constant compilations; not specified in tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Standard compilations generally assume ambient/atmospheric pressure; this assumption is not recorded in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Approximate standard atmospheric pressure (~1 bar) is general knowledge; not represented as a field in the tool results.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "### What You Can Do\n\nIf you need stability constants at extreme conditions (200 °C, 50 bar), consider:\n\n1. **Hydrothermal geochemistry databases** — e.g., SUPCRT92/SUPCRTBL, which use the Helgeson–Kirkham–Flowers (HKF) equation of state to extrapolate equilibrium constants to high *T* and *P*.\n2. **IUPAC/NIST Solubility Data Series** — some volumes cover high-temperature aqueous systems.\n3. **Primary literature** — researchers like Sverjensky, Shock, and Helgeson have published high-*T*/*P* complexation data for geochemically relevant metal–ligand systems.\n\nIf you'd like, I can help you find what stability constants are available in SRD-46 for a **specific metal–ligand system** at the highest temperatures recorded (up to 75 °C). Just let me know the metal and ligand of interest!\n\n*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes)*",
+        "claims": [
+          {
+            "start": 0,
+            "end": 19,
+            "text": "### What You Can Do",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 21,
+            "end": 102,
+            "text": "If you need stability constants at extreme conditions (200 °C, 50 bar), consider:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 104,
+            "end": 148,
+            "text": "1. **Hydrothermal geochemistry databases** —",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 149,
+            "end": 172,
+            "text": "e.g., SUPCRT92/SUPCRTBL",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 174,
+            "end": 236,
+            "text": "which use the Helgeson–Kirkham–Flowers (HKF) equation of state",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 237,
+            "end": 294,
+            "text": "to extrapolate equilibrium constants to high *T* and *P*.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 295,
+            "end": 337,
+            "text": "2. **IUPAC/NIST Solubility Data Series** —",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 338,
+            "end": 390,
+            "text": "some volumes cover high-temperature aqueous systems.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 391,
+            "end": 418,
+            "text": "3. **Primary literature** —",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 419,
+            "end": 467,
+            "text": "researchers like Sverjensky, Shock, and Helgeson",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 468,
+            "end": 562,
+            "text": "have published high-*T*/*P* complexation data for geochemically relevant metal–ligand systems.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 564,
+            "end": 686,
+            "text": "If you'd like, I can help you find what stability constants are available in SRD-46 for a **specific metal–ligand system**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 687,
+            "end": 737,
+            "text": "at the highest temperatures recorded (up to 75 °C)",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 737,
+            "end": 789,
+            "text": ". Just let me know the metal and ligand of interest!",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 791,
+            "end": 897,
+            "text": "*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes)*",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Mentions SUPCRT92/SUPCRTBL (external tools); not part of SRD-46 tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "HKF equation attribution pertains to SUPCRT; not verifiable in SRD-46 query outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Extrapolation to high T/P is about SUPCRT; SRD-46 tool results do not cover this.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Coverage of high-temperature systems by a series is external; not in SRD-46 outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Mentions researchers (external); not present in SRD-46 tool outputs to verify.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Existence of high-T/P publications is external; SRD-46 outputs do not verify this.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "vlm_141293",
+              "vlm_141259"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| vlm_141293 | ... | logK | 4.89 | 75 | 0 | `[M] + [L] <=> [ML]` |",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "search_stability",
+                "snippet": "| vlm_141293 | ref_eq_map_15988 | beta_def_812 | logK | 4.89 | 75 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (6.3, L, +inf) |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_stability",
+                "snippet": "| vlm_141259 | ref_eq_map_15976 | beta_def_79 | logK | 7.44 | 75 | 0 | `[L] + [H] <=> [HL]` | *** | [L]; [HL] | (3.87, HL, 6.3, L, +inf) |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "| 75.0 | 21 | 0.03% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool results present from this run (SRD-46 context), e.g., a 75 °C entry:",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "search_stability",
+                "snippet": "| vlm_141293 | ref_eq_map_15988 | beta_def_812 | logK | 4.89 | 75 | 0 | `[M] + [L] <=> [ML]` | *** | [L] | (6.3, L, +inf) |"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

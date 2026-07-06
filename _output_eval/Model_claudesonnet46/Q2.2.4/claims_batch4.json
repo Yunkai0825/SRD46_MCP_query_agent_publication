@@ -1,0 +1,766 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudesonnet46\\Q2.2.4\\Q2.2.4_result_batch4.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Here is a full summary of the ligand class taxonomy in SRD-46.\n\n---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 62,
+            "text": "Here is a full summary of the ligand class taxonomy in SRD-46.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 64,
+            "end": 67,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "## Ligand Classes in NIST SRD-46\n\n### Total distinct classes: **58**\n\n*(Excluding the catch-all category \"Ligands not selected\", which covers 1,339 ligands — ~23% of the database — that have not been assigned to a named class.)*",
+        "claims": [
+          {
+            "start": 0,
+            "end": 32,
+            "text": "## Ligand Classes in NIST SRD-46",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 34,
+            "end": 68,
+            "text": "### Total distinct classes: **58**",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 82,
+            "end": 127,
+            "text": "the catch-all category \"Ligands not selected\"",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 135,
+            "end": 155,
+            "text": "covers 1,339 ligands",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 158,
+            "end": 178,
+            "text": "~23% of the database",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 186,
+            "end": 226,
+            "text": "have not been assigned to a named class.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "distinct_classes | 58",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT COUNT(DISTINCT ligand_class_name) AS distinct_classes FROM ligand_card WHERE ligand_class_name IS NOT NULL AND TRIM(ligand_class_name) <> '' AND ligand_class_name <> 'Ligands not selected'"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "| distinct_classes |\n|------------------|\n| 58 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Ligands not selected | 1339 | 23.29%",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "## db_distribution - ligand_card by ligand_class_name\n| value | count | pct |\n|-------|-------|-----|\n| Ligands not selected | 1339 | 23.29% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool shows count as 1339 for 'Ligands not selected'; the claim uses '1,339' with a comma, which does not appear verbatim.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "| value | count | pct |\n|-------|-------|-----|\n| Ligands not selected | 1339 | 23.29% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Ligands not selected | 1339 | 23.29%",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "| value | count | pct |\n|-------|-------|-----|\n| Ligands not selected | 1339 | 23.29% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "WHERE ... ligand_class_name <> 'Ligands not selected'",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT COUNT(DISTINCT ligand_class_name) AS distinct_classes FROM ligand_card WHERE ligand_class_name IS NOT NULL AND TRIM(ligand_class_name) <> '' AND ligand_class_name <> 'Ligands not selected'"
+              },
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "| value | count | pct |\n|-------|-------|-----|\n| Ligands not selected | 1339 | 23.29% |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "### Top 5 Ligand Classes by Number of Ligands\n\n| Rank | Ligand Class | # Ligands | % of DB |\n|------|-------------|-----------|---------|\n| 1 | **Amino Acids** | 297 | 5.17% |\n| 2 | **Aliphatic amines** | 250 | 4.35% |\n| 3 | **Pyridines (azines)** | 248 | 4.31% |\n| 4 | **Carboxylic acids** | 182 | 3.17% |\n| 5 | **Aza-macrocycles** | 165 | 2.87% |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 45,
+            "text": "### Top 5 Ligand Classes by Number of Ligands",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 138,
+            "end": 175,
+            "text": "| 1 | **Amino Acids** | 297 | 5.17% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 176,
+            "end": 218,
+            "text": "| 2 | **Aliphatic amines** | 250 | 4.35% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 219,
+            "end": 263,
+            "text": "| 3 | **Pyridines (azines)** | 248 | 4.31% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 264,
+            "end": 306,
+            "text": "| 4 | **Carboxylic acids** | 182 | 3.17% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 307,
+            "end": 348,
+            "text": "| 5 | **Aza-macrocycles** | 165 | 2.87% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| Amino Acids | 297 | 5.17% |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "| Amino Acids | 297 | 5.17% |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SQL: ... WHERE ligand_class_name IS NOT NULL ... AND ligand_class_name <> 'Ligands not selected'"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| Aliphatic amines | 250 | 4.35% |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "| Aliphatic amines | 250 | 4.35% |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SQL: ... WHERE ligand_class_name IS NOT NULL ... AND ligand_class_name <> 'Ligands not selected'"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| Pyridines (azines) | 248 | 4.31% |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "| Pyridines (azines) | 248 | 4.31% |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SQL: ... WHERE ligand_class_name IS NOT NULL ... AND ligand_class_name <> 'Ligands not selected'"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| Carboxylic acids | 182 | 3.17% |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "| Carboxylic acids | 182 | 3.17% |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SQL: ... WHERE ligand_class_name IS NOT NULL ... AND ligand_class_name <> 'Ligands not selected'"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| Aza-macrocycles | 165 | 2.87% |",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "| Aza-macrocycles | 165 | 2.87% |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "SQL: ... WHERE ligand_class_name IS NOT NULL ... AND ligand_class_name <> 'Ligands not selected'"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "### Chemistry Insights\n\n- **Amino acids** dominate because they are biologically ubiquitous chelators — their α-amino and carboxylate groups form stable 5-membered chelate rings with virtually every metal ion, making them a natural focus of coordination chemistry research.\n- **Aliphatic amines** and **pyridines** together reflect the enormous diversity of N-donor ligand chemistry; pyridines are particularly well-studied because their aromatic rigidity and tunable basicity make them ideal for systematic structure–stability studies.\n- The prevalence of **aza-macrocycles** (rank 5) highlights the importance of macrocyclic ligands in medical imaging (e.g., Gd-DOTA for MRI) and heavy-metal remediation, where the macrocyclic effect dramatically enhances thermodynamic stability.\n\n*Source: NIST SRD-46 `ligand_card` table, 5,750 total ligands.*",
+        "claims": [
+          {
+            "start": 0,
+            "end": 22,
+            "text": "### Chemistry Insights",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 26,
+            "end": 50,
+            "text": "**Amino acids** dominate",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 59,
+            "end": 101,
+            "text": "they are biologically ubiquitous chelators",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 104,
+            "end": 177,
+            "text": "their α-amino and carboxylate groups form stable 5-membered chelate rings",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 178,
+            "end": 208,
+            "text": "with virtually every metal ion",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 210,
+            "end": 272,
+            "text": "making them a natural focus of coordination chemistry research",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 276,
+            "end": 382,
+            "text": "**Aliphatic amines** and **pyridines** together reflect the enormous diversity of N-donor ligand chemistry",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 384,
+            "end": 423,
+            "text": "pyridines are particularly well-studied",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 432,
+            "end": 535,
+            "text": "their aromatic rigidity and tunable basicity make them ideal for systematic structure–stability studies",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 539,
+            "end": 576,
+            "text": "The prevalence of **aza-macrocycles**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 577,
+            "end": 585,
+            "text": "(rank 5)",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 586,
+            "end": 653,
+            "text": "highlights the importance of macrocyclic ligands in medical imaging",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 654,
+            "end": 677,
+            "text": "(e.g., Gd-DOTA for MRI)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 678,
+            "end": 705,
+            "text": "and heavy-metal remediation",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 707,
+            "end": 781,
+            "text": "where the macrocyclic effect dramatically enhances thermodynamic stability",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 785,
+            "end": 824,
+            "text": "Source: NIST SRD-46 `ligand_card` table",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 826,
+            "end": 846,
+            "text": "5,750 total ligands.",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Amino Acids | 297 | 5.17% (highest among named classes in the distribution table)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "Amino Acids | 297 | 5.17%"
+              },
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "Aliphatic amines | 250 | 4.35%"
+              },
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "Pyridines (azines) | 248 | 4.31%"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Biological ubiquity is domain knowledge; SRD-46 ligand_card does not annotate biological prevalence.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Chelate ring size/stability is general coordination chemistry; not specified in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Claim of complexation with virtually every metal ion is not stated in tool results; no cross-metal coverage shown.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Reasoning about research focus is background chemistry; not a database field or value.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Interpretive claim about diversity; counts exist but 'diversity' assessment is not in data.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "Aliphatic amines | 250 | 4.35%"
+              },
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "Pyridines (azines) | 248 | 4.31%"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Pyridines (azines) | 248 | 4.31% (high count indicates they are well-studied)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "Pyridines (azines) | 248 | 4.31%"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "Functional groups across all SQL matches: | pyridine | 428 | 11% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Properties like aromatic rigidity/tunable basicity are textbook knowledge; not in SRD-46 counts.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Aza-macrocycles | 165 | 2.87% (non-trivial presence supports prevalence wording)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "Aza-macrocycles | 165 | 2.87%"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Rank 5 inferred among named classes: Amino Acids 297; Aliphatic amines 250; Pyridines 248; Carboxylic acids 182; Aza-macrocycles 165.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "Amino Acids | 297 | 5.17%"
+              },
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "Carboxylic acids | 182 | 3.17%"
+              },
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "Aza-macrocycles | 165 | 2.87%"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Medical imaging relevance is domain knowledge; SRD-46 distribution does not annotate applications.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Gd-DOTA for MRI is well-known; not shown in provided SRD-46 outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Heavy-metal remediation use is domain knowledge; not listed in the tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Macrocyclic effect enhancing stability is textbook knowledge; not quantified in the distribution outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "db_distribution - ligand_card by ligand_class_name",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "db_distribution",
+                "snippet": "## db_distribution - ligand_card by ligand_class_name"
+              }
+            ]
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Regex validation failed: returned evidence did not contain the claim value(s).",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

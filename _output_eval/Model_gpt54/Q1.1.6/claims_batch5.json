@@ -1,0 +1,356 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q1.1.6\\Q1.1.6_result_batch5.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "SRD-46 contains **297 ligands** in the **“Amino Acids”** class.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 63,
+            "text": "SRD-46 contains **297 ligands** in the **“Amino Acids”** class.",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_card | ligand_class_name = 'Amino Acids' | 297",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligand_card | ligand_class_name = 'Amino Acids' | 297 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "db_distribution",
+                "snippet": "total_rows: 297 | Amino Acids | 297 | 100.0%"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands — 297 result(s) | stats: 297 SQL matches · showing 297 · limit 500"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| ligand_class_name | count |\n|---|---:|\n| Amino Acids | 297 |",
+        "claims": [
+          {
+            "start": 41,
+            "end": 62,
+            "text": "| Amino Acids | 297 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "| Amino Acids | 297 | 100.0% |",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "db_distribution",
+                "snippet": "**total_rows:** 297\n| value | count | pct |\n| Amino Acids | 297 | 100.0% |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligand_card | ligand_class_name = 'Amino Acids' | 297 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands — 297 result(s)\nArgs: {\"ligand_class\": \"Amino Acids\", \"limit\": 500}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "This was confirmed two ways in SRD-46: a direct count on `ligand_card` with `ligand_class_name = 'Amino Acids'`, and a class distribution check showing all 297 rows fall under that exact class label.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 18,
+            "text": "This was confirmed",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 19,
+            "end": 27,
+            "text": "two ways",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 28,
+            "end": 37,
+            "text": "in SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 39,
+            "end": 70,
+            "text": "a direct count on `ligand_card`",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 71,
+            "end": 111,
+            "text": "with `ligand_class_name = 'Amino Acids'`",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 117,
+            "end": 143,
+            "text": "a class distribution check",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 144,
+            "end": 151,
+            "text": "showing",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 152,
+            "end": 164,
+            "text": "all 297 rows",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 165,
+            "end": 198,
+            "text": "fall under that exact class label",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Two distinct checks are shown (a count and a distribution); the phrase “two ways” does not appear verbatim in rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligand_card | ligand_class_name = 'Amino Acids' | 297 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "db_distribution",
+                "snippet": "**total_rows:** 297"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Queries (search_ligands/db_count_records/db_distribution) are SRD‑46 tools; raw outputs do not print “SRD‑46”.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands — 297 result(s)"
+              },
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligand_card | ligand_class_name = 'Amino Acids' | 297 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "db_distribution",
+                "snippet": "## db_distribution - ligand_card by ligand_class_name"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "| ligand_card | ligand_class_name = 'Amino Acids' | 297 |",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| table | where | count |\n| ligand_card | ligand_class_name = 'Amino Acids' | 297 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "where | ligand_class_name = 'Amino Acids'",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligand_card | ligand_class_name = 'Amino Acids' | 297 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "db_distribution",
+                "snippet": "\"where\": \"ligand_class_name = 'Amino Acids'\""
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Amino Acids | 297 | 100.0%",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "db_distribution",
+                "snippet": "| Amino Acids | 297 | 100.0% |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "db_distribution",
+                "snippet": "**total_rows:** 297"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Amino Acids | 297 | 100.0%",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "db_distribution",
+                "snippet": "| value | count | pct |\n| Amino Acids | 297 | 100.0% |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

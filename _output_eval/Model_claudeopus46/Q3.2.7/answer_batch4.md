@@ -1,0 +1,35 @@
+## Cu²⁺–Ammonia Stepwise Constants K₁–K₄
+
+### Cumulative log β values (25 °C, SRD-46)
+
+The database reports **cumulative** formation constants (log β) at 25 °C across ionic strengths 0–3 M. Taking representative mid-range values (I ≈ 0 M):
+
+| Species | Cumulative log β | Stepwise log Kₙ |
+|---------|-----------------|-----------------|
+| Cu(NH₃)²⁺ (ML) | ~4.15 | **log K₁ ≈ 4.15** |
+| Cu(NH₃)₂²⁺ (ML₂) | ~7.65 | **log K₂ ≈ 3.50** (7.65 − 4.15) |
+| Cu(NH₃)₃²⁺ (ML₃) | ~10.50 | **log K₃ ≈ 2.85** (10.50 − 7.65) |
+| Cu(NH₃)₄²⁺ (ML₄) | ~12.75 | **log K₄ ≈ 2.25** (12.75 − 10.50) |
+
+*(Values interpolated from the SRD-46 ranges: log β₁ = 4.02–4.30, log β₂ = 7.40–7.91, log β₃ = 10.20–10.80, log β₄ = 12.30–13.20)*
+
+### Do they decrease monotonically?
+
+**Yes.** The stepwise constants follow a clear monotonic decline:
+
+> log K₁ > log K₂ > log K₃ > log K₄  
+> (~4.15 > ~3.50 > ~2.85 > ~2.25)
+
+Each successive drop is roughly **0.6–0.7 log units**, which is remarkably regular. This is consistent across all ionic strengths reported in SRD-46.
+
+### What does this tell us about coordination geometry?
+
+1. **Jahn–Teller distorted octahedral / square-planar preference.** Cu²⁺ is a d⁹ ion that undergoes strong Jahn–Teller distortion, elongating the axial bonds and creating four strongly-binding equatorial positions. The database records only up to **Cu(NH₃)₄²⁺** — no ML₅ or ML₆ species appear — confirming that the 5th and 6th coordination sites (axial) bind NH₃ too weakly to be observed as thermodynamically significant species in solution.
+
+2. **Statistical and electronic factors.** The smooth, monotonic decrease in log Kₙ reflects both the **statistical effect** (fewer vacant sites available as n increases) and increasing **ligand–ligand repulsion** in the equatorial plane. The drop per step (~0.65 log units) is slightly larger than pure statistics would predict (which gives ~0.5 for a 4-coordinate system), suggesting modest steric/electronic contributions.
+
+3. **No anomalous step.** In some systems a non-monotonic pattern (e.g., K₃ < K₄) signals a geometry change. The absence of any such anomaly here confirms that all four NH₃ molecules occupy **equivalent equatorial positions** in a single, consistent coordination geometry — the classic tetragonal (square-planar or elongated octahedral) arrangement characteristic of the Cu²⁺ tetraammine complex.
+
+*Source: NIST Standard Reference Database 46 (SRD-46), all measurements at 25 °C.*
+
+---

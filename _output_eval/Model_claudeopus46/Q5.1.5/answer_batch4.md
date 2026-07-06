@@ -1,0 +1,85 @@
+# Is EDTA a Good Chelator?
+
+**Yes — EDTA is one of the most versatile and powerful chelators known in coordination chemistry.** The data from NIST SRD-46 makes this abundantly clear. Here's the evidence:
+
+---
+
+## EDTA Structure & Acid-Base Properties
+
+EDTA (ethylenediaminetetraacetic acid, ligand_6277) is a hexadentate ligand with **six donor atoms** — two tertiary amines and four carboxylate groups — allowing it to wrap around a metal ion and form exceptionally stable 1:1 complexes.
+
+### Stepwise pKₐ Values (25 °C, I = 0.1 M)
+
+| Step | Equilibrium | pKₐ |
+|------|-------------|-----|
+| 1 | H₄L → H₅L⁺ | −1.5 |
+| 2 | H₃L⁻ → H₄L | 2.00 |
+| 3 | H₂L²⁻ → H₃L⁻ | 2.69 |
+| 4 | HL³⁻ → H₂L²⁻ | 6.13 |
+| 5 | L⁴⁻ → HL³⁻ | 9.52 |
+
+The two high pKₐ values (6.13 and 9.52) correspond to the amine nitrogens, while the lower values correspond to the carboxylate groups. This means the fully deprotonated form L⁴⁻ — the strongest chelating species — dominates above pH ~10, but EDTA forms strong complexes even at moderately acidic pH through protonated intermediates (MHL).
+
+---
+
+## Stability Constants with Metals (log K for ML, 25 °C, I = 0.1 M, aqueous KNO₃)
+
+The SRD-46 database contains stability data for EDTA with an impressive **39+ different metal ions**. Here are representative log K values for the 1:1 complex [ML]/[M][L]:
+
+| Metal Ion | log K(ML) | Category |
+|-----------|-----------|----------|
+| U⁴⁺ | 25.50 | Tetravalent actinide |
+| Fe³⁺ | 25.10 | Transition metal (3+) |
+| Hf⁴⁺ | 24.45 | Tetravalent |
+| Zr⁴⁺ | 23.91 | Tetravalent |
+| Th⁴⁺ | 23.20 | Tetravalent actinide |
+| Sc³⁺ | 23.10 | Trivalent |
+| In³⁺ | 21.30 | Post-transition metal |
+| Co³⁺ | 20.20 | Transition metal (3+) |
+| Tm³⁺ | 19.32 | Lanthanide |
+| Lu³⁺ | 19.30 | Lanthanide |
+| Yb³⁺ | 19.17 | Lanthanide |
+| Er³⁺ | 18.85 | Lanthanide |
+| VO²⁺ | 18.77 | Oxocation |
+| **Cu²⁺** | **18.70** | **Transition metal (2+)** |
+| Hg²⁺ | 18.50 | Heavy metal |
+| Ho³⁺ | 18.62 | Lanthanide |
+| Dy³⁺ | 18.30 | Lanthanide |
+| Y³⁺ | 18.09 | Rare earth |
+| Tb³⁺ | 17.93 | Lanthanide |
+| **Ni²⁺** | **17.60** | **Transition metal (2+)** |
+| Pd²⁺ | 17.60 | Platinum group |
+| Gd³⁺ | 17.37 | Lanthanide (MRI contrast!) |
+| Eu³⁺ | 17.35 | Lanthanide |
+| Mn³⁺ | 17.20 | Transition metal (3+) |
+| Sm³⁺ | 17.14 | Lanthanide |
+| V³⁺ | 17.00 | Transition metal (3+) |
+
+Additional divalent metals (from the summary data) include **Co²⁺, Zn²⁺, Cd²⁺, Pb²⁺, Fe²⁺, Mn²⁺, Ca²⁺, Mg²⁺, Sr²⁺, Ba²⁺**, and even **Li⁺** and **Ag⁺** — spanning log K values from roughly **8–16** for the common divalent ions down to ~2–3 for alkali metals.
+
+---
+
+## Why EDTA Is an Exceptional Chelator
+
+1. **Enormous stability constants.** Log K values of 18–25 for trivalent and tetravalent metals mean that the equilibrium overwhelmingly favors the complex — at log K = 25, only 1 in 10²⁵ metal ions remains free. Even for "weaker" partners like Ca²⁺ (log K ≈ 10.6) or Mg²⁺ (log K ≈ 8.7), complexation is highly effective.
+
+2. **Universal metal binding.** The SRD-46 database records EDTA complexes with **39+ different metals** — from alkali metals to actinides, spanning the entire periodic table. Very few ligands show this breadth.
+
+3. **Hexadentate chelate effect.** By coordinating through all six donor atoms simultaneously, EDTA forms five chelate rings around the metal center. The resulting entropic advantage (releasing ~5 water molecules from the metal's coordination sphere while only one EDTA binds) is the thermodynamic engine behind the large log K values.
+
+4. **pH versatility.** Even though the fully deprotonated L⁴⁻ form is most effective, EDTA's protonated complexes (MHL, MH₂L) allow it to function across a wide pH range — critical for applications in acidic industrial processes.
+
+---
+
+## Real-World Significance
+
+- **Analytical chemistry:** EDTA titrations (complexometric titrations) are the gold standard for determining water hardness (Ca²⁺/Mg²⁺) and trace metal concentrations.
+- **Medicine:** Gd-EDTA complexes (log K ≈ 17.4) are used as MRI contrast agents; Ca-EDTA is used for lead poisoning chelation therapy.
+- **Industry:** EDTA prevents metal-catalyzed degradation in food, cosmetics, and paper pulp by sequestering trace Fe³⁺ and Cu²⁺.
+- **Environment:** Its very strength is also a concern — EDTA is poorly biodegradable and can remobilize heavy metals from sediments.
+
+**Bottom line:** EDTA is not just a "good" chelator — it is arguably *the* benchmark chelator in chemistry, with unmatched breadth of metal binding and stability constants that span over 20 orders of magnitude.
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes)*
+
+---

@@ -1,0 +1,28 @@
+## Distribution of Constant Types in SRD-46 Stability Measurements
+
+Here is the complete breakdown across all **79,063** stability constant measurements in the database:
+
+| Constant Type | Count | Share (%) |
+|---|---|---|
+| **K** | 60,540 | 76.6% |
+| **H** | 9,693 | 12.3% |
+| **S** | 8,830 | 11.2% |
+| **Total** | **79,063** | **100%** |
+
+### What these types mean:
+
+| Symbol | Meaning |
+|---|---|
+| **K** | Stepwise or cumulative stability constant (log K or log β) — the classic formation constant for metal–ligand complexes |
+| **H** | Enthalpy-based constant (ΔH or related thermodynamic quantity) |
+| **S** | Entropy-based constant (ΔS or related thermodynamic quantity) |
+
+### Chemistry Insights
+
+- **K dominates (76.6%)** — this reflects the historical focus of coordination chemistry on equilibrium stability constants (log K, log β). These are the workhorses of speciation modeling and are the most experimentally accessible.
+- **H and S together (~23%)** — the substantial coverage of enthalpy and entropy data is notable; it enables full thermodynamic profiling (ΔG = ΔH − TΔS) for many systems, allowing researchers to distinguish enthalpy-driven vs. entropy-driven complexation.
+- The near-equal split between H (12.3%) and S (11.2%) suggests these are typically measured together (e.g., via calorimetry or van't Hoff analysis), which is consistent with how thermodynamic datasets are reported in the literature.
+
+*Source: NIST SRD-46 (Critically Selected Stability Constants of Metal Complexes)*
+
+---

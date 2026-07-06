@@ -1,0 +1,21 @@
+## Summary
+
+| Step | Reaction | Range at I = 0.1 M | Value at I = 1.0 M |
+|------|----------|--------------------|--------------------|
+| pKa1 | H₃L → H₂L + H⁺ | 2.87 – 2.95 | 3.15 |
+| pKa2 | H₂L → HL + H⁺ | 4.35 – 4.40 | 4.55 |
+| pKa3 | HL → L + H⁺ | 5.65 – 5.73 | 5.90 |
+
+---
+
+### Key Chemistry Insights
+
+1. **Ionic strength effect:** All three pKa values increase noticeably when ionic strength rises from 0.1 M to 1.0 M (e.g., pKa1: 2.90 → 3.15; pKa3: 5.65 → 5.90). This is expected from the Debye–Hückel effect — higher ionic strength stabilises charged species, making it harder to remove a proton and thus raising the apparent pKa.
+
+2. **Excellent reproducibility:** The spread at I = 0.1 M is very narrow for all three steps (≤ 0.08 pKa units), and all 48 measurements carry quality grade **A**. The background electrolyte (KNO₃, NaNO₃, or NaClO₄) has negligible influence on the measured values, confirming citric acid's pKa values are well-established.
+
+3. **Biological relevance:** Citric acid's three pKa values (≈ 2.9, 4.35, 5.65) span a range that makes it an effective buffer in the pH 2–6 window. This underpins its widespread use as a food acidulant and its central role in the citric acid (Krebs) cycle, where the fully deprotonated citrate³⁻ form predominates at physiological pH (~7.4).
+
+*Source: NIST SRD-46 (ligand_9058)*
+
+---

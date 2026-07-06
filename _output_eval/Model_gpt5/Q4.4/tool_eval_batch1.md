@@ -1,0 +1,1168 @@
+# Q4.4 — Tool Results (batch 1)
+
+### Step 2: `search_metals`
+**Args:**
+```json
+{
+  "name": "Zinc",
+  "symbol": "Zn",
+  "limit": 5
+}
+```
+
+[summary]
+## search_metals — 1 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_208 | Zn^[2+] | Zn | 2 | ✓ | [Zn+2] | InChI=1S/Zn/q+2 | beta_totN_122 | ligand_totN_1169 | vlm_totN_4095 |
+
+---
+
+### Step 3: `search_metals`
+**Args:**
+```json
+{
+  "name": "Hydrogen",
+  "symbol": "H+",
+  "limit": 5
+}
+```
+
+[summary]
+## search_metals — 5 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_45 | Et_[2]NH_[2]^[+] | E2NH2 | 1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_48 | Et_[3]NH^[+] | E3NH | 1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_53 | EtHg^[+] | EHg | 1 |  | *** | *** | beta_totN_4 | ligand_totN_3 | vlm_totN_6 |
+| metal_54 | EtNH_[3]^[+] | ENH3 | 1 |  | *** | *** | beta_totN_1 | ligand_totN_3 | vlm_totN_3 |
+| metal_68 | H^[+] | H | 1 | ✓ | [H+] | InChI=1S/p+1 | beta_totN_82 | ligand_totN_4081 | vlm_totN_20720 |
+
+---
+
+### Step 4: `search_ligands`
+**Args:**
+```json
+{
+  "name": "glycine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 10 result(s)
+
+**stats:** 170 SQL matches · showing 10 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5760 | Aminoacetic acid (Glycine) | HL | Amino Acids | 428 | `NCC(=O)O` | (-inf, H2L, 2.33, HL, 9.57, L, +inf) |
+| ligand_5776 | DL-Aminophenylacetic acid (Phenylglycine) | HL | Amino Acids | 12 | `NC(C(=O)O)c1ccccc1` | (-inf, H2L, -1.9, HL, 8.92, L, +inf) |
+| ligand_5786 | DL-Amino-4-sulfophenylacet… (4-Sulfophenylglycine) | H2L | Amino Acids | 12 | `NC(C(=O)O)c1ccc(S(=O)(=O)O)cc1` | (-inf, H2L, -1.8, HL, 8.66, L, +inf) |
+| ligand_5838 | DL-Amino-4-Methoxyphenyl… (4-Methoxyphenylglycine) | HL | Amino Acids | 12 | `COc1ccc(C(N)C(=O)O)cc1` | (-inf, H2L, 2, HL, 9.07, L, +inf) |
+| ligand_5925 | N-Methylglycine (Sarcosine) | HL | Amino Acids | 39 | `CNCC(=O)O` | (-inf, H2L, 2.18, HL, 9.98, L, +inf) |
+| ligand_5926 | N-Ethylglycine | HL | Amino Acids | 6 | `CCNCC(=O)O` | (-inf, H2L, 2.3, HL, 10.1, L, +inf) |
+| ligand_5927 | N-Propylglycine | HL | Amino Acids | 6 | `CCCNCC(=O)O` | (-inf, H2L, 2.28, HL, 10.03, L, +inf) |
+| ligand_5928 | N-Butylglycine | HL | Amino Acids | 6 | `CCCCNCC(=O)O` | (-inf, H2L, 2.29, HL, 10.07, L, +inf) |
+| ligand_5929 | N-(2-Propyl)glycine | HL | Amino Acids | 5 | `CC(C)NCC(=O)O` | (-inf, H2L, 2.36, HL, 10.06, L, +inf) |
+| ligand_5937 | N-(Phosphonomethyl)glycine (Glyphosate) | H3L | Amino Acids | 146 | `O=C(O)CNCP(=O)(O)O` | (-inf, H4L, -0.5, H3L, 2.2, H2L, 5.45, HL, 10.1, L, +inf) |
+
+### Functional groups across all SQL matches (129 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 114 | 88% |
+| amide | 96 | 74% |
+| primary_amine | 78 | 60% |
+| aromatic_ring | 26 | 20% |
+| hydroxyl | 25 | 19% |
+| secondary_amine | 22 | 17% |
+| tertiary_amine | 14 | 11% |
+| ester | 9 | 7% |
+| thiol | 9 | 7% |
+| phenol | 7 | 5% |
+| imine | 5 | 4% |
+| phosphonate | 3 | 2% |
+| thioether | 3 | 2% |
+| phosphate | 2 | 2% |
+| pyridine | 2 | 2% |
+| sulfonate | 2 | 2% |
+| ether | 1 | 1% |
+
+---
+
+### Step 5: `search_ligands`
+**Args:**
+```json
+{
+  "name": "alanine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 10 result(s)
+
+**stats:** 130 SQL matches · showing 10 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5761 | L-2-Aminopropanoic acid (Alanine) | HL | Amino Acids | 159 | `C[C@H](N)C(=O)O` | (-inf, H2L, 2.33, HL, 9.71, L, +inf) |
+| ligand_5777 | L-2-Amino-3-phenylpropanoic acid (Phenylalanine) | HL | Amino Acids | 138 | `N[C@@H](Cc1ccccc1)C(=O)O` | (-inf, H2L, 2.18, HL, 9.09, L, +inf) |
+| ligand_5778 | DL-2-Amino-3-chloropropanoic ac… (3-Chloroalanine) | HL | Amino Acids | 10 | `N[C@@H](CCl)C(=O)O` | (-inf, H2L, 2, HL, 8.18, L, +inf) |
+| ligand_5780 | DL-2-Amino-3-(2-fluorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 6 | `N[C@@H](Cc1ccccc1F)C(=O)O` | (-inf, H2L, 2.12, HL, 9.01, L, +inf) |
+| ligand_5781 | DL-2-Amino-3-(3-fluorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 6 | `N[C@@H](Cc1cccc(F)c1)C(=O)O` | (-inf, H2L, 2.1, HL, 8.98, L, +inf) |
+| ligand_5782 | DL-2-Amino-3-(4-fluorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 6 | `N[C@@H](Cc1ccc(F)cc1)C(=O)O` | (-inf, H2L, 2.13, HL, 9.05, L, +inf) |
+| ligand_5783 | DL-2-Amino-3-(2-chlorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 2 | `N[C@@H](Cc1ccccc1Cl)C(=O)O` | (-inf, H2L, 2.23, HL, 8.94, L, +inf) |
+| ligand_5784 | DL-2-Amino-3-(3-chlorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 2 | `N[C@@H](Cc1cccc(Cl)c1)C(=O)O` | (-inf, H2L, 2.17, HL, 8.91, L, +inf) |
+| ligand_5785 | DL-2-Amino-3-(4-chlorophenyl)propanoic acid (DL-3… | HL | Amino Acids | 2 | `N[C@@H](Cc1ccc(Cl)cc1)C(=O)O` | (-inf, H2L, 2.08, HL, 8.96, L, +inf) |
+| ligand_5788 | 3-Aminopropanoic acid (beta-Alanine) | HL | Amino Acids | 111 | `NCCC(=O)O` | (-inf, H2L, 3.51, HL, 10.08, L, +inf) |
+
+### Functional groups across all SQL matches (106 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 96 | 91% |
+| primary_amine | 93 | 88% |
+| amide | 81 | 76% |
+| aromatic_ring | 43 | 41% |
+| hydroxyl | 9 | 8% |
+| secondary_amine | 8 | 8% |
+| ester | 7 | 7% |
+| halide | 7 | 7% |
+| phenol | 5 | 5% |
+| thioether | 3 | 3% |
+| pyridine | 2 | 2% |
+| thiol | 2 | 2% |
+| ether | 1 | 1% |
+| tertiary_amine | 1 | 1% |
+
+---
+
+### Step 6: `search_ligands`
+**Args:**
+```json
+{
+  "name": "valine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 10 result(s)
+
+**stats:** 25 SQL matches · showing 10 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5763 | DL-2-Aminopentanoic acid (Norvaline) | HL | Amino Acids | 35 | `CCC[C@H](N)C(=O)O` | (-inf, H2L, 2.31, HL, 9.65, L, +inf) |
+| ligand_5765 | L-2-Amino-3-methylbutanoic acid (Valine) | HL | Amino Acids | 81 | `CC(C)[C@H](N)C(=O)O` | (-inf, H2L, 2.27, HL, 9.52, L, +inf) |
+| ligand_6378 | Glycyl-DL-norvaline | HL | Peptides | 6 | `CCCC(NC(=O)CN)C(=O)O` | (-inf, H2L, 3.17, HL, 8.22, L, +inf) |
+| ligand_6380 | Glycyl-L-valine | HL | Peptides | 19 | `CC(C)[C@H](NC(=O)CN)C(=O)O` | (-inf, H2L, 3.14, HL, 8.14, L, +inf) |
+| ligand_6446 | L-Valyl-L-valine | HL | Peptides | 17 | `CC(C)[C@H](N)C(=O)N[C@H](C(=O)O)C(C)C` | (-inf, H2L, 3.4, HL, 7.96, L, +inf) |
+| ligand_6447 | L-Valyl-D-valine | HL | Peptides | 4 | `CC(C)[C@H](N)C(=O)N[C@@H](C(=O)O)C(C)C` | (-inf, H2L, 3.04, HL, 8.22, L, +inf) |
+| ligand_6451 | L-Phenylalanyl-L-valine | HL | Peptides | 7 | `CC(C)[C@H](NC(=O)[C@@H](N)Cc1ccccc1)C(=O)O` | (-inf, H2L, 3.4, HL, 7.41, L, +inf) |
+| ligand_6452 | L-Phenylalanyl-D-valine | HL | Peptides | 7 | `CC(C)[C@@H](NC(=O)[C@@H](N)Cc1ccccc1)C(=O)O` | (-inf, H2L, 3.09, HL, 7.77, L, +inf) |
+| ligand_6453 | L-Methionyl-L-valine | HL | Peptides | 7 | `CSCC[C@H](N)C(=O)N[C@H](C(=O)O)C(C)C` | (-inf, H2L, 3.43, HL, 7.45, L, +inf) |
+| ligand_6454 | L-Methionyl-D-valine | HL | Peptides | 7 | `CSCC[C@H](N)C(=O)N[C@@H](C(=O)O)C(C)C` | (-inf, H2L, 3.07, HL, 7.69, L, +inf) |
+
+### Functional groups across all SQL matches (14 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| primary_amine | 14 | 100% |
+| carboxyl | 10 | 71% |
+| amide | 9 | 64% |
+| ester | 3 | 21% |
+| aromatic_ring | 2 | 14% |
+| thioether | 2 | 14% |
+| hydroxyl | 1 | 7% |
+
+---
+
+### Step 7: `search_ligands`
+**Args:**
+```json
+{
+  "name": "leucine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 10 result(s)
+
+**stats:** 45 SQL matches · showing 10 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5764 | DL-2-Aminohexanoic acid (Norleucine) | HL | Amino Acids | 33 | `CCCC[C@H](N)C(=O)O` | (-inf, H2L, 2.31, HL, 9.68, L, +inf) |
+| ligand_5766 | L-2-Amino-4-methylpentanoic acid (Leucine) | HL | Amino Acids | 49 | `CC(C)C[C@H](N)C(=O)O` | (-inf, H2L, 2.32, HL, 9.58, L, +inf) |
+| ligand_5767 | L-2-Amino-3-methylpentanoic acid (Isoleucine) | HL | Amino Acids | 51 | `CC[C@H](C)[C@H](N)C(=O)O` | (-inf, H2L, 2.26, HL, 9.6, L, +inf) |
+| ligand_5768 | D-allo-2-Amino-3-methylpentan… (D-allo-Isoleucine) | HL | Amino Acids | 16 | `CC[C@H](C)[C@@H](N)C(=O)O` | (-inf, H2L, 2.2, HL, 9.62, L, +inf) |
+| ligand_5773 | 1-Aminocyclopentanecarboxylic acid (Cycloleucine) | HL | Amino Acids | 11 | `NC1(C(=O)O)CCCC1` | (-inf, H2L, 2.4, HL, 10.31, L, +inf) |
+| ligand_6379 | Glycyl-DL-norleucine | HL | Peptides | 6 | `CCCCC(NC(=O)CN)C(=O)O` | (-inf, H2L, -3.33, HL, 8.23, L, +inf) |
+| ligand_6382 | Glycyl-L-leucine | HL | Peptides | 33 | `CC(C)C[C@H](NC(=O)CN)C(=O)O` | (-inf, H2L, 3.1, HL, 8.18, L, +inf) |
+| ligand_6384 | Glycyl-L-isoleucine | HL | Peptides | 4 | `CC[C@H](C)[C@H](NC(=O)CN)C(=O)O` | (-inf, H2L, 3, HL, 8.15, L, +inf) |
+| ligand_6427 | L-Alanyl-L-leucine | HL | Peptides | 6 | `CC(C)C[C@H](NC(=O)[C@H](C)N)C(=O)O` | (-inf, H2L, 3.34, HL, 8.03, L, +inf) |
+| ligand_6428 | D-Alanyl-L-leucine | HL | Peptides | 16 | `CC(C)C[C@H](NC(=O)[C@@H](C)N)C(=O)O` | (-inf, H2L, 3.14, HL, 8.23, L, +inf) |
+
+### Functional groups across all SQL matches (39 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| primary_amine | 37 | 95% |
+| amide | 29 | 74% |
+| carboxyl | 29 | 74% |
+| hydroxyl | 9 | 23% |
+| aromatic_ring | 4 | 10% |
+| ester | 4 | 10% |
+| secondary_amine | 3 | 8% |
+| phenol | 2 | 5% |
+| phosphate | 2 | 5% |
+
+---
+
+### Step 8: `search_ligands`
+**Args:**
+```json
+{
+  "name": "isoleucine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 7 result(s)
+
+**stats:** 7 SQL matches · showing 7 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5767 | L-2-Amino-3-methylpentanoic acid (Isoleucine) | HL | Amino Acids | 51 | `CC[C@H](C)[C@H](N)C(=O)O` | (-inf, H2L, 2.26, HL, 9.6, L, +inf) |
+| ligand_5768 | D-allo-2-Amino-3-methylpentan… (D-allo-Isoleucine) | HL | Amino Acids | 16 | `CC[C@H](C)[C@@H](N)C(=O)O` | (-inf, H2L, 2.2, HL, 9.62, L, +inf) |
+| ligand_6384 | Glycyl-L-isoleucine | HL | Peptides | 4 | `CC[C@H](C)[C@H](NC(=O)CN)C(=O)O` | (-inf, H2L, 3, HL, 8.15, L, +inf) |
+| ligand_6457 | L-Leucyl-L-isoleucine | HL | Peptides | 11 | `CC[C@H](C)[C@H](NC(=O)[C@@H](N)CC(C)C)C(=O)O` | (-inf, H2L, 3.42, HL, 7.78, L, +inf) |
+| ligand_6458 | D-Leucyl-L-isoleucine | HL | Peptides | 11 | `CC[C@H](C)[C@H](NC(=O)[C@H](N)CC(C)C)C(=O)O` | (-inf, H2L, 3.06, HL, 8.09, L, +inf) |
+| ligand_6934 | DL-Isoleucine methyl ester | L | Aliphatic amines | 1 | `CC[C@H](C)[C@H](N)C(=O)OC` | (-inf, HL, 7.54, L, +inf) |
+| ligand_6988 | L-2-Amino-3-methylpen… (Isoleucinehydroxamic acid) | HL | Aliphatic amines | 13 | `CC[C@H](C)[C@H](N)C(=O)NO` | (-inf, H2L, 7.25, HL, 9.15, L, +inf) |
+
+### Functional groups across all SQL matches (7 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| primary_amine | 7 | 100% |
+| carboxyl | 5 | 71% |
+| amide | 4 | 57% |
+| ester | 1 | 14% |
+| hydroxyl | 1 | 14% |
+
+---
+
+### Step 9: `search_ligands`
+**Args:**
+```json
+{
+  "name": "serine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 10 result(s)
+
+**stats:** 22 SQL matches · showing 10 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5809 | L-2-Amino-3-phosphopropanoic acid (Phosphoserine) | H3L | Amino Acids | 52 | `N[C@@H](COP(=O)(O)O)C(=O)O` | (-inf, H4L, -0.7, H3L, 2.14, H2L, 5.7, HL, 9.8, L, +inf) |
+| ligand_5828 | L-2-Amino-3-hydroxypropanoic acid (Serine) | HL | Amino Acids | 139 | `N[C@@H](CO)C(=O)O` | (-inf, H2L, 2.16, HL, 9.05, L, +inf) |
+| ligand_5831 | erythro-2-Amino-3-hydroxy-… (erythro-Phenylserine) | HL | Amino Acids | 22 | `NC(C(=O)O)C(O)c1ccccc1` | (-inf, H2L, -1.9, HL, 8.7, L, +inf) |
+| ligand_5832 | threo-2-Amino-3-hydroxy-3-ph… (threo-Phenylserine) | HL | Amino Acids | 13 | `NC(C(=O)O)C(O)c1ccccc1` | (-inf, H2L, -1.9, HL, 8.87, L, +inf) |
+| ligand_5833 | L-2-Amino-4-hydroxybutanoic acid (Homoserine) | HL | Amino Acids | 31 | `N[C@@H](CCO)C(=O)O` | (-inf, H2L, 2.24, HL, 9.28, L, +inf) |
+| ligand_5834 | DL-3-Amino-2-hydroxypropanoic acid (Isoserine) | HL | Amino Acids | 36 | `NCC(O)C(=O)O` | (-inf, H2L, 2.66, HL, 9.13, L, +inf) |
+| ligand_5853 | L-2-Amino-3-(phenylmethoxy)propa… (O-Benzylserine) | HL | Amino Acids | 4 | `N[C@@H](COCc1ccccc1)C(=O)O` | (-inf, H2L, -1.9, HL, 9.03, L, +inf) |
+| ligand_6391 | Glycyl-DL-… (Glycyl-DL-serine dihydrogenphosphate) | H3L | Peptides | 7 | `NCC(=O)N[C@@H](COP(=O)(O)O)C(=O)O` | (-inf, H3L, 2.91, H2L, 6.03, HL, 8.42, L, +inf) |
+| ligand_6393 | Glycyl-L-serine | HL | Peptides | 33 | `NCC(=O)N[C@@H](CO)C(=O)O` | (-inf, H2L, 2.97, HL, 8.13, L, +inf) |
+| ligand_6423 | beta-Alanyl-L-1-methylhistidine (L-Anserine) | HL | Peptides | 4 | `Cn1cncc1CC(NC(=O)CCN)C(=O)O` | (-inf, H2L, 7.03, HL, 9.33, L, +inf) |
+
+### Functional groups across all SQL matches (15 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| primary_amine | 15 | 100% |
+| hydroxyl | 12 | 80% |
+| carboxyl | 10 | 67% |
+| amide | 6 | 40% |
+| aromatic_ring | 4 | 27% |
+| phosphate | 3 | 20% |
+| ester | 2 | 13% |
+| ether | 1 | 7% |
+
+---
+
+### Step 10: `search_ligands`
+**Args:**
+```json
+{
+  "name": "threonine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 6 result(s)
+
+**stats:** 6 SQL matches · showing 6 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5811 | L-2-Amino-3-phosphobutanoic ac… (Phosphothreonine) | H4L | Amino Acids | 3 | `C[C@@H](OP(=O)(O)O)[C@H](N)C(=O)O` | (-inf, H3L, 2.25, H2L, 5.83, HL, 9.67, L, +inf) |
+| ligand_5829 | L-2-Amino-3-hydroxybutanoic acid (Threonine) | HL | Amino Acids | 117 | `C[C@@H](O)[C@H](N)C(=O)O` | (-inf, H2L, 2.2, HL, 8.94, L, +inf) |
+| ligand_5830 | allo-L-2-Amino-3-hydroxybutano… (L-allo-Threonine) | HL | Amino Acids | 31 | `C[C@H](O)[C@H](N)C(=O)O` | (-inf, H2L, 2.11, HL, 8.92, L, +inf) |
+| ligand_6394 | Glycyl-L-threonine | HL | Peptides | 14 | `C[C@@H](O)[C@H](NC(=O)CN)C(=O)O` | (-inf, H2L, 3, HL, 8.14, L, +inf) |
+| ligand_6995 | DL-2-Amino-3-hydroxybu… (Threoninehydroxamic acid) | HL | Aliphatic amines | 26 | `C[C@@H](O)[C@H](N)C(=O)NO` | (-inf, H2L, 6.92, HL, 8.89, L, +inf) |
+| ligand_10396 | DL-Alanyl-DL-threonine | *** | Ligands not selected | 0 | *** | *** |
+
+### Functional groups across all SQL matches (5 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| hydroxyl | 5 | 100% |
+| primary_amine | 5 | 100% |
+| carboxyl | 4 | 80% |
+| amide | 2 | 40% |
+| phosphate | 1 | 20% |
+
+---
+
+### Step 11: `search_ligands`
+**Args:**
+```json
+{
+  "name": "cysteine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 10 result(s)
+
+**stats:** 26 SQL matches · showing 10 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5856 | L-2-Amino-3-mercaptopropanoic acid (Cysteine) | H2L | Amino Acids | 134 | `N[C@@H](CS)C(=O)O` | (-inf, H3L, -1.9, H2L, 8.18, HL, 10.3, L, +inf) |
+| ligand_5859 | DL-2-Amino-4-mercaptobutanoic acid (Homocysteine) | H2L | Amino Acids | 3 | `NC(CCS)C(=O)O` | (-inf, H3L, 2.15, H2L, 8.57, HL, 10.38, L, +inf) |
+| ligand_5861 | L-2-Amino-3-(methylthio)propan… (S-Methylcysteine) | HL | Amino Acids | 39 | `CSC[C@H](N)C(=O)O` | (-inf, H2L, 2, HL, 8.74, L, +inf) |
+| ligand_5862 | L-2-Amino-3-(ethylthio)propanoi… (S-Ethylcysteine) | HL | Amino Acids | 46 | `CCSC[C@H](N)C(=O)O` | (-inf, H2L, -1.9, HL, 8.65, L, +inf) |
+| ligand_5871 | L-2-Amino-3-(2-Cyanoethylthio)propanoic acid (L-5… | HL | Amino Acids | 1 | `N#CCCSCC(N)C(=O)O` | (-inf, HL, 8.46, L, +inf) |
+| ligand_5872 | L-2-Amino-3-(Ethoxy-3-oxopropylthio)propanoic aci… | HL | Amino Acids | 1 | `CCOC(=O)CCSCC(N)C(=O)O` | (-inf, HL, 8.51, L, +inf) |
+| ligand_5879 | L-2-Amino-3-(2-aminoethylthio)propanoic acid (S-(… | HL | Amino Acids | 22 | `NCCSC[C@H](N)C(=O)O` | (-inf, H3L, -1.7, H2L, 8.32, HL, 9.67, L, +inf) |
+| ligand_6007 | L,L-Ethylenediimino-… (N,N'-Ethylenedi-L-cysteine) | H4L | Amino Acids | 32 | `O=C(O)C(CS)NCCNC(CS)C(=O)O` | (-inf, H5L, -1.7, H4L, 5.4, H3L, 7.91, H2L, 9.88, HL, 9.88, L, +inf) |
+| ligand_6397 | Glycyl-L-cysteine | H2L | Peptides | 12 | `NCC(=O)N[C@@H](CS)C(=O)O` | (-inf, H3L, 2.73, H2L, 8.04, HL, 9.48, L, +inf) |
+| ligand_6398 | Glycyl-L-S-methylcysteine | HL | Peptides | 4 | `CSC[C@H](NC(=O)CN)C(=O)O` | (-inf, H2L, 2.9, HL, 8.12, L, +inf) |
+
+### Functional groups across all SQL matches (22 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 19 | 86% |
+| primary_amine | 19 | 86% |
+| thiol | 12 | 55% |
+| amide | 11 | 50% |
+| thioether | 10 | 45% |
+| ester | 4 | 18% |
+| aromatic_ring | 1 | 5% |
+| nitrile | 1 | 5% |
+| secondary_amine | 1 | 5% |
+
+---
+
+### Step 12: `search_ligands`
+**Args:**
+```json
+{
+  "name": "methionine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 10 result(s)
+
+**stats:** 22 SQL matches · showing 10 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5863 | L-2-Amino-4-(methylthio)butanoic acid (Methionine) | HL | Amino Acids | 63 | `CSCC[C@H](N)C(=O)O` | (-inf, H2L, 2.18, HL, 9.08, L, +inf) |
+| ligand_6192 | N,N,S-Tris(carboxymethyl)methionine | H4L | NTA and derivatives | 4 | `C[S+](CC[C@@H](C(=O)O)N(CC(=O)O)CC(=O)O)CC(=O)O` | (-inf, H4L, 2.1, H3L, 2.6, H2L, 7.49, HL, 7.49, L, +inf) |
+| ligand_6399 | Glycyl-L-methionine | HL | Peptides | 26 | `CSCC[C@H](NC(=O)CN)C(=O)O` | (-inf, H2L, 3.02, HL, 8.12, L, +inf) |
+| ligand_6475 | L-Phenylalanyl-L-methionine | HL | Peptides | 12 | `CSCC[C@H](NC(=O)[C@@H](N)Cc1ccccc1)C(=O)O` | (-inf, H2L, 3.24, HL, 7.27, L, +inf) |
+| ligand_6519 | L-S-Methylcysteinyl-L-methionine | HL | Peptides | 9 | `CSCC[C@H](NC(=O)[C@@H](N)CSC)C(=O)O` | (-inf, H2L, 3.18, HL, 7.03, L, +inf) |
+| ligand_6520 | L-S-Methylcysteinyl-D-methionine | HL | Peptides | 9 | `CSCC[C@@H](NC(=O)[C@@H](N)CSC)C(=O)O` | (-inf, H2L, 2.94, HL, 7.23, L, +inf) |
+| ligand_6523 | L-Methionyl-L-methionine | HL | Peptides | 18 | `CSCC[C@H](NC(=O)[C@@H](N)CCSC)C(=O)O` | (-inf, H2L, 3.22, HL, 7.41, L, +inf) |
+| ligand_6524 | L-Methionyl-D-methionine | HL | Peptides | 17 | `CSCC[C@H](N)C(=O)N[C@H](CCSC)C(=O)O` | (-inf, H2L, 2.98, HL, 7.59, L, +inf) |
+| ligand_6526 | L-Histidyl-L-methionine | HL | Peptides | 7 | `CSCC[C@H](NC(=O)[C@@H](N)Cc1c[nH]cn1)C(=O)O` | (-inf, H3L, 2.58, H2L, 6, HL, 7.5, L, +inf) |
+| ligand_6671 | L-Tyrosylglycylglycyl-L-p… (Methionine enkephalin) | *** | polypeptides | 8 | *** | (-inf, H3L, 3.46, H2L, 7.44, HL, 9.82, L, +inf) |
+
+### Functional groups across all SQL matches (13 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| primary_amine | 12 | 92% |
+| thioether | 12 | 92% |
+| amide | 9 | 69% |
+| carboxyl | 9 | 69% |
+| aromatic_ring | 3 | 23% |
+| ester | 1 | 8% |
+| secondary_amine | 1 | 8% |
+| tertiary_amine | 1 | 8% |
+
+---
+
+### Step 13: `search_ligands`
+**Args:**
+```json
+{
+  "name": "aspartate",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 1 result(s)
+
+**stats:** 1 SQL matches · showing 1 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5839 | L-2-Aminobutanedioic acid 4-… (4-Methyl aspartate) | HL | Amino Acids | 1 | `COC(=O)CC(N)C(=O)O` | (-inf, HL, 8.5, L, +inf) |
+
+### Functional groups across all SQL matches (1 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 1 | 100% |
+| ester | 1 | 100% |
+| primary_amine | 1 | 100% |
+
+---
+
+### Step 14: `search_ligands`
+**Args:**
+```json
+{
+  "name": "glutamate",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 3 result(s)
+
+**stats:** 3 SQL matches · showing 3 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5840 | DL-2-Aminopentanedioic acid 5… (5-Ethyl glutamate) | HL | Amino Acids | 2 | `CCOC(=O)CC[C@H](N)C(=O)O` | (-inf, H2L, 2.15, HL, 9.19, L, +inf) |
+| ligand_5841 | L-2-Aminopentanedioic acid 5… (5-Benzyl glutamate) | HL | Amino Acids | 2 | `N[C@@H](CCC(=O)OCc1ccccc1)C(=O)O` | (-inf, H2L, 2.06, HL, 8.89, L, +inf) |
+| ligand_5842 | DL-2-Aminopentanedioic acid 1… (1-Ethyl glutamate) | HL | Amino Acids | 2 | `CCOC(=O)[C@@H](N)CCC(=O)O` | (-inf, H2L, 3.85, HL, 7.84, L, +inf) |
+
+### Functional groups across all SQL matches (3 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 3 | 100% |
+| ester | 3 | 100% |
+| primary_amine | 3 | 100% |
+| aromatic_ring | 1 | 33% |
+
+---
+
+### Step 15: `search_ligands`
+**Args:**
+```json
+{
+  "name": "lysine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 10 result(s)
+
+**stats:** 25 SQL matches · showing 10 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5845 | L-2-Amino-6-(2-methylpropamido)hexanoic acid (N(6… | HL | Amino Acids | 30 | `CC(C)C(=O)NCCCCC(N)C(=O)O` | (-inf, H2L, 2.4, HL, 9.42, L, +inf) |
+| ligand_5846 | L-6-Amino-2-acetamidohexanoic acid (N(2)-Acetyl-L… | HL | Amino Acids | 1 | `CC(=O)N[C@@H](CCCCN)C(=O)O` | *** |
+| ligand_5847 | L-2-Amino-6-acetamidohexanoic acid (N(6)-Acetyl-L… | HL | Amino Acids | 7 | `CC(=O)NCCCCC(N)C(=O)O` | (-inf, H2L, 2.13, HL, 9.52, L, +inf) |
+| ligand_5849 | N(6)-d-Biotinyl-L-lysine (d-Biocytin) | HL | Amino Acids | 7 | `NC(CCCCNC(=O)CCCCC1SCC2NC(=O)NC21)C(=O)O` | (-inf, H2L, 2.26, HL, 9.29, L, +inf) |
+| ligand_5887 | L-2,6-Diaminohexanoic acid (Lysine) | HL | Amino Acids | 98 | `NCCCC[C@H](N)C(=O)O` | (-inf, H3L, 2.15, H2L, 9.15, HL, 10.66, L, +inf) |
+| ligand_6400 | Glycyl-L-lysine | HL | Peptides | 14 | `NCCCC[C@H](NC(=O)CN)C(=O)O` | (-inf, H2L, 8.02, HL, 10.46, L, +inf) |
+| ligand_6450 | L-Valyl-L-lysine | HL | Peptides | 12 | `CC(C)[C@H](N)C(=O)N[C@@H](CCCCN)C(=O)O` | (-inf, H3L, 3.1, H2L, 7.47, HL, 10, L, +inf) |
+| ligand_6490 | L-Tyrosyl-L-lysine | H2L | Peptides | 13 | `NCCCC[C@H](NC(=O)[C@@H](N)Cc1ccc(O)cc1)C(=O)O` | (-inf, H4L, 3.34, H3L, 7.33, H2L, 9.72, HL, 11.01, L, +inf) |
+| ligand_6501 | L-1-Glutamyl-L-7-lysine | H2L | Peptides | 22 | `NC(CCCCNC(=O)C(N)CCC(=O)O)C(=O)O` | (-inf, H4L, 2.16, H3L, 3.91, H2L, 7.81, HL, 9.62, L, +inf) |
+| ligand_6502 | L-5-Glutamyl-L-7-lysine | H2L | Peptides | 13 | `NC(CCCCNC(=O)CCC(N)C(=O)O)C(=O)O` | (-inf, H4L, -1.78, H3L, 2.56, H2L, 8.86, HL, 9.71, L, +inf) |
+
+### Functional groups across all SQL matches (20 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| primary_amine | 20 | 100% |
+| amide | 18 | 90% |
+| carboxyl | 18 | 90% |
+| hydroxyl | 4 | 20% |
+| aromatic_ring | 3 | 15% |
+| ester | 1 | 5% |
+| phenol | 1 | 5% |
+| phosphate | 1 | 5% |
+| thioether | 1 | 5% |
+
+---
+
+### Step 16: `search_ligands`
+**Args:**
+```json
+{
+  "name": "arginine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 8 result(s)
+
+**stats:** 8 SQL matches · showing 8 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5917 | L-2-Amino-5-guanidopentanoic acid (Arginine) | H2L | Amino Acids | 45 | `N=C(N)NCCC[C@H](N)C(=O)O` | (-inf, H3L, 2.03, H2L, 9, HL, 9, L, +inf) |
+| ligand_6432 | L-Alanyl-L-arginine | HL | Peptides | 6 | `C[C@H](N)C(=O)N[C@@H](CCCNC(=N)N)C(=O)O` | (-inf, H2L, 2.99, HL, 7.95, L, +inf) |
+| ligand_6487 | L-Tyrosyl-L-arginine | H2L | Peptides | 9 | `N=C(N)NCCC[C@H](NC(=O)[C@@H](N)Cc1ccc(O)cc1)C(=O)O` | (-inf, H3L, 3.09, H2L, 7.24, HL, 9.82, L, +inf) |
+| ligand_6488 | L-Tyrosyl-D-arginine | H2L | Peptides | 9 | `N=C(N)NCCC[C@@H](NC(=O)[C@@H](N)Cc1ccc(O)cc1)C(=O)O` | (-inf, H3L, 2.81, H2L, 7.62, HL, 9.82, L, +inf) |
+| ligand_6692 | L-Alanyl-L-aspartyl-L-serylgly… (fibrinopeptide A) | *** | polypeptides | 12 | *** | (-inf, H6L, 2.6, H5L, 3.5, H4L, 3.62, H3L, 4.31, H2L, 5.03, HL, 8.4, L, +inf) |
+| ligand_6998 | L-2-Amino-5-guanidopent… (Argininehydroxamic acid) | H2L | Aliphatic amines | 22 | `N=C(N)NCCC[C@H](N)C(=O)NO` | (-inf, H3L, 6.88, H2L, 8.84, HL, 8.84, L, +inf) |
+| ligand_10399 | D-Alanyl-L-arginine | *** | Ligands not selected | 0 | *** | *** |
+| ligand_10873 | Arginine phosphate | *** | Ligands not selected | 0 | *** | *** |
+
+### Functional groups across all SQL matches (5 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| imine | 5 | 100% |
+| primary_amine | 5 | 100% |
+| secondary_amine | 5 | 100% |
+| amide | 4 | 80% |
+| carboxyl | 4 | 80% |
+| hydroxyl | 3 | 60% |
+| aromatic_ring | 2 | 40% |
+| phenol | 2 | 40% |
+
+---
+
+### Step 17: `search_ligands`
+**Args:**
+```json
+{
+  "name": "histidine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 10 result(s)
+
+**stats:** 57 SQL matches · showing 10 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5860 | DL-2-Amino-3-(2-mercaptoimidazo-4… (Thiohistidine) | H2L | Amino Acids | 20 | `NC(Cc1cnc(S)[nH]1)C(=O)O` | (-inf, H2L, 8.59, HL, 8.59, L, +inf) |
+| ligand_5898 | L-2-Amino-3-(4-imidazolyl)propanoic a… (Histidine) | HL | Amino Acids | 250 | `N[C@@H](Cc1c[nH]cn1)C(=O)O` | (-inf, H3L, -1.7, H2L, 6.05, HL, 9.1, L, +inf) |
+| ligand_5899 | L-2-Amino-3-(N(1)-methyl-4-imidazolyl)propanoic a… | HL | Amino Acids | 14 | `Cn1cnc(C[C@H](N)C(=O)O)c1` | (-inf, H3L, -1.72, H2L, 5.87, HL, 9.16, L, +inf) |
+| ligand_5900 | L-2-Amino-3-(N(3)-methyl-4-imidazolyl)propanoic a… | HL | Amino Acids | 16 | `Cn1cncc1C[C@H](N)C(=O)O` | (-inf, H3L, -1.65, H2L, 6.48, HL, 8.61, L, +inf) |
+| ligand_5901 | L-4-(2-Amino-3-carboxypropyl)-1,3-dimethylimidazo… | HL | Amino Acids | 6 | `Cn1c[n+](C)cc1C[C@H](N)C(=O)O` | (-inf, H2L, -1.98, HL, 7.85, L, +inf) |
+| ligand_5902 | L-1-Carboxy-2-(4-imidazolyl)ethyl(dimethyl)ammoni… | HL | Amino Acids | 9 | `C[NH+](C)C(Cc1cnc[nH]1)C(=O)O` | (-inf, H3L, -1.03, H2L, 6.03, HL, 8.86, L, +inf) |
+| ligand_5903 | L-1-Carboxy-2-(4-imidazolyl)ethyl(trimethyl)ammon… | HL | Amino Acids | 6 | `C[N+](C)(C)C(Cc1c[nH]cn1)C(=O)O` | (-inf, H2L, -0.98, HL, 6, L, +inf) |
+| ligand_5904 | L-2-Amino-3-(N(3)-benzyl-4-imidazolyl)propanoic a… | HL | Amino Acids | 18 | `NC(Cc1cncn1Cc1ccccc1)C(=O)O` | (-inf, H3L, 1.94, H2L, 5.53, HL, 9.21, L, +inf) |
+| ligand_5905 | L-2-Amino-3-(5-iodo-4-imidazol… (5-Iodo-Histidine) | HL | Amino Acids | 23 | `N[C@@H](Cc1nc[nH]c1I)C(=O)O` | (-inf, H3L, -1.47, H2L, 4.21, HL, 8.6, L, +inf) |
+| ligand_5906 | L-2-Amino-3-(2,5-diiodo-4-… (2,5-Diiodo-Histidine) | HL | Amino Acids | 27 | `N[C@@H](Cc1nc(I)[nH]c1I)C(=O)O` | (-inf, H4L, -1.55, H3L, 2.74, H2L, 8.12, HL, 9.57, L, +inf) |
+
+### Functional groups across all SQL matches (46 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 40 | 87% |
+| aromatic_ring | 38 | 83% |
+| amide | 31 | 67% |
+| primary_amine | 26 | 57% |
+| imine | 9 | 20% |
+| ester | 5 | 11% |
+| secondary_amine | 5 | 11% |
+| thiol | 4 | 9% |
+| hydroxyl | 3 | 7% |
+| halide | 2 | 4% |
+| phenol | 2 | 4% |
+| pyridine | 1 | 2% |
+| tertiary_amine | 1 | 2% |
+| thioether | 1 | 2% |
+
+---
+
+### Step 18: `search_ligands`
+**Args:**
+```json
+{
+  "name": "tyrosine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 10 result(s)
+
+**stats:** 37 SQL matches · showing 10 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5817 | DL-2-Amino-3-(2-hydroxyphenyl)propan… (o-Tyrosine) | H2L | Amino Acids | 71 | `NC(Cc1ccccc1O)C(=O)O` | (-inf, H3L, 2.41, H2L, 8.67, HL, 11.01, L, +inf) |
+| ligand_5818 | DL-2-Amino-3-(3-hydroxyphenyl)propan… (m-Tyrosine) | H2L | Amino Acids | 86 | `N[C@@H](Cc1cccc(O)c1)C(=O)O` | (-inf, H3L, 2.22, H2L, 8.95, HL, 10.04, L, +inf) |
+| ligand_5819 | L-2-Amino-3-(4-hydroxyphenyl)propanoic… (Tyrosine) | H2L | Amino Acids | 107 | `N[C@@H](Cc1ccc(O)cc1)C(=O)O` | (-inf, H3L, 2.24, H2L, 9.04, HL, 10.1, L, +inf) |
+| ligand_5820 | L-2-Amino-2-methyl-3-(4-hydrox… (L-Methyltyrosine) | H2L | Amino Acids | 7 | `CC(N)(Cc1ccc(O)cc1)C(=O)O` | (-inf, H3L, 2.16, H2L, 9.14, HL, 10.24, L, +inf) |
+| ligand_5821 | L-2-Amino-3-(4-hydroxy-3,5… (L-3,5-Diiodotyrosine) | H2L | Amino Acids | 3 | `N[C@@H](Cc1cc(I)c(O)c(I)c1)C(=O)O` | (-inf, H2L, 6.16, HL, 9.1, L, +inf) |
+| ligand_5824 | L-2-Amino-3-(3-amino-4-hydroxyp… (m-Aminotyrosine) | H2L | Amino Acids | 9 | `Nc1cc(C[C@H](N)C(=O)O)ccc1O` | (-inf, H4L, 2, H3L, 4.48, H2L, 9.09, HL, 10.19, L, +inf) |
+| ligand_5923 | L-[1-Carboxy-2-(4-hydroxypheny… (Tyrosine betaine) | H2L | Amino Acids | 1 | `C[N+](C)(C)C(Cc1ccc(O)cc1)C(=O)O.[Cl-]` | (-inf, HL, 9.63, L, +inf) |
+| ligand_6392 | Glycyl-L-tyrosine | H2L | Peptides | 37 | `NCC(=O)N[C@@H](Cc1ccc(O)cc1)C(=O)O` | (-inf, H3L, 3.02, H2L, 8.14, HL, 9.98, L, +inf) |
+| ligand_6461 | L-Leucyl-L-tyrosine | H2L | Peptides | 21 | `CC(C)C[C@H](N)C(=O)N[C@@H](Cc1ccc(O)cc1)C(=O)O` | (-inf, H3L, 3.23, H2L, 7.79, HL, 10.13, L, +inf) |
+| ligand_6462 | D-Leucyl-L-tyrosine | H2L | Peptides | 19 | `CC(C)C[C@@H](N)C(=O)N[C@@H](Cc1ccc(O)cc1)C(=O)O` | (-inf, H3L, 2.9, H2L, 8.34, HL, 10.36, L, +inf) |
+
+### Functional groups across all SQL matches (30 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| aromatic_ring | 30 | 100% |
+| hydroxyl | 29 | 97% |
+| phenol | 29 | 97% |
+| primary_amine | 25 | 83% |
+| carboxyl | 24 | 80% |
+| amide | 20 | 67% |
+| ester | 4 | 13% |
+| halide | 2 | 7% |
+| aldehyde | 1 | 3% |
+
+---
+
+### Step 19: `search_ligands`
+**Args:**
+```json
+{
+  "name": "tryptophan",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 9 result(s)
+
+**stats:** 9 SQL matches · showing 9 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5907 | L-2-Amino-3-(3-indolyl)propanoic acid (Tryptophan) | HL | Amino Acids | 107 | `N[C@@H](Cc1c[nH]c2ccccc12)C(=O)O` | (-inf, H2L, 2.37, HL, 9.33, L, +inf) |
+| ligand_5945 | L-N-Acetyltryptophan | HL | Amino Acids | 7 | `CC(=O)N[C@@H](Cc1c[nH]c2ccccc12)C(=O)O` | (-inf, HL, 3.23, L, +inf) |
+| ligand_6495 | L-Tyrosyl-L-tryptophan | H2L | Peptides | 9 | `N[C@@H](Cc1ccc(O)cc1)C(=O)N[C@@H](Cc1c[nH]c2ccccc12)C(=O)O` | (-inf, H3L, 3.51, H2L, 7.37, HL, 9.91, L, +inf) |
+| ligand_6496 | L-Tyrosyl-D-tryptophan | H2L | Peptides | 9 | `N[C@@H](Cc1ccc(O)cc1)C(=O)N[C@H](Cc1c[nH]c2ccccc12)C(=O)O` | (-inf, H3L, 3.28, H2L, 7.91, HL, 10.05, L, +inf) |
+| ligand_6690 | L-Pyroglutamyl-L-hystidyl-L-tryptophanyl-L… (LHRH) | *** | polypeptides | 4 | *** | (-inf, H2L, 6.19, HL, 9.6, L, +inf) |
+| ligand_6997 | DL-2-Amino-3-(3-indol… (Tryptophanhydroxamic acid) | HL | Aliphatic amines | 7 | `N[C@@H](Cc1c[nH]c2ccccc12)C(=O)NO` | (-inf, H2L, 7.04, HL, 9.09, L, +inf) |
+| ligand_7760 | L-2-Amino-3-(3-indolyl)… (Tryptophan methyl ester) | L | Pyrroles (azoles) | 6 | `COC(=O)C(N)Cc1c[nH]c2ccccc12` | (-inf, HL, 7.3, L, +inf) |
+| ligand_10387 | Glycyl-L-tryptophan | *** | Ligands not selected | 0 | *** | *** |
+| ligand_10409 | DL-Valyl-DL-tryptophan | *** | Ligands not selected | 0 | *** | *** |
+
+### Functional groups across all SQL matches (6 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| aromatic_ring | 6 | 100% |
+| primary_amine | 5 | 83% |
+| amide | 4 | 67% |
+| carboxyl | 4 | 67% |
+| hydroxyl | 3 | 50% |
+| phenol | 2 | 33% |
+| ester | 1 | 17% |
+
+---
+
+### Step 20: `search_ligands`
+**Args:**
+```json
+{
+  "name": "phenylalanine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 10 result(s)
+
+**stats:** 37 SQL matches · showing 10 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5777 | L-2-Amino-3-phenylpropanoic acid (Phenylalanine) | HL | Amino Acids | 138 | `N[C@@H](Cc1ccccc1)C(=O)O` | (-inf, H2L, 2.18, HL, 9.09, L, +inf) |
+| ligand_5854 | L-2-Amino-3-(4-methoxyph… (4-Methoxyphenylalanine) | HL | Amino Acids | 5 | `COc1ccc(C[C@H](N)C(=O)O)cc1` | (-inf, HL, -9.15, L, +inf) |
+| ligand_5855 | DL-2-Amino-3-(3,4-di… (3,4-Dimethoxyphenylalanine) | HL | Amino Acids | 2 | `COc1ccc(C[C@H](N)C(=O)O)cc1OC` | (-inf, H2L, 2.37, HL, 9.02, L, +inf) |
+| ligand_6385 | Glycyl-L-phenylalanine | HL | Peptides | 34 | `NCC(=O)N[C@@H](Cc1ccccc1)C(=O)O` | (-inf, H2L, 2.99, HL, 8.09, L, +inf) |
+| ligand_6429 | L-Alanyl-L-phenylalanine | HL | Peptides | 13 | `C[C@H](N)C(=O)N[C@@H](Cc1ccccc1)C(=O)O` | (-inf, H2L, 3.2, HL, 7.9, L, +inf) |
+| ligand_6430 | L-Alanyl-D-phenylalanine | HL | Peptides | 13 | `C[C@H](N)C(=O)N[C@H](Cc1ccccc1)C(=O)O` | (-inf, H2L, 2.99, HL, 8.13, L, +inf) |
+| ligand_6448 | L-Valyl-L-phenylalanine | HL | Peptides | 14 | `CC(C)[C@H](N)C(=O)N[C@@H](Cc1ccccc1)C(=O)O` | (-inf, H2L, 3.19, HL, 7.89, L, +inf) |
+| ligand_6449 | L-Valyl-D-phenylalanine | HL | Peptides | 14 | `CC(C)[C@H](N)C(=O)N[C@H](Cc1ccccc1)C(=O)O` | (-inf, H2L, 2.87, HL, 8.24, L, +inf) |
+| ligand_6459 | L-Leucyl-L-phenylalanine | HL | Peptides | 32 | `CC(C)C[C@H](N)C(=O)N[C@@H](Cc1ccccc1)C(=O)O` | (-inf, H2L, 3.18, HL, 7.68, L, +inf) |
+| ligand_6460 | L-Leucyl-D-phenylalanine | HL | Peptides | 11 | `CC(C)C[C@H](N)C(=O)N[C@H](Cc1ccccc1)C(=O)O` | (-inf, H2L, 2.89, HL, 8.15, L, +inf) |
+
+### Functional groups across all SQL matches (29 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| aromatic_ring | 29 | 100% |
+| carboxyl | 26 | 90% |
+| primary_amine | 26 | 90% |
+| amide | 24 | 83% |
+| hydroxyl | 4 | 14% |
+| ester | 3 | 10% |
+| phenol | 3 | 10% |
+| secondary_amine | 2 | 7% |
+| thioether | 2 | 7% |
+
+---
+
+### Step 21: `search_ligands`
+**Args:**
+```json
+{
+  "name": "proline",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 10 result(s)
+
+**stats:** 28 SQL matches · showing 10 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5930 | L-Pyrrolidine-2-carboxylic acid (L-Proline) | HL | Amino Acids | 66 | `O=C(O)C1CCCN1` | (-inf, H2L, 1.89, HL, 10.46, L, +inf) |
+| ligand_5935 | S-(1-Carboxy-3-phenylpropyl)-L-alan… (Enalaprilat) | H2L | Amino Acids | 15 | `C[C@H](N[C@@H](CCc1ccccc1)C(=O)O)C(=O)N1CCC[C@H]1C(=O)O` | (-inf, H3L, -1.6, H2L, 3.26, HL, 7.54, L, +inf) |
+| ligand_5941 | L-4-Hydroxypyrrolidine-2-carbo… (L-Hydroxyproline) | HL | Amino Acids | 46 | `O=C(O)C1CC(O)CN1` | (-inf, H2L, 1.77, HL, 9.47, L, +inf) |
+| ligand_5942 | DL-1,3-Thiazolidine-4-carboxylic… (DL-Thiaproline) | HL | Amino Acids | 22 | `O=C(O)C1CSCN1` | (-inf, H2L, -1.5, HL, -1.5, L, +inf) |
+| ligand_6018 | L-N-Benzylproline | HL | Amino Acids | 15 | `O=C(O)[C@@H]1CCCN1Cc1ccccc1` | (-inf, H2L, 1.97, HL, 9.93, L, +inf) |
+| ligand_6388 | Glycyl-L-proline | HL | Peptides | 20 | `NCC(=O)N1CCC[C@H]1C(=O)O` | (-inf, H2L, 2.82, HL, 8.46, L, +inf) |
+| ligand_6395 | Glycyl-L-hydroxyproline | HL | Peptides | 2 | `NCC(=O)N1CC(O)C[C@H]1C(=O)O` | (-inf, H2L, 2.8, HL, 8.37, L, +inf) |
+| ligand_6431 | L-Alanyl-L-proline | HL | Peptides | 8 | `C[C@H](N)C(=O)N1CCC[C@H]1C(=O)O` | (-inf, H2L, 2.9, HL, 8.4, L, +inf) |
+| ligand_6489 | L-Tyrosyl-L-proline | H2L | Peptides | 6 | `N[C@@H](Cc1ccc(O)cc1)C(=O)N1CCC[C@H]1C(=O)O` | (-inf, H3L, 3.19, H2L, 7.81, HL, 9.91, L, +inf) |
+| ligand_6608 | Glycylglycylglycyl-L-proline | HL | polypeptides | 6 | `NCC(=O)NCC(=O)NCC(=O)N1CCC[C@H]1C(=O)O` | (-inf, H2L, 2.91, HL, 8.04, L, +inf) |
+
+### Functional groups across all SQL matches (15 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| amide | 11 | 73% |
+| carboxyl | 11 | 73% |
+| primary_amine | 6 | 40% |
+| aromatic_ring | 5 | 33% |
+| hydroxyl | 4 | 27% |
+| secondary_amine | 4 | 27% |
+| imine | 2 | 13% |
+| phenol | 2 | 13% |
+| pyridine | 1 | 7% |
+| tertiary_amine | 1 | 7% |
+| thioether | 1 | 7% |
+
+---
+
+### Step 22: `search_ligands`
+**Args:**
+```json
+{
+  "name": "asparagine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 6 result(s)
+
+**stats:** 6 SQL matches · showing 6 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5816 | D-3-Amino-3-carboxyp… (Asparagine hydroxamic acid) | H2L | Amino Acids | 17 | `NC(CC(=O)NO)C(=O)O` | (-inf, H3L, 2.18, H2L, 8.15, HL, 9.37, L, +inf) |
+| ligand_5843 | L-2-Aminobutanedioic acid 4-amide (Asparagine) | HL | Amino Acids | 92 | `NC(=O)C[C@H](N)C(=O)O` | (-inf, H2L, 2.16, HL, 8.73, L, +inf) |
+| ligand_6396 | Glycyl-L-asparagine | HL | Peptides | 40 | `NCC(=O)N[C@@H](CC(N)=O)C(=O)O` | (-inf, H2L, 3.12, HL, 8.12, L, +inf) |
+| ligand_6689 | L-Pyroglutamyl-L-alanyl-L-lysyl-L-sery… (Thymulin) | *** | polypeptides | 4 | *** | (-inf, H2L, 3.23, HL, 9.7, L, +inf) |
+| ligand_10210 | L-Isoasparagine | *** | Ligands not selected | 0 | *** | *** |
+| ligand_10397 | DL-Alanyl-DL-asparagine | *** | Ligands not selected | 0 | *** | *** |
+
+### Functional groups across all SQL matches (3 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| amide | 3 | 100% |
+| carboxyl | 3 | 100% |
+| primary_amine | 3 | 100% |
+| hydroxyl | 1 | 33% |
+
+---
+
+### Step 23: `search_ligands`
+**Args:**
+```json
+{
+  "name": "glutamine",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 3 result(s)
+
+**stats:** 3 SQL matches · showing 3 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5844 | L-2-Aminopentanedioic acid 5-amide (Glutamine) | HL | Amino Acids | 71 | `NC(=O)CC[C@H](N)C(=O)O` | (-inf, H2L, 2.19, HL, 9, L, +inf) |
+| ligand_6663 | Glycyl-L-prolylglycyl-L-prolyl-L-glutamine | *** | polypeptides | 4 | *** | (-inf, H2L, 3.22, HL, 8.29, L, +inf) |
+| ligand_6668 | L-Arginyl-L-prolyl-L-lysyl-L-prolyl-L-glutamine | *** | polypeptides | 5 | *** | (-inf, H3L, 4, H2L, 7.27, HL, 9.85, L, +inf) |
+
+### Functional groups across all SQL matches (1 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| amide | 1 | 100% |
+| carboxyl | 1 | 100% |
+| primary_amine | 1 | 100% |
+
+---
+
+### Step 24: `search_ligands`
+**Args:**
+```json
+{
+  "name": "aspartic acid",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 10 result(s)
+
+**stats:** 22 SQL matches · showing 10 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5802 | L-Aminobutanedioic acid (Aspartic acid) | H2L | Amino Acids | 174 | `N[C@@H](CC(=O)O)C(=O)O` | (-inf, H3L, 1.95, H2L, 3.71, HL, 9.66, L, +inf) |
+| ligand_5803 | DL-2-Amino-3-methylbutane… (3-Methylaspartic acid) | H2L | Amino Acids | 6 | `CC(C(=O)O)[C@H](N)C(=O)O` | (-inf, H3L, 1.99, H2L, 3.59, HL, 9.48, L, +inf) |
+| ligand_6389 | Glycyl-L-aspartic acid | H2L | Peptides | 34 | `NCC(=O)N[C@@H](CC(=O)O)C(=O)O` | (-inf, H3L, 2.8, H2L, 4.3, HL, 8.34, L, +inf) |
+| ligand_6561 | L-Aspartyl-L-aspartyl-L-aspartic acid | *** | tripeptides | 10 | *** | (-inf, H5L, -1.8, H4L, 2.04, H3L, 3.87, H2L, 4.78, HL, 8.13, L, +inf) |
+| ligand_6585 | L-Arginyl-L-lysyl-L-aspartic acid | *** | tripeptides | 11 | *** | (-inf, H4L, 2.77, H3L, 4.2, H2L, 7.44, HL, 10.49, L, +inf) |
+| ligand_6586 | D-Arginyl-L-lysyl-L-aspartic acid | *** | tripeptides | 8 | *** | (-inf, H4L, 2.76, H3L, 4.2, H2L, 7.5, HL, 10.29, L, +inf) |
+| ligand_6587 | L-Arginyl-D-lysyl-L-aspartic acid | H2L | tripeptides | 8 | `N=C(N)NCCC[C@H](N)C(=O)N[C@H](CCCCN)C(=O)N[C@@H](CC(=O)O)C(=O)O` | (-inf, H4L, 2.78, H3L, 4.07, H2L, 7.39, HL, 10.45, L, +inf) |
+| ligand_6588 | L-Arginyl-L-lysyl-D-aspartic acid | *** | tripeptides | 8 | *** | (-inf, H4L, 2.71, H3L, 4.12, H2L, 7.42, HL, 10.55, L, +inf) |
+| ligand_6621 | L-Alanyl-L-alanyl-L-alanyl-L-aspartic acid | H2L | polypeptides | 7 | `C[C@H](N)C(=O)N[C@@H](C)C(=O)N[C@@H](C)C(=O)N[C@@H](CC(=O)O)C(=O)O` | (-inf, H3L, 3.15, H2L, 4.01, HL, 8.05, L, +inf) |
+| ligand_6629 | L-Aspartyl-L-alanyl-L-alanyl-L-aspartic acid | *** | polypeptides | 9 | *** | (-inf, H4L, 3.12, H3L, 3.26, H2L, 4.64, HL, 8, L, +inf) |
+
+### Functional groups across all SQL matches (8 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 8 | 100% |
+| primary_amine | 7 | 88% |
+| amide | 5 | 62% |
+| secondary_amine | 2 | 25% |
+| aromatic_ring | 1 | 12% |
+| imine | 1 | 12% |
+
+---
+
+### Step 25: `search_ligands`
+**Args:**
+```json
+{
+  "name": "glutamic acid",
+  "limit": 10
+}
+```
+
+[summary]
+## search_ligands — 10 result(s)
+
+**stats:** 23 SQL matches · showing 10 · limit 10
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_5804 | L-2-Aminopentanedioic acid (Glutamic acid) | H2L | Amino Acids | 94 | `N[C@@H](CCC(=O)O)C(=O)O` | (-inf, H3L, 2.16, H2L, 4.15, HL, 9.58, L, +inf) |
+| ligand_5805 | DL-2-Amino-2-methylpentan… (2-Methylglutamic acid) | H2L | Amino Acids | 4 | `C[C@](N)(CCC(=O)O)C(=O)O` | (-inf, H2L, 4.05, HL, 9.72, L, +inf) |
+| ligand_5807 | DL-2-Amino-3-hydroxypent… (3-Hydroxyglutamic acid) | H2L | Amino Acids | 8 | `N[C@H](C(=O)O)C(O)CC(=O)O` | (-inf, H3L, 2.09, H2L, 4.08, HL, 9.06, L, +inf) |
+| ligand_6390 | Glycyl-L-glutamic acid | H2L | Peptides | 25 | `NCC(=O)N[C@@H](CCC(=O)O)C(=O)O` | (-inf, H3L, 2.83, H2L, 4.34, HL, 8.3, L, +inf) |
+| ligand_6485 | L-Tyrosyl-L-glutamic acid | H3L | Peptides | 11 | `N[C@@H](Cc1ccc(O)cc1)C(=O)N[C@@H](CCC(=O)O)C(=O)O` | (-inf, H4L, 3.17, H3L, 4.48, H2L, 7.69, HL, 10.09, L, +inf) |
+| ligand_6486 | L-Tyrosyl-D-glutamic acid | H3L | Peptides | 11 | `N[C@@H](Cc1ccc(O)cc1)C(=O)N[C@H](CCC(=O)O)C(=O)O` | (-inf, H4L, 2.85, H3L, 4.65, H2L, 7.85, HL, 10.17, L, +inf) |
+| ligand_6503 | L-Seryl-L-glutamic acid | H2L | Peptides | 3 | `N[C@@H](CO)C(=O)N[C@@H](CCC(=O)O)C(=O)O` | (-inf, H3L, 2.94, H2L, 4.34, HL, 7.42, L, +inf) |
+| ligand_6504 | L-P… (L-Seryl-L-glutamic acid dihydrogenphosphate) | H4L | Peptides | 25 | `NC(COP(=O)(O)O)C(=O)NC(CCC(=O)O)C(=O)O` | (-inf, H4L, 3.04, H3L, 4.4, H2L, 5.69, HL, 8.22, L, +inf) |
+| ligand_6662 | Glycyl-L-prolylglycyl-L-prolylglutamic acid | H2L | polypeptides | 5 | `NCC(=O)N1CCC[C@H]1C(=O)NCC(=O)N1CCC[C@H]1C(=O)N[C@@H](CCC(=O)O)C(=O)O` | (-inf, H3L, 2.46, H2L, 4.4, HL, 8.53, L, +inf) |
+| ligand_6938 | DL-Glutamic acid dimethyl ester | L | Aliphatic amines | 1 | `COC(=O)CCC(N)C(=O)OC` | (-inf, HL, 7.03, L, +inf) |
+
+### Functional groups across all SQL matches (17 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 15 | 88% |
+| amide | 12 | 71% |
+| primary_amine | 11 | 65% |
+| aromatic_ring | 5 | 29% |
+| hydroxyl | 5 | 29% |
+| ester | 2 | 12% |
+| phenol | 2 | 12% |
+| phosphate | 1 | 6% |
+| tertiary_amine | 1 | 6% |
+
+---
+
+### Step 27: `build_system_catalog`
+**Args:**
+```json
+{
+  "metal_id": "metal_208"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 20 pair(s), 94 species *(ultra-compact)*
+
+### Equation legend
+
+| beta_def_id | equation | note |
+|-------------|----------|------|
+| beta_def_204 | [MHL2] + [H] <=> [M(HL)2] |  |
+| beta_def_238 | [M(OH)2L] + [H] <=> [M(OH)L] + [H2O] |  |
+| beta_def_334 | [ML2(s)] <=> [M] + [L]^2 | solid |
+| beta_def_337 | [ML2(s,am)] <=> [M] + [L]^2 | solid |
+| beta_def_340 | [ML2(s,beta1)] <=> [M] + [L]^2 | solid |
+| beta_def_341 | [ML2(s,beta2)] <=> [M] + [L]^2 | solid |
+| beta_def_343 | [ML2(s,delta)] <=> [M] + [L]^2 | solid |
+| beta_def_344 | [ML2(s,epsilon)] <=> [M] + [L]^2 | solid |
+| beta_def_345 | [ML2(s,gamma)] <=> [M] + [L]^2 | solid |
+| beta_def_347 | [MO(s)] + [H2O] <=> [M] + [OH]^2 | solid |
+| beta_def_374 | [M]^2 + [L]^2 <=> [M2(H-1L)2] + [H]^2 |  |
+| beta_def_502 | [M]^2 + [L] <=> [M2L] |  |
+| beta_def_636 | [M]^3 + [H] + [L]^4 <=> [M3HL4] |  |
+| beta_def_637 | [M3L4] + [H] <=> [M3HL4] |  |
+| beta_def_651 | [M3(OH)L4] + [H] <=> [M3L4] + [H2O] |  |
+| beta_def_674 | [M]^4 + [L]^4 <=> [M4L4] |  |
+| beta_def_739 | [MHL] + [H] <=> [MH2L] |  |
+| beta_def_751 | [MH2L] + [H] <=> [MH3L] |  |
+| beta_def_765 | [MH3L] + [H] <=> [MH4L] |  |
+| beta_def_779 | [M] + [HL] <=> [MHL] |  |
+| beta_def_788 | [ML] + [H] <=> [MHL] |  |
+| beta_def_792 | [ML2] + [H] <=> [MHL2] |  |
+| beta_def_812 | [M] + [L] <=> [ML] |  |
+| beta_def_840 | [M] + [L]^2 <=> [ML2] |  |
+| beta_def_872 | [M] + [L]^3 <=> [ML3] |  |
+| beta_def_894 | [M] + [L]^4 <=> [ML4] |  |
+| beta_def_966 | [M(OH)L] + [H] <=> [ML] + [H2O] |  |
+| beta_def_984 | [M(OH)L2] + [H] <=> [ML2] + [H2O] |  |
+
+*(all species aqueous unless noted)*
+
+**1. Zn^[2+] + Aminoacetic acid (Glycine)** (metal_208 + ligand_5760) — ligand_def_HxL: HL | 37 ent, 4 sp, 37 vlms (vlm_93924…vlm_93960)
+   - species: beta_def_812(12) beta_def_840(13) beta_def_872(11) beta_def_966(1)
+   - eq:7 nets T:5~45°C I:-0.15~1.15M max 4n/4e
+**2. Zn^[2+] + Ethylenediamine** (metal_208 + ligand_7029) — ligand_def_HxL: L | 36 ent, 3 sp, 36 vlms (vlm_122508…vlm_122543)
+   - species: beta_def_812(12) beta_def_840(12) beta_def_872(12)
+   - eq:8 nets T:19~41°C I:-0.15~3.15M max 3n/3e
+**3. Zn^[2+] + Hydroxide ion** (metal_208 + ligand_10076) — ligand_def_HxL: *** | 33 ent, 13 sp, 33 vlms (vlm_170929…vlm_170961)
+   - species: beta_def_337(4) beta_def_340(2) beta_def_341(2) beta_def_343(2) beta_def_344(2) beta_def_345(2) beta_def_347(4) beta_def_502(3) beta_def_674(1) beta_def_812(5) beta_def_840(2) beta_def_872(2) beta_def_894(2)
+   - eq:4 nets T:19~30°C I:-0.15~3.15M max 11n/55e
+**4. Zn^[2+] + Hydrogen cyanide (Hydrocyanic acid)** (metal_208 + ligand_10090) — ligand_def_HxL: HL | 30 ent, 5 sp, 30 vlms (vlm_171980…vlm_172009)
+   - species: beta_def_334(1) beta_def_812(2) beta_def_840(9) beta_def_872(9) beta_def_894(9)
+   - eq:5 nets T:5~45°C I:-0.15~3.15M max 5n/10e
+**5. Zn^[2+] + 1,3-Diazole (Imidazole)** (metal_208 + ligand_7795) — ligand_def_HxL: L | 30 ent, 4 sp, 30 vlms (vlm_133954…vlm_133983)
+   - species: beta_def_812(9) beta_def_840(7) beta_def_872(7) beta_def_894(7)
+   - eq:7 nets T:19~41°C I:-0.05~3.15M max 4n/6e
+**6. Zn^[2+] + L-2-Amino-3-(4-imidazolyl)propanoic acid (Histidine)** (metal_208 + ligand_5898) — ligand_def_HxL: HL | 29 ent, 6 sp, 29 vlms (vlm_98899…vlm_98927)
+   - species: beta_def_204(1) beta_def_788(4) beta_def_792(3) beta_def_812(8) beta_def_840(12) beta_def_984(1)
+   - eq:6 nets T:19~41°C I:-0.05~3.15M max 5n/6e
+**7. Zn^[2+] + Hydrogen thiocyanate (Thiocyanic acid)** (metal_208 + ligand_10092) — ligand_def_HxL: HL | 24 ent, 4 sp, 24 vlms (vlm_172381…vlm_172404)
+   - species: beta_def_812(8) beta_def_840(6) beta_def_872(5) beta_def_894(5)
+   - eq:6 nets T:19~30°C I:-0.15~5.15M max 4n/6e
+**8. Zn^[2+] + L-2-Amino-3-mercaptopropanoic acid (Cysteine)** (metal_208 + ligand_5856) — ligand_def_HxL: H2L | 23 ent, 8 sp, 23 vlms (vlm_97446…vlm_97468)
+   - species: beta_def_204(4) beta_def_636(4) beta_def_637(3) beta_def_651(1) beta_def_779(2) beta_def_792(4) beta_def_812(1) beta_def_840(4)
+   - eq:4 nets T:15~41°C I:-0.05~3.15M max 7n/14e
+**9. Zn^[2+] + Ammonia** (metal_208 + ligand_10103) — ligand_def_HxL: L | 21 ent, 4 sp, 21 vlms (vlm_173394…vlm_173414)
+   - species: beta_def_812(6) beta_def_840(5) beta_def_872(5) beta_def_894(5)
+   - eq:4 nets T:19~30°C I:-0.15~2.15M max 4n/6e
+**10. Zn^[2+] + Nitrilotris(methylenephosphonic acid) (NTP)** (metal_208 + ligand_8412) — ligand_def_HxL: H6L | 21 ent, 5 sp, 21 vlms (vlm_143422…vlm_143442)
+   - species: beta_def_739(2) beta_def_751(2) beta_def_765(1) beta_def_788(7) beta_def_812(9)
+   - eq:2 nets T:19~30°C I:-0.15~0.25M max 5n/7e
+**11. Zn^[2+] + Iminodiacetic acid (IDA)** (metal_208 + ligand_6127) — ligand_def_HxL: H2L | 20 ent, 2 sp, 20 vlms (vlm_104424…vlm_104443)
+   - species: beta_def_812(10) beta_def_840(10)
+   - eq:3 nets T:19~41°C I:-0.05~1.15M max 2n/1e
+**12. Zn^[2+] + 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid)** (metal_208 + ligand_9058) — ligand_def_HxL: H3L | 19 ent, 4 sp, 19 vlms (vlm_157746…vlm_157764)
+   - species: beta_def_374(3) beta_def_779(5) beta_def_812(6) beta_def_840(5)
+   - eq:4 nets T:19~41°C I:-0.05~0.65M max 4n/6e
+**13. Zn^[2+] + 1,10-Phenanthroline (Dipyridino[a,c]benzene)** (metal_208 + ligand_8191) — ligand_def_HxL: L | 19 ent, 3 sp, 19 vlms (vlm_139340…vlm_139358)
+   - species: beta_def_812(7) beta_def_840(6) beta_def_872(6)
+   - eq:3 nets T:19~30°C I:-0.15~1.15M max 3n/3e
+**14. Zn^[2+] + L-2-Aminopropanoic acid (Alanine)** (metal_208 + ligand_5761) — ligand_def_HxL: HL | 19 ent, 4 sp, 19 vlms (vlm_94305…vlm_94323)
+   - species: beta_def_812(7) beta_def_840(7) beta_def_872(3) beta_def_966(2)
+   - eq:5 nets T:19~41°C I:-0.15~1.15M max 4n/4e
+**15. Zn^[2+] + 2,2'-Bipyridyl** (metal_208 + ligand_8156) — ligand_def_HxL: L | 18 ent, 3 sp, 18 vlms (vlm_138658…vlm_138675)
+   - species: beta_def_812(6) beta_def_840(6) beta_def_872(6)
+   - eq:2 nets T:19~30°C I:-0.05~1.15M max 3n/3e
+**16. Zn^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)** (metal_208 + ligand_6277) — ligand_def_HxL: H4L | 18 ent, 4 sp, 18 vlms (vlm_108707…vlm_108724)
+   - species: beta_def_739(1) beta_def_788(5) beta_def_812(6) beta_def_966(6)
+   - eq:5 nets T:19~30°C I:-0.15~3.15M max 4n/5e
+**17. Zn^[2+] + N-(2-Hydroxyethyl)iminodiacetic acid (HIDA)** (metal_208 + ligand_6204) — ligand_def_HxL: H2L | 18 ent, 4 sp, 18 vlms (vlm_106769…vlm_106786)
+   - species: beta_def_238(1) beta_def_812(8) beta_def_840(8) beta_def_966(1)
+   - eq:1 nets T:20~30°C I:-0.05~0.25M max 4n/3e
+**18. Zn^[2+] + D-2-Amino-3-mercapto-3-methylbutanoic acid (Penicillamine)** (metal_208 + ligand_5857) — ligand_def_HxL: H2L | 18 ent, 8 sp, 18 vlms (vlm_97593…vlm_97610)
+   - species: beta_def_204(4) beta_def_636(1) beta_def_637(1) beta_def_779(2) beta_def_792(4) beta_def_812(1) beta_def_840(4) beta_def_984(1)
+   - eq:4 nets T:15~41°C I:-0.05~3.15M max 6n/13e
+**19. Zn^[2+] + Ethanoic acid (Acetic acid)** (metal_208 + ligand_8465) — ligand_def_HxL: HL | 17 ent, 3 sp, 17 vlms (vlm_144834…vlm_144850)
+   - species: beta_def_812(8) beta_def_840(6) beta_def_872(3)
+   - eq:6 nets T:19~30°C I:-0.15~3.15M max 3n/3e
+**20. Zn^[2+] + DL-Methylethylenediamine (1,2-Propylenediamine) (pn)** (metal_208 + ligand_7030) — ligand_def_HxL: L | 17 ent, 3 sp, 17 vlms (vlm_122671…vlm_122687)
+   - species: beta_def_812(8) beta_def_840(8) beta_def_872(1)
+   - eq:8 nets T:19~35°C I:-0.15~2.15M max 3n/3e
+
+---
+
+### Step 28: `build_system_catalog`
+**Args:**
+```json
+{
+  "metal_id": "metal_68"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 20 pair(s), 92 species *(ultra-compact)*
+
+### Equation legend
+
+| beta_def_id | equation | note |
+|-------------|----------|------|
+| beta_def_32 | [HL] + [H] <=> [H2L] |  |
+| beta_def_33 | [CO2(g)] + [H2O] <=> [H2L] | gas |
+| beta_def_50 | * |  |
+| beta_def_51 | [HV10O28] + [H] <=> [H2V10O28] |  |
+| beta_def_53 | [H2L] + [H] <=> [H3L] |  |
+| beta_def_61 | [H2V10O28] + [H] <=> [H3V10O28] |  |
+| beta_def_64 | [H3L] + [H] <=> [H4L] |  |
+| beta_def_68 | [H4L] + [H] <=> [H5L] |  |
+| beta_def_72 | [H5L] + [H] <=> [H6L] |  |
+| beta_def_73 | [H4L] + [H]^2 <=> [H6L] |  |
+| beta_def_76 | [H6L] + [H] <=> [H7L] |  |
+| beta_def_77 | [H7L] + [H] <=> [H8L] |  |
+| beta_def_79 | [L] + [H] <=> [HL] |  |
+| beta_def_95 | [V10O28] + [H] <=> [HV10O28] |  |
+| beta_def_96 | [V2O7] + [H] <=> [HV2O7] |  |
+| beta_def_97 | [V4O13] + [H] <=> [HV4O13] |  |
+| beta_def_1013 | [HL]^2 <=> [V2O7] + [H2O] |  |
+| beta_def_1014 | [H2L]^4 <=> [V4O12] + [H2O]^4 |  |
+| beta_def_1015 | [HV4O13] + [H] <=> [V4O12] + [H2O] |  |
+| beta_def_1016 | [H2L]^5 <=> [V5O15] + [H2O]^5 |  |
+| beta_def_1017 | * |  |
+| beta_def_1018 | [H2L] + [H]^2 <=> [VO2] + [H2O]^2 |  |
+
+*(all species aqueous unless noted)*
+
+**1. H^[+] + Hydrogen vanadate (Vanadic acid)** (metal_68 + ligand_10077) — ligand_def_HxL: H3L | 92 ent, 14 sp, 92 vlms (vlm_171266…vlm_171357)
+   - species: beta_def_32(12) beta_def_50(4) beta_def_51(10) beta_def_61(2) beta_def_79(13) beta_def_95(10) beta_def_96(5) beta_def_97(4) beta_def_1013(7) beta_def_1014(10) beta_def_1015(3) beta_def_1016(4) beta_def_1017(3) beta_def_1018(5)
+   - eq:21 nets T:15~30°C I:-0.05~3.15M max 12n/50e
+**2. H^[+] + Hydrogen phosphate (Phosphoric acid)** (metal_68 + ligand_10113) — ligand_def_HxL: H3L | 84 ent, 4 sp, 84 vlms (vlm_174186…vlm_174269)
+   - species: beta_def_32(31) beta_def_53(24) beta_def_64(1) beta_def_79(28)
+   - eq:21 nets T:5~45°C I:-0.15~5.15M max 4n/6e
+**3. H^[+] + Ethylenedinitrilotetraacetic acid (EDTA)** (metal_68 + ligand_6277) — ligand_def_HxL: H4L | 75 ent, 6 sp, 75 vlms (vlm_108224…vlm_108298)
+   - species: beta_def_32(18) beta_def_53(10) beta_def_64(7) beta_def_68(6) beta_def_72(4) beta_def_79(30)
+   - eq:14 nets T:19~41°C I:-0.15~3.15M max 6n/15e
+**4. H^[+] + 1,4,7,10,13,16-Hexaazahexadecane (Pentaethylenehexamine) (2,2,2,2,2-hex)** (metal_68 + ligand_7246) — ligand_def_HxL: L | 72 ent, 6 sp, 72 vlms (vlm_126593…vlm_126664)
+   - species: beta_def_32(12) beta_def_53(12) beta_def_64(12) beta_def_68(12) beta_def_72(12) beta_def_79(12)
+   - eq:4 nets T:19~30°C I:-0.15~1.15M max 6n/15e
+**5. H^[+] + Nitrilotriacetic acid (NTA)** (metal_68 + ligand_6165) — ligand_def_HxL: H3L | 72 ent, 4 sp, 72 vlms (vlm_105158…vlm_105229)
+   - species: beta_def_32(18) beta_def_53(19) beta_def_64(7) beta_def_79(28)
+   - eq:15 nets T:15~41°C I:-0.15~3.15M max 4n/6e
+**6. H^[+] + N-(Phosphonomethyl)glycine (Glyphosate)** (metal_68 + ligand_5937) — ligand_def_HxL: H3L | 70 ent, 4 sp, 70 vlms (vlm_99687…vlm_99756)
+   - species: beta_def_32(22) beta_def_53(22) beta_def_64(1) beta_def_79(25)
+   - eq:13 nets T:19~30°C I:-0.15~5.15M max 4n/6e
+**7. H^[+] + 1,4,7,10,13-Pentaazatridecane (Tetraethylenepentamine)(tetren)(2,2,2,2-pent)** (metal_68 + ligand_7244) — ligand_def_HxL: L | 65 ent, 5 sp, 65 vlms (vlm_126479…vlm_126543)
+   - species: beta_def_32(13) beta_def_53(13) beta_def_64(13) beta_def_68(13) beta_def_79(13)
+   - eq:5 nets T:19~41°C I:-0.15~1.15M max 5n/10e
+**8. H^[+] + Iminobis(methylenephosphonic acid) (IDP)** (metal_68 + ligand_8380) — ligand_def_HxL: H4L | 64 ent, 5 sp, 64 vlms (vlm_142412…vlm_142475)
+   - species: beta_def_32(17) beta_def_53(15) beta_def_64(15) beta_def_68(2) beta_def_79(15)
+   - eq:4 nets T:19~30°C I:-0.15~1.15M max 5n/10e
+**9. H^[+] + Butanedioic acid (Succinic acid)** (metal_68 + ligand_8907) — ligand_def_HxL: H2L | 60 ent, 2 sp, 60 vlms (vlm_153268…vlm_153327)
+   - species: beta_def_32(28) beta_def_79(32)
+   - eq:22 nets T:5~45°C I:-0.15~4.15M max 2n/1e
+**10. H^[+] + Hydrogen diphosphate (Pyrophosphoric acid)** (metal_68 + ligand_10114) — ligand_def_HxL: H4L | 59 ent, 4 sp, 59 vlms (vlm_174571…vlm_174629)
+   - species: beta_def_32(21) beta_def_53(9) beta_def_64(7) beta_def_79(22)
+   - eq:16 nets T:19~30°C I:-0.15~3.15M max 4n/6e
+**11. H^[+] + Propanedioic acid (Malonic acid)** (metal_68 + ligand_8873) — ligand_def_HxL: H2L | 59 ent, 2 sp, 59 vlms (vlm_151918…vlm_151976)
+   - species: beta_def_32(28) beta_def_79(31)
+   - eq:21 nets T:5~45°C I:-0.15~3.15M max 2n/1e
+**12. H^[+] + Nitrilotris(methylenephosphonic acid) (NTP)** (metal_68 + ligand_8412) — ligand_def_HxL: H6L | 59 ent, 6 sp, 59 vlms (vlm_143208…vlm_143266)
+   - species: beta_def_32(13) beta_def_53(12) beta_def_64(12) beta_def_68(3) beta_def_73(6) beta_def_79(13)
+   - eq:3 nets T:19~30°C I:-0.15~1.15M max 6n/15e
+**13. H^[+] + Diethylenetrinitrilopentaacetic acid (DTPA)** (metal_68 + ligand_6356) — ligand_def_HxL: H5L | 57 ent, 8 sp, 57 vlms (vlm_112470…vlm_112526)
+   - species: beta_def_32(14) beta_def_53(8) beta_def_64(8) beta_def_68(8) beta_def_72(2) beta_def_76(2) beta_def_77(1) beta_def_79(14)
+   - eq:10 nets T:15~41°C I:-0.05~1.15M max 8n/28e
+**14. H^[+] + Ethanedioic acid (Oxalic acid)** (metal_68 + ligand_8872) — ligand_def_HxL: H2L | 56 ent, 2 sp, 56 vlms (vlm_151494…vlm_151549)
+   - species: beta_def_32(18) beta_def_79(38)
+   - eq:25 nets T:5~45°C I:-0.15~9.15M max 2n/1e
+**15. H^[+] + 1-Hydroxyethane-1,1-diphosphonic acid (Etidronic acid)** (metal_68 + ligand_9142) — ligand_def_HxL: H4L | 54 ent, 4 sp, 54 vlms (vlm_159111…vlm_159164)
+   - species: beta_def_32(17) beta_def_53(15) beta_def_64(13) beta_def_79(9)
+   - eq:7 nets T:19~30°C I:-0.15~2.15M max 4n/6e
+**16. H^[+] + L-2-Amino-3-(4-imidazolyl)propanoic acid (Histidine)** (metal_68 + ligand_5898) — ligand_def_HxL: HL | 51 ent, 3 sp, 51 vlms (vlm_98706…vlm_98756)
+   - species: beta_def_32(17) beta_def_53(17) beta_def_79(17)
+   - eq:6 nets T:19~41°C I:-0.15~3.15M max 3n/3e
+**17. H^[+] + Hydrogen triphosphate (Triphosphoric acid)** (metal_68 + ligand_10117) — ligand_def_HxL: H5L | 50 ent, 5 sp, 50 vlms (vlm_174813…vlm_174862)
+   - species: beta_def_32(16) beta_def_53(6) beta_def_64(6) beta_def_68(6) beta_def_79(16)
+   - eq:10 nets T:19~30°C I:-0.15~1.15M max 5n/10e
+**18. H^[+] + Hydrogen carbonate (Carbonic acid)** (metal_68 + ligand_10096) — ligand_def_HxL: H2L | 48 ent, 3 sp, 48 vlms (vlm_172612…vlm_172659)
+   - species: beta_def_32(18) beta_def_33(10) beta_def_79(20)
+   - eq:16 nets T:5~45°C I:-0.15~5.15M max 3n/2e
+**19. H^[+] + 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid)** (metal_68 + ligand_9058) — ligand_def_HxL: H3L | 48 ent, 3 sp, 48 vlms (vlm_157439…vlm_157486)
+   - species: beta_def_32(14) beta_def_53(14) beta_def_79(20)
+   - eq:14 nets T:13~41°C I:-0.15~3.15M max 3n/3e
+**20. H^[+] + Aminoacetic acid (Glycine)** (metal_68 + ligand_5760) — ligand_def_HxL: HL | 48 ent, 2 sp, 48 vlms (vlm_93606…vlm_93653)
+   - species: beta_def_32(27) beta_def_79(21)
+   - eq:15 nets T:5~45°C I:-0.15~3.15M max 2n/1e
+
+---
+
+### Step 30: `search_stability`
+**Args:**
+```json
+{
+  "where": "(c.metal_id = metal_208 AND c.ligand_id = ligand_5760 AND c.beta_definition_id = beta_def_812)",
+  "limit": 1
+}
+```
+
+[summary]
+## search_stability — 1 row(s)
+
+### `Zn^[2+]` + Aminoacetic acid (Glycine) — 1 measurement(s)
+metal_id: metal_208 | ligand_id: ligand_5760
+ligand_HxL_def: HL | ligand_SMILES: NCC(=O)O
+
+| vlm_id | ref_eq_map | beta_def | type | value | T°C | I(M) | equation | non_aqueous_phases | HxL_involved | pKa_bracket_involved |
+|--------|------------|----------|------|-------|-----|------|----------|--------------------|--------------|-------------|
+| vlm_93924 | ref_eq_map_112 | beta_def_812 | logK | 4.96 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.57, L, +inf) |
+
+---

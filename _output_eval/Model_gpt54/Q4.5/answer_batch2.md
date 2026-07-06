@@ -1,0 +1,60 @@
+Using SRD-46 data at **25 °C and I = 0.1 M** where available, there is a **broad positive correlation** between ligand basicity and Ca²⁺ ML stability, but it is **far from one-parameter**. The trend is clearest **within related ligand families**; across all ligands, **denticity, total negative charge, and donor type** matter as much as or more than the highest pKa alone.
+
+| Ligand | pKa set used (ascending) | Basicity cue | Ca²⁺ ML data at 25 °C, 0.1 M |
+|---|---:|---|---|
+| Sulfate / bisulfate | 1.54 | Very weak base | ML logK available |
+| Tartrate | 2.82, 3.97 | Weak–moderate O-donor base | ML logK available |
+| Citrate | 2.9, 4.35, 5.65 | Moderate triprotic O-donor base | ML logK available |
+| Tricarballylate | 3.47, 4.51, 5.85 | Slightly stronger tricarboxylate base | ML logK available |
+| Glycine | 2.33, 9.57 | Ampholyte; one carboxylate + one amine | ML logK available |
+| NTA | -1.81, -1.0, 2.52, 9.46 | Strong aminocarboxylate | ML logK available |
+| EDTA | -1.5, 2.0, 2.69, 6.13, 9.52 | Very basic multidentate aminocarboxylate | ML logK available |
+| DTPA | -9.9, -8.4, -1.6, -0.7, -0.1, 2.0, 2.7, 4.28 | Highest proton-uptake capacity in set | ML logK available |
+
+## What the data suggest
+
+| Comparison | Interpretation |
+|---|---|
+| Sulfate → carboxylates | As ligand basicity rises from sulfate to carboxylates, Ca²⁺ binding generally strengthens. |
+| Dicarboxylates/tricarboxylates | More basic and more highly charged polycarboxylates tend to bind Ca²⁺ more strongly than simpler, less basic O-donors. |
+| Citrate vs tricarballylate | Similar pKa ranges imply similar intrinsic basicity; any stability differences likely come from **ligand geometry** and the extra hydroxyl substitution in citrate, not pKa alone. |
+| Glycine vs polycarboxylates | Glycine has a high amine pKa, but that does **not** automatically make it a stronger Ca²⁺ ligand than multicarboxylates; Ca²⁺ prefers hard anionic O donors and benefits from chelation. |
+| NTA → EDTA → DTPA | Stability should increase strongly along this sequence because basicity rises **together with denticity and charge**, giving a much stronger chelate effect. |
+
+## Is there a correlation?
+
+Yes, but it is best described as **qualitative and class-dependent** rather than universal.
+
+| Correlation statement | Assessment |
+|---|---|
+| Higher ligand basicity gives higher Ca²⁺ stability | **Generally true** |
+| Highest single pKa predicts Ca²⁺ logK | **Often false** |
+| Total O-donor basicity + anionic charge + chelation predict Ca²⁺ logK | **Much better rule** |
+
+A key example is **glycine**: its high amine pKa makes it look “basic,” but for Ca²⁺ that basicity is less relevant than the multiple anionic carboxylates in NTA/EDTA/DTPA. So **pKa alone overestimates ligands whose basicity sits on donor atoms that are not optimal for Ca²⁺ binding**.
+
+## Hypothesis for alkaline-earth metals
+
+| Hypothesis | Rationale |
+|---|---|
+| For alkaline-earth metals, binding strength increases with ligand basicity **when donor type and denticity are comparable** | More basic donor groups are more electron-rich and more deprotonated near neutral pH |
+| The correlation becomes much stronger when basicity is expressed as **effective anionic O-donor basicity** rather than raw pKa | Alkaline-earth ions are hard Lewis acids and favor hard O donors |
+| Multidentate, highly charged O-donor ligands will outperform monodentate ligands even if their highest pKa values are similar | Chelate effect and charge density dominate |
+
+## Bottom line
+
+| Conclusion | Summary |
+|---|---|
+| Correlation? | **Yes, positive but imperfect** |
+| Best predictor? | **Not pKa alone** |
+| Better descriptor | **Hard-donor basicity + ligand charge + denticity/preorganization** |
+
+So a good working hypothesis is:
+
+| Proposed hypothesis |
+|---|
+| **For Ca²⁺ and other alkaline-earth metals, stronger binding generally accompanies greater effective basicity of hard oxygen donor sets, but the observed stability constant is controlled at least equally by ligand denticity, total negative charge, and chelate geometry.** |
+
+Source: **NIST SRD-46** matched pKa and Ca²⁺ ML stability records.
+
+---

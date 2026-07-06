@@ -1,0 +1,112 @@
+# 🧪 Mercury Complexes — A Data-Driven Overview
+
+*Source: NIST SRD-46 (Critically Selected Stability Constants of Metal Complexes)*
+
+---
+
+## Mercury Species in SRD-46
+
+The database contains **five mercury-containing metal entities**, spanning inorganic and organomercury chemistry:
+
+| Species | metal_id | Charge | Ligand Partners | VLM Measurements | β-Definitions |
+|---------|----------|--------|-----------------|------------------|---------------|
+| Hg²⁺ (mercury(II)) | metal_71 | +2 | 310 | 1,097 | 68 |
+| MeHg⁺ (methylmercury) | metal_93 | +1 | 79 | 148 | 18 |
+| Hg⁺ (mercury(I)) | metal_72 | +1 | 31 | 83 | 12 |
+| PhHg⁺ (phenylmercury) | metal_136 | +1 | 8 | 8 | 2 |
+| EtHg⁺ (ethylmercury) | metal_53 | +1 | 3 | 6 | 4 |
+
+**Hg(II) dominates** with ~10× more data than any other mercury species, reflecting its rich aqueous coordination chemistry.
+
+---
+
+## Hg(II) — Ligand Class Coverage
+
+| Ligand Class | # Ligands | # VLMs |
+|---|---|---|
+| Polydentate | 90 | 1,421 |
+| Sulfur donors | 65 | 1,277 |
+| Carboxylic acids | 63 | 1,048 |
+| Amines | 55 | 1,044 |
+| Inorganic | 43 | 1,059 |
+| Heterocyclic N-donors | 34 | 360 |
+| Amino acids | 26 | 344 |
+| Macrocycles | 16 | 218 |
+| Phosphorus donors | 11 | 90 |
+| Nucleotides | 9 | 68 |
+
+---
+
+## Hg(II) — Stability Constants for Key Inorganic Ligands (25°C, I ≈ 0 M)
+
+These values showcase Hg(II)'s hallmark **soft Lewis acid** character:
+
+| Ligand | HgL (log β₁) | HgL₂ (log β₂) | HgL₃ (log β₃) | HgL₄ (log β₄) |
+|--------|-------------|--------------|--------------|--------------|
+| Cyanide (CN⁻) | 18.0 | 32.75 | 38.3 | 41.5 |
+| Sulfide (S²⁻) | ~51.8–53.5 | — | — | — |
+| Iodide (I⁻) | ~12.9 | — | — | — |
+| Thiocyanate (SCN⁻) | ~9–10 | — | — | — |
+| Chloride (Cl⁻) | ~6.7 | — | — | — |
+| Bromide (Br⁻) | ~9.0 | — | — | — |
+
+The cyanide series is particularly striking: log β₄ = **41.5** for [Hg(CN)₄]²⁻, meaning this complex is stable by a factor of 10⁴¹·⁵ over free ions — one of the largest stability constants in all of coordination chemistry.
+
+---
+
+## Hg(II) — EDTA and Ammonia
+
+| Ligand | Complex | log β | T (°C) | Ionic Strength |
+|--------|---------|-------|--------|----------------|
+| EDTA | HgL (ML) | **21.8** | 25 | 0.1 M KNO₃ |
+| Ammonia | HgL₄ (ML₄) | ~19.3 | 25 | ~0–2 M |
+
+The EDTA value (log β = 21.8) is among the highest for any divalent metal with EDTA, reflecting Hg(II)'s strong Lewis acidity.
+
+---
+
+## Hg(II) — Stoichiometry Distribution
+
+| Complex Type | # Measurements | Notes |
+|---|---|---|
+| ML (1:1) | 3,745 | Most common |
+| ML₂ (1:2) | 2,427 | Linear geometry favored |
+| ML₃ (1:3) | 536 | Trigonal |
+| ML₄ (1:4) | 200 | Tetrahedral |
+| MHL (protonated) | 258 | Mixed species |
+| ML(OH) (hydroxo) | 116 | Hydrolysis products |
+| M₂L (dinuclear) | 37 | Bridged species |
+
+---
+
+## Mercury(I) — Hg⁺ / Hg₂²⁺
+
+Mercury(I) exists as the **Hg₂²⁺ dimer** and forms far fewer, generally weaker complexes. Its chemistry is dominated by sparingly soluble salts:
+
+| Ligand | Key Species | Notes |
+|--------|-------------|-------|
+| Chloride | Hg₂Cl₂(s) | Calomel — classic analytical reagent |
+| Bromide | Hg₂Br₂(s) | Sparingly soluble |
+| Iodide | Hg₂I₂(s) | Sparingly soluble |
+| Acetic acid | Hg₂L₂(s), ML, ML₂ | 7 VLMs |
+| Sulfate | Hg₂SO₄(s) | 6 VLMs |
+| 18-Crown-6 (A & B isomers) | ML, ML₂ | 6 VLMs each — macrocycle binding |
+| Hydroxide | ML, M₅L₄, M₂L | Complex hydrolysis |
+
+---
+
+## Organomercury — MeHg⁺
+
+Methylmercury (metal_93) is the most data-rich organomercury species with **79 ligand partners and 148 VLMs**. It forms strong 1:1 complexes with sulfur donors (thiolates, cysteine residues), which is the molecular basis of its neurotoxicity and bioaccumulation in the food chain.
+
+---
+
+## 🔬 Chemistry Insights
+
+1. **Hg(II) is the archetypal soft Lewis acid** (HSAB theory): the log β₁ series for halides follows I⁻ > Br⁻ > Cl⁻ >> F⁻, and sulfide forms one of the largest known stability constants (log β > 51), explaining why HgS (cinnabar) is essentially insoluble and why mercury is found naturally as this mineral.
+
+2. **Linear 2-coordination is the signature geometry** of Hg(II): the ML₂ stoichiometry accounts for 2,427 measurements, and Hg(II) strongly prefers sp-hybridized linear coordination with soft donors (CN⁻, RS⁻, I⁻), though it can expand to tetrahedral ML₄ with weaker donors like ammonia or chloride.
+
+3. **Methylmercury's selectivity for sulfur** — with 79 ligand partners documented — underpins its environmental danger: it crosses the blood-brain barrier by mimicking amino acid transport, binds irreversibly to cysteine thiols in neuroproteins, and bioaccumulates up the food chain because the Hg–C bond is kinetically inert to hydrolysis under physiological conditions.
+
+---

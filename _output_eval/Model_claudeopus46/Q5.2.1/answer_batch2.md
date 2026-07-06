@@ -1,0 +1,23 @@
+# Stability Constants of Uranium(VI) with Crown Ethers
+
+## Result
+
+**The NIST SRD-46 database contains no aqueous stability constant data for uranium(VI) (UO₂²⁺) with any crown ether ligands.**
+
+I searched for UO₂²⁺ (metal_195) paired with all crown ethers available in the database — including 12-Crown-4, 15-Crown-5, 18-Crown-6, dicyclohexyl-18-crown-6 (A and B isomers), benzo- and dibenzo-18-crown-6, and others — and found zero entries. The system catalog confirmed no metal–ligand pairs exist for this combination.
+
+## Why the data gap?
+
+This absence is not surprising from a chemistry perspective:
+
+1. **Aqueous vs. non-aqueous systems:** Crown ether–uranyl complexes are primarily studied in **non-aqueous or mixed solvents** (e.g., nitrobenzene, chloroform) and in **solvent extraction** contexts, which fall outside the scope of SRD-46's aqueous equilibrium database.
+
+2. **Weak aqueous binding:** In aqueous solution, UO₂²⁺ is a hard, linear dioxo cation that preferentially coordinates with hard oxygen/nitrogen donors in its equatorial plane. Crown ethers, while offering oxygen donors, have cavity sizes and geometries that are not well-matched to the unique coordination geometry of uranyl, leading to relatively weak aqueous complexation that is difficult to measure reliably.
+
+3. **Literature context:** Published log K values for uranyl–crown ether systems (e.g., with 18-crown-6 or dicyclohexyl-18-crown-6) are typically reported for **extraction equilibria** or in **organic/mixed media**, which are not cataloged in SRD-46.
+
+For uranyl–crown ether stability data, one would need to consult specialized solvent extraction literature or non-aqueous thermodynamic databases.
+
+**Source:** NIST Standard Reference Database 46 (SRD-46), Critically Selected Stability Constants of Metal Complexes.
+
+---

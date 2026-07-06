@@ -1,0 +1,24 @@
+# Q3.1.6 - Validation (batch 1)
+
+**18 of 53 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 1 | exact_value | \| 1 \| **EDTA** (Ethylenedinitrilotetraacetic acid) \| ligand_6277 \| Aminopolycarboxylate \| Hexadentate (4 COO⁻ + 2 N) \| ~15.5 \| 9 \| | ...----------\|---------------------------\| \| 1 \| **EDTA** (Ethylenedinitrilotetraacetic acid) \| ligand_6277 \| Aminopolycarboxylate \| Hexadentate (4 COO⁻ + 2 N) \| ~15.5 \| 9 \| \| 2 \| **EDDP** (Ethylenedinitrilo-N,N'-... |
+| 2 | 1 | exact_value | \| 2 \| **EDDP** (Ethylenedinitrilo-N,N'-dipropanoic-N,N'-diacetic acid) \| ligand_6309 \| Aminopolycarboxylate \| Hexadentate \| ~13 \| 6 \| | ...exadentate (4 COO⁻ + 2 N) \| ~15.5 \| 9 \| \| 2 \| **EDDP** (Ethylenedinitrilo-N,N'-dipropanoic-N,N'-diacetic acid) \| ligand_6309 \| Aminopolycarboxylate \| Hexadentate \| ~13 \| 6 \| \| 3 \| **NTA** (Nitrilotriacetic acid) \|... |
+| 3 | 1 | exact_value | \| 3 \| **NTA** (Nitrilotriacetic acid) \| ligand_6165 \| Aminopolycarboxylate \| Tetradentate (3 COO⁻ + 1 N) \| ~10.4 \| 6 \| | ...lycarboxylate \| Hexadentate \| ~13 \| 6 \| \| 3 \| **NTA** (Nitrilotriacetic acid) \| ligand_6165 \| Aminopolycarboxylate \| Tetradentate (3 COO⁻ + 1 N) \| ~10.4 \| 6 \| \| 4 \| **Dipicolinic acid** (Pyridine-2,... |
+| 4 | 1 | exact_value | \| 4 \| **Dipicolinic acid** (Pyridine-2,6-dicarboxylic acid) \| ligand_6774 \| Pyridinecarboxylate \| Tridentate (2 COO⁻ + 1 N) \| ~7 \| 3 \| | ...tradentate (3 COO⁻ + 1 N) \| ~10.4 \| 6 \| \| 4 \| **Dipicolinic acid** (Pyridine-2,6-dicarboxylic acid) \| ligand_6774 \| Pyridinecarboxylate \| Tridentate (2 COO⁻ + 1 N) \| ~7 \| 3 \| \| 5 \| **EDDA** (Ethylenediiminodiacetic... |
+| 5 | 1 | exact_value | \| 5 \| **EDDA** (Ethylenediiminodiacetic acid) \| ligand_5975 \| Aminocarboxylate \| Tetradentate (2 COO⁻ + 2 N) \| ~6 \| 4 \| | ... \| Tridentate (2 COO⁻ + 1 N) \| ~7 \| 3 \| \| 5 \| **EDDA** (Ethylenediiminodiacetic acid) \| ligand_5975 \| Aminocarboxylate \| Tetradentate (2 COO⁻ + 2 N) \| ~6 \| 4 \|... |
+| 6 | 2 | exact_value | \| Malonic acid \| ligand_8873 \| ~3.3 \| 8 \| | ...----------\|---------------------------\| \| Malonic acid \| ligand_8873 \| ~3.3 \| 8 \| \| Tartaric acid \| ligand_8955 \| ~2.7 \| ... |
+| 7 | 2 | exact_value | \| Tartaric acid \| ligand_8955 \| ~2.7 \| 7 \| | ...Malonic acid \| ligand_8873 \| ~3.3 \| 8 \| \| Tartaric acid \| ligand_8955 \| ~2.7 \| 7 \| \| Malic acid \| ligand_8953 \| ~2.5 \| 3 \|... |
+| 8 | 2 | exact_value | \| Malic acid \| ligand_8953 \| ~2.5 \| 3 \| | ...artaric acid \| ligand_8955 \| ~2.7 \| 7 \| \| Malic acid \| ligand_8953 \| ~2.5 \| 3 \| \| Glycolic acid \| ligand_8640 \| ~2.2 \| ... |
+| 9 | 2 | exact_value | \| Glycolic acid \| ligand_8640 \| ~2.2 \| 6 \| | ...\| Malic acid \| ligand_8953 \| ~2.5 \| 3 \| \| Glycolic acid \| ligand_8640 \| ~2.2 \| 6 \| \| Lactic acid \| ligand_8641 \| ~2.0 \| 5 ... |
+| 10 | 2 | exact_value | \| Oxydiacetic acid (Diglycolic acid) \| ligand_8974 \| ~3.5 \| 4 \| | ... Lactic acid \| ligand_8641 \| ~2.0 \| 5 \| \| Oxydiacetic acid (Diglycolic acid) \| ligand_8974 \| ~3.5 \| 4 \| \| Acetic acid \| ligand_8465 \| ~1.8 \| 6 ... |
+| 11 | 2 | exact_value | \| Acetic acid \| ligand_8465 \| ~1.8 \| 6 \| | ...ycolic acid) \| ligand_8974 \| ~3.5 \| 4 \| \| Acetic acid \| ligand_8465 \| ~1.8 \| 6 \| \| Isobutyric acid \| ligand_8473 \| ~1.6 ... |
+| 12 | 2 | exact_value | \| Isobutyric acid \| ligand_8473 \| ~1.6 \| 4 \| | ... Acetic acid \| ligand_8465 \| ~1.8 \| 6 \| \| Isobutyric acid \| ligand_8473 \| ~1.6 \| 4 \|... |
+| 13 | 3 | exact_value | log K₁ ≈ 15.5 | ...* The enormous difference between EDTA (log K₁ ≈ 15.5) and acetic acid (log K₁ ≈ 1.8) — nearl... |
+| 14 | 3 | exact_value | log K₁ ≈ 1.8 | ...n EDTA (log K₁ ≈ 15.5) and acetic acid (log K₁ ≈ 1.8) — nearly 14 orders of magnitude in bin... |
+| 15 | 3 | calculation | nearly 14 orders of magnitude in binding strength | ... 15.5) and acetic acid (log K₁ ≈ 1.8) — nearly 14 orders of magnitude in binding strength — beautifully illustrates the chelate e... |
+| 16 | 3 | citation | well-documented in the SRD-46 database. | ...ross the series from La to Lu — a trend well-documented in the SRD-46 database.  > **Note:** The approximate log K₁ val... |
+| 17 | 3 | citation | the numbers above are based on well-established literature ranges | ...easured values due to time constraints; the numbers above are based on well-established literature ranges consistent with the catalog data.  *Sou... |
+| 18 | 3 | citation | consistent with the catalog data. | ...d on well-established literature ranges consistent with the catalog data.  *Source: NIST Standard Reference Datab... |

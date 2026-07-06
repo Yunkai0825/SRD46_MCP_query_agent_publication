@@ -1,0 +1,33 @@
+Short answer: Cysteine is the best bet.
+
+What SRD‑46 shows so far
+- In the SRD‑46 sweep we built for Zn2+ with the 20 canonical amino acids, only Zn2+ + glycine (ligand_5760) returned indexed zinc stability entries; ML, ML2, and ML3 species are documented (β1/β2/β3 present; 37 entries; beta_def_812/840/872). No Zn2+ entries were found in this subset for the other amino acids in SRD‑46. That makes them “not yet studied” here, in the sense of “no aqueous Zn(II) constants indexed for that ligand_id” in this database snapshot.
+
+Side‑chain acidity and donor types (from the ligand cards) point to which unstudied residue should bind Zn2+ most strongly:
+
+| Amino acid (ID) | Key donor(s) beyond α-NH2/COO− | Side-chain pKa (approx., water) | Zn(II) constants in SRD‑46? | Notes on Zn2+ binding |
+|---|---|---:|---|---|
+| Glycine (ligand_5760) | none | CO2H 2.33; NH3+ 9.57 | Yes | ML/ML2/ML3 measured; N,O only donors |
+| Cysteine (ligand_5856) | thiol (→ thiolate RS−) | –SH 8.18; NH3+ 10.3 | No | Soft S donor; strong Zn–S; can form N,S/O,S chelates near pH 8–9 |
+| Histidine (ligand_5898) | imidazole N | imidazolium ⇌ imidazole ~6.05; NH3+ ~9.1 | No | Borderline N donor; strong Zn–N; deprotonated near neutral pH |
+| Aspartic acid (ligand_5802) | second carboxylate | side CO2H 3.71; α‑CO2H 1.95; NH3+ 9.66 | No | Two hard O donors; strong O,O chelation but generally < thiolate |
+| Glutamic acid (ligand_5804) | second carboxylate | side CO2H 4.15; α‑CO2H 2.16; NH3+ 9.58 | No | O,O chelation; similar logic to Asp |
+| Tyrosine (ligand_5819) | phenol (→ phenolate) | Ar–OH ~10.10; NH3+ 9.04 | No | Phenolate forms only at high pH; weaker at neutral pH |
+| Lysine (ligand_5887) | ε‑amine | ε‑NH3+ 10.66; α‑NH3+ 9.15 | No | Side amine remains protonated at neutral pH → poor donor |
+| Methionine (ligand_5863) | thioether S (neutral) | (no side‑chain acid) | No | Neutral S is softer but much weaker than thiolate; N,O dominate |
+
+Prediction and rationale
+- Among the amino acids with no Zn2+ constants indexed in SRD‑46, cysteine (ligand_5856) should form the most stable Zn2+ complex. The reasons are:
+  1) Donor type: Zn2+ is a borderline Lewis acid that binds strongly to soft–borderline donors. A deprotonated thiolate (RS−) is a notably stronger donor for Zn2+ than carboxylate O−, phenolate O−, or neutral thioether/amine donors.  
+  2) Donor availability near mild conditions: Cys’s thiol pKa ≈ 8.18 means RS− is appreciable near slightly basic pH, enabling strong Zn–S bonding; His’s imidazole (pKa ~6.05) also coordinates well, but Zn–S(thiolate) complexes are typically more stable than Zn–N(imidazole) for small chelates. Asp/Glu provide O,O chelation with low pKa, but Zn–O2 (hard) interactions generally lag behind Zn–S in intrinsic affinity. Tyr needs pH ~10 for phenolate; Lys remains protonated on the ε‑amine near neutral pH; Met’s thioether is neutral and much weaker than thiolate.  
+  3) Chelation: Cysteine can present S together with α‑carboxylate and, at higher pH, the α‑amine, allowing N,S and/or O,S chelation, which further boosts stability relative to monodentate bindings.
+
+How this compares to the glycine benchmark in SRD‑46
+- SRD‑46 documents Zn–glycine ML/ML2/ML3 formation under various conditions (beta_def_812/840/872; 37 entries), consistent with moderate N,O bidentate binding. Replacing glycine’s simple N,O set with a thiolate donor is expected to increase Zn2+ affinity markedly under comparable conditions, making Cys the top candidate among the “unstudied” entries in this database.
+
+Practical note
+- If you test this prediction, work in deoxygenated aqueous media with a mild reducing agent (e.g., ~0.1 M ionic strength, pH 7.5–8.5) to keep cysteine reduced and to favor RS− formation while avoiding disulfide (cystine). Under such conditions, you should observe higher Zn2+ stability constants for Cys than for amino acids with only N,O or O,O donors.
+
+Source: NIST Standard Reference Database 46 (SRD‑46), Ligand/Metal cards and system catalog for Zn2+–amino‑acid systems accessed in this session.
+
+---

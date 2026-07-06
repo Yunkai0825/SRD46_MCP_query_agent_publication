@@ -1,0 +1,388 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt5\\Q2.2.5\\Q2.2.5_result_batch3.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Here’s the dataset-wide distribution of constant types in SRD-46 stability-constant measurements (ligandmetal_stability_measured):",
+        "claims": [
+          {
+            "start": 0,
+            "end": 130,
+            "text": "Here’s the dataset-wide distribution of constant types in SRD-46 stability-constant measurements (ligandmetal_stability_measured):",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Constant type | Count | Percent of measurements |\n|---|---:|---:|\n| K | 60,540 | 76.57% |\n| H | 9,693 | 12.26% |\n| S | 8,830 | 11.17% |\n| Total | 79,063 | 100% |",
+        "claims": [
+          {
+            "start": 68,
+            "end": 91,
+            "text": "| K | 60,540 | 76.57% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 92,
+            "end": 114,
+            "text": "| H | 9,693 | 12.26% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 115,
+            "end": 137,
+            "text": "| S | 8,830 | 11.17% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 138,
+            "end": 163,
+            "text": "| Total | 79,063 | 100% |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| K | 60540 | 76.57% |",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "db_distribution",
+                "snippet": "| K | 60540 | 76.57% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| H | 9693 | 12.26% |",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "db_distribution",
+                "snippet": "| H | 9693 | 12.26% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| S | 8830 | 11.17% |",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "db_distribution",
+                "snippet": "| S | 8830 | 11.17% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "| ligandmetal_stability_measured | (all) | 79063 |",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "| ligandmetal_stability_measured | (all) | 79063 |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "db_distribution",
+                "snippet": "| K | 60540 | 76.57% |\n| H | 9693 | 12.26% |\n| S | 8830 | 11.17% |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "Notes and context:\n- The constant_type field in the measured-data table is dominated by equilibrium constants (K). Thermodynamic quantities (H, S) make up the remaining ~23.4% of entries.\n- If you’d like a breakdown by specific formation-constant definitions (e.g., β, βn for stepwise/overall formation), we can group measurements by their beta_definition instead of the generic constant_type.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 18,
+            "text": "Notes and context:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 21,
+            "end": 114,
+            "text": "The constant_type field in the measured-data table is dominated by equilibrium constants (K).",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 115,
+            "end": 187,
+            "text": "Thermodynamic quantities (H, S) make up the remaining ~23.4% of entries.",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 190,
+            "end": 258,
+            "text": "If you’d like a breakdown by specific formation-constant definitions",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 266,
+            "end": 271,
+            "text": "β, βn",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 272,
+            "end": 302,
+            "text": "for stepwise/overall formation",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 305,
+            "end": 393,
+            "text": "we can group measurements by their beta_definition instead of the generic constant_type.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "K | 60540 | 76.57% (vs H 12.26%, S 11.17%)",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "db_distribution",
+                "snippet": "| value | count | pct |\n| K | 60540 | 76.57% |\n| H | 9693 | 12.26% |\n| S | 8830 | 11.17% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "H 12.26% + S 11.17% = 23.43% (~23.4%)",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "db_distribution",
+                "snippet": "| H | 9693 | 12.26% |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "db_distribution",
+                "snippet": "| S | 8830 | 11.17% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "No tool results mention β or βn or a beta_definition field to verify this listing.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Standard usage: β denotes overall formation constants; βn (or stepwise K) denotes stepwise formation.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Available results only group by constant_type; no beta_definition grouping shown.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "db_distribution",
+                "snippet": "db_distribution - ligandmetal_stability_measured by constant_type"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "Source: NIST Standard Reference Database 46 (SRD‑46).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 7,
+            "text": "Source:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 8,
+            "end": 53,
+            "text": "NIST Standard Reference Database 46 (SRD‑46).",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "db_count_records shows results from the database context, validating a provenance/source statement though the SRD-46 string isn’t in the rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "db_count_records",
+                "snippet": "## db_count_records\n| table | where | count |\n|-------|-------|-------|\n| ligandmetal_stability_measured | (all) | 79063 |"
+              },
+              {
+                "step": "Step 3",
+                "tool": "db_distribution",
+                "snippet": "## db_distribution - ligandmetal_stability_measured by constant_type\n**total_rows:** 79063\n| value | count | pct |\n| K | 60540 | 76.57% |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

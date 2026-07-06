@@ -1,0 +1,1011 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt5\\Q1.2.4\\Q1.2.4_result_batch4.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "Below is what SRD‑46 reports for Ni²⁺–EDTA (metal_112 with ligand_6277):",
+        "claims": [
+          {
+            "start": 0,
+            "end": 13,
+            "text": "Below is what",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 14,
+            "end": 28,
+            "text": "SRD‑46 reports",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 33,
+            "end": 42,
+            "text": "Ni²⁺–EDTA",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 44,
+            "end": 53,
+            "text": "metal_112",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 59,
+            "end": 70,
+            "text": "ligand_6277",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool outputs shown (search_metals, search_ligands, build_system_catalog) are from the SRD‑46 context of this run; no explicit 'SRD‑46' string appears in row text.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "## search_metals — 2 result(s)\n| metal_id | metal_name | symbol | charge | ... |\n| metal_112 | Ni^[2+] | Ni | 2 | ✓ | ..."
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands — 5 result(s)\n| ligand_id | ligand_name | ... |\n| ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_112",
+              "ligand_6277"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Ni^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)\nmetal_id: metal_112 | ligand_id: ligand_6277",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "### Ni^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)\nmetal_id: metal_112 | ligand_id: ligand_6277 | ligand_def_HxL: H4L"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_112"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_112 | Ni^[2+] | Ni | 2",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_112 | Ni^[2+] | Ni | 2 | ✓ | [Ni+2] | InChI=1S/Ni/q+2 | ..."
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "metal_id: metal_112 | ligand_id: ligand_6277"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_6277"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | ... | `O=C(O)CN(CCN(CC(=O)O)CC(=O)O)CC(=O)O` | ..."
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "metal_id: metal_112 | ligand_id: ligand_6277"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "How many distinct equilibrium networks?\n- Two distinct reference equilibrium networks are present for Ni²⁺–EDTA under the cataloged conditions.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 39,
+            "text": "How many distinct equilibrium networks?",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 40,
+            "end": 143,
+            "text": "- Two distinct reference equilibrium networks are present for Ni²⁺–EDTA under the cataloged conditions.",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_112",
+              "ligand_6277",
+              "ref_eq_net_5023",
+              "ref_eq_net_5024"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "equilibrium_maps: 2 preset reference network(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "equilibrium_maps: 2 preset reference network(s)\n| network_id | nodes | edges | T range | I range |\n| ref_eq_net_5023 | 3 | 3 | 20~30 °C | -0.05~0.25 M |\n| ref_eq_net_5024 | 3 | 3 | 19~29 °C | 0.85~1.15 M |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "### `Ni^[2+]` + Ethylenedinitrilotetraacetic acid (EDTA) — 2 network(s)\n| network_id | node_counts | edge_counts | T_range | I_range |\n| ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 |\n| ref_eq_net_5024 | 3 | 3 | 19~29 | 0.85~1.15 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "| network_id | node_count | edge_count | T_range (°C) | I_range (M) | beta_def_ids in network |\n|---|---:|---:|---|---|---|\n| ref_eq_net_5023 | 3 | 3 | 20–30 | −0.05–0.25 | beta_def_966; beta_def_788; beta_def_812 |\n| ref_eq_net_5024 | 3 | 3 | 19–29 | 0.85–1.15 | beta_def_966; beta_def_739; beta_def_788 |",
+        "claims": [
+          {
+            "start": 124,
+            "end": 215,
+            "text": "| ref_eq_net_5023 | 3 | 3 | 20–30 | −0.05–0.25 | beta_def_966; beta_def_788; beta_def_812 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 216,
+            "end": 306,
+            "text": "| ref_eq_net_5024 | 3 | 3 | 19–29 | 0.85–1.15 | beta_def_966; beta_def_739; beta_def_788 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "ref_eq_net_5023",
+              "beta_def_966",
+              "beta_def_788",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | ... | beta_def_966; beta_def_788; beta_def_812",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | beta_def_966; beta_def_788; beta_def_812 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 °C | -0.05~0.25 M |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ref_eq_net_5024",
+              "beta_def_966",
+              "beta_def_739",
+              "beta_def_788"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ref_eq_net_5024 | 3 | 3 | 19~29 | 0.85~1.15 | ... | beta_def_966; beta_def_739; beta_def_788",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5024 | 3 | 3 | 19~29 | 0.85~1.15 | 3 | beta_def_966; beta_def_739; beta_def_788 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| ref_eq_net_5024 | 3 | 3 | 19~29 °C | 0.85~1.15 M |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "Largest network and its contents\n- Both networks have the same node count (3). Choosing ref_eq_net_5023 (tie by node_count):\n  - Reactions present in ref_eq_net_5023 and example logK values at its reference anchor:\n  \n    | beta_def_id | equation | logK (example) |\n    |---|---|---:|\n    | beta_def_966 | [M(OH)L] + [H] ⇌ [ML] + [H₂O] | −11.9 |\n    | beta_def_788 | [ML] + [H] ⇌ [MHL] | 3.1 |\n    | beta_def_812 | [M] + [L] ⇌ [ML] | 18.4 |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 32,
+            "text": "Largest network and its contents",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 35,
+            "end": 73,
+            "text": "Both networks have the same node count",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 75,
+            "end": 76,
+            "text": "3",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 79,
+            "end": 103,
+            "text": "Choosing ref_eq_net_5023",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 105,
+            "end": 122,
+            "text": "tie by node_count",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 129,
+            "end": 165,
+            "text": "Reactions present in ref_eq_net_5023",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 170,
+            "end": 213,
+            "text": "example logK values at its reference anchor",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 289,
+            "end": 345,
+            "text": "| beta_def_966 | [M(OH)L] + [H] ⇌ [ML] + [H₂O] | −11.9 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 350,
+            "end": 393,
+            "text": "| beta_def_788 | [ML] + [H] ⇌ [MHL] | 3.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 398,
+            "end": 440,
+            "text": "| beta_def_812 | [M] + [L] ⇌ [ML] | 18.4 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ref_eq_net_5023",
+              "ref_eq_net_5024"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ref_eq_net_5023 | 3 | 3 … ; ref_eq_net_5024 | 3 | 3 …",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | beta_def_966; beta_def_788; beta_def_812 | logK | -11.9~18.4 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5024 | 3 | 3 | 19~29 | 0.85~1.15 | 3 | beta_def_966; beta_def_739; beta_def_788 | logK | -12.9~3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ref_eq_net_5023",
+              "ref_eq_net_5024"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "node_counts = 3 for both networks (ref_eq_net_5023 and ref_eq_net_5024).",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | … |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5024 | 3 | 3 | 19~29 | 0.85~1.15 | 3 | … |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ref_eq_net_5023"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Reference-state network: ref_eq_net_5023 (3 nodes)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "Reference-state network: ref_eq_net_5023 (3 nodes)"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ref_eq_net_5023",
+              "ref_eq_net_5024"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Tie by node_count: both show node_counts 3.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | … |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5024 | 3 | 3 | 19~29 | 0.85~1.15 | 3 | … |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ref_eq_net_5023",
+              "beta_def_966",
+              "beta_def_788",
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_966 …; beta_def_788 …; beta_def_812 … are listed for ref_eq_net_5023.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| beta_def_966 | ``[M(OH)L] + [H] <=> [ML] + [H2O]`` | logK | -11.9 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| beta_def_788 | ``[ML] + [H] <=> [MHL]`` | logK | 3.1 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| beta_def_812 | ``[M] + [L] <=> [ML]`` | logK | 18.4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "ref_eq_net_5023"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Reference-state network: ref_eq_net_5023 … entries show type=logK values (-11.9, 3.1, 18.4).",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "Reference-state network: ref_eq_net_5023 (3 nodes)"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| beta_def_966 | … | logK | -11.9 |; | beta_def_788 | … | logK | 3.1 |; | beta_def_812 | … | logK | 18.4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "beta_def_966"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_966 | [M(OH)L] + [H] <=> [ML] + [H2O] | logK | -11.9",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| beta_def_966 | ``[M(OH)L] + [H] <=> [ML] + [H2O]`` | logK | -11.9 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "beta_def_788"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_788 | [ML] + [H] <=> [MHL] | logK | 3.1",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| beta_def_788 | ``[ML] + [H] <=> [MHL]`` | logK | 3.1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "beta_def_812"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_812 | [M] + [L] <=> [ML] | logK | 18.4",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| beta_def_812 | ``[M] + [L] <=> [ML]`` | logK | 18.4 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "- The network’s VLM node membership count is 3, but the specific VLM node IDs (vlm_N) were not returned in the current tool results. To list them, we need to run a VLM‑to‑network mapping query (group by network_id for metal_112 + ligand_6277) and extract the vlm_N identifiers for ref_eq_net_5023.",
+        "claims": [
+          {
+            "start": 2,
+            "end": 46,
+            "text": "The network’s VLM node membership count is 3",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 52,
+            "end": 131,
+            "text": "the specific VLM node IDs (vlm_N) were not returned in the current tool results",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 133,
+            "end": 297,
+            "text": "To list them, we need to run a VLM‑to‑network mapping query (group by network_id for metal_112 + ligand_6277) and extract the vlm_N identifiers for ref_eq_net_5023.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "ref_eq_net_5023"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | beta_def_966; beta_def_788; beta_def_812 | logK | -11.9~18.4",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| network_id | node_counts | edge_counts | T_range | I_range | vlm_counts | beta_def_ids | type | values |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | beta_def_966; beta_def_788; beta_def_812 | logK | -11.9~18.4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ref_eq_net_5023"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "search_networks lists only 'vlm_counts' (3) for ref_eq_net_5023; no vlm_N IDs are shown in the table.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| network_id | ... | vlm_counts | ... |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | beta_def_966; beta_def_788; beta_def_812 | logK | -11.9~18.4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "Notes and context\n- The Ni²⁺–EDTA system in the catalog includes 4 beta definitions overall (ML formation, protonation to MHL and MH₂L, and hydroxo coupling via M(OH)L). The two reference networks differ by including either MH₂L (beta_def_739) or M(OH)L (beta_def_966) alongside ML/MHL, which is typical of acid–base and hydrolysis coupling in EDTA chelation chemistry.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 17,
+            "text": "Notes and context",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 18,
+            "end": 19,
+            "text": "-",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 20,
+            "end": 91,
+            "text": "The Ni²⁺–EDTA system in the catalog includes 4 beta definitions overall",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 92,
+            "end": 168,
+            "text": "(ML formation, protonation to MHL and MH₂L, and hydroxo coupling via M(OH)L)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 170,
+            "end": 203,
+            "text": "The two reference networks differ",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 204,
+            "end": 268,
+            "text": "by including either MH₂L (beta_def_739) or M(OH)L (beta_def_966)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 269,
+            "end": 285,
+            "text": "alongside ML/MHL",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 287,
+            "end": 369,
+            "text": "which is typical of acid–base and hydrolysis coupling in EDTA chelation chemistry.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_112",
+              "ligand_6277",
+              "beta_def_739",
+              "beta_def_788",
+              "beta_def_812",
+              "beta_def_966"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "entries: 19 | species: 4",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "## Ni^[2+] + Ethylenedinitrilotetraacetic acid (EDTA)\nmetal_id: metal_112 | ligand_id: ligand_6277 | ligand_def_HxL: H4L\nentries: 19 | species: 4 | vlm_count: 19"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_739 | [MH2L]/[MHL][H] | [MHL] + [H] <=> [MH2L] | ...\nbeta_def_788 | [MHL]/[ML][H] | [ML] + [H] <=> [MHL] | ...\nbeta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | ...\nbeta_def_966 | [ML]/[M(OH)L][H] | [M(OH)L] + [H] <=> [ML] + [H2O] | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "beta_def_812",
+              "beta_def_788",
+              "beta_def_739",
+              "beta_def_966"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "[M] + [L] <=> [ML] | [ML] + [H] <=> [MHL] | [MHL] + [H] <=> [MH2L] | [M(OH)L] + [H] <=> [ML] + [H2O]",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML] | [ML](aq), [M](aq), [L](aq) | 8"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_788 | [MHL]/[ML][H] | [ML] + [H] <=> [MHL] | [MHL](aq), [ML](aq), [H](aq) | 4\nbeta_def_739 | [MH2L]/[MHL][H] | [MHL] + [H] <=> [MH2L] | [MH2L](aq), [MHL](aq), [H](aq) | 1"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_966 | [ML]/[M(OH)L][H] | [M(OH)L] + [H] <=> [ML] + [H2O] | [ML](aq), [H2O](aq), [M(OH)L](aq), [H](aq) | 6"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ref_eq_net_5023",
+              "ref_eq_net_5024",
+              "metal_112",
+              "ligand_6277"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "equilibrium_maps: 2 preset reference network(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "equilibrium_maps: 2 preset reference network(s) (clustered around room temperature & low ionic strength)"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "ref_eq_net_5023 ... beta_def_ids | beta_def_966; beta_def_788; beta_def_812\nref_eq_net_5024 ... beta_def_ids | beta_def_966; beta_def_739; beta_def_788"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Claim says networks include either beta_def_739 or beta_def_966. Tool shows both networks include beta_def_966; only ref_eq_net_5024 has beta_def_739; ref_eq_net_5023 has beta_def_812 instead.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "ref_eq_net_5023 | ... | beta_def_ids | beta_def_966; beta_def_788; beta_def_812 | ..."
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "ref_eq_net_5024 | ... | beta_def_ids | beta_def_966; beta_def_739; beta_def_788 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "beta_def_788",
+              "ref_eq_net_5023",
+              "ref_eq_net_5024"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Both networks list beta_def_788 ([ML] + [H] <=> [MHL]).",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "ref_eq_net_5023 | ... | beta_def_ids | beta_def_966; beta_def_788; beta_def_812 | ..."
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "ref_eq_net_5024 | ... | beta_def_ids | beta_def_966; beta_def_739; beta_def_788 | ..."
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "beta_def_788 | ``[ML] + [H] <=> [MHL]``"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General chemistry context about EDTA acid–base and hydrolysis coupling; SRD-46 rows list equilibria but do not state \"typicality.\"",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_788 ... [ML] + [H] <=> [MHL]; beta_def_739 ... [MHL] + [H] <=> [MH2L]; beta_def_966 ... [M(OH)L] + [H] <=> [ML] + [H2O]"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 6,
+        "text": "Source: NIST Standard Reference Database 46 (SRD‑46).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 7,
+            "text": "Source:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 8,
+            "end": 43,
+            "text": "NIST Standard Reference Database 46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 45,
+            "end": 51,
+            "text": "SRD‑46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "The tool outputs provided do not explicitly include the string 'NIST Standard Reference Database 46'; provenance text is not present in the rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "The tool outputs provided do not include the string 'SRD‑46'; explicit database name/identifier is not shown in the result rows.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 7,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

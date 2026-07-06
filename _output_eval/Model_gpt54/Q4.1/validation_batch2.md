@@ -1,0 +1,13 @@
+# Q4.1 - Validation (batch 2)
+
+**7 of 50 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 4 | exact_value | \| DMF \| neutral amide O donor \| 0–1 \| 1–2.5 \| Hard O donor, but neutral and monodentate \| | ...logβ₁ \| Basis \| \|---\|---\|---:\|---:\|---\| \| DMF \| neutral amide O donor \| 0–1 \| 1–2.5 \| Hard O donor, but neutral and monodentate \| \| Acetonitrile \| neutral nitrile N dono... |
+| 2 | 4 | exact_value | \| Acetonitrile \| neutral nitrile N donor \| 0–0.8 \| 0–1.5 \| Weak monodentate donor to hydrated iron ions \| | ... O donor, but neutral and monodentate \| \| Acetonitrile \| neutral nitrile N donor \| 0–0.8 \| 0–1.5 \| Weak monodentate donor to hydrated iron ions \| \| THF \| neutral ether O donor \| 0–0.5 \|... |
+| 3 | 4 | exact_value | \| THF \| neutral ether O donor \| 0–0.5 \| 0.5–1.5 \| O donor, but weaker than amide oxygen \| | ...nodentate donor to hydrated iron ions \| \| THF \| neutral ether O donor \| 0–0.5 \| 0.5–1.5 \| O donor, but weaker than amide oxygen \| \| Ethylene glycol \| neutral diol, poten... |
+| 4 | 4 | exact_value | \| Ethylene glycol \| neutral diol, potentially chelating O,O \| 0.5–1.5 \| 1.5–3 \| Chelation helps, but much weaker than glycolate/diglycolate because EG is neutral \| | ...O donor, but weaker than amide oxygen \| \| Ethylene glycol \| neutral diol, potentially chelating O,O \| 0.5–1.5 \| 1.5–3 \| Chelation helps, but much weaker than glycolate/diglycolate because EG is neutral \|... |
+| 5 | 5 | comparison | \| Fe(II) \| ethylene glycol > DMF ≳ acetonitrile > THF \| | ...cted binding strength order \| \|---\|---\| \| Fe(II) \| ethylene glycol > DMF ≳ acetonitrile > THF \| \| Fe(III) \| ethylene glycol > DMF > THF... |
+| 6 | 5 | comparison | \| Fe(III) \| ethylene glycol > DMF > THF ≳ acetonitrile \| | ...ene glycol > DMF ≳ acetonitrile > THF \| \| Fe(III) \| ethylene glycol > DMF > THF ≳ acetonitrile \|... |
+| 7 | 6 | exact_value | \| Best anchored numeric guidance \| Neutral EG likely below glycolate/diglycolate analogs, so roughly **logβ₁ ≈ 0.5–1.5 for Fe²⁺** and **1.5–3 for Fe³⁺**; DMF/MeCN/THF likely mostly **≤ 2** \| | ... the four** due to possible chelation \| \| Best anchored numeric guidance \| Neutral EG likely below glycolate/diglycolate analogs, so roughly **logβ₁ ≈ 0.5–1.5 for Fe²⁺** and **1.5–3 for Fe³⁺**; DMF/MeCN/THF likely mostly **≤ 2** \|  Chemically, this makes sense because S... |

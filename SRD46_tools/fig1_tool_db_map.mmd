@@ -1,0 +1,140 @@
+%% Fig.1 Tool–Database Interaction Map (SRD-46) — VERIFIED via audit
+%%   _Debug_examples/tool_db_audit.{py,json,md}
+%% Tier 1 (top)    : core SRD-46 SQLite databases
+%% Tier 2 (middle) : MCP search & inspection tools (planning + utility tools omitted)
+%% Tier 3 (bottom) : computed enrichment fields (downstream-reasoning hooks)
+%%   Solid green ▶  primary context — DB the tool's main result rows are SELECTed from
+%%   Dashed blue ▶  real cross-DB join / 2nd-pass query for enrichment
+%%   Solid red   ▶  computed fields appended before the agent sees the result
+%%{init: {'flowchart': {'defaultRenderer': 'elk', 'curve': 'basis', 'rankSpacing': 90, 'nodeSpacing': 18}, 'elk': {'mergeEdges': true, 'nodePlacementStrategy': 'NETWORK_SIMPLEX'}}}%%
+%% Fig.1 Tool-Database Interaction Map (SRD-46)
+%% Verified via _Debug_examples/tool_db_audit.py
+%% Layout: ELK + basis curves; tools clustered by primary DB.
+%% Colors: each DB has a distinct fill + edge color; enrichments stacked in two rows.
+flowchart TB
+    classDef tool fill:#FFF3CD,stroke:#B8860B,stroke-width:1.5px,color:#000
+    classDef enrich fill:#F8D7DA,stroke:#9C1B1B,stroke-width:1.5px,color:#000
+    classDef dbM  fill:#EDE7F6,stroke:#4527A0,stroke-width:2px,color:#000
+    classDef dbL  fill:#E8F5E9,stroke:#1B5E20,stroke-width:2px,color:#000
+    classDef dbML fill:#FFF3E0,stroke:#E65100,stroke-width:2px,color:#000
+    classDef dbEQ fill:#E3F2FD,stroke:#0D47A1,stroke-width:2px,color:#000
+    classDef dbFP fill:#E0F2F1,stroke:#00695C,stroke-width:2px,color:#000
+    classDef dbLIT fill:#EFEBE9,stroke:#4E342E,stroke-width:2px,color:#000
+
+    subgraph DBS["Core SRD-46 databases"]
+        direction LR
+        M[("Metal cards<br/>(cards.metal_card)")]:::dbM
+        L[("Ligand cards<br/>(cards.ligand_card<br/>+ ligand_pka_*)")]:::dbL
+        ML[("Metal–Ligand / VLM cards<br/>(cards.ligandmetal_card<br/>+ stability_measured<br/>+ ref_vlm_literature_alt)")]:::dbML
+        EQ[("Equilibrium maps / networks<br/>(eq_map_collection / eq_map<br/>/ eq_network / eq_node)")]:::dbEQ
+        FP[("Ligand fingerprints DB<br/>(ligand_similarity)")]:::dbFP
+        LIT[("Literature DB<br/>(litdb.vlm_literature_sic<br/>+ literature_alt)")]:::dbLIT
+    end
+
+    subgraph TOOLS["Search and inspection tools"]
+        direction LR
+        T6M["search_metals"]:::tool
+        T8M["inspect_card metal"]:::tool
+        T6L["search_ligands"]:::tool
+        T2["search_pka_values / search_pka_ligands"]:::tool
+        T8L["inspect_card ligand"]:::tool
+        T1["search_stability"]:::tool
+        T3["build_system_catalog"]:::tool
+        T7["search_citations"]:::tool
+        T8V["inspect_card vlm"]:::tool
+        T5["search_networks"]:::tool
+        T4["search_similar_ligands"]:::tool
+        T8B["inspect_literature"]:::tool
+    end
+
+    subgraph ENR["Appended enrichment fields"]
+        direction TB
+        subgraph ENR_TOP[" "]
+            direction LR
+            E6M["beta_def_count; ligand_count; vlm_count"]:::enrich
+            E8M["ligand partners; total partner counts; total vlm measurements"]:::enrich
+            E6L["pKa ladder; vlm_count; functional-group stats"]:::enrich
+            E2["M_tot, M_above, M_below; pH ladder; functional-group stats"]:::enrich
+            E8L["pKa values; metal partners; total partner counts; total vlm measurements"]:::enrich
+            E1["HxL_involved; pKa_bracket_involved; map_id; non-aqueous phases"]:::enrich
+        end
+        subgraph ENR_BOT[" "]
+            direction LR
+            E3["species catalog by beta_def; eq_maps; T range; I range; vlm_ids"]:::enrich
+            E7["vlm_count per citation"]:::enrich
+            E8V["pKa bracket enrichment; networks; citations; parsed JSON card fields"]:::enrich
+            E5["beta_def legend; T and I ranges; max-node detail"]:::enrich
+            E4["eq_richness; covered metals; top maps; n_beta_defs; FG diff"]:::enrich
+            E8B["citation table"]:::enrich
+        end
+    end
+    style ENR_TOP fill:none,stroke:none
+    style ENR_BOT fill:none,stroke:none
+
+    %% Primary DB -> Tool (ordered by tool column)
+    M ==> T6M
+    M ==> T8M
+    L ==> T6L
+    L ==> T2
+    L ==> T8L
+    ML ==> T1
+    ML ==> T3
+    ML ==>|cards ref tables| T7
+    ML ==> T8V
+    EQ ==> T5
+    FP ==> T4
+    LIT ==> T8B
+
+    %% Secondary cross-DB enrichments
+    ML -. counts .-> T6M
+    L -. ligand partners .-> T8M
+    ML -. vlm_count .-> T6L
+    ML -. M_above and M_below .-> T2
+    M -. metal partners .-> T8L
+    L -. pKa brackets .-> T1
+    EQ -. map_id .-> T1
+    EQ -. eq_maps .-> T3
+    L -. pKa brackets .-> T8V
+    EQ -. networks for vlm .-> T8V
+    LIT -. citations for vlm .-> T8V
+    L -. HxL_def and SMILES .-> T5
+    L -. ligand name and SMILES .-> T4
+    EQ -. eq_richness .-> T4
+    L -. definition_HxL .-> T3
+    FP -. similarity fallback .-> T1
+    FP -. similarity fallback .-> T2
+    FP -. similarity fallback .-> T5
+
+    %% Tool -> Enrichment (vertical pairs)
+    T6M --> E6M
+    T8M --> E8M
+    T6L --> E6L
+    T2 --> E2
+    T8L --> E8L
+    T1 --> E1
+    T3 --> E3
+    T7 --> E7
+    T8V --> E8V
+    T5 --> E5
+    T4 --> E4
+    T8B --> E8B
+
+    %% Primary edges colored by source DB
+    linkStyle 0,1 stroke:#4527A0,stroke-width:2.5px
+    linkStyle 2,3,4 stroke:#1B5E20,stroke-width:2.5px
+    linkStyle 5,6,7,8 stroke:#E65100,stroke-width:2.5px
+    linkStyle 9 stroke:#0D47A1,stroke-width:2.5px
+    linkStyle 10 stroke:#00695C,stroke-width:2.5px
+    linkStyle 11 stroke:#4E342E,stroke-width:2.5px
+
+    %% Dashed cross-DB edges colored by source DB
+    linkStyle 16 stroke:#4527A0,stroke-width:1px,stroke-dasharray:4 4
+    linkStyle 13,17,20,23,24,26 stroke:#1B5E20,stroke-width:1px,stroke-dasharray:4 4
+    linkStyle 12,14,15 stroke:#E65100,stroke-width:1px,stroke-dasharray:4 4
+    linkStyle 18,19,21,25 stroke:#0D47A1,stroke-width:1px,stroke-dasharray:4 4
+    linkStyle 22 stroke:#4E342E,stroke-width:1px,stroke-dasharray:4 4
+    linkStyle 27,28,29 stroke:#00695C,stroke-width:1px,stroke-dasharray:4 4
+
+    %% Enrichment edges
+    linkStyle 30,31,32,33,34,35,36,37,38,39,40,41 stroke:#9C1B1B,stroke-width:1.5px
+

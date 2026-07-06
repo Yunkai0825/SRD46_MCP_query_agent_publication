@@ -1,0 +1,869 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q5.2.2\\Q5.2.2_result_batch2.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "I checked SRD-46 for protein-type ligands, including **transferrin**, **lactoferrin**, **conalbumin**, **albumin**, and **metallothionein**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 16,
+            "text": "I checked SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 17,
+            "end": 52,
+            "text": "for protein-type ligands, including",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 53,
+            "end": 139,
+            "text": "**transferrin**, **lactoferrin**, **conalbumin**, **albumin**, and **metallothionein**",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "## search_stability — 12 row(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 12 row(s)\nmetal_id: metal_41 | ligand_id: ligand_6692\n| vlm_117483 | ... | logK | 7.21 | 25 | 0.1 | `[M] + [L] <=> [ML]` | ..."
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n*(no results)*"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_citations",
+                "snippet": "## search_citations — 3 row(s)\n| vlm_94058 | 176 | lit_642 | 43Eaa | J. T. Edsall in \"Proteins, Amino Acids and Peptides\" ... |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "\"name\": \"transferrin, apotransferrin, lactoferrin, conalbumin, serum albumin, human serum albumin, bovine serum albumin, metallothionein\"",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "\"name\": \"transferrin, apotransferrin, lactoferrin, conalbumin, serum albumin, human serum albumin, bovine serum albumin, metallothionein\""
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(LOWER(c.ligand_name_SRD) LIKE '%transferrin%' OR LOWER(c.ligand_name_SRD) LIKE '%lactoferrin%' OR LOWER(c.ligand_name_SRD) LIKE '%conalbumin%' OR LOWER(c.ligand_name_SRD) LIKE '%albumin%' OR LOWER(c.ligand_name_SRD) LIKE '%metallothionein%' ...)\""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "## What I found\n\n| Check | Result |\n|---|---|\n| Direct ligand search for transferrin / albumin / metallothionein names | No hits |\n| Broader ligand search for “protein” / “peptide” / protein-family names | No protein-name hits |\n| Stability search for protein-like ligand names | No transferrin/albumin/etc. hits |\n| Citation search for protein-related terms | A few generic literature hits mentioning proteins/peptides, but not verified transferrin ligand entries |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 15,
+            "text": "## What I found",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 46,
+            "end": 130,
+            "text": "| Direct ligand search for transferrin / albumin / metallothionein names | No hits |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 131,
+            "end": 228,
+            "text": "| Broader ligand search for “protein” / “peptide” / protein-family names | No protein-name hits |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 229,
+            "end": 314,
+            "text": "| Stability search for protein-like ligand names | No transferrin/albumin/etc. hits |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 315,
+            "end": 466,
+            "text": "| Citation search for protein-related terms | A few generic literature hits mentioning proteins/peptides, but not verified transferrin ligand entries |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "## search_ligands\n\n*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "\"name\": \"transferrin, apotransferrin, lactoferrin, conalbumin, serum albumin, human serum albumin, bovine serum albumin, metallothionein\""
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "## search_ligands\n\n*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 9",
+                "tool": "search_ligands",
+                "snippet": "\"name\": \"protein, peptide, transferrin, lactoferrin, conalbumin, albumin, metallothionein\""
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "### `Cu^[2+]` + L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… — 3 measurement(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(LOWER(c.ligand_name_SRD) LIKE '%transferrin%' OR ... OR LOWER(c.ligand_name_SRD) LIKE '%protein%' OR LOWER(c.ligand_name_SRD) LIKE '%peptide%')\""
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "### `H^[+]` + L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… — 6 measurement(s)\nmetal_id: metal_68 | ligand_id: ligand_6692"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "### `Zn^[2+]` + L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… — 3 measurement(s)\nmetal_id: metal_208 | ligand_id: ligand_6692"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "lit_642",
+              "lit_7985",
+              "lit_14729"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "J. T. Edsall in \"Proteins, Amino Acids and Peptides\", E. J. Cohn and J. T. Edsa…",
+            "tool_snippets": [
+              {
+                "step": "Step 11",
+                "tool": "search_citations",
+                "snippet": "## search_citations — 3 row(s)"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_citations",
+                "snippet": "| vlm_94058 | 176 | lit_642 | 43Eaa | J. T. Edsall in \"Proteins, Amino Acids and Peptides\", E. J. Cohn and J. T. Edsa… |"
+              },
+              {
+                "step": "Step 11",
+                "tool": "search_citations",
+                "snippet": "| vlm_182810 | 6 | lit_7985 | 72ESM | G. Eisenman, G. Szabo, S. G. A. McLaughlin, and S. M. Ciane, in \"Symposium on M… |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "## What *is* present\n\nSRD-46 does contain some **small peptide ligands**, not full protein entries. For example, I found one peptide-like ligand with Cu(II) and Zn(II) stability data:\n\n| Metal | Ligand (truncated SRD name) | Constant type | logK | T (°C) | I (M) |\n|---|---|---:|---:|---:|---:|\n| Cu(II) | L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… | ML | 7.21 | 25 | 0.1 |\n| Zn(II) | L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… | ML | 3.2 | 25 | 0.1 |\n\nThere were also protonation constants for that peptide ligand.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 20,
+            "text": "## What *is* present",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 22,
+            "end": 72,
+            "text": "SRD-46 does contain some **small peptide ligands**",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 74,
+            "end": 99,
+            "text": "not full protein entries.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 100,
+            "end": 120,
+            "text": "For example, I found",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 121,
+            "end": 144,
+            "text": "one peptide-like ligand",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 145,
+            "end": 149,
+            "text": "with",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 150,
+            "end": 167,
+            "text": "Cu(II) and Zn(II)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 168,
+            "end": 183,
+            "text": "stability data:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 295,
+            "end": 391,
+            "text": "| Cu(II) | L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… | ML | 7.21 | 25 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 392,
+            "end": 487,
+            "text": "| Zn(II) | L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… | ML | 3.2 | 25 | 0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 489,
+            "end": 551,
+            "text": "There were also protonation constants for that peptide ligand.",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_6692",
+              "vlm_117483",
+              "vlm_117486"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Cu^[2+] + L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… — 3 measurement(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Cu^[2+] + L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… — 3 measurement(s)\nmetal_id: metal_41 | ligand_id: ligand_6692"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Zn^[2+] + L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… — 3 measurement(s)\nmetal_id: metal_208 | ligand_id: ligand_6692"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "search_ligands … *(no results)* for transferrin, lactoferrin, conalbumin, albumin, metallothionein",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_6692"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "metal_id: metal_41 | ligand_id: ligand_6692",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_id: metal_68 | ligand_id: ligand_6692"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_id: metal_41 | ligand_id: ligand_6692"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_id: metal_208 | ligand_id: ligand_6692"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_41",
+              "metal_208",
+              "ligand_6692",
+              "vlm_117483",
+              "vlm_117486"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "metal_id: metal_41 | ligand_id: ligand_6692",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Cu^[2+] + L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… — 3 measurement(s)\nmetal_id: metal_41 | ligand_id: ligand_6692"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "Zn^[2+] + L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… — 3 measurement(s)\nmetal_id: metal_208 | ligand_id: ligand_6692"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "vlm_117483",
+              "beta_def_812",
+              "metal_41",
+              "ligand_6692"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_117483 | beta_def_812 | logK | 7.21 | 25 | 0.1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_117483 | ref_eq_map_7909 | beta_def_812 | logK | 7.21 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_id: metal_41 | ligand_id: ligand_6692"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "vlm_117486",
+              "beta_def_812",
+              "metal_208",
+              "ligand_6692"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_117486 | beta_def_812 | logK | 3.2 | 25 | 0.1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_117486 | ref_eq_map_7910 | beta_def_812 | logK | 3.2 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_id: metal_208 | ligand_id: ligand_6692"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "metal_68",
+              "ligand_6692",
+              "vlm_117477",
+              "vlm_117478"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "| vlm_117477 | beta_def_79 | logK | 8.4 | 25 | 0.1 | `[L] + [H] <=> [HL]`",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "H^[+] + L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… — 6 measurement(s)\nmetal_id: metal_68 | ligand_id: ligand_6692"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_117477 | ref_eq_map_7908 | beta_def_79 | logK | 8.4 | 25 | 0.1 | `[L] + [H] <=> [HL]` |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "## Bottom line\n\n| Question | Answer |\n|---|---|\n| Does SRD-46 appear to contain transferrin binding data? | I did **not** find evidence of it |\n| Does SRD-46 contain metal–protein binding data in general? | Not obvious for full proteins; it seems to include at least some **peptides**, but I did not find clear **macromolecular protein** entries |\n\nSo the safest conclusion is: **SRD-46 does not appear to have explicit transferrin (or similar full protein) metal-binding entries, based on the searchable ligand and stability records I checked.** It seems more focused on small-molecule ligands and some peptides rather than large proteins.\n\nA chemistry note: that pattern is plausible, because equilibrium-constant databases often emphasize well-defined solution complexes with small ligands; full proteins like transferrin introduce site heterogeneity, conformational effects, and conditional binding behavior that are harder to store as simple β values.\n\nSource: **NIST SRD-46**.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 14,
+            "text": "## Bottom line",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 48,
+            "end": 143,
+            "text": "| Does SRD-46 appear to contain transferrin binding data? | I did **not** find evidence of it |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 144,
+            "end": 347,
+            "text": "| Does SRD-46 contain metal–protein binding data in general? | Not obvious for full proteins; it seems to include at least some **peptides**, but I did not find clear **macromolecular protein** entries |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 349,
+            "end": 377,
+            "text": "So the safest conclusion is:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 380,
+            "end": 479,
+            "text": "SRD-46 does not appear to have explicit transferrin (or similar full protein) metal-binding entries",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 481,
+            "end": 544,
+            "text": "based on the searchable ligand and stability records I checked.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 547,
+            "end": 640,
+            "text": "It seems more focused on small-molecule ligands and some peptides rather than large proteins.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 642,
+            "end": 659,
+            "text": "A chemistry note:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 660,
+            "end": 686,
+            "text": "that pattern is plausible,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 687,
+            "end": 793,
+            "text": "because equilibrium-constant databases often emphasize well-defined solution complexes with small ligands;",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 794,
+            "end": 956,
+            "text": "full proteins like transferrin introduce site heterogeneity, conformational effects, and conditional binding behavior that are harder to store as simple β values.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 958,
+            "end": 982,
+            "text": "Source: **NIST SRD-46**.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "## search_ligands\n*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "\"name\": \"transferrin, apotransferrin, lactoferrin, conalbumin, serum albumin, human serum albumin, bovine serum albumin, metallothionein\""
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_6692",
+              "metal_41",
+              "metal_208",
+              "vlm_117483",
+              "vlm_117486"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "### `Cu^[2+]` + L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… — 3 measurement(s)\nmetal_id: metal_41 | ligand_id: ligand_6692",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "metal_id: metal_41 | ligand_id: ligand_6692\n| vlm_117483 | ... | beta_def_812 | logK | 7.21 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "### `Zn^[2+]` + L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… — 3 measurement(s)\nmetal_id: metal_208 | ligand_id: ligand_6692"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "## search_ligands\n*(no results)*",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "\"name\": \"transferrin, apotransferrin, lactoferrin, conalbumin, serum albumin, human serum albumin, bovine serum albumin, metallothionein\""
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "ligand_6692",
+              "vlm_117483",
+              "vlm_117486"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "### `Cu^[2+]` + L-Alanyl-L-aspartyl-L-serylglycyl-L-glutamylglycyl-L-aspart… — 3 measurement(s)\nmetal_id: metal_41 | ligand_id: ligand_6692",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_117483 | ... | logK | 7.21 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "| vlm_117486 | ... | logK | 3.2 | 25 | 0.1 | `[M] + [L] <=> [ML]` |"
+              },
+              {
+                "step": "Step 9",
+                "tool": "search_ligands",
+                "snippet": "## search_ligands\n*(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General chemistry knowledge about databases; not stated in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General knowledge on protein binding heterogeneity; not a database row.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Provenance: tool outputs in this run are from the NIST SRD-46 context; rows do not include the database name explicitly.",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 12 row(s)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

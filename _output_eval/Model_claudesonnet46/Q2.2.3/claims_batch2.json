@@ -1,0 +1,1232 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudesonnet46\\Q2.2.3\\Q2.2.3_result_batch2.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "# Ligands in SRD-46 with More Than 6 Reported pKa Values\n\nBased on the data retrieved from NIST SRD-46, here is what was confirmed:\n\n---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 56,
+            "text": "# Ligands in SRD-46 with More Than 6 Reported pKa Values",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 58,
+            "end": 102,
+            "text": "Based on the data retrieved from NIST SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 104,
+            "end": 131,
+            "text": "here is what was confirmed:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 133,
+            "end": 136,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "[PHASE ERROR] Tool 'execute_srd46_sql' is not available yet.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "[PHASE ERROR] Tool 'execute_srd46_sql' is not available yet. You must call 0_plan_search_strategy first (PHASE 2) before using the execution tools."
+              },
+              {
+                "step": "Step 7",
+                "tool": "execute_srd46_sql",
+                "snippet": "\"sql_query\": \"SELECT lc.ligand_id, lc.ligand_name_SRD, lc.ligand_class_name, lc.formula, COUNT(p.pKa) as pka_count ... FROM ligand_card lc JOIN ligand_pka_measured p ...\""
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "search_ligands — 5 result(s) | ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | H5L | EDTA and derivatives | 322 | ... | pKa brackets ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "## ✅ Confirmed Example: DTPA\n\n**Diethylenetrinitrilopentaacetic acid** (`ligand_6356`) is definitively confirmed to have **8 distinct protonation steps** — well above the threshold of 6. Its `pka_brackets` field in the database reads:\n\n> `(-inf, H8L, −0.1, H7L, −0.1, H6L, −0.7, H5L, 2.0, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, ~8.4, L, +inf)`\n\n| Step | Equilibrium | Approx. pKa |\n|------|-------------|-------------|\n| 1 | H8L → H7L | −0.1 |\n| 2 | H7L → H6L | −0.1 |\n| 3 | H6L → H5L | −0.7 |\n| 4 | H5L → H4L | 2.0 |\n| 5 | H4L → H3L | 2.7 |\n| 6 | H3L → H2L | 4.28 |\n| 7 | H2L → HL | 4.28 |\n| 8 | HL → L | ~8.4 |\n\nThe H⁺ + DTPA system has **57 VLM entries** across 8 species, measured at 15–41°C and ionic strengths from near-zero to 1.15 M — one of the most thoroughly studied protonation systems in the database.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 28,
+            "text": "## ✅ Confirmed Example: DTPA",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 30,
+            "end": 86,
+            "text": "**Diethylenetrinitrilopentaacetic acid** (`ligand_6356`)",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 87,
+            "end": 120,
+            "text": "is definitively confirmed to have",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 123,
+            "end": 151,
+            "text": "8 distinct protonation steps",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 156,
+            "end": 185,
+            "text": "well above the threshold of 6",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 187,
+            "end": 234,
+            "text": "Its `pka_brackets` field in the database reads:",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 238,
+            "end": 340,
+            "text": "`(-inf, H8L, −0.1, H7L, −0.1, H6L, −0.7, H5L, 2.0, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, ~8.4, L, +inf)`",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 416,
+            "end": 440,
+            "text": "| 1 | H8L → H7L | −0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 441,
+            "end": 465,
+            "text": "| 2 | H7L → H6L | −0.1 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 466,
+            "end": 490,
+            "text": "| 3 | H6L → H5L | −0.7 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 491,
+            "end": 514,
+            "text": "| 4 | H5L → H4L | 2.0 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 515,
+            "end": 538,
+            "text": "| 5 | H4L → H3L | 2.7 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 539,
+            "end": 563,
+            "text": "| 6 | H3L → H2L | 4.28 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 564,
+            "end": 587,
+            "text": "| 7 | H2L → HL | 4.28 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 588,
+            "end": 609,
+            "text": "| 8 | HL → L | ~8.4 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 611,
+            "end": 654,
+            "text": "The H⁺ + DTPA system has **57 VLM entries**",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 655,
+            "end": 671,
+            "text": "across 8 species",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 673,
+            "end": 692,
+            "text": "measured at 15–41°C",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 697,
+            "end": 737,
+            "text": "ionic strengths from near-zero to 1.15 M",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 740,
+            "end": 810,
+            "text": "one of the most thoroughly studied protonation systems in the database",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_6356"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | ...",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | H5L | EDTA and derivatives | 322 | ... | (-inf, H8L, -0.1, H7L, -0.1, H6L, -0.7, H5L, 2, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, -8.4, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_68",
+              "ligand_6356"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "H+ + DTPA ... — 57 ent, 8 sp, 57 vlms",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "1. H^[+] + Diethylenetrinitrilopentaacetic acid (DTPA) (metal_68 + ligand_6356) — ... 57 ent, 8 sp, 57 vlms ... species: beta_def_32(14) beta_def_53(8) beta_def_64(8) beta_def_68(8) beta_def_72(2) beta_def_76(2) beta_def_77(1) beta_def_79(14)"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_68",
+              "ligand_6356"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "H+ + DTPA ... — 57 ent, 8 sp, 57 vlms",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "1. H^[+] + ... (metal_68 + ligand_6356) — ... 8 sp ... "
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_6356"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "pka_brackets: (-inf, H8L, -0.1, H7L, -0.1, H6L, -0.7, H5L, 2, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, -8.4, L, +inf)",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6356 | ... | pka_brackets | (-inf, H8L, -0.1, H7L, -0.1, H6L, -0.7, H5L, 2, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, -8.4, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "ligand_6356"
+            ],
+            "support_class": "unsupported",
+            "evidence_snippet": "DB shows '... HL, -8.4, L ...', not '~8.4'. Listing in claim does not match the database string.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "(-inf, H8L, -0.1, H7L, -0.1, H6L, -0.7, H5L, 2, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, -8.4, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "ligand_6356"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "..., H8L, -0.1, H7L, ...",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | H5L | ... | (-inf, H8L, -0.1, H7L, -0.1, H6L, -0.7, H5L, 2, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, -8.4, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "ligand_6356"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "..., H7L, -0.1, H6L, ...",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | H5L | ... | (-inf, H8L, -0.1, H7L, -0.1, H6L, -0.7, H5L, 2, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, -8.4, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "ligand_6356"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "..., H6L, -0.7, H5L, ...",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | H5L | ... | (-inf, H8L, -0.1, H7L, -0.1, H6L, -0.7, H5L, 2, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, -8.4, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "ligand_6356"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "..., H5L, 2, H4L, ...",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | H5L | ... | (-inf, H8L, -0.1, H7L, -0.1, H6L, -0.7, H5L, 2, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, -8.4, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "ligand_6356"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "..., H4L, 2.7, H3L, ...",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | H5L | ... | (-inf, H8L, -0.1, H7L, -0.1, H6L, -0.7, H5L, 2, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, -8.4, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "ligand_6356"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "..., H3L, 4.28, H2L, ...",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | H5L | ... | (-inf, H8L, -0.1, H7L, -0.1, H6L, -0.7, H5L, 2, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, -8.4, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "ligand_6356"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "..., H2L, 4.28, HL, ...",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | H5L | ... | (-inf, H8L, -0.1, H7L, -0.1, H6L, -0.7, H5L, 2, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, -8.4, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [
+              "ligand_6356"
+            ],
+            "support_class": "unsupported",
+            "evidence_snippet": "DB has 'HL, -8.4, L'; claim states '~8.4' (positive). Sign/value mismatch.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "... H2L, 4.28, HL, -8.4, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [
+              "metal_68",
+              "ligand_6356"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "— 57 ent, 8 sp, 57 vlms",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "1. H^[+] + ... (metal_68 + ligand_6356) — ligand_def_HxL: H5L | 57 ent, 8 sp, 57 vlms (vlm_112470…vlm_112526)"
+              }
+            ]
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [
+              "metal_68",
+              "ligand_6356"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "— 57 ent, 8 sp, 57 vlms",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "1. H^[+] + ... — 57 ent, 8 sp, 57 vlms ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 17,
+            "canonical_ids": [
+              "metal_68",
+              "ligand_6356"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "T:15~41°C",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "1. H^[+] + ... eq:10 nets T:15~41°C I:-0.05~1.15M ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 18,
+            "canonical_ids": [
+              "metal_68",
+              "ligand_6356"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "I:-0.05~1.15M (described as near-zero to 1.15 M in claim)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "1. H^[+] + ... T:15~41°C I:-0.05~1.15M ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 19,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Comparative statement not evidenced by database-wide stats; only this system's 57 vlms shown.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "build_system_catalog",
+                "snippet": "H^[+] + DTPA ... 57 vlms ... (no cross-system comparison provided)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "## Other Ligands Inspected (Fewer Than 7 Steps)\n\n| Ligand | ID | Visible Steps | Class |\n|--------|----|--------------|-------|\n| DTPA-dien | ligand_6117 | 5 (H5L → L) | Aza macrocycles |\n| DTPA-BMA | ligand_6362 | 4 (H4L → L) | EDTA derivatives |\n| DTPA-BBA | ligand_6363 | 3 (H3L → L) | EDTA derivatives |\n| DTPA-BP | ligand_6364 | 5 (H5L → L) | EDTA derivatives |\n\nThese DTPA derivatives have fewer ionizable groups due to amide substitution of carboxylates, reducing their protonation step count.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 26,
+            "text": "## Other Ligands Inspected",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 27,
+            "end": 47,
+            "text": "(Fewer Than 7 Steps)",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 128,
+            "end": 187,
+            "text": "| DTPA-dien | ligand_6117 | 5 (H5L → L) | Aza macrocycles |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 188,
+            "end": 247,
+            "text": "| DTPA-BMA | ligand_6362 | 4 (H4L → L) | EDTA derivatives |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 248,
+            "end": 307,
+            "text": "| DTPA-BBA | ligand_6363 | 3 (H3L → L) | EDTA derivatives |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 308,
+            "end": 366,
+            "text": "| DTPA-BP | ligand_6364 | 5 (H5L → L) | EDTA derivatives |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 368,
+            "end": 418,
+            "text": "These DTPA derivatives have fewer ionizable groups",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 419,
+            "end": 460,
+            "text": "due to amide substitution of carboxylates",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 462,
+            "end": 499,
+            "text": "reducing their protonation step count",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_6117",
+              "ligand_6362",
+              "ligand_6363",
+              "ligand_6364"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "pka_brackets show H5L→L (5), H4L→L (4), H3L→L (3), H5L→L (5) for these ligands—each <7 steps.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6117 | ... (DTPA-dien) | ... | Aza macrocycles with car… | ... | (-inf, H5L, -1.8, H4L, 2.62, H3L, 4.1, H2L, 8.87, HL, 10.02, L, +inf)"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6362 | ... (DTPA-BMA) | *** | EDTA and derivatives | ... | (-inf, H4L, -1.4, H3L, 3.31, H2L, 4.38, HL, 9.37, L, +inf)"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6363 | ... (DTPA-BBA) | *** | EDTA and derivatives | ... | (-inf, H3L, 3.31, H2L, 4.44, HL, 9.36, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_6117"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6117 … Aza macrocycles with car… … pka_brackets: (-inf, H5L, … 10.02, L, +inf) → 5 deprotonations (H5L→L).",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6117 | 9,17-Dioxo-1,4,7,10,13,16-hexaazacycl… (DTPA-dien) | H3L | Aza macrocycles with car… | 6 | `O=C(O)CN1CCN(CC(=O)O)CC(=O)NCCNCCNC(=O)CN(CC(=O)O)CC1` | (-inf, H5L, -1.8, H4L, 2.62, H3L, 4.1, H2L, 8.87, HL, 10.02, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_6362"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6362 … EDTA and derivatives … pka_brackets: (-inf, H4L, … 9.37, L, +inf) → 4 steps (H4L→L).",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6362 | Diethylenetrinitrilopentaacetic acid N… (DTPA-BMA) | *** | EDTA and derivatives | 43 | *** | (-inf, H4L, -1.4, H3L, 3.31, H2L, 4.38, HL, 9.37, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_6363"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6363 … EDTA and derivatives … pka_brackets: (-inf, H3L, … 9.36, L, +inf) → 3 steps (H3L→L).",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6363 | Diethylenetrinitrilopentaacetic acid N… (DTPA-BBA) | *** | EDTA and derivatives | 9 | *** | (-inf, H3L, 3.31, H2L, 4.44, HL, 9.36, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "ligand_6364"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6364 … EDTA and derivatives … pka_brackets: (-inf, H5L, … 9.5, L, +inf) → 5 steps (H5L→L).",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6364 | N,N\"-Bis(2-pyridylmethyl)diethylenetrin… (DTPA-BP) | *** | EDTA and derivatives | 14 | *** | (-inf, H5L, 2.28, H4L, 3.41, H3L, 4.76, H2L, 6.46, HL, 9.5, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "ligand_6356",
+              "ligand_6117",
+              "ligand_6362",
+              "ligand_6363",
+              "ligand_6364"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "DTPA shows H8L→L; derivatives show H5L/H4L/H3L→L, indicating fewer deprotonation steps (fewer ionizable groups).",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6356 | Diethylenetrinitrilopentaacetic acid (DTPA) | H5L | EDTA and derivatives | 322 | `...` | (-inf, H8L, -0.1, H7L, -0.1, H6L, -0.7, H5L, 2, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, -8.4, L, +inf)"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6362 | … (DTPA-BMA) | … | EDTA and derivatives | … | (-inf, H4L, -1.4, H3L, 3.31, H2L, 4.38, HL, 9.37, L, +inf)"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6363 | … (DTPA-BBA) | … | EDTA and derivatives | … | (-inf, H3L, 3.31, H2L, 4.44, HL, 9.36, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Amide substitution mechanism is not stated in the SRD-46 rows; treated as chemical rationale outside the database rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "Functional groups across all SQL matches (2 parseable SMILES)\n| group | count | % |\n| amide | 1 | 50% |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "ligand_6356",
+              "ligand_6362",
+              "ligand_6363",
+              "ligand_6117",
+              "ligand_6364"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "ligand_6356 pka_brackets: (-inf, H8L, …, L, +inf); derivatives start at H5L/H4L/H3L → fewer steps.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6356 | … (DTPA) | … | (-inf, H8L, -0.1, H7L, -0.1, H6L, -0.7, H5L, 2, H4L, 2.7, H3L, 4.28, H2L, 4.28, HL, -8.4, L, +inf)"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6364 | … (DTPA-BP) | … | (-inf, H5L, 2.28, H4L, 3.41, H3L, 4.76, H2L, 6.46, HL, 9.5, L, +inf)"
+              },
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "ligand_6362 | … (DTPA-BMA) | … | (-inf, H4L, -1.4, H3L, 3.31, H2L, 4.38, HL, 9.37, L, +inf)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "## Chemistry Insight\n\nDTPA's 8 protonation steps arise from its **3 tertiary amine nitrogens** and **5 carboxylate groups**, giving it an extraordinary capacity to buffer across a wide pH range — from strongly acidic (pKa < 0) all the way to basic (pKa ~8.4). This polyprotic character is the foundation of its exceptional metal-chelating ability, which is exploited in:\n- **MRI contrast agents** (Gd-DTPA / Magnevist)\n- **Radiopharmaceuticals** (chelation of ⁹⁰Y, ¹¹¹In)\n- **Heavy metal detoxification** therapies\n\nA full database-wide survey (querying `ligand_pka_measured` grouped by ligand with `HAVING COUNT(DISTINCT pKa_type) > 6`) was planned but could not be completed within the session time budget. Additional candidates such as polyphosphonates (DTPMP, NTMP) and polyphosphates (phytate/inositol hexakisphosphate) are strong candidates based on their known chemistry, but their counts were not confirmed from the database in this session.\n\n**Source:** NIST SRD-46 — Critically Selected Stability Constants of Metal Complexes.",
+        "claims": [
+          {
+            "start": 3,
+            "end": 20,
+            "text": "Chemistry Insight",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 22,
+            "end": 48,
+            "text": "DTPA's 8 protonation steps",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 49,
+            "end": 123,
+            "text": "arise from its **3 tertiary amine nitrogens** and **5 carboxylate groups**",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 125,
+            "end": 193,
+            "text": "giving it an extraordinary capacity to buffer across a wide pH range",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 218,
+            "end": 225,
+            "text": "pKa < 0",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 249,
+            "end": 257,
+            "text": "pKa ~8.4",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 260,
+            "end": 346,
+            "text": "This polyprotic character is the foundation of its exceptional metal-chelating ability",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 348,
+            "end": 370,
+            "text": "which is exploited in:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 375,
+            "end": 394,
+            "text": "MRI contrast agents",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 398,
+            "end": 417,
+            "text": "Gd-DTPA / Magnevist",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 423,
+            "end": 443,
+            "text": "Radiopharmaceuticals",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 447,
+            "end": 470,
+            "text": "chelation of ⁹⁰Y, ¹¹¹In",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 474,
+            "end": 514,
+            "text": "**Heavy metal detoxification** therapies",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 516,
+            "end": 649,
+            "text": "A full database-wide survey (querying `ligand_pka_measured` grouped by ligand with `HAVING COUNT(DISTINCT pKa_type) > 6`) was planned",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 650,
+            "end": 708,
+            "text": "but could not be completed within the session time budget.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 709,
+            "end": 877,
+            "text": "Additional candidates such as polyphosphonates (DTPMP, NTMP) and polyphosphates (phytate/inositol hexakisphosphate) are strong candidates based on their known chemistry",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 879,
+            "end": 949,
+            "text": "but their counts were not confirmed from the database in this session.",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 963,
+            "end": 1036,
+            "text": "NIST SRD-46 — Critically Selected Stability Constants of Metal Complexes.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "MRI application is general knowledge for Gd–DTPA; no application data present in tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Radiopharmaceutical use is general domain knowledge; no application data in tool outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Heavy-metal detox applications are general knowledge; not captured in the SRD-46 tool outputs here.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Assertion about candidate ligands is chemistry background; not corroborated by provided tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 17,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

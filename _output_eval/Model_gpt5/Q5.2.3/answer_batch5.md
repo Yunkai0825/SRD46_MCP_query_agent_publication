@@ -1,0 +1,26 @@
+Short answer: SRD‑46 contains no stability-constant measurements at 200 °C, and it does not encode pressure (e.g., 50 bar) in the stability tables.
+
+What we found in SRD‑46
+- The stability-constants table has a temperature_c field but no pressure field.
+- A database-wide scan shows no entries at or near 200 °C; the highest recorded measurement temperature is 75 °C.
+
+Summary of the database check (SRD‑46)
+| metric | value |
+|---|---|
+| Max recorded temperature_c | 75.0 |
+| Records with 195–205 °C | 0 |
+| Records with 150–250 °C | 0 |
+| Total stability records with a temperature | 79,063 |
+
+Implications
+- Because pressure isn’t captured in SRD‑46 stability measurements, we cannot filter or report “at 50 bar.”
+- At 200 °C, SRD‑46 has no stability constants to report for any metal–ligand system. High‑T/HP constants, when available, are typically reported in specialized geochemical literature and databases rather than SRD‑46.
+
+If you can name a specific metal–ligand system, I can:
+- Pull the closest available SRD‑46 data (≤75 °C) with full conditions and references, or
+- Check whether SRD‑46 contains thermodynamic parameters (ΔH, ΔS) for that system that some sources use for limited temperature extrapolations (with caution), or
+- Suggest literature sources outside SRD‑46 that report high‑temperature/pressure formation constants.
+
+Source: NIST SRD‑46 (ligandmetal_stability_measured and related card tables).
+
+---

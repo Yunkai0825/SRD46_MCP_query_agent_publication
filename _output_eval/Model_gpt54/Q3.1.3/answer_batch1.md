@@ -1,0 +1,44 @@
+I couldn’t verify a **~2005 zinc–histidine paper** in the SRD-46 records for the Zn(II)–histidine system. The Zn–histidine literature attached to the relevant constants in SRD-46 appears to stop at **1999**, with the most recent linked citation:
+
+| shortcut | citation |
+|---|---|
+| 99AA | Z. M. Anwar and H. A. Azab, *J. Chem. Eng. Data* **1999**, **44**, 1151 |
+
+For the Zn(II) + histidine system (`metal_208` + `ligand_5898`), SRD-46 reports the following equilibrium constants at **25 °C** under several ionic strengths:
+
+| species / reaction | beta_def | logK | T (°C) | I (M) |
+|---|---|---:|---:|---:|
+| Zn + His ⇌ ZnHis | ML (`beta_def_812`) | 6.51 | 25 | 0.1 |
+| Zn + His ⇌ ZnHis | ML (`beta_def_812`) | 6.48 | 25 | 0.5 |
+| Zn + His ⇌ ZnHis | ML (`beta_def_812`) | 6.58 | 25 | 1.0 |
+| Zn + His ⇌ ZnHis | ML (`beta_def_812`) | 7.07 | 25 | 3.0 |
+| Zn + 2 His ⇌ ZnHis₂ | ML2 (`beta_def_840`) | 12.04 | 25 | 0.1 |
+| Zn + 2 His ⇌ ZnHis₂ | ML2 (`beta_def_840`) | 11.91 | 25 | 0.5 |
+| Zn + 2 His ⇌ ZnHis₂ | ML2 (`beta_def_840`) | 12.29 | 25 | 1.0 |
+| Zn + 2 His ⇌ ZnHis₂ | ML2 (`beta_def_840`) | 12.74 | 25 | 3.0 |
+| ZnHis + H ⇌ ZnHHis | MHL (`beta_def_788`) | 4.86 | 25 | 0.1 |
+| ZnHis₂ + H ⇌ ZnHHis₂ | MHL2 (`beta_def_792`) | 5.80 | 25 | 0.1 |
+| ZnHHis₂ + H ⇌ Zn(HHis)₂ | M(HL)₂ (`beta_def_204`) | 5.67 | 25 | 0.1 |
+| Zn(OH)His₂ + H ⇌ ZnHis₂ + H₂O | `beta_def_984` | 9.95 | 25 | 0.5 |
+
+SRD-46 also includes some thermodynamic entries for the same system:
+
+| reaction | type | value | T (°C) | I (M) |
+|---|---|---:|---:|---:|
+| Zn + His ⇌ ZnHis | ΔH | -20.1 | 25 | 0.1 |
+| Zn + His ⇌ ZnHis | ΔH | -23.0 | 25 | 3.0 |
+| Zn + His ⇌ ZnHis | ΔS | 57.3 | 25 | 0.1 |
+| Zn + 2 His ⇌ ZnHis₂ | ΔH | 0.0 | 25 | 0.1 |
+| Zn + 2 His ⇌ ZnHis₂ | ΔH | -47.3 | 25 | 0.1 |
+| Zn + 2 His ⇌ ZnHis₂ | ΔH | -49.4 | 25 | 3.0 |
+| Zn + 2 His ⇌ ZnHis₂ | ΔS | 72.0 | 25 | 0.1 |
+| Zn + 2 His ⇌ ZnHis₂ | ΔS | -67.4 | 25 | 0.1 |
+| Zn + 2 His ⇌ ZnHis₂ | ΔS | 58.2 | 25 | 3.0 |
+| ZnHis + H ⇌ ZnHHis | ΔH | -27.6 | 25 | 0.1 |
+| ZnHis + H ⇌ ZnHHis | ΔS | 0.4 | 25 | 0.1 |
+
+So the best answer from SRD-46 is: **I can find Zn–histidine citations and constants, but not a clearly linked 2005 paper**. If you want, I can next help by **identifying which of these constants most likely belong to the 1999 Anwar & Azab paper versus older studies**, or broaden the search for a 2005 paper under a different ligand naming/citation pattern.  
+
+*Source: NIST SRD-46*
+
+---

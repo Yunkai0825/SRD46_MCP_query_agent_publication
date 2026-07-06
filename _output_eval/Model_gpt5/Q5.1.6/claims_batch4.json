@@ -1,0 +1,1023 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt5\\Q5.1.6\\Q5.1.6_result_batch4.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "| Highlight | Data (NIST SRD‑46) |\n|---|---|\n| Lanthanide contraction shows up in citrate binding at matched conditions | At 25 °C, I ≈ 0.1 M (aqueous), the 1:1 citrate complexes strengthen across the series. Typical logβ1 values trend La < Gd < Lu, with Y(III) tracking near the mid-late lanthanides. |\n| Oxidation-state quirks | Cerium has both Ce(III) and the uncommon Ce(IV) in the database; Eu(II) appears but with very sparse water/25 °C entries. These unusual states demand careful handling because hydrolysis and redox can dominate. |\n| Coverage snapshot | The Ln(III) ions have extensive records: e.g., La(III) metal_79 has ligand_totN_297 and vlm_totN_931; Gd(III) metal_65 has 288/897; Lu(III) metal_81 has 234/671; Y(III) metal_205 has 182/—. Ce(IV) metal_28 has far fewer complexes (ligand_totN_3), reflecting its hydrolytic/redox sensitivity. |",
+        "claims": [
+          {
+            "start": 45,
+            "end": 303,
+            "text": "| Lanthanide contraction shows up in citrate binding at matched conditions | At 25 °C, I ≈ 0.1 M (aqueous), the 1:1 citrate complexes strengthen across the series. Typical logβ1 values trend La < Gd < Lu, with Y(III) tracking near the mid-late lanthanides. |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 304,
+            "end": 542,
+            "text": "| Oxidation-state quirks | Cerium has both Ce(III) and the uncommon Ce(IV) in the database; Eu(II) appears but with very sparse water/25 °C entries. These unusual states demand careful handling because hydrolysis and redox can dominate. |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 543,
+            "end": 858,
+            "text": "| Coverage snapshot | The Ln(III) ions have extensive records: e.g., La(III) metal_79 has ligand_totN_297 and vlm_totN_931; Gd(III) metal_65 has 288/897; Lu(III) metal_81 has 234/671; Y(III) metal_205 has 182/—. Ce(IV) metal_28 has far fewer complexes (ligand_totN_3), reflecting its hydrolytic/redox sensitivity. |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_79",
+              "metal_65",
+              "metal_81",
+              "metal_205",
+              "ligand_9058"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Rows exist at 25 °C and I=0.1 M for La, Gd, Lu, Y with citric acid, but the actual logβ1 values/trend are not listed in the tool output.",
+            "tool_snippets": [
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "metal_79 | La^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 1 | 1 | 25 | 0.1 | *** | 1"
+              },
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "metal_65 | Gd^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 1 | 1 | 25 | 0.1 | *** | 1"
+              },
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "metal_81 | Lu^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 1 | 1 | 25 | 0.1 | *** | 1"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_27",
+              "metal_28",
+              "metal_59"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "\"order_by\": \"s.constant_value DESC, ABS(s.temperature_c - 25) ASC\",",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "search_metals",
+                "snippet": "metal_27 | Ce^[3+] | Ce | 3 | ✓ | [Ce+3] | InChI=1S/Ce/q+3 | beta_totN_22 | ligand_totN_188 | vlm_totN_567\nmetal_28 | Ce^[4+] | Ce | 4 | ✓ | [Ce+4] | InChI=1S/Ce/q+4 | beta_totN_5 | ligand_totN_3 | vlm_totN_9"
+              },
+              {
+                "step": "Step 10",
+                "tool": "search_metals",
+                "snippet": "metal_59 | Eu^[2+] | Eu | 2 | ✓ | [Eu+2] | InChI=1S/Eu/q+2 | beta_totN_1 | ligand_totN_2 | vlm_totN_2"
+              },
+              {
+                "step": "Step 22",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_59 AND s.solvent_name LIKE '%water%' AND s.temperature_c BETWEEN 20 AND 30 AND c.ligand_name_SRD NOT LIKE '%hydrox%' AND c.beta_definition_name LIKE '%1:1%')\",\n\"order_by\": \"s.constant_value DESC, ABS(s.temperature_c - 25) ASC\","
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_79",
+              "metal_65",
+              "metal_81",
+              "metal_205",
+              "metal_28"
+            ],
+            "support_class": "unsupported",
+            "evidence_snippet": "Y^[3+] (metal_205) shows vlm_totN_533 in tool results, not “—”.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_metals",
+                "snippet": "metal_79 | La^[3+] | La | 3 | ✓ | [La+3] | InChI=1S/La/q+3 | beta_totN_30 | ligand_totN_297 | vlm_totN_931"
+              },
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "metal_205 | Y^[3+] | Y | 3 | ✓ | [Y+3] | InChI=1S/Y/q+3 | beta_totN_26 | ligand_totN_182 | vlm_totN_533"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_metals",
+                "snippet": "metal_28 | Ce^[4+] | Ce | 4 | ✓ | [Ce+4] | InChI=1S/Ce/q+4 | beta_totN_5 | ligand_totN_3 | vlm_totN_9"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "Matched citrate constants (illustrative trend; 25 °C, I ≈ 0.1 M, water; 1:1 ML where available)\n| Metal | Ligand (SRD name) | Stoichiometry | logβ | T (°C) | I (M) | Notes |\n|---|---|---|---|---|---|---|\n| La(III) metal_79 | 2‑Hydroxypropane‑1,2,3‑tricarboxylic acid (citrate) ligand_9058 | 1:1 | see SRD‑46 | 25 | 0.1 | Entry present at matched conditions in SRD‑46; exact value can be pulled on request. |\n| Gd(III) metal_65 | Citrate ligand_9058 | 1:1 | see SRD‑46 | 25 | 0.1 | Stronger than La(III), consistent with smaller ionic radius. |\n| Lu(III) metal_81 | Citrate ligand_9058 | 1:1 | see SRD‑46 | 25 | 0.1 | Strongest of the three, illustrating lanthanide contraction. |\n| Y(III) metal_205 | Citrate ligand_9058 | 1:1 | see SRD‑46 | 25 | 0.1 | Tracks near mid‑late Ln(III) binding. |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 25,
+            "text": "Matched citrate constants",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 27,
+            "end": 45,
+            "text": "illustrative trend",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 47,
+            "end": 52,
+            "text": "25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 54,
+            "end": 63,
+            "text": "I ≈ 0.1 M",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 65,
+            "end": 70,
+            "text": "water",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 72,
+            "end": 94,
+            "text": "1:1 ML where available",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 204,
+            "end": 407,
+            "text": "| La(III) metal_79 | 2‑Hydroxypropane‑1,2,3‑tricarboxylic acid (citrate) ligand_9058 | 1:1 | see SRD‑46 | 25 | 0.1 | Entry present at matched conditions in SRD‑46; exact value can be pulled on request. |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 408,
+            "end": 543,
+            "text": "| Gd(III) metal_65 | Citrate ligand_9058 | 1:1 | see SRD‑46 | 25 | 0.1 | Stronger than La(III), consistent with smaller ionic radius. |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 544,
+            "end": 679,
+            "text": "| Lu(III) metal_81 | Citrate ligand_9058 | 1:1 | see SRD‑46 | 25 | 0.1 | Strongest of the three, illustrating lanthanide contraction. |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 680,
+            "end": 792,
+            "text": "| Y(III) metal_205 | Citrate ligand_9058 | 1:1 | see SRD‑46 | 25 | 0.1 | Tracks near mid‑late Ln(III) binding. |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_79",
+              "metal_65",
+              "metal_81",
+              "metal_205",
+              "ligand_9058"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "… metal_79 | La^[3+] | ligand_9058 | … | 1 | 1 | 25 | 0.1 | …",
+            "tool_snippets": [
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "| metal_79 | La^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | … | 1 | 1 | 25 | 0.1 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_79",
+              "metal_65",
+              "metal_81",
+              "metal_205",
+              "ligand_9058"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "… metal_205 | Y^[3+] | ligand_9058 | … | 1 | 1 | 25 | 0.1 | …",
+            "tool_snippets": [
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "| metal_205 | Y^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | … | 1 | 1 | 25 | 0.1 | *** | 1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_79",
+              "metal_65",
+              "metal_81",
+              "metal_205",
+              "ligand_9058"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "s.solvent_name LIKE '%water%'",
+            "tool_snippets": [
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "WHERE … s.solvent_name LIKE '%water%' AND s.temperature_c BETWEEN 20 AND 30 AND s.ionic_strength_mol_l BETWEEN 0.05 AND 0.2 …"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_79",
+              "metal_65",
+              "metal_81",
+              "metal_205",
+              "ligand_9058"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "c.beta_definition_name LIKE '%1:1%'",
+            "tool_snippets": [
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "WHERE (c.metal_id IN (metal_79, metal_65, metal_81, metal_205) … AND c.beta_definition_name LIKE '%1:1%')"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_79",
+              "ligand_9058"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_79 | La^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 1 | 1 | 25 | 0.1 | *** | 1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "| metal_79 | La^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 1 | 1 | 25 | 0.1 | *** | 1 |"
+              },
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "where: … c.beta_definition_name LIKE '%1:1%' AND s.solvent_name LIKE '%water%' AND s.temperature_c BETWEEN 20 AND 30 AND s.ionic_strength_mol_l BETWEEN 0.05 AND 0.2 …"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_65",
+              "ligand_9058"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_65 | Gd^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 1 | 1 | 25 | 0.1 | *** | 1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "| metal_65 | Gd^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 1 | 1 | 25 | 0.1 | *** | 1 |"
+              },
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "where: … c.beta_definition_name LIKE '%1:1%' AND s.solvent_name LIKE '%water%' AND s.temperature_c BETWEEN 20 AND 30 AND s.ionic_strength_mol_l BETWEEN 0.05 AND 0.2 …"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "metal_81",
+              "ligand_9058"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_81 | Lu^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 1 | 1 | 25 | 0.1 | *** | 1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "| metal_81 | Lu^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 1 | 1 | 25 | 0.1 | *** | 1 |"
+              },
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "where: … c.beta_definition_name LIKE '%1:1%' AND s.solvent_name LIKE '%water%' AND s.temperature_c BETWEEN 20 AND 30 AND s.ionic_strength_mol_l BETWEEN 0.05 AND 0.2 …"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "metal_205",
+              "ligand_9058"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| metal_205 | Y^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 1 | 1 | 25 | 0.1 | *** | 1 |",
+            "tool_snippets": [
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "| metal_205 | Y^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 1 | 1 | 25 | 0.1 | *** | 1 |"
+              },
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "where: … c.beta_definition_name LIKE '%1:1%' AND s.solvent_name LIKE '%water%' AND s.temperature_c BETWEEN 20 AND 30 AND s.ionic_strength_mol_l BETWEEN 0.05 AND 0.2 …"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "Notes and insight\n- The citrate series cleanly illustrates the lanthanide contraction: as the 3+ cations get smaller from La to Lu, hard O‑donor ligands bind more strongly. Y(III), being similar in size to Ho–Er, typically sits in the late‑Ln range.\n- SRD‑46 shows many matched-condition entries for citrate across Ln(III), making it a reliable comparison set.\n- Unusual oxidation states: Eu(II) and Ce(IV) are present but sparse under strictly aqueous, ~25 °C, 1:1 filters. Ce(IV) tends to hydrolyze; Eu(II) is air‑sensitive and often measured under specialized media.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 17,
+            "text": "Notes and insight",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 20,
+            "end": 85,
+            "text": "The citrate series cleanly illustrates the lanthanide contraction",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 87,
+            "end": 130,
+            "text": "as the 3+ cations get smaller from La to Lu",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 132,
+            "end": 172,
+            "text": "hard O‑donor ligands bind more strongly.",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 173,
+            "end": 212,
+            "text": "Y(III), being similar in size to Ho–Er,",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 213,
+            "end": 249,
+            "text": "typically sits in the late‑Ln range.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 252,
+            "end": 322,
+            "text": "SRD‑46 shows many matched-condition entries for citrate across Ln(III)",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 324,
+            "end": 360,
+            "text": "making it a reliable comparison set.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 363,
+            "end": 388,
+            "text": "Unusual oxidation states:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 389,
+            "end": 418,
+            "text": "Eu(II) and Ce(IV) are present",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 419,
+            "end": 474,
+            "text": "but sparse under strictly aqueous, ~25 °C, 1:1 filters.",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 475,
+            "end": 501,
+            "text": "Ce(IV) tends to hydrolyze;",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 502,
+            "end": 525,
+            "text": "Eu(II) is air‑sensitive",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 526,
+            "end": 569,
+            "text": "and often measured under specialized media.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Lanthanide contraction is established chemistry; not explicitly stated in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Decrease in Ln(III) ionic radii from La to Lu is standard knowledge, not a database row.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "HSAB principle: hard O‑donors bind more strongly to hard 3+ cations; not a direct SRD-46 datum.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Y(III) ionic radius ~Ho–Er is accepted chemistry; SRD-46 does not list ionic radii.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Y(III) typically behaves like late lanthanides; this is not explicitly stated in the database.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "ligand_9058",
+              "metal_79",
+              "metal_110",
+              "metal_173",
+              "metal_58",
+              "metal_65",
+              "metal_73",
+              "metal_55",
+              "metal_206",
+              "metal_81",
+              "metal_205"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "metal_79 | La^[3+] | ligand_9058 | 2‑Hydroxypropane‑1,2,3‑tric… | … | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "metal_79 | La^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | … | 25 | 0.1 | *** | 1"
+              },
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "metal_81 | Lu^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | … | 25 | 0.1 | *** | 1"
+              },
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "metal_205 | Y^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | … | 25 | 0.1 | *** | 1"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "“Reliable comparison set” is an evaluative statement not stated or quantified in the tool results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "metal_59",
+              "metal_28"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_59 | Eu^[2+] … | vlm_totN_2 … / metal_28 | Ce^[4+] … | vlm_totN_9 …",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_metals",
+                "snippet": "metal_59 | Eu^[2+] | Eu | 2 | ✓ | [Eu+2] | … | beta_totN_1 | ligand_totN_2 | vlm_totN_2"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_metals",
+                "snippet": "metal_28 | Ce^[4+] | Ce | 4 | ✓ | [Ce+4] | … | beta_totN_5 | ligand_totN_3 | vlm_totN_9"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "metal_59",
+              "metal_28"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "search_stability — (no results) under water, 20–30 °C, 1:1 filters for Eu(II) and Ce(IV).",
+            "tool_snippets": [
+              {
+                "step": "Step 22",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_59 AND s.solvent_name LIKE '%water%' AND s.temperature_c BETWEEN 20 AND 30 … AND c.beta_definition_name LIKE '%1:1%')\" … *(no results)*"
+              },
+              {
+                "step": "Step 23",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_28 AND s.solvent_name LIKE '%water%' AND s.temperature_c BETWEEN 20 AND 30 … AND c.beta_definition_name LIKE '%1:1%')\" … *(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Ce(IV) hydrolysis tendency is standard aqueous chemistry; not given in SRD-46 rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Eu(II) air sensitivity is well known; SRD-46 does not annotate stability to air.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Measurement in specialized media is general experimental practice, not a database row.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "If you’d like, I can pull the exact logβ values and the source citations (at 25 °C, I = 0.10 M) for La(III), Gd(III), Lu(III), and Y(III) citrate, and then chase down any available Eu(II) or Ce(IV) non‑hydrolyzed 1:1 complexes.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 14,
+            "text": "If you’d like,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 15,
+            "end": 72,
+            "text": "I can pull the exact logβ values and the source citations",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 77,
+            "end": 82,
+            "text": "25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 84,
+            "end": 94,
+            "text": "I = 0.10 M",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 96,
+            "end": 145,
+            "text": "for La(III), Gd(III), Lu(III), and Y(III) citrate",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 147,
+            "end": 180,
+            "text": "and then chase down any available",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 181,
+            "end": 197,
+            "text": "Eu(II) or Ce(IV)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 198,
+            "end": 226,
+            "text": "non‑hydrolyzed 1:1 complexes",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "… | 25 | 0.1 | *** | 1",
+            "tool_snippets": [
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "metal_79 | La^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 1 | 1 | 25 | 0.1 | *** | 1"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "… | 25 | 0.1 | *** | 1",
+            "tool_snippets": [
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "metal_79 | La^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 1 | 1 | 25 | 0.1 | *** | 1"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_79",
+              "metal_65",
+              "metal_81",
+              "metal_205",
+              "ligand_9058"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_81 | Lu^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | … | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "metal_79 | La^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 1 | 1 | 25 | 0.1 | *** | 1"
+              },
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "metal_65 | Gd^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 1 | 1 | 25 | 0.1 | *** | 1"
+              },
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "metal_205 | Y^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 1 | 1 | 25 | 0.1 | *** | 1"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_59",
+              "metal_28"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_59 | Eu^[2+] … / metal_28 | Ce^[4+] …",
+            "tool_snippets": [
+              {
+                "step": "Step 10",
+                "tool": "search_metals",
+                "snippet": "metal_59 | Eu^[2+] | Eu | 2 | ✓ | [Eu+2] | InChI=1S/Eu/q+2 | beta_totN_1 | ligand_totN_2 | vlm_totN_2"
+              },
+              {
+                "step": "Step 5",
+                "tool": "search_metals",
+                "snippet": "metal_28 | Ce^[4+] | Ce | 4 | ✓ | [Ce+4] | InChI=1S/Ce/q+4 | beta_totN_5 | ligand_totN_3 | vlm_totN_9"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "… c.ligand_name_SRD NOT LIKE '%hydrox%' AND c.beta_definition_name LIKE '%1:1%' …",
+            "tool_snippets": [
+              {
+                "step": "Step 22",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_59 AND s.solvent_name LIKE '%water%' AND s.temperature_c BETWEEN 20 AND 30 AND c.ligand_name_SRD NOT LIKE '%hydrox%' AND c.beta_definition_name LIKE '%1:1%')\""
+              },
+              {
+                "step": "Step 23",
+                "tool": "search_stability",
+                "snippet": "\"where\": \"(c.metal_id = metal_28 AND s.solvent_name LIKE '%water%' AND s.temperature_c BETWEEN 20 AND 30 AND c.ligand_name_SRD NOT LIKE '%hydrox%' AND c.beta_definition_name LIKE '%1:1%')\""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "Source: NIST Standard Reference Database 46 (SRD‑46).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 53,
+            "text": "Source: NIST Standard Reference Database 46 (SRD‑46).",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Source line is valid for this run: tool results are present from SRD‑46 context (e.g., \"## search_stability — 200 row(s)\").",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "## search_metals — 1 result(s)\n| metal_id | metal_name | symbol |\n| metal_169 | Sc^[3+] | Sc |"
+              },
+              {
+                "step": "Step 21",
+                "tool": "search_stability",
+                "snippet": "## search_stability — 200 row(s)\n| metal_id | metal_name | ligand_id | ligand_name | ... | T°C_range | I(M)_range |\n| metal_112 | Ni^[2+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | ... | 25 | 0.1 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

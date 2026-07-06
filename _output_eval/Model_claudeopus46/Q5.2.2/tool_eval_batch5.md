@@ -1,0 +1,213 @@
+# Q5.2.2 — Tool Results (batch 5)
+
+### Step 2: `search_ligands`
+**Args:**
+```json
+{
+  "name": "transferrin",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands
+
+*(no results)*
+
+---
+
+### Step 3: `search_ligands`
+**Args:**
+```json
+{
+  "name": "albumin",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands
+
+*(no results)*
+
+---
+
+### Step 4: `search_ligands`
+**Args:**
+```json
+{
+  "name": "metallothionein",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands
+
+*(no results)*
+
+---
+
+### Step 5: `search_ligands`
+**Args:**
+```json
+{
+  "name": "ferritin",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands
+
+*(no results)*
+
+---
+
+### Step 6: `search_ligands`
+**Args:**
+```json
+{
+  "name": "lactoferrin",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands
+
+*(no results)*
+
+---
+
+### Step 7: `search_ligands`
+**Args:**
+```json
+{
+  "name": "conalbumin",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands
+
+*(no results)*
+
+---
+
+### Step 8: `search_ligands`
+**Args:**
+```json
+{
+  "name": "protein",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands
+
+*(no results)*
+
+---
+
+### Step 9: `search_ligands`
+**Args:**
+```json
+{
+  "ligand_class": "protein",
+  "limit": 20
+}
+```
+
+[summary]
+## search_ligands
+
+*(no results)*
+
+---
+
+### Step 10: `db_distribution`
+**Args:**
+```json
+{
+  "table": "ligand_card",
+  "group_column": "ligand_class_name",
+  "limit": 50
+}
+```
+
+[PHASE ERROR] Tool 'db_distribution' is not available yet. You must call 0_plan_search_strategy first (PHASE 2) before using the execution tools.
+
+---
+
+### Step 12: `db_distribution`
+**Args:**
+```json
+{
+  "table": "ligand_card",
+  "group_column": "ligand_class_name",
+  "limit": 50
+}
+```
+
+[summary]
+## db_distribution - ligand_card by ligand_class_name
+
+**total_rows:** 5750
+
+| value | count | pct |
+|-------|-------|-----|
+| Ligands not selected | 1339 | 23.29% |
+| Amino Acids | 297 | 5.17% |
+| Aliphatic amines | 250 | 4.35% |
+| Pyridines (azines) | 248 | 4.31% |
+| Carboxylic acids | 182 | 3.17% |
+| Aza-macrocycles | 165 | 2.87% |
+| Peptides | 157 | 2.73% |
+| Aliphatic amines secondary N | 139 | 2.42% |
+| Pyrroles (azoles) | 134 | 2.33% |
+| Aminophosphorus acids | 132 | 2.3% |
+| EDTA and derivatives | 115 | 2.0% |
+| Aza-oxa-macrocycles | 112 | 1.95% |
+| Carboxylic acids diacids | 103 | 1.79% |
+| Inorganic ligands | 101 | 1.76% |
+| Naphtols | 100 | 1.74% |
+| polypeptides | 98 | 1.7% |
+| Organophosphorus and arsenic acids | 95 | 1.65% |
+| Aliphatic amines tertiary N | 95 | 1.65% |
+| Phenols | 92 | 1.6% |
+| NTA and derivatives | 91 | 1.58% |
+| miscellaneous hydrocarbons | 84 | 1.46% |
+| miscellaneous hydroxamic acids | 74 | 1.29% |
+| Aniline | 72 | 1.25% |
+| Carboxylic acids thio | 71 | 1.23% |
+| miscellaneous ureas, hadrazides, amidines | 70 | 1.22% |
+| Aza macrocycles with carboxylic acids | 70 | 1.22% |
+| miscellaneous alcohols and sugar | 68 | 1.18% |
+| tripeptides | 66 | 1.15% |
+| Catechols | 66 | 1.15% |
+| Aniline carboxylic acids | 66 | 1.15% |
+| Aza-oxo-macrocycles | 58 | 1.01% |
+| cyclic ketones | 57 | 0.99% |
+| miscellaneous amides | 54 | 0.94% |
+| Carboxylic acids diacids S-Se-Te-P-As | 53 | 0.92% |
+| Purines | 52 | 0.9% |
+| Carboxylic acids hydroxy | 52 | 0.9% |
+| Cyclic amines  | 51 | 0.89% |
+| Phenols salicylic acids | 49 | 0.85% |
+| Carboxylic acids polyacids | 49 | 0.85% |
+| miscellaneous mercaptans | 46 | 0.8% |
+| Carboxylic acids oxy | 45 | 0.78% |
+| Ketones (oxo ligands) | 43 | 0.75% |
+| Iminodiacetic acid and derivatives | 38 | 0.66% |
+| Carboxylic acids keto | 36 | 0.63% |
+| Pyrimidines | 35 | 0.61% |
+| Pyridine carboxylic acids | 35 | 0.61% |
+| Bipyridines | 35 | 0.61% |
+| Quinolines | 32 | 0.56% |
+| miscellaneous sulfides | 25 | 0.43% |
+| miscellaneous crown ether | 24 | 0.42% |
+
+---

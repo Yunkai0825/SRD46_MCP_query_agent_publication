@@ -1,0 +1,31 @@
+## Result: No Stability Constant Found for Pu(IV) + Aspirin
+
+After a thorough search of the **NIST SRD-46** database, **no stability constant exists for plutonium(IV) with aspirin (acetylsalicylic acid / 2-acetoxybenzoic acid)**.
+
+### What Was Checked
+
+| Step | Finding |
+|------|---------|
+| `ligand_8701` (2-Acetoxybenzoic acid / Aspirin) | 0 measurements with any Pu species |
+| `ligand_10913` (Aspirin, alternate entry) | 0 measurements with any metal |
+| `metal_149` (Pu⁴⁺) partner list | 11 ligands — aspirin is **not** among them |
+| Citation search for Pu + aspirin | No relevant literature found in SRD-46 |
+
+### What Pu(IV) *Does* Have Data For (SRD-46)
+
+| Ligand | # Measurements |
+|--------|---------------|
+| Nitrate ion | 9 |
+| Hydroxide ion | 5 |
+| Hydrofluoric acid | 4 |
+| Hydrogen sulfate ion | 4 |
+| Acetylacetone | 4 |
+| *(6 more ligands)* | — |
+
+### Chemistry Context
+
+Aspirin's only metal stability data in SRD-46 are with **Cu²⁺, Mg²⁺, and Ca²⁺** — biologically relevant metals. Pu(IV) is a highly charged, strongly hydrolyzing actinide (charge +4) that tends to form complexes with hard oxygen donors like fluoride, sulfate, nitrate, and β-diketones. While aspirin (pKₐ ≈ 3.45) carries a carboxylate group that could in principle coordinate Pu(IV), aspirin is also prone to hydrolysis to salicylate under aqueous conditions, which complicates any such measurement. It appears this system has simply not been studied and reported in the peer-reviewed literature captured by SRD-46.
+
+> **Source:** NIST SRD-46 (NIST Standard Reference Database 46 — Critically Selected Stability Constants of Metal Complexes)
+
+---

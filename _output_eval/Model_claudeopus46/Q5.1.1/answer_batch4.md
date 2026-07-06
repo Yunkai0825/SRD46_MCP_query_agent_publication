@@ -1,0 +1,111 @@
+# Mercury Complexes in the NIST SRD-46 Database
+
+Mercury is one of the most extensively documented metals in the NIST Standard Reference Database 46 (Critical Stability Constants). The database contains **8 mercury-containing metal species**, spanning inorganic Hg ions and organomercury cations.
+
+---
+
+## Mercury Species Overview
+
+| Metal ID | Species | Charge | Ligand Partners | Measurements (VLMs) |
+|----------|---------|--------|-----------------|----------------------|
+| metal_71 | **Hg²⁺** (mercuric) | +2 | **310** | **1,097** |
+| metal_72 | **Hg⁺** (mercurous) | +1 | 31 | 83 |
+| metal_93 | **MeHg⁺** (methylmercury) | +1 | 79 | 148 |
+| metal_53 | EtHg⁺ (ethylmercury) | +1 | 3 | 6 |
+| metal_136 | PhHg⁺ (phenylmercury) | +1 | 8 | 8 |
+| metal_20 | BuHg⁺ | +1 | 0 | 0 |
+| metal_145 | PrHg⁺ | +1 | 0 | 0 |
+| metal_176 | O₃SPhHg | 0 | 0 | 0 |
+
+---
+
+## Hg²⁺ — The Dominant Species (310 ligands, 1,097 measurements)
+
+Mercuric ion is by far the most data-rich mercury species, with **68 distinct beta definitions** (stoichiometries) ranging from simple ML to polynuclear M₃L₃ and mixed hydroxo complexes. Its top ligand partners by data richness are:
+
+| Rank | Ligand | Entries | Species Formed | Conditions |
+|------|--------|---------|----------------|------------|
+| 1 | **Chloride** (Cl⁻) | 38 | ML, ML₂, ML₃, ML₄, M(OH)L | T: 19–30 °C, I: 0–3.15 M |
+| 2 | **Cyanide** (HCN/CN⁻) | 37 | ML, ML₂, ML₃, ML₄, M(OH)L | T: 5–45 °C, I: 0–2.15 M |
+| 3 | **Hydroxide** (OH⁻) | 29 | ML, ML₂, ML₃, M₂L, M₃L₃, HgO(s) | T: 19–30 °C, I: 0–3.15 M |
+| 4 | **Bromide** (Br⁻) | 28 | ML, ML₂, ML₃, ML₄, M(OH)L | T: 16.5–31.5 °C |
+| 5 | **Thiourea** | 27 | ML, ML₂, ML₃, ML₄, M₂L₃ | T: 19–30 °C, I: 0–1.15 M |
+| 6 | **Thiocyanate** (SCN⁻) | 20 | ML–ML₄, ML₂(s), M(OH)L | T: 19–30 °C |
+| 7 | **Iodide** (I⁻) | 16 | ML–ML₄, ML₂(s), M(OH)L | T: 16.5–31.5 °C |
+| 8 | **Ethylenediamine** | 13 | ML, ML₂, MHL₂ | T: 19–30 °C, I: 0–3.15 M |
+| 9 | **Ammonia** | 12 | ML₂, ML₃, ML₄ | T: 19–30 °C, I: 0–2.15 M |
+| 10 | **Thiodiglycol** | 12 | ML, ML₂, ML₃, ML₄ | T: 16.5–31.5 °C |
+| 11 | **EDTA** | 11 | ML, MHL, MH₂L, M(OH)L | T: 19–30 °C |
+| 12 | **Azide** (N₃⁻) | 10 | ML, ML₂ | T: 19–30 °C |
+| 13 | **Carbonate** | 10 | ML, ML₂, MHL, M(OH)L, M₃O₂L(s) | T: 19–30 °C |
+| 14 | **Imidazole** | 10 | ML, ML₂, M(OH)L | T: 19–30 °C |
+| 15 | **Methylamine** | 10 | ML, ML₂, ML₃, ML₄ | T: 19–30 °C |
+
+Additional well-studied ligands include thiosemicarbazide, selenourea, hydrogen sulfide, pyridine, and the hexadentate TDS ligand (which forms an impressive 8-species network with Hg²⁺).
+
+---
+
+## Hg⁺ — Mercurous Ion (31 ligands, 83 measurements)
+
+Mercurous mercury is far less studied, reflecting its inherent tendency to disproportionate (2 Hg⁺ → Hg²⁺ + Hg⁰). The database records **12 beta definitions** for Hg⁺. Key systems include:
+
+| Ligand | Entries | Key Species |
+|--------|---------|-------------|
+| **Acetic acid** | 7 | Hg₂(OAc)₂(s), ML, ML₂ |
+| **Sulfate** | 6 | Hg₂SO₄(s), ML, ML₂ |
+| **Crown ethers** (dicyclohexyl-18-C-6, both isomers) | 6 each | ML, ML₂ |
+| **Halides** (Cl⁻, Br⁻, I⁻) | 4 each | Hg₂X₂(s) — calomel-type precipitates |
+| **Hydroxide** | 4 | Hg₂OH⁺, Hg₅(OH)₄⁴⁺, HgOH⁺ |
+| **Phosphate** | 3 | Hg₂(H₂PO₄)(s), Hg₃(PO₄)₂(s) |
+| **Nitrate** | 3 | ML, ML₂ |
+| **Oxalate, succinate, dimethylmalonate** | 2 each | ML₂, M(OH)L |
+
+The Hg⁺ data is dominated by **solubility products** of sparingly soluble salts (Hg₂Cl₂, Hg₂Br₂, Hg₂I₂, Hg₂SO₄), which are among the most classic analytical chemistry constants.
+
+---
+
+## MeHg⁺ — Methylmercury (79 ligands, 148 measurements)
+
+Methylmercury is environmentally critical due to bioaccumulation and neurotoxicity. The database captures **18 beta definitions** for MeHg⁺, with a strong focus on biologically and environmentally relevant ligands:
+
+| Rank | Ligand | Entries | Species Formed | Conditions |
+|------|--------|---------|----------------|------------|
+| 1 | **Hydroxide** | 7 | MeHgOH, (MeHg)₂OH⁺, MeHgOH(s) | T: 19–30 °C, I: 0–1.15 M |
+| 2 | **Glutathione** | 6 | ML, MHL, MH₂L | T: 19–30 °C, I: 0–0.5 M |
+| 3 | **Bromide** | 5 | ML | T: 19–30 °C, I: 0–2.5 M |
+| 4 | **Chloride** | 5 | ML | T: 19–30 °C, I: 0–2.5 M |
+| 5 | **Iodide** | 4 | ML, ML₂, ML(s) | T: 15–30 °C |
+| 6 | **2-Mercaptoethanol** | 4 | ML, M₂L | T: 20–30 °C |
+| 7 | **Imidazole** | 4 | ML, M(OH)L, M₂(OH)L | T: 15–30 °C |
+| 8 | **Cysteine** | 4 | MHL, ML | T: 19–30 °C |
+| 9 | **Thiosulfate** | 3 | ML | T: 20–30 °C |
+| 10 | **Sulfide** (H₂S) | 3 | M₂L, M₃L, ML | T: 20–30 °C |
+| 11 | **Cyanide** | 3 | ML | T: 20–30 °C |
+| 12 | **BAL (dimercaptopropanol)** | 3 | ML, MHL, ML₂ — chelation therapy agent |
+| 13 | **Unithiol (DMPS)** | 3 | MHL, ML, ML₂ — chelation therapy agent |
+
+Other notable MeHg⁺ ligands include amino acids (glycine, methionine), thiomalic acid, dithiotartaric acid, selenite, and sulfite.
+
+---
+
+## Minor Organomercury Species
+
+| Species | Ligands | Measurements | Notes |
+|---------|---------|--------------|-------|
+| **PhHg⁺** (phenylmercury) | 8 | 8 | 2 beta definitions |
+| **EtHg⁺** (ethylmercury) | 3 | 6 | 4 beta definitions |
+| BuHg⁺, PrHg⁺, O₃SPhHg | 0 | 0 | No stability data in SRD-46 |
+
+---
+
+## Chemistry Insights
+
+1. **Classic soft Lewis acid**: Hg²⁺ is the textbook soft acid. Its ligand landscape is dominated by soft bases — cyanide, iodide, thiourea, thiocyanate, and thiolates. The database captures the full stepwise series (ML through ML₄) for halides and cyanide, with the cyanide system being among the most stable metal complexes known (log β₄ values in the range of 40+).
+
+2. **Versatile coordination**: Unlike many divalent metals that plateau at ML₂ or ML₃, Hg²⁺ readily forms ML₄ species with halides, ammonia, cyanide, and thiourea. This reflects mercury's flexible coordination geometry, transitioning from the preferred linear (ML₂) to tetrahedral (ML₄). The hydroxide system additionally shows polynuclear species (M₂L, M₃L₃), indicating the complexity of mercury hydrolysis.
+
+3. **Environmental and toxicological relevance**: The extensive MeHg⁺ dataset (79 ligands) reflects the critical importance of methylmercury speciation. Its strong affinity for biological thiols — cysteine, glutathione, mercaptoethanol — underpins the bioaccumulation mechanism in aquatic food chains. The presence of chelation therapy agents (BAL, unithiol/DMPS) in the database highlights the clinical dimension of mercury toxicology.
+
+*Source: NIST Standard Reference Database 46 (SRD-46) — Critical Stability Constants of Metal Complexes.*
+
+---

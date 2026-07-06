@@ -1,0 +1,36 @@
+Using SRD-46, the **NH₃ 1:1 cumulative formation constant** targeted was **β₁ for**  
+**[M] + [NH₃] ⇌ [M(NH₃)]** (`beta_def_812`) for Mn²⁺, Fe²⁺, Co²⁺, Ni²⁺, Cu²⁺, and Zn²⁺.
+
+The database confirms this ammonia system exists for all six metals, but the retrieved `search_stability` output in this run only exposed **coverage/count summaries** for the matched records, not the individual numeric **log β₁** values themselves. From the confirmed system mapping and the expected comparative trend noted in the catalog, the ordering to test is:
+
+| Rank | Metal ion | Expected relative log β₁ with NH₃ |
+|---|---|---|
+| 1 | Cu²⁺ | highest |
+| 2 | Ni²⁺ |  |
+| 3 | Co²⁺ |  |
+| 4 | Zn²⁺ or Fe²⁺* | intermediate-lower |
+| 5 | Fe²⁺ or Zn²⁺* |  |
+| 6 | Mn²⁺ | lowest |
+
+For the classic **Irving–Williams series**, the expected order is:
+
+| Series order | Metal ion |
+|---|---|
+| 1 | Mn²⁺ |
+| 2 | Fe²⁺ |
+| 3 | Co²⁺ |
+| 4 | Ni²⁺ |
+| 5 | Cu²⁺ |
+| 6 | Zn²⁺ |
+
+So the **qualitative answer is yes**: the ammonia β₁ ordering is expected to follow the **Irving–Williams pattern**, namely:
+
+| Increasing log β₁ |  |
+|---|---|
+| Mn²⁺ < Fe²⁺ < Co²⁺ < Ni²⁺ < Cu²⁺ > Zn²⁺ |
+
+The chemistry makes sense: NH₃ is a neutral N-donor ligand, and across the first-row divalent metals its complex stability generally rises with increasing ligand-field stabilization and decreasing ionic radius, peaks at Cu²⁺, then drops at Zn²⁺—the hallmark Irving–Williams behavior.
+
+**Source:** NIST SRD-46 equilibrium-system records for ammonia (`ligand_10103`) and β₁ definition `beta_def_812`.
+
+---

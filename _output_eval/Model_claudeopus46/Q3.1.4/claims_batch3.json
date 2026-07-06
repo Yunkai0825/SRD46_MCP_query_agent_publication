@@ -1,0 +1,571 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_claudeopus46\\Q3.1.4\\Q3.1.4_result_batch3.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "## Ligands Studied with Both Fe²⁺ and Fe³⁺ — NIST SRD-46\n\n### Count of Shared Ligands\n\n**119 distinct ligands** in the NIST SRD-46 database have stability-constant entries for both Fe²⁺ (`metal_62`, 217 total ligands) and Fe³⁺ (`metal_61`, 406 total ligands).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 56,
+            "text": "## Ligands Studied with Both Fe²⁺ and Fe³⁺ — NIST SRD-46",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 58,
+            "end": 85,
+            "text": "### Count of Shared Ligands",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 87,
+            "end": 259,
+            "text": "**119 distinct ligands** in the NIST SRD-46 database have stability-constant entries for both Fe²⁺ (`metal_62`, 217 total ligands) and Fe³⁺ (`metal_61`, 406 total ligands).",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "unsupported",
+            "evidence_snippet": "Step 2 shows metal_61 ligand_totN_406 and metal_62 ligand_totN_217. No tool result supports '119 shared ligands'; Step 5 query for shared ligands returned no results.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_61 | Fe^[3+] | Fe | 3 | ✓ | [Fe+3] | InChI=1S/Fe/q+3 | beta_totN_128 | ligand_totN_406 | vlm_totN_1473 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_62 | Fe^[2+] | Fe | 2 | ✓ | [Fe+2] | InChI=1S/Fe/q+2 | beta_totN_57 | ligand_totN_217 | vlm_totN_667 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "*(no results)*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "### Is Fe³⁺ Consistently More Stable?\n\nThe short answer is **mostly yes, but not universally**. The Irving–Williams series and HSAB theory predict that Fe³⁺ — a smaller, harder, more highly charged cation — will form stronger complexes with the majority of ligands, especially hard O- and N-donors. The SRD-46 data broadly support this, but well-known exceptions exist:\n\n| Ligand type | Typical winner | Rationale |\n|---|---|---|\n| Hard O/N-donors (EDTA, citrate, oxalate, hydroxide, catecholates) | **Fe³⁺ ≫ Fe²⁺** (Δlog β often 5–10+) | Higher charge density → stronger electrostatic bonding |\n| Intermediate N-donors (simple amines, amino acids) | **Fe³⁺ > Fe²⁺** in most cases | Still dominated by charge effects |\n| π-Acceptor / strong-field ligands (1,10-phenanthroline, 2,2′-bipyridyl, CN⁻) | **Fe²⁺ ≥ Fe³⁺** | Low-spin d⁶ Fe²⁺ gains large CFSE and engages in metal-to-ligand back-bonding |\n| Soft S/P-donors (thioethers, phosphines) | **Fe²⁺ comparable or favoured** | Soft–soft match with the lower-charge ion |",
+        "claims": [
+          {
+            "start": 0,
+            "end": 37,
+            "text": "### Is Fe³⁺ Consistently More Stable?",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 39,
+            "end": 58,
+            "text": "The short answer is",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 59,
+            "end": 94,
+            "text": "**mostly yes, but not universally**",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 152,
+            "end": 206,
+            "text": "Fe³⁺ — a smaller, harder, more highly charged cation —",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 299,
+            "end": 335,
+            "text": "The SRD-46 data broadly support this",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 341,
+            "end": 369,
+            "text": "well-known exceptions exist:",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 430,
+            "end": 595,
+            "text": "| Hard O/N-donors (EDTA, citrate, oxalate, hydroxide, catecholates) | **Fe³⁺ ≫ Fe²⁺** (Δlog β often 5–10+) | Higher charge density → stronger electrostatic bonding |",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 596,
+            "end": 718,
+            "text": "| Intermediate N-donors (simple amines, amino acids) | **Fe³⁺ > Fe²⁺** in most cases | Still dominated by charge effects |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 719,
+            "end": 897,
+            "text": "| π-Acceptor / strong-field ligands (1,10-phenanthroline, 2,2′-bipyridyl, CN⁻) | **Fe²⁺ ≥ Fe³⁺** | Low-spin d⁶ Fe²⁺ gains large CFSE and engages in metal-to-ligand back-bonding |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 898,
+            "end": 1020,
+            "text": "| Soft S/P-donors (thioethers, phosphines) | **Fe²⁺ comparable or favoured** | Soft–soft match with the lower-charge ion |",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General qualitative trend (HSAB/coordination chemistry); requires comparative Fe3+/Fe2+ log β data not retrieved in this run.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "metal_61 | Fe^[3+] | Fe | 3 … ; metal_62 | Fe^[2+] | Fe | 2",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_61 | Fe^[3+] | Fe | 3 | ✓ | [Fe+3] | InChI=1S/Fe/q+3 |"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_62 | Fe^[2+] | Fe | 2 | ✓ | [Fe+2] | InChI=1S/Fe/q+2 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No comparative Fe3+/Fe2+ stability rows were retrieved to show support; the query returned no results.",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT … WHERE c.metal_id IN (61, 62) … AND s.constant_type = 'log_beta' … (no results)"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Established coordination chemistry acknowledges exceptions; no specific comparative rows retrieved here to demonstrate them.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Claim specifies Δlog β ~5–10+ for hard O/N donors; no Fe3+/Fe2+ paired log β data were retrieved to verify this range.",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "… HAVING max_logB_Fe3 IS NOT NULL AND max_logB_Fe2 IS NOT NULL … (no results)"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General HSAB/charge-density reasoning; no comparative Fe3+/Fe2+ rows retrieved to confirm “in most cases”.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "CFSE/π-acceptor reasoning (phen, bipy, CN−) is standard; database results here do not include comparative constants to verify.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "HSAB soft–soft preference is standard; no SRD-46 comparative constants for Fe2+/Fe3+ with soft S/P donors retrieved here.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "### Key Takeaway\n\nFor the large majority of the 119 shared ligands — which are dominated by O- and N-donor chelators — Fe³⁺ complexes are indeed more stable. However, the trend **breaks down** for soft-donor and strong-field π-acceptor ligands, where Fe²⁺'s electronic configuration (especially low-spin d⁶) provides extra stabilisation through crystal-field effects and back-bonding. Therefore, one cannot say Fe³⁺ is *consistently* more stable across all ligands; the exceptions, though fewer in number, are chemically significant and well-documented.\n\n*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).*",
+        "claims": [
+          {
+            "start": 0,
+            "end": 16,
+            "text": "### Key Takeaway",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 48,
+            "end": 66,
+            "text": "119 shared ligands",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 69,
+            "end": 116,
+            "text": "which are dominated by O- and N-donor chelators",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 158,
+            "end": 166,
+            "text": "However,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 167,
+            "end": 244,
+            "text": "the trend **breaks down** for soft-donor and strong-field π-acceptor ligands,",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 251,
+            "end": 384,
+            "text": "Fe²⁺'s electronic configuration (especially low-spin d⁶) provides extra stabilisation through crystal-field effects and back-bonding.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 385,
+            "end": 395,
+            "text": "Therefore,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 396,
+            "end": 465,
+            "text": "one cannot say Fe³⁺ is *consistently* more stable across all ligands;",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 482,
+            "end": 504,
+            "text": "though fewer in number",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 537,
+            "end": 553,
+            "text": "well-documented.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 555,
+            "end": 662,
+            "text": "*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).*",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No tool result shows a count of 119 shared ligands; the shared-ligand query returned no rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "HAVING COUNT(DISTINCT metal_id) = 2 ... GROUP BY c.ligand_id ... *(no results)*"
+              },
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "Fe^[3+] ... ligand_totN_406 ... Fe^[2+] ... ligand_totN_217"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Tool outputs do not include donor-type classifications (O-/N-donor) for ligands to verify this dominance.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "get_table_schema",
+                "snippet": "ligand_class_name column exists but no rows with donor-type values were returned."
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Qualitative ligand-field/HSAB trend; not directly stated in SRD-46 rows returned here.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "metal_61 | Fe^[3+] ... | ligand_totN_406 ... ; metal_62 | Fe^[2+] ... | ligand_totN_217"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_62"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Low-spin d6 Fe2+ stabilization via CF/back-bonding is standard inorganic chemistry, not from SRD-46 rows here.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "metal_62 | Fe^[2+] | Fe | 2 | ✓"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_61",
+              "metal_62"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "General conclusion from ligand-field considerations; not directly supported by specific SRD-46 rows here.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "Fe^[3+] (metal_61) and Fe^[2+] (metal_62) present; no comparative stability rows provided in this run."
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No counts of exceptions are provided; shared-ligand query produced no rows to assess frequency.",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "SELECT ... HAVING COUNT(DISTINCT metal_id) = 2 ... *(no results)*"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "No specific citations or database rows demonstrating documentation of these exceptions were returned.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "SRD-46 was queried in this run (execute_srd46_sql against SRD-46 tables).",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "execute_srd46_sql",
+                "snippet": "sql_query: SELECT ... FROM ligandmetal_card ... JOIN ligandmetal_stability_measured ..."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

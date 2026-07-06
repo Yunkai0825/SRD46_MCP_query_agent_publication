@@ -1,0 +1,34 @@
+SRD-46 lists **47 measurements** for the **Ag⁺–ammonia** system, covering **two binary aqueous complexes**:
+
+| Complex / definition | Constant type available | Number of measurements | Value range | T (°C) | I (M) |
+|---|---:|---:|---:|---:|---:|
+| Ag⁺ + NH₃ ⇌ Ag(NH₃)⁺ (`beta_def_812`) | logK | 13 | 3.2–3.8 | 25 | 0–5 |
+| Ag⁺ + NH₃ ⇌ Ag(NH₃)⁺ (`beta_def_812`) | ΔH | 5 | -25.9 to -20.5 | 25 | 0–3 |
+| Ag⁺ + NH₃ ⇌ Ag(NH₃)⁺ (`beta_def_812`) | ΔS | 4 | -12.1 to -5.4 | 25 | 0–3 |
+| Ag⁺ + 2 NH₃ ⇌ Ag(NH₃)₂⁺ (`beta_def_840`) | logK | 16 | 7.14–8.18 | 25 | 0–5 |
+| Ag⁺ + 2 NH₃ ⇌ Ag(NH₃)₂⁺ (`beta_def_840`) | ΔH | 5 | -61.9 to -56.1 | 25 | 0–3 |
+| Ag⁺ + 2 NH₃ ⇌ Ag(NH₃)₂⁺ (`beta_def_840`) | ΔS | 4 | -55.6 to -46.4 | 25 | 0–3 |
+
+A few important interpretation notes:
+
+| Note | Meaning |
+|---|---|
+| `logK` for Ag(NH₃)⁺ | This is the **1:1 formation constant** for Ag⁺ + NH₃ ⇌ Ag(NH₃)⁺ |
+| `logK` for Ag(NH₃)₂⁺ | In this SRD-46 entry, this corresponds to the **overall cumulative constant** for Ag⁺ + 2 NH₃ ⇌ Ag(NH₃)₂⁺ |
+| No separate stepwise K₂ was directly listed in the retrieved catalog | So it should **not** be derived unless you specifically want a calculated estimate from β₂/β₁ |
+
+Representative provenance in SRD-46 includes many literature sources for this system, such as:
+
+| Shortcut | Citation |
+|---|---|
+| 41B | J. Bjerrum, *Metal Amine Formation in Aqueous Solution*, P. Haase and Son, Copenhagen, 1941 |
+| 61LP | I. Leden and G. Persson, *Acta Chem. Scand.*, 1961, **15**, 1141 |
+| 79MA | M. Maeda, R. Arnek, and G. Biedermann, *J. Inorg. Nucl. Chem.*, 1979, **41**, 343 |
+| 83MNB | M. Maeda, G. Nakagawa, and G. Biedermann, *J. Phys. Chem.*, 1983, **87**, 121 |
+| 92LH | M. Lundeen and Z. Z. Hugus, *Thermochim. Acta*, 1992, **196**, 93 |
+
+Chemically, this is exactly the classic **silver diammine** system: Ag⁺ binds NH₃ strongly, and the **Ag(NH₃)₂⁺** complex is the dominant simple ammine species in aqueous solution. The much larger cumulative logK for the 1:2 complex is consistent with the well-known stability of Tollens-type silver–ammine coordination chemistry.
+
+**Source:** NIST SRD-46.
+
+---

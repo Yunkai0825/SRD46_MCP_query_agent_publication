@@ -1,0 +1,21 @@
+EDTA forms the more stable 1:1 complex with Fe³⁺.
+
+| Ligand | SRD-46 ligand ID | Fe³⁺ ID | Species / definition | log K | T (°C) | Ionic strength (M) |
+|---|---:|---:|---|---:|---:|---:|
+| EDTA | ligand_6277 | metal_61 | [M] + [L] ⇌ [ML] (beta_def_812) | 25.1 | 25 | 0.1 |
+| NTA | ligand_6165 | metal_61 | [M] + [L] ⇌ [ML] (beta_def_812) | 15.9 | 25 | 0.1 |
+
+At the matched condition available in SRD-46 (25 °C, I = 0.1 M), **EDTA > NTA** in Fe³⁺ complex stability.
+
+For context, SRD-46 also shows at **I = 1.0 M**:
+
+| Ligand | log K | T (°C) | Ionic strength (M) |
+|---|---:|---:|---:|
+| EDTA | 23.8 | 25 | 1.0 |
+| NTA | 14.78 | 25 | 1.0 |
+
+EDTA’s much larger log K is chemically consistent with its higher denticity: EDTA is a hexadentate ligand, while NTA is typically tetradentate, so EDTA wraps Fe³⁺ more completely and stabilizes the complex more strongly.
+
+*Source: NIST SRD-46 stability data for Fe³⁺ (metal_61) with EDTA (ligand_6277) and NTA (ligand_6165), beta_def_812.*
+
+---

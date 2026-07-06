@@ -1,0 +1,63 @@
+Based on my thorough search of the NIST SRD-46 database, here is a comprehensive evaluation:
+
+---
+
+# Complexation Constants for Solvent-Type Ligands with Fe(II)/Fe(III)
+
+## Direct Database Results
+
+**No direct stability constant data exists in NIST SRD-46 for any of the four target systems:**
+
+| Ligand | Fe(II) data | Fe(III) data | Database status |
+|--------|-------------|--------------|-----------------|
+| DMF (N,N-Dimethylformamide) | ❌ None | ❌ None | ligand_11422 found, 0 VLM entries, class "Ligands not selected" |
+| Acetonitrile (MeCN) | ❌ None | ❌ None | ligand_9825 found, 7 VLM entries — but none with Fe |
+| THF (Tetrahydrofuran) | ❌ None | ❌ None | Not in database at all |
+| Ethylene glycol | ❌ None | ❌ None | ligand_9621 found, 22 VLM entries — but none with Fe |
+
+## Analogous Systems Found in SRD-46
+
+### Acetonitrile (MeCN) with other metals (25 °C, aqueous):
+
+| Metal | log K₁ (ML) | log β₂ (ML₂) | I (M) |
+|-------|-------------|---------------|-------|
+| Ag⁺ | 0.42 | 0.78 | 0.1 |
+| Pd²⁺ | 1.19 | 1.53 | 1.0 |
+| Cu⁺ | — | 4.35 | 0.1 |
+
+### Ethylene glycol with other metals (22–25 °C, aqueous):
+
+| Metal | Entries | T (°C) | I (M) |
+|-------|---------|--------|-------|
+| B³⁺ | 2 (logK + ΔH + ΔS) | 25 | 1.0 |
+| Pb²⁺ | 1 | 25 | 1.0 |
+| Lanthanides (La³⁺ through Lu³⁺) | 1 each | 22 | 0.1 |
+
+## Reasoned Estimates for Fe(II)/Fe(III)
+
+These four ligands are all **neutral, weak donors** — they coordinate through lone pairs on O or N without deprotonation. In aqueous solution, they must compete with water (itself a strong O-donor), making their aqueous stability constants inherently very small.
+
+| System | Estimated log K₁ | Reasoning |
+|--------|-------------------|-----------|
+| **MeCN–Fe(II)** | **≈ 0.0 to 0.5** | MeCN is a weak σ-donor via the nitrile N. Fe²⁺ is a borderline acid (HSAB) with modest affinity for N-donors. Ag⁺ (soft acid) gives only log K₁ = 0.42; Fe²⁺ should be comparable or weaker. |
+| **MeCN–Fe(III)** | **≈ 0.5 to 1.5** | Fe³⁺ is a harder, more charge-dense ion than Fe²⁺, so it binds neutral N-donors somewhat more strongly. By analogy with Pd²⁺ (log K₁ = 1.19) but accounting for Fe³⁺'s lower polarizability, ~1 is reasonable. |
+| **DMF–Fe(II)** | **≈ 0.0 to 0.5** | DMF coordinates through the carbonyl O. As a neutral amide, it is a slightly better donor than MeCN but still very weak in aqueous competition. Fe²⁺–amide interactions are characteristically feeble. |
+| **DMF–Fe(III)** | **≈ 0.5 to 1.5** | Fe³⁺ has stronger electrostatic attraction to the DMF carbonyl oxygen. However, Fe³⁺ hydrolysis (pK_h ≈ 2.2) competes strongly, limiting effective complex formation. |
+| **THF–Fe(II)** | **≈ −0.5 to 0.3** | THF is a cyclic ether — the weakest donor class here. Ethers have poor aqueous competitiveness. Fe²⁺–ether binding is expected to be negligible in water. |
+| **THF–Fe(III)** | **≈ 0.0 to 0.8** | Slightly stronger due to Fe³⁺ charge density, but still very weak. THF is not in the database at all, reflecting its insignificance as an aqueous-phase ligand. |
+| **Ethylene glycol–Fe(II)** | **≈ 0.3 to 1.0** | As a bidentate diol, ethylene glycol has a chelate-effect advantage over monodentate solvents. Lanthanide data show measurable (though small) constants; Fe²⁺ should be in a similar range. |
+| **Ethylene glycol–Fe(III)** | **≈ 1.0 to 2.5** | Fe³⁺ is a strong Lewis acid that can form chelate rings with diols. The bidentate O,O-coordination and chelate effect should give the largest log K₁ of all four systems. Note: at higher pH, glycolate (deprotonated) complexes dominate and are much stronger. |
+
+## Key Chemistry Insights
+
+1. **Why so weak?** All four ligands are neutral molecules that must displace coordinated water. In aqueous solution, the entropic cost of replacing a water molecule with a similar neutral O/N-donor is high, and the enthalpy gain is marginal — hence log K₁ values near zero.
+
+2. **Fe(III) > Fe(II) throughout:** Fe³⁺ consistently binds more strongly than Fe²⁺ due to its higher charge density (z²/r effect), which is the dominant factor for these hard/borderline donors.
+
+3. **Non-aqueous relevance:** These ligands are far more important as *solvents* in non-aqueous coordination chemistry (e.g., [Fe(MeCN)₆]²⁺ is a well-known synthon), where they don't compete with water. The SRD-46 database, being aqueous-focused, naturally has minimal data for them as ligands.
+
+---
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes). Direct Fe data not available; estimates based on analogous metal–ligand systems in the database and established coordination chemistry principles (HSAB theory, chelate effect).*
+
+---

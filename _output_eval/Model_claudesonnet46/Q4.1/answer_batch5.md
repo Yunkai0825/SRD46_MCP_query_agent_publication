@@ -1,0 +1,100 @@
+Based on my comprehensive investigation of the NIST SRD-46 database, I can now provide a complete answer.
+
+---
+
+## Complexation Constants: DMF, Acetonitrile, THF & Ethylene Glycol with Fe(II)/Fe(III)
+
+### 🔍 Database Findings Summary
+
+| System | Ligand ID | vlm_count | Fe²⁺ Data | Fe³⁺ Data |
+|--------|-----------|-----------|-----------|-----------|
+| DMF – Fe(II/III) | ligand_11422 | 0 | ❌ None | ❌ None |
+| Acetonitrile – Fe(II/III) | ligand_9825 | 7 (Pd²⁺, Ag⁺, Cu⁺ only) | ❌ None | ❌ None |
+| THF – Fe(II/III) | *(not in DB)* | — | ❌ None | ❌ None |
+| Ethylene glycol – Fe(II/III) | ligand_9621 | 22 (B³⁺, Ge⁴⁺, lanthanides) | ❌ None | ❌ None |
+
+**None of the four target systems have complexation constants recorded in NIST SRD-46.** This is chemically expected — DMF, MeCN, and THF are primarily used as *solvents* rather than discrete ligands in aqueous equilibrium studies, and SRD-46 focuses on aqueous/mixed-aqueous thermodynamic data. Ethylene glycol forms very weak complexes with Fe that are difficult to characterize by classical potentiometry.
+
+---
+
+### 🧪 Reasoned Estimates from Analogous Systems
+
+The following estimates are grounded in donor-type chemistry and known trends from SRD-46 data on Fe(II)/Fe(III) with structurally related ligands.
+
+#### 1. DMF – Fe(II) / Fe(III)
+**Donor type:** Amide carbonyl oxygen (hard O-donor, weak)
+
+DMF is a monodentate O-donor via the carbonyl oxygen. In non-aqueous media, Fe(III) forms [Fe(DMF)₆]³⁺ and Fe(II) forms [Fe(DMF)₆]²⁺, but these are *solvation* equilibria, not classical stepwise complexation constants in water. In mixed aqueous systems, DMF competes poorly with water.
+
+| Species | Estimated log β₁ | Basis |
+|---------|-----------------|-------|
+| Fe²⁺ + DMF | ~0.5 – 1.0 | Weak O-donor; analogous to formamide/acetamide; Fe²⁺ prefers N/S donors |
+| Fe³⁺ + DMF | ~1.0 – 1.5 | Fe³⁺ is harder acid, slightly better affinity for O-donors |
+
+> **Note:** These are estimates for aqueous solution. In pure DMF solvent, the "stability" is dominated by solvation enthalpy, not a meaningful β₁.
+
+---
+
+#### 2. Acetonitrile – Fe(II) / Fe(III)
+**Donor type:** Nitrile nitrogen (soft N-donor, weak)
+
+SRD-46 shows acetonitrile (ligand_9825) forms complexes only with soft metals: Pd²⁺ (log β up to ~7), Ag⁺, Cu⁺. Iron(II) is a borderline metal and iron(III) is a hard acid — both have poor affinity for the soft nitrile nitrogen in aqueous media.
+
+| Species | Estimated log β₁ | Basis |
+|---------|-----------------|-------|
+| Fe²⁺ + MeCN | ~0.3 – 0.8 | Borderline metal + soft N; much weaker than Pd²⁺ or Ag⁺ |
+| Fe³⁺ + MeCN | < 0.5 | Hard acid + soft donor = very unfavorable; hydrolysis competes |
+
+> In pure acetonitrile solvent, [Fe(MeCN)₆]²⁺/³⁺ are well-known solvates, but log β₁ in *aqueous* solution is negligibly small.
+
+---
+
+#### 3. THF – Fe(II) / Fe(III)
+**Donor type:** Ether oxygen (hard O-donor, very weak)
+
+THF is not found in SRD-46 as a ligand entity. Ether oxygens are among the weakest donors due to low basicity (pKa of conjugate acid ≈ −2.1). THF forms no stable aqueous complexes with Fe.
+
+| Species | Estimated log β₁ | Basis |
+|---------|-----------------|-------|
+| Fe²⁺ + THF | < 0 (no complex) | Ether O too weak; water outcompetes completely |
+| Fe³⁺ + THF | < 0 (no complex) | Fe³⁺ hydrolyzes before THF can coordinate in water |
+
+> THF–Fe complexes exist only in strictly anhydrous, non-coordinating environments (e.g., THF/toluene mixtures with bulky ligands). No aqueous β is meaningful.
+
+---
+
+#### 4. Ethylene Glycol – Fe(II) / Fe(III)
+**Donor type:** Diol — two hydroxyl O-donors (potentially bidentate, but very weak in neutral form)
+
+SRD-46 shows ethylene glycol (ligand_9621) forms complexes with 18 metals (B³⁺, Ge⁴⁺, lanthanides), but **not with Fe²⁺ or Fe³⁺**. The diol is a weak chelator in neutral form; stronger complexation requires deprotonation (glycolate anion, pKa ~15).
+
+| Species | Estimated log β₁ | Basis |
+|---------|-----------------|-------|
+| Fe²⁺ + EG (neutral) | ~1.0 – 2.0 | Weak bidentate O,O-chelate; analogous to glycerol/sorbitol–metal data |
+| Fe³⁺ + EG (neutral) | ~2.0 – 3.5 | Fe³⁺ harder acid; better affinity for O-donors; but hydrolysis competes strongly |
+| Fe³⁺ + EG (deprotonated) | ~5 – 8 | Glycolate-type coordination; analogous to catecholate/phenolate Fe³⁺ chemistry |
+
+---
+
+### 📊 Summary Comparison Table
+
+| Ligand | Donor Atom | HSAB Class | Est. log β₁ Fe²⁺ | Est. log β₁ Fe³⁺ | In SRD-46? |
+|--------|-----------|-----------|-----------------|-----------------|-----------|
+| DMF | O (amide carbonyl) | Hard | ~0.5–1.0 | ~1.0–1.5 | ❌ |
+| Acetonitrile | N (nitrile) | Soft | ~0.3–0.8 | <0.5 | ❌ (only Pd, Ag, Cu) |
+| THF | O (ether) | Hard | <0 | <0 | ❌ (not in DB) |
+| Ethylene glycol | O,O (diol) | Hard | ~1.0–2.0 | ~2.0–3.5 | ❌ (B, Ge, Ln only) |
+
+---
+
+### 🔬 Chemistry Insights
+
+1. **HSAB dominates the trend:** Fe³⁺ (hard acid) shows marginally better affinity than Fe²⁺ for all O-donors (DMF, EG), but both oxidation states are overwhelmed by competing hydrolysis (Fe³⁺ starts hydrolyzing at pH ~2) and water coordination.
+
+2. **Solvent vs. ligand distinction:** DMF, MeCN, and THF are *solvents* in non-aqueous electrochemistry. Their "complexation" with Fe is really solvation — thermodynamically meaningful only in the pure solvent, not as aqueous β values. This is why SRD-46 (an aqueous equilibrium database) contains no entries.
+
+3. **Ethylene glycol's potential:** At high pH, deprotonated ethylene glycol (glycolate-like) could form meaningful Fe³⁺ complexes (log β ~ 5–8), analogous to the well-known catecholate–Fe³⁺ system. This is relevant in biological iron chelation and corrosion inhibition chemistry.
+
+> **Source:** NIST SRD-46 (Critically Selected Stability Constants of Metal Complexes). All estimates are reasoned extrapolations from analog systems in the database; no direct measurements for these four systems were found.
+
+---

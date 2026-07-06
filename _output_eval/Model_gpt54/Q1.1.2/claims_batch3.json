@@ -1,0 +1,646 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt54\\Q1.1.2\\Q1.1.2_result_batch3.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "SRD-46 reports **3 measured pKa values** for **citric acid** (`ligand_9058`, 2-hydroxypropane-1,2,3-tricarboxylic acid) in the ligand pKa table:",
+        "claims": [
+          {
+            "start": 0,
+            "end": 14,
+            "text": "SRD-46 reports",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 15,
+            "end": 60,
+            "text": "**3 measured pKa values** for **citric acid**",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 62,
+            "end": 75,
+            "text": "`ligand_9058`",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 77,
+            "end": 118,
+            "text": "2-hydroxypropane-1,2,3-tricarboxylic acid",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 120,
+            "end": 143,
+            "text": "in the ligand pKa table",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 143,
+            "end": 144,
+            "text": ":",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Provenance: this run’s tool outputs are from NIST SRD-46; no row explicitly prints “SRD-46”, but that is the database context for these results.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ligand_9058",
+              "vlm_157473",
+              "vlm_157459",
+              "vlm_157439"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "search_pka_values — 3 row(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "## search_pka_values — 3 row(s)"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157473 | ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyl… | H3L | ... | 2.9 | 25 | 0.1 | H2L→H3L |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157459 | ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyl… | H3L | ... | 4.35 | 25 | 0.1 | HL→H2L |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ligand_9058"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyli… (Citric acid)",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyli… (Citric acid) | H3L | Carboxylic acids polyaci… | 384 | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_9058"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "2-Hydroxypropane-1,2,3-tricarboxyli… (Citric acid)",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyli… (Citric acid) | H3L | ... | pka_brackets: (-inf, H3L, 2.9, H2L, 4.35, HL, 5.65, L, +inf)"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "ligand_9058",
+              "vlm_157473",
+              "vlm_157459",
+              "vlm_157439"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "The pKa data come from the pKa search: “search_pka_values — 3 row(s)” with columns including “pKa”.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "## search_pka_values — 3 row(s)"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_id | ligand_id | ligand_name | HxL_def | smiles | pKa | T°C | I(M) | ... |"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "| Step | Equilibrium / bracket | pKa | Temperature (°C) | Ionic strength (M) | SRD-46 VLM ID |\n|---|---|---:|---:|---:|---|\n| pKa1 | H2L → H3L | 2.90 | 25 | 0.10 | vlm_157473 |\n| pKa2 | HL → H2L | 4.35 | 25 | 0.10 | vlm_157459 |\n| pKa3 | L → HL | 5.65 | 25 | 0.10 | vlm_157439 |",
+        "claims": [
+          {
+            "start": 124,
+            "end": 176,
+            "text": "| pKa1 | H2L → H3L | 2.90 | 25 | 0.10 | vlm_157473 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 177,
+            "end": 228,
+            "text": "| pKa2 | HL → H2L | 4.35 | 25 | 0.10 | vlm_157459 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 229,
+            "end": 278,
+            "text": "| pKa3 | L → HL | 5.65 | 25 | 0.10 | vlm_157439 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "These are the measured stepwise protonation constants found by `search_pka_values` for **citric acid** in SRD-46.  \nChemically, the upward trend in pKa from 2.90 to 5.65 is consistent with a **triprotic carboxylic acid**: each successive deprotonation is less favorable as the anion becomes more negatively charged.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 13,
+            "text": "These are the",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 14,
+            "end": 53,
+            "text": "measured stepwise protonation constants",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 54,
+            "end": 82,
+            "text": "found by `search_pka_values`",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 83,
+            "end": 102,
+            "text": "for **citric acid**",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 103,
+            "end": 112,
+            "text": "in SRD-46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 116,
+            "end": 127,
+            "text": "Chemically,",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 128,
+            "end": 151,
+            "text": "the upward trend in pKa",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 152,
+            "end": 169,
+            "text": "from 2.90 to 5.65",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 170,
+            "end": 220,
+            "text": "is consistent with a **triprotic carboxylic acid**",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 222,
+            "end": 315,
+            "text": "each successive deprotonation is less favorable as the anion becomes more negatively charged.",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_157473",
+              "vlm_157459",
+              "vlm_157439"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_157473 pKa 2.9 H2L→H3L; vlm_157459 pKa 4.35 HL→H2L; vlm_157439 pKa 5.65 L→HL",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157473 | ligand_9058 | ... | pKa | 2.9 | 25 | 0.1 | ... | H2L→H3L | ..."
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157459 | ligand_9058 | ... | pKa | 4.35 | 25 | 0.1 | ... | HL→H2L | ..."
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157439 | ligand_9058 | ... | pKa | 5.65 | 25 | 0.1 | ... | L→HL | ..."
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_157473",
+              "vlm_157459",
+              "vlm_157439"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "## search_pka_values — 3 row(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "## search_pka_values — 3 row(s)"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157473 | ... | pKa | 2.9 | ... | H2L→H3L |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157439 | ... | pKa | 5.65 | ... | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ligand_9058"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyli… (Citric acid)",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyli… (Citric acid) | H3L | Carboxylic acids polyaci… | 384 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "H^[+] + 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid)"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "inferred",
+            "evidence_snippet": "Tool outputs in this run come from the NIST SRD-46 context; individual rows do not print the 'SRD-46' label.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "## search_pka_values — 3 row(s)"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "vlm_157473",
+              "vlm_157459",
+              "vlm_157439"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "pKa values increase: 2.9 → 4.35 → 5.65 (at 25 °C, I=0.1 M).",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157473 | ... | pKa | 2.9 | 25 | 0.1 | ... | H2L→H3L |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157459 | ... | pKa | 4.35 | 25 | 0.1 | ... | HL→H2L |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157439 | ... | pKa | 5.65 | 25 | 0.1 | ... | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "vlm_157473",
+              "vlm_157439"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "pKa 2.9 … H2L→H3L; pKa 5.65 … L→HL",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157473 | ... | pKa | 2.9 | 25 | 0.1 | ... | H2L→H3L |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157439 | ... | pKa | 5.65 | 25 | 0.1 | ... | L→HL |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "ligand_9058"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ligand_9058 … HxL_def H3L | ligand_class | Carboxylic acids polyaci…",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_ligands",
+                "snippet": "| ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyli… (Citric acid) | H3L | Carboxylic acids polyaci… |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "## search_pka_values — 3 row(s)  … pKa 2.9 … pKa 4.35 … pKa 5.65 …"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "vlm_157473",
+              "vlm_157459",
+              "vlm_157439"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Stepwise pKa values increase (2.9, 4.35, 5.65); the mechanistic rationale about charge effects is general chemistry, not stated in rows.",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157473 | ... | pKa | 2.9 | ... | H2L→H3L |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157459 | ... | pKa | 4.35 | ... | HL→H2L |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_157439 | ... | pKa | 5.65 | ... | L→HL |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "**Source:** NIST SRD-46.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 11,
+            "text": "**Source:**",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 12,
+            "end": 24,
+            "text": "NIST SRD-46.",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "direct",
+            "evidence_snippet": "Source: NIST Standard Reference Database 46 (SRD-46). Tool results in this run originate from SRD-46.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_id | metal_name | symbol | ... |\n| metal_68 | H^[+] | H | 1 | ✓ | [H+] | InChI=1S/p+1 | beta_totN_82 | ligand_totN_4081 | vlm_totN_20720 |"
+              },
+              {
+                "step": "Step 5",
+                "tool": "build_system_catalog",
+                "snippet": "## H^[+] + 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid)\nmetal_id: metal_68 | ligand_id: ligand_9058 | entries: 48 | species: 3"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_pka_values",
+                "snippet": "| vlm_id | ligand_id | ligand_name | ... | pKa | T°C | I(M) |\n| vlm_157439 | ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxyl… | ... | 5.65 | 25 | 0.1 |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

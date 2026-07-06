@@ -1,0 +1,27 @@
+Based on the data already retrieved from SRD-46, I have the reference pKa values for both amino acids. Let me present the comparison.
+
+---
+
+## pKa Comparison: Glycine vs. Alanine
+
+Both glycine and alanine are α-amino acids with two ionizable groups — the carboxyl (–COOH) and the amino (–NH₃⁺) group. SRD-46 provides the following bracket pKa values:
+
+| Amino Acid | ligand_id | pKa₁ (–COOH, H₂L⁺ → HL±) | pKa₂ (–NH₃⁺, HL± → L⁻) |
+|---|---|---|---|
+| **Glycine** | ligand_5760 | **2.33** | **9.57** |
+| **Alanine** | ligand_5761 | **2.33** | **9.71** |
+| **ΔpKa (Ala − Gly)** | — | **0.00** | **+0.14** |
+
+### Are the differences significant?
+
+- **pKa₁ (carboxyl group):** The values are **identical** at 2.33. This is expected — the carboxyl group environment is very similar in both amino acids, and the methyl substituent on the α-carbon in alanine is too far from –COOH to exert a meaningful inductive effect.
+
+- **pKa₂ (amino group):** Alanine's pKa₂ is **0.14 units higher** than glycine's (9.71 vs. 9.57). This is a small but real difference. The electron-donating methyl group on alanine's α-carbon slightly increases electron density at the amino nitrogen, making the –NH₃⁺ form a marginally weaker acid (harder to deprotonate). Given that typical experimental uncertainties for pKa measurements are ±0.02–0.05 units, a Δ of 0.14 is **~3–7× the experimental error** and thus **statistically significant**, though **chemically modest**.
+
+### Chemistry Insight
+
+The near-identical pKa₁ values and small pKa₂ difference reflect the fact that glycine and alanine differ only by a single methyl group (–H vs. –CH₃ on the α-carbon). The weak electron-donating (+I) effect of the methyl group is felt more at the nearby amino group than at the carboxyl group, which is one bond further away. This pattern — similar pKa₁ but slightly elevated pKa₂ with increasing alkyl substitution — is a general trend across simple aliphatic α-amino acids.
+
+*Source: NIST SRD-46 (Critically Selected Stability Constants of Metal Complexes)*
+
+---

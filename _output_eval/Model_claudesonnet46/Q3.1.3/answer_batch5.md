@@ -1,0 +1,48 @@
+Based on all data retrieved, here is the complete answer:
+
+---
+
+## Zinc–Histidine Equilibria: ~2005 Publication Found ✅
+
+### 📄 Citation
+
+**Shortcut:** `05BPP`
+
+> **P. Buglyó, E. Pintér, and A. Paulenova**, *Journal of Inorganic Biochemistry*, **2005**, *99*, 1979.
+
+This paper was identified via VLM record `vlm_98909` in the NIST SRD-46 database, which links directly to measurements at 37 °C / I = 0.15 M — a deliberate choice of physiological conditions.
+
+---
+
+### Stability Constants Reported
+
+The study covers Zn²⁺ + L-Histidine (L = fully deprotonated histidinate; HL = neutral zwitterion) at two sets of conditions:
+
+| Equilibrium | Type | log K | T (°C) | I (M) |
+|---|---|---|---|---|
+| Zn²⁺ + L⁻ ⇌ ZnL⁺ | log K₁ | **6.51** | 25 | 0.10 |
+| Zn²⁺ + L⁻ ⇌ ZnL⁺ | log K₁ | **6.35** | 37 | 0.15 |
+| Zn²⁺ + 2 L⁻ ⇌ ZnL₂ | log β₂ | **12.04** | 25 | 0.10 |
+| Zn²⁺ + 2 L⁻ ⇌ ZnL₂ | log β₂ | **11.67** | 37 | 0.15 |
+| ZnL⁺ + H⁺ ⇌ ZnHL²⁺ | log K | **4.86** | 25 | 0.10 |
+| ZnL⁺ + H⁺ ⇌ ZnHL²⁺ | log K | **4.61** | 37 | 0.15 |
+| ZnL₂ + H⁺ ⇌ ZnHL₂⁺ | log K | **5.80** | 25 | 0.10 |
+| ZnL₂ + H⁺ ⇌ ZnHL₂⁺ | log K | **5.50** | 37 | 0.15 |
+
+---
+
+### Chemistry Insight
+
+Three points stand out:
+
+1. **Strong 1:2 chelation:** The bis-histidine complex ZnL₂ (log β₂ ≈ 12.0) is far more stable than a simple additive prediction would suggest, reflecting the well-known tridentate chelate effect of histidine — which coordinates Zn²⁺ simultaneously through its α-amino group, carboxylate, and imidazole nitrogen.
+
+2. **Physiological relevance:** The authors deliberately measured at 37 °C and I = 0.15 M (mimicking blood plasma), making these constants directly applicable to modelling free zinc speciation in biological fluids. The modest decrease in log K at physiological conditions (e.g., log β₂ drops from 12.04 → 11.67) is important for accurate speciation modelling.
+
+3. **Protonated species:** The ZnHL²⁺ and ZnHL₂⁺ species (log K ≈ 4.6–5.8) show that the imidazole nitrogen can remain partially protonated even in the coordination sphere of Zn²⁺, which has implications for zinc buffering near physiological pH (~7.4).
+
+---
+
+*Source: NIST SRD-46 — Critically Selected Stability Constants of Metal Complexes Database*
+
+---

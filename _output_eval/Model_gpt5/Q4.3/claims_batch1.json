@@ -1,0 +1,2039 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt5\\Q4.3\\Q4.3_result_batch1.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "| Metal (aq) | T (°C) | Ionic strength, I (M) | log K1(en) | log K1(NH3) | log K2(NH3) | log β2(NH3) = K1+K2 | Δ_user = log K1(en) − 2·log K1(NH3) | Δ′ = log K1(en) − log β2(NH3) |\n|---|---:|---:|---:|---:|---:|---:|---:|---:|\n| Cu2+ | 25.0 | 0.10 | 10.49 | 4.02 | 3.38 | 7.40 | 2.45 | 3.09 |\n| Ni2+ | 25.0 | 0.10 | 7.76 | 2.73 | 2.37 | 5.10 | 2.30 | 2.66 |\n| Zn2+ | 25.0 | 0.10 | 5.69 | 2.33 | 2.17 | 4.50 | 1.03 | 1.19 |",
+        "claims": [
+          {
+            "start": 227,
+            "end": 292,
+            "text": "| Cu2+ | 25.0 | 0.10 | 10.49 | 4.02 | 3.38 | 7.40 | 2.45 | 3.09 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 293,
+            "end": 357,
+            "text": "| Ni2+ | 25.0 | 0.10 | 7.76 | 2.73 | 2.37 | 5.10 | 2.30 | 2.66 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 358,
+            "end": 422,
+            "text": "| Zn2+ | 25.0 | 0.10 | 5.69 | 2.33 | 2.17 | 4.50 | 1.03 | 1.19 |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_7029",
+              "ligand_10103",
+              "vlm_122410",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| vlm_122410 | ... | beta_def_812 | logK | 10.49 | 25 | 0.1 | `[M] + [L] <=> [ML]` |",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "| vlm_122410 | ref_eq_map_9575 | beta_def_812 | logK | 10.49 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.92, L, +inf) |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L] <=> [ML]` | logK | 5 | 5 diff ref_eq_map | 4.02~4.3 | 25 | 0~3 | beta_def_812 | *** | [L] | (9.26, L, +inf) |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L]^2 <=> [ML2]` | logK | 4 | 4 diff ref_eq_map | 7.4~7.91 | 25 | 0~3 | beta_def_840 | *** | [L] | (9.26, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_112",
+              "ligand_7029",
+              "ligand_10103",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| `[M] + [L] <=> [ML]` | logK | 6 | 6 diff ref_eq_map | 7.3~7.9 | 25 | 0~3 | beta_def_812 |",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L] <=> [ML]` | logK | 6 | 6 diff ref_eq_map | 7.3~7.9 | 25 | 0~3 | beta_def_812 | *** | [L] | (9.92, L, +inf) |"
+              },
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L] <=> [ML]` | logK | 4 | 4 diff ref_eq_map | 2.72~2.85 | 25 | 0~2 | beta_def_812 | *** | [L] | (9.26, L, +inf) |"
+              },
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L]^2 <=> [ML2]` | logK | 5 | 5 diff ref_eq_map | 4.88~5.3 | 25 | 0~3 | beta_def_840 | *** | [L] | (9.26, L, +inf) |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_7029",
+              "ligand_10103",
+              "vlm_122508",
+              "vlm_173394",
+              "vlm_173402",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| vlm_122508 | ... | beta_def_812 | logK | 5.69 | 25 | 0.1 | `[M] + [L] <=> [ML]` |",
+            "tool_snippets": [
+              {
+                "step": "Step 18",
+                "tool": "search_stability",
+                "snippet": "| vlm_122508 | ref_eq_map_9601 | beta_def_812 | logK | 5.69 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.92, L, +inf) |"
+              },
+              {
+                "step": "Step 19",
+                "tool": "search_stability",
+                "snippet": "| vlm_173394 | ref_eq_map_28172 | beta_def_812 | logK | 2.33 | 25 | 0.1 | `[M] + [L] <=> [ML]` | *** | [L] | (9.26, L, +inf) |"
+              },
+              {
+                "step": "Step 19",
+                "tool": "search_stability",
+                "snippet": "| vlm_173402 | ref_eq_map_28172 | beta_def_840 | logK | 4.5 | 25 | 0 | `[M] + [L]^2 <=> [ML2]` | *** | [L] | (9.26, L, +inf) |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "Notes on data selection (SRD-46):\n- Conditions matched at 25 °C and I ≈ 0.10 M (nitrate media where specified).\n- Cu2+–en: log K1 = 10.49 (I=0.10 M). Cu2+–NH3: logβ1 = 4.02, logβ2 = 7.40 (so logK1=4.02, logK2=3.38).\n- Ni2+–en: log K1 = 7.76 ± 0.02 (I=0.10 M KNO3). Ni2+–NH3: logK1 = 2.73 ± 0.03, logK2 = 2.37 ± 0.04 (I=0.10 M KNO3).\n- Zn2+–en: log K1 = 5.69 (I=0.10 M). Zn2+–NH3: logK1 = 2.33, logβ2 = 4.50 → logK2 = 2.17 (I=0.10 M).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 33,
+            "text": "Notes on data selection (SRD-46):",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 36,
+            "end": 63,
+            "text": "Conditions matched at 25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 68,
+            "end": 78,
+            "text": "I ≈ 0.10 M",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 79,
+            "end": 110,
+            "text": "(nitrate media where specified)",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 114,
+            "end": 137,
+            "text": "Cu2+–en: log K1 = 10.49",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 138,
+            "end": 148,
+            "text": "(I=0.10 M)",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 150,
+            "end": 172,
+            "text": "Cu2+–NH3: logβ1 = 4.02",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 174,
+            "end": 186,
+            "text": "logβ2 = 7.40",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 188,
+            "end": 201,
+            "text": "so logK1=4.02",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 203,
+            "end": 213,
+            "text": "logK2=3.38",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 218,
+            "end": 247,
+            "text": "Ni2+–en: log K1 = 7.76 ± 0.02",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 248,
+            "end": 263,
+            "text": "(I=0.10 M KNO3)",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 265,
+            "end": 294,
+            "text": "Ni2+–NH3: logK1 = 2.73 ± 0.03",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 296,
+            "end": 315,
+            "text": "logK2 = 2.37 ± 0.04",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 335,
+            "end": 357,
+            "text": "Zn2+–en: log K1 = 5.69",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 370,
+            "end": 392,
+            "text": "Zn2+–NH3: logK1 = 2.33",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 394,
+            "end": 406,
+            "text": "logβ2 = 4.50",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 409,
+            "end": 421,
+            "text": "logK2 = 2.17",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "vlm_122410"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_122410 | beta_def_812 | logK | 10.49 | 25 | 0.1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_122410 | ref_eq_map_9575 | beta_def_812 | logK | 10.49 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 19",
+                "tool": "search_stability",
+                "snippet": "vlm_173394 | ref_eq_map_28172 | beta_def_812 | logK | 2.33 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "vlm_122410"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "… | logK | 10.49 | 25 | 0.1 | …",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_122410 | ref_eq_map_9575 | beta_def_812 | logK | 10.49 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Electrolyte identity (e.g., nitrate/KNO3) is not reported in the tool results; only I(M) values appear.",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_stability",
+                "snippet": "| type | vlm_counts | … | I(M)_range | … |\n| logK | 18 | … | 25 | 0~3 | *** | … |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "vlm_122410",
+              "beta_def_812",
+              "metal_41",
+              "ligand_7029"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_122410 … beta_def_812 … logK | 10.49 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_122410 | ref_eq_map_9575 | beta_def_812 | logK | 10.49 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "vlm_122410"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "… | 25 | 0.1 | …",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_122410 | ref_eq_map_9575 | beta_def_812 | logK | 10.49 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "beta_def_812",
+              "metal_41",
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "`[M] + [L] <=> [ML]` | logK | … | 4.02~4.3 | 25 | 0~3",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L] <=> [ML]` | logK | 5 | 5 diff ref_eq_map | 4.02~4.3 | 25 | 0~3 | beta_def_812 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "beta_def_840",
+              "metal_41",
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "`[M] + [L]^2 <=> [ML2]` | logK | … | 7.4~7.91 | 25 | 0~3",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L]^2 <=> [ML2]` | logK | 4 | 4 diff ref_eq_map | 7.4~7.91 | 25 | 0~3 | beta_def_840 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "beta_def_812",
+              "metal_41",
+              "ligand_10103"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "β1 for ML is defined by: beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML]",
+            "tool_snippets": [
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "beta_def_812 | [ML]/[M][L] | [M] + [L] <=> [ML]"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L] <=> [ML]` | logK | … | 4.02~4.3 | 25 | 0~3 | beta_def_812 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "beta_def_812",
+              "beta_def_840",
+              "metal_41",
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Ranges: ML logK 4.02~4.3; ML2 logK 7.4~7.91 at 25 °C → K2 ≈ 7.40−4.02=3.38",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L] <=> [ML]` | logK | … | 4.02~4.3 | 25 | 0~3 | beta_def_812 |"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L]^2 <=> [ML2]` | logK | … | 7.4~7.91 | 25 | 0~3 | beta_def_840 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "beta_def_812",
+              "metal_112",
+              "ligand_7029"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "`[M] + [L] <=> [ML]` | logK | … | 7.3~7.9 | 25 | 0~3",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L] <=> [ML]` | logK | 6 | 6 diff ref_eq_map | 7.3~7.9 | 25 | 0~3 | beta_def_812 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Electrolyte (KNO3) not specified in tool outputs; only I(M) values are shown (no medium column).",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_stability",
+                "snippet": "Summary stats … | I(M)_range | 0.1~3 | … (no electrolyte field present)"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "beta_def_812",
+              "metal_112",
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "`[M] + [L] <=> [ML]` | logK | … | 2.72~2.85 | 25 | 0~2",
+            "tool_snippets": [
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L] <=> [ML]` | logK | 4 | … | 2.72~2.85 | 25 | 0~2 | beta_def_812 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "beta_def_812",
+              "beta_def_840",
+              "metal_112",
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Ranges at 25 °C: β1 2.72~2.85; β2 4.88~5.3 → K2 ≈ β2−β1 ≈ 2.37",
+            "tool_snippets": [
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L] <=> [ML]` | logK | … | 2.72~2.85 | 25 | 0~2 | beta_def_812 |"
+              },
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "| `[M] + [L]^2 <=> [ML2]` | logK | 5 | … | 4.88~5.3 | 25 | 0~3 | beta_def_840 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [
+              "vlm_122508",
+              "beta_def_812",
+              "metal_208",
+              "ligand_7029"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_122508 … logK | 5.69 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 18",
+                "tool": "search_stability",
+                "snippet": "vlm_122508 | ref_eq_map_9601 | beta_def_812 | logK | 5.69 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [
+              "vlm_173394",
+              "beta_def_812",
+              "metal_208",
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_173394 … logK | 2.33 | 25 | 0.1",
+            "tool_snippets": [
+              {
+                "step": "Step 19",
+                "tool": "search_stability",
+                "snippet": "vlm_173394 | ref_eq_map_28172 | beta_def_812 | logK | 2.33 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [
+              "vlm_173402",
+              "beta_def_840",
+              "metal_208",
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_173402 … beta_def_840 … logK | 4.5 | 25 | 0",
+            "tool_snippets": [
+              {
+                "step": "Step 19",
+                "tool": "search_stability",
+                "snippet": "vlm_173402 | ref_eq_map_28172 | beta_def_840 | logK | 4.5 | 25 | 0 | `[M] + [L]^2 <=> [ML2]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 17,
+            "canonical_ids": [
+              "vlm_173394",
+              "vlm_173402",
+              "beta_def_812",
+              "beta_def_840",
+              "metal_208",
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "From 25 °C data: β1=2.33 (I=0.1) and β2=4.5 (I=0) ⇒ K2 ≈ 4.50−2.33 = 2.17",
+            "tool_snippets": [
+              {
+                "step": "Step 19",
+                "tool": "search_stability",
+                "snippet": "vlm_173394 | … | beta_def_812 | logK | 2.33 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 19",
+                "tool": "search_stability",
+                "snippet": "vlm_173402 | … | beta_def_840 | logK | 4.5 | 25 | 0 | `[M] + [L]^2 <=> [ML2]`"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "Answer to your question\n- The chelate-effect magnitude is not constant across metals; it varies noticeably: Cu2+ > Ni2+ > Zn2+ under matched conditions.\n- Using your metric (Δ_user = log K_en − 2·log K_NH3), Δ_user is about 2.45 (Cu2+), 2.30 (Ni2+), and 1.03 (Zn2+).\n- If we use the more rigorous two-ammonia competitor (Δ′ = log K_en − log β2(NH3) = log K1(en) − [log K1(NH3)+log K2(NH3)]), the same ordering holds and the contrast is even clearer: ~3.09 (Cu2+), 2.66 (Ni2+), 1.19 (Zn2+).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 23,
+            "text": "Answer to your question",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 26,
+            "end": 84,
+            "text": "The chelate-effect magnitude is not constant across metals",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 86,
+            "end": 106,
+            "text": "it varies noticeably",
+            "claim_type": "trend",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 108,
+            "end": 152,
+            "text": "Cu2+ > Ni2+ > Zn2+ under matched conditions.",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 155,
+            "end": 172,
+            "text": "Using your metric",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 174,
+            "end": 205,
+            "text": "Δ_user = log K_en − 2·log K_NH3",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 208,
+            "end": 235,
+            "text": "Δ_user is about 2.45 (Cu2+)",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 237,
+            "end": 248,
+            "text": "2.30 (Ni2+)",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 254,
+            "end": 266,
+            "text": "1.03 (Zn2+).",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 269,
+            "end": 319,
+            "text": "If we use the more rigorous two-ammonia competitor",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 321,
+            "end": 389,
+            "text": "Δ′ = log K_en − log β2(NH3) = log K1(en) − [log K1(NH3)+log K2(NH3)]",
+            "claim_type": "calculation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 392,
+            "end": 415,
+            "text": "the same ordering holds",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 420,
+            "end": 448,
+            "text": "the contrast is even clearer",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 450,
+            "end": 462,
+            "text": "~3.09 (Cu2+)",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 464,
+            "end": 475,
+            "text": "2.66 (Ni2+)",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 477,
+            "end": 489,
+            "text": "1.19 (Zn2+).",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "metal_208",
+              "ligand_7029",
+              "ligand_10103",
+              "vlm_122410",
+              "vlm_122508",
+              "vlm_173394"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Ni2+ + en: `[M] + [L] <=> [ML]` | logK | value_range 7.3~7.9 | 25 °C",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_122410 | beta_def_812 | logK | 10.49 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 16",
+                "tool": "search_stability",
+                "snippet": "`[M] + [L] <=> [ML]` | logK | 6 | value_range 7.3~7.9 | 25 | 0~3 | beta_def_812"
+              },
+              {
+                "step": "Step 18",
+                "tool": "search_stability",
+                "snippet": "vlm_122508 | beta_def_812 | logK | 5.69 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "metal_208",
+              "ligand_7029",
+              "ligand_10103",
+              "vlm_122410",
+              "vlm_122508",
+              "vlm_173394"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Cu2+ + NH3: `[M] + [L] <=> [ML]` | logK | value_range 4.02~4.3 | 25 °C",
+            "tool_snippets": [
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "`[M] + [L] <=> [ML]` | logK | 5 | value_range 4.02~4.3 | 25 | 0~3"
+              },
+              {
+                "step": "Step 16",
+                "tool": "search_stability",
+                "snippet": "`[M] + [L] <=> [ML]` | logK | value_range 7.3~7.9 | 25"
+              },
+              {
+                "step": "Step 19",
+                "tool": "search_stability",
+                "snippet": "vlm_173394 | beta_def_812 | logK | 2.33 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "metal_208",
+              "ligand_7029",
+              "ligand_10103",
+              "vlm_122410",
+              "vlm_122508",
+              "vlm_173394"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Cu2+ + en: vlm_122410 | logK 10.49 (I=0.1); Zn2+ + en: vlm_122508 | logK 5.69 (I=0.1)",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_122410 | ref_eq_map_9575 | beta_def_812 | logK | 10.49 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 16",
+                "tool": "search_stability",
+                "snippet": "`[M] + [L] <=> [ML]` | logK | value_range 7.3~7.9 | 25 | 0~3 (Ni2+ + en)"
+              },
+              {
+                "step": "Step 18",
+                "tool": "search_stability",
+                "snippet": "vlm_122508 | ref_eq_map_9601 | beta_def_812 | logK | 5.69 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "This is a user-defined metric; SRD-46 reports logK and logβ values but not Δ_user.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_7029",
+              "ligand_10103",
+              "vlm_122410"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Cu2+ + en: logK 10.49 (I=0.1); Cu2+ + NH3: K1 logK 4.02~4.3 → Δ_user ≈ 10.49−2×(4.02~4.3)",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_122410 | beta_def_812 | logK | 10.49 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "`[M] + [L] <=> [ML]` | logK | value_range 4.02~4.3 | 25 | 0~3 (Cu2+ + Ammonia)"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_112",
+              "ligand_7029",
+              "ligand_10103"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Ni2+ + en: logK 7.3~7.9; Ni2+ + NH3: K1 logK 2.72~2.85 → Δ_user ≈ 7.3~7.9 − 2×(2.72~2.85)",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_stability",
+                "snippet": "`[M] + [L] <=> [ML]` | logK | 6 | value_range 7.3~7.9 | 25 | 0~3 (Ni2+ + Ethylenediamine)"
+              },
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "`[M] + [L] <=> [ML]` | logK | 4 | value_range 2.72~2.85 | 25 | 0~2 (Ni2+ + Ammonia)"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_7029",
+              "ligand_10103",
+              "vlm_122508",
+              "vlm_173394"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Zn2+ + en: logK 5.69 (I=0.1); Zn2+ + NH3: K1 logK 2.33 (I=0.1) → Δ_user = 5.69−2×2.33=1.03",
+            "tool_snippets": [
+              {
+                "step": "Step 18",
+                "tool": "search_stability",
+                "snippet": "vlm_122508 | beta_def_812 | logK | 5.69 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 19",
+                "tool": "search_stability",
+                "snippet": "vlm_173394 | beta_def_812 | logK | 2.33 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Identity uses log β2(NH3) = logK1+logK2 and stepwise logK(en); SRD‑46 lists these separately but not Δ′ explicitly.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "metal_208",
+              "ligand_7029",
+              "ligand_10103",
+              "vlm_122413",
+              "vlm_122512",
+              "vlm_173401"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Zn2+ + NH3 (β2): 4.95 (I=2); Zn2+ + en: 6.15 → Δ′≈1.20; Cu and Ni give larger Δ′ (see ranges).",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_122413 | beta_def_812 | logK | 10.8 | 25 | 1 | `[M] + [L] <=> [ML]` (Cu2+ + en)"
+              },
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "Ni2+ + NH3: `[M] + [L]^2 <=> [ML2]` | logK | value_range 4.88~5.3 | 25 | 0~3"
+              },
+              {
+                "step": "Step 19",
+                "tool": "search_stability",
+                "snippet": "vlm_173401 | beta_def_840 | logK | 4.95 | 25 | 2 | `[M] + [L]^2 <=> [ML2]` (Zn2+ + NH3)"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "unsupported",
+            "evidence_snippet": "Qualitative assertion (“even clearer”) is not explicitly quantified in SRD‑46 outputs; no direct rows for contrast.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_7029",
+              "ligand_10103",
+              "vlm_122413"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Cu2+ + en: logK 10.8 (I=1); Cu2+ + NH3 (β2): 7.4~7.91 → Δ′ ≈ 10.8 − (7.4~7.91) ≈ 2.89~3.4",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_122413 | ref_eq_map_9580 | beta_def_812 | logK | 10.8 | 25 | 1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "Cu2+ + NH3: `[M] + [L]^2 <=> [ML2]` | logK | value_range 7.4~7.91 | 25 | 0~3"
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [
+              "metal_112",
+              "ligand_7029",
+              "ligand_10103"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Ni2+ + en: logK 7.3~7.9; Ni2+ + NH3 (β2): 4.88~5.3 → Δ′ ≈ 2.0~3.02 (covers ~2.66)",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_stability",
+                "snippet": "Ni2+ + en: `[M] + [L] <=> [ML]` | logK | value_range 7.3~7.9 | 25"
+              },
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "Ni2+ + NH3: `[M] + [L]^2 <=> [ML2]` | logK | value_range 4.88~5.3 | 25"
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_7029",
+              "ligand_10103",
+              "vlm_122512",
+              "vlm_173401"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Zn2+ + en: logK 6.15 (I=2); Zn2+ + NH3 (β2): 4.95 (I=2) → Δ′ = 6.15−4.95 = 1.20 (~1.19)",
+            "tool_snippets": [
+              {
+                "step": "Step 18",
+                "tool": "search_stability",
+                "snippet": "vlm_122512 | ref_eq_map_9607 | beta_def_812 | logK | 6.15 | 25 | 2 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 19",
+                "tool": "search_stability",
+                "snippet": "vlm_173401 | ref_eq_map_28174 | beta_def_840 | logK | 4.95 | 25 | 2 | `[M] + [L]^2 <=> [ML2]`"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "Hypothesis for the differences\n- Beyond the “classical” entropic chelate effect (which is similar for these cases), metal-dependent enthalpic factors dominate:\n  - Cu2+ (d9) often gains the most from bidentate en: strong M–N covalency and Jahn–Teller preferences favor two robust equatorial Cu–N bonds from one ligand, enhancing stability relative to two separate NH3 donors.\n  - Ni2+ (d8, high-spin in water) benefits from chelation and somewhat stronger-field en vs NH3, giving a sizable but smaller Δ than Cu2+.\n  - Zn2+ (d10) has zero ligand-field stabilization energy and more ionic, less covalent M–N bonding; chelation still helps but yields the smallest Δ.\n- Bite fit of en (five-membered ring) is broadly good across these metals, but increased covalency/LFSE contributions for Cu2+ and Ni2+ amplify the chelate advantage compared to Zn2+.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 30,
+            "text": "Hypothesis for the differences",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 33,
+            "end": 79,
+            "text": "Beyond the “classical” entropic chelate effect",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 81,
+            "end": 113,
+            "text": "which is similar for these cases",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 116,
+            "end": 158,
+            "text": "metal-dependent enthalpic factors dominate",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 164,
+            "end": 173,
+            "text": "Cu2+ (d9)",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 174,
+            "end": 212,
+            "text": "often gains the most from bidentate en",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 214,
+            "end": 234,
+            "text": "strong M–N covalency",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 239,
+            "end": 317,
+            "text": "Jahn–Teller preferences favor two robust equatorial Cu–N bonds from one ligand",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 319,
+            "end": 374,
+            "text": "enhancing stability relative to two separate NH3 donors",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 380,
+            "end": 388,
+            "text": "Ni2+ (d8",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 390,
+            "end": 408,
+            "text": "high-spin in water",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 410,
+            "end": 433,
+            "text": "benefits from chelation",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 438,
+            "end": 471,
+            "text": "somewhat stronger-field en vs NH3",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 473,
+            "end": 513,
+            "text": "giving a sizable but smaller Δ than Cu2+",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 519,
+            "end": 529,
+            "text": "Zn2+ (d10)",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 530,
+            "end": 572,
+            "text": "has zero ligand-field stabilization energy",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 577,
+            "end": 614,
+            "text": "more ionic, less covalent M–N bonding",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 616,
+            "end": 637,
+            "text": "chelation still helps",
+            "claim_type": "domain_reasoning",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 642,
+            "end": 663,
+            "text": "yields the smallest Δ",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 667,
+            "end": 681,
+            "text": "Bite fit of en",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 683,
+            "end": 701,
+            "text": "five-membered ring",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 703,
+            "end": 738,
+            "text": "is broadly good across these metals",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 744,
+            "end": 800,
+            "text": "increased covalency/LFSE contributions for Cu2+ and Ni2+",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 801,
+            "end": 847,
+            "text": "amplify the chelate advantage compared to Zn2+",
+            "claim_type": "comparison",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "metal_208",
+              "ligand_7029",
+              "beta_def_812"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "`Ni^[2+] + Ethylenediamine` … `[M] + [L] <=> [ML]` | ΔS | … | value_range | 0~18.4 | 25",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "Cu^[2+] + Ethylenediamine … vlm_122423 … beta_def_812 | ΔS | 22.6 | 25 | 0.1 …; vlm_122424 … ΔS | 25.5 …; vlm_122425 … ΔS | 20.1 …"
+              },
+              {
+                "step": "Step 16",
+                "tool": "search_stability",
+                "snippet": "`[M] + [L] <=> [ML]` | ΔS | 4 | *** | 0~18.4 | 25 | 0.1~3 | beta_def_812"
+              },
+              {
+                "step": "Step 18",
+                "tool": "search_stability",
+                "snippet": "Zn^[2+] + Ethylenediamine … vlm_122518 … beta_def_812 | ΔS | 19.2 | 25 | 1 …; vlm_122519 … ΔS | 12.6 | 25 | 3 …"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "metal_208",
+              "ligand_7029",
+              "beta_def_812"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "`Ni^[2+] + Ethylenediamine` … `[M] + [L] <=> [ML]` | ΔH | … | value_range | -37.7~0 | 25",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "Cu^[2+] + Ethylenediamine … vlm_122419 … ΔH | -52.7 | 25 | 0.1 …; vlm_122420 … ΔH | -53.1 …; vlm_122421 … ΔH | -55.2 …"
+              },
+              {
+                "step": "Step 16",
+                "tool": "search_stability",
+                "snippet": "`[M] + [L] <=> [ML]` | ΔH | 4 | *** | -37.7~0 | 25 | 0.1~3 | beta_def_812"
+              },
+              {
+                "step": "Step 18",
+                "tool": "search_stability",
+                "snippet": "Zn^[2+] + Ethylenediamine … vlm_122516 … ΔH | -28 | 25 | 1 …; vlm_122517 … ΔH | -32.2 | 25 | 3 …"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "metal_41"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "d-electron count (d9) is not recorded in SRD-46; tool shows the ion identity only.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "metal_41 | Cu^[2+] | Cu | 2 | ✓ | [Cu+2] | InChI=1S/Cu/q+2"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "metal_208",
+              "ligand_7029",
+              "ligand_10103",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Cu^[2+] + en: `[M] + [L] <=> [ML]` | logK | 10.49 …; Cu^[2+] + NH3: `[M] + [L]^2 <=> [ML2]` | logK | 7.4~7.91",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_122410 | … | beta_def_812 | logK | 10.49 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "`[M] + [L]^2 <=> [ML2]` | logK | 4 | … | 7.4~7.91 | 25 | 0~3 | beta_def_840"
+              },
+              {
+                "step": "Step 16",
+                "tool": "search_stability",
+                "snippet": "Ni^[2+] + Ethylenediamine … `[M] + [L] <=> [ML]` | logK | 6 | … | 7.3~7.9 | 25"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Covalency of M–N bonds is not recorded in SRD‑46 stability tables; this is general inorganic chemistry.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "metal_41"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Jahn–Teller preferences are not in SRD‑46; only Cu2+ identity is present.",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "metal_41 | Cu^[2+] | Cu | 2 | ✓"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "metal_41",
+              "ligand_7029",
+              "ligand_10103",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Cu + en β1 logK 10.49 vs Cu + NH3 β2 logK 7.4~7.91 at 25 °C",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "Cu^[2+] + Ethylenediamine … vlm_122410 … beta_def_812 | logK | 10.49 | 25 | 0.1"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "Cu^[2+] + Ammonia … `[M] + [L]^2 <=> [ML2]` | logK | … | 7.4~7.91 | 25 | 0~3"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "metal_112"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "d-electron count (d8) is not in SRD‑46; tool confirms the Ni2+ ion identity only.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "metal_112 | Ni^[2+] | Ni | 2 | ✓ | [Ni+2]"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [
+              "metal_112"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Spin state in water is not recorded in SRD‑46 stability tables; general inorganic chemistry.",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_metals",
+                "snippet": "metal_112 | Ni^[2+] | Ni | 2"
+              }
+            ]
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "metal_112",
+              "ligand_7029",
+              "ligand_10103",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Ni + en β1 logK 7.3~7.9 vs Ni + NH3 β2 logK 4.88~5.3 at 25 °C",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_stability",
+                "snippet": "`[M] + [L] <=> [ML]` | logK | … | value_range | 7.3~7.9 | 25 | … | beta_def_812"
+              },
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "`[M] + [L]^2 <=> [ML2]` | logK | … | value_range | 4.88~5.3 | 25 | … | beta_def_840"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Ligand-field strength ordering (en > NH3) is spectrochemical-series knowledge, not in SRD‑46 stability rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "ligand_7029",
+              "ligand_10103",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Ni + en β1 logK 7.3~7.9; Ni + NH3 β2 4.88~5.3 (smaller gap than Cu’s 10.49 vs 7.4~7.91)",
+            "tool_snippets": [
+              {
+                "step": "Step 16",
+                "tool": "search_stability",
+                "snippet": "Ni^[2+] + Ethylenediamine … `[M] + [L] <=> [ML]` | logK | … | value_range | 7.3~7.9 | 25"
+              },
+              {
+                "step": "Step 17",
+                "tool": "search_stability",
+                "snippet": "Ni^[2+] + Ammonia … `[M] + [L]^2 <=> [ML2]` | logK | … | value_range | 4.88~5.3 | 25"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "Cu^[2+] + Ethylenediamine … vlm_122410 … logK | 10.49 | 25 | 0.1 …; Step 15 … NH3 β2 7.4~7.91"
+              }
+            ]
+          },
+          {
+            "claim_index": 14,
+            "canonical_ids": [
+              "metal_208"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "d-electron count (d10) is not in SRD‑46; tool confirms the Zn2+ ion identity only.",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "search_metals",
+                "snippet": "metal_208 | Zn^[2+] | Zn | 2 | ✓ | [Zn+2]"
+              }
+            ]
+          },
+          {
+            "claim_index": 15,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "LFSE values are not recorded in SRD‑46; d10 metals have ~0 LFSE (general ligand field theory).",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 16,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Bonding covalency/ionicity is not captured by SRD‑46 stability tables; general inorganic trend for Zn–N.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 17,
+            "canonical_ids": [
+              "metal_208",
+              "ligand_7029",
+              "ligand_10103",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Zn + en β1 logK 5.69 (25 °C, I=0.1) vs Zn + NH3 β2 logK 4.83–4.95 (25 °C)",
+            "tool_snippets": [
+              {
+                "step": "Step 18",
+                "tool": "search_stability",
+                "snippet": "Zn^[2+] + Ethylenediamine … vlm_122508 … beta_def_812 | logK | 5.69 | 25 | 0.1"
+              },
+              {
+                "step": "Step 19",
+                "tool": "search_stability",
+                "snippet": "Zn^[2+] + Ammonia … `[M] + [L]^2 <=> [ML2]` | logK | … | 4.83 | 25 | 1 … and 4.95 | 25 | 2"
+              }
+            ]
+          },
+          {
+            "claim_index": 18,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "metal_208",
+              "ligand_7029",
+              "ligand_10103",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Zn + en β1 logK 5.69 vs Zn + NH3 β2 4.83–4.95 (smaller gap than Cu/Ni)",
+            "tool_snippets": [
+              {
+                "step": "Step 18",
+                "tool": "search_stability",
+                "snippet": "vlm_122508 … beta_def_812 | logK | 5.69 | 25 | 0.1 … (Zn + en)"
+              },
+              {
+                "step": "Step 19",
+                "tool": "search_stability",
+                "snippet": "vlm_173400 … beta_def_840 | logK | 4.83 | 25 | 1 … (Zn + NH3); vlm_173401 … 4.95 | 25 | 2"
+              },
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "Cu + en β1 logK up to 11.38 (e.g., vlm_122417 … 11.38 at I=3) vs Step 15 Cu + NH3 β2 7.4~7.91"
+              }
+            ]
+          },
+          {
+            "claim_index": 19,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 20,
+            "canonical_ids": [
+              "ligand_7029"
+            ],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "SRD‑46 lists ethylenediamine (NCCN) but not chelate ring size; five‑membered ring is standard textbook knowledge.",
+            "tool_snippets": [
+              {
+                "step": "Step 5",
+                "tool": "search_ligands",
+                "snippet": "ligand_7029 | Ethylenediamine | L | Aliphatic amines | … | `NCCN`"
+              }
+            ]
+          },
+          {
+            "claim_index": 21,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Bite‑angle/fit assessments are not in SRD‑46; this is general coordination chemistry reasoning.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 22,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Covalency/LFSE contributions are not tabulated in SRD‑46; statement reflects accepted ligand field chemistry.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 23,
+            "canonical_ids": [
+              "metal_41",
+              "metal_112",
+              "metal_208",
+              "ligand_7029",
+              "ligand_10103",
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Cu: en β1 10.49 vs NH3 β2 7.4–7.91; Zn: en β1 5.69 vs NH3 β2 4.83–4.95 (larger gain for Cu than Zn)",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "Cu^[2+] + Ethylenediamine … vlm_122410 … logK | 10.49 | 25 | 0.1"
+              },
+              {
+                "step": "Step 15",
+                "tool": "search_stability",
+                "snippet": "Cu^[2+] + Ammonia … `[M] + [L]^2 <=> [ML2]` | logK | … | 7.4~7.91 | 25"
+              },
+              {
+                "step": "Step 18",
+                "tool": "search_stability",
+                "snippet": "Zn^[2+] + Ethylenediamine … vlm_122508 … logK | 5.69 | 25 | 0.1; Step 19 … Zn + NH3 β2 4.83–4.95"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 4,
+        "text": "Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes), 25 °C, aqueous; values compiled from Martell & Smith and related critical datasets within SRD‑46.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 7,
+            "text": "Source:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 8,
+            "end": 43,
+            "text": "NIST Standard Reference Database 46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 45,
+            "end": 103,
+            "text": "Critically Selected Stability Constants of Metal Complexes",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 106,
+            "end": 111,
+            "text": "25 °C",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 113,
+            "end": 120,
+            "text": "aqueous",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 122,
+            "end": 158,
+            "text": "values compiled from Martell & Smith",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 163,
+            "end": 188,
+            "text": "related critical datasets",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 189,
+            "end": 202,
+            "text": "within SRD‑46",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Provenance: These tool results come from NIST SRD‑46; the database name is not echoed in individual result rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "SRD‑46 covers Critically Selected Stability Constants of Metal Complexes, but source titles are not printed in the raw rows.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "vlm_122410"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "vlm_122410 | ... | logK | 10.49 | 25 | 0.1 | `[M] + [L] <=> [ML]`",
+            "tool_snippets": [
+              {
+                "step": "Step 14",
+                "tool": "search_stability",
+                "snippet": "vlm_122410 | ref_eq_map_9575 | beta_def_812 | logK | 10.49 | 25 | 0.1 | `[M] + [L] <=> [ML]`"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [
+              "beta_def_812",
+              "beta_def_840"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "phases | [ML](aqueous), [M](aqueous), [L](aqueous)",
+            "tool_snippets": [
+              {
+                "step": "Step 7",
+                "tool": "build_system_catalog",
+                "snippet": "[Cu^{2+}] + Ethylenediamine … | phases | [ML](aqueous), [M](aqueous), [L](aqueous)"
+              },
+              {
+                "step": "Step 8",
+                "tool": "build_system_catalog",
+                "snippet": "[Cu^{2+}] + Ammonia … | phases | [ML](aqueous), [M](aqueous), [L](aqueous)"
+              }
+            ]
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "SRD‑46 compiles values (e.g., from Martell & Smith); individual tool rows do not list literature sources.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "SRD‑46 aggregates related critical datasets; specific source attributions are not shown in the raw outputs.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [],
+            "support_class": "domain_knowledge",
+            "evidence_snippet": "Statement refers to SRD‑46 context of this run; the database name is not printed in query results.",
+            "tool_snippets": []
+          }
+        ]
+      },
+      {
+        "paragraph_index": 5,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

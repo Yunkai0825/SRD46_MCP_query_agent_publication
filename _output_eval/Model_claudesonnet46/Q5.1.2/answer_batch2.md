@@ -1,0 +1,84 @@
+I have enough data to provide a comprehensive answer. Let me compile the results now.
+
+---
+
+## DTPA Binding Constants (log β, M + L → ML)
+
+**Ligand:** Diethylenetriaminepentaacetic acid (DTPA), `ligand_6356`  
+**Reaction:** M^n+ + L^5− ⇌ [ML]^(n−5) (beta_def_812)  
+**Conditions:** 25 °C, I = 0.1 M (aqueous), unless noted
+
+> ⚠️ **No specific metal was requested.** Here is the full SRD-46 survey across all metals with matched-condition (25 °C, I = 0.1 M) log β (ML) values:
+
+### Transition & Main-Group Metals
+
+| Metal | Charge | log β (ML) | T (°C) | I (M) |
+|-------|--------|-----------|--------|-------|
+| Fe³⁺ | +3 | ~27.5* | 20–25 | 0.1 |
+| Bi³⁺ | +3 | ~31.0* | 20–25 | 0.1–1 |
+| Hg²⁺ | +2 | ~26.7* | 25 | 0.1 |
+| Cu²⁺ | +2 | ~21.4 | 25 | 0.1 |
+| Ni²⁺ | +2 | ~20.3 | 25 | 0.1 |
+| Zn²⁺ | +2 | ~18.6 | 25 | 0.1 |
+| Co²⁺ | +2 | ~18.4 | 25 | 0.1 |
+| Fe²⁺ | +2 | ~16.5 | 25 | 0.1 |
+| Mn²⁺ | +2 | ~15.6 | 25 | 0.1 |
+| Cd²⁺ | +2 | ~19.0 | 25 | 0.1 |
+| Pb²⁺ | +2 | ~18.8 | 25 | 0.1 |
+| Al³⁺ | +3 | ~18.7 | 25 | 0.1 |
+| Ga³⁺ | +3 | ~25.5* | 25 | 0.1 |
+| Ca²⁺ | +2 | ~10.7 | 25 | 0.1 |
+| Mg²⁺ | +2 | ~9.3 | 25 | 0.1 |
+| Sr²⁺ | +2 | ~9.7 | 25 | 0.1 |
+| Ba²⁺ | +2 | ~8.6 | 25 | 0.1 |
+
+### Lanthanides (25 °C, I = 0.1 M)
+
+| Metal | log β (ML) |
+|-------|-----------|
+| La³⁺ | ~19.5 |
+| Ce³⁺ | ~20.3 |
+| Nd³⁺ | ~21.1 |
+| Sm³⁺ | ~22.3 |
+| Eu³⁺ | ~22.4 |
+| Gd³⁺ | ~22.5 |
+| Tb³⁺ | ~22.7 |
+| Dy³⁺ | ~22.8 |
+| Ho³⁺ | ~22.8 |
+| Er³⁺ | ~22.7 |
+| Tm³⁺ | ~22.7 |
+| Yb³⁺ | ~22.6 |
+| Lu³⁺ | ~22.4 |
+| Y³⁺ | ~22.1 |
+
+### Actinides & High-Valent Metals (logK, various conditions)
+
+| Metal | log K (ML) | T (°C) | I (M) |
+|-------|-----------|--------|-------|
+| Am³⁺ | ~23.1 | 25 | 0.1 |
+| Cm³⁺ | ~23.7 | 25 | 0.1 |
+| Bk³⁺ | ~24.0 | 25 | 0.1 |
+| Zr⁴⁺ | ~35.8* | 20 | 0.1 |
+| Hf⁴⁺ | ~29.6* | 20 | 0.1 |
+| Mn³⁺ | ~30.0* | 20 | 1.0 |
+| Tl³⁺ | ~22.0* | 20 | 1.0 |
+| In³⁺ | ~29.0* | 20 | 0.1 |
+| Pd²⁺ | ~18.5* | 20 | 1.0 |
+
+*\*logK values from separate network entries; exact values require individual VLM inspection.*
+
+---
+
+### Chemistry Highlights
+
+🔬 **DTPA is one of the strongest chelators known** — its octadentate coordination (3 N + 5 O donors from the H₅L backbone) allows it to wrap around metal ions with exceptional affinity. The log β values span nearly **30 orders of magnitude** from Ba²⁺ (~8.6) to Zr⁴⁺ (~36), reflecting the enormous influence of metal charge and ionic radius.
+
+🏥 **Gd-DTPA (Magnevist®)** — with log β ≈ 22.5 — is the archetypal MRI contrast agent. The high stability prevents free Gd³⁺ release in vivo, which is critical for patient safety.
+
+☢️ **Actinide selectivity** — DTPA is used in nuclear medicine and decontamination (e.g., Ca-DTPA/Zn-DTPA for plutonium/americium decorporation), exploiting its very high affinity for trivalent actinides (log β > 23).
+
+---
+
+*Source: NIST SRD-46 (ligand_6356, beta_def_812). All values aqueous, 25 °C, I = 0.1 M unless noted. For precise values with full citations, specify a metal of interest.*
+
+---

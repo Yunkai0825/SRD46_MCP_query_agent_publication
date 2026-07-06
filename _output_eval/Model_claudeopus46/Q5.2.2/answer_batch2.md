@@ -1,0 +1,37 @@
+: Metal–Protein Binding in NIST SRD-46
+
+**Unfortunately, NIST SRD-46 does not contain stability constant data for intact proteins such as transferrin, lactoferrin, albumin (HSA/BSA), ferritin, or metallothionein.** The database focuses on well-defined, low-molecular-weight ligands where stoichiometry and equilibrium constants can be precisely determined.
+
+### What SRD-46 *does* have: Small Peptide–Metal Complexes
+
+The database includes a **"polypeptides" ligand class with ~98 entries**, consisting of small peptides (mostly di-, tri-, and tetrapeptides). These are relevant to metal–peptide coordination chemistry and include biologically interesting sequences. Some highlights:
+
+| Ligand | ID | HxL | pKa values | # Measurements |
+|---|---|---|---|---|
+| Tetraglycine (Gly-Gly-Gly-Gly) | ligand_6595 | HL | 3.2, 7.88 | 46 |
+| Asp-Arg-Val-Tyr | ligand_6639 | — | — | 13 |
+| Fibrinopeptide A fragment | ligand_6692 | H6L | 2.6–8.4 (6 steps) | 12 |
+| Various Asp/Glu-containing tetrapeptides | ligand_6621–6631 | H2L–H4L | multiple steps | 6–9 each |
+| Tyr-containing tetrapeptides | ligand_6632–6638 | H2L–H3L | incl. phenol ~10 | 6–9 each |
+
+These peptides coordinate metals primarily through **amide nitrogen, terminal amine, and carboxylate** groups — the same donor atoms involved in protein metal-binding sites.
+
+### Why Intact Proteins Are Absent
+
+Protein–metal equilibria are inherently difficult to characterize with classical stability constants because:
+
+1. **Multiple binding sites** with different affinities (e.g., transferrin has two Fe³⁺ sites with log K ~20–22)
+2. **Synergistic anion requirements** (transferrin needs carbonate/bicarbonate as a co-ligand)
+3. **Conformational changes** upon metal binding that alter the equilibrium model
+4. **Conditional constants** that depend heavily on pH, making simple β definitions problematic
+
+### Suggested Follow-ups
+
+If you're interested in metal–peptide binding as a proxy for protein coordination, I can:
+- **Retrieve stability constants** for specific peptide–metal systems (e.g., Cu²⁺ or Fe³⁺ with tetraglycine)
+- **Search for amino acid ligands** (glycine, histidine, cysteine, etc.) which *are* well-represented in SRD-46 and are the building blocks of protein metal-binding sites
+- **Explore pKa data** for these peptides to understand protonation competition at physiological pH
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes)*
+
+---

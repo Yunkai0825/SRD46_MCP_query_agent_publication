@@ -1,0 +1,55 @@
+Excellent — I now have all the data needed. Let me synthesize the answer.
+
+---
+
+## Calcium Oxalate Precipitation vs. pH
+
+### Retrieved Data (NIST SRD-46)
+
+| Parameter | Value | Conditions | Source |
+|-----------|-------|------------|--------|
+| pKa₁ (H₂Ox ⇌ HOx⁻ + H⁺) | **1.2** | 25 °C, I = 0.1 M | SRD-46, ligand_8872 |
+| pKa₂ (HOx⁻ ⇌ Ox²⁻ + H⁺) | **3.8** | 25 °C, I = 0.1 M | SRD-46, ligand_8872 |
+| log β₁ (Ca²⁺ + Ox²⁻ ⇌ CaOx(aq)) | **3.19** | 25 °C, I = 0 | SRD-46, vlm_151599 |
+| log Ksp (CaC₂O₄·H₂O(s)) | **−8.75** (I = 0); **−7.86** (I = 0.1 M) | 25 °C | SRD-46, vlm_151608 / vlm_151601 |
+
+### Analysis
+
+Precipitation occurs when the ion product exceeds Ksp:
+
+$$[\text{Ca}^{2+}][\text{Ox}^{2-}] > K_{sp} \approx 10^{-8.75} \approx 1.8 \times 10^{-9}\;\text{(at }I=0\text{)}$$
+
+The key pH-dependent quantity is the fraction of total oxalate present as Ox²⁻, denoted **α₂**:
+
+$$\alpha_2 = \frac{1}{1 + \frac{[\text{H}^+]}{K_{a2}} + \frac{[\text{H}^+]^2}{K_{a1}K_{a2}}}$$
+
+| pH | α₂ (fraction as Ox²⁻) |
+|----|------------------------|
+| 2.0 | ~0.016 |
+| 3.0 | ~0.14 |
+| 3.8 | ~0.50 |
+| 5.0 | ~0.94 |
+| 7.0 | ~1.00 |
+
+**At pH ≈ 2**, α₂ is very small (~1.6%), so even at millimolar total oxalate and calcium concentrations, [Ca²⁺][Ox²⁻] stays below Ksp — no precipitation.
+
+**At pH ≈ 3–4**, α₂ rises sharply (14–50%). For typical physiological or laboratory concentrations (e.g., ~1 mM Ca²⁺, ~1 mM total oxalate):
+
+$$[\text{Ca}^{2+}][\text{Ox}^{2-}] \approx (10^{-3})(10^{-3} \times \alpha_2)$$
+
+- At pH 3: ≈ 1.4 × 10⁻⁷ — **exceeds** Ksp (1.8 × 10⁻⁹) ✓
+- At pH 2: ≈ 1.6 × 10⁻⁸ — still exceeds Ksp at mM levels
+
+So at millimolar concentrations, precipitation can begin even around **pH ≈ 2–3**. At lower (micromolar) concentrations, precipitation becomes significant only above **pH ≈ 4–5**.
+
+### Bottom Line
+
+> **Calcium oxalate precipitation becomes significant at approximately pH 3–4** for typical (millimolar) concentrations. This corresponds to the region around and above **pKa₂ ≈ 3.8**, where the fully deprotonated oxalate dianion (C₂O₄²⁻) becomes the dominant species. Below pH ~2, even at moderate concentrations, insufficient Ox²⁻ is available to exceed the very low Ksp.
+
+### Chemistry Insight
+
+This pH dependence is clinically relevant: calcium oxalate kidney stones (the most common type) form preferentially in urine at pH 5–7, where oxalate is essentially fully deprotonated. The aqueous complex CaOx(aq) (log β₁ = 3.19) also sequesters some Ca²⁺ in solution, slightly raising the effective solubility — but with Ksp as low as 10⁻⁸·⁷⁵, even nanomolar free-ion products trigger nucleation once pH exceeds ~3–4.
+
+*Data source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).*
+
+---

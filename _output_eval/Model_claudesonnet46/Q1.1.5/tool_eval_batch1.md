@@ -1,0 +1,188 @@
+# Q1.1.5 — Tool Results (batch 1)
+
+### Step 2: `search_ligands`
+**Args:**
+```json
+{
+  "name": "oxalic acid",
+  "limit": 5
+}
+```
+
+[summary]
+## search_ligands — 4 result(s)
+
+**stats:** 4 SQL matches · showing 4 · limit 5
+
+| ligand_id | ligand_name | HxL_def | ligand_class | vlm_count | smiles | pka_brackets |
+|-----------|-------------|---------|--------------|-----------|--------|--------------|
+| ligand_8872 | Ethanedioic acid (Oxalic acid) | H2L | Carboxylic acids diacids | 394 | `O=C(O)C(=O)O` | (-inf, H2L, -1.2, HL, 3.8, L, +inf) |
+| ligand_8960 | Oxopropanedioic acid (Ketomaloni… (Mesoxalic acid) | H2L | Carboxylic acids diacids… | 3 | `O=C(O)C(=O)C(=O)O` | (-inf, H2L, -1.82, HL, 3.52, L, +inf) |
+| ligand_9763 | Dithiooxalic acid | H2L | miscellaneous mercaptans | 3 | `O=C(S)C(=O)S` | *** |
+| ligand_11304 | Ethanedi(dithioic acid) (Tetrathiooxalic acid) | *** | Ligands not selected | 0 | *** | *** |
+
+### Functional groups across all SQL matches (3 parseable SMILES)
+
+| group | count | % |
+|-------|-------|---|
+| carboxyl | 2 | 67% |
+| ketone | 1 | 33% |
+| thiol | 1 | 33% |
+
+---
+
+### Step 3: `search_pka_values`
+**Args:**
+```json
+{
+  "where": "lc.ligand_id = 'ligand_8872'",
+  "order_by": "p.pKa ASC",
+  "limit": 50
+}
+```
+
+[PHASE ERROR] Tool 'search_pka_values' is not available yet. Complete PHASE 1 first: call build_system_catalog, search_metals, then call 0_plan_search_strategy.
+
+---
+
+### Step 4: `build_system_catalog`
+**Args:**
+```json
+{
+  "ligand_id": "ligand_8872"
+}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog — 20 pair(s), 72 species *(ultra-compact)*
+
+### Equation legend
+
+| beta_def_id | equation | note |
+|-------------|----------|------|
+| beta_def_32 | [HL] + [H] <=> [H2L] |  |
+| beta_def_79 | [L] + [H] <=> [HL] |  |
+| beta_def_194 | [M] + [HL]^2 <=> [M(HL)2] |  |
+| beta_def_238 | [M(OH)2L] + [H] <=> [M(OH)L] + [H2O] |  |
+| beta_def_307 | [ML(H2O)3(s)] <=> [M] + [L] + [H2O]^3 | solid |
+| beta_def_311 | [ML(s)] <=> [M] + [L] | solid |
+| beta_def_327 | [ML(H2O)(s)] <=> [M] + [L] + [H2O] | solid |
+| beta_def_332 | [ML2(H2O)6(s)] <=> [M] + [L]^2 + [H2O]^6 | solid |
+| beta_def_434 | [M]^2 + [L]^4 + [H2O]^2 <=> [M2(OH)2L4] + [H]^2 |  |
+| beta_def_459 | [M2L3(s)] <=> [M]^2 + [L]^3 | solid |
+| beta_def_563 | [M2O6HL2] + [H] <=> [M2O5L2] + [H2O] |  |
+| beta_def_564 | [MO4]^2 + [L]^2 + [H]^5 <=> [M2O6HL2] + [H2O]^2 |  |
+| beta_def_600 | [M3(OH)3] + [L] <=> [M3(OH)3L] |  |
+| beta_def_604 | [M]^3 + [L]^3 + [H2O]^3 <=> [M3(OH)3L3] + [H]^3 |  |
+| beta_def_607 | [M3(OH)3] + [L]^3 <=> [M3(OH)3L3] |  |
+| beta_def_779 | [M] + [HL] <=> [MHL] |  |
+| beta_def_788 | [ML] + [H] <=> [MHL] |  |
+| beta_def_812 | [M] + [L] <=> [ML] |  |
+| beta_def_840 | [M] + [L]^2 <=> [ML2] |  |
+| beta_def_872 | [M] + [L]^3 <=> [ML3] |  |
+| beta_def_894 | [M] + [L]^4 <=> [ML4] |  |
+| beta_def_944 | [MO4] + [L] + [H]^2 <=> [MO3L] + [H2O] |  |
+| beta_def_966 | [M(OH)L] + [H] <=> [ML] + [H2O] |  |
+| beta_def_984 | [M(OH)L2] + [H] <=> [ML2] + [H2O] |  |
+
+*(all species aqueous unless noted)*
+
+**1. H^[+] + Ethanedioic acid (Oxalic acid)** (metal_68 + ligand_8872) — ligand_def_HxL: H2L | 56 ent, 2 sp, 56 vlms (vlm_151494…vlm_151549)
+   - species: beta_def_32(18) beta_def_79(38)
+   - eq:25 nets T:5~45°C I:-0.15~9.15M max 2n/1e
+**2. UO_[2]^[2+] + Ethanedioic acid (Oxalic acid)** (metal_195 + ligand_8872) — ligand_def_HxL: H2L | 21 ent, 5 sp, 21 vlms (vlm_151717…vlm_151737)
+   - species: beta_def_194(3) beta_def_779(4) beta_def_812(7) beta_def_840(6) beta_def_872(1)
+   - eq:7 nets T:15~30°C I:-0.05~9.15M max 4n/6e
+**3. Al^[3+] + Ethanedioic acid (Oxalic acid)** (metal_5 + ligand_8872) — ligand_def_HxL: H2L | 18 ent, 9 sp, 18 vlms (vlm_151860…vlm_151877)
+   - species: beta_def_238(1) beta_def_434(1) beta_def_604(1) beta_def_788(1) beta_def_812(3) beta_def_840(3) beta_def_872(6) beta_def_966(1) beta_def_984(1)
+   - eq:4 nets T:19~30°C I:-0.05~1.15M max 6n/13e
+**4. Ca^[2+] + Ethanedioic acid (Oxalic acid)** (metal_25 + ligand_8872) — ligand_def_HxL: H2L | 17 ent, 3 sp, 17 vlms (vlm_151595…vlm_151611)
+   - species: beta_def_307(2) beta_def_327(9) beta_def_812(6)
+   - eq:9 nets T:13~41°C I:-0.15~1.15M max 3n/3e
+**5. Be^[2+] + Ethanedioic acid (Oxalic acid)** (metal_19 + ligand_8872) — ligand_def_HxL: H2L | 16 ent, 4 sp, 16 vlms (vlm_151565…vlm_151580)
+   - species: beta_def_600(3) beta_def_607(3) beta_def_812(5) beta_def_840(5)
+   - eq:3 nets T:19~30°C I:-0.05~1.15M max 4n/6e
+**6. Eu^[3+] + Ethanedioic acid (Oxalic acid)** (metal_58 + ligand_8872) — ligand_def_HxL: H2L | 15 ent, 4 sp, 15 vlms (vlm_151644…vlm_151658)
+   - species: beta_def_812(6) beta_def_840(5) beta_def_872(3) beta_def_894(1)
+   - eq:6 nets T:15~30°C I:-0.15~1.15M max 4n/6e
+**7. Am^[3+] + Ethanedioic acid (Oxalic acid)** (metal_6 + ligand_8872) — ligand_def_HxL: H2L | 15 ent, 3 sp, 15 vlms (vlm_151681…vlm_151695)
+   - species: beta_def_812(7) beta_def_840(7) beta_def_872(1)
+   - eq:7 nets T:15~30°C I:-0.05~9.15M max 3n/3e
+**8. Mg^[2+] + Ethanedioic acid (Oxalic acid)** (metal_92 + ligand_8872) — ligand_def_HxL: H2L | 14 ent, 2 sp, 14 vlms (vlm_151581…vlm_151594)
+   - species: beta_def_311(8) beta_def_812(6)
+   - eq:13 nets T:13~41°C I:-0.15~8.15M max 2n/1e
+**9. Co^[2+] + Ethanedioic acid (Oxalic acid)** (metal_33 + ligand_8872) — ligand_def_HxL: H2L | 14 ent, 4 sp, 14 vlms (vlm_151751…vlm_151764)
+   - species: beta_def_194(1) beta_def_779(1) beta_def_812(6) beta_def_840(6)
+   - eq:4 nets T:19~30°C I:-0.15~1.15M max 4n/6e
+**10. Cd^[2+] + Ethanedioic acid (Oxalic acid)** (metal_26 + ligand_8872) — ligand_def_HxL: H2L | 13 ent, 3 sp, 13 vlms (vlm_151836…vlm_151848)
+   - species: beta_def_812(5) beta_def_840(4) beta_def_872(4)
+   - eq:5 nets T:10.5~31.5°C I:-0.225~2.225M max 3n/3e
+**11. Cu^[2+] + Ethanedioic acid (Oxalic acid)** (metal_41 + ligand_8872) — ligand_def_HxL: H2L | 12 ent, 2 sp, 12 vlms (vlm_151776…vlm_151787)
+   - species: beta_def_812(5) beta_def_840(7)
+   - eq:2 nets T:19~30°C I:-0.15~0.25M max 2n/1e
+**12. Zn^[2+] + Ethanedioic acid (Oxalic acid)** (metal_208 + ligand_8872) — ligand_def_HxL: H2L | 11 ent, 2 sp, 11 vlms (vlm_151825…vlm_151835)
+   - species: beta_def_812(5) beta_def_840(6)
+   - eq:5 nets T:19~41°C I:-0.15~1.15M max 2n/1e
+**13. Ni^[2+] + Ethanedioic acid (Oxalic acid)** (metal_112 + ligand_8872) — ligand_def_HxL: H2L | 11 ent, 2 sp, 11 vlms (vlm_151765…vlm_151775)
+   - species: beta_def_812(6) beta_def_840(5)
+   - eq:3 nets T:19~30°C I:-0.15~1.15M max 2n/1e
+**14. Mo^[6+] + Ethanedioic acid (Oxalic acid)** (metal_103 + ligand_8872) — ligand_def_HxL: H2L | 11 ent, 3 sp, 11 vlms (vlm_151809…vlm_151819)
+   - species: beta_def_563(3) beta_def_564(3) beta_def_944(5)
+   - eq:3 nets T:15~30°C I:-0.05~1.15M max 3n/3e
+**15. Fe^[3+] + Ethanedioic acid (Oxalic acid)** (metal_61 + ligand_8872) — ligand_def_HxL: H2L | 11 ent, 3 sp, 11 vlms (vlm_151793…vlm_151803)
+   - species: beta_def_812(5) beta_def_840(3) beta_def_872(3)
+   - eq:3 nets T:16.5~31.5°C I:0.275~3.225M max 3n/3e
+**16. Ce^[3+] + Ethanedioic acid (Oxalic acid)** (metal_27 + ligand_8872) — ligand_def_HxL: H2L | 10 ent, 5 sp, 10 vlms (vlm_151631…vlm_151640)
+   - species: beta_def_459(1) beta_def_812(3) beta_def_840(3) beta_def_872(2) beta_def_894(1)
+   - eq:3 nets T:15~30°C I:-0.05~1.15M max 4n/6e
+**17. Th^[4+] + Ethanedioic acid (Oxalic acid)** (metal_185 + ligand_8872) — ligand_def_HxL: H2L | 9 ent, 6 sp, 9 vlms (vlm_151704…vlm_151712)
+   - species: beta_def_332(1) beta_def_779(1) beta_def_812(4) beta_def_840(1) beta_def_872(1) beta_def_894(1)
+   - eq:2 nets T:19~30°C I:-0.05~1.15M max 5n/10e
+**18. Pb^[2+] + Ethanedioic acid (Oxalic acid)** (metal_125 + ligand_8872) — ligand_def_HxL: H2L | 8 ent, 4 sp, 8 vlms (vlm_151850…vlm_151857)
+   - species: beta_def_311(1) beta_def_788(1) beta_def_812(3) beta_def_840(3)
+   - eq:1 nets T:16.5~31.5°C I:0.775~1.225M max 4n/4e
+**19. Mn^[2+] + Ethanedioic acid (Oxalic acid)** (metal_94 + ligand_8872) — ligand_def_HxL: H2L | 8 ent, 2 sp, 8 vlms (vlm_151741…vlm_151748)
+   - species: beta_def_812(4) beta_def_840(4)
+   - eq:2 nets T:19~30°C I:-0.15~0.25M max 2n/1e
+**20. Sc^[3+] + Ethanedioic acid (Oxalic acid)** (metal_169 + ligand_8872) — ligand_def_HxL: H2L | 7 ent, 4 sp, 7 vlms (vlm_151616…vlm_151622)
+   - species: beta_def_812(3) beta_def_840(2) beta_def_872(1) beta_def_894(1)
+   - eq:3 nets T:15~30°C I:-0.05~1.15M max 4n/6e
+
+---
+
+### Step 6: `search_metals`
+**Args:**
+```json
+{
+  "name": "H",
+  "limit": 5
+}
+```
+
+[summary]
+## search_metals — 5 result(s)
+
+| metal_id | metal_name | symbol | charge | simple_ion | smiles | inchi | beta_def_count | ligand_count | vlm_count |
+|----------|------------|--------|--------|------------|--------|-------|----------------|--------------|-----------|
+| metal_20 | BuHg^[+] | B | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_23 | BuNH_[3]^[+] | B | 1 |  | *** | *** | beta_totN_1 | ligand_totN_2 | vlm_totN_2 |
+| metal_24 | C(NH_[2])_[3]^[+] | C | 1 |  | *** | *** | beta_totN_0 | ligand_totN_0 | vlm_totN_0 |
+| metal_45 | Et_[2]NH_[2]^[+] | E2NH2 | 1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+| metal_48 | Et_[3]NH^[+] | E3NH | 1 |  | *** | *** | beta_totN_1 | ligand_totN_1 | vlm_totN_1 |
+
+---
+
+### Step 7: `search_pka_values`
+**Args:**
+```json
+{
+  "where": "lc.ligand_id = 'ligand_8872'",
+  "order_by": "p.pKa ASC",
+  "limit": 30
+}
+```
+
+[PHASE ERROR] Tool 'search_pka_values' is not available yet. You must call 0_plan_search_strategy first (PHASE 2) before using the execution tools.
+
+---

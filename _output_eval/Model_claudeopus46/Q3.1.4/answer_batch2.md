@@ -1,0 +1,26 @@
+## Ligands Studied with Both Fe²⁺ and Fe³⁺ in NIST SRD-46
+
+### Overlap Count
+
+**94 distinct ligands** have stability-constant data recorded for both Fe²⁺ (metal_62) and Fe³⁺ (metal_61) in the NIST SRD-46 database.
+
+### Is Fe³⁺ Consistently More Stable?
+
+When paired comparisons are made under matched conditions (same ligand, same stoichiometry/beta definition, temperature within ±1 °C, ionic strength within ±0.05 M), **Fe³⁺ complexes are overwhelmingly more stable** than their Fe²⁺ analogues. Representative examples:
+
+| Ligand | Stoichiometry | log β (Fe³⁺) | log β (Fe²⁺) | Δ log β |
+|---|---|---|---|---|
+| EDTA | Fe + L ⇌ FeL | 25.1 | 14.3 | **+10.8** |
+| Oxalic acid | Fe + L ⇌ FeL | 9.4 | 4.7 | **+4.7** |
+| Oxalic acid | Fe + 2L ⇌ FeL₂ | 16.2 | 8.6 | **+7.6** |
+| Citric acid | Fe + L ⇌ FeL | 11.5 | 4.4 | **+7.1** |
+
+Across the 300 matched pairs examined, the **vast majority show positive Δ log β** (Fe³⁺ > Fe²⁺), typically by **2–15 log units**. A small number of exceptions appear for certain protonated or higher-order stoichiometries, but these are rare and do not overturn the general trend.
+
+### Chemical Insight
+
+This trend is entirely expected from electrostatic considerations and hard–soft acid–base (HSAB) theory. Fe³⁺ is a harder, more charge-dense cation than Fe²⁺, so it forms stronger bonds with the hard oxygen- and nitrogen-donor ligands that dominate this dataset (carboxylates, aminopolycarboxylates, hydroxyacids). The ~11 log-unit gap seen for EDTA is a classic illustration: the higher charge of Fe³⁺ dramatically enhances its affinity for the hexadentate O/N donor set. The few cases where the gap narrows tend to involve softer donors (e.g., certain N-heterocycles), where Fe²⁺'s d⁶ low-spin crystal-field stabilization energy can partially offset the charge advantage of Fe³⁺. This Fe³⁺ > Fe²⁺ stability ordering has major real-world relevance — it underpins the design of siderophores (biological Fe³⁺ chelators) and the use of chelation therapy agents like deferoxamine that selectively sequester ferric iron.
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes).*
+
+---

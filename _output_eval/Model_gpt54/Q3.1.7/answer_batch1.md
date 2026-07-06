@@ -1,0 +1,31 @@
+Yes — SRD-46 contains **Co(II) + 2,2′-bipyridyl** data. I did **not** find 4,4′-bipyridine in the discovery step.
+
+For the resolved system **metal_33 + ligand_8156**, the catalog shows **18 independent measurements total** across three species: **CoL, CoL₂, and CoL₃**. Of those, **6 are log K measurements** and the rest are thermodynamic quantities (ΔH, ΔS).
+
+| System | Species covered | Total independent measurements | log K measurements | log K span |
+|---|---:|---:|---:|---:|
+| Co(II) + 2,2′-bipyridyl | CoL, CoL₂, CoL₃ | 18 | 6 | 5.80 to 16.2 |
+
+The reported **log K values** are:
+
+| Species | Ionic strength (M) | T (°C) | log K |
+|---|---:|---:|---:|
+| CoL | 0.1 | 25 | 5.80 |
+| CoL | 1.0 | 25 | 5.81 |
+| CoL₂ | 0.1 | 25 | 11.3 |
+| CoL₂ | 1.0 | 25 | 11.3 |
+| CoL₃ | 0.1 | 25 | 16.0 |
+| CoL₃ | 1.0 | 25 | 16.2 |
+
+So, depending on what you mean by “independent measurements”:
+
+| Interpretation | Count | Range |
+|---|---:|---:|
+| All measurements in this Co(II)–bipyridyl system | 18 | n/a |
+| Only stability-constant measurements (log K rows) | 6 | 5.80 to 16.2 |
+
+A small chemistry note: these values increase strongly from **CoL → CoL₂ → CoL₃**, which is what you expect for cumulative formation constants. If you want, I can also convert these cumulative values into the **stepwise** constants **K₁, K₂, K₃**.  
+
+*Source: NIST SRD-46*
+
+---

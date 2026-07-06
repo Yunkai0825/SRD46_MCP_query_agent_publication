@@ -1,0 +1,15 @@
+Here are the measured pKa values returned in SRD-46 for **citric acid** (`ligand_9058`, 2-hydroxypropane-1,2,3-tricarboxylic acid):
+
+| Step | pKa | Temperature (°C) | Ionic strength (M) | Protonation bracket | VLM ID |
+|------|-----|-------------------|--------------------|---------------------|--------|
+| pKa1 | 2.90 | 25 | 0.1 | H2L → H3L | vlm_157473 |
+| pKa2 | 4.35 | 25 | 0.1 | HL → H2L | vlm_157459 |
+| pKa3 | 5.65 | 25 | 0.1 | L → HL | vlm_157439 |
+
+| Ligand | SRD-46 ID | HxL definition |
+|--------|-----------|----------------|
+| Citric acid | ligand_9058 | H3L |
+
+These are the only pKa measurement rows returned by SRD-46 for citric acid in the pKa table. Chemically, the increasing sequence **2.90 < 4.35 < 5.65** is consistent with stepwise deprotonation of a triprotic carboxylic acid, where each successive proton is harder to remove.
+
+---

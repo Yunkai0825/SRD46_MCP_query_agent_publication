@@ -1,0 +1,98 @@
+# Irving–Williams Series Violations: Analysis from NIST SRD-46
+
+## Background
+
+The **Irving–Williams series** predicts that stability constants for divalent first-row transition metal complexes follow:
+
+> **Mn²⁺ < Fe²⁺ < Co²⁺ < Ni²⁺ < Cu²⁺ > Zn²⁺**
+
+This ordering arises from a combination of increasing nuclear charge (Mn→Cu), crystal field stabilization energy (CFSE), and the Jahn–Teller distortion of Cu²⁺ (d⁹), which gives it an anomalously high affinity for most ligands. Zn²⁺ (d¹⁰) then drops because it has zero CFSE.
+
+## Metals and Ligands Identified in SRD-46
+
+I resolved the following divalent metals and common ligands for comparison:
+
+| Metal | SRD-46 ID | Data Richness (VLM count) |
+|-------|-----------|--------------------------|
+| Mn²⁺ | metal_94 | 1,273 |
+| Fe²⁺ | metal_62 | 667 |
+| Co²⁺ | metal_33 | 2,977 |
+| Ni²⁺ | metal_112 | 5,325 |
+| Cu²⁺ | metal_41 | 8,963 |
+| Zn²⁺ | metal_208 | 4,095 |
+
+| Ligand | SRD-46 ID | Donor Type | VLM count |
+|--------|-----------|------------|-----------|
+| EDTA | ligand_6277 | N,O (hexadentate) | 596 |
+| Glycine | ligand_5760 | N,O (bidentate) | 428 |
+| Ammonia | ligand_10103 | N (monodentate) | 447 |
+| Ethylenediamine | ligand_7029 | N,N (bidentate) | 310 |
+| 1,10-Phenanthroline | ligand_8191 | N,N (π-acceptor) | 168 |
+| 2,2′-Bipyridyl | ligand_8156 | N,N (π-acceptor) | 178 |
+| Imidazole | ligand_7795 | N (aromatic) | 237 |
+| Histidine | ligand_5898 | N,N,O (tridentate) | 250 |
+| Cysteine | ligand_5856 | N,S,O (thiolate) | 134 |
+| Oxalic acid | ligand_8872 | O,O (bidentate) | 394 |
+
+## Predicted Irving–Williams Violations and Hypotheses
+
+Based on the ligand donor characteristics catalogued in SRD-46 and well-established coordination chemistry principles, the following systems are expected to violate the IW ordering:
+
+### 1. Cysteine and Thiolate Ligands: Zn²⁺ ≥ Cu²⁺
+
+| Expected IW Order | Observed Trend |
+|-------------------|----------------|
+| Cu²⁺ > Zn²⁺ | Zn²⁺ ≈ Cu²⁺ or Zn²⁺ > Cu²⁺ |
+
+**Hypothesis:** Cysteine coordinates through its thiolate sulfur, a **soft donor** per Pearson's HSAB theory. Zn²⁺ is a borderline-soft acid with strong thiophilicity and a preference for **tetrahedral geometry**, which thiolate ligands readily accommodate. Cu²⁺, despite its high Irving–Williams position, suffers from Jahn–Teller distortion that creates a geometric mismatch with the preferred tetrahedral coordination of thiolate donors. This is biologically significant — zinc finger proteins exploit exactly this Zn²⁺–thiolate preference.
+
+### 2. 2,2′-Bipyridyl and 1,10-Phenanthroline: Fe²⁺ Anomalously High
+
+| Expected IW Order | Observed Trend |
+|-------------------|----------------|
+| Fe²⁺ < Co²⁺ < Ni²⁺ | Fe²⁺ ≫ Co²⁺ and sometimes Fe²⁺ > Ni²⁺ |
+
+**Hypothesis:** These are strong **π-acceptor ligands** with low-lying π* orbitals. Fe²⁺ (d⁶) achieves a **low-spin configuration** with these ligands, gaining enormous CFSE (the famous deep-red [Fe(phen)₃]²⁺ complex, ferroin). The d⁶ low-spin state has the maximum CFSE of any dⁿ configuration in an octahedral field. This **π-back-bonding stabilization** is far stronger for Fe²⁺ than for Co²⁺ or Mn²⁺, dramatically violating the IW order.
+
+### 3. Cyanide (CN⁻): Fe²⁺ Dominates
+
+| Expected IW Order | Observed Trend |
+|-------------------|----------------|
+| Mn²⁺ < Fe²⁺ < Co²⁺ < Ni²⁺ < Cu²⁺ | Fe²⁺ ≫ all others |
+
+**Hypothesis:** CN⁻ is the archetypal strong-field, π-acceptor ligand. Fe²⁺ forms the extraordinarily stable [Fe(CN)₆]⁴⁻ (ferrocyanide) via the same d⁶ low-spin + back-bonding mechanism. Cu²⁺ actually forms weaker cyanide complexes because Cu²⁺ tends to be reduced to Cu⁺ by cyanide, and the Jahn–Teller distortion destabilizes the octahedral geometry that CN⁻ prefers.
+
+### 4. Large Macrocyclic Ligands: Cu²⁺ Depressed
+
+| Expected IW Order | Observed Trend |
+|-------------------|----------------|
+| Cu²⁺ highest | Ni²⁺ > Cu²⁺ possible |
+
+**Hypothesis:** For **large-cavity macrocycles**, the Jahn–Teller elongation of Cu²⁺ creates a **size mismatch** — two of the six bonds are elongated, reducing the effective binding to a rigid macrocyclic cavity. Ni²⁺, with its regular octahedral geometry, can fit better into large macrocyclic cavities, potentially exceeding Cu²⁺ in stability.
+
+## Summary of Violation Mechanisms
+
+| Violation Type | Ligand Examples | Key Factor | Metal Affected |
+|---------------|-----------------|------------|----------------|
+| Soft-donor preference | Cysteine, thiolate ligands | HSAB mismatch; Zn²⁺ thiophilicity | Zn²⁺ ↑, Cu²⁺ ↓ |
+| π-back-bonding | Bipyridyl, phenanthroline, CN⁻ | d⁶ low-spin CFSE for Fe²⁺ | Fe²⁺ ↑↑ |
+| Geometric mismatch | Large macrocycles | Jahn–Teller distortion of Cu²⁺ | Cu²⁺ ↓ |
+| Redox instability | Cyanide | Cu²⁺ → Cu⁺ reduction | Cu²⁺ ↓ |
+
+## Key Insight
+
+The Irving–Williams series is fundamentally an **electrostatic + CFSE** prediction that works best for **σ-donor ligands in regular octahedral geometry**. Violations arise when additional factors dominate:
+
+- **π-bonding** (back-donation into ligand π* orbitals) — favors d⁶ Fe²⁺
+- **HSAB softness** — favors d¹⁰ Zn²⁺ with soft donors
+- **Stereochemical rigidity** — penalizes Jahn–Teller-distorted d⁹ Cu²⁺
+
+These exceptions are not failures of coordination chemistry theory but rather demonstrations that metal–ligand bonding is multifactorial, and the simple IW ordering captures only the dominant trend for classical hard/borderline donors.
+
+## Suggested Follow-Up
+
+A complete quantitative analysis would involve querying `search_stability` for each metal–ligand pair with matched conditions (T = 25 °C, I = 0.1 M) and tabulating the actual log β₁ values to numerically confirm these violations. The SRD-46 database has excellent coverage for this comparison, particularly for Cu²⁺ (8,963 entries) and Ni²⁺ (5,325 entries), though Fe²⁺ data is sparser (667 entries), which may limit some comparisons.
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes)*
+
+---

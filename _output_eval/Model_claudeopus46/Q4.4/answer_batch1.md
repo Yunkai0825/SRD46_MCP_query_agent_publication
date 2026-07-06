@@ -1,0 +1,72 @@
+Now I have all the data I need. Let me compile the final answer.
+
+From the stability search results, the proteinogenic amino acids that **have** Zn²⁺ stability data (beta_def_812, ML 1:1) in SRD-46 are:
+
+- **Glycine** (ligand_5760) ✓
+- **Alanine** (ligand_5761) ✓
+- **Phenylalanine** (ligand_5777) ✓
+- **Serine** (ligand_5828) ✓
+- **Threonine** (ligand_5829) ✓
+- **Aspartic acid** (ligand_5802) ✓
+- **Asparagine** (ligand_5843) ✓
+- **Histidine** (ligand_5898) ✓
+- **Cysteine** (ligand_5856) ✓
+- **Tryptophan** (ligand_5907) ✓
+- **Proline** (ligand_5930) ✓
+- **Hydroxyproline** (ligand_5941) ✓
+
+The proteinogenic amino acids **without** Zn²⁺ stability data in SRD-46:
+
+| Amino Acid | ligand_id | pKa₁ (COOH) | pKa₂ (NH₃⁺) | Side-chain pKa | Side-chain Donor |
+|---|---|---|---|---|---|
+| **Valine** | ligand_5765 | 2.27 | 9.52 | — | None (hydrophobic) |
+| **Leucine** | ligand_5766 | 2.32 | 9.58 | — | None (hydrophobic) |
+| **Isoleucine** | ligand_5767 | 2.26 | 9.60 | — | None (hydrophobic) |
+| **Glutamic acid** | ligand_5804 | 2.16 | 9.58 | 4.15 (γ-COOH) | Carboxylate O |
+| **Tyrosine** | ligand_5819 | 2.24 | 9.04 | 10.10 (phenol) | Phenolate O |
+| **Glutamine** | ligand_5844 | 2.19 | 9.00 | — | Amide O (weak) |
+| **Methionine** | ligand_5863 | 2.18 | 9.08 | — | Thioether S (weak) |
+| **Lysine** | ligand_5887 | 2.15 | 9.15 | 10.66 (ε-NH₃⁺) | Amine N |
+| **Arginine** | ligand_5917 | 2.03 | 9.00 | ~12.1 (guanidinium) | Guanidinium N (very weak) |
+
+---
+
+## Prediction: **Glutamic acid** would likely form the most stable Zn²⁺ complex among the unstudied proteinogenic amino acids
+
+### Reasoning
+
+**1. Donor atom availability at physiological/measurement pH (~7–8)**
+
+| Candidate | Available donors at pH 7–8 | Chelation mode |
+|---|---|---|
+| **Glutamic acid** | α-NH₂, α-COO⁻, **γ-COO⁻** (pKa 4.15 → fully deprotonated) | Tridentate N,O,O possible |
+| **Lysine** | α-NH₂, α-COO⁻, ε-NH₃⁺ (pKa 10.66 → still protonated) | Bidentate N,O only |
+| **Tyrosine** | α-NH₂, α-COO⁻, phenol-OH (pKa 10.1 → protonated) | Bidentate N,O only |
+| **Methionine** | α-NH₂, α-COO⁻, thioether S (neutral, weak donor) | Bidentate N,O (S too weak) |
+| Val/Leu/Ile | α-NH₂, α-COO⁻ only | Bidentate N,O only |
+| **Glutamine** | α-NH₂, α-COO⁻, amide O (very weak donor) | Bidentate N,O only |
+| **Arginine** | α-NH₂, α-COO⁻, guanidinium (pKa ~12.5, poor donor) | Bidentate N,O only |
+
+**2. The chelate effect and analog evidence**
+
+- **Aspartic acid** (the closest analog to glutamic acid, differing by one –CH₂– group) **is studied with Zn²⁺** in SRD-46 and shows strong binding. Aspartic acid has the same tridentate N,O,O donor set (α-amino, α-carboxylate, β-carboxylate with pKa 3.71).
+- Glutamic acid's γ-carboxylate (pKa 4.15) is fully deprotonated at measurement pH, providing a **third donor atom** that can chelate Zn²⁺ through a 6-membered ring (vs. aspartate's 5-membered ring). While the 6-membered chelate ring is slightly less favorable than 5-membered, the tridentate coordination still provides a significant stability advantage over simple bidentate amino acids.
+- Among the studied amino acids, **histidine** forms the strongest Zn²⁺ complex (imidazole N is an excellent donor for borderline Zn²⁺), and **cysteine** is also very strong (thiolate S). But among the *unstudied* set, glutamic acid is the only one offering a **third deprotonated donor** at neutral pH.
+
+**3. Zn²⁺ chemistry context**
+
+Zn²⁺ is a borderline Lewis acid (HSAB theory) that binds well to both N and O donors. The simple bidentate amino acids (Val, Leu, Ile, Gln) with only α-NH₂ and α-COO⁻ would have log K₁ values comparable to glycine (~5.0) or alanine (~4.6). Glutamic acid's additional carboxylate donor should push its log K₁ above these values, likely in the range of **5–6** (similar to aspartate), making it the strongest Zn²⁺ binder among the unstudied proteinogenic amino acids.
+
+**4. Why not the others?**
+
+- **Tyrosine** and **lysine** have potentially strong side-chain donors (phenolate O, ε-amine N), but their high pKa values (10.1 and 10.66) mean these groups remain protonated at typical measurement conditions (pH 7–8, 25°C), so they function as simple bidentate N,O amino acids under standard conditions.
+- **Methionine's** thioether sulfur is a much weaker donor than cysteine's thiolate — it lacks the negative charge and has lower electron density.
+- **Val, Leu, Ile** are purely hydrophobic and offer no side-chain donors at all.
+
+### Summary
+
+> **Glutamic acid** is the best prediction for the most stable Zn²⁺ complex among the unstudied proteinogenic amino acids, because it is the only candidate with a fully deprotonated third donor atom (γ-carboxylate, pKa 4.15) available at measurement pH, enabling tridentate N,O,O chelation analogous to the closely related aspartic acid, which is already known to bind Zn²⁺ strongly in SRD-46.
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes)*
+
+---

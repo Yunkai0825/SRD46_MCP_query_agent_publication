@@ -1,0 +1,634 @@
+{
+  "cache_format": 6,
+  "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+  "classifier_review_rounds": 1,
+  "grounder_react_rounds": 1,
+  "classifier_model": "gpt5",
+  "grounder_model": "gpt5",
+  "complete": true,
+  "doc": {
+    "source_file": "\\\\Sheldon.cse.anl.gov\\yunkai.sun$\\_DB_parsing_pdf\\20260316_fullSQL_MCP\\SRD46_db_subagent\\_output\\Model_gpt5\\Q1.2.4\\Q1.2.4_result_batch5.md",
+    "doc_type": "answer",
+    "paragraphs": [
+      {
+        "paragraph_index": 0,
+        "text": "| Item | Result |\n|------|--------|\n| Distinct equilibrium networks for Ni2+–EDTA | 2 (ref_eq_net_5023 and ref_eq_net_5024) |\n| Largest network chosen | ref_eq_net_5023 (tie on size; selected the low-ionic-strength reference) |\n| VLM node IDs in ref_eq_net_5023 | Not returned in the accessible summaries for the network nodes. I can retrieve the exact vlm_N IDs with one more detailed query if you’d like. |",
+        "claims": [
+          {
+            "start": 36,
+            "end": 125,
+            "text": "| Distinct equilibrium networks for Ni2+–EDTA | 2 (ref_eq_net_5023 and ref_eq_net_5024) |",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 126,
+            "end": 227,
+            "text": "| Largest network chosen | ref_eq_net_5023 (tie on size; selected the low-ionic-strength reference) |",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 228,
+            "end": 408,
+            "text": "| VLM node IDs in ref_eq_net_5023 | Not returned in the accessible summaries for the network nodes. I can retrieve the exact vlm_N IDs with one more detailed query if you’d like. |",
+            "claim_type": "existence_absence",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [
+              "ref_eq_net_5023",
+              "ref_eq_net_5024",
+              "metal_112",
+              "ligand_6277"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "equilibrium_maps: 2 preset reference network(s)",
+            "tool_snippets": [
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "equilibrium_maps: 2 preset reference network(s) *(clustered around room temperature & low ionic strength)*"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | beta_def_966; beta_def_788; beta_def_812 | logK | -11.9~18.4 |\n| ref_eq_net_5024 | 3 | 3 | 19~29 | 0.85~1.15 | 3 | beta_def_966; beta_def_739; beta_def_788 | logK | -12.9~3 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ref_eq_net_5023",
+              "ref_eq_net_5024",
+              "metal_112",
+              "ligand_6277"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | ...",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | beta_def_966; beta_def_788; beta_def_812 | logK | -11.9~18.4 |\n| ref_eq_net_5024 | 3 | 3 | 19~29 | 0.85~1.15 | 3 | beta_def_966; beta_def_739; beta_def_788 | logK | -12.9~3 |"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | beta_def_966; beta_def_788; beta_def_812 | logK | -11.9~18.4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ref_eq_net_5023"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ref_eq_net_5023 shows only vlm_counts = 3; individual vlm_N IDs are not listed in this summary.",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | beta_def_966; beta_def_788; beta_def_812 | logK | -11.9~18.4 |"
+              },
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "columns: network_id | node_counts | edge_counts | T_range | I_range | vlm_counts | beta_def_ids | type | values"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 1,
+        "text": "Notes and source:\n- Both networks have 3 nodes and 3 edges; ref_eq_net_5023 covers low ionic strength (≈0 M), ref_eq_net_5024 covers ≈1 M ionic strength. Values reported include logK for [M]+[L]⇌[ML] (≈18.4), [ML]+H⇌[MHL] (≈3.1), and [M(OH)L]+H⇌[ML]+H2O (≈−11.9) for ref_eq_net_5023 at ~20–30 °C.  \n- Source: NIST SRD-46 equilibrium networks for Ni2+ (metal_112) with EDTA (ligand_6277).",
+        "claims": [
+          {
+            "start": 0,
+            "end": 17,
+            "text": "Notes and source:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 20,
+            "end": 58,
+            "text": "Both networks have 3 nodes and 3 edges",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 60,
+            "end": 108,
+            "text": "ref_eq_net_5023 covers low ionic strength (≈0 M)",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 110,
+            "end": 153,
+            "text": "ref_eq_net_5024 covers ≈1 M ionic strength.",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 154,
+            "end": 177,
+            "text": "Values reported include",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 178,
+            "end": 207,
+            "text": "logK for [M]+[L]⇌[ML] (≈18.4)",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 209,
+            "end": 228,
+            "text": "[ML]+H⇌[MHL] (≈3.1)",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 234,
+            "end": 262,
+            "text": "[M(OH)L]+H⇌[ML]+H2O (≈−11.9)",
+            "claim_type": "exact_value",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 263,
+            "end": 282,
+            "text": "for ref_eq_net_5023",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 283,
+            "end": 296,
+            "text": "at ~20–30 °C.",
+            "claim_type": "range",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 301,
+            "end": 308,
+            "text": "Source:",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 309,
+            "end": 341,
+            "text": "NIST SRD-46 equilibrium networks",
+            "claim_type": "citation",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 346,
+            "end": 362,
+            "text": "Ni2+ (metal_112)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 368,
+            "end": 386,
+            "text": "EDTA (ligand_6277)",
+            "claim_type": "listing",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ref_eq_net_5023",
+              "ref_eq_net_5024"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ref_eq_net_5023 | 3 | 3 ...; ref_eq_net_5024 | 3 | 3 ...",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| network_id | node_counts | edge_counts | ... |\n| ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | ... |\n| ref_eq_net_5024 | 3 | 3 | 19~29 | 0.85~1.15 | ... |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 °C | -0.05~0.25 M |\n| ref_eq_net_5024 | 3 | 3 | 19~29 °C | 0.85~1.15 M |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ref_eq_net_5023"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ref_eq_net_5023 ... I_range | -0.05~0.25",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| network_id | ... | T_range | I_range | ... |\n| ref_eq_net_5023 | ... | 20~30 | -0.05~0.25 | ... |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 °C | -0.05~0.25 M |"
+              }
+            ]
+          },
+          {
+            "claim_index": 3,
+            "canonical_ids": [
+              "ref_eq_net_5024"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ref_eq_net_5024 ... I_range | 0.85~1.15",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| network_id | ... | T_range | I_range | ... |\n| ref_eq_net_5024 | ... | 19~29 | 0.85~1.15 | ... |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| ref_eq_net_5024 | 3 | 3 | 19~29 °C | 0.85~1.15 M |"
+              }
+            ]
+          },
+          {
+            "claim_index": 4,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 5,
+            "canonical_ids": [
+              "beta_def_812",
+              "ref_eq_net_5023"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_812 | [M] + [L] <=> [ML] | logK | 18.4",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| beta_def | equation | type | value |\n| beta_def_812 | ``[M] + [L] <=> [ML]`` | logK | 18.4 |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_networks",
+                "snippet": "| beta_def_812 | ``[M] + [L] <=> [ML]`` | logK | 18.4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 6,
+            "canonical_ids": [
+              "beta_def_788",
+              "ref_eq_net_5023"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_788 | [ML] + [H] <=> [MHL] | logK | 3.1",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| beta_def | equation | type | value |\n| beta_def_788 | ``[ML] + [H] <=> [MHL]`` | logK | 3.1 |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_networks",
+                "snippet": "| beta_def_788 | ``[ML] + [H] <=> [MHL]`` | logK | 3.1 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 7,
+            "canonical_ids": [
+              "beta_def_966",
+              "ref_eq_net_5023"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "beta_def_966 | [M(OH)L] + [H] <=> [ML] + [H2O] | logK | -11.9",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| beta_def | equation | type | value |\n| beta_def_966 | ``[M(OH)L] + [H] <=> [ML] + [H2O]`` | logK | -11.9 |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_networks",
+                "snippet": "| beta_def_966 | ``[M(OH)L] + [H] <=> [ML] + [H2O]`` | logK | -11.9 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 8,
+            "canonical_ids": [
+              "ref_eq_net_5023"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "Reference-state network: ref_eq_net_5023 (3 nodes)",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "#### Reference-state network: ref_eq_net_5023 (3 nodes)"
+              },
+              {
+                "step": "Step 7",
+                "tool": "search_networks",
+                "snippet": "#### Reference-state network: ref_eq_net_5023 (3 nodes)"
+              }
+            ]
+          },
+          {
+            "claim_index": 9,
+            "canonical_ids": [
+              "ref_eq_net_5023"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ref_eq_net_5023 ... T_range | 20~30",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| network_id | ... | T_range | I_range |\n| ref_eq_net_5023 | ... | 20~30 | -0.05~0.25 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 °C | -0.05~0.25 M |"
+              }
+            ]
+          },
+          {
+            "claim_index": 10,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 11,
+            "canonical_ids": [
+              "ref_eq_net_5023",
+              "ref_eq_net_5024"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "Reference equilibrium networks — each network is built around room-temperature...",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "> Reference equilibrium networks — each network is built around room-temperature (≈20–25 °C) and low ionic-strength (≈0 M) anchor conditions."
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "equilibrium_maps: 2 preset reference network(s) (clustered around room temperature & low ionic strength)"
+              }
+            ]
+          },
+          {
+            "claim_index": 12,
+            "canonical_ids": [
+              "metal_112"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "metal_112 | Ni^[2+] | Ni | 2 | simple_ion ✓",
+            "tool_snippets": [
+              {
+                "step": "Step 2",
+                "tool": "search_metals",
+                "snippet": "| metal_112 | Ni^[2+] | Ni | 2 | ✓ | [Ni+2] | ... |"
+              }
+            ]
+          },
+          {
+            "claim_index": 13,
+            "canonical_ids": [
+              "ligand_6277"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L",
+            "tool_snippets": [
+              {
+                "step": "Step 3",
+                "tool": "search_ligands",
+                "snippet": "| ligand_6277 | Ethylenedinitrilotetraacetic acid (EDTA) | H4L | EDTA and derivatives | 596 | ..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 2,
+        "text": "If you’d like, I can run one targeted fetch to list the three vlm_N IDs that anchor ref_eq_net_5023.",
+        "claims": [
+          {
+            "start": 0,
+            "end": 51,
+            "text": "If you’d like, I can run one targeted fetch to list",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 52,
+            "end": 71,
+            "text": "the three vlm_N IDs",
+            "claim_type": "counting",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          },
+          {
+            "start": 72,
+            "end": 99,
+            "text": "that anchor ref_eq_net_5023",
+            "claim_type": "property_attribution",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          },
+          {
+            "claim_index": 1,
+            "canonical_ids": [
+              "ref_eq_net_5023"
+            ],
+            "support_class": "direct",
+            "evidence_snippet": "ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | beta_def_966; beta_def_788; beta_def_812",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | beta_def_966; beta_def_788; beta_def_812 | logK | -11.9~18.4 |"
+              },
+              {
+                "step": "Step 8",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | beta_def_966; beta_def_788; beta_def_812 | logK | -11.9~18.4 |"
+              }
+            ]
+          },
+          {
+            "claim_index": 2,
+            "canonical_ids": [
+              "ref_eq_net_5023"
+            ],
+            "support_class": "inferred",
+            "evidence_snippet": "ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | beta_def_966; beta_def_788; beta_def_812",
+            "tool_snippets": [
+              {
+                "step": "Step 6",
+                "tool": "search_networks",
+                "snippet": "| ref_eq_net_5023 | 3 | 3 | 20~30 | -0.05~0.25 | 3 | beta_def_966; beta_def_788; beta_def_812 | logK | -11.9~18.4 |"
+              },
+              {
+                "step": "Step 4",
+                "tool": "build_system_catalog",
+                "snippet": "equilibrium_maps: 2 preset reference network(s)\n| ref_eq_net_5023 | 3 | 3 | 20~30 °C | -0.05~0.25 M |"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "paragraph_index": 3,
+        "text": "---",
+        "claims": [
+          {
+            "start": 0,
+            "end": 3,
+            "text": "---",
+            "claim_type": "filler",
+            "metadata": {
+              "classifier_strategy_version": "react-v7-schema-salvage-markdown-anchor",
+              "classifier_round": 0,
+              "classifier_stage": "initial"
+            }
+          }
+        ],
+        "grounded_claims": [
+          {
+            "claim_index": 0,
+            "canonical_ids": [],
+            "support_class": "no_tool_data",
+            "evidence_snippet": "Filler span: no useful database-groundable information.",
+            "tool_snippets": []
+          }
+        ]
+      }
+    ]
+  }
+}

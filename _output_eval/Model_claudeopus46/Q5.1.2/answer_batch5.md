@@ -1,0 +1,39 @@
+# DTPA — Stability Constants (log β for 1:1 ML complex)
+
+**Ligand:** Diethylenetriaminepentaacetic acid (DTPA, ligand_6356)
+**Conditions:** 25 °C, *I* = 0.1 M (KNO₃), aqueous solution
+**Equilibrium:** M + L ⇌ ML; reported as log β(ML)
+
+| Metal | log β(ML) | Notes |
+|-------|-----------|-------|
+| **In(III)** | 29.5 | Strongest binder; radiopharmaceutical use |
+| **Fe(III)** | 28.6 | Very strong; iron decorporation |
+| **Ga(III)** | 27.6 | PET imaging (⁶⁸Ga) |
+| **Dy(III)** | 22.8 | Lanthanide series |
+| **Ho(III)** | 22.8 | Lanthanide series |
+| **Tb(III)** | 22.7 | Lanthanide series |
+| **Gd(III)** | 22.5 | MRI contrast (Magnevist®) |
+| **Lu(III)** | 22.4 | Therapeutic nuclear medicine |
+| **Y(III)** | 22.1 | Radioimmunotherapy |
+| **Cu(II)** | 21.5 | |
+| **Ni(II)** | 20.3 | |
+| **Cd(II)** | 19.3 | |
+| **Co(II)** | 19.3 | |
+| **Zn(II)** | 18.8 | Biological competitor |
+| **Mn(II)** | 15.6 | Weakest among those measured |
+
+---
+
+### Key Chemistry Insights
+
+1. **DTPA is one of the strongest aminopolycarboxylate chelators known**, with log β values spanning from ~15.6 (Mn²⁺) to ~29.5 (In³⁺). Its eight donor atoms (3 N + 5 COO⁻) allow it to fully encapsulate most metal ions.
+
+2. **The Irving–Williams series** is clearly visible for the divalent metals: Mn < Zn < Co ≈ Cd < Ni < Cu, consistent with crystal-field stabilization energy trends.
+
+3. **The Gd-DTPA complex (log β ≈ 22.5)** is the basis of the first FDA-approved MRI contrast agent (Magnevist®). The high thermodynamic stability is essential to prevent release of toxic free Gd³⁺ *in vivo*.
+
+Since you didn't specify a particular metal, I've shown all 15 metals available in SRD-46 for DTPA. If you'd like details on a specific metal–DTPA system — such as protonated species (MHL), experimental conditions, or literature citations — just let me know!
+
+*Source: NIST Standard Reference Database 46 (Critically Selected Stability Constants of Metal Complexes)*
+
+---

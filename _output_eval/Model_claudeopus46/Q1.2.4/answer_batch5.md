@@ -1,0 +1,24 @@
+## Ni²⁺–EDTA Equilibrium Networks (NIST SRD-46)
+
+The Ni²⁺–EDTA system has **2 distinct equilibrium networks**:
+
+| Network ID | Nodes | Edges | T Range (°C) | I Range (M) | Beta Definitions |
+|------------|-------|-------|-------------|-------------|------------------|
+| ref_eq_net_5023 | 3 | 3 | 20–30 | −0.05–0.25 | beta_def_812, beta_def_788, beta_def_966 |
+| ref_eq_net_5024 | 3 | 3 | 19–29 | 0.85–1.15 | beta_def_739, beta_def_788, beta_def_966 |
+
+Both networks have equal size (3 nodes, 3 edges). Selecting **ref_eq_net_5023** (the first listed / low-ionic-strength network) as the largest, its **3 VLM node IDs** are:
+
+| VLM Node ID | Equilibrium | log K |
+|-------------|-------------|-------|
+| **vlm_108585** | [M] + [L] ⇌ [ML] | 18.4 |
+| **vlm_108589** | [ML] + [H] ⇌ [MHL] | 3.1 |
+| **vlm_108590** | [M(OH)L] + [H] ⇌ [ML] + H₂O | −11.9 |
+
+### Chemistry Insight
+
+The dominant formation constant (log K = 18.4) reflects EDTA's exceptional hexadentate chelation of Ni²⁺, making NiEDTA²⁻ one of the most thermodynamically stable EDTA complexes among first-row transition metals. The two networks differ by ionic-strength regime: the low-I network (ref_eq_net_5023) includes the overall ML formation step (beta_def_812), while the high-I network (ref_eq_net_5024) instead captures the MH₂L protonation equilibrium (beta_def_739), reflecting how the ionic medium shifts the experimentally accessible speciation window.
+
+*Source: NIST Standard Reference Database 46 (SRD-46)*
+
+---

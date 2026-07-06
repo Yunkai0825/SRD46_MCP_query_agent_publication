@@ -1,0 +1,17 @@
+# Q4.1 - Validation (batch 3)
+
+**11 of 68 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 2 | exact_value | \| **DMF** \| O (amide C=O) \| Moderate σ-donor \| ~1.5 – 2.5 \| ~2.5 – 3.5 \| Amide O-donors (formamide, acetamide) form weak-to-moderate Fe complexes; DMF is a better donor than water but weaker than carboxylates \| | ...--------\|---------------------\|-------\| \| **DMF** \| O (amide C=O) \| Moderate σ-donor \| ~1.5 – 2.5 \| ~2.5 – 3.5 \| Amide O-donors (formamide, acetamide) form weak-to-moderate Fe complexes; DMF is a better donor than water but weaker than carboxylates \| \| **Acetonitrile** \| N (nitrile) \| Weak... |
+| 2 | 2 | exact_value | \| **Acetonitrile** \| N (nitrile) \| Weak σ-donor \| ~0.5 – 1.5 \| ~1.0 – 2.0 \| Nitrile N is a poor donor for hard Fe³⁺; Fe²⁺ (softer) binds slightly better; acetonitrile solvates Fe²⁺ weakly in MeCN solvent \| | ...an water but weaker than carboxylates \| \| **Acetonitrile** \| N (nitrile) \| Weak σ-donor \| ~0.5 – 1.5 \| ~1.0 – 2.0 \| Nitrile N is a poor donor for hard Fe³⁺; Fe²⁺ (softer) binds slightly better; acetonitrile solvates Fe²⁺ weakly in MeCN solvent \| \| **THF** \| O (ether) \| Very weak donor... |
+| 3 | 2 | exact_value | \| **THF** \| O (ether) \| Very weak donor \| ~0 – 0.5 \| ~0.5 – 1.0 \| Ether O is a very weak donor; THF rarely forms isolable aqueous Fe complexes; estimates near detection limit \| | ... solvates Fe²⁺ weakly in MeCN solvent \| \| **THF** \| O (ether) \| Very weak donor \| ~0 – 0.5 \| ~0.5 – 1.0 \| Ether O is a very weak donor; THF rarely forms isolable aqueous Fe complexes; estimates near detection limit \| \| **Ethylene glycol** \| O, O (diol) \| M... |
+| 4 | 2 | exact_value | \| **Ethylene glycol** \| O, O (diol) \| Moderate, chelate \| ~2.0 – 3.5 \| ~3.5 – 5.0 \| Chelate effect from bidentate O,O coordination; glycol forms stronger complexes than monoalcohols; Fe³⁺ (hard acid) benefits more \| | ...lexes; estimates near detection limit \| \| **Ethylene glycol** \| O, O (diol) \| Moderate, chelate \| ~2.0 – 3.5 \| ~3.5 – 5.0 \| Chelate effect from bidentate O,O coordination; glycol forms stronger complexes than monoalcohols; Fe³⁺ (hard acid) benefits more \|... |
+| 5 | 3 | listing | (DMF, THF, ethylene glycol) | .... **Fe(III) > Fe(II) for all O-donors** (DMF, THF, ethylene glycol): Fe³⁺ is a hard Lewis acid (high charge... |
+| 6 | 4 | property_attribution | All estimates above are for **aqueous or mixed-aqueous conditions** | ...### ⚠️ Important Caveats  - All estimates above are for **aqueous or mixed-aqueous conditions** extrapolated from analog systems. In **... |
+| 7 | 4 | property_attribution | extrapolated from analog systems. | ...**aqueous or mixed-aqueous conditions** extrapolated from analog systems. In **pure non-aqueous media**, the effe... |
+| 8 | 4 | exact_value | DMF DN=26.6 | ...sult: **Gutmann's donor number scale** (DMF DN=26.6, MeCN DN=14.1, THF DN=20.0, EG DN~20) c... |
+| 9 | 4 | exact_value | MeCN DN=14.1 | ...nn's donor number scale** (DMF DN=26.6, MeCN DN=14.1, THF DN=20.0, EG DN~20) combined with M... |
+| 10 | 4 | exact_value | THF DN=20.0 | ...ber scale** (DMF DN=26.6, MeCN DN=14.1, THF DN=20.0, EG DN~20) combined with Marcus/Kamlet-... |
+| 11 | 4 | exact_value | EG DN~20 | ...DMF DN=26.6, MeCN DN=14.1, THF DN=20.0, EG DN~20) combined with Marcus/Kamlet-Taft solva... |

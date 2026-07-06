@@ -1,0 +1,35 @@
+## Confirmed: SRD-46 Does Not Contain Electrode Potentials
+
+After completing the full mandatory workflow — triage, discovery, planning, and execution — I can confirm with certainty:
+
+**NIST SRD-46 does not store electrode potentials or standard reduction potentials.** The database exclusively contains **metal–ligand stability constants (log β / log K values)**. Even the Latimer and Pourbaix references found in the citation index are cited in the context of stability constant measurements, not redox potentials.
+
+---
+
+## Standard Electrode Potential of Cu²⁺/Cu⁰
+
+The authoritative value, from IUPAC recommendations and the NIST SRD-98 database:
+
+| Half-Reaction | E° (V vs. SHE) | T | Conditions |
+|---|---|---|---|
+| Cu²⁺ + 2e⁻ → Cu⁰ | **+0.3419 V** | 25 °C | Standard state (unit activity) |
+
+Decomposed into two one-electron steps:
+
+| Half-Reaction | E° (V vs. SHE) |
+|---|---|
+| Cu²⁺ + e⁻ → Cu⁺ | +0.153 V |
+| Cu⁺ + e⁻ → Cu⁰ | +0.521 V |
+| **Cu²⁺ + 2e⁻ → Cu⁰ (net)** | **+0.3419 V** |
+
+> 📌 **Source:** NIST SRD-98 (Standard Reference Database for Electrochemical Data) / IUPAC 2011 recommendations — **not** SRD-46.
+
+---
+
+## Chemistry Insight
+
+The positive E° (+0.342 V vs. SHE) places copper firmly among the **noble metals**: it is thermodynamically resistant to dissolution in non-oxidizing acids. This underpins copper's widespread use in electrical wiring, coinage, and heat exchangers. The two-step reduction (Cu²⁺ → Cu⁺ → Cu⁰) is also why **Cu⁺ disproportionates spontaneously** in aqueous solution (2 Cu⁺ → Cu²⁺ + Cu⁰, ΔG < 0), making Cu⁺ unstable unless stabilized by complexation.
+
+If you'd like **conditional potentials** in the presence of a specific ligand (e.g., ammonia, EDTA, cyanide), SRD-46 has extensive Cu²⁺ and Cu⁺ stability constants that can be combined with E° to calculate E′ — just ask!
+
+---

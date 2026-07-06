@@ -1,0 +1,15 @@
+Yes. SRD‑46 contains Co2+ stability data with 2,2'-bipyridine (no Co2+ data were found for 4,4'-bipyridine). For 2,2'-bipyridine, cumulative formation constants (βn) are reported for ML, ML2, and ML3 at 25 °C and ionic strengths 0.1 and 1.0 M. Counts below are distinct vlm_id entries and the logK spans for each stoichiometry.
+
+| Ligand | Constant (βn) | Stoichiometry | # independent logK measurements | logK range | Conditions |
+|---|---|---|---:|---|---|
+| 2,2'-Bipyridyl | β1 (ML) | M + L ⇌ ML | 2 | 5.80–5.81 | 25 °C; I = 0.1 and 1.0 M |
+| 2,2'-Bipyridyl | β2 (ML2) | M + 2L ⇌ ML2 | 2 | 11.3–11.3 | 25 °C; I = 0.1 and 1.0 M |
+| 2,2'-Bipyridyl | β3 (ML3) | M + 3L ⇌ ML3 | 2 | 16.0–16.2 | 25 °C; I = 0.1 and 1.0 M |
+
+No Co2+–4,4'-bipyridyl logK measurements were retrieved from SRD‑46 in this search.
+
+Chemistry note: The cumulative β values increase with each added bipyridine, typical of chelation and progressive coordination to Co2+. The small differences between 0.1 and 1.0 M ionic strength at 25 °C suggest modest ionic‑strength sensitivity in these data.
+
+Source: NIST Standard Reference Database 46 (SRD‑46), query for Co2+ with 2,2'-/4,4'-bipyridine (ligand_8156, ligand_8161; metal_33).
+
+---

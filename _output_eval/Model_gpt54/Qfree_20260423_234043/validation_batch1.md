@@ -1,0 +1,17 @@
+# Qfree_20260423_234043 - Validation (batch 1)
+
+**11 of 85 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 0 | listing | the best acidic-screen candidates are **IDA** and **HEIDA/HIDA**, | ...Based on the available SRD-46 evidence, the best acidic-screen candidates are **IDA** and **HEIDA/HIDA**, with **NTA** as a stronger-but-riskier ... |
+| 2 | 5 | exact_value | \| 1 \| **IDA** \| Best first ligand to test \| | ...igand \| Recommendation \| \|---:\|---\|---\| \| 1 \| **IDA** \| Best first ligand to test \| \| 2 \| **HEIDA/HIDA** \| Best co-first / ... |
+| 3 | 5 | exact_value | \| 2 \| **HEIDA/HIDA** \| Best co-first / close second; possibly even better if you want slightly milder Fe²⁺ binding \| | ...\| **IDA** \| Best first ligand to test \| \| 2 \| **HEIDA/HIDA** \| Best co-first / close second; possibly even better if you want slightly milder Fe²⁺ binding \| \| 3 \| **NTA** \| Use only at low dose if... |
+| 4 | 5 | exact_value | \| 3 \| **NTA** \| Use only at low dose if Fe(III) stabilization is more urgent than preserving fully free Fe²⁺ \| | ...you want slightly milder Fe²⁺ binding \| \| 3 \| **NTA** \| Use only at low dose if Fe(III) stabilization is more urgent than preserving fully free Fe²⁺ \| \| 4 \| **HEDTA** \| Backup only if IDA/HE... |
+| 5 | 5 | exact_value | \| 4 \| **HEDTA** \| Backup only if IDA/HEIDA fail to suppress Fe(III) problems \| | ...rgent than preserving fully free Fe²⁺ \| \| 4 \| **HEDTA** \| Backup only if IDA/HEIDA fail to suppress Fe(III) problems \| \| 5 \| **EDTA** \| Generally not recommen... |
+| 6 | 5 | exact_value | \| 5 \| **EDTA** \| Generally not recommended for your stated objective \| | ...IDA fail to suppress Fe(III) problems \| \| 5 \| **EDTA** \| Generally not recommended for your stated objective \| \| 6 \| **Glyphosate** \| Only as a specia... |
+| 7 | 5 | exact_value | \| 6 \| **Glyphosate** \| Only as a special exploratory case with strict precipitation monitoring \| | ...recommended for your stated objective \| \| 6 \| **Glyphosate** \| Only as a special exploratory case with strict precipitation monitoring \| \| 7 \| **Glycine / bicine-like** \| Too w... |
+| 8 | 6 | exact_value | Fe²⁺ is expected around **0.1 M** | ...## How to use them in your bath  Since Fe²⁺ is expected around **0.1 M**, and your goal is mainly to “mop up” tr... |
+| 9 | 6 | exact_value | \| Ligand dosage \| Keep ligand **substoichiometric to total Fe²⁺** and closer to expected Fe(III) impurity level, not to 0.1 M Fe²⁺ \| | ...gy element \| Recommendation \| \|---\|---\| \| Ligand dosage \| Keep ligand **substoichiometric to total Fe²⁺** and closer to expected Fe(III) impurity level, not to 0.1 M Fe²⁺ \| \| First bath trials \| Start with **IDA*... |
+| 10 | 6 | listing | \| First bath trials \| Start with **IDA** and **HEIDA** \| | ...II) impurity level, not to 0.1 M Fe²⁺ \| \| First bath trials \| Start with **IDA** and **HEIDA** \| \| What to monitor \| free Fe²⁺, cathodic... |
+| 11 | 6 | listing | \| What to monitor \| free Fe²⁺, cathodic polarization, HER, deposit morphology, bath clarity, aging stability \| | ...ls \| Start with **IDA** and **HEIDA** \| \| What to monitor \| free Fe²⁺, cathodic polarization, HER, deposit morphology, bath clarity, aging stability \| \| Warning sign \| slower deposition or l... |

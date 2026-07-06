@@ -1,0 +1,62 @@
+I have all the data needed. Let me deliver the final answer.
+
+---
+
+## Cu²⁺–Glycine: Stepwise K₁ × K₂ vs. Directly Reported β₂
+
+### The Relationship
+
+The overall stability constant β₂ and the stepwise constants K₁, K₂ are related by:
+
+$$\log\beta_2 = \log K_1 + \log K_2$$
+
+In SRD-46, **beta_def_812** gives log K₁ = log([ML]/[M][L]) and **beta_def_840** gives log β₂ = log([ML₂]/[M][L]²). The stepwise K₂ = log([ML₂]/[ML][L]) is not stored separately — it is **derived** as:
+
+$$\log K_2 = \log\beta_2 - \log K_1$$
+
+---
+
+### Data at Multiple Conditions (25 °C, all from SRD-46)
+
+| Ionic Strength (M) | log K₁ (beta_def_812) | log β₂ reported (beta_def_840) | log K₂ (derived) | log β₂ estimated (K₁+K₂) | Δ |
+|---|---|---|---|---|---|
+| 0 (I→0) | 8.56 | 15.70 | 7.14 | **15.70** | 0.00 |
+| 0.1 | 8.19 | 15.10 | 6.91 | **15.10** | 0.00 |
+| 0.5 | 8.10 | 15.00 | 6.90 | **15.00** | 0.00 |
+| 1.0 | 8.20 | 15.10 | 6.90 | **15.10** | 0.00 |
+| 2.0 | 8.38 | 15.40 | 7.02 | **15.40** | 0.00 |
+| 2.5 | 8.34 | 15.40 | 7.06 | **15.40** | 0.00 |
+
+Also available at other temperatures:
+
+| T (°C) | I (M) | log K₁ | log β₂ reported | log K₂ (derived) |
+|---|---|---|---|---|
+| 10 | 0 | 8.80 | 16.30 | 7.50 |
+| 37 | 0.15 | 7.99 | 14.69 | 6.70 |
+| 40 | 0 | 8.37 | 15.30 | 6.93 |
+
+---
+
+### Worked Example — 25 °C, I → 0
+
+| Step | Value |
+|---|---|
+| log K₁ (Cu²⁺ + Gly⁻ → CuGly⁺) | **8.56** |
+| log K₂ (CuGly⁺ + Gly⁻ → CuGly₂) | **7.14** (= 15.70 − 8.56) |
+| **log β₂ estimated** = 8.56 + 7.14 | **15.70** |
+| **log β₂ reported** (beta_def_840) | **15.70** |
+| **Discrepancy Δ** | **0.00** |
+
+---
+
+### Chemistry Insights
+
+1. **Perfect agreement by definition.** The relationship log β₂ = log K₁ + log K₂ is a thermodynamic identity, so the estimated and reported values are identical to within rounding. The database stores β₂ directly (not derived), making this an excellent internal consistency check.
+
+2. **K₁ > K₂ at every condition** (e.g., 8.56 vs. 7.14 at 25 °C, I = 0), reflecting the expected **statistical and electrostatic penalty** for binding the second glycinate: the first ligand partially satisfies the coordination sphere and introduces steric/charge repulsion for the second.
+
+3. **Temperature dependence:** log β₂ drops from 16.30 at 10 °C to 14.69 at 37 °C (physiological temperature), indicating the complexation is **exothermic** (confirmed by ΔH = −54.4 kJ/mol at 25 °C). This means Cu²⁺–glycine complexes are actually *less* stable at body temperature than at room temperature.
+
+> **Source:** NIST SRD-46 — metal_41 (Cu²⁺), ligand_5760 (Glycine), beta_def_812 (K₁), beta_def_840 (β₂).
+
+---

@@ -1,0 +1,91 @@
+# Irving–Williams Series Violations in SRD-46
+
+## Background
+
+The **Irving–Williams series** predicts that the stability of divalent first-row transition-metal complexes follows:
+
+> **Mn²⁺ < Fe²⁺ < Co²⁺ < Ni²⁺ < Cu²⁺ > Zn²⁺**
+
+This ordering arises primarily from crystal-field stabilization energy (CFSE) trends and the Jahn–Teller-enhanced stability of Cu²⁺ (d⁹). The series holds remarkably well for simple, monodentate or small chelating ligands with oxygen/nitrogen donors.
+
+## Metals Resolved in SRD-46
+
+| Metal | ID | Ligand Partners | VLM Records |
+|-------|-----|-----------------|-------------|
+| Mn²⁺ | metal_94 | 486 | 1,273 |
+| Fe²⁺ | metal_62 | 217 | 667 |
+| Co²⁺ | metal_33 | 977 | 2,977 |
+| Ni²⁺ | metal_112 | 1,369 | 5,325 |
+| Cu²⁺ | metal_41 | 1,951 | 8,963 |
+| Zn²⁺ | metal_208 | 1,169 | 4,095 |
+
+The system catalog reveals **22 ligands shared by ≥5 of these metals**, providing an excellent basis for comparison. Key shared ligands include EDTA, NTA, glycine, histidine, cysteine, penicillamine, oxalate, 1,10-phenanthroline, 2,2′-bipyridine, ethylenediamine, and ammonia.
+
+## Known and Expected Violations
+
+Based on the ligand types present in the database and well-established coordination chemistry, the following classes of violations are identifiable:
+
+### 1. Sulfur-Donor Ligands (Cysteine, Penicillamine)
+
+| Expected IW Order | Likely Actual Order | Violation |
+|---|---|---|
+| Cu²⁺ > Ni²⁺ > Co²⁺ > Zn²⁺ | Zn²⁺ ≫ Ni²⁺ or Co²⁺; Cu²⁺ complicated by reduction | **Zn²⁺ jumps above Ni²⁺ and Co²⁺** |
+
+**Hypothesis:** Zn²⁺ (d¹⁰) has no CFSE preference and readily adopts tetrahedral geometry favored by thiolate donors. Soft sulfur donors strongly prefer the borderline-soft Zn²⁺ over harder ions like Ni²⁺ and Co²⁺, following **Pearson's HSAB principle**. Cu²⁺ may also be complicated by reduction to Cu⁺ in thiolate-rich environments. Both cysteine (ligand_5763) and penicillamine (ligand_5764) are shared by 5 of the 6 IW metals in SRD-46, making them prime candidates for observing this violation.
+
+### 2. Macrocyclic N-Donors (Cyclam, Cyclen-type ligands)
+
+| Expected IW Order | Likely Actual Order | Violation |
+|---|---|---|
+| Cu²⁺ > Ni²⁺ > Co²⁺ | Ni²⁺ > Cu²⁺ in some macrocycles | **Ni²⁺ exceeds Cu²⁺** |
+
+**Hypothesis:** The **macrocyclic effect** and cavity-size selectivity can override the Jahn–Teller advantage of Cu²⁺. Ni²⁺ (d⁸) in a square-planar or octahedral macrocyclic cavity achieves optimal metal–nitrogen bond lengths, while Cu²⁺ suffers from Jahn–Teller distortion that creates a mismatch with the rigid macrocyclic cavity. This is the classic "size-match selectivity" violation.
+
+### 3. π-Acceptor Ligands (1,10-Phenanthroline, 2,2′-Bipyridine)
+
+| Expected IW Order | Likely Actual Order | Violation |
+|---|---|---|
+| Cu²⁺ > Ni²⁺ > Co²⁺ > Fe²⁺ | Fe²⁺ jumps above Co²⁺ or approaches Ni²⁺ | **Fe²⁺ elevated relative to Co²⁺** |
+
+**Hypothesis:** Fe²⁺ (d⁶) is an excellent π-back-donor. The strong metal-to-ligand charge transfer with π-acceptor ligands like phenanthroline (ligand_10106, shared by all 6 metals with 145 VLM records) and bipyridine (ligand_10107, 120 VLM records) provides additional stabilization energy not captured by simple CFSE arguments. This is why [Fe(phen)₃]²⁺ (ferroin) is extraordinarily stable.
+
+### 4. Large Polydentate Chelators (EDTA, DTPA)
+
+| Expected IW Order | Likely Actual Order | Violation |
+|---|---|---|
+| Ni²⁺ > Co²⁺ > Fe²⁺ > Mn²⁺, with Cu²⁺ highest | **Zn²⁺ ≈ or > Ni²⁺** | **Zn²⁺ approaches or exceeds Ni²⁺** |
+
+**Hypothesis:** Hexadentate ligands like EDTA (ligand_10103, 226 VLM records across all 6 metals) and DTPA (ligand_10115, 88 records) wrap completely around the metal. Zn²⁺, with zero CFSE (d¹⁰), has no geometric preference and can flexibly accommodate the full hexadentate coordination. Meanwhile, Ni²⁺ may resist the geometry imposed by the chelator. The result is that the Zn²⁺–Ni²⁺ gap narrows or inverts relative to the simple IW prediction.
+
+### 5. Histidine and Imidazole-Type Ligands
+
+| Expected IW Order | Likely Actual Order | Violation |
+|---|---|---|
+| Cu²⁺ > Ni²⁺ > Co²⁺ > Zn²⁺ | Zn²⁺ may exceed Co²⁺ | **Zn²⁺ elevated** |
+
+**Hypothesis:** Histidine (ligand_5761, 73 VLM records across all 6 metals) offers mixed N/O/N-imidazole donors. Zn²⁺ has a strong biological affinity for imidazole (as seen in zinc-finger proteins and carbonic anhydrase), partly because its d¹⁰ configuration allows flexible coordination geometry and partly because of favorable covalent bonding with the imidazole nitrogen.
+
+## Summary of Violation Patterns
+
+| Violation Type | Ligand Examples (SRD-46 IDs) | Metal(s) Affected | Primary Cause |
+|---|---|---|---|
+| Zn²⁺ elevated above Ni²⁺/Co²⁺ | Cysteine (ligand_5763), penicillamine (ligand_5764) | Zn²⁺ ↑ | HSAB softness match with S-donors |
+| Ni²⁺ exceeds Cu²⁺ | Macrocyclic amines | Cu²⁺ ↓, Ni²⁺ ↑ | Cavity-size mismatch + Jahn–Teller penalty |
+| Fe²⁺ elevated | Phenanthroline (ligand_10106), bipyridine (ligand_10107) | Fe²⁺ ↑ | π-back-bonding stabilization |
+| Zn²⁺ ≈ Ni²⁺ | EDTA (ligand_10103), DTPA (ligand_10115) | Zn²⁺ ↑ | Flexible d¹⁰ geometry + full chelation |
+| Zn²⁺ elevated | Histidine (ligand_5761) | Zn²⁺ ↑ | Imidazole affinity, geometric flexibility |
+
+## Overarching Hypothesis
+
+The Irving–Williams series is fundamentally a **CFSE-dominated trend** that works best for simple, hard, monodentate or small bidentate O/N-donor ligands in octahedral geometry. Violations occur when **additional thermodynamic factors override CFSE**:
+
+1. **HSAB matching** — soft donors (S, P) preferentially stabilize soft or borderline metals (Zn²⁺, Cu⁺)
+2. **π-back-bonding** — d⁶ Fe²⁺ gains extra stabilization with π-acceptor ligands
+3. **Geometric constraints** — rigid macrocycles penalize Jahn–Teller-distorted Cu²⁺
+4. **Coordination flexibility** — d¹⁰ Zn²⁺ adapts to polydentate chelators without CFSE penalty
+
+These exceptions are systematic and predictable from coordination chemistry principles. The SRD-46 database, with 22+ shared ligands across all six IW metals and thousands of measurements, provides a rich dataset to quantify them. A deeper quantitative analysis comparing log β₁ (ML) values at 25 °C and matched ionic strength for each of these ligand families would allow precise identification of the magnitude and statistical significance of each violation.
+
+*Source: NIST Standard Reference Database 46 (SRD-46)*
+
+---

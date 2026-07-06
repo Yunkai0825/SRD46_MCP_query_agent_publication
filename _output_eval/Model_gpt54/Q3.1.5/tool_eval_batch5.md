@@ -1,0 +1,187 @@
+# Q3.1.5 — Tool Results (batch 5)
+
+### Step 2: `search_metals`
+**Args:**
+```json
+{
+  "name": "Calcium(II), Copper(II)",
+  "limit": 10
+}
+```
+
+[summary]
+## search_metals
+
+*(no results)*
+
+---
+
+### Step 3: `search_ligands`
+**Args:**
+```json
+{
+  "name": "citrate, oxalate, tartrate, lactate, gluconate, malate, carbonate, phosphate, sulfate, acetate, nitrilotriacetate, NTA, iminodiacetate, malonate, succinate",
+  "limit": 50
+}
+```
+
+[summary]
+## search_ligands
+
+*(no results)*
+
+---
+
+### Step 5: `build_system_catalog`
+**Args:**
+```json
+{}
+```
+
+[summary]
+[CATALOG]
+## build_system_catalog
+
+**Error:** Provide at least one of metal_id, ligand_id, or beta_definition_id.
+
+---
+
+### Step 6: `search_metals`
+**Args:**
+```json
+{
+  "name": "calcium, copper",
+  "symbol": "Ca, Cu",
+  "limit": 20
+}
+```
+
+[summary]
+## search_metals
+
+*(no results)*
+
+---
+
+### Step 8: `search_stability`
+**Args:**
+```json
+{
+  "where": "((c.metal_name_SRD LIKE '%Calcium%' OR c.metal_name_SRD LIKE '%Copper%') AND (c.ligand_name_SRD LIKE '%citrate%' OR c.ligand_name_SRD LIKE '%citric%' OR c.ligand_name_SRD LIKE '%oxalate%' OR c.ligand_name_SRD LIKE '%oxalic%' OR c.ligand_name_SRD LIKE '%tartrate%' OR c.ligand_name_SRD LIKE '%tartaric%' OR c.ligand_name_SRD LIKE '%lactate%' OR c.ligand_name_SRD LIKE '%lactic%' OR c.ligand_name_SRD LIKE '%gluconate%' OR c.ligand_name_SRD LIKE '%gluconic%' OR c.ligand_name_SRD LIKE '%malate%' OR c.ligand_name_SRD LIKE '%malic%' OR c.ligand_name_SRD LIKE '%carbonate%' OR c.ligand_name_SRD LIKE '%phosphate%' OR c.ligand_name_SRD LIKE '%sulfate%' OR c.ligand_name_SRD LIKE '%acetate%' OR c.ligand_name_SRD LIKE '%nitrilotriac%' OR c.ligand_name_SRD LIKE '%iminodiac%' OR c.ligand_name_SRD LIKE '%malonate%' OR c.ligand_name_SRD LIKE '%succinate%') AND s.solvent_name LIKE '%water%')",
+  "order_by": "c.ligand_name_SRD ASC, c.metal_name_SRD ASC, s.constant_value DESC",
+  "limit": 200
+}
+```
+
+[summary]
+## search_stability — 200 row(s)
+
+### logK — 42 metal-ligand pair(s)
+| metal_id | metal_name | ligand_id | ligand_name | ligand_HxL_def | ligand_SMILES | vlm_counts | beta_counts | T°C_range | I(M)_range | non_aqueous_phases | ref_eq_map_counts |
+|----------|------------|-----------|-------------|----------------|---------------|------------|-------------|-----------|------------|--------------------|-------------------|
+| metal_5 | Al^[3+] | ligand_9058 | 2-Hydroxypropane-1,2,3-tric… | H3L | O=C(O)CC(O)(CC(=O)O)C(=O)O | 15 | 7 | 25~37 | 0.1~0.5 | *** | 3 |
+| metal_55 | Er^[3+] | ligand_8653 | 2-Hydroxy-2-ethylbutanoic a… | HL | CCC(O)(CC)C(=O)O | 7 | 4 | 25 | 0.1~1 | *** | 2 |
+| metal_65 | Gd^[3+] | ligand_8653 | 2-Hydroxy-2-ethylbutanoic a… | HL | CCC(O)(CC)C(=O)O | 7 | 4 | 25 | 0.1~1 | *** | 2 |
+| metal_73 | Ho^[3+] | ligand_8653 | 2-Hydroxy-2-ethylbutanoic a… | HL | CCC(O)(CC)C(=O)O | 7 | 4 | 25 | 0.1~1 | *** | 2 |
+| metal_110 | Nd^[3+] | ligand_8653 | 2-Hydroxy-2-ethylbutanoic a… | HL | CCC(O)(CC)C(=O)O | 7 | 4 | 25 | 0.1~1 | *** | 2 |
+| metal_179 | Tb^[3+] | ligand_8653 | 2-Hydroxy-2-ethylbutanoic a… | HL | CCC(O)(CC)C(=O)O | 7 | 4 | 25 | 0.1~1 | *** | 2 |
+| metal_206 | Yb^[3+] | ligand_8653 | 2-Hydroxy-2-ethylbutanoic a… | HL | CCC(O)(CC)C(=O)O | 7 | 4 | 25 | 0.1~1 | *** | 2 |
+| metal_44 | Dy^[3+] | ligand_8667 | 2,3-Dihydroxy-2-(hydroxymet… | HL | O=C(O)C(O)(CO)CO | 6 | 3 | 25 | 0.1~0.5 | *** | 2 |
+| metal_55 | Er^[3+] | ligand_8667 | 2,3-Dihydroxy-2-(hydroxymet… | HL | O=C(O)C(O)(CO)CO | 6 | 3 | 25 | 0.1~0.5 | *** | 2 |
+| metal_58 | Eu^[3+] | ligand_8667 | 2,3-Dihydroxy-2-(hydroxymet… | HL | O=C(O)C(O)(CO)CO | 6 | 3 | 25 | 0.1~0.5 | *** | 2 |
+| metal_65 | Gd^[3+] | ligand_8667 | 2,3-Dihydroxy-2-(hydroxymet… | HL | O=C(O)C(O)(CO)CO | 6 | 3 | 25 | 0.1~0.5 | *** | 2 |
+| metal_73 | Ho^[3+] | ligand_8667 | 2,3-Dihydroxy-2-(hydroxymet… | HL | O=C(O)C(O)(CO)CO | 6 | 3 | 25 | 0.1~0.5 | *** | 2 |
+| metal_79 | La^[3+] | ligand_8667 | 2,3-Dihydroxy-2-(hydroxymet… | HL | O=C(O)C(O)(CO)CO | 6 | 3 | 25 | 0.1~0.5 | *** | 2 |
+| metal_81 | Lu^[3+] | ligand_8667 | 2,3-Dihydroxy-2-(hydroxymet… | HL | O=C(O)C(O)(CO)CO | 6 | 3 | 25 | 0.1~0.5 | *** | 2 |
+| metal_110 | Nd^[3+] | ligand_8667 | 2,3-Dihydroxy-2-(hydroxymet… | HL | O=C(O)C(O)(CO)CO | 6 | 3 | 25 | 0.1~0.5 | *** | 2 |
+| metal_139 | Pr^[3+] | ligand_8667 | 2,3-Dihydroxy-2-(hydroxymet… | HL | O=C(O)C(O)(CO)CO | 6 | 3 | 25 | 0.1~0.5 | *** | 2 |
+| metal_173 | Sm^[3+] | ligand_8667 | 2,3-Dihydroxy-2-(hydroxymet… | HL | O=C(O)C(O)(CO)CO | 6 | 3 | 25 | 0.1~0.5 | *** | 2 |
+| metal_179 | Tb^[3+] | ligand_8667 | 2,3-Dihydroxy-2-(hydroxymet… | HL | O=C(O)C(O)(CO)CO | 6 | 3 | 25 | 0.1~0.5 | *** | 2 |
+| metal_192 | Tm^[3+] | ligand_8667 | 2,3-Dihydroxy-2-(hydroxymet… | HL | O=C(O)C(O)(CO)CO | 6 | 3 | 25 | 0.1~0.5 | *** | 2 |
+| metal_205 | Y^[3+] | ligand_8667 | 2,3-Dihydroxy-2-(hydroxymet… | HL | O=C(O)C(O)(CO)CO | 6 | 3 | 25 | 0.1~0.5 | *** | 2 |
+| metal_206 | Yb^[3+] | ligand_8667 | 2,3-Dihydroxy-2-(hydroxymet… | HL | O=C(O)C(O)(CO)CO | 6 | 3 | 25 | 0.1~0.5 | *** | 2 |
+| metal_79 | La^[3+] | ligand_8653 | 2-Hydroxy-2-ethylbutanoic a… | HL | CCC(O)(CC)C(=O)O | 6 | 4 | 25 | 0.1~1 | *** | 2 |
+| metal_139 | Pr^[3+] | ligand_8653 | 2-Hydroxy-2-ethylbutanoic a… | HL | CCC(O)(CC)C(=O)O | 6 | 4 | 25 | 0.1~1 | *** | 2 |
+| metal_27 | Ce^[3+] | ligand_8667 | 2,3-Dihydroxy-2-(hydroxymet… | HL | O=C(O)C(O)(CO)CO | 3 | 3 | 25 | 0.5 | *** | 1 |
+| metal_44 | Dy^[3+] | ligand_8653 | 2-Hydroxy-2-ethylbutanoic a… | HL | CCC(O)(CC)C(=O)O | 3 | 3 | 25 | 0.1 | *** | 1 |
+| metal_58 | Eu^[3+] | ligand_8653 | 2-Hydroxy-2-ethylbutanoic a… | HL | CCC(O)(CC)C(=O)O | 3 | 3 | 25 | 0.1 | *** | 1 |
+| metal_68 | H^[+] | ligand_8653 | 2-Hydroxy-2-ethylbutanoic a… | HL | CCC(O)(CC)C(=O)O | 3 | 1 | 18~25 | 0~1 | *** | 3 |
+| metal_81 | Lu^[3+] | ligand_8653 | 2-Hydroxy-2-ethylbutanoic a… | HL | CCC(O)(CC)C(=O)O | 3 | 3 | 25 | 0.1 | *** | 1 |
+| metal_173 | Sm^[3+] | ligand_8653 | 2-Hydroxy-2-ethylbutanoic a… | HL | CCC(O)(CC)C(=O)O | 3 | 3 | 25 | 0.1 | *** | 1 |
+| metal_192 | Tm^[3+] | ligand_8653 | 2-Hydroxy-2-ethylbutanoic a… | HL | CCC(O)(CC)C(=O)O | 3 | 3 | 25 | 0.1 | *** | 1 |
+| metal_205 | Y^[3+] | ligand_8653 | 2-Hydroxy-2-ethylbutanoic a… | HL | CCC(O)(CC)C(=O)O | 3 | 3 | 25 | 0.1 | *** | 1 |
+| metal_55 | Er^[3+] | ligand_8655 | 2-Hydroxy-2-propylpentanoic… | HL | CCCC(O)(CCC)C(=O)O | 3 | 3 | 25 | 1 | *** | 1 |
+| metal_206 | Yb^[3+] | ligand_8655 | 2-Hydroxy-2-propylpentanoic… | HL | CCCC(O)(CCC)C(=O)O | 3 | 3 | 25 | 1 | *** | 1 |
+| metal_68 | H^[+] | ligand_8667 | 2,3-Dihydroxy-2-(hydroxymet… | HL | O=C(O)C(O)(CO)CO | 2 | 1 | 25 | 0.1~0.5 | *** | 2 |
+| metal_27 | Ce^[3+] | ligand_8653 | 2-Hydroxy-2-ethylbutanoic a… | HL | CCC(O)(CC)C(=O)O | 2 | 2 | 25 | 0.1 | *** | 1 |
+| metal_44 | Dy^[3+] | ligand_8655 | 2-Hydroxy-2-propylpentanoic… | HL | CCCC(O)(CCC)C(=O)O | 2 | 2 | 25 | 1 | *** | 1 |
+| metal_58 | Eu^[3+] | ligand_8655 | 2-Hydroxy-2-propylpentanoic… | HL | CCCC(O)(CCC)C(=O)O | 2 | 2 | 25 | 1 | *** | 1 |
+| metal_65 | Gd^[3+] | ligand_8655 | 2-Hydroxy-2-propylpentanoic… | HL | CCCC(O)(CCC)C(=O)O | 2 | 2 | 25 | 1 | *** | 1 |
+| metal_110 | Nd^[3+] | ligand_8655 | 2-Hydroxy-2-propylpentanoic… | HL | CCCC(O)(CCC)C(=O)O | 2 | 2 | 25 | 1 | *** | 1 |
+| metal_139 | Pr^[3+] | ligand_8655 | 2-Hydroxy-2-propylpentanoic… | HL | CCCC(O)(CCC)C(=O)O | 2 | 2 | 25 | 1 | *** | 1 |
+| metal_173 | Sm^[3+] | ligand_8655 | 2-Hydroxy-2-propylpentanoic… | HL | CCCC(O)(CCC)C(=O)O | 2 | 2 | 25 | 1 | *** | 1 |
+| metal_68 | H^[+] | ligand_8655 | 2-Hydroxy-2-propylpentanoic… | HL | CCCC(O)(CCC)C(=O)O | 1 | 1 | 25 | 1 | *** | 1 |
+
+---
+
+### Step 9: `search_pka_ligands`
+**Args:**
+```json
+{
+  "where": "(lc.ligand_name_SRD LIKE '%citrate%' OR lc.ligand_name_SRD LIKE '%citric%' OR lc.ligand_name_SRD LIKE '%oxalate%' OR lc.ligand_name_SRD LIKE '%tartrate%' OR lc.ligand_name_SRD LIKE '%lactate%' OR lc.ligand_name_SRD LIKE '%gluconate%' OR lc.ligand_name_SRD LIKE '%malate%' OR lc.ligand_name_SRD LIKE '%carbonate%' OR lc.ligand_name_SRD LIKE '%phosphate%' OR lc.ligand_name_SRD LIKE '%sulfate%' OR lc.ligand_name_SRD LIKE '%acetate%' OR lc.ligand_name_SRD LIKE '%nitrilotriac%' OR lc.ligand_name_SRD LIKE '%iminodiac%' OR lc.ligand_name_SRD LIKE '%malonate%' OR lc.ligand_name_SRD LIKE '%succinate%')",
+  "order_by": "lc.ligand_name_SRD ASC, p.pKa ASC",
+  "limit": 100
+}
+```
+
+[summary]
+## search_pka_ligands — 100 row(s)
+
+| ligand_id | ligand_name | HxL_def | formula | smiles | pH_ladder | T°C_range | I(M)_range | similarity_score |
+|-----------|-------------|---------|---------|--------|-----------|-----------|------------|------------------|
+| ligand_8325 | 1,N(6)-Ethenoadenosine-5'-(dihydrogenphosphate) | H2L | C12H14N5P1O7 | O=P(O)(O)OC[C@H]1O[C@@H](n2cnc3c2ncn2ccnc32)[C@H](O)[C@@H]1O | −∞; H2L (M_tot_1); (4.12, vlm_141722); HL (M_tot_1); (6.12, vlm_141721); L (M_tot_5); +∞ | 25 | 0.1 | *** |
+| ligand_8326 | 1,N(6)-Ethenoadenosine-5'-(tetrahydrogentriphosphate) | H4L | C12H16N5P3O13 | O=P(O)(O)OP(=O)(O)OP(=O)(O)OC[C@H]1O[C@@H](n2cnc3c2ncn2ccnc32)[C@H](O)[C@@H]1O | −∞; H2L (M_tot_1); (4.45, vlm_141733); HL (M_tot_1); (6.5, vlm_141732); L (M_tot_5); +∞ | 25 | 0.1 | *** |
+| ligand_9172 | 1-(Glycerylphosphoryl)-myo-inositol-4,5-bis(dihydrogenphosp… | H5L | C9H21O17P3 | O=P(O)(O)O[C@@H]1[C@@H](OP(=O)(O)O)[C@H](O)[C@H](O)[C@@](O)(P(=O)(O)OCC(O)CO)[C@H]1O | −∞; H2L (M_tot_1); (5.7, vlm_159759); HL (M_tot_1); (8.05, vlm_159758); L (M_tot_1); +∞ | 20 | 0.1 | *** |
+| ligand_8309 | 2'-Deoxyadenosine-5'-(dihydrogenphosphate) | H2L | C10H14N5O6P1 | Nc1ncnc2c1ncn2[C@H]1C[C@H](O)[C@@H](COP(=O)(O)O)O1 | −∞; HL (M_tot_1); (-6.24, vlm_140995); L (M_tot_2); +∞ | 25 | 0.1 | *** |
+| ligand_8233 | 2'-Deoxycytidine-5'-(dihydrogenphosphate) | H2L | C9H14N3O7P1 | Nc1ccn([C@H]2C[C@H](O)[C@@H](COP(=O)(O)O)O2)c(=O)n1 | −∞; H2L (M_tot_1); (4.46, vlm_139996); HL (M_tot_1); (6.24, vlm_139995); L (M_tot_4); +∞ | 25 | 0.1 | *** |
+| ligand_8315 | 2'-Deoxyguanosine-5'-(dihydrogenphosphate) | L | C10H13N5O7P1 | Nc1nc2c(ncn2[C@H]2C[C@H](O)[C@@H](COP(=O)(O)O)O2)c(=O)[nH]1 | −∞; H2L (M_tot_1); (2.69, vlm_141210); HL (M_tot_4); (6.29, vlm_141207); L (M_tot_4); (9.56, vlm_141206); H-1L (M_tot_1); +∞ | 25 | 0.1 | *** |
+| ligand_6138 | 2,2'-Bis(2-Carboxymethyl)iminodiacetic acid (Iminodisuccini… | H4L | C8H11N1O8 | O=C(O)CC(NC(CC(=O)O)C(=O)O)C(=O)O | −∞; H4L (M_tot_1); (-1.97, vlm_104613); H3L (M_tot_1); (3.24, vlm_104612); H2L (M_tot_1); (4.24, vlm_104611); HL (M_tot_1); (10, vlm_104610); L (M_tot_12); +∞ | 25 | 0.1 | *** |
+| ligand_6177 | 2,2-Dimethylnitrilotriacetic acid | H3L | C8H13N1O6 | CC(C)(C(=O)O)N(CC(=O)O)CC(=O)O | −∞; H3L (M_tot_1); (-1.5, vlm_106004); H2L (M_tot_1); (2.52, vlm_106003); HL (M_tot_1); (11.86, vlm_106002); L (M_tot_6); +∞ | 20 | 0.1 | *** |
+| ligand_9382 | 2,3,4-Trihydroxybenzenesulfonic acid (Pyrogallolsulfate) | H4L | C6H6O6S1 | O=S(=O)(O)c1ccc(O)c(O)c1O | −∞; H3L (M_tot_2); (8.28, vlm_162785); H2L (M_tot_1); (11.3, vlm_162784); HL (M_tot_1); +∞ | 20 | 0.1 | *** |
+| ligand_8951 | 2,6-Dicarboxyphenol 1-dihydrogenphosphate | H4L | C8H7O8P1 | O=C(O)c1cccc(C(=O)O)c1OP(=O)(O)O | −∞; H3L (M_tot_1); (2.98, vlm_154666); H2L (M_tot_1); (4.82, vlm_154665); HL (M_tot_1); (8.35, vlm_154664); L (M_tot_1); +∞ | 35 | 0.1 | *** |
+| ligand_8458 | 2-Amino-2-(methoxycarboxy)ethyl(dihydrogenphosphate) (O-Pho… | H2L | C3H10N1O6P1 | COC(=O)C(N)COP(=O)(O)O | −∞; H2L (M_tot_1); (5.33, vlm_144212); HL (M_tot_1); (7.83, vlm_144211); L (M_tot_1); +∞ | 25 | 0.1 | *** |
+| ligand_8457 | 2-Aminoethyl(dihydrogenphosphate) (O-Phosphorylethanolamine) | H2L | C2H8N1O4P1 | NCCOP(=O)(O)O | −∞; H2L (M_tot_1); (5.56, vlm_144190); HL (M_tot_1); (10.15, vlm_144184); L (M_tot_5); +∞ | 25 | 0.1 | *** |
+| ligand_8461 | 2-Aminoethyl(diphenylphosphate) (O-Diphenylphosphorylethano… | L | C14H16N1O4P1 | NCCOP(=O)(Oc1ccccc1)Oc1ccccc1 | −∞; HL (M_tot_1); (8.22, vlm_144230); L (M_tot_1); +∞ | 25 | 0.1 | *** |
+| ligand_6852 | 2-Aminoethyl(hydrogensulfate) | HL | C2H7N1O4S1 | NCCOS(=O)(=O)O | −∞; HL (M_tot_1); (9.182, vlm_120413); L (M_tot_1); +∞ | 25 | 0 | *** |
+| ligand_8637 | 2-Carboxy-6-(methoxycarbonyl)phenol 1-(dihydrogenphosphate) | H3L | C9H9O8P1 | COC(=O)c1cccc(C(=O)O)c1OP(=O)(O)O | −∞; H2L (M_tot_1); (3.38, vlm_147041); HL (M_tot_1); (7.63, vlm_147040); L (M_tot_1); +∞ | 35 | 0.1 | *** |
+| ligand_6189 | 2-Carboxynitrilotriacetic acid | H4L | C7H9N1O8 | O=C(O)CN(CC(=O)O)C(C(=O)O)C(=O)O | −∞; H4L (M_tot_1); (2.93, vlm_106182); H3L (M_tot_1); (3.74, vlm_106181); H2L (M_tot_1); (3.94, vlm_106180); HL (M_tot_1); (8.7, vlm_106179); L (M_tot_5); +∞ | 25 | 0.1 | *** |
+| ligand_8636 | 2-Hydroxybenzoic acid 2-(dihydrogenphosphate) (Salicyl phos… | H4L | C7H7O6P1 | O=C(O)c1ccccc1OP(=O)(O)O | −∞; H2L (M_tot_1); (3.69, vlm_147033); HL (M_tot_1); (6.61, vlm_147030); L (M_tot_2); +∞ | 25 | 0.1 | *** |
+| ligand_9058 | 2-Hydroxypropane-1,2,3-tricarboxylic acid (Citric acid) | H3L | C6H8O7 | O=C(O)CC(O)(CC(=O)O)C(=O)O | −∞; H3L (M_tot_1); (2.9, vlm_157473); H2L (M_tot_12); (4.35, vlm_157459); HL (M_tot_18); (5.65, vlm_157439); L (M_tot_57); +∞ | 25 | 0.1 | *** |
+| ligand_8672 | 2-Hydroxypropane-1,2,3-tricarboxylic acid 1,3-dimethylester… | HL | C8H12O7 | COC(=O)CC(O)(CC(=O)OC)C(=O)O | −∞; HL (M_tot_1); (3.02, vlm_149461); L (M_tot_1); +∞ | 25 | 0.1 | *** |
+| ligand_8965 | 2-Hydroxypropane-1,2,3-tricarboxylic acid 1-methyl ester (a… | H2L | C7H10O7 | COC(=O)CC(O)(CC(=O)O)C(=O)O | −∞; H2L (M_tot_1); (2.7, vlm_155326); HL (M_tot_1); (4.66, vlm_155324); L (M_tot_1); +∞ | 25 | 0.1 | *** |
+| ligand_8966 | 2-Hydroxypropane-1,2,3-tricarboxylic acid 2-methyl ester (s… | H2L | C7H10O7 | COC(=O)C(O)(CC(=O)O)CC(=O)O | −∞; H2L (M_tot_1); (3.39, vlm_155330); HL (M_tot_1); (4.63, vlm_155328); L (M_tot_1); +∞ | 25 | 0.1 | *** |
+| ligand_8633 | 2-Hydroxypropenoic acid 2-(dihydrogenphosphate) (Phosphoeno… | H3L | C3H5O6P1 | C=C(OP(=O)(O)O)C(=O)O | −∞; H2L (M_tot_1); (3.45, vlm_146975); HL (M_tot_1); (6.14, vlm_146973); L (M_tot_8); +∞ | 25 | 0.1 | *** |
+| ligand_8698 | 2-Oxobutanedioic acid 4-ethyl ester (4-Ethyl oxaloacetate) | HL | C6H8O5 | CCOC(=O)CC(=O)C(=O)O | −∞; HL (M_tot_1); (9.3, vlm_149904); L (M_tot_3); +∞ | 25 | 0.5 | *** |
+| ligand_8460 | 2-Pyridylmethyl(dihydrogenphosphate) (O-Phosphorylpicolinol) | H2L | C6H8N1O4P1 | O=P(O)(O)OCc1ccccn1 | −∞; H3L (M_tot_1); (-1.8, vlm_144222); H2L (M_tot_1); (4.42, vlm_144221); HL (M_tot_1); (6.3, vlm_144220); L (M_tot_7); +∞ | 25 | 0.1 | *** |
+| ligand_6254 | 2-[Bis(carboxymethyl)aminomethyl]azole-4-sulfonic acid (N-(… | H2L | C9H12N2O7S1 | O=C(O)CN(CC(=O)O)Cc1cc(S(=O)(=O)O)c[nH]1 | −∞; H3L (M_tot_1); (-1.5, vlm_107703); H2L (M_tot_1); (2.3, vlm_107702); HL (M_tot_1); (8.3, vlm_107701); L (M_tot_2); +∞ | 25 | 1 | *** |
+| ligand_7981 | 5-Aminomethyl-3-hydroxy-4-hydroxymethyl-2-methylpyridine-4'… | H3L | C8H13N2O5P1 | Cc1ncc(CN)c(COP(=O)(O)O)c1O | −∞; H4L (M_tot_1); (3.64, vlm_136344); H3L (M_tot_1); (5.55, vlm_136343); H2L (M_tot_1); (8.44, vlm_136342); HL (M_tot_1); (10.69, vlm_136341); L (M_tot_1); +∞ | 25 | 0.1 | *** |
+| ligand_8305 | 9-(beta-D-Ribofuranosyl)azolo[2,3-d]-6-amino-1,3-diazine-5'… | H2L | C11H15N4O7P1 | Nc1ncnc2c1ccn2[C@@H]1O[C@H](COP(=O)(O)O)[C@@H](O)[C@H]1O | −∞; H2L (M_tot_1); (5.28, vlm_140932); HL (M_tot_1); (6.32, vlm_140931); L (M_tot_11); +∞ | 25 | 0.1 | *** |
+| ligand_8310 | Adenosine-2'-(dihydrogenphosphate) (AMP-2) | H2L | C10H14N5O7P1 | Nc1ncnc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@H]1OP(=O)(O)O | −∞; H2L (M_tot_1); (3.7, vlm_141008); HL (M_tot_1); (5.99, vlm_141003); L (M_tot_11); +∞ | 25 | 0.1 | *** |
+| ligand_8311 | Adenosine-3'-(dihydrogenphosphate) (AMP-3) | H2L | C10H14N5O7P1 | Nc1ncnc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](OP(=O)(O)O)[C@H]1O | −∞; H2L (M_tot_1); (3.67, vlm_141052); HL (M_tot_1); (5.75, vlm_141047); L (M_tot_11); +∞ | 25 | 0.1 | *** |
+| ligand_8312 | Adenosine-5'-(dihydrogenphosphate) (AMP-5) | H2L | C10H14N5O7P1 | Nc1ncnc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)O)[C@@H](O)[C@H]1O | −∞; L (M_tot_21); (-13.1, vlm_141091); H-1L (M_tot_1); (3.8, vlm_141108); HL (M_tot_7); (6.15, vlm_141094); L (M_tot_21); +∞ | 25 | 0~0.1 | *** |
+| ligand_8313 | Adenosine-5'-(dihydrogenphosphate) N(1)-oxide | H2L | C10H14N5O8P1 | Nc1c2ncn([C@@H]3O[C@H](COP(=O)(O)O)[C@@H](O)[C@H]3O)c2nc[n+]1[O-] | −∞; H2L (M_tot_1); (2.58, vlm_141196); HL (M_tot_1); (6.12, vlm_141195); L (M_tot_1); (12.49, vlm_141194); H-1L (M_tot_1); +∞ | 25 | 0.1 | *** |
+| ligand_8323 | Adenosine-5'-(pentahydrogentetraphosphate) (AQP) | H5L | C10H17N5O16P4 | Nc1ncnc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)OP(=O)(O)OP(=O)(O)OP(=O)(O)O)[C@@H](O)[C@H]1O | −∞; H2L (M_tot_1); (-4.05, vlm_141708); HL (M_tot_1); (6.65, vlm_141702); L (M_tot_4); +∞ | 25 | 0.1 | *** |
+| ligand_8321 | Adenosine-5'-(tetrahydrogentriphosphate) (ATP) | H4L | C10H16N5O13P3 | Nc1ncnc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)OP(=O)(O)OP(=O)(O)O)[C@@H](O)[C@H]1O | −∞; H3L (M_tot_1); (-1.9, vlm_141482); H2L (M_tot_1); (3.99, vlm_141469); HL (M_tot_19); (6.38, vlm_141449); L (M_tot_25); +∞ | 25 | 0.1 | *** |
+| ligand_8318 | Adenosine-5'-(trihydrogendiphosphate) (ADP) | H3L | C10H15N5O10P2 | Nc1ncnc2c1ncn2[C@@H]1O[C@H](COP(=O)(O)OP(=O)(O)O)[C@@H](O)[C@H]1O | −∞; H3L (M_tot_1); (1.8, vlm_141279); H2L (M_tot_1); (3.87, vlm_141266); HL (M_tot_12); (6.3, vlm_141252); L (M_tot_17); +∞ | 25 | 0~0.1 | *** |
+| ligand_8232 | Cytidine-3'-(dihydrogenphosphate) (CMP-3) | H2L | C9H14N3O8P1 | Nc1ccn([C@@H]2O[C@H](CO)[C@@H](OP(=O)(O)O)[C@H]2O)c(=O)n1 | −∞; H2L (M_tot_1); (4.24, vlm_139993); HL (M_tot_1); +∞ | 25 | 0.1 | *** |
+| ligand_8234 | Cytidine-5'-(dihydrogenphosphate) (CMP-5) | H2L | C9H14N3O8P1 | Nc1ccn([C@@H]2O[C@H](COP(=O)(O)O)[C@@H](O)[C@H]2O)c(=O)n1 | −∞; H2L (M_tot_1); (4.33, vlm_140011); HL (M_tot_2); (6.19, vlm_140003); L (M_tot_12); +∞ | 25 | 0.1 | *** |
+| ligand_8236 | Cytidine-5'-(tetrahydrogentriphosphate) (CTP) | H4L | C9H16N3O14P3 | Nc1ccn([C@@H]2O[C@H](COP(=O)(O)OP(=O)(O)OP(=O)(O)O)[C@@H](O)[C@H]2O)c(=O)n1 | −∞; H2L (M_tot_1); (4.47, vlm_140078); HL (M_tot_9); (6.42, vlm_140072); L (M_tot_10); +∞ | 25 | 0.1 | *** |
+| ligand_8235 | Cytidine-5'-(trihydrogendiphosphate) (CDP) | H3L | C9H15N3O11P2 | Nc1ccn([C@@H]2O[C@H](COP(=O)(O)OP(=O)(O)O)[C@@H](O)[C@H]2O)c(=O)n1 | −∞; HL (M_tot_1); (-6.39, vlm_140043); L (M_tot_11); (-1, vlm_140054); H2L (M_tot_1); (4.46, vlm_140050); HL (M_tot_1); +∞ | 25 | 0.1 | *** |
+| ligand_9164 | D(-)-Fructose-1,6-bis(dihydrogenphosphate) (Fructose-1,6-di… | H4L | C6H14O12P2 | O=P(O)(O)OC[C@@H]1O[C@@](O)(COP(=O)(O)O)[C@@H](O)[C@H]1O | −∞; H2L (M_tot_1); (5.86, vlm_159601); HL (M_tot_2); (6.66, vlm_159599); L (M_tot_2); +∞ | 25 | 0.1 | *** |
+| ligand_9160 | D(-)-Fructose-1-dihydrogenphosphate (Fructose-1-phosphate) | H2L | C6H13O9P1 | O=P(O)(O)OC[C@@H]1O[C@@](O)(CO)[C@H](O)[C@H]1O | −∞; HL (M_tot_1); (5.84, vlm_159553); L (M_tot_3); +∞ | 20 | 0.1 | *** |
+| ligand_9159 | D(-)-Ribose-5-dihydrogenphosphate (Ribose-5-phosphate) | H2L | C5H11O8P1 | O=P(O)(O)OC[C@@H]1O[C@H](O)[C@@H](O)[C@H]1O | −∞; L (M_tot_13); (-13.1, vlm_159527); H-1L (M_tot_1); (-1.5, vlm_159534); HL (M_tot_2); (6.17, vlm_159530); L (M_tot_13); +∞ | 25 | 0~0.1 | *** |
+| ligand_8635 | D-2,3-Dihydroxypropanoic acid 2-(dihydrogenphosphate) (D-2-… | H3L | C3H7O7P1 | CC(OP(=O)(O)O)C(=O)O | −∞; H2L (M_tot_1); (3.55, vlm_147022); HL (M_tot_1); (7, vlm_147021); L (M_tot_8); +∞ | 25 | 0.1 | *** |
+| ligand_9169 | D-myo-Inositol-1,2,6-tris(dihydrogenphosphate) | H6L | C6H15O12P3 | O=P(O)(O)O[C@@H]1[C@@H](OP(=O)(O)O)[C@H](O)[C@@H](O)[C@H](O)[C@@H]1OP(=O)(O)O | −∞; H4L (M_tot_1); (2.4, vlm_159656); H3L (M_tot_1); (5.47, vlm_159651); H2L (M_tot_1); (6.71, vlm_159646); HL (M_tot_2); (8.56, vlm_159641); L (M_tot_12); +∞ | 25 | 0.1 | *** |
+| ligand_9170 | D-myo-Inositol-1,4,5-tris(dihydrogenphosphate) | H6L | C6H15O12P3 | O=P(O)(O)O[C@@H]1[C@@H](O)[C@H](OP(=O)(O)O)[C@@H](OP(=O)(O)O)[C@H](O)[C@@H]1O | −∞; H4L (M_tot_1); (2.61, vlm_159703); H3L (M_tot_1); +∞ | 25 | 0.1 | *** |
+
+---

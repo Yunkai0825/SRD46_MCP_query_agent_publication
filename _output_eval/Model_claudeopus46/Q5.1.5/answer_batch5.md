@@ -1,0 +1,59 @@
+**Yes, EDTA is an outstanding chelator** — in fact, it is one of the most widely used chelating agents in chemistry, medicine, and industry. The NIST SRD-46 database contains **596 stability measurements** for EDTA, underscoring its importance. Here's the evidence:
+
+---
+
+## EDTA pKa Values (25 °C, I = 0.1 M)
+
+EDTA (H₄Y) is a hexaprotic acid. Its stepwise dissociation constants are:
+
+| Step | Equilibrium | pKₐ |
+|------|-------------|------|
+| 1 | H₆Y²⁺ → H₅Y⁺ | −1.5 |
+| 2 | H₅Y⁺ → H₄Y | 2.0 |
+| 3 | H₄Y → H₃Y⁻ | 2.69 |
+| 4 | H₃Y⁻ → H₂Y²⁻ | 6.13 |
+| 5 | H₂Y²⁻ → HY³⁻ | 9.52 |
+
+The two high pKₐ values (6.13 and 9.52) correspond to the nitrogen-bound protons, while the lower ones correspond to carboxylate groups. This spread means EDTA is fully deprotonated (Y⁴⁻) only above ~pH 10, but it still forms very strong complexes even at neutral pH.
+
+---
+
+## EDTA Stability Constants — log β (ML) at 20–25 °C
+
+| Metal Ion | log β (ML) range | Representative value |
+|-----------|-------------------|---------------------|
+| Fe³⁺ | 23.4 – 25.1 | **~25** |
+| Hg²⁺ | 21.5 – 23.2 | **~21.8** |
+| Cu²⁺ | 17.8 – 20.5 | **~18.8** |
+| Ni²⁺ | 18.3 – 18.6 | **~18.4** |
+| Pb²⁺ | 17.9 – 18.3 | **~18.0** |
+| Zn²⁺ | 16.3 – 16.7 | **~16.5** |
+| Cd²⁺ | 16.3 – 16.6 | **~16.5** |
+| Co²⁺ | 16.2 – 16.5 | **~16.3** |
+| Al³⁺ | 16.1 – 16.5 | **~16.3** |
+| Fe²⁺ | 14.3 – 14.3 | **~14.3** |
+| Mn²⁺ | 13.6 – 14.0 | **~13.8** |
+| Ca²⁺ | 10.4 – 11.0 | **~10.7** |
+| Mg²⁺ | 8.6 – 8.8 | **~8.7** |
+
+*Source: NIST Standard Reference Database 46 (SRD-46)*
+
+---
+
+## Why EDTA Is Such a Good Chelator
+
+1. **Hexadentate binding.** EDTA wraps around a metal ion using **six donor atoms** (4 carboxylate oxygens + 2 amine nitrogens), forming five 5-membered chelate rings. This maximizes the **chelate effect** — the entropic and enthalpic advantage of a single polydentate ligand over multiple monodentate ones.
+
+2. **Enormous log β values.** With log β values ranging from ~8.7 (Mg²⁺) to ~25 (Fe³⁺), EDTA binds virtually every di- and trivalent metal ion with extraordinary affinity. A log β of 18 means the complex is **10¹⁸ times more stable** than the free metal and ligand — essentially irreversible under normal conditions.
+
+3. **Broad metal selectivity.** The Irving–Williams series is clearly visible in the data: Mn²⁺ < Fe²⁺ < Co²⁺ < Ni²⁺ < Cu²⁺ > Zn²⁺, with Cu²⁺ at the top among divalent ions. Trivalent ions like Fe³⁺ are bound even more tightly due to higher charge density.
+
+4. **Practical versatility.** These properties make EDTA indispensable in:
+   - **Analytical chemistry** — complexometric titrations with indicators like Eriochrome Black T
+   - **Medicine** — chelation therapy for lead and heavy-metal poisoning
+   - **Food industry** — sequestering trace metals to prevent oxidation
+   - **Water treatment** — softening hard water by binding Ca²⁺ and Mg²⁺
+
+**In short: EDTA is not just a "good" chelator — it is the gold standard of chelating agents**, and the SRD-46 data with 596 measurements across 13+ metals powerfully confirms this.
+
+---

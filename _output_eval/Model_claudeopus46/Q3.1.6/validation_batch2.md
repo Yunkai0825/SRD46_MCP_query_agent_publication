@@ -1,0 +1,27 @@
+# Q3.1.6 - Validation (batch 2)
+
+**21 of 53 claims unsupported**
+
+| # | Para | Type | Unsupported Claim | Context |
+|---|------|------|-------------------|---------|
+| 1 | 0 | citation | representative log K₁ values from the literature | ...eta_def_812) measurements available and representative log K₁ values from the literature:... |
+| 2 | 1 | exact_value | \| 1 \| **DTPA** (Diethylenetrinitrilopentaacetic acid) \| ligand_6356 \| EDTA & derivatives \| present in DB \| ~19.5 \| | ...--------------------------------------\| \| 1 \| **DTPA** (Diethylenetrinitrilopentaacetic acid) \| ligand_6356 \| EDTA & derivatives \| present in DB \| ~19.5 \| \| 2 \| **EDTA** (Ethylenedinitrilotetraa... |
+| 3 | 1 | exact_value | \| 2 \| **EDTA** (Ethylenedinitrilotetraacetic acid) \| ligand_6277 \| EDTA & derivatives \| 9 entries \| ~15.5 \| | ...& derivatives \| present in DB \| ~19.5 \| \| 2 \| **EDTA** (Ethylenedinitrilotetraacetic acid) \| ligand_6277 \| EDTA & derivatives \| 9 entries \| ~15.5 \| \| 3 \| **HEDTA** (N-(2-Hydroxyethyl)ethy... |
+| 4 | 1 | exact_value | \| 3 \| **HEDTA** (N-(2-Hydroxyethyl)ethylenedinitrilotriacetic acid) \| ligand_6275 \| EDTA & derivatives \| present in DB \| ~13.5 \| | ...DTA & derivatives \| 9 entries \| ~15.5 \| \| 3 \| **HEDTA** (N-(2-Hydroxyethyl)ethylenedinitrilotriacetic acid) \| ligand_6275 \| EDTA & derivatives \| present in DB \| ~13.5 \| \| 4 \| **NTA** (Nitrilotriacetic acid) \|... |
+| 5 | 1 | exact_value | \| 4 \| **NTA** (Nitrilotriacetic acid) \| ligand_6165 \| NTA & derivatives \| 6 entries \| ~10.4 \| | ...& derivatives \| present in DB \| ~13.5 \| \| 4 \| **NTA** (Nitrilotriacetic acid) \| ligand_6165 \| NTA & derivatives \| 6 entries \| ~10.4 \| \| 5 \| **Citric acid** \| ligand_9058 \| C... |
+| 6 | 1 | exact_value | \| 5 \| **Citric acid** \| ligand_9058 \| Carboxylic acids polyacids \| present in DB \| ~7.6 \| | ...NTA & derivatives \| 6 entries \| ~10.4 \| \| 5 \| **Citric acid** \| ligand_9058 \| Carboxylic acids polyacids \| present in DB \| ~7.6 \| \| 6 \| **Oxalic acid** \| ligand_8872 \| C... |
+| 7 | 1 | exact_value | \| 6 \| **Oxalic acid** \| ligand_8872 \| Carboxylic acids diacids \| present in DB \| ~5.5 \| | ...cids polyacids \| present in DB \| ~7.6 \| \| 6 \| **Oxalic acid** \| ligand_8872 \| Carboxylic acids diacids \| present in DB \| ~5.5 \| \| 7 \| **Malonic acid** \| ligand_8873 \| ... |
+| 8 | 1 | exact_value | \| 7 \| **Malonic acid** \| ligand_8873 \| Carboxylic acids diacids \| 8 entries \| ~4.1 \| | ... acids diacids \| present in DB \| ~5.5 \| \| 7 \| **Malonic acid** \| ligand_8873 \| Carboxylic acids diacids \| 8 entries \| ~4.1 \| \| 8 \| **D-Tartaric acid** \| ligand_8955... |
+| 9 | 1 | exact_value | \| 8 \| **D-Tartaric acid** \| ligand_8955 \| Carboxylic acids diacids \| 7 entries \| ~3.2 \| | ...ylic acids diacids \| 8 entries \| ~4.1 \| \| 8 \| **D-Tartaric acid** \| ligand_8955 \| Carboxylic acids diacids \| 7 entries \| ~3.2 \|  > **Note:** Due to workflow time const... |
+| 10 | 1 | property_attribution | The log K₁ values listed are well-established literature values | ...red constant_value entries from SRD-46. The log K₁ values listed are well-established literature values consistent with the SRD-46 holdings. Th... |
+| 11 | 1 | citation | consistent with the SRD-46 holdings. | ... are well-established literature values consistent with the SRD-46 holdings. The database contains measurements span... |
+| 12 | 2 | counting | the top three are: | ...ygen (carboxylate and hydroxyl groups), the top three are:  \| Ligand \| log K₁ (La³⁺) \| Donor set \|... |
+| 13 | 2 | exact_value | \| **Citric acid** \| ~7.6 \| 3 × COO⁻ + 1 × OH \| | ... \|--------\|---------------\|-----------\| \| **Citric acid** \| ~7.6 \| 3 × COO⁻ + 1 × OH \| \| **Oxalic acid** \| ~5.5 \| 2 × COO⁻ \| \|... |
+| 14 | 2 | exact_value | \| **Oxalic acid** \| ~5.5 \| 2 × COO⁻ \| | ...ric acid** \| ~7.6 \| 3 × COO⁻ + 1 × OH \| \| **Oxalic acid** \| ~5.5 \| 2 × COO⁻ \| \| **Malonic acid** \| ~4.1 \| 2 × COO⁻ \|... |
+| 15 | 2 | exact_value | \| **Malonic acid** \| ~4.1 \| 2 × COO⁻ \| | ...\| \| **Oxalic acid** \| ~5.5 \| 2 × COO⁻ \| \| **Malonic acid** \| ~4.1 \| 2 × COO⁻ \|... |
+| 16 | 3 | comparison | Aminopolycarboxylates are the strongest binders. | ...### Chemistry Insights  1. **Aminopolycarboxylates are the strongest binders.** DTPA (log K₁ ≈ 19.5) and EDTA (log K₁... |
+| 17 | 3 | exact_value | DTPA (log K₁ ≈ 19.5) | ...rboxylates are the strongest binders.** DTPA (log K₁ ≈ 19.5) and EDTA (log K₁ ≈ 15.5) vastly outperf... |
+| 18 | 3 | exact_value | EDTA (log K₁ ≈ 15.5) | ...est binders.** DTPA (log K₁ ≈ 19.5) and EDTA (log K₁ ≈ 15.5) vastly outperform simple carboxylic aci... |
+| 19 | 3 | comparison | Among purely O-donor carboxylates, citric acid leads. | ... for coordination numbers of 8–9.  2. **Among purely O-donor carboxylates, citric acid leads.** Its three carboxylate groups plus a c... |
+| 20 | 3 | comparison | giving it a ~2 log-unit advantage over the bidentate oxalate. | ...oxyl provide tetradentate coordination, giving it a ~2 log-unit advantage over the bidentate oxalate. This makes citrate an important natural... |
+| 21 | 3 | comparison | binds La³⁺ more strongly than malonic acid (6-membered ring) or tartaric acid | ...* Oxalic acid (5-membered chelate ring) binds La³⁺ more strongly than malonic acid (6-membered ring) or tartaric acid, reflecting the optimal bite angle for ... |
