@@ -1,0 +1,74 @@
+cff-version: 1.0.0
+message: "If you use this software, please cite it as below."
+title: "An Autonomous Agentic Query Framework with MCP Tools and Modernized NIST SRD-46 for Accelerating Aqueous Speciation Analysis"
+abstract: >-
+  Large language models (LLMs) could automate reasoning over structured
+  scientific databases in chemistry and materials science, but this requires
+  purpose-built agentic architectures, not simply better models. We present an
+  agentic workflow for systematically querying and extracting data from the
+  NIST Standard Reference Database 46 (SRD-46) to perform autonomous speciation
+  and thermodynamic analysis, with three contributions: (1) a hierarchical
+  toolset, served by Model Context Protocol (MCP) framework, which converts
+  natural-language scientific questions into validated SQL over a database
+  enriched with canonical chemical identifiers, equilibrium-reaction maps, and
+  fingerprint-similarity matrices; (2) an induction-deduction-validation
+  reasoning loop with compactors that preserve key chemical context across
+  multi-turn sessions under dynamic memory limits within the same session; and
+  (3) a soft time/turn-budget hook that maintains coherent reasoning within
+  resource constraints. The resulting framework is LLM-agnostic and spans
+  queries from direct lookups to cross-species comparisons to open-ended tasks
+  like estimating unknown Fe complexation constants and selecting ligands for
+  acidic Fe electrodeposition. We benchmark four frontier models (Claude Opus
+  4.6, Claude Sonnet 4.6, GPT-5, and GPT-5.4) on 49 prompts across four
+  complexity levels, repeated five times (~1,000 answers), using automated
+  claim-level validation and regex-based tool-result matching. All models
+  retrieve reliably on direct-lookup tasks, confirming the architecture bridges
+  natural-language reasoning and structured database access. Beyond lookups,
+  behaviors of models diverge: GPT-5.4 converges rapidly with high per-claim
+  verifiability but limited exploratory depth, whereas Opus 4.6 pursues broader,
+  cross-examined reasoning at the cost of slower convergence and more
+  unsupported claims. This reveals a fundamental tradeoff between convergent
+  efficiency and exploratory breadth on fuzzy scientific queries that scalar
+  benchmarks cannot resolve. It also suggests that fuzzy scientific queries
+  require expert-stewarded reasoning, not faster convergence criteria or higher
+  benchmark metrics alone. Our results demonstrate that domain-expert-designed
+  agentic architectures and evaluation frameworks are essential infrastructure
+  for AI-driven scientific discovery, and that mixed-model deployment strategies
+  may be needed to balance efficiency and explanatory depth for different
+  classes of scientific questions.
+type: software
+authors:
+  - family-names: Sun
+    given-names: Yunkai
+    affiliation: "Center for Steel Electrification by Electrosynthesis; Chemical Sciences and Engineering Division, Argonne National Laboratory, Lemont, IL 60439, USA"
+  - family-names: Ravichandran
+    given-names: Adwaith
+    affiliation: "Physics Division, Argonne National Laboratory, Lemont, IL 60439, USA"
+  - family-names: Harb
+    given-names: Hassan
+    affiliation: "Center for Steel Electrification by Electrosynthesis; Materials Science Division, Argonne National Laboratory, Lemont, IL 60439, USA"
+  - family-names: Assary
+    given-names: "Rajeev S."
+    affiliation: "Center for Steel Electrification by Electrosynthesis; Materials Science Division, Argonne National Laboratory, Lemont, IL 60439, USA"
+  - family-names: Ingram
+    given-names: "Brian J."
+    affiliation: "Center for Steel Electrification by Electrosynthesis; Chemical Sciences and Engineering Division, Argonne National Laboratory, Lemont, IL 60439, USA"
+    email: ingram@anl.gov
+  - family-names: Yang
+    given-names: Zhenzhen
+    affiliation: "Center for Steel Electrification by Electrosynthesis; Chemical Sciences and Engineering Division, Argonne National Laboratory, Lemont, IL 60439, USA"
+    email: yangzhzh@anl.gov
+version: 1.0.0
+doi: 10.5281/zenodo.21226516
+date-released: 2026-07-06
+license: MIT
+repository-code: "https://github.com/Yunkai0825/SRD46_MCP_query_agent_publication"
+url: "https://doi.org/10.5281/zenodo.21226516"
+keywords:
+  - agentic workflow
+  - large language models
+  - Model Context Protocol
+  - NIST SRD-46
+  - aqueous speciation
+  - scientific databases
+  - chemistry
