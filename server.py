@@ -10,13 +10,20 @@ Launch:
     python server.py --sse      # starts on SSE  (for web clients)
 """
 
-from mcp.server.fastmcp import FastMCP
 import json
 import logging
 import re
 import sys
-from typing import Optional
+from typing import Annotated, Literal, Optional
+from pydantic import Field, StrictInt
 
+from workspace_setup import ensure_packaged_files
+
+# Restore bundled files before importing tools or starting the MCP transport.
+# Setup diagnostics go to stderr, leaving stdout available for MCP messages.
+ensure_packaged_files()
+
+from mcp.server.fastmcp import FastMCP
 from argo_config import is_mcp_tool_enabled
 
 # ── Logging ──────────────────────────────────────────────────
@@ -527,28 +534,48 @@ else:
 
 @mcp.tool(name="search_similar_ligands")
 def search_similar_ligands(
-    ligand_id: Optional[int | str] = None,
+    ligand_id: Optional[StrictInt | str] = None,
     ligand_name: Optional[str] = None,
-    top_k: int = 10,
-    metal_ids: Optional[str | list[int]] = None,
+    top_k: Annotated[int, Field(strict=True, ge=1, le=100)] = 10,
+    metal_ids: Optional[str | list[StrictInt | str]] = None,
+    metric: Literal["tanimoto_morgan", "tanimoto_maccs", "tversky_query_in_target", "tversky_target_in_query"] = "tanimoto_morgan",
+    min_similarity: Annotated[float, Field(strict=True, ge=0, le=1, allow_inf_nan=False)] = 0.0,
 ) -> str:
-    """Find structurally similar ligands and enrich them with map coverage."""
-    ligand_id = _coerce_optional_int(ligand_id, "ligand_id")
-    metal_id_list = None
-    if metal_ids is not None:
-        csv = _coerce_csv_ids(metal_ids, "metal_ids")
-        if csv:
-            metal_id_list = [int(x) for x in csv.split(",")]
-    log.info("🔧 TOOL CALL: search_similar_ligands(ligand_id=%r, ligand_name=%r, top_k=%d, metal_ids=%s)",
-             ligand_id, ligand_name, top_k, metal_id_list)
+    """Find similar ligands, excluding self and NULL selected scores.
+
+    metric: tanimoto_morgan (default), tanimoto_maccs,
+    tversky_query_in_target, or tversky_target_in_query. Directional
+    Tversky uses alpha=0.9/beta=0.1; query-in-target penalizes query-only
+    bits more strongly, and target-in-query reverses the direction.
+    top_k must be 1..100; min_similarity is an inclusive [0,1] threshold.
+    Scores describe fingerprint overlap, not binding affinity or an exact
+    substructure match. metal_ids filters map coverage, not structure ranks.
+    Legacy similarity_score remains Morgan; ranking_score uses metric.
+    """
+    metal_id_list = metal_ids
+    if isinstance(metal_ids, str):
+        metal_id_list = [value.strip() for value in metal_ids.split(",") if value.strip()]
     result = NT.search_similar_ligands(
         ligand_id=ligand_id,
         ligand_name=ligand_name,
         top_k=top_k,
         metal_ids=metal_id_list,
+        metric=metric,
+        min_similarity=min_similarity,
     )
-    log.info("   ↳ returned %d similar ligands", len(result.get("similar_ligands", [])))
+    log.info("Similarity tool returned %d ligands for metric=%s", len(result.get("similar_ligands", [])), metric)
     return json.dumps(result, indent=2, default=str)
+
+
+# FastMCP's default argument model ignores extra keys. For this tool, reject
+# misspelled filters rather than silently executing a different search. Update
+# both runtime validation and the published schema from this same model.
+_similarity_tool = mcp._tool_manager.get_tool("search_similar_ligands")
+_similarity_args = _similarity_tool.fn_metadata.arg_model
+_similarity_args.model_config["extra"] = "forbid"
+_similarity_args.model_rebuild(force=True)
+_similarity_tool.parameters = _similarity_args.model_json_schema(by_alias=True)
+del _similarity_args, _similarity_tool
 
 
 # ═════════════════════════════════════════════════════════════

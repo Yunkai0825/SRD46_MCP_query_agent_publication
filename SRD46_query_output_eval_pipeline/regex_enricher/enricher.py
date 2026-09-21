@@ -14,6 +14,8 @@ import re
 import socket
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from contextvars import ContextVar
+from functools import wraps
 from pathlib import Path
 from typing import Any
 
@@ -411,8 +413,28 @@ _CLAIMS_CACHE_FORMAT = 6
 _CLAIMS_LOCK_STALE_SECS = 6 * 60 * 60
 
 
+# Keep custom evaluation roots local to one call, including concurrent runs.
+# Unlike a persistent thread-local setting, the token is reset on every exit.
+_claims_eval_root: ContextVar[Path | None] = ContextVar("claims_eval_root", default=None)
+
+
+def _with_claims_eval_root(function):
+    @wraps(function)
+    def wrapped(*args, **kwargs):
+        requested = kwargs.get("eval_root")
+        token = _claims_eval_root.set(Path(requested) if requested is not None else None)
+        try:
+            return function(*args, **kwargs)
+        finally:
+            _claims_eval_root.reset(token)
+    return wrapped
+
+
 def _claims_cache_dir(model: str, question_id: str) -> Path:
-    d = REPO_ROOT / "_output_eval" / f"Model_{model}" / question_id
+    base = _claims_eval_root.get()
+    if base is None:
+        base = REPO_ROOT / "_output_eval"
+    d = base / f"Model_{model}" / question_id
     d.mkdir(parents=True, exist_ok=True)
     return d
 
@@ -721,6 +743,7 @@ def _save_claims_cache(
     )
 
 
+@_with_claims_eval_root
 def enrich_run_claims(
     model: str,
     question_id: str,

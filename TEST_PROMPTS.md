@@ -164,7 +164,7 @@ Queries that should return "not found" or require the model to explain limitatio
    - The final answer cites real values (not hallucinated).
 4. Check `_output/` for generated result, history, and ref-ID files, and `transcripts/` for interactive-session transcripts.
 5. If you want post-run claim extraction and stats publication, run `python run_batch_output_claim_eval_subagent.py --model gpt54 --question Q1.1.1 --workers 1 --force` or call the orchestrator module directly.
-6. Run automated tests with `pytest -q tests` or `pytest -q DEBUG_test_scripts`.
+6. Verify the local environment from the repository root with `uv run --locked python -B scripts/check_query_environment.py`; see [ENVIRONMENT.md](./ENVIRONMENT.md) for check coverage.
 
 ### Expected tool-call counts (approximate)
 

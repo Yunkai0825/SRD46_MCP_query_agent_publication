@@ -87,6 +87,9 @@ def _resolve_prompt(prompt_arg: str) -> str:
 
 def _cmd_query(args: argparse.Namespace) -> int:
     """Run a freeform agent conversation and write the standard artifacts."""
+    from workspace_setup import ensure_packaged_files
+
+    ensure_packaged_files()
     from freeform_runner import run_freeform_query  # type: ignore
 
     prompt_text = _resolve_prompt(args.prompt)

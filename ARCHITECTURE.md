@@ -242,12 +242,12 @@ The active SRD-46 database directory is [SRD46_db/](./SRD46_db/):
 
 | File | Current size | Used by |
 |---|---:|---|
-| `srd46_cards.db` | 158 MB | MCP tools, browser, grounding helpers |
-| `srd46_equilibrium_maps.db` | 28 MB | MCP network tools, browser network views |
-| `srd46_literature.db` | 45 MB | citation search, browser literature routes, grounding helpers |
-| `srd46_ligand_fingerprints.db` | 996 MB | similarity search, browser similarity routes |
+| `srd46_cards.db` | 188.61 MiB | MCP tools, browser, grounding helpers |
+| `srd46_equilibrium_maps.db` | 28.02 MiB | MCP network tools, browser network views |
+| `srd46_literature.db` | 44.04 MiB | citation search, browser literature routes, grounding helpers |
+| `srd46_ligand_fingerprints.db` | 728.35 MiB | similarity search, browser similarity routes |
 
-These files are large enough that the repository should be treated as a Git LFS repo for `.db` assets.
+The two files over GitHub's 100 MiB file limit are distributed as three ordinary ZIPs. [workspace_setup.py](./workspace_setup.py) restores missing files before the MCP server, query runner, or browser reads them. [packaged_files.json](./packaged_files.json) records original lengths, hashes, and ordered chunks; reconstruction is verified and installed atomically. The smaller databases remain ordinary Git files. See [PACKAGED_DATA.md](./PACKAGED_DATA.md).
 
 ## Typical End-To-End Flows
 
@@ -300,8 +300,7 @@ These files are large enough that the repository should be treated as a Git LFS 
 ## Repository Boundaries And Caveats
 
 - The repo is both source code and working data workspace. Generated outputs are intentionally present.
-- [__obsolete__/](./__obsolete__/) contains archived code and old outputs (including a prior `pyproject.toml`). It is not the main runtime path.
 - The live runtime depends on the Argo API configured in [argo_config.py](./argo_config.py); this is not a standalone public-cloud setup.
-- Install dependencies from [requirements.txt](./requirements.txt). There is no top-level `pyproject.toml`.
+- Install the locked environment with `uv sync --locked` using the root [pyproject.toml](./pyproject.toml) and [uv.lock](./uv.lock), or use the hash-pinned [requirements.txt](./requirements.txt). See [ENVIRONMENT.md](./ENVIRONMENT.md) for setup, validation, and environment provenance.
 - The browser route structure is `routes/`, not `blueprints/`.
 - There is no separate browser design document in the repo right now; this file is the workspace-level architecture reference.

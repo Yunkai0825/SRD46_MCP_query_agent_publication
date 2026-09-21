@@ -764,18 +764,26 @@ Fingerprint-based structural similarity search using pre-computed Morgan and MAC
 search_similar_ligands(
     ligand_id:   Optional[int | str] = None,    # exact ID or "ligand_N"
     ligand_name: Optional[str] = None,          # resolved via search_ligands
-    top_k:       int = 10,                      # number of similar ligands to return
-    metal_ids:   Optional[str | list[int]] = None,  # filter by metals with map coverage
+    top_k:       int = 10,                      # integer from 1 to 100
+    metal_ids:   Optional[str | list[int | str]] = None,  # selected map coverage
+    metric:      str = "tanimoto_morgan",        # selected ranking metric
+    min_similarity: float = 0.0,                # inclusive threshold in [0, 1]
 ) -> dict
 ```
+
+Use an exact ID when a name matches several ligands; ambiguous names are rejected. Accepted metrics are `tanimoto_morgan`, `tanimoto_maccs`, `tversky_query_in_target`, and `tversky_target_in_query`. Scores are filtered at full precision before `top_k` is applied; self matches and NULL scores for the selected metric are excluded. Invalid options and unknown MCP argument names are rejected.
+
+`metal_ids` filters the reported equilibrium-map coverage, including beta-definition counts; it does not change the structural similarity ranking. Compaction preserves the returned scope and order without running another database search. A valid query with no qualifying neighbors returns an empty list rather than a missing-fingerprint error.
 
 #### Return Schema
 
 ```json
 {
   "query_ligand": { "ligand_id": "ligand_5760", "ligand_name": "...", "smiles": "..." },
+  "metric": "tanimoto_morgan",
+  "min_similarity": 0.0,
   "query_eq_richness": { ... },
-  "metal_filter": [41],
+  "metal_filter": ["metal_41"],
   "similar_ligands": [
     {
       "ligand_id": "ligand_1234",
@@ -783,6 +791,7 @@ search_similar_ligands(
       "smiles": "...",
       "family_score": 0.85,
       "similarity_score": 0.72,
+      "ranking_score": 0.72,
       "tversky_query_in_target": 0.90,
       "tversky_target_in_query": 0.65,
       "eq_richness": { ... }
@@ -797,8 +806,11 @@ search_similar_ligands(
 |-------|------------|---------|
 | `family_score` | MACCS (Tanimoto) | Structural family similarity |
 | `similarity_score` | Morgan (Tanimoto) | Fine-grained structural similarity |
-| `tversky_query_in_target` | Morgan (Tversky) | How much of query's substructure is in target |
-| `tversky_target_in_query` | Morgan (Tversky) | How much of target's substructure is in query |
+| `tversky_query_in_target` | Morgan (Tversky) | Directional fingerprint overlap; penalizes query-only bits more heavily |
+| `tversky_target_in_query` | Morgan (Tversky) | The reverse directional fingerprint overlap |
+| `ranking_score` | Selected metric | The score used for filtering and ranking |
+
+Directional Tversky uses alpha 0.9 and beta 0.1. Fingerprint overlap is not a proof of substructure containment or binding affinity. Legacy `similarity_score` remains Morgan Tanimoto even when another ranking metric is selected.
 
 ---
 

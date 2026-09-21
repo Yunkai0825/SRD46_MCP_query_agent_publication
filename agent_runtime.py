@@ -10,6 +10,7 @@ Launch:
 """
 
 import json
+import io
 import logging
 import os
 import re
@@ -87,7 +88,29 @@ def _build_server_transport() -> StdioTransport:
         args=["server.py"],
         env=os.environ.copy(),
         cwd=str(Path(__file__).resolve().parent),
+        log_file=_subprocess_log_target(),
     )
+
+
+def _subprocess_log_target():
+    """Return a stderr target that Windows can pass to an MCP subprocess.
+
+    Test runners, notebooks, and orchestration wrappers sometimes replace
+    ``sys.stderr`` with an in-memory stream.  Such streams may support
+    ``write`` while raising from ``fileno()``, which prevents the local MCP
+    server from starting.  Preserve the active stderr when it owns a real
+    descriptor, otherwise use the interpreter's original stderr and finally
+    the platform null device.
+    """
+    for stream in (sys.stderr, sys.__stderr__):
+        if stream is None:
+            continue
+        try:
+            stream.fileno()
+        except (AttributeError, io.UnsupportedOperation, OSError, ValueError):
+            continue
+        return stream
+    return Path(os.devnull)
 
 
 async def list_mcp_tools(client: Client) -> List[Dict[str, Any]]:

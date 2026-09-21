@@ -11,6 +11,13 @@ from pathlib import Path
 
 from flask import Blueprint, render_template, request, jsonify, abort
 
+_PARENT_PACKAGE = (__package__ or "").rpartition(".")[0]
+
+if _PARENT_PACKAGE:
+    from .. import db as dbmod
+else:
+    import db as dbmod
+
 eval_bp = Blueprint("evaluation", __name__, url_prefix="/eval")
 
 # ---------------------------------------------------------------------------
@@ -20,7 +27,7 @@ eval_bp = Blueprint("evaluation", __name__, url_prefix="/eval")
 _BROWSER_DIR = Path(__file__).resolve().parent.parent          # NIST_SRD46_database_browser/
 _PROJECT_ROOT = _BROWSER_DIR.parent                             # SRD46_db_subagent/
 _OUTPUT_ROOT = _PROJECT_ROOT / "_output"
-_SRD46_DB_DIR = _PROJECT_ROOT / "SRD46_db"
+_SRD46_DB_DIR = dbmod.CARDS_DB.parent
 
 # Ensure the project root is on sys.path so SRD46_query_output_eval_pipeline is importable
 if str(_PROJECT_ROOT) not in sys.path:

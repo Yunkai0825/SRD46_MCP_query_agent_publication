@@ -1,15 +1,19 @@
 # SRD-46 Output Databases
 
-This directory contains three SQLite databases produced by the NIST SRD-46 pipeline.
+This directory supplies four SQLite databases used by the NIST SRD-46 query tools.
+The sizes and row counts below describe the current supplied snapshot (21 September 2026); historical run artifacts may use an earlier database revision.
 Together they provide a fully structured, queryable representation of the NIST
 **Standard Reference Database 46 — Critically Selected Stability Constants of
 Metal Complexes**.
 
-| Database | Size | Tables | Purpose |
+| Database | Installed size | Application tables | Purpose |
 |---|---|---|---|
-| `srd46_cards.db` | 158 MB | 16 | Primary data: metals, ligands, complexes, stability constants, pKa, and per-measurement literature references |
-| `srd46_equilibrium_maps.db` | 28 MB | 12 | Equilibrium grouping: maps measurements into networks that share related equilibrium definitions |
-| `srd46_literature.db` | 44 MB | 8 | Full literature catalog: complete citation entities and per-measurement citation links |
+| `srd46_cards.db` | 188.61 MiB | 15 | Primary data: metals, ligands, complexes, stability constants, pKa, and per-measurement literature references |
+| `srd46_equilibrium_maps.db` | 28.02 MiB | 11 | Equilibrium grouping: maps measurements into networks that share related equilibrium definitions |
+| `srd46_literature.db` | 44.04 MiB | 8 | Full literature catalog: complete citation entities and per-measurement citation links |
+| `srd46_ligand_fingerprints.db` | 728.35 MiB | 3 | Ligand fingerprints and precomputed similarity scores |
+
+Cards are stored in `srd46_cards.db.zip`; fingerprints are stored in `srd46_ligand_fingerprints.db.part001-of-002.zip` and `part002-of-002.zip`. Startup restores the original files automatically. The two smaller databases are stored directly. See [packaging and restoration](../PACKAGED_DATA.md); run `python workspace_setup.py --verify` from the repository root for a checksum check.
 
 ---
 
@@ -24,21 +28,21 @@ measurement from SRD-46 is stored as a structured "card".
 |---|---|---|
 | `metal_card` | 230 | One row per unique metal ion (e.g. `Ag+`, `Fe3+`). Includes symbol, charge, SMILES, InChI, stoichiometry JSON, and classification flags (`is_simple_ion`, `is_organometallic`). |
 | `ligand_card` | 5,750 | One row per unique ligand (e.g. Glycine). Includes formula, composition, SMILES, InChI, HxL protonation definition, IUPAC/common synonyms, and figure-definition string. |
-| `ligandmetal_card` | 79,063 | One row per VLM measurement entry. Links a `metal_id`, `ligand_id`, and `beta_definition_id` together with denormalized display names. `complex_system_id` is the original SRD-46 VLM identifier. |
+| `ligandmetal_card` | 89,824 | One row per VLM measurement entry. Links a `metal_id`, `ligand_id`, and `beta_definition_id` together with denormalized display names. `complex_system_id` is the original SRD-46 VLM identifier. |
 
 ### Stability constants
 
 | Table | Rows | Description |
 |---|---|---|
-| `ligandmetal_stability_measured` | 79,063 | Measured (literature) stability constants. Each row carries the constant type (`K`, `β`, etc.), value, temperature, ionic strength, solvent, electrolyte, and the fully parsed equilibrium equation (`equation_python`, `equation_str`, `equation_tree_json`, LHS/RHS species JSON, reaction type, element-conservation flag). |
+| `ligandmetal_stability_measured` | 89,824 | Measured (literature) stability constants. Each row carries the constant type (`K`, `β`, etc.), value, temperature, ionic strength, solvent, electrolyte, and the fully parsed equilibrium equation (`equation_python`, `equation_str`, `equation_tree_json`, LHS/RHS species JSON, reaction type, element-conservation flag). |
 | `ligandmetal_stability_estimated` | 0 | Reserved for ML-estimated constants (not yet populated). Schema mirrors `_measured` plus `model_name`, `model_version`, `confidence`, and `uncertainty`. |
 
 ### Ligand pKa
 
 | Table | Rows | Description |
 |---|---|---|
-| `ligand_pka_measured` | 8,800 | Measured pKa values linked to a ligand. Includes bracket transitions (`bracket_from_state` → `bracket_to_state`), pKa type, temperature, ionic strength, solvent, electrolyte, measurement method, quality, and originating VLM IDs (`vlm_ids_json`). |
-| `ligand_pka_bracket` | 28,402 | Protonation state "brackets" for each ligand. Each bracket defines a discrete protonation state (charge, formula, HxL form, SMILES, InChI). Brackets with `is_estimated = 1` were predicted by the QupKake ML model and include `model_name`, `model_version`, `confidence`, and `uncertainty`. |
+| `ligand_pka_measured` | 8,801 | Measured pKa values linked to a ligand. Includes bracket transitions (`bracket_from_state` → `bracket_to_state`), pKa type, temperature, ionic strength, solvent, electrolyte, measurement method, quality, and originating VLM IDs (`vlm_ids_json`). |
+| `ligand_pka_bracket` | 30,721 | Protonation state "brackets" for each ligand. Each bracket defines a discrete protonation state (charge, formula, HxL form, SMILES, InChI). Brackets with `is_estimated = 1` were predicted by the QupKake ML model and include `model_name`, `model_version`, `confidence`, and `uncertainty`. |
 
 ### Reference (citation) tables
 
@@ -55,7 +59,7 @@ The `vlm_id` in junction tables corresponds to `ligandmetal_card.complex_system_
 | `ref_literature` | 1 | Structured citation entity (journal-level detail). Contains `paper_id`, `year`, `issue`, `page`, `paper_name`. Only 1 row exists in the SRD-46 source data; the system primarily uses `literature_alt`. |
 | `ref_author` | 1 | Author entity. Sparse in SRD-46 source data. |
 | `ref_footnote` | 0 | Footnote entity. Defined in schema but no footnotes present in the source export. |
-| `ref_vlm_literature_alt` | 721,469 | Junction: VLM → `ref_literature_alt`. The main citation link — each VLM measurement typically maps to multiple citations. |
+| `ref_vlm_literature_alt` | 721,473 | Junction: VLM → `ref_literature_alt`. The main citation link — each VLM measurement typically maps to multiple citations. |
 | `ref_vlm_literature` | 43 | Junction: VLM → `ref_literature`. |
 | `ref_vlm_author` | 43 | Junction: VLM → `ref_author`. |
 | `ref_vlm_footnote` | 0 | Junction: VLM → `ref_footnote`. |
@@ -143,12 +147,12 @@ eq_map_collection          (1 per metal–ligand pair, 21,348 total)
 |---|---|---|
 | `eq_map_collection` | 21,348 | One per unique (metal_id, ligand_id) pair. Aggregated counters: `total_entries`, `total_networks`, `iterations_count`, `unassigned_count`. |
 | `eq_map` | 30,213 | Condition-partitioned map within a collection. Stores temperature and ionic-strength ranges, plus entry/network/stray counts. `iteration` tracks refinement passes. |
-| `eq_network` | 30,342 | A connected component of VLM nodes. Contains `node_count` and `edge_count`. |
+| `eq_network` | 30,279 | A connected component of VLM nodes. Contains `node_count` and `edge_count`. |
 | `eq_node` | 60,540 | One per VLM measurement. Carries `vlm_id`, `beta_definition_id`, `equation_python`, `constant_type`, `constant_value`, temperature, ionic strength, and `is_duplicate` / `used_in_map` flags. |
-| `eq_edge` | 47,600 | Link between two nodes that share at least one chemical species. |
-| `eq_node_species` | 186,328 | Species participating in a node's equilibrium equation, tagged with `side` (LHS / RHS). |
-| `eq_edge_species` | 77,068 | Species shared between two linked nodes. |
-| `eq_network_species` | 130,745 | Union of all species appearing in a network. |
+| `eq_edge` | 47,819 | Link between two nodes that share at least one chemical species. |
+| `eq_node_species` | 186,719 | Species participating in a node's equilibrium equation, tagged with `side` (LHS / RHS). |
+| `eq_edge_species` | 77,421 | Species shared between two linked nodes. |
+| `eq_network_species` | 130,982 | Union of all species appearing in a network. |
 | `eq_map_stray` | 5,305 | VLM entries in a map that could not be connected to any network (isolated equilibria). |
 | `eq_collection_unassigned` | 0 | VLMs that could not be placed in any map at all (currently empty). |
 | `eq_export_metadata` | 19 | Key-value metadata about the export run. |
@@ -301,5 +305,5 @@ WHERE  c.complex_system_id = 93606;
 - **`vlm_id` bridging:** The `ref_vlm_*` junction tables in `srd46_cards.db` and `vlm_literature_sic` in `srd46_literature.db` both use `vlm_id` to identify individual measurements. This corresponds to `ligandmetal_card.complex_system_id` and `eq_node.vlm_id`.
 - **`ligandmetal_stability_estimated`** is a placeholder for future ML-predicted stability constants (currently 0 rows).
 - **`citations_json`** in `ligandmetal_stability_measured` is reserved for per-row embedded citation data (currently NULL for all rows).
-- **Coverage:** 99.7 % of `ligandmetal_card` entries (78,790 / 79,063) have at least one `ref_vlm_literature_alt` citation link.
+- **Coverage:** 99.5% of `ligandmetal_card` entries (89,366 / 89,824) have at least one `ref_vlm_literature_alt` citation link.
 - All databases use `INTEGER PRIMARY KEY` (SQLite rowid alias) for auto-incrementing IDs and `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` where applicable.

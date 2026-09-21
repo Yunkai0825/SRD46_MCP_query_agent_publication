@@ -23,6 +23,7 @@ from ._search_helpers import (
     validate_clause,
     HARD_LIMIT,
     expand_where_with_similar,
+    get_similarity_score_map,
     execute_template,
     log,
 )
@@ -98,7 +99,9 @@ def search_stability(
     where, order_by, limit = parse_sql_where_query(sql_where_query)
 
     effective_where = where
+    similarity_scores: dict[int, float] = {}
     if ligand_similarity:
+        similarity_scores = get_similarity_score_map(where)
         effective_where = expand_where_with_similar(where, "stability")
 
     apply_group_filter = bool(include_groups or exclude_groups)
@@ -113,6 +116,7 @@ def search_stability(
         if expanded != where:
             rows = execute_template(_STABILITY_SELECT, expanded, order_by, fetch_limit, False)
             if rows:
+                similarity_scores = get_similarity_score_map(where)
                 log.info("   -> similarity fallback: %d rows via ligand expansion", len(rows))
 
     if apply_group_filter and rows:
@@ -125,6 +129,13 @@ def search_stability(
         if limit:
             rows = rows[:int(limit)]
     # else: no group filter — LIMIT (if any) was already applied in SQL
+
+    for row in rows:
+        raw_ligand_id = unprefix_id(row.get("ligand_id", ""))
+        if raw_ligand_id in similarity_scores:
+            row["similarity_score"] = round(
+                similarity_scores[raw_ligand_id], 4
+            )
 
     if rows:
         _enrich_stability_with_hxl_pka(rows)

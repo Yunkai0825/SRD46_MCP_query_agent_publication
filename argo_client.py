@@ -175,6 +175,14 @@ def _apply_self_harm_fallback_to_prompt(prompt: str) -> str:
     return f"{prefix}{prompt}{suffix}"
 
 
+def _require_api_user() -> None:
+    if not str(API_USER or "").strip():
+        raise RuntimeError(
+            "Argo API user is not configured. Set ARGO_API_USER to your ANL "
+            "username or enter it in the browser before running an agent query."
+        )
+
+
 def _post_argo(payload: dict, *, timeout: int) -> requests.Response:
     with _argo_request_gate():
         return requests.post(API_URL, headers=HEADERS, json=payload, timeout=timeout)
@@ -213,6 +221,7 @@ def _require_langchain() -> None:
 class ArgoLLM(BaseChatModel):
 
     def _generate(self, messages: List[BaseMessage], stop: Optional[List[str]] = None, **kwargs) -> ChatResult:
+        _require_api_user()
         _require_langchain()
         from agent_runtime import SYSTEM_PROMPT
 
@@ -472,6 +481,7 @@ def call_argo(prompt: str, system: str, stop: list = None,
         Override the default MODEL.  Used by the verdict agent to
         call gpt52 instead of gpt5.
     """
+    _require_api_user()
     if stop is None:
         stop = ["</tool_call>"]
     _model = model or argo_config.MODEL
@@ -523,7 +533,30 @@ def call_argo(prompt: str, system: str, stop: list = None,
             if isinstance(text, dict):
                 # handle {"response": {"error": ...}} shape
                 text = json.dumps(text)
+            if not isinstance(text, str):
+                text = str(text or "")
             log.info("<< Argo responded in %.1f s  (%d chars)", elapsed, len(text))
+
+            # An HTTP-200 envelope with no model text is not a valid agent
+            # turn.  Treat it as a transient API failure here, while the exact
+            # request is still available, instead of letting the workflow
+            # publish an empty answer or restart already-completed pair work.
+            if not text.strip():
+                last_err = (
+                    "HTTP 200 contained an empty model response "
+                    f"(request_id={request_id})"
+                )
+                log.warning(
+                    "[!] Empty Argo response (attempt %d/%d, request_id=%s); "
+                    "retrying the identical request",
+                    attempt,
+                    max_attempts,
+                    request_id,
+                )
+                if attempt < max_attempts:
+                    time.sleep(2 * attempt)
+                    continue
+                break
 
             # Re-append the stop token if it was stripped
             if "<tool_call>" in text and "</tool_call>" not in text:
@@ -565,6 +598,20 @@ def call_argo(prompt: str, system: str, stop: list = None,
                         len(clean_stop),
                         _single_line_preview(current_prompt),
                     )
+                    # Authentication / authorization failures are NOT transient
+                    # — retrying the same credentials cannot succeed. Fail fast
+                    # with an actionable message instead of burning all attempts.
+                    if response.status_code in (401, 403):
+                        raise RuntimeError(
+                            f"Argo authentication failed (HTTP {response.status_code}). The ANL "
+                            f"argoapi rejected the request for user '{API_USER}' / model "
+                            f"'{_model}' at {API_URL}. This is an upstream credential/endpoint "
+                            f"issue, not a problem with your prompt. Check that: (1) your ANL "
+                            f"username is correct, (2) you are on the ANL network/VPN, and (3) the "
+                            f"endpoint and model are currently available (override the endpoint with "
+                            f"the ARGO_API_URL env var if the dev endpoint is down). "
+                            f"Server said: {preview}"
+                        ) from e
                     if not fallback_applied and _is_self_harm_filter_response(response):
                         fallback_system = _apply_self_harm_fallback_to_system(current_system)
                         fallback_prompt = _apply_self_harm_fallback_to_prompt(current_prompt)

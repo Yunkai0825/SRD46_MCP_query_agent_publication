@@ -15,7 +15,7 @@ def main():
     from server import mcp          # deferred import keeps module-level fast
 
     transport = "sse" if "--sse" in sys.argv else "stdio"
-    print(f"Starting SRD-46 MCP server (transport={transport}) …")
+    print(f"Starting SRD-46 MCP server (transport={transport}) …", file=sys.stderr)
     mcp.run(transport=transport)
 
 

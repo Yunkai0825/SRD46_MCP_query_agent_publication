@@ -244,37 +244,12 @@ def _inspect_vlm(vlm_id: int) -> dict:
 
         result["networks"] = _rows_to_dicts(conn.execute(sql_network, (vlm_id,)))
         prefix_ids_in_rows(result["networks"])
+        # Return ALL citations for the VLM (was previously limited to 5; the
+        # standalone ``inspect_literature`` tool has been folded in here).
         result["citations"] = _rows_to_dicts(conn.execute(
-            sql_citations + " ORDER BY la.shortcut LIMIT 5", (vlm_id,)))
+            sql_citations + " ORDER BY la.shortcut", (vlm_id,)))
         prefix_ids_in_rows(result["citations"])
-        total_cit = conn.execute(
-            "SELECT COUNT(*) AS n FROM litdb.vlm_literature_sic WHERE vlm_id = ?",
-            (vlm_id,),
-        ).fetchone()
-        result["total_citations"] = total_cit["n"] if total_cit else 0
-
-    return result
-
-
-# ── literature lookup ────────────────────────────────────────────────
-
-def _inspect_literature(vlm_id: int) -> dict:
-    """All citations for a single VLM measurement."""
-    result: dict = {"prefix_id": f"vlm_{vlm_id}"}
-
-    sql = """
-        SELECT la.literature_alt_id, la.shortcut, la.citation
-        FROM   litdb.vlm_literature_sic sic
-        JOIN   litdb.literature_alt la ON la.literature_alt_id = sic.literature_alt_id
-        WHERE  sic.vlm_id = ?
-        ORDER  BY la.shortcut
-    """
-
-    with attach_all_dbs() as conn:
-        rows = _rows_to_dicts(conn.execute(sql, (vlm_id,)))
-        prefix_ids_in_rows(rows)
-        result["citations"] = rows
-        result["total_citations"] = len(rows)
+        result["total_citations"] = len(result["citations"])
 
     return result
 
@@ -310,6 +285,28 @@ def inspect_card(prefix_id: str) -> dict:
         return _inspect_vlm(num_id)
     else:
         return {"error": f"Unknown prefix type: {kind}"}
+
+
+# Literature-only inspection for query-agent clients.
+def _inspect_literature(vlm_id: int) -> dict:
+    """All citations for a single VLM measurement."""
+    result: dict = {"prefix_id": f"vlm_{vlm_id}"}
+
+    sql = """
+        SELECT la.literature_alt_id, la.shortcut, la.citation
+        FROM   litdb.vlm_literature_sic sic
+        JOIN   litdb.literature_alt la ON la.literature_alt_id = sic.literature_alt_id
+        WHERE  sic.vlm_id = ?
+        ORDER  BY la.shortcut
+    """
+
+    with attach_all_dbs() as conn:
+        rows = _rows_to_dicts(conn.execute(sql, (vlm_id,)))
+        prefix_ids_in_rows(rows)
+        result["citations"] = rows
+        result["total_citations"] = len(rows)
+
+    return result
 
 
 def inspect_literature(prefix_id: str) -> dict:

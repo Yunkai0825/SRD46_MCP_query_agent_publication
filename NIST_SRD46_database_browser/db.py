@@ -8,11 +8,17 @@ relative to this file so the browser works regardless of cwd.
 import csv
 import os
 import sqlite3
+import sys
 from contextlib import contextmanager
 from pathlib import Path
 
 # ── path resolution ──────────────────────────────────────────────────
 _THIS_DIR = Path(__file__).resolve().parent
+_PROJECT_ROOT = _THIS_DIR.parent
+if str(_PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(_PROJECT_ROOT))
+
+from workspace_setup import ensure_packaged_files
 _REQUIRED_DB_FILES = (
     "srd46_cards.db",
     "srd46_equilibrium_maps.db",
@@ -33,7 +39,15 @@ def _resolve_srd46_db_dir() -> Path:
 
     env_dir = os.environ.get("SRD46_DB_DIR")
     if env_dir:
-        candidates.append(Path(env_dir).expanduser())
+        external_dir = Path(env_dir).expanduser()
+        # A complete explicit database installation remains independent of
+        # the repository archives (including when serving from another cwd).
+        if all((external_dir / name).is_file() for name in _REQUIRED_DB_FILES):
+            return external_dir
+        candidates.append(external_dir)
+
+    # Restore before resolving candidates: a clean clone has ZIPs, not DBs.
+    ensure_packaged_files()
 
     candidates.extend([
         _THIS_DIR.parent / "NIST_SRD46_core_db_storage",

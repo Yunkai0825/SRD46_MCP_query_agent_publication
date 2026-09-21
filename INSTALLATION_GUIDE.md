@@ -6,9 +6,9 @@ This workspace bundles the SRD-46 MCP server, terminal agent runtime, Flask brow
 
 ```mermaid
 flowchart TD
-    clone["Clone repo + git lfs pull"] --> deps["Install Python 3.11 dependencies"]
-    deps --> db["Verify SRD46_db/*.db"]
-    db --> argo["Set ARGO_API_USER if needed"]
+    clone["Clone repo (ordinary files and ZIPs)"] --> deps["uv sync --locked (Python 3.13.13)"]
+    deps --> db["First launch restores missing packaged databases"]
+    db --> argo["Set your ARGO_API_USER for live requests"]
     argo --> choice{"Choose runtime"}
     choice --> api["python API_SRD46_Query_UI.py (browser)"]
     choice --> apiquery["python API_SRD46_Query_UI.py query ... (one-shot)"]
@@ -20,40 +20,51 @@ flowchart TD
 
 ## Prerequisites
 
-- Python 3.11 or newer
+- Python 3.13.13 for the locked reproducibility environment; uv 0.8.15 was tested
 - Access to the internal Argo API used by the agent runtime and evaluation pipeline
 - The SRD-46 SQLite databases under `SRD46_db/`
-- Git LFS if you are cloning the repo with `.db` assets tracked externally
+- About 1 GiB free for the two restored database files, in addition to the checkout and Python environment
 
 ## 1. Install Dependencies
 
-Install workspace dependencies from `requirements.txt`:
+Run from the repository root using **uv 0.8.15** (the tested version):
 
 ```bash
-pip install -r requirements.txt
+uv sync --locked
+uv run --locked python API_SRD46_Query_UI.py query --help
 ```
 
-There is no top-level `pyproject.toml`; the previous one has been moved into `__obsolete__/`.
+The root [.python-version](./.python-version) selects **Python 3.13.13**. [pyproject.toml](./pyproject.toml) declares the dependency set, and [uv.lock](./uv.lock) records exact resolved versions and package hashes. `uv sync --locked` creates `.venv` and checks that the lock matches the project without updating it. For the remaining commands in this guide, use `uv run --locked python ...`, or activate `.venv` before using `python` directly.
+
+For pip installation, create and activate a clean Python 3.13.13 virtual environment, then install the sole root [requirements.txt](./requirements.txt), a hash-pinned export generated from the lock:
+
+```bash
+python -m pip install --require-hashes -r requirements.txt
+```
+
+See [ENVIRONMENT.md](./ENVIRONMENT.md) for platform-specific setup, verification commands, and environment provenance. This is a documented reproducibility baseline; it is not presented as a recovered record of the exact historical experiment environment.
 
 Core packages:
 
-- `fastmcp`, `mcp`: MCP server/client transport
+- `fastmcp`, `mcp`, `pydantic`: MCP server/client transport and tool schemas
 - `requests`: Argo HTTP client transport
+- `sqlglot`: SQL parsing and normalization
 - `prompt_toolkit`: multiline terminal chat UI
 - `rdkit`, `pubchempy`: chemical resolution and ligand similarity support
 - `flask`, `markdown`, `markupsafe`: browser UI support
-
-If you only need the MCP server and terminal runtime, the minimal install is:
-
-```bash
-pip install fastmcp mcp requests prompt_toolkit
-```
-
-If `rdkit` is difficult to install via `pip`, use a conda-forge build.
+- `numpy`, `matplotlib`: query-evaluation statistics and plots
 
 ## 2. Verify Database Assets
 
-The active databases live under `SRD46_db/`:
+The active databases live under `SRD46_db/`. Keep all three database ZIPs from the checkout in this directory. On first launch, the browser, query CLI, MCP server, and database tools restore missing packaged originals before accessing them. Restoration checks every part and the reconstructed file against the manifest; it does not rebuild or regenerate data.
+
+An explicit setup check is also available and needs only the Python standard library:
+
+```bash
+python workspace_setup.py --verify
+```
+
+See [PACKAGED_DATA.md](./PACKAGED_DATA.md) for the exact archive layout, checksums, and publication rules. Existing database files are preserved; normal startup checks their sizes, while `--verify` also checks their SHA-256 hashes.
 
 | Database | Purpose |
 |---|---|
@@ -90,15 +101,16 @@ Current defaults include:
 - `ARGO_MAX_CONCURRENT_REQUESTS = 10`
 - `MCP_BLOCKED_TOOLS = ""` (empty by default)
 
-The API user defaults to whatever `ARGO_API_USER` is set to (otherwise the hardcoded default in `argo_config.py`):
+Supply your own authorized Argo username through `ARGO_API_USER` before making live requests. There is no default personal account; an empty username fails before any HTTP request:
 
 ```bash
 set ARGO_API_USER=your.username
 ```
 
-Three per-process overrides apply at runtime:
+Per-process overrides apply at runtime:
 
 - `ARGO_API_USER` — ANL Argo username sent on every request.
+- `ARGO_API_URL` — overrides the default Argo chat endpoint.
 - `SRD46_BLOCKED_MCP_TOOLS` — comma-separated tool names to hide from the agent (e.g. `execute_srd46_sql`).
 - The browser's `/agent` page accepts a per-run username, which is patched into `os.environ["ARGO_API_USER"]`, `argo_config.API_USER`, and the already-imported bindings in `argo_client`, `SRD46_tools.strategy_planner`, and `terminal_chat` for the lifetime of the process.
 
@@ -219,13 +231,15 @@ Derived evaluation artifacts are written to `_output_eval/`:
 - `validation_batch*.md`
 - `Eval_Stats/` published statistics
 
-## 6. Tests
+## 6. Local Environment Check
 
-All tests live under `DEBUG_test_scripts/` (a `conftest.py` is included). There is no separate top-level `tests/` directory.
+Run the included check after installing the locked environment; it also restores missing packaged database assets:
 
 ```bash
-pytest -q DEBUG_test_scripts
+uv run --locked python -B scripts/check_query_environment.py
 ```
+
+This checks dependency versions, imports, chemical identifier conversion, PNG plotting, a browser page, the query CLI, and a local MCP database query without making model/API requests. See [ENVIRONMENT.md](./ENVIRONMENT.md) for its coverage and validation record. `pytest` is an optional developer dependency; the historical developer test suite is not included here.
 
 `TEST_PROMPTS.md` currently defines 56 benchmark prompts across direct lookup, provenance, comparison, aggregate profiling, multi-step reasoning, thermodynamic reasoning, hypothesis generation, ambiguous prompts, and negative cases.
 
@@ -234,7 +248,9 @@ pytest -q DEBUG_test_scripts
 | Problem | Likely fix |
 |---|---|
 | `ModuleNotFoundError` for `fastmcp`, `mcp`, or `requests` | reinstall root requirements |
-| Browser starts but some sections fail | verify all four SRD-46 DB files are present |
+| Missing ZIP part during startup | retrieve the named ZIP from the same checkout; keep both fingerprint parts together |
+| Database size or checksum mismatch | preserve or back up your local file, then investigate the mismatch; setup will not overwrite it |
+| Browser starts but some sections fail | run `python workspace_setup.py --verify` and verify all four SRD-46 DB files are present |
 | Browser cannot locate databases | set `SRD46_DB_DIR` to the directory containing the `.db` files |
 | Agent or eval pipeline fails immediately on API calls | set `ARGO_API_USER` and verify Argo network access |
 | Ligand similarity features fail | install `rdkit` and verify `srd46_ligand_fingerprints.db` exists |

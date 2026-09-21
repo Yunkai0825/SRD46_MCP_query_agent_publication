@@ -29,8 +29,11 @@ def is_mcp_tool_enabled(tool_name: str) -> bool:
     return tool_name not in MCP_BLOCKED_TOOLS
 
 # ── API connection ──────────────────────────────────────────
-API_URL       = "https://apps-dev.inside.anl.gov/argoapi/api/v1/resource/chat/"
-API_USER      = os.environ.get("ARGO_API_USER", "yunkai.sun")
+API_URL       = os.environ.get(
+    "ARGO_API_URL",
+    "https://apps-dev.inside.anl.gov/argoapi/api/v1/resource/chat/",
+)
+API_USER      = os.environ.get("ARGO_API_USER", "").strip()
 HEADERS       = {"Content-Type": "application/json"}
 
 # ── Model names ─────────────────────────────────────────────

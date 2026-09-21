@@ -375,8 +375,18 @@ def _compact_vlm(data: dict) -> str:
     lines.append("")
 
     # ── Citations ──
-    total_cit = data.get("total_citations", 0)
+    citations = data.get("citations", []) or []
+    total_cit = data.get("total_citations", len(citations))
     lines.append(f"**total_citations:** {total_cit}")
+    if citations:
+        lines.append("")
+        lines.append("| lit_id | shortcut | citation |")
+        lines.append("|--------|----------|----------|")
+        for c in citations:
+            lit = c.get("literature_alt_id", "?")
+            sc = c.get("shortcut", "") or "***"
+            cite = _cell(c.get("citation", ""), 80)
+            lines.append(f"| {lit} | {sc} | {cite} |")
     lines.append("")
     return "\n".join(lines) + "\n"
 
@@ -416,10 +426,11 @@ def compact_inspect_card(data: dict) -> str:
 
     pid = data.get("prefix_id", "")
     if pid.startswith("metal"):
-        return _compact_metal(data)
+        body = _compact_metal(data)
     elif pid.startswith("ligand"):
-        return _compact_ligand(data)
+        body = _compact_ligand(data)
     elif pid.startswith("vlm"):
-        return _compact_vlm(data)
+        body = _compact_vlm(data)
     else:
         return _compact_error({"prefix_id": pid, "error": f"Unrecognized prefix: {pid}"})
+    return body

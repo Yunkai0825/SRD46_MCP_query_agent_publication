@@ -101,7 +101,7 @@ def _network_full(rows: list[dict]) -> list[str]:
         # -- main network table --
         lines.append(
             "| network_id | node_counts | edge_counts | T_range | I_range "
-            "| vlm_counts | beta_def_ids | type | values |"
+            "| vlm_ids | beta_def_ids | type | values |"
         )
         lines.append(
             "|------------|-------------|-------------|---------|---------|"
@@ -125,8 +125,11 @@ def _network_full(rows: list[dict]) -> list[str]:
                     beta_val[bid] = float(val) if val is not None else 0.0
             beta_ids = sorted(beta_val, key=lambda b: beta_val[b])
 
-            # vlm column: always count
-            vlm_col = str(len(vlm_ids))
+            # Preserve concrete evidence identity. A downstream agent cannot
+            # cite or inspect a measurement represented only by a count.
+            vlm_col = "; ".join(
+                sorted(str(value) for value in vlm_ids if value)
+            )
 
             # beta_def column: full tokenized names when ≤3, else "N diff beta_def"
             if len(beta_ids) <= 3:
@@ -175,15 +178,18 @@ def _network_full(rows: list[dict]) -> list[str]:
             f"> First network — reference conditions "
             f"(T {first_t} °C, I {first_i} M).\n"
         )
-        lines.append("| beta_def | equation | type | value |")
-        lines.append("|----------|----------|------|-------|")
+        lines.append("| vlm_id | beta_def | equation | type | value |")
+        lines.append("|--------|----------|----------|------|-------|")
         for r in sorted(first_net_rows,
                         key=lambda r: float(r.get("log_K") or 0)):
             bid = r.get("beta_definition_id", "?")
             eq = _esc(r.get("equation", "") or "")
             ctype = _ctype(r.get("constant_type"))
             val = _num(r.get("log_K"))
-            lines.append(f"| {bid} | `{eq}` | {ctype} | {val} |")
+            vlm_id = r.get("vlm_id", "?")
+            lines.append(
+                f"| {vlm_id} | {bid} | `{eq}` | {ctype} | {val} |"
+            )
 
         lines.append("")
     return lines
@@ -284,7 +290,9 @@ def _network_summary(rows: list[dict]) -> list[str]:
         max_t_range = _range_str(max_first.get("temp_min"), max_first.get("temp_max"))
         max_i_range = _range_str(max_first.get("ionic_min"), max_first.get("ionic_max"))
         max_vlm_ids = {r.get("vlm_id") for r in max_net_rows}
-        max_vlm_col = str(len(max_vlm_ids))
+        max_vlm_col = "; ".join(
+            sorted(str(value) for value in max_vlm_ids if value)
+        )
 
         if len(sorted_bids) <= 3:
             max_beta_col = "; ".join(sorted_bids)
@@ -319,7 +327,7 @@ def _network_summary(rows: list[dict]) -> list[str]:
             "net_count": len(nets), "max_nodes": max_node_count,
             "max_net_id": max_net_id, "max_edge_counts": max_edge_c,
             "max_T_range": max_t_range, "max_I_range": max_i_range,
-            "max_vlm_counts": max_vlm_col, "max_beta_def_ids": max_beta_col,
+            "max_vlm_ids": max_vlm_col, "max_beta_def_ids": max_beta_col,
             "max_type": max_type_col, "max_values": max_val_col,
         })
 
@@ -342,15 +350,18 @@ def _network_summary(rows: list[dict]) -> list[str]:
                 f"ligand_id: {lid} | ligand_def_HxL: {hxl} | "
                 f"nodes: {global_max_nodes}\n"
             )
-            detail.append("| beta_def | equation | type | value |")
-            detail.append("|----------|----------|------|-------|")
+            detail.append("| vlm_id | beta_def | equation | type | value |")
+            detail.append("|--------|----------|----------|------|-------|")
             for r in sorted(global_max_detail,
                             key=lambda r: float(r.get("log_K") or 0)):
                 bid = r.get("beta_definition_id", "?")
                 eq = _esc(r.get("equation", "") or "")
                 ctype = _ctype(r.get("constant_type"))
                 val = _num(r.get("log_K"))
-                detail.append(f"| {bid} | `{eq}` | {ctype} | {val} |")
+                vlm_id = r.get("vlm_id", "?")
+                detail.append(
+                    f"| {vlm_id} | {bid} | `{eq}` | {ctype} | {val} |"
+                )
             detail.append("")
         return detail
 
@@ -378,7 +389,7 @@ def _network_summary(rows: list[dict]) -> list[str]:
     full_lines.append(
         "| metal | metal_id | ligand | ligand_id "
         "| max_net_id | max_nodes | max_edge_counts "
-        "| max_T_range | max_I_range | max_vlm_counts "
+        "| max_T_range | max_I_range | max_vlm_ids "
         "| max_beta_def_ids | max_type | max_values |"
     )
     full_lines.append(
@@ -393,7 +404,7 @@ def _network_summary(rows: list[dict]) -> list[str]:
             f"| {s['max_net_id']} "
             f"| {s['max_nodes']} | {s['max_edge_counts']} "
             f"| {s['max_T_range']} | {s['max_I_range']} "
-            f"| {s['max_vlm_counts']} | {s['max_beta_def_ids']} "
+            f"| {s['max_vlm_ids']} | {s['max_beta_def_ids']} "
             f"| {s['max_type']} | {s['max_values']} |"
         )
     full_lines.append("")
@@ -406,17 +417,18 @@ def _network_summary(rows: list[dict]) -> list[str]:
     lines.append("### Metal-ligand pair summary")
     lines.append(
         "| metal | metal_id | ligand | ligand_id | HxL "
-        "| T_range | I_range | net_count | max_nodes | max_net_id | ligand_SMILES |"
+        "| T_range | I_range | net_count | max_nodes | max_net_id | max_vlm_ids | ligand_SMILES |"
     )
     lines.append(
         "|-------|----------|--------|-----------|-----"
-        "|---------|---------|-----------|----------|------------|---------------|"
+        "|---------|---------|-----------|----------|------------|-------------|---------------|"
     )
     for s in pair_summaries:
         lines.append(
             f"| {s['metal']} | {s['metal_id']} | {s['ligand']} | {s['ligand_id']} "
             f"| {s['HxL']} | {s['T_range']} | {s['I_range']} | {s['net_count']} "
-            f"| {s['max_nodes']} | {s['max_net_id']} | {s['ligand_SMILES']} |"
+            f"| {s['max_nodes']} | {s['max_net_id']} | {s['max_vlm_ids']} "
+            f"| {s['ligand_SMILES']} |"
         )
     lines.append("")
     lines.extend(_global_max_detail_lines())

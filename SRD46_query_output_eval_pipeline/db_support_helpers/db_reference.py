@@ -4,6 +4,7 @@ import sqlite3
 from pathlib import Path
 
 from ..input_support_helpers.scan import REPO_ROOT
+from workspace_setup import ensure_packaged_files
 
 DB_NAMES = {
     "cards": "srd46_cards.db",
@@ -13,8 +14,16 @@ DB_NAMES = {
 }
 
 
+def _database_directory(db_dir: str | Path | None) -> Path:
+    directory = Path(db_dir) if db_dir else REPO_ROOT / "SRD46_db"
+    if directory.resolve() == (REPO_ROOT / "SRD46_db").resolve():
+        # Evaluation may be the first command run after cloning the repository.
+        ensure_packaged_files()
+    return directory
+
+
 def open_reference_connection(db_dir: str | Path | None = None) -> sqlite3.Connection:
-    database_dir = Path(db_dir) if db_dir else REPO_ROOT / "SRD46_db"
+    database_dir = _database_directory(db_dir)
     conn = sqlite3.connect(":memory:")
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA query_only = ON")
@@ -27,7 +36,7 @@ def open_reference_connection(db_dir: str | Path | None = None) -> sqlite3.Conne
 
 
 def db_fingerprints(db_dir: str | Path | None = None) -> dict[str, dict[str, int | str]]:
-    database_dir = Path(db_dir) if db_dir else REPO_ROOT / "SRD46_db"
+    database_dir = _database_directory(db_dir)
     fingerprints: dict[str, dict[str, int | str]] = {}
     for alias, filename in DB_NAMES.items():
         db_path = database_dir / filename

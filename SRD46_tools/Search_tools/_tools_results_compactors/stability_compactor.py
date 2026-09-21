@@ -7,14 +7,15 @@ three detail levels depending on total output length (threshold:
 1. **Full** — one subsection per metal-ligand pair with every
    measurement as its own table row (vlm_id, ref_eq_map, beta_def,
    type, value, T°C, I(M), equation, non-aqueous phases,
-   HxL_involved, pKa_bracket_involved).
+   HxL_involved, pKa_bracket_involved) and ligand similarity score when
+   similarity expansion was used.
 2. **Merged** — rows sharing the same equation + constant-type are
    collapsed into a single row showing value/T/I ranges and VLM counts,
    followed by per-section summary statistics.
 3. **Global stats** — all per-section detail is replaced by one
    per-constant-type summary table across all metal-ligand pairs,
-   followed by all-metals and all-ligands aggregate tables and
-   functional-group statistics.
+   followed by a similarity-ranked ligand table, all-metals and
+   all-ligands aggregate tables, and functional-group statistics.
 4. **Global stats (compact ligands)** — if the aggregate output is
    still oversized, the wide all-ligands aggregate table is replaced
    by a minimal ``ligand_id | ligand_name | n_vlm`` table (mirrors
@@ -105,6 +106,13 @@ def _count_distinct(values: list[str]) -> str:
     return str(len(distinct))
 
 
+def _format_ids(values: list[object]) -> str:
+    """Preserve concrete canonical IDs in model-facing summaries."""
+
+    distinct = sorted({str(value) for value in values if value})
+    return "; ".join(distinct) if distinct else "***"
+
+
 def _collect_phase_cell(rows: list[dict]) -> str:
     phases: list[str] = []
     seen_phases: set[str] = set()
@@ -119,11 +127,24 @@ def _collect_phase_cell(rows: list[dict]) -> str:
     return _cell("; ".join(phases), 20) if phases else "***"
 
 
+def _similarity_score_cell(rows: list[dict]) -> str:
+    """Return one score or a score range, omitting absent score metadata."""
+
+    scores = [
+        row.get("similarity_score")
+        for row in rows
+        if row.get("similarity_score") is not None
+    ]
+    return _range_str(scores) if scores else ""
+
+
 def _append_section_ligand_meta(lines: list[str], group_rows: list[dict]) -> None:
     first_row = group_rows[0] if group_rows else {}
     ligand_hxl_def = first_row.get("ligand_HxL_definition", "") or "***"
     ligand_smiles = first_row.get("ligand_SMILES", "") or "***"
-    lines.append(f"ligand_HxL_def: {ligand_hxl_def} | ligand_SMILES: {ligand_smiles}")
+    lines.append(
+        f"ligand_HxL_def: {ligand_hxl_def} | ligand_SMILES: {ligand_smiles}"
+    )
     lines.append("")
 
 
@@ -177,10 +198,10 @@ def _render_merged(groups: OrderedDict[tuple, list[dict]]) -> list[str]:
         lines.append(f"metal_id: {mid} | ligand_id: {lid}")
         _append_section_ligand_meta(lines, group_rows)
         lines.append(
-            "| equation | type | vlm_counts | ref_eq_map | value_range | T°C_range | I(M)_range | beta_defs | non_aqueous_phases | HxL_involved | pKa_bracket_involved |"
+            "| equation | type | vlm_counts | vlm_ids | ref_eq_map | value_range | T°C_range | I(M)_range | beta_defs | non_aqueous_phases | HxL_involved | pKa_bracket_involved |"
         )
         lines.append(
-            "|----------|------|------------|------------|-------------|-----------|------------|-----------|--------------------|--------------|-------------|"
+            "|----------|------|------------|---------|------------|-------------|-----------|------------|-----------|--------------------|--------------|-------------|"
         )
 
         # Group by (equation_str, constant_type)
@@ -192,6 +213,7 @@ def _render_merged(groups: OrderedDict[tuple, list[dict]]) -> list[str]:
 
         for (eq, ctype), sub_rows in eq_type_groups.items():
             n = len(sub_rows)
+            vlm_ids = _format_ids([r.get("vlm_id") for r in sub_rows])
             map_col = _format_map_ids([r.get("map_id") for r in sub_rows])
             val_range = _range_str([r.get("log_K") for r in sub_rows])
             t_range = _range_str([r.get("temperature") for r in sub_rows])
@@ -203,7 +225,7 @@ def _render_merged(groups: OrderedDict[tuple, list[dict]]) -> list[str]:
             hxl = sub_rows[0].get("HxL_involved", "") or ""
             pka_br = sub_rows[0].get("pKa_bracket_involved", "") or ""
             lines.append(
-                f"| {_esc(eq)} | {ctype} | {n} | {map_col} | {val_range} | {t_range} | {i_range} | {beta_str} | {naq_str} | {hxl} | {pka_br} |"
+                f"| {_esc(eq)} | {ctype} | {n} | {vlm_ids} | {map_col} | {val_range} | {t_range} | {i_range} | {beta_str} | {naq_str} | {hxl} | {pka_br} |"
             )
 
         lines.append("")
@@ -265,10 +287,10 @@ def _render_global_stats(
             header += f" (top {_GLOBAL_STATS_MAX_ROWS_PER_TYPE} by vlm count)"
         lines.append(header)
         lines.append(
-            "| metal_id | metal_name | ligand_id | ligand_name | ligand_HxL_def | ligand_SMILES | vlm_counts | beta_counts | T\u00b0C_range | I(M)_range | non_aqueous_phases | ref_eq_map_counts |"
+            "| metal_id | metal_name | ligand_id | ligand_name | ligand_HxL_def | ligand_SMILES | vlm_counts | vlm_ids | beta_counts | beta_def_ids | value_range | T\u00b0C_range | I(M)_range | non_aqueous_phases | ref_eq_map_counts |"
         )
         lines.append(
-            "|----------|------------|-----------|-------------|----------------|---------------|------------|-------------|-----------|------------|--------------------|-------------------|"
+            "|----------|------------|-----------|-------------|----------------|---------------|------------|---------|-------------|--------------|-------------|-----------|------------|--------------------|-------------------|"
         )
         for (mid, mname, lid, lname), type_rows in shown:
             hxl_def = type_rows[0].get("ligand_HxL_definition", "") or "***"
@@ -276,13 +298,18 @@ def _render_global_stats(
             metal_name = _cell(mname, 20)
             ligand_name = _cell(lname, 28)
             vlm_counts = _count_distinct([r.get("vlm_id") for r in type_rows])
+            vlm_ids = _format_ids([r.get("vlm_id") for r in type_rows])
             beta_counts = _count_distinct([r.get("beta_definition_id") for r in type_rows])
+            beta_ids = _format_ids([
+                r.get("beta_definition_id") for r in type_rows
+            ])
+            value_range = _range_str([r.get("log_K") for r in type_rows])
             t_range = _range_str([r.get("temperature") for r in type_rows])
             i_range = _range_str([r.get("ionic_strength") for r in type_rows])
             phase_cell = _collect_phase_cell(type_rows)
             map_count = _count_distinct([r.get("map_id") for r in type_rows])
             lines.append(
-                f"| {mid} | {metal_name} | {lid} | {ligand_name} | {hxl_def} | {smiles} | {vlm_counts} | {beta_counts} | {t_range} | {i_range} | {phase_cell} | {map_count} |"
+                f"| {mid} | {metal_name} | {lid} | {ligand_name} | {hxl_def} | {smiles} | {vlm_counts} | {vlm_ids} | {beta_counts} | {beta_ids} | {value_range} | {t_range} | {i_range} | {phase_cell} | {map_count} |"
             )
         if truncated:
             omitted = total_pairs - _GLOBAL_STATS_MAX_ROWS_PER_TYPE
@@ -312,6 +339,52 @@ def _ctype_breakdown(rows: list[dict]) -> str:
         return "***"
     items = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
     return "; ".join(f"{name}:{n}" for name, n in items)
+
+
+def _render_similarity_ligand_scores(rows: list[dict]) -> list[str]:
+    """Preserve the similarity score assigned to every expanded ligand."""
+
+    by_ligand: OrderedDict[tuple, list[dict]] = OrderedDict()
+    for row in rows:
+        if row.get("similarity_score") is None:
+            continue
+        key = (
+            row.get("ligand_id", "?"),
+            row.get("ligand_name", "") or row.get("ligand_id", "?"),
+        )
+        by_ligand.setdefault(key, []).append(row)
+    if not by_ligand:
+        return []
+
+    def _rank(item: tuple[tuple, list[dict]]) -> float:
+        scores = [
+            row.get("similarity_score")
+            for row in item[1]
+            if row.get("similarity_score") is not None
+        ]
+        try:
+            return max(float(score) for score in scores)
+        except (TypeError, ValueError):
+            return float("-inf")
+
+    entries = sorted(by_ligand.items(), key=_rank, reverse=True)
+    lines = [
+        f"### Similarity-ranked ligands — {len(entries)} ligand(s)",
+        "| ligand_id | ligand_name | similarity_score | n_metals | n_vlm |",
+        "|-----------|-------------|------------------|----------|-------|",
+    ]
+    for (ligand_id, ligand_name), ligand_rows in entries:
+        score = _similarity_score_cell(ligand_rows) or "***"
+        n_metals = _count_distinct([
+            row.get("metal_id") for row in ligand_rows
+        ])
+        n_vlm = _count_distinct([row.get("vlm_id") for row in ligand_rows])
+        lines.append(
+            f"| {ligand_id} | {_cell(ligand_name, 30)} | {score} | "
+            f"{n_metals} | {n_vlm} |"
+        )
+    lines.append("")
+    return lines
 
 
 def _render_aggregate_metal_stats(rows: list[dict]) -> list[str]:
@@ -499,16 +572,19 @@ def compact_stability(rows: list[dict]) -> list[str]:
     limit, replace the detailed sections with global per-type summary tables.
     """
     groups = _group_rows(rows)
-    lines = _render_full(groups)
+    similarity_lines = _render_similarity_ligand_scores(rows)
+    lines = similarity_lines + _render_full(groups)
     if len("\n".join(lines)) <= _MAX_COMPACT_CHARS:
         return lines
-    lines = _render_merged(groups)
+    lines = similarity_lines + _render_merged(groups)
     if len("\n".join(lines)) <= _MAX_COMPACT_CHARS:
         return lines
-    lines = _render_global_stats(groups)
+    lines = similarity_lines + _render_global_stats(groups)
     if len("\n".join(lines)) <= _MAX_COMPACT_CHARS:
         return lines
-    return _render_global_stats(groups, compact_ligands=True)
+    return similarity_lines + _render_global_stats(
+        groups, compact_ligands=True
+    )
 
 
 def compact_search_stability(data: list[dict] | dict) -> str:

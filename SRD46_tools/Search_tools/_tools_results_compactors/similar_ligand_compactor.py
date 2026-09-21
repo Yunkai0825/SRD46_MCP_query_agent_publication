@@ -1,17 +1,17 @@
 """Markdown compactor for ``search_similar_ligands()`` results.
 
-Renders a table of structurally similar ligands ranked by Tanimoto
-similarity (Morgan-2048 fingerprints), with the query ligand shown as a
-reference row at the top.
+Renders returned structurally similar ligands in their selected metric order,
+with the query ligand shown as a reference row at the top. Compaction never
+queries the database or widens the returned search scope.
 
 Features
 --------
 - Full SMILES display (no truncation).
-- Query ligand shown as first reference row with ``similarity = 1.000``.
+- Query ligand shown as first reference row with score cells marked as references.
 - RDKit-based functional-group diff column: for each similar ligand,
   shows groups gained / lost relative to the query
   (e.g. ``+thiol, −carboxyl``).
-- Diff-signature histogram appended for ligands with similarity > 0.5,
+- Diff-signature histogram appended for returned ligands with ranking score > 0.5,
   summarising the most common structural changes across the result set.
 
 Public API
@@ -25,102 +25,6 @@ Public API
 from __future__ import annotations
 
 from ._compactor_helpers import _cell, _esc, _num
-
-
-# ── DB query: all ligands above similarity threshold ─────────────────
-
-def _fetch_all_similar_above(
-    query_ligand: dict, threshold: float
-) -> list[dict]:
-    """Return all ligands from the fingerprint DB with tanimoto_morgan > *threshold*.
-
-    Each returned dict has ``ligand_id``, ``ligand_name``, ``smiles``,
-    ``similarity_score``, ``n_beta_defs``.
-    """
-    import re, sqlite3
-    from .._db_connection import FINGERPRINT_DB, CARDS_DB, EQUILIBRIUM_DB
-
-    qid_raw = query_ligand.get("ligand_id", "")
-    m = re.search(r"(\d+)", str(qid_raw))
-    if not m:
-        return []
-    qid = int(m.group(1))
-
-    fp_path = str(FINGERPRINT_DB)
-    cards_path = str(CARDS_DB)
-    if not FINGERPRINT_DB.exists() or not CARDS_DB.exists():
-        return []
-
-    conn = sqlite3.connect(f"file:{fp_path}?mode=ro", uri=True)
-    conn.row_factory = sqlite3.Row
-    try:
-        sql = """
-            SELECT ligand_id_2 AS similar_id, tanimoto_morgan AS sim
-            FROM   ligand_similarity
-            WHERE  ligand_id_1 = ? AND ligand_id_2 != ?
-              AND  tanimoto_morgan > ?
-            UNION ALL
-            SELECT ligand_id_1 AS similar_id, tanimoto_morgan AS sim
-            FROM   ligand_similarity
-            WHERE  ligand_id_2 = ? AND ligand_id_1 != ?
-              AND  tanimoto_morgan > ?
-            ORDER BY sim DESC
-        """
-        rows = [dict(r) for r in conn.execute(
-            sql, (qid, qid, threshold, qid, qid, threshold)
-        ).fetchall()]
-    finally:
-        conn.close()
-
-    if not rows:
-        return []
-
-    # Enrich with ligand_name + smiles from cards DB
-    all_ids = [r["similar_id"] for r in rows]
-    placeholders = ",".join("?" * len(all_ids))
-    cards_conn = sqlite3.connect(f"file:{cards_path}?mode=ro", uri=True)
-    cards_conn.row_factory = sqlite3.Row
-    try:
-        info_rows = cards_conn.execute(
-            f"SELECT ligand_id, ligand_name_SRD AS ligand_name, "
-            f"       ligand_SMILES AS smiles "
-            f"FROM   ligand_card WHERE ligand_id IN ({placeholders})",
-            all_ids,
-        ).fetchall()
-    finally:
-        cards_conn.close()
-    info_map = {r["ligand_id"]: dict(r) for r in info_rows}
-
-    # Enrich with beta_def count from equilibrium DB
-    beta_map: dict[int, int] = {}
-    eq_path = str(EQUILIBRIUM_DB)
-    if EQUILIBRIUM_DB.exists():
-        eq_conn = sqlite3.connect(f"file:{eq_path}?mode=ro", uri=True)
-        eq_conn.row_factory = sqlite3.Row
-        try:
-            beta_rows = eq_conn.execute(
-                f"SELECT ligand_id, SUM(total_entries) AS n_beta "
-                f"FROM   eq_map_collection "
-                f"WHERE  ligand_id IN ({placeholders}) "
-                f"GROUP BY ligand_id",
-                all_ids,
-            ).fetchall()
-            beta_map = {r["ligand_id"]: r["n_beta"] for r in beta_rows}
-        finally:
-            eq_conn.close()
-
-    result = []
-    for r in rows:
-        sid = r["similar_id"]
-        info = info_map.get(sid, {})
-        result.append({
-            "ligand_id": f"ligand_{sid}",
-            "ligand_name": info.get("ligand_name"),
-            "smiles": info.get("smiles"),
-            "similarity_score": r["sim"],
-            "n_beta_defs": beta_map.get(sid, 0),
-        })
-    return result
 
 
 # ── functional-group helpers ─────────────────────────────────────────
@@ -184,16 +88,27 @@ def compact_similar_ligand(rows: list[dict]) -> list[str]:
         # Header with query context
         q = first.get("query_ligand", {})
         q_name = q.get("ligand_name", q.get("ligand_id", "?")) if isinstance(q, dict) else str(q)
-        lines: list[str] = [f"**Query:** {q_name}"]
+        metric = first.get("metric", "tanimoto_morgan")
+        metric_label = {
+            "tanimoto_morgan": "Morgan Tanimoto",
+            "tanimoto_maccs": "MACCS Tanimoto",
+            "tversky_query_in_target": "Tversky query in target",
+            "tversky_target_in_query": "Tversky target in query",
+        }.get(metric, str(metric))
+        lines: list[str] = [f"**Query:** {q_name}", f"**Ranking metric:** {metric_label}"]
+        if "min_similarity" in first:
+            lines.append(f"**Minimum ranking score:** {first['min_similarity']} (inclusive)")
 
         # Eq-richness summary if present
         richness = first.get("query_eq_richness", [])
-        if richness and isinstance(richness, list):
+        if isinstance(richness, dict):
+            lines.append(f"**Eq-map coverage:** {richness.get('n_metals', 0)} metal partner(s)")
+        elif richness and isinstance(richness, list):
             lines.append(f"**Eq-map coverage:** {len(richness)} metal partner(s)")
         lines.append("")
 
         if not inner:
-            lines.append("*(no similar ligands found)*")
+            lines.append(_esc(first.get("error") or first.get("message") or "No similar ligands found."))
             return lines
 
         # Pre-compute functional-group diff for each similar ligand
@@ -214,7 +129,7 @@ def compact_similar_ligand(rows: list[dict]) -> list[str]:
             for k in keys:
                 if k == "diff_catalog_fun_group":
                     q_vals.append("*(query)*")
-                elif k in ("family_score", "similarity_score",
+                elif k in ("family_score", "similarity_score", "ranking_score",
                            "tversky_query_in_target", "tversky_target_in_query"):
                     q_vals.append("—")
                 elif k == "smiles":
@@ -239,27 +154,30 @@ def compact_similar_ligand(rows: list[dict]) -> list[str]:
                     vals.append(_esc(v) if k.endswith("_name") else _cell(v, 50))
             lines.append("| " + " | ".join(vals) + " |")
 
-        # -- diff signature pivot: ALL ligands in DB with similarity > 0.5 --
-        # Also include search results (inner) that pass the threshold.
+        # -- diff signature pivot: authorized returned ligands above 0.5 --
+        # Compaction is intentionally a pure transformation of the raw tool
+        # result.  A secondary DB query here would widen beyond ``top_k`` and
+        # introduce evidence outside the requested result set.
         _SIM_THRESHOLD = 0.5
-        all_above = _fetch_all_similar_above(q, _SIM_THRESHOLD)
-
-        # Merge search results that pass threshold but might be absent
-        # from the DB query (defensive dedup by ligand_id).
-        seen_ids = {s.get("ligand_id") for s in all_above}
+        all_above: list[dict] = []
         for s in inner:
-            sim = s.get("similarity_score")
+            sim = s.get("ranking_score", s.get("similarity_score"))
             if sim is not None and float(sim) > _SIM_THRESHOLD:
-                lid = s.get("ligand_id")
-                if lid and lid not in seen_ids:
-                    all_above.append({
-                        "ligand_id": lid,
-                        "ligand_name": s.get("ligand_name"),
-                        "smiles": s.get("smiles"),
-                        "similarity_score": float(sim),
-                        "n_beta_defs": 0,
-                    })
-                    seen_ids.add(lid)
+                eq_richness = s.get("eq_richness")
+                n_beta_defs = (
+                    eq_richness.get("n_beta_defs", 0)
+                    if isinstance(eq_richness, dict)
+                    else 0
+                )
+                if not isinstance(n_beta_defs, (int, float)):
+                    n_beta_defs = 0
+                all_above.append({
+                    "ligand_id": s.get("ligand_id"),
+                    "ligand_name": s.get("ligand_name"),
+                    "smiles": s.get("smiles"),
+                    "similarity_score": float(sim),
+                    "n_beta_defs": n_beta_defs,
+                })
 
         if all_above:
             from collections import defaultdict
@@ -314,7 +232,7 @@ def compact_similar_ligand(rows: list[dict]) -> list[str]:
             lines.append("")
             lines.append(
                 f"### Diff signature summary "
-                f"({n_total} ligand(s) with similarity > {_SIM_THRESHOLD})"
+                f"({n_total} returned ligand(s) with {metric_label} > {_SIM_THRESHOLD})"
             )
             hdr = "| group | " + " | ".join(_COLS) + " | avg_beta_counts_per_ligand |"
             sep = "|" + "|".join("---" for _ in range(len(_COLS) + 2)) + "|"
@@ -363,6 +281,31 @@ def compact_search_similar_ligands(data) -> str:
     Accepts either the raw dict returned by ``search_similar_ligands()``
     or a list wrapping that dict.
     """
+    # Preserve a tool-level failure as a failure.  In particular, the
+    # similarity tool can return ``similar_ligands=[]`` together with an
+    # ``error`` explaining that the query ligand has no fingerprint.  Rendering
+    # that envelope as a successful zero-row search misleads both agents and
+    # human auditors about whether an analogue search actually ran.
+    error_payload = data if isinstance(data, dict) else None
+    if (
+        error_payload is None
+        and isinstance(data, list)
+        and data
+        and isinstance(data[0], dict)
+    ):
+        error_payload = data[0]
+    if error_payload is not None and error_payload.get("error"):
+        query = error_payload.get("query_ligand")
+        if isinstance(query, dict):
+            query_name = query.get("ligand_name") or query.get("ligand_id") or "?"
+        else:
+            query_name = query or "?"
+        return (
+            "## search_similar_ligands — ERROR\n\n"
+            f"**Query:** {_esc(query_name)}\n\n"
+            f"**Error:** {_esc(error_payload['error'])}\n"
+        )
+
     if isinstance(data, dict):
         data = [data]
     if not isinstance(data, list):

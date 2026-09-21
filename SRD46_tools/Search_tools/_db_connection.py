@@ -5,6 +5,9 @@ Database connection helpers for the four SRD-46 SQLite databases.
 import sqlite3
 from pathlib import Path
 from contextlib import contextmanager
+from functools import lru_cache
+
+from workspace_setup import ensure_packaged_file
 
 # Resolve the SRD46_db directory relative to this repo.
 _DB_DIR = Path(__file__).absolute().parent.parent.parent / "SRD46_db"
@@ -15,9 +18,19 @@ LITERATURE_DB = _DB_DIR / "srd46_literature.db"
 FINGERPRINT_DB = _DB_DIR / "srd46_ligand_fingerprints.db"
 
 
+@lru_cache(maxsize=8)
+def _prepare_database(path: Path) -> None:
+    """Restore a packaged database once per process before its first use."""
+    ensure_packaged_file(path)
+
+
 def _verify(path: Path) -> str:
-    """Return the string path after verifying the file exists."""
-    if not path.exists():
+    """Restore a packaged database, then return its verified path."""
+    if not path.is_file():
+        # Permit recovery if a database was removed after an earlier query.
+        _prepare_database.cache_clear()
+    _prepare_database(path)
+    if not path.is_file():
         raise FileNotFoundError(f"Database not found: {path}")
     return str(path)
 

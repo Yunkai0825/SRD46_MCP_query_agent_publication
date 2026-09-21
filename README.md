@@ -1,6 +1,6 @@
-# SRD-46 Database Workspace
+# SRD-46 Query Agent
 
-This repository is the working workspace for querying, browsing, and evaluating the NIST Standard Reference Database 46 (SRD-46), "Critically Selected Stability Constants of Metal Complexes".
+Query, browse, and evaluate the NIST Standard Reference Database 46 (SRD-46), "Critically Selected Stability Constants of Metal Complexes".
 
 It combines five active pieces of functionality in one repo:
 
@@ -10,7 +10,22 @@ It combines five active pieces of functionality in one repo:
 4. an output-evaluation pipeline for parsing runs and grounding claims
 5. batch runners plus generated artifacts under `_output/` and `_output_eval/`
 
-This workspace also keeps the SQLite databases and generated outputs in-repo. The `.db` files are large and should be treated as Git LFS assets.
+The repository includes the databases and saved runs. Large databases are stored as ordinary, lossless ZIPs; the application restores missing originals automatically before opening them. New publication files use real Git blobs, with no Git LFS pointers.
+
+Release **v1.0.0(R)** · [Release notes](./CHANGELOG.md) · [Zenodo archive](https://doi.org/10.5281/zenodo.21226515)
+
+## Quick start
+
+Install Python **3.13.13** and uv (**0.8.15** tested), then run from the repository root:
+
+```bash
+uv sync --locked
+uv run --locked python API_SRD46_Query_UI.py
+```
+
+Open **http://127.0.0.1:5046**. The first launch restores the packaged databases and then starts the browser; later launches reuse them. Browsing and the [offline environment check](./ENVIRONMENT.md) require no model service. Live agent queries require your Argo access.
+
+See [installation](./INSTALLATION_GUIDE.md), [environment versions](./ENVIRONMENT.md), and [packaged data](./PACKAGED_DATA.md).
 
 ## Component Map
 
@@ -202,10 +217,10 @@ The active database files live under [SRD46_db/](./SRD46_db/):
 
 | Database | Current size | Role |
 |---|---:|---|
-| `srd46_cards.db` | 158 MB | primary metal, ligand, stability, pKa, and citation-link data |
-| `srd46_equilibrium_maps.db` | 28 MB | equilibrium map and network graph data |
-| `srd46_literature.db` | 45 MB | normalized literature catalog |
-| `srd46_ligand_fingerprints.db` | 996 MB | ligand similarity fingerprints and precomputed scores |
+| `srd46_cards.db` | 188.61 MiB | primary metal, ligand, stability, pKa, and citation-link data |
+| `srd46_equilibrium_maps.db` | 28.02 MiB | equilibrium map and network graph data |
+| `srd46_literature.db` | 44.04 MiB | normalized literature catalog |
+| `srd46_ligand_fingerprints.db` | 728.35 MiB | ligand similarity fingerprints and precomputed scores |
 
 See [SRD46_db/README.md](./SRD46_db/README.md) for schema details.
 
@@ -214,13 +229,13 @@ See [SRD46_db/README.md](./SRD46_db/README.md) for schema details.
 - [_output/](./_output/): raw query-run outputs organized by model and question
 - [_output_eval/](./_output_eval/): extracted answer/tool artifacts, claim caches, validation markdown, and aggregated `Eval_Stats/` reports
 - [transcripts/](./transcripts/): saved terminal-agent conversations
-- [__obsolete__/](./__obsolete__/): archived code and historical outputs retained for reference
 
-Because the repo includes large data files, make sure Git LFS is available when cloning:
+The cards database is distributed in one ZIP, and fingerprints in two clearly named ZIPs. Every archive is below 95 MiB and opens in Windows File Explorer. Keep all archives together in `SRD46_db/`; [workspace_setup.py](./workspace_setup.py) reassembles missing originals using the sizes and SHA-256 hashes in [packaged_files.json](./packaged_files.json). Saved outputs remain unchanged.
+
+To restore and verify the database files without starting a service:
 
 ```bash
-git lfs install
-git lfs pull
+python workspace_setup.py --verify
 ```
 
 ## Tool Surface
@@ -261,17 +276,27 @@ Full signatures and return-shape notes live in [SRD46_tools/TOOLS_REFERENCE.md](
 
 ## Installation And Setup
 
-Install dependencies from [requirements.txt](./requirements.txt):
+Use the locked reproducibility environment from the repository root. It targets **Python 3.13.13**, recorded in [.python-version](./.python-version), with **uv 0.8.15** tested:
 
 ```bash
-pip install -r requirements.txt
+uv sync --locked
+uv run --locked python API_SRD46_Query_UI.py query --help
 ```
+
+[pyproject.toml](./pyproject.toml) declares the dependencies and [uv.lock](./uv.lock) fixes their resolved versions. Run subsequent Python commands with `uv run --locked`, or activate the created `.venv` first.
+
+For pip users, the sole root [requirements.txt](./requirements.txt) is a version- and hash-pinned export of the same lock. Use a clean Python 3.13.13 virtual environment, activate it, then run:
+
+```bash
+python -m pip install --require-hashes -r requirements.txt
+```
+
+[ENVIRONMENT.md](./ENVIRONMENT.md) records the environment provenance, installation and verification commands, and the distinction between this reproducibility baseline and the historical experiment environment.
 
 Notes:
 
-- Python 3.11 or newer is required.
 - The agent runtime and benchmark runners depend on the internal Argo API configured in [argo_config.py](./argo_config.py).
-- The default ANL Argo username can be overridden per-process via `ARGO_API_USER`, or per-run via the `/agent` page form (which patches `argo_config.API_USER` and the already-imported bindings in `argo_client`, `SRD46_tools.strategy_planner`, and `terminal_chat`).
+- Supply your own ANL Argo username through `ARGO_API_USER` before live requests, or through the `/agent` page form (which patches `argo_config.API_USER` and the already-imported bindings in `argo_client`, `SRD46_tools.strategy_planner`, and `terminal_chat`).
 - The browser can resolve the DB directory via `SRD46_DB_DIR` if the DB files are not stored in the default repo location.
 - The Pourbaix browser section is optional and depends on the auxiliary CSV expected by [NIST_SRD46_database_browser/db.py](./NIST_SRD46_database_browser/db.py).
 
@@ -279,13 +304,15 @@ For a more detailed walk-through see [INSTALLATION_GUIDE.md](./INSTALLATION_GUID
 
 ## Testing And Evaluation
 
-### Pytest suite
+### Local environment check
 
-The [DEBUG_test_scripts/](./DEBUG_test_scripts/) directory holds the developer test set: parser, Argo client, claim classifier/grounder, compactor runtime diagnostics, DB reference, regex enricher, workflow builder, tool-stats and post-eval stats. A `conftest.py` is included.
+Run the included [environment check](./scripts/check_query_environment.py) to verify dependency versions, imports, chemical identifier conversion, plotting, browser rendering, and a local MCP database query without making model/API requests:
 
 ```bash
-pytest -q DEBUG_test_scripts
+uv run --locked python -B scripts/check_query_environment.py
 ```
+
+See [ENVIRONMENT.md](./ENVIRONMENT.md) for the check coverage, validation record, and focused offline regression checks for the runtime, query tools, and evaluation fixes. `pytest` is an optional developer dependency; the historical developer test suite is not included in this publication repository.
 
 ### Prompt benchmark
 
@@ -330,7 +357,7 @@ python -m SRD46_query_output_eval_pipeline.regex_enricher_orchestrator --publish
 ## Directory Map
 
 ```text
-SRD46_db_subagent/
+SRD46_MCP_query_agent_publication/
 |- API_SRD46_Query_UI.py        # unified entry point (serve | query)
 |- main.py                      # MCP transport selector
 |- server.py                    # FastMCP app + 18 tool registrations
@@ -344,21 +371,24 @@ SRD46_db_subagent/
 |- NIST_SRD46_database_browser/ # Flask UI + /agent + /eval
 |- SRD46_tools/                 # MCP tool implementations + planner/verdict
 |- SRD46_query_output_eval_pipeline/  # extract -> classify -> ground -> stats
-|- SRD46_db/                    # SQLite databases
-|- DEBUG_test_scripts/          # pytest suite
+|- SRD46_db/                    # ZIP packages + smaller SQLite databases
+|- workspace_setup.py           # automatic lossless installation
+|- packaged_files.json          # original sizes, SHA-256, chunk order
+|- scripts/                    # environment and publication checks
 |- TEST_PROMPTS.md
 |- INSTALLATION_GUIDE.md
 |- ARCHITECTURE.md
 |- _output/                     # raw runs (incl. _freeform_prompts/)
 |- _output_eval/                # extracted answers, claims, stats
-|- transcripts/
-`- __obsolete__/
+`- transcripts/
 ```
 
 ## Key Documentation
 
 - [ARCHITECTURE.md](./ARCHITECTURE.md): workspace architecture grounded in the current codebase
 - [INSTALLATION_GUIDE.md](./INSTALLATION_GUIDE.md): setup notes and environment guidance
+- [ENVIRONMENT.md](./ENVIRONMENT.md): locked versions and validation provenance
+- [PACKAGED_DATA.md](./PACKAGED_DATA.md): archive inventory, restoration, and publication checks
 - [SRD46_tools/TOOLS_REFERENCE.md](./SRD46_tools/TOOLS_REFERENCE.md): detailed MCP tool reference
 - [SRD46_db/README.md](./SRD46_db/README.md): database schema and examples
 - [SRD46_query_output_eval_pipeline/README.md](./SRD46_query_output_eval_pipeline/README.md): output parsing and claim-evaluation pipeline

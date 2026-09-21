@@ -7,6 +7,8 @@ import os
 from pathlib import Path
 from contextlib import contextmanager
 
+from ._db_connection import _verify
+
 # Resolve the SRD46_db directory relative to this file
 _DB_DIR = Path(__file__).absolute().parent.parent.parent / "SRD46_db"
 
@@ -14,13 +16,6 @@ CARDS_DB = _DB_DIR / "srd46_cards.db"
 EQUILIBRIUM_DB = _DB_DIR / "srd46_equilibrium_maps.db"
 LITERATURE_DB = _DB_DIR / "srd46_literature.db"
 FINGERPRINT_DB = _DB_DIR / "srd46_ligand_fingerprints.db"
-
-
-def _verify(path: Path) -> str:
-    """Return the string path after verifying the file exists."""
-    if not path.exists():
-        raise FileNotFoundError(f"Database not found: {path}")
-    return str(path)
 
 
 @contextmanager

@@ -665,6 +665,11 @@ async def compact_memory(
         retry_count = int(retry_match.group(1)) if retry_match else 0
         display_body = body[retry_match.end():] if retry_match else body
 
+        # Immediate tool summaries already preserve the bounded evidence.
+        # Do not let a second, learned compression erase their IDs or values.
+        if display_body.startswith("[summary]"):
+            continue
+
         if len(display_body) < MIN_COMPRESS_CHARS:
             continue
 

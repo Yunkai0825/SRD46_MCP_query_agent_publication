@@ -31,7 +31,7 @@ flowchart LR
 - `app.py`: Flask app creation, blueprint registration, dashboard route, local dev server on port 5046
 - `db.py`: read-only path resolution for SRD-46 databases and optional Pourbaix CSV loading
 - `request_dbs.py`: request-scoped database handle management
-- `requirements.txt`: minimal browser-only dependencies
+- [Root requirements.txt](../requirements.txt): hash-pinned shared environment, also defined by the root `pyproject.toml` and `uv.lock`
 
 ## Registered Route Modules
 
@@ -73,6 +73,8 @@ The equilibrium browser now uses a single collection page with nested accordions
 - `collection_detail.html`: one-page map → network drill-down for a selected system
 
 ## Running The Browser
+
+Install the shared root environment with `uv sync --locked`, then run from the repository root (or activate `.venv` before using `python` directly). The first launch automatically restores missing packaged databases before serving any pages. See [packaged data](../PACKAGED_DATA.md) for ZIP inventory and verification; a complete external `SRD46_DB_DIR` remains supported.
 
 From the repo root, prefer the unified entry point:
 
